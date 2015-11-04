@@ -23,13 +23,13 @@ test_requirements = [
 ]
 
 setup(
-    name='infoblox_netmri',
+    name='infoblox-netmri',
     version='0.1.0',
     description="A simple client for the Infoblox NetMRI RESTful API.",
     long_description=readme + '\n\n' + history,
     author="John Belamaric",
     author_email='jbelamaric@infoblox.com',
-    url='https://github.com/infobloxopen/infoblox_netmri',
+    url='https://github.com/infobloxopen/infoblox-netmri',
     packages=[
         'infoblox_netmri',
     ],
@@ -39,7 +39,7 @@ setup(
     install_requires=requirements,
     license="Apache",
     zip_safe=False,
-    keywords='infoblox_netmri',
+    keywords='infoblox_netmri netmri infoblox network automation',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

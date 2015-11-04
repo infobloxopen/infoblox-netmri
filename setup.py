@@ -19,7 +19,6 @@ requirements = [
 ]
 
 test_requirements = [
-    'setuptools>=17.1',
     'mock>=1.2'
 ]
 

@@ -21,8 +21,13 @@ class TestInfoblox_netmri(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_000_something(self):
-        pass
+    def test_init_valid(self):
+        c = infoblox_netmri.InfobloxNetMRI({
+            'url': 'http://localhost/api/3',
+            'username': 'admin',
+            'password': 'admin'
+        })
+        self.assertEqual(type(c), infoblox_netmri.InfobloxNetMRI)
 
 
 if __name__ == '__main__':

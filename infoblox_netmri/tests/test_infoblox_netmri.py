@@ -10,7 +10,7 @@ Tests for `infoblox_netmri` module.
 
 import unittest
 
-from infoblox_netmri import infoblox_netmri
+import infoblox_netmri
 
 
 class TestInfoblox_netmri(unittest.TestCase):

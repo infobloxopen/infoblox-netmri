@@ -114,7 +114,7 @@ class InfobloxNetMRI(object):
         """
         headers = {'Content-type': 'application/json'}
 
-        url = "%s/%d" % (self._controller_url(objtype), objid)
+        url = "%s/%d" % (self._controller_url(objtype), int(objid))
 
         r = self.session.get(url,
                              verify=self.sslverify,
@@ -138,7 +138,7 @@ class InfobloxNetMRI(object):
 
         headers = {'Content-type': 'application/json'}
 
-        url = "%s/%d" % (self._controller_url(objtype), objid)
+        url = "%s/%d" % (self._controller_url(objtype), int(objid))
 
         r = self.session.delete(url,
                                 verify=self.sslverify,

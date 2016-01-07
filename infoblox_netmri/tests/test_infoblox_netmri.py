@@ -18,11 +18,14 @@ import infoblox_netmri
 class TestInfoblox_netmri(unittest.TestCase):
 
     def setUp(self):
-        self.netmri = infoblox_netmri.InfobloxNetMRI({
+        self._make_netmri({
             'url': 'http://localhost/api/3',
             'username': 'admin',
             'password': 'admin'
         })
+
+    def _make_netmri(self, opts):
+        self.netmri = infoblox_netmri.InfobloxNetMRI(opts)
         self.session = mock.Mock()
         self.netmri.session = self.session
 
@@ -37,6 +40,48 @@ class TestInfoblox_netmri(unittest.TestCase):
 
     def test_init_valid(self):
         self.assertEqual(type(self.netmri), infoblox_netmri.InfobloxNetMRI)
+
+    def test_init_missing(self):
+        self.assertRaises(ValueError, infoblox_netmri.InfobloxNetMRI,
+                          {'url': 'http://localhost/api/3',
+                           'username': 'admin'})
+
+        self.assertRaises(ValueError, infoblox_netmri.InfobloxNetMRI,
+                          {'url': 'http://localhost/api/3',
+                           'password': 'admin'})
+
+        self.assertRaises(ValueError, infoblox_netmri.InfobloxNetMRI,
+                          {'password': 'admin',
+                           'username': 'admin'})
+
+    def test_init_sslverify(self):
+        opts = {'url': 'https://localhost/api/3',
+                'username': 'admin',
+                'password': 'admin',
+                'sslverify': 'false'}
+
+        self._make_netmri(opts)
+        self.assertEqual(False, self.netmri.sslverify)
+
+        opts['sslverify'] = 'no'
+        self._make_netmri(opts)
+        self.assertEqual(False, self.netmri.sslverify)
+
+        opts['sslverify'] = 'off'
+        self._make_netmri(opts)
+        self.assertEqual(False, self.netmri.sslverify)
+
+        opts['sslverify'] = 'true'
+        self._make_netmri(opts)
+        self.assertEqual(True, self.netmri.sslverify)
+
+        opts['sslverify'] = 'yes'
+        self._make_netmri(opts)
+        self.assertEqual(True, self.netmri.sslverify)
+
+        opts['sslverify'] = 'on'
+        self._make_netmri(opts)
+        self.assertEqual(True, self.netmri.sslverify)
 
     def test_show(self):
         self.session.get.return_value = self._mock_response({'job': {}})

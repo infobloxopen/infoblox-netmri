@@ -32,7 +32,7 @@ class InfobloxNetMRI(object):
 
         self.sslverify = True
         if 'sslverify' in options:
-            self.sslverify = options['sslverify']
+            self.sslverify = self._boolean_opt(options['sslverify'])
 
         reqd_opts = ['url', 'username', 'password']
         default_opts = {'http_pool_connections': 5,
@@ -54,6 +54,11 @@ class InfobloxNetMRI(object):
         self.session.mount('https://', adapter)
         self.session.auth = (self.username, self.password)
         self.session.verify = self.sslverify
+
+    def _boolean_opt(self, opt):
+        if str(opt).lower() in ['yes', 'on', 'true']:
+            return True
+        return False
 
     def _controller_name(self, objtype):
         # would be better to use inflect.pluralize here, but would add

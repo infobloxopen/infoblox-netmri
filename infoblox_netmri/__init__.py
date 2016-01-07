@@ -38,7 +38,7 @@ class InfobloxNetMRI(object):
         default_opts = {'http_pool_connections': 5,
                         'http_pool_maxsize': 10,
                         'max_retries': 5}
-        for opt in reqd_opts + default_opts.keys():
+        for opt in reqd_opts + list(default_opts.keys()):
             setattr(self, opt, options.get(opt) or default_opts.get(opt))
 
         for opt in reqd_opts:
@@ -99,7 +99,11 @@ class InfobloxNetMRI(object):
 
         r.raise_for_status()
 
-        return json.loads(r.content)
+        content = r.content
+        if type(content) is bytes:
+            content = bytes.decode(content)
+
+        return json.loads(content)
 
     def show(self, objtype, objid):
         """Query for a specific resource by ID
@@ -122,7 +126,11 @@ class InfobloxNetMRI(object):
 
         r.raise_for_status()
 
-        return json.loads(r.content)[objtype]
+        content = r.content
+        if type(content) is bytes:
+            content = bytes.decode(content)
+
+        return json.loads(content)[objtype]
 
     def delete(self, objtype, objid):
         """Destroy a specific resource by ID
@@ -146,4 +154,8 @@ class InfobloxNetMRI(object):
 
         r.raise_for_status()
 
-        return json.loads(r.content)
+        content = r.content
+        if type(content) is bytes:
+            content = bytes.decode(content)
+
+        return json.loads(content)

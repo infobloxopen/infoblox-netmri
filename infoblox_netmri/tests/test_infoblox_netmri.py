@@ -83,6 +83,10 @@ class TestInfoblox_netmri(unittest.TestCase):
         self._make_netmri(opts)
         self.assertEqual(True, self.netmri.sslverify)
 
+        opts['sslverify'] = '/some/path.crt'
+        self._make_netmri(opts)
+        self.assertEqual('/some/path.crt', self.netmri.sslverify)
+
     def test_show(self):
         self.session.get.return_value = self._mock_response({'job': {}})
         self.netmri.show('job', 123)

@@ -15,7 +15,7 @@ import unittest
 import infoblox_netmri
 
 
-class TestInfoblox_netmri(unittest.TestCase):
+class TestInfobloxNetmri(unittest.TestCase):
 
     def setUp(self):
         self._make_netmri({

@@ -2,6 +2,9 @@
 Infoblox NetMRI Client
 ===============================
 
+.. image:: https://codecov.io/github/infobloxopen/infoblox-netmri/coverage.svg?branch=master
+    :target: https://codecov.io/github/infobloxopen/infoblox-netmri?branch=master
+
 .. image:: https://img.shields.io/travis/infobloxopen/infoblox-netmri.svg
         :target: https://travis-ci.org/infobloxopen/infoblox-netmri
 
@@ -29,7 +32,7 @@ Install infoblox-netmri using pip:
 
   pip install infoblox-netmri
 
-  
+
 Usage
 -----
 

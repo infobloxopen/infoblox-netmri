@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to Infoblox NetMRI Client's documentation!
-======================================
+==================================================
 
 Contents:
 
@@ -14,6 +14,7 @@ Contents:
    readme
    installation
    usage
+   API documentation </apidoc/modules>
    contributing
    authors
    history

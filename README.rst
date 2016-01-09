@@ -16,6 +16,7 @@ A simple client for the Infoblox NetMRI RESTful API.
 
 * Free software: Apache license
 * Homepage: https://github.com/infobloxopen/infoblox-netmri
+* Documentation: https://infoblox-netmri.readthedocs.org
 
 Features
 --------

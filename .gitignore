@@ -1,4 +1,7 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
 *.py[cod]
+*$py.class
 
 # C extensions
 *.so
@@ -6,6 +9,8 @@
 # Packages
 *.egg
 *.egg-info
+eggs/
+.eggs/
 dist
 build
 eggs

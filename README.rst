@@ -2,6 +2,9 @@
 Infoblox NetMRI Client
 ===============================
 
+.. image:: https://codecov.io/github/infobloxopen/infoblox-netmri/coverage.svg?branch=master
+    :target: https://codecov.io/github/infobloxopen/infoblox-netmri?branch=master
+
 .. image:: https://img.shields.io/travis/infobloxopen/infoblox-netmri.svg
         :target: https://travis-ci.org/infobloxopen/infoblox-netmri
 
@@ -13,6 +16,7 @@ A simple client for the Infoblox NetMRI RESTful API.
 
 * Free software: Apache license
 * Homepage: https://github.com/infobloxopen/infoblox-netmri
+* Documentation: https://infoblox-netmri.readthedocs.org
 
 Features
 --------
@@ -29,7 +33,7 @@ Install infoblox-netmri using pip:
 
   pip install infoblox-netmri
 
-  
+
 Usage
 -----
 

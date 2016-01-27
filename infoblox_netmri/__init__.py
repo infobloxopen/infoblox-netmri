@@ -15,7 +15,8 @@
 
 import json
 import requests
-
+import re
+from os.path import isfile
 
 __author__ = 'John Belamaric'
 __email__ = 'jbelamaric@infoblox.com'
@@ -23,43 +24,103 @@ __version__ = '0.1.2'
 
 
 class InfobloxNetMRI(object):
-    def __init__(self, options):
-        """Initialize a new InfobloxNetMRI object
+    def __init__(self, host, username, password, api_version="auto",
+                 use_ssl=True, ssl_verify=True, http_pool_connections=5,
+                 http_pool_maxsize=10, max_retries=5):
 
-        Args:
-            options (dict): Target options dictionary
-        """
-
-        self.sslverify = True
-        if 'sslverify' in options:
-            opt = str(options['sslverify']).lower()
+        if isinstance(ssl_verify, bool):
+            self.ssl_verify = ssl_verify
+        else:
+            opt = str(ssl_verify).lower()
             if opt in ['yes', 'on', 'true']:
-                self.sslverify = True
+                self.ssl_verify = True
             elif opt in ['no', 'off', 'false']:
-                self.sslverify = False
+                self.ssl_verify = False
             else:
-                self.sslverify = options['sslverify']
+                if isfile(ssl_verify):
+                    self.ssl_verify = ssl_verify
+                else:
+                    raise ValueError("ssl_verify is not a valid boolean value,"
+                                     "nor a valid path to a CA bundle file")
 
-        reqd_opts = ['url', 'username', 'password']
-        default_opts = {'http_pool_connections': 5,
-                        'http_pool_maxsize': 10,
-                        'max_retries': 5}
-        for opt in reqd_opts + list(default_opts.keys()):
-            setattr(self, opt, options.get(opt) or default_opts.get(opt))
+        if re.match(r"^[\w.-]+$", host):
+            self.host = host
+        else:
+            raise ValueError("Hostname is not a valid hostname")
 
-        for opt in reqd_opts:
-            if not getattr(self, opt):
-                raise ValueError("Option %s is missing" % opt)
+        self.username = username
+        self.password = password
+
+        if use_ssl:
+            self.protocol = "https"
+        else:
+            self.protocol = "http"
 
         self.session = requests.Session()
         adapter = requests.adapters.HTTPAdapter(
-            max_retries=self.max_retries,
-            pool_connections=self.http_pool_connections,
-            pool_maxsize=self.http_pool_maxsize)
+            max_retries=max_retries,
+            pool_connections=http_pool_connections,
+            pool_maxsize=http_pool_maxsize)
         self.session.mount('http://', adapter)
         self.session.mount('https://', adapter)
-        self.session.auth = (self.username, self.password)
-        self.session.verify = self.sslverify
+        self.session.verify = self.ssl_verify
+
+        # We must authenticate before determining the latest API version
+        self._authenticate()
+
+        if re.match('^[0-9.]$', api_version):
+            self.api_version = api_version
+        elif api_version.lower() == "auto":
+            self.api_version = self._get_api_version()
+        else:
+            raise ValueError("Incorrect API version")
+
+    def _make_request(self, url, method="get", data=None, extra_headers=None):
+        """Performs a given request and returns a json object
+
+        Args:
+            url (str): URL of the request
+            method (str): Any of "get", "post", "delete"
+            data (any): Possible extra data to send with the request
+            extra_headers (dict): Possible extra headers to send along in the request
+        Returns:
+            dict
+        """
+        headers = {'Content-type': 'application/json'}
+        if isinstance(extra_headers, dict):
+            headers.update(extra_headers)
+
+        if method == "get":
+            r = self.session.get(url, headers=headers)
+        elif method == "post":
+            r = self.session.post(url, data=data, headers=headers)
+        elif method == "delete":
+            r = self.session.delete(url, headers=headers)
+        else:
+            raise ValueError(method + "is not a valid method")
+
+        r.raise_for_status()
+        content = r.content
+
+        if isinstance(content, bytes):
+            content = bytes.decode(content)
+
+        try:
+            return json.loads(content)
+        except ValueError:
+            # in case we can't parse the JSON response, we return the raw response
+            return content
+
+    def _get_api_version(self):
+        url = self._server_info_url()
+        server_info = self._make_request(url=url, method="get")
+        return server_info["latest_api_version"]
+
+    def _authenticate(self):
+        url = self._authenticate_url()
+        data = json.dumps({'username': self.username, "password": self.password})
+        self._make_request(url, method="post", data=data)
+        return True
 
     def _controller_name(self, objtype):
         # would be better to use inflect.pluralize here, but would add
@@ -75,11 +136,28 @@ class InfobloxNetMRI(object):
 
         return objtype + 's'
 
+    def _base_url(self):
+        return "{proto}://{host}".format(proto=self.protocol,
+                                         host=self.host)
+
     def _controller_url(self, objtype):
-        return "%s/%s" % (self.url, self._controller_name(objtype))
+        return "{base_url}/api/{api_version}/{controller}".format(base_url=self._base_url(),
+                                                                  api_version=self.api_version,
+                                                                  controller=self._controller_name(objtype))
+
+    def _object_url(self, objtype, objid):
+        return "{}/{}".format(self._controller_url(objtype), objid)
 
     def _method_url(self, method_name):
-        return "%s/%s" % (self.url, method_name)
+        return "{base_url}/api/{api}/{method}".format(base_url=self._base_url(),
+                                                      api=self.api_version,
+                                                      method=method_name)
+
+    def _authenticate_url(self):
+        return "{base_url}/api/authenticate".format(base_url=self._base_url())
+
+    def _server_info_url(self):
+        return "{base_url}/api/server_info".format(base_url=self._base_url())
 
     def api_request(self, method_name, params):
         """Execute an arbitrary method.
@@ -92,24 +170,9 @@ class InfobloxNetMRI(object):
         Raises:
             requests.exceptions.HTTPError
         """
-
-        headers = {'Content-type': 'application/json'}
-
         url = self._method_url(method_name)
         data = json.dumps(params)
-
-        r = self.session.post(url,
-                              data=data,
-                              verify=self.sslverify,
-                              headers=headers)
-
-        r.raise_for_status()
-
-        content = r.content
-        if type(content) is bytes:
-            content = bytes.decode(content)
-
-        return json.loads(content)
+        return self._make_request(url=url, method="post", data=data)
 
     def show(self, objtype, objid):
         """Query for a specific resource by ID
@@ -122,21 +185,8 @@ class InfobloxNetMRI(object):
         Raises:
             requests.exceptions.HTTPError
         """
-        headers = {'Content-type': 'application/json'}
-
-        url = "%s/%d" % (self._controller_url(objtype), int(objid))
-
-        r = self.session.get(url,
-                             verify=self.sslverify,
-                             headers=headers)
-
-        r.raise_for_status()
-
-        content = r.content
-        if type(content) is bytes:
-            content = bytes.decode(content)
-
-        return json.loads(content)[objtype]
+        url = self._object_url(objtype, int(objid))
+        return self._make_request(url, method="get")
 
     def delete(self, objtype, objid):
         """Destroy a specific resource by ID
@@ -149,19 +199,5 @@ class InfobloxNetMRI(object):
         Raises:
             requests.exceptions.HTTPError
         """
-
-        headers = {'Content-type': 'application/json'}
-
-        url = "%s/%d" % (self._controller_url(objtype), int(objid))
-
-        r = self.session.delete(url,
-                                verify=self.sslverify,
-                                headers=headers)
-
-        r.raise_for_status()
-
-        content = r.content
-        if type(content) is bytes:
-            content = bytes.decode(content)
-
-        return json.loads(content)
+        url = self._object_url(objtype, int(objid))
+        return self._make_request(url, method="delete")

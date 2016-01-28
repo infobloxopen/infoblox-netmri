@@ -19,7 +19,8 @@ requirements = [
 ]
 
 test_requirements = [
-    'mock>=1.2'
+    'mock>=1.2',
+    'httmock>=1.2.4'
 ]
 
 setup(

@@ -1,6 +1,5 @@
-===============================
 Infoblox NetMRI Client
-===============================
+======================
 
 .. image:: https://codecov.io/github/infobloxopen/infoblox-netmri/coverage.svg?branch=master
     :target: https://codecov.io/github/infobloxopen/infoblox-netmri?branch=master
@@ -43,14 +42,11 @@ will contain the outputs documented in the online API documentation.
 
 ::
 
-  import infoblox_netmri
+  from infoblox_netmri import InfobloxNetMRI
 
-  c = infoblox_netmri.InfobloxNetMRI({
-      'url': 'https://netmri/api/3',
-      'username': 'admin',
-      'password': 'password',
-      'sslverify': False
-  })
+  c = InfobloxNetMRI(host="netmri",
+                     username="admin",
+                     password="password")
 
   devices = c.api_request('devices/index', {'limit': 10})
 

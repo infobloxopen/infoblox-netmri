@@ -90,26 +90,9 @@ class InfobloxNetMRI(object):
         if isinstance(extra_headers, dict):
             headers.update(extra_headers)
 
-        if method == "get":
-            r = self.session.get(url, headers=headers)
-        elif method == "post":
-            r = self.session.post(url, data=data, headers=headers)
-        elif method == "delete":
-            r = self.session.delete(url, headers=headers)
-        else:
-            raise ValueError(method + "is not a valid method")
-
+        r = self.session.request(method, url, headers=headers, data=data)
         r.raise_for_status()
-        content = r.content
-
-        if isinstance(content, bytes):
-            content = bytes.decode(content)
-
-        try:
-            return json.loads(content)
-        except ValueError:
-            # in case we can't parse the JSON response, we return the raw response
-            return content
+        return r.json()
 
     def _get_api_version(self):
         url = self._server_info_url()

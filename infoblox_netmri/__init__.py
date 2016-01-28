@@ -25,7 +25,7 @@ __version__ = '0.1.2'
 
 class InfobloxNetMRI(object):
     def __init__(self, host, username, password, api_version="auto",
-                 use_ssl=True, ssl_verify=True, http_pool_connections=5,
+                 use_ssl=True, ssl_verify=False, http_pool_connections=5,
                  http_pool_maxsize=10, max_retries=5):
 
         if isinstance(ssl_verify, bool):

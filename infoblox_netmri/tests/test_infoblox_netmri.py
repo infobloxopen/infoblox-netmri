@@ -8,9 +8,8 @@ test_infoblox_netmri
 Tests for `infoblox_netmri` module.
 """
 
-import json
 from mock import patch
-from httmock import all_requests, with_httmock, HTTMock, response, urlmatch
+from httmock import with_httmock, urlmatch
 import unittest
 
 from infoblox_netmri import InfobloxNetMRI

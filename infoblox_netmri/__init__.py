@@ -129,7 +129,7 @@ class InfobloxNetMRI(object):
                                                                   controller=self._controller_name(objtype))
 
     def _object_url(self, objtype, objid):
-        return "{}/{}".format(self._controller_url(objtype), objid)
+        return "{0}/{1}".format(self._controller_url(objtype), objid)
 
     def _method_url(self, method_name):
         return "{base_url}/api/{api}/{method}".format(base_url=self._base_url(),

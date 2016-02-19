@@ -20,7 +20,7 @@ from os.path import isfile
 
 __author__ = 'John Belamaric'
 __email__ = 'jbelamaric@infoblox.com'
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 
 class InfobloxNetMRI(object):

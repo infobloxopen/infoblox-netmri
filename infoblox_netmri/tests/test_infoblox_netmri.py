@@ -83,7 +83,7 @@ class TestInfobloxNetmri(unittest.TestCase):
         self.assertEqual(True, netmri.ssl_verify)
 
     @with_httmock(authenticate_response)
-    @patch('infoblox_netmri.isfile')
+    @patch('infoblox_netmri.client.isfile')
     def test_init_ssl_verify_file(self, mock_isfile):
         mock_isfile.return_value = True
         netmri = InfobloxNetMRI(ssl_verify='/some/path.crt', **self.opts)

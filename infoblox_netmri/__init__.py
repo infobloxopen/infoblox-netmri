@@ -14,9 +14,11 @@
 #    under the License.
 
 import json
-import requests
 import re
 from os.path import isfile
+
+import requests
+from requests.exceptions import HTTPError
 
 __author__ = 'John Belamaric'
 __email__ = 'jbelamaric@infoblox.com'
@@ -28,34 +30,38 @@ class InfobloxNetMRI(object):
                  use_ssl=True, ssl_verify=False, http_pool_connections=5,
                  http_pool_maxsize=10, max_retries=5):
 
-        if isinstance(ssl_verify, bool):
-            self.ssl_verify = ssl_verify
-        else:
-            opt = str(ssl_verify).lower()
-            if opt in ['yes', 'on', 'true']:
-                self.ssl_verify = True
-            elif opt in ['no', 'off', 'false']:
-                self.ssl_verify = False
+        # Process ssl parameters
+        if use_ssl:
+            self.protocol = "https"
+            if isinstance(ssl_verify, bool):
+                self.ssl_verify = ssl_verify
             else:
-                if isfile(ssl_verify):
+                opt = str(ssl_verify).lower()
+                if opt in ['yes', 'on', 'true']:
+                    self.ssl_verify = True
+                elif opt in ['no', 'off', 'false']:
+                    self.ssl_verify = False
+                elif isfile(ssl_verify):
                     self.ssl_verify = ssl_verify
                 else:
                     raise ValueError("ssl_verify is not a valid boolean value,"
                                      "nor a valid path to a CA bundle file")
+        else:
+            self.protocol = "http"
+            self.ssl_verify = False
 
+        # Process host
         if re.match(r"^[\w.-]+$", host):
             self.host = host
         else:
             raise ValueError("Hostname is not a valid hostname")
 
+        # Authentication parameters
         self.username = username
         self.password = password
+        self._is_authenticated = False
 
-        if use_ssl:
-            self.protocol = "https"
-        else:
-            self.protocol = "http"
-
+        # HTTP session settings
         self.session = requests.Session()
         adapter = requests.adapters.HTTPAdapter(
             max_retries=max_retries,
@@ -65,9 +71,7 @@ class InfobloxNetMRI(object):
         self.session.mount('https://', adapter)
         self.session.verify = self.ssl_verify
 
-        # We must authenticate before determining the latest API version
-        self._authenticate()
-
+        # API version
         if re.match('^[0-9.]$', api_version):
             self.api_version = api_version
         elif api_version.lower() == "auto":
@@ -76,6 +80,37 @@ class InfobloxNetMRI(object):
             raise ValueError("Incorrect API version")
 
     def _make_request(self, url, method="get", data=None, extra_headers=None):
+        """Prepares the request, checks for authentication and retries in case of issues
+
+        Args:
+            url (str): URL of the request
+            method (str): Any of "get", "post", "delete"
+            data (any): Possible extra data to send with the request
+            extra_headers (dict): Possible extra headers to send along in the request
+        Returns:
+            dict
+        """
+        retry = True
+        attempts = 0
+
+        while retry and attempts < 1:
+            # Authenticate first if not authenticated already
+            if not self._is_authenticated:
+                self._authenticate()
+            # Make the request and check for authentication errors
+            # This allows us to catch session timeouts for long standing connections
+            try:
+                return self._send_request(url, method, data, extra_headers)
+            except HTTPError as e:
+                if e.response.status_code == 403:
+                    self._is_authenticated = False
+                    retry = True
+                    attempts += 1
+                else:
+                    # re-raise other HTTP errors
+                    raise
+
+    def _send_request(self, url, method="get", data=None, extra_headers=None):
         """Performs a given request and returns a json object
 
         Args:
@@ -95,19 +130,33 @@ class InfobloxNetMRI(object):
         return r.json()
 
     def _get_api_version(self):
-        url = self._server_info_url()
+        """Fetches the most recent API version
+
+        Returns:
+            str
+        """
+        url = "{base_url}/api/server_info".format(base_url=self._base_url())
         server_info = self._make_request(url=url, method="get")
         return server_info["latest_api_version"]
 
     def _authenticate(self):
-        url = self._authenticate_url()
+        """ Perform an authentication against NetMRI"""
+        url = "{base_url}/api/authenticate".format(base_url=self._base_url())
         data = json.dumps({'username': self.username, "password": self.password})
-        self._make_request(url, method="post", data=data)
-        return True
+        # Bypass authentication check in make_request by using _send_request
+        self._send_request(url, method="post", data=data)
+        self._is_authenticated = True
 
     def _controller_name(self, objtype):
-        # would be better to use inflect.pluralize here, but would add
-        # a dependency
+        """Determines the controller name for the object's type
+
+        Args:
+            objtype (str): The object type
+
+        Returns:
+            A string with the controller name
+        """
+        # would be better to use inflect.pluralize here, but would add a dependency
         if objtype.endswith('y'):
             return objtype[:-1] + 'ies'
 
@@ -120,27 +169,47 @@ class InfobloxNetMRI(object):
         return objtype + 's'
 
     def _base_url(self):
-        return "{proto}://{host}".format(proto=self.protocol,
-                                         host=self.host)
+        """Generate the base URL for the connection with NetMRI
 
-    def _controller_url(self, objtype):
-        return "{base_url}/api/{api_version}/{controller}".format(base_url=self._base_url(),
-                                                                  api_version=self.api_version,
-                                                                  controller=self._controller_name(objtype))
+        Returns:
+            A string containing the base URL
+        """
+        return "{proto}://{host}".format(
+            proto=self.protocol,
+            host=self.host
+        )
 
     def _object_url(self, objtype, objid):
-        return "{0}/{1}".format(self._controller_url(objtype), objid)
+        """Generate the URL for the specified object
+
+        Args:
+            objtype (str): The object's type
+            objid (int): The objects ID
+
+        Returns:
+            A string containing the URL of the object
+        """
+        return "{base_url}/api/{api_version}/{controller}/{obj_id}".format(
+            base_url=self._base_url(),
+            api_version=self.api_version,
+            controller=self._controller_name(objtype),
+            obj_id=objid
+        )
 
     def _method_url(self, method_name):
-        return "{base_url}/api/{api}/{method}".format(base_url=self._base_url(),
-                                                      api=self.api_version,
-                                                      method=method_name)
+        """Generate the URL for the requested method
 
-    def _authenticate_url(self):
-        return "{base_url}/api/authenticate".format(base_url=self._base_url())
+        Args:
+            method_name (str): Name of the method
 
-    def _server_info_url(self):
-        return "{base_url}/api/server_info".format(base_url=self._base_url())
+        Returns:
+            A string containing the URL of the method
+        """
+        return "{base_url}/api/{api}/{method}".format(
+            base_url=self._base_url(),
+            api=self.api_version,
+            method=method_name
+        )
 
     def api_request(self, method_name, params):
         """Execute an arbitrary method.

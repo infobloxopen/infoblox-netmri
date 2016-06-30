@@ -86,10 +86,9 @@ class InfobloxNetMRI(object):
         Returns:
             dict
         """
-        retry = True
         attempts = 0
 
-        while retry and attempts < 1:
+        while attempts < 1:
             # Authenticate first if not authenticated already
             if not self._is_authenticated:
                 self._authenticate()
@@ -100,7 +99,6 @@ class InfobloxNetMRI(object):
             except HTTPError as e:
                 if e.response.status_code == 403:
                     self._is_authenticated = False
-                    retry = True
                     attempts += 1
                 else:
                     # re-raise other HTTP errors

@@ -3,6 +3,11 @@
 History
 -------
 
+0.1.4 (2017-03-22)
+---------------------
+* Fix issue #7, where an expired session is never renewed.
+* Cleanup and make more Pythonic
+
 0.1.3 (2016-02-19)
 ---------------------
 * Implement authentication caching

@@ -19,4 +19,4 @@ __all__ = ['InfobloxNetMRI']
 
 __author__ = 'John Belamaric'
 __email__ = 'jbelamaric@infoblox.com'
-__version__ = '0.1.3'
+__version__ = '0.1.4'

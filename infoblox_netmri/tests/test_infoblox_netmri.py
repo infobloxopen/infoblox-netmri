@@ -132,6 +132,7 @@ class TestInfobloxNetmri(unittest.TestCase):
                                                     headers={'Content-type': 'application/json'},
                                                     data=None)
 
+
 if __name__ == '__main__':
     import sys
     sys.exit(unittest.main())

@@ -3,7 +3,7 @@
 History
 =======
 
-0.1.5 (to be released)
+0.1.5 (2017-08-09)
 ----------------------
 * Fix issue #11, where an API versions numbers with a minor part were not seen as valid.
 

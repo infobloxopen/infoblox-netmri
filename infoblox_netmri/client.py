@@ -68,7 +68,7 @@ class InfobloxNetMRI(object):
         self.session.verify = self.ssl_verify
 
         # API version
-        if re.match('^(?:\d+\.)?(?:\d+\.)?(?:\*|\d+)$', api_version):
+        if re.match(r'^(?:\d+\.)?(?:\d+\.)?(?:\*|\d+)$', api_version):
             self.api_version = api_version
         elif api_version.lower() == "auto":
             self.api_version = self._get_api_version()

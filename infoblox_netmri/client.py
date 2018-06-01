@@ -124,7 +124,7 @@ class InfobloxNetMRI(object):
         if isinstance(extra_headers, dict):
             headers.update(extra_headers)
 
-        if "password" not in data:
+        if not data or "password" not in data:
             logger.debug("Sending {} request to {} with data {}".format(method.upper(), url, data))
         r = self.session.request(method, url, headers=headers, data=data)
         r.raise_for_status()

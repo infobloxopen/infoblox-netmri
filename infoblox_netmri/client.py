@@ -14,11 +14,14 @@
 #    under the License.
 
 import json
+import logging
 import re
 from os.path import isfile
 
 import requests
 from requests.exceptions import HTTPError
+
+logger = logging.getLogger("infoblox_netmri")
 
 
 class InfobloxNetMRI(object):
@@ -74,6 +77,7 @@ class InfobloxNetMRI(object):
             self.api_version = self._get_api_version()
         else:
             raise ValueError("Incorrect API version")
+        logger.debug("Using API version %s" % self.api_version)
 
     def _make_request(self, url, method="get", data=None, extra_headers=None):
         """Prepares the request, checks for authentication and retries in case of issues
@@ -98,6 +102,7 @@ class InfobloxNetMRI(object):
                 return self._send_request(url, method, data, extra_headers)
             except HTTPError as e:
                 if e.response.status_code == 403:
+                    logger.info("Authenticated session against NetMRI timed out. Retrying.")
                     self._is_authenticated = False
                     attempts += 1
                 else:
@@ -119,6 +124,8 @@ class InfobloxNetMRI(object):
         if isinstance(extra_headers, dict):
             headers.update(extra_headers)
 
+        if "password" not in data:
+            logger.debug("Sending {} request to {} with data {}".format(method.upper(), url, data))
         r = self.session.request(method, url, headers=headers, data=data)
         r.raise_for_status()
         return r.json()
@@ -138,6 +145,7 @@ class InfobloxNetMRI(object):
         url = "{base_url}/api/authenticate".format(base_url=self._base_url())
         data = json.dumps({'username': self.username, "password": self.password})
         # Bypass authentication check in make_request by using _send_request
+        logger.debug("Authenticating against NetMRI")
         self._send_request(url, method="post", data=data)
         self._is_authenticated = True
 

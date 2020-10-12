@@ -3,16 +3,12 @@
 
 
 try:
-    from setuptools import setup
+    from setuptools import setup, find_packages
 except ImportError:
     from distutils.core import setup
 
-
 with open('README.rst') as readme_file:
     readme = readme_file.read()
-
-with open('HISTORY.rst') as history_file:
-    history = history_file.read().replace('.. :changelog:', '')
 
 requirements = [
     'requests>=2.5.2',
@@ -23,26 +19,26 @@ test_requirements = [
     'httmock>=1.2.4'
 ]
 
+
+
 setup(
     name='infoblox-netmri',
-    version='0.1.6',
+    version="3.6.0.0",
     description="A simple client for the Infoblox NetMRI RESTful API.",
-    long_description=readme + '\n\n' + history,
-    author="John Belamaric",
-    author_email='jbelamaric@infoblox.com',
-    url='https://github.com/infobloxopen/infoblox-netmri',
-    packages=[
-        'infoblox_netmri',
-    ],
+    long_description=readme,
+    author="Infoblox, Inc.",
+    author_email='infoblox.com',
+    url='https://netmri_ip/api/dist',
+    packages=find_packages(exclude='infoblox_netmri.tests'),
     package_dir={'infoblox_netmri':
-                 'infoblox_netmri'},
+                     'infoblox_netmri'},
     include_package_data=True,
     install_requires=requirements,
     license="Apache",
     zip_safe=False,
     keywords='infoblox_netmri netmri infoblox network automation',
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
@@ -52,7 +48,6 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
     ],
     test_suite='infoblox_netmri.tests',
     tests_require=test_requirements

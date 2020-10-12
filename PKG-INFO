@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: infoblox-netmri
+Version: 3.6.0.0
+Summary: A simple client for the Infoblox NetMRI RESTful API.
+Home-page: https://netmri_ip/api/dist
+Author: Infoblox, Inc.
+Author-email: infoblox.com
+License: Apache
+Description: Infoblox NetMRI Client
+        ======================
+        
+Keywords: infoblox_netmri netmri infoblox network automation
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

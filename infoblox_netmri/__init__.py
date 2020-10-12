@@ -13,10 +13,8 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from infoblox_netmri.client import InfobloxNetMRI
-
 __all__ = ['InfobloxNetMRI']
 
-__author__ = 'John Belamaric'
-__email__ = 'jbelamaric@infoblox.com'
-__version__ = '0.1.6'
+__author__ = 'Infoblox, Inc.'
+__email__ = 'support@infoblox.com'
+__version__ = '3.6.0.0'

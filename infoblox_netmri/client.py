@@ -14,15 +14,16 @@
 #    under the License.
 
 import json
-import logging
 import re
+import io
+import gzip
 from os.path import isfile
 
 import requests
 from requests.exceptions import HTTPError
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
-logger = logging.getLogger("infoblox_netmri")
-
+from infoblox_netmri.utils.utils import locate, to_underscore_notation, to_snake
 
 class InfobloxNetMRI(object):
     def __init__(self, host, username, password, api_version="auto",
@@ -60,6 +61,8 @@ class InfobloxNetMRI(object):
         self.password = password
         self._is_authenticated = False
 
+        # Disable ssl warnings
+        requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
         # HTTP session settings
         self.session = requests.Session()
         adapter = requests.adapters.HTTPAdapter(
@@ -77,9 +80,8 @@ class InfobloxNetMRI(object):
             self.api_version = self._get_api_version()
         else:
             raise ValueError("Incorrect API version")
-        logger.debug("Using API version %s" % self.api_version)
 
-    def _make_request(self, url, method="get", data=None, extra_headers=None):
+    def _make_request(self, url, method="get", data=None, extra_headers=None, downloadable=False):
         """Prepares the request, checks for authentication and retries in case of issues
 
         Args:
@@ -87,22 +89,25 @@ class InfobloxNetMRI(object):
             method (str): Any of "get", "post", "delete"
             data (any): Possible extra data to send with the request
             extra_headers (dict): Possible extra headers to send along in the request
+            downloadable (bool): Indicates if the method can download files
         Returns:
             dict
         """
         attempts = 0
 
-        while attempts < 1:
+        while attempts < 2:
             # Authenticate first if not authenticated already
             if not self._is_authenticated:
                 self._authenticate()
             # Make the request and check for authentication errors
             # This allows us to catch session timeouts for long standing connections
             try:
-                return self._send_request(url, method, data, extra_headers)
+                if downloadable:
+                    return self._send_mixed_request(url, method, data, extra_headers)
+                else:
+                    return self._send_request(url, method, data, extra_headers)
             except HTTPError as e:
                 if e.response.status_code == 403:
-                    logger.info("Authenticated session against NetMRI timed out. Retrying.")
                     self._is_authenticated = False
                     attempts += 1
                 else:
@@ -124,13 +129,104 @@ class InfobloxNetMRI(object):
         if isinstance(extra_headers, dict):
             headers.update(extra_headers)
 
-        if not data or "password" not in data:
-            logger.debug("Sending {method} request to {url} with data {data}".format(
-                method=method.upper(), url=url, data=data)
-            )
-        r = self.session.request(method, url, headers=headers, data=data)
-        r.raise_for_status()
-        return r.json()
+        res = self.session.request(method, url, headers=headers, data=data, stream=True)
+        content_type = res.headers.get('content-type')
+                    
+        if 400 <= res.status_code < 600:
+            if 'application/json' in content_type:
+                raise HTTPError(res.json(), response=res)
+            else:
+                raise HTTPError(res.content, response=res)
+
+        content = b''
+        for chunk in res.iter_content():
+            content += chunk
+                
+        if res.headers.get('Content-Encoding') == 'gzip':
+            content_copy = content
+            try:
+                with gzip.GzipFile(fileobj=io.BytesIO(content)) as gz:
+                    content = gz.read()
+            except:
+                content = content_copy
+
+        try:
+            content = content.decode()
+        except:
+            pass
+
+        if 'application/json' in content_type:
+            return json.loads(content)
+        else:
+            return content
+
+    def _send_mixed_request(self, url, method="get", data=None, extra_headers=None):
+        """Performs a given request and returns a json object or
+           downloads a requested file
+
+        Args:
+            url (str): URL of the request
+            method (str): Any of "get", "post", "delete"
+            data (any): Possible extra data to send with the request
+            extra_headers (dict): Possible extra headers to send along in the
+               request
+        Returns:
+            dict
+        """
+        headers = {'Content-type': 'application/json'}
+        if isinstance(extra_headers, dict):
+            headers.update(extra_headers)
+
+        res = self.session.request(method, url, headers=headers, data=data, stream=True)
+        if 400 <= res.status_code < 600:
+            raise HTTPError(res.content, response=res)
+        
+        content_type = res.headers.get('content-type')
+        if content_type is not None:
+           if 'application/json' in content_type:
+               return res.json()
+           else:
+               try:
+                   content_disposition = res.headers['content-disposition']
+               except KeyError:
+                   raise HTTPError("Unknown Content-Disposition", response=res)
+               except:
+                   raise HTTPError(res.content, response=res)
+
+               m = re.search("filename=\"(.+)\"", content_disposition)
+               filename = m.group(1)
+               
+               result = self._download_file(content_type, filename, res)
+               return result
+        else:
+            raise HTTPError("Unknown Content-Type!", response=res)
+
+    def _download_file(self, content_type, filename, response):
+        """Downloads a file via HTTP
+
+        Args:
+            content_type (str): Type of data in the HTTP response
+            filename (str): The name of the file to download
+            response (Response): HTTP response object
+  
+        Returns:
+            dict
+        """
+
+        CHUNK_SIZE = 1024 * 1000
+
+        try:
+            with open(filename, 'wb') as f:
+                for chunk in response.iter_content(chunk_size = CHUNK_SIZE):
+                    f.write(chunk)
+        except TypeError:
+            with open(filename, 'w') as f:
+                for chunk in response.iter_content(chunk_size = CHUNK_SIZE):
+                    f.write(chunk)
+        except:
+            return {'Status': 'FAIL', 'Filename': filename}
+
+        return {'Status': 'OK', 'Filename': filename}
 
     def _get_api_version(self):
         """Fetches the most recent API version
@@ -147,7 +243,6 @@ class InfobloxNetMRI(object):
         url = "{base_url}/api/authenticate".format(base_url=self._base_url())
         data = json.dumps({'username': self.username, "password": self.password})
         # Bypass authentication check in make_request by using _send_request
-        logger.debug("Authenticating against NetMRI")
         self._send_request(url, method="post", data=data)
         self._is_authenticated = True
 
@@ -215,12 +310,13 @@ class InfobloxNetMRI(object):
             method=method_name
         )
 
-    def api_request(self, method_name, params):
+    def api_request(self, method_name, params, downloadable=False):
         """Execute an arbitrary method.
 
         Args:
             method_name (str): include the controller name: 'devices/search'
             params (dict): the method parameters
+            downloadable (bool): indicates if the request can download files
         Returns:
             A dict with the response
         Raises:
@@ -228,7 +324,7 @@ class InfobloxNetMRI(object):
         """
         url = self._method_url(method_name)
         data = json.dumps(params)
-        return self._make_request(url=url, method="post", data=data)
+        return self._make_request(url=url, method="post", data=data, downloadable=downloadable)
 
     def show(self, objtype, objid):
         """Query for a specific resource by ID
@@ -257,3 +353,30 @@ class InfobloxNetMRI(object):
         """
         url = self._object_url(objtype, int(objid))
         return self._make_request(url, method="delete")
+
+    def get_broker(self, name):
+        """Return broker class using full package name
+
+        Args:
+            name (str): full package name e.g. 'api.broker.v3_2_0.device_broker.DeviceBroker'
+        Returns:
+            class of broker
+        Raises:
+            RuntimeError
+        """
+        return locate(self._get_broker_package(name))(self)
+
+    def _get_broker_package(self, name):
+        """Return broker class full package name using API version and API class name
+        Args:
+            name (str): API data structure name e.g. 'Device'
+        Returns:
+            full path for class representation of object
+
+        """
+        version = to_underscore_notation(self.api_version)
+        return "infoblox_netmri.api.broker.{ver}.{pckg}_broker.{name}Broker".format(
+            ver=version,
+            pckg=to_snake(name),
+            name=name
+        )

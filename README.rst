@@ -42,7 +42,7 @@ will contain the outputs documented in the online API documentation.
 
 ::
 
-  from infoblox_netmri import InfobloxNetMRI
+  from infoblox_netmri.client import InfobloxNetMRI
 
   c = InfobloxNetMRI(host="netmri",
                      username="admin",
@@ -71,4 +71,4 @@ NetMRI Documentation
 To see documentation on the calls available, visit the page /api/docs on
 your NetMRI.
 
-Please also see https://github.com/infobloxopen/netmri-toolkit for examples.
+Please also see https://github.com/infobloxopen/netmri-toolkit and https://github.com/infobloxopen/infoblox-netmri/tree/master/examples/tutorial for examples.

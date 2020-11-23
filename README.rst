@@ -59,10 +59,10 @@ result. So, we really want to loop through ``devices['devices']``:
 
 ::
 
-  FORMAT='%30s %16s %10s'
-  print FORMAT % ('Device Name', 'IP Address', 'Vendor')
+  FORMAT='{:30} {:16} {}'
+  print(FORMAT.format('Device Name', 'IP Address', 'Vendor'))
   for d in devices['devices']:
-      print FORMAT % (d['DeviceName'], d['DeviceIPDotted'], d['DeviceVendor'])
+      print(FORMAT.format(d['DeviceName'], d['DeviceIPDotted'], d['DeviceVendor']))
 
 
 NetMRI Documentation

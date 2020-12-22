@@ -20,7 +20,6 @@ test_requirements = [
 ]
 
 
-
 setup(
     name='infoblox-netmri',
     version="3.6.0.0",
@@ -31,7 +30,7 @@ setup(
     url='https://netmri_ip/api/dist',
     packages=find_packages(exclude='infoblox_netmri.tests'),
     package_dir={'infoblox_netmri':
-                     'infoblox_netmri'},
+                 'infoblox_netmri'},
     include_package_data=True,
     install_requires=requirements,
     license="Apache",
@@ -42,12 +41,11 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.6",
-        'Programming Language :: Python :: 2.7',
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.4",
-        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
     ],
     test_suite='infoblox_netmri.tests',
     tests_require=test_requirements

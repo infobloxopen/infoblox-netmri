@@ -110,6 +110,9 @@ class DeviceGroupRemote(RemoteModel):
     |  ``UseGlobalPolFreq:`` A flag indicating if Global Polling Frequency should be used instead Device Group Polling Frequency.
     |  ``attribute type:`` bool
     
+    |  ``CredentialGroupID:`` The unique identifier of the credential group.
+    |  ``attribute type:`` number
+    
     """
 
     properties = ("DeviceGroupID",
@@ -146,6 +149,7 @@ class DeviceGroupRemote(RemoteModel):
                   "PrivilegedPollingInd",
                   "PolFreqModifier",
                   "UseGlobalPolFreq",
+                  "CredentialGroupID",
                   )
 
     
@@ -162,6 +166,7 @@ class DeviceGroupRemote(RemoteModel):
         ``attribute type:`` model
         """
         return self.broker.data_source(**{"GroupID": self.GroupID })
+    
     
     
     

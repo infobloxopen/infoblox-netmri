@@ -79,7 +79,7 @@ class DeviceGroupBroker(Broker):
             |  ``required:`` False
             |  ``default:`` GroupID
 
-             :param sort: The data field(s) to use for sorting the output. Default is GroupID. Valid values are DeviceGroupID, ParentDeviceGroupID, DeviceGroupDefnID, DeviceGroupStartTime, DeviceGroupEndTime, DeviceGroupChangedCols, DeviceGroupTimestamp, DataSourceID, GroupID, GroupName, Criteria, Rank, SNMPPolling, CLIPolling, SNMPAnalysis, FingerPrint, CCSCollection, VendorDefaultCollection, ConfigPolling, PortScanning, StandardsCompliance, MemberCount, ConfigLocked, PrivilegedPollingInd, UseGlobalPolFreq, PolFreqModifier, PolicyScheduleMode, PerfEnvPollingInd, SPMCollectionInd, NetBIOSScanningInd, ARPCacheRefreshInd, SAMLicensedInd, AdvancedGroupInd, IncludeEndHostsInd.
+             :param sort: The data field(s) to use for sorting the output. Default is GroupID. Valid values are DeviceGroupID, ParentDeviceGroupID, DeviceGroupDefnID, DeviceGroupStartTime, DeviceGroupEndTime, DeviceGroupChangedCols, DeviceGroupTimestamp, DataSourceID, GroupID, GroupName, Criteria, Rank, SNMPPolling, CLIPolling, SNMPAnalysis, FingerPrint, CCSCollection, VendorDefaultCollection, ConfigPolling, PortScanning, StandardsCompliance, MemberCount, ConfigLocked, PrivilegedPollingInd, UseGlobalPolFreq, PolFreqModifier, PolicyScheduleMode, PerfEnvPollingInd, SPMCollectionInd, NetBIOSScanningInd, ARPCacheRefreshInd, SAMLicensedInd, AdvancedGroupInd, IncludeEndHostsInd, CredentialGroupID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -95,7 +95,7 @@ class DeviceGroupBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each DeviceGroup. Valid values are DeviceGroupID, ParentDeviceGroupID, DeviceGroupDefnID, DeviceGroupStartTime, DeviceGroupEndTime, DeviceGroupChangedCols, DeviceGroupTimestamp, DataSourceID, GroupID, GroupName, Criteria, Rank, SNMPPolling, CLIPolling, SNMPAnalysis, FingerPrint, CCSCollection, VendorDefaultCollection, ConfigPolling, PortScanning, StandardsCompliance, MemberCount, ConfigLocked, PrivilegedPollingInd, UseGlobalPolFreq, PolFreqModifier, PolicyScheduleMode, PerfEnvPollingInd, SPMCollectionInd, NetBIOSScanningInd, ARPCacheRefreshInd, SAMLicensedInd, AdvancedGroupInd, IncludeEndHostsInd. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each DeviceGroup. Valid values are DeviceGroupID, ParentDeviceGroupID, DeviceGroupDefnID, DeviceGroupStartTime, DeviceGroupEndTime, DeviceGroupChangedCols, DeviceGroupTimestamp, DataSourceID, GroupID, GroupName, Criteria, Rank, SNMPPolling, CLIPolling, SNMPAnalysis, FingerPrint, CCSCollection, VendorDefaultCollection, ConfigPolling, PortScanning, StandardsCompliance, MemberCount, ConfigLocked, PrivilegedPollingInd, UseGlobalPolFreq, PolFreqModifier, PolicyScheduleMode, PerfEnvPollingInd, SPMCollectionInd, NetBIOSScanningInd, ARPCacheRefreshInd, SAMLicensedInd, AdvancedGroupInd, IncludeEndHostsInd, CredentialGroupID. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -231,6 +231,22 @@ class DeviceGroupBroker(Broker):
 
              :param ConfigPolling: 1 if NetMRI configuration collection is enabled for the device group members; 0 otherwise.
              :type ConfigPolling: Array of Integer
+
+            |  ``api version min:`` 2.3
+            |  ``api version max:`` 2.4
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param CredentialGroupID: The unique identifier of the credential group.
+             :type CredentialGroupID: Integer
+
+            |  ``api version min:`` 2.5
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param CredentialGroupID: The unique identifier of the credential group.
+             :type CredentialGroupID: Array of Integer
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` 2.4
@@ -733,7 +749,7 @@ class DeviceGroupBroker(Broker):
             |  ``required:`` False
             |  ``default:`` GroupID
 
-             :param sort: The data field(s) to use for sorting the output. Default is GroupID. Valid values are DeviceGroupID, ParentDeviceGroupID, DeviceGroupDefnID, DeviceGroupStartTime, DeviceGroupEndTime, DeviceGroupChangedCols, DeviceGroupTimestamp, DataSourceID, GroupID, GroupName, Criteria, Rank, SNMPPolling, CLIPolling, SNMPAnalysis, FingerPrint, CCSCollection, VendorDefaultCollection, ConfigPolling, PortScanning, StandardsCompliance, MemberCount, ConfigLocked, PrivilegedPollingInd, UseGlobalPolFreq, PolFreqModifier, PolicyScheduleMode, PerfEnvPollingInd, SPMCollectionInd, NetBIOSScanningInd, ARPCacheRefreshInd, SAMLicensedInd, AdvancedGroupInd, IncludeEndHostsInd.
+             :param sort: The data field(s) to use for sorting the output. Default is GroupID. Valid values are DeviceGroupID, ParentDeviceGroupID, DeviceGroupDefnID, DeviceGroupStartTime, DeviceGroupEndTime, DeviceGroupChangedCols, DeviceGroupTimestamp, DataSourceID, GroupID, GroupName, Criteria, Rank, SNMPPolling, CLIPolling, SNMPAnalysis, FingerPrint, CCSCollection, VendorDefaultCollection, ConfigPolling, PortScanning, StandardsCompliance, MemberCount, ConfigLocked, PrivilegedPollingInd, UseGlobalPolFreq, PolFreqModifier, PolicyScheduleMode, PerfEnvPollingInd, SPMCollectionInd, NetBIOSScanningInd, ARPCacheRefreshInd, SAMLicensedInd, AdvancedGroupInd, IncludeEndHostsInd, CredentialGroupID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -749,7 +765,7 @@ class DeviceGroupBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each DeviceGroup. Valid values are DeviceGroupID, ParentDeviceGroupID, DeviceGroupDefnID, DeviceGroupStartTime, DeviceGroupEndTime, DeviceGroupChangedCols, DeviceGroupTimestamp, DataSourceID, GroupID, GroupName, Criteria, Rank, SNMPPolling, CLIPolling, SNMPAnalysis, FingerPrint, CCSCollection, VendorDefaultCollection, ConfigPolling, PortScanning, StandardsCompliance, MemberCount, ConfigLocked, PrivilegedPollingInd, UseGlobalPolFreq, PolFreqModifier, PolicyScheduleMode, PerfEnvPollingInd, SPMCollectionInd, NetBIOSScanningInd, ARPCacheRefreshInd, SAMLicensedInd, AdvancedGroupInd, IncludeEndHostsInd. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each DeviceGroup. Valid values are DeviceGroupID, ParentDeviceGroupID, DeviceGroupDefnID, DeviceGroupStartTime, DeviceGroupEndTime, DeviceGroupChangedCols, DeviceGroupTimestamp, DataSourceID, GroupID, GroupName, Criteria, Rank, SNMPPolling, CLIPolling, SNMPAnalysis, FingerPrint, CCSCollection, VendorDefaultCollection, ConfigPolling, PortScanning, StandardsCompliance, MemberCount, ConfigLocked, PrivilegedPollingInd, UseGlobalPolFreq, PolFreqModifier, PolicyScheduleMode, PerfEnvPollingInd, SPMCollectionInd, NetBIOSScanningInd, ARPCacheRefreshInd, SAMLicensedInd, AdvancedGroupInd, IncludeEndHostsInd, CredentialGroupID. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -773,7 +789,7 @@ class DeviceGroupBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param query: This value will be matched against device groups, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: ARPCacheRefreshInd, AdvancedGroupInd, CCSCollection, CLIPolling, ConfigLocked, ConfigPolling, Criteria, DataSourceID, DeviceGroupChangedCols, DeviceGroupDefnID, DeviceGroupEndTime, DeviceGroupID, DeviceGroupStartTime, DeviceGroupTimestamp, FingerPrint, GroupID, GroupName, IncludeEndHostsInd, MemberCount, NetBIOSScanningInd, ParentDeviceGroupID, PerfEnvPollingInd, PolFreqModifier, PolicyScheduleMode, PortScanning, PrivilegedPollingInd, Rank, SAMLicensedInd, SNMPAnalysis, SNMPPolling, SPMCollectionInd, StandardsCompliance, UseGlobalPolFreq, VendorDefaultCollection.
+             :param query: This value will be matched against device groups, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: ARPCacheRefreshInd, AdvancedGroupInd, CCSCollection, CLIPolling, ConfigLocked, ConfigPolling, CredentialGroupID, Criteria, DataSourceID, DeviceGroupChangedCols, DeviceGroupDefnID, DeviceGroupEndTime, DeviceGroupID, DeviceGroupStartTime, DeviceGroupTimestamp, FingerPrint, GroupID, GroupName, IncludeEndHostsInd, MemberCount, NetBIOSScanningInd, ParentDeviceGroupID, PerfEnvPollingInd, PolFreqModifier, PolicyScheduleMode, PortScanning, PrivilegedPollingInd, Rank, SAMLicensedInd, SNMPAnalysis, SNMPPolling, SPMCollectionInd, StandardsCompliance, UseGlobalPolFreq, VendorDefaultCollection.
              :type query: String
 
             |  ``api version min:`` 2.3
@@ -802,7 +818,7 @@ class DeviceGroupBroker(Broker):
     
     def find(self, **kwargs):
     
-        """Lists the available device groups matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: ARPCacheRefreshInd, AdvancedGroupInd, CCSCollection, CLIPolling, ConfigLocked, ConfigPolling, Criteria, DataSourceID, DeviceGroupChangedCols, DeviceGroupDefnID, DeviceGroupEndTime, DeviceGroupID, DeviceGroupStartTime, DeviceGroupTimestamp, FingerPrint, GroupID, GroupName, IncludeEndHostsInd, MemberCount, NetBIOSScanningInd, ParentDeviceGroupID, PerfEnvPollingInd, PolFreqModifier, PolicyScheduleMode, PortScanning, PrivilegedPollingInd, Rank, SAMLicensedInd, SNMPAnalysis, SNMPPolling, SPMCollectionInd, StandardsCompliance, UseGlobalPolFreq, VendorDefaultCollection.
+        """Lists the available device groups matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: ARPCacheRefreshInd, AdvancedGroupInd, CCSCollection, CLIPolling, ConfigLocked, ConfigPolling, CredentialGroupID, Criteria, DataSourceID, DeviceGroupChangedCols, DeviceGroupDefnID, DeviceGroupEndTime, DeviceGroupID, DeviceGroupStartTime, DeviceGroupTimestamp, FingerPrint, GroupID, GroupName, IncludeEndHostsInd, MemberCount, NetBIOSScanningInd, ParentDeviceGroupID, PerfEnvPollingInd, PolFreqModifier, PolicyScheduleMode, PortScanning, PrivilegedPollingInd, Rank, SAMLicensedInd, SNMPAnalysis, SNMPPolling, SPMCollectionInd, StandardsCompliance, UseGlobalPolFreq, VendorDefaultCollection.
 
             **Inputs**
 
@@ -949,6 +965,30 @@ class DeviceGroupBroker(Broker):
 
              :param val_c_ConfigPolling: If op_ConfigPolling is specified, this value will be compared to the value in ConfigPolling using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigPolling must be specified if op_ConfigPolling is specified.
              :type val_c_ConfigPolling: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param op_CredentialGroupID: The operator to apply to the field CredentialGroupID. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. CredentialGroupID: The unique identifier of the credential group. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :type op_CredentialGroupID: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_f_CredentialGroupID: If op_CredentialGroupID is specified, the field named in this input will be compared to the value in CredentialGroupID using the specified operator. That is, the value in this input will be treated as another field name, rather than a constant value. Either this field or val_c_CredentialGroupID must be specified if op_CredentialGroupID is specified.
+             :type val_f_CredentialGroupID: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_c_CredentialGroupID: If op_CredentialGroupID is specified, this value will be compared to the value in CredentialGroupID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CredentialGroupID must be specified if op_CredentialGroupID is specified.
+             :type val_c_CredentialGroupID: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -1675,7 +1715,7 @@ class DeviceGroupBroker(Broker):
             |  ``required:`` False
             |  ``default:`` GroupID
 
-             :param sort: The data field(s) to use for sorting the output. Default is GroupID. Valid values are DeviceGroupID, ParentDeviceGroupID, DeviceGroupDefnID, DeviceGroupStartTime, DeviceGroupEndTime, DeviceGroupChangedCols, DeviceGroupTimestamp, DataSourceID, GroupID, GroupName, Criteria, Rank, SNMPPolling, CLIPolling, SNMPAnalysis, FingerPrint, CCSCollection, VendorDefaultCollection, ConfigPolling, PortScanning, StandardsCompliance, MemberCount, ConfigLocked, PrivilegedPollingInd, UseGlobalPolFreq, PolFreqModifier, PolicyScheduleMode, PerfEnvPollingInd, SPMCollectionInd, NetBIOSScanningInd, ARPCacheRefreshInd, SAMLicensedInd, AdvancedGroupInd, IncludeEndHostsInd.
+             :param sort: The data field(s) to use for sorting the output. Default is GroupID. Valid values are DeviceGroupID, ParentDeviceGroupID, DeviceGroupDefnID, DeviceGroupStartTime, DeviceGroupEndTime, DeviceGroupChangedCols, DeviceGroupTimestamp, DataSourceID, GroupID, GroupName, Criteria, Rank, SNMPPolling, CLIPolling, SNMPAnalysis, FingerPrint, CCSCollection, VendorDefaultCollection, ConfigPolling, PortScanning, StandardsCompliance, MemberCount, ConfigLocked, PrivilegedPollingInd, UseGlobalPolFreq, PolFreqModifier, PolicyScheduleMode, PerfEnvPollingInd, SPMCollectionInd, NetBIOSScanningInd, ARPCacheRefreshInd, SAMLicensedInd, AdvancedGroupInd, IncludeEndHostsInd, CredentialGroupID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1691,7 +1731,7 @@ class DeviceGroupBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each DeviceGroup. Valid values are DeviceGroupID, ParentDeviceGroupID, DeviceGroupDefnID, DeviceGroupStartTime, DeviceGroupEndTime, DeviceGroupChangedCols, DeviceGroupTimestamp, DataSourceID, GroupID, GroupName, Criteria, Rank, SNMPPolling, CLIPolling, SNMPAnalysis, FingerPrint, CCSCollection, VendorDefaultCollection, ConfigPolling, PortScanning, StandardsCompliance, MemberCount, ConfigLocked, PrivilegedPollingInd, UseGlobalPolFreq, PolFreqModifier, PolicyScheduleMode, PerfEnvPollingInd, SPMCollectionInd, NetBIOSScanningInd, ARPCacheRefreshInd, SAMLicensedInd, AdvancedGroupInd, IncludeEndHostsInd. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each DeviceGroup. Valid values are DeviceGroupID, ParentDeviceGroupID, DeviceGroupDefnID, DeviceGroupStartTime, DeviceGroupEndTime, DeviceGroupChangedCols, DeviceGroupTimestamp, DataSourceID, GroupID, GroupName, Criteria, Rank, SNMPPolling, CLIPolling, SNMPAnalysis, FingerPrint, CCSCollection, VendorDefaultCollection, ConfigPolling, PortScanning, StandardsCompliance, MemberCount, ConfigLocked, PrivilegedPollingInd, UseGlobalPolFreq, PolFreqModifier, PolicyScheduleMode, PerfEnvPollingInd, SPMCollectionInd, NetBIOSScanningInd, ARPCacheRefreshInd, SAMLicensedInd, AdvancedGroupInd, IncludeEndHostsInd, CredentialGroupID. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8

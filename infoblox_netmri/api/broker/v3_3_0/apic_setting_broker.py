@@ -39,7 +39,7 @@ class ApicSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, ca_cert_id, ca_cert_content.
+             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -55,7 +55,7 @@ class ApicSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each ApicSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each ApicSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -143,6 +143,14 @@ class ApicSettingBroker(Broker):
 
              :param ca_cert_id: No description is available for ca_cert_id.
              :type ca_cert_id: Array of String
+
+            |  ``api version min:`` 3.2
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param collect_offline_devices: No description is available for collect_offline_devices.
+             :type collect_offline_devices: Array of String
 
             |  ``api version min:`` 3.2
             |  ``api version max:`` None
@@ -285,7 +293,7 @@ class ApicSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, ca_cert_id, ca_cert_content.
+             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -301,7 +309,7 @@ class ApicSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each ApicSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each ApicSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -325,7 +333,7 @@ class ApicSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param query: This value will be matched against apic settings, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: SecureVersion, UnitID, api_key, blackout_duration, ca_cert_content, ca_cert_id, controller_address, created_at, handle, id, max_requests_per_second, on_prem, protocol, scan_interface_id, sdn_password, sdn_type, sdn_username, start_blackout_schedule, updated_at, use_global_proxy, virtual_network_id.
+             :param query: This value will be matched against apic settings, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: SecureVersion, UnitID, api_key, blackout_duration, ca_cert_content, ca_cert_id, collect_offline_devices, controller_address, created_at, handle, id, max_requests_per_second, on_prem, protocol, scan_interface_id, sdn_password, sdn_type, sdn_username, start_blackout_schedule, updated_at, use_global_proxy, virtual_network_id.
              :type query: String
 
             |  ``api version min:`` 2.3
@@ -354,7 +362,7 @@ class ApicSettingBroker(Broker):
     
     def find(self, **kwargs):
     
-        """Lists the available apic settings matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: SecureVersion, UnitID, api_key, blackout_duration, ca_cert_content, ca_cert_id, controller_address, created_at, handle, id, max_requests_per_second, on_prem, protocol, scan_interface_id, sdn_password, sdn_type, sdn_username, start_blackout_schedule, updated_at, use_global_proxy, virtual_network_id.
+        """Lists the available apic settings matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: SecureVersion, UnitID, api_key, blackout_duration, ca_cert_content, ca_cert_id, collect_offline_devices, controller_address, created_at, handle, id, max_requests_per_second, on_prem, protocol, scan_interface_id, sdn_password, sdn_type, sdn_username, start_blackout_schedule, updated_at, use_global_proxy, virtual_network_id.
 
             **Inputs**
 
@@ -501,6 +509,30 @@ class ApicSettingBroker(Broker):
 
              :param val_c_ca_cert_id: If op_ca_cert_id is specified, this value will be compared to the value in ca_cert_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ca_cert_id must be specified if op_ca_cert_id is specified.
              :type val_c_ca_cert_id: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param op_collect_offline_devices: The operator to apply to the field collect_offline_devices. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. collect_offline_devices: No description is available for collect_offline_devices. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :type op_collect_offline_devices: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_f_collect_offline_devices: If op_collect_offline_devices is specified, the field named in this input will be compared to the value in collect_offline_devices using the specified operator. That is, the value in this input will be treated as another field name, rather than a constant value. Either this field or val_c_collect_offline_devices must be specified if op_collect_offline_devices is specified.
+             :type val_f_collect_offline_devices: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_c_collect_offline_devices: If op_collect_offline_devices is specified, this value will be compared to the value in collect_offline_devices using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_collect_offline_devices must be specified if op_collect_offline_devices is specified.
+             :type val_c_collect_offline_devices: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -883,7 +915,7 @@ class ApicSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, ca_cert_id, ca_cert_content.
+             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -899,7 +931,7 @@ class ApicSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each ApicSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each ApicSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -1025,6 +1057,14 @@ class ApicSettingBroker(Broker):
 
              :param ca_cert_id: No description is available for ca_cert_id.
              :type ca_cert_id: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` True
+
+             :param collect_offline_devices: No description is available for collect_offline_devices.
+             :type collect_offline_devices: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -1223,6 +1263,14 @@ class ApicSettingBroker(Broker):
 
              :param ca_cert_id: No description is available for ca_cert_id. If omitted, this field will not be updated.
              :type ca_cert_id: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` True
+
+             :param collect_offline_devices: No description is available for collect_offline_devices. If omitted, this field will be updated to the default value.
+             :type collect_offline_devices: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None

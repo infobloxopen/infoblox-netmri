@@ -64,6 +64,9 @@ class ApicSettingRemote(RemoteModel):
     |  ``max_requests_per_second:`` none
     |  ``attribute type:`` string
     
+    |  ``collect_offline_devices:`` none
+    |  ``attribute type:`` string
+    
     |  ``ca_cert_id:`` none
     |  ``attribute type:`` string
     
@@ -91,10 +94,12 @@ class ApicSettingRemote(RemoteModel):
                   "start_blackout_schedule",
                   "blackout_duration",
                   "max_requests_per_second",
+                  "collect_offline_devices",
                   "ca_cert_id",
                   "ca_cert_content",
                   )
 
+    
     
     
     

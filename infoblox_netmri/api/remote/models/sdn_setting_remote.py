@@ -70,6 +70,9 @@ class SdnSettingRemote(RemoteModel):
     |  ``max_requests_per_second:`` Maximum Requests per Second.
     |  ``attribute type:`` number
     
+    |  ``collect_offline_devices:`` Collect Devices In Offline Status
+    |  ``attribute type:`` bool
+    
     """
 
     properties = ("id",
@@ -93,8 +96,10 @@ class SdnSettingRemote(RemoteModel):
                   "start_blackout_schedule",
                   "blackout_duration",
                   "max_requests_per_second",
+                  "collect_offline_devices",
                   )
 
+    
     
     
     

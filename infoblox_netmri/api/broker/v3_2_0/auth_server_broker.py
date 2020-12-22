@@ -45,6 +45,14 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
+             :param auth_service_id: The id of the authentication service, this server is member of.
+             :type auth_service_id: Array of Integer
+
+            |  ``api version min:`` 2.5
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
              :param id: The authentication server identifier.
              :type id: Array of Integer
 

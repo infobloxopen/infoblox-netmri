@@ -91,6 +91,15 @@ class AuthUserRemote(RemoteModel):
     |  ``cert:`` Client Certificate stored on clinet success authorization when CAC is enabled
     |  ``attribute type:`` string
     
+    |  ``db_username:`` Username for MySQL Database.
+    |  ``attribute type:`` string
+    
+    |  ``db_password_secure:`` Password for MySQL Database.
+    |  ``attribute type:`` string
+    
+    |  ``db_creds_enabled_ind:`` A flag which indicates that the user has database credentials enabled.
+    |  ``attribute type:`` bool
+    
     """
 
     properties = ("id",
@@ -121,8 +130,14 @@ class AuthUserRemote(RemoteModel):
                   "force_local_ind",
                   "last_local_authz_ind",
                   "cert",
+                  "db_username",
+                  "db_password_secure",
+                  "db_creds_enabled_ind",
                   )
 
+    
+    
+    
     
     
     

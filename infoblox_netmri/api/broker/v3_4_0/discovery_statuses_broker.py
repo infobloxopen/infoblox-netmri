@@ -96,6 +96,14 @@ class DiscoveryStatusesBroker(Broker):
              :param management_ip_only_ind: If op_IPAddress is used, by default entire ip addresses is searched. Set the value in this input to true to search only management ip addresses.
              :type management_ip_only_ind: Boolean
 
+            |  ``api version min:`` 3.6
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param select: The list of fields to return for each discovery status. Valid values are DeviceID, DeviceIPDotted, VirtualNetworkID, VirtualNetworkName, VirtualNetworkMemberArtificialInd, DeviceIPNumeric, DeviceName, DeviceType, DeviceUniqueKey, Status, StatusDetail, SPMLicensedInd, SAMLicensedInd, LicenseOverride, FirstSeen, DeviceFirstOccurrenceTime, LastSeen, FingerPrintEnabled, SDNCollectionEnabled, SNMPCollectionEnabled, CLICollectionEnabled, ConfigCollectionEnabled, CLICredentialMessage, CLICredentialStatus, CLICredentialTimestamp, GlobalConfigCollectionEnabled, GlobalConfigCollectionMessage, ConfigCollectionMessage, ConfigCollectionStatus, ConfigCollectionStatusSort, ConfigCollectionTimestamp, DeviceGroupMessage, DeviceGroupStatus, DeviceGroupTimestamp, ExistsMessage, ExistsTimestamp, FingerPrintMessage, FingerPrintStatus, FingerPrintTimestamp, SDNCollectionMessage, SDNCollectionStatus, SDNCollectionTimestamp, LastAction, LastTimestamp, ReachableMessage, ReachableStatus, ReachableTimestamp, SNMPCollectionMessage, SNMPCollectionStatus, SNMPCollectionTimestamp, SNMPCredentialMessage, SNMPCredentialStatus, SNMPCredentialTimestamp, RuleListAnalysisMessage, RuleListAnalysisStatus, RuleListAnalysisTimestamp, UnitID, AccessInd, ForwardingInd, StartPortControlBlackoutSchedule, PortControlBlackoutDuration, StartBlackoutSchedule, BlackoutDuration. If empty or omitted, all fields will be returned.
+             :type select: Array
+
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False

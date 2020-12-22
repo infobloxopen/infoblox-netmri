@@ -12,9 +12,6 @@ import unittest
 import json
 from requests import Session
 
-from os import rename, remove
-from os.path import isfile, expanduser
-
 from httmock import with_httmock, urlmatch
 from mock import patch
 
@@ -24,16 +21,18 @@ from infoblox_netmri.easy import NetMRIEasy
 
 class MockResponse:
 
-    def __init__(self, status_code=200, content=b"{}", data={}, is_headers=False):
+    def __init__(self, status_code=200, content=b"{}", data=None, is_headers=False):
         self.status_code = status_code
         self.content = content
         self.headers = self._json_headers() if is_headers else self._empty_headers()
-        self.data = data
+        self.data = {} if data is None else data
 
-    def _empty_headers(self):
+    @staticmethod
+    def _empty_headers():
         return {'content-type': []}
 
-    def _json_headers(self):
+    @staticmethod
+    def _json_headers():
         return {'content-type': ['application/json']}
 
     def json(self):
@@ -49,12 +48,12 @@ class MockResponse:
 
 
 @urlmatch(path=r"^/api/authenticate$")
-def authenticate_response(url, request):
+def authenticate_response(_url, _request):
     return {'status_code': 200, 'content': b"{}", 'headers': {'content-type': []}}
 
 
 @urlmatch(path=r"^/api/3.1/dis_sessions/open")
-def open_dis_session(url, request):
+def open_dis_session(_url, _request):
     return {'status_code': 200,
             'headers': {'content-type': json.dumps(['application/json'])},
             'content': b'{"dis_session": {"JobID": 4, "SessionID": "149088011782626-7348", "RemoteUsername": "admin", '
@@ -63,22 +62,22 @@ def open_dis_session(url, request):
 
 
 @urlmatch(path=r'/api/3.1/dis_sessions/close')
-def close_session(url, request):
+def close_session(_url, _request):
     return {'status_code': 200, 'content': b'{}', 'headers': {'content-type': []}}
 
 
 @urlmatch(path=r"^/api/3.1/cli_connections/open")
-def open_cli_session(url, request):
+def open_cli_session(_url, _request):
     return {'status_code': 200, 'content': b"{}", 'headers': {'content-type': []}}
 
 
 @urlmatch(path=r"^/api/3.1/jobs/[0-9]+$")
-def job_response(url, request):
+def job_response(_url, _request):
     return {'status_code': 200, 'content': b'{"job": {}}', 'headers': {'content-type': []}}
 
 
 @urlmatch(path=r"^/api/3.1/devices/index$")
-def devices_list_response(url, request):
+def devices_list_response(_url, _request):
     return {'status_code': 200, 'content': b'{}', 'headers': {'content-type': []}}
 
 
@@ -96,7 +95,7 @@ device = {'DeviceType': 'unknown', 'InfraDeviceInd': False,
               'Device', 'DeviceAddlInfo': None}
 
 
-def devices_list(*args, **kwargs):
+def devices_list(*_, **__):
     global device
     device2 = device.copy()
     device2.update({'DeviceID': 2})
@@ -105,12 +104,12 @@ def devices_list(*args, **kwargs):
     return {'devices': devices}
 
 
-def single_device(*args, **kwargs):
+def single_device(*_, **__):
     global device
     return {'device': device}
 
 
-def send_command_result(*args, **kwargs):
+def send_command_result(*_, **__):
     return {'command_response': "OK"}
 
 
@@ -234,7 +233,6 @@ class TestInfobloxNetmri(unittest.TestCase):
         broker = netmri.get_broker('AccessChange')
         self.assertEqual(broker.__class__.__name__, 'AccessChangeBroker', "AccessChangeBroker broker import error")
 
-
     @with_httmock(authenticate_response, devices_list_response)
     def test_get_devices_list(self):
         netmri = InfobloxNetMRI(**self.opts)
@@ -287,9 +285,9 @@ class TestInfobloxNetmri(unittest.TestCase):
         init_data = {'device_id': 1, 'job_id': 1, 'batch_id': 1}
         init_data.update(
             {'api_url': 'https://localhost',
-            'http_username': 'admin',
-            'http_password': 'admin',
-            'api_version': '3.1'}
+             'http_username': 'admin',
+             'http_password': 'admin',
+             'api_version': '3.1'}
         )
         with NetMRIEasy(**init_data) as easy:
             self.assertEqual(easy.device_id, 1)

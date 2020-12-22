@@ -25,6 +25,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 from infoblox_netmri.utils.utils import locate, to_underscore_notation, to_snake
 
+
 class InfobloxNetMRI(object):
     def __init__(self, host, username, password, api_version="auto",
                  use_ssl=True, ssl_verify=False, http_pool_connections=5,
@@ -131,7 +132,7 @@ class InfobloxNetMRI(object):
 
         res = self.session.request(method, url, headers=headers, data=data, stream=True)
         content_type = res.headers.get('content-type')
-                    
+
         if 400 <= res.status_code < 600:
             if 'application/json' in content_type:
                 raise HTTPError(res.json(), response=res)
@@ -141,7 +142,7 @@ class InfobloxNetMRI(object):
         content = b''
         for chunk in res.iter_content():
             content += chunk
-                
+
         if res.headers.get('Content-Encoding') == 'gzip':
             content_copy = content
             try:
@@ -180,35 +181,36 @@ class InfobloxNetMRI(object):
         res = self.session.request(method, url, headers=headers, data=data, stream=True)
         if 400 <= res.status_code < 600:
             raise HTTPError(res.content, response=res)
-        
+
         content_type = res.headers.get('content-type')
         if content_type is not None:
-           if 'application/json' in content_type:
-               return res.json()
-           else:
-               try:
-                   content_disposition = res.headers['content-disposition']
-               except KeyError:
-                   raise HTTPError("Unknown Content-Disposition", response=res)
-               except:
-                   raise HTTPError(res.content, response=res)
+            if 'application/json' in content_type:
+                return res.json()
+            else:
+                try:
+                    content_disposition = res.headers['content-disposition']
+                except KeyError:
+                    raise HTTPError("Unknown Content-Disposition", response=res)
+                except:
+                    raise HTTPError(res.content, response=res)
 
-               m = re.search("filename=\"(.+)\"", content_disposition)
-               filename = m.group(1)
-               
-               result = self._download_file(content_type, filename, res)
-               return result
+                m = re.search("filename=\"(.+)\"", content_disposition)
+                filename = m.group(1)
+
+                result = self._download_file(content_type, filename, res)
+                return result
         else:
             raise HTTPError("Unknown Content-Type!", response=res)
 
-    def _download_file(self, content_type, filename, response):
+    @staticmethod
+    def _download_file(_content_type, filename, response):
         """Downloads a file via HTTP
 
         Args:
-            content_type (str): Type of data in the HTTP response
+            _content_type (str): Type of data in the HTTP response
             filename (str): The name of the file to download
             response (Response): HTTP response object
-  
+
         Returns:
             dict
         """
@@ -217,11 +219,11 @@ class InfobloxNetMRI(object):
 
         try:
             with open(filename, 'wb') as f:
-                for chunk in response.iter_content(chunk_size = CHUNK_SIZE):
+                for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
                     f.write(chunk)
         except TypeError:
             with open(filename, 'w') as f:
-                for chunk in response.iter_content(chunk_size = CHUNK_SIZE):
+                for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
                     f.write(chunk)
         except:
             return {'Status': 'FAIL', 'Filename': filename}
@@ -246,7 +248,8 @@ class InfobloxNetMRI(object):
         self._send_request(url, method="post", data=data)
         self._is_authenticated = True
 
-    def _controller_name(self, objtype):
+    @staticmethod
+    def _controller_name(objtype):
         """Determines the controller name for the object's type
 
         Args:

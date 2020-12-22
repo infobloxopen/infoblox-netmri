@@ -9,6 +9,11 @@ Tests for `infoblox_netmri` module.
 """
 
 import unittest
+import json
+from requests import Session
+
+from os import rename, remove
+from os.path import isfile, expanduser
 
 from httmock import with_httmock, urlmatch
 from mock import patch
@@ -17,37 +22,64 @@ from infoblox_netmri.client import InfobloxNetMRI
 from infoblox_netmri.easy import NetMRIEasy
 
 
+class MockResponse:
+
+    def __init__(self, status_code=200, content=b"{}", data={}, is_headers=False):
+        self.status_code = status_code
+        self.content = content
+        self.headers = self._json_headers() if is_headers else self._empty_headers()
+        self.data = data
+
+    def _empty_headers(self):
+        return {'content-type': []}
+
+    def _json_headers(self):
+        return {'content-type': ['application/json']}
+
+    def json(self):
+        return json.dumps(self.data)
+
+    def iter_content(self):
+        if self.data:
+            temp = []
+            for symbol in json.dumps(self.data):
+                temp.append(symbol.encode())
+            return temp
+        return []
+
+
 @urlmatch(path=r"^/api/authenticate$")
 def authenticate_response(url, request):
-    return {'status_code': 200, 'content': b"{}"}
+    return {'status_code': 200, 'content': b"{}", 'headers': {'content-type': []}}
 
 
-@urlmatch(path=r"^/api/3/dis_sessions/open")
+@urlmatch(path=r"^/api/3.1/dis_sessions/open")
 def open_dis_session(url, request):
     return {'status_code': 200,
+            'headers': {'content-type': json.dumps(['application/json'])},
             'content': b'{"dis_session": {"JobID": 4, "SessionID": "149088011782626-7348", "RemoteUsername": "admin", '
                        b'"RemoteIPAddress": "1.2.3.4", "Timestamp": "1855-01-30 06:21:57", "UnitIDList": [0], '
                        b'"_class": "DisSession"}}'}
 
 
-@urlmatch(path=r'/api/3/dis_sessions/close')
+@urlmatch(path=r'/api/3.1/dis_sessions/close')
 def close_session(url, request):
-    return {'status_code': 200, 'content': b'{}'}
+    return {'status_code': 200, 'content': b'{}', 'headers': {'content-type': []}}
 
 
-@urlmatch(path=r"^/api/3/cli_connections/open")
+@urlmatch(path=r"^/api/3.1/cli_connections/open")
 def open_cli_session(url, request):
-    return {'status_code': 200, 'content': b"{}"}
+    return {'status_code': 200, 'content': b"{}", 'headers': {'content-type': []}}
 
 
 @urlmatch(path=r"^/api/3.1/jobs/[0-9]+$")
 def job_response(url, request):
-    return {'status_code': 200, 'content': b'{"job": {}}'}
+    return {'status_code': 200, 'content': b'{"job": {}}', 'headers': {'content-type': []}}
 
 
-@urlmatch(path=r"^/api/3/devices/index$")
+@urlmatch(path=r"^/api/3.1/devices/index$")
 def devices_list_response(url, request):
-    return {'status_code': 200, 'content': b'{}'}
+    return {'status_code': 200, 'content': b'{}', 'headers': {'content-type': []}}
 
 
 device = {'DeviceType': 'unknown', 'InfraDeviceInd': False,
@@ -64,35 +96,22 @@ device = {'DeviceType': 'unknown', 'InfraDeviceInd': False,
               'Device', 'DeviceAddlInfo': None}
 
 
-class MockResult(object):
-    data = None
-
-    def __init__(self, key, data):
-        self.data = {key: data}
-
-    def raise_for_status(self):
-        pass
-
-    def json(self):
-        return self.data
-
-
 def devices_list(*args, **kwargs):
     global device
     device2 = device.copy()
     device2.update({'DeviceID': 2})
     devices = [device, device2]
 
-    return MockResult('devices', devices)
+    return {'devices': devices}
 
 
 def single_device(*args, **kwargs):
     global device
-    return MockResult('device', device)
+    return {'device': device}
 
 
 def send_command_result(*args, **kwargs):
-    return MockResult('command_response', "OK")
+    return {'command_response': "OK"}
 
 
 class TestInfobloxNetmri(unittest.TestCase):
@@ -165,120 +184,134 @@ class TestInfobloxNetmri(unittest.TestCase):
     @with_httmock(authenticate_response, job_response)
     def test_show(self):
         netmri = InfobloxNetMRI(**self.opts)
-        with patch.object(netmri, 'session') as mock_request:
+        with patch.object(Session, 'request', return_value=MockResponse()) as mock_request:
             netmri.show('job', 123)
-            mock_request.request.assert_called_with("get",
-                                                    'https://localhost/api/3.1/jobs/123',
-                                                    headers={'Content-type': 'application/json'},
-                                                    data=None)
+            mock_request.assert_called_with("get",
+                                            'https://localhost/api/3.1/jobs/123',
+                                            headers={'Content-type': 'application/json'},
+                                            data=None,
+                                            stream=True)
 
     @with_httmock(authenticate_response, job_response)
     def test_show_with_string(self):
         netmri = InfobloxNetMRI(**self.opts)
-        with patch.object(netmri, 'session') as mock_request:
+        with patch.object(Session, 'request', return_value=MockResponse()) as mock_request:
             netmri.show('job', '232')
-            mock_request.request.assert_called_with("get",
-                                                    'https://localhost/api/3.1/jobs/232',
-                                                    headers={'Content-type': 'application/json'},
-                                                    data=None)
+            mock_request.assert_called_with("get",
+                                            'https://localhost/api/3.1/jobs/232',
+                                            headers={'Content-type': 'application/json'},
+                                            data=None,
+                                            stream=True)
 
     @with_httmock(authenticate_response, job_response)
     def test_delete(self):
         netmri = InfobloxNetMRI(**self.opts)
-        with patch.object(netmri, 'session') as mock_request:
+        with patch.object(Session, 'request', return_value=MockResponse()) as mock_request:
             netmri.delete('job', 123)
-            mock_request.request.assert_called_with("delete",
-                                                    'https://localhost/api/3.1/jobs/123',
-                                                    headers={'Content-type': 'application/json'},
-                                                    data=None)
+            mock_request.assert_called_with("delete",
+                                            'https://localhost/api/3.1/jobs/123',
+                                            headers={'Content-type': 'application/json'},
+                                            data=None,
+                                            stream=True)
 
     @with_httmock(authenticate_response, job_response)
     def test_delete_with_string(self):
         netmri = InfobloxNetMRI(**self.opts)
-        with patch.object(netmri, 'session') as mock_request:
+        with patch.object(Session, 'request', return_value=MockResponse()) as mock_request:
             netmri.delete('job', '321')
-            mock_request.request.assert_called_with("delete",
-                                                    'https://localhost/api/3.1/jobs/321',
-                                                    headers={'Content-type': 'application/json'},
-                                                    data=None)
+            mock_request.assert_called_with("delete",
+                                            'https://localhost/api/3.1/jobs/321',
+                                            headers={'Content-type': 'application/json'},
+                                            data=None,
+                                            stream=True)
 
     @with_httmock(authenticate_response)
     def test_get_device_broker(self):
         netmri = InfobloxNetMRI(**self.opts)
         broker = netmri.get_broker('Device')
-        self.assertEquals(broker.__class__.__name__, 'DeviceBroker', "Device broker import error")
+        self.assertEqual(broker.__class__.__name__, 'DeviceBroker', "Device broker import error")
 
         broker = netmri.get_broker('AccessChange')
-        self.assertEquals(broker.__class__.__name__, 'AccessChangeBroker', "AccessChangeBroker broker import error")
+        self.assertEqual(broker.__class__.__name__, 'AccessChangeBroker', "AccessChangeBroker broker import error")
 
-        broker = netmri.get_broker('ChangedPortNetExplorerInvSummaryGrid')
-        self.assertEquals(broker.__class__.__name__, 'ChangedPortNetExplorerInvSummaryGridBroker',
-                          'ChangedPortNetExplorerInvSummaryGridBroker broker import error ')
 
     @with_httmock(authenticate_response, devices_list_response)
     def test_get_devices_list(self):
         netmri = InfobloxNetMRI(**self.opts)
         broker = netmri.get_broker('Device')
-        with patch.object(netmri, 'session') as mock_request:
+        with patch.object(Session, 'request', return_value=MockResponse()) as mock_request:
             broker.index()
-            mock_request.request.assert_called_with("post",
-                                                    'https://localhost/api/3/devices/index',
-                                                    headers={'Content-type': 'application/json'},
-                                                    data='{}')
+            mock_request.assert_called_with("post",
+                                            'https://localhost/api/3.1/devices/index',
+                                            headers={'Content-type': 'application/json'},
+                                            data='{}',
+                                            stream=True)
 
     @with_httmock(authenticate_response, devices_list_response)
     def test_get_device(self):
         netmri = InfobloxNetMRI(**self.opts)
         broker = netmri.get_broker('Device')
-        with patch.object(netmri, 'session') as mock_request:
+        with patch.object(Session, 'request', return_value=MockResponse()) as mock_request:
             broker.show(DeviceID=2)
-            mock_request.request.assert_called_with("post",
-                                                    'https://localhost/api/3/devices/show',
-                                                    headers={'Content-type': 'application/json'},
-                                                    data='{"DeviceID": 2}')
+            mock_request.assert_called_with("post",
+                                            'https://localhost/api/3.1/devices/show',
+                                            headers={'Content-type': 'application/json'},
+                                            data='{"DeviceID": 2}',
+                                            stream=True)
 
     @with_httmock(authenticate_response)
     def test_package_creation(self):
         netmri = InfobloxNetMRI(**self.opts)
-        package = "infoblox_netmri.api.broker.v3_0_0.device_broker.DeviceBroker"
-        self.assertEquals(package, netmri._get_broker_package("Device"))
+        package = "infoblox_netmri.api.broker.v3_1_0.device_broker.DeviceBroker"
+        self.assertEqual(package, netmri._get_broker_package("Device"))
 
     @with_httmock(authenticate_response)
     def test_check_return_values(self):
         netmri = InfobloxNetMRI(**self.opts)
         broker = netmri.get_broker('Device')
-        with patch.object(netmri.session, 'request', side_effect=devices_list):
+        with patch.object(netmri.session, 'request', return_value=MockResponse(data=devices_list(), is_headers=True)):
             res = broker.index()
-            self.assertEquals(res[0].DeviceID, 1, "Wrong id device 1")
-            self.assertEquals(res[1].DeviceID, 2, "Wrong id device 2")
+            self.assertEqual(res[0].DeviceID, 1, "Wrong id device 1")
+            self.assertEqual(res[1].DeviceID, 2, "Wrong id device 2")
 
     @with_httmock(authenticate_response)
     def test_check_single_device(self):
         netmri = InfobloxNetMRI(**self.opts)
         broker = netmri.get_broker('Device')
-        with patch.object(netmri.session, 'request', side_effect=single_device):
+        with patch.object(netmri.session, 'request', return_value=MockResponse(data=single_device(), is_headers=True)):
             res = broker.show(DeviceID=1)
-            self.assertEquals(res.DeviceID, 1, "Wrong id")
+            self.assertEqual(res.DeviceID, 1, "Wrong id")
 
     @with_httmock(authenticate_response, open_dis_session, open_cli_session, close_session)
     def test_easy(self):
         init_data = {'device_id': 1, 'job_id': 1, 'batch_id': 1}
-        init_data.update(self.opts)
+        init_data.update(
+            {'api_url': 'https://localhost',
+            'http_username': 'admin',
+            'http_password': 'admin',
+            'api_version': '3.1'}
+        )
         with NetMRIEasy(**init_data) as easy:
-            self.assertEquals(easy.device_id, 1)
-            self.assertEquals(easy.job_id, 1)
-            self.assertEquals(easy.batch_id, 1)
+            self.assertEqual(easy.device_id, 1)
+            self.assertEqual(easy.job_id, 1)
+            self.assertEqual(easy.batch_id, 1)
             self.assertIsNotNone(easy.dis_session)
             self.assertIsNotNone(easy.cli_connection)
 
     @with_httmock(authenticate_response, open_dis_session, open_cli_session, close_session)
     def test_easy_send_command(self):
         init_data = {'device_id': 1, 'job_id': 1, 'batch_id': 1}
-        init_data.update(self.opts)
+        init_data.update(
+            {'api_url': 'http://localhost',
+             'http_username': 'admin',
+             'http_password': 'admin',
+             'api_version': '3.1'}
+        )
         with NetMRIEasy(**init_data) as easy:
-            with patch.object(easy.client.session, 'request', side_effect=send_command_result) as mock_request:
+            with patch.object(easy.client.session, 'request',
+                              return_value=MockResponse(data=send_command_result(), is_headers=True)):
                 res = easy.send_command("show info")
-                self.assertEquals(res, "OK")
+                self.assertEqual(res, "OK")
 
     @with_httmock(authenticate_response, open_dis_session, open_cli_session, close_session)
     def test_easy_empty_params(self):

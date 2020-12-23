@@ -1,8 +1,8 @@
 ###########################################################################
-## Export of Script Module: netmri_easy
-## Language: Python
-## Category: Internal
-## Description: Object oriented library for Python scripting support
+# Export of Script Module: netmri_easy
+# Language: Python
+# Category: Internal
+# Description: Object oriented library for Python scripting support
 ###########################################################################
 import datetime
 import sys
@@ -23,7 +23,7 @@ class NetMRIEasy(object):
         self.device_id = kwargs.get('device_id')
         self.batch_id = kwargs.get('batch_id')
         self.script_login = kwargs.get('script_login')
-        
+
         if (not self.job_id) or (not self.device_id) or (not self.batch_id):
             raise RuntimeError('job_id or device_id or batch_id not initialized')
 
@@ -59,14 +59,15 @@ class NetMRIEasy(object):
                     str(severity).upper(),
                     message
                 )
-                brkr.log_custom_message(message=msg_formatted, id=self.batch_id, jobdetailid=self.job_id, severity=severity)
+                brkr.log_custom_message(message=msg_formatted, id=self.batch_id,
+                                        jobdetailid=self.job_id, severity=severity)
 
             setattr(self.__class__, "remote_log_message", remote_log_message)
         else:
             def remote_log_message(self, severity, message):
                 if not hasattr(self, 'cli_connection'):
                     return
-                
+
                 brkr = self._get_cli_broker()
                 return brkr.log_message(
                     id=self.dis_session.SessionID,
@@ -94,7 +95,7 @@ class NetMRIEasy(object):
     def send_command(self, command, regex=None):
         if not hasattr(self, 'cli_connection'):
             return
-        
+
         regex = regex or ""
         result = self._get_cli_broker().send_command(
             id=self.dis_session.SessionID,
@@ -109,7 +110,7 @@ class NetMRIEasy(object):
     def send_async_command(self, command, timeout, regex, wait_until_finished=True):
         if not hasattr(self, 'cli_connection'):
             return
-        
+
         regex = regex or ""
         self._print("Sending asynchronous command ({})".format(command))
         try:
@@ -175,7 +176,7 @@ class NetMRIEasy(object):
     def get_config(self, sync=True):
         if not hasattr(self, 'cli_connection'):
             return
-        
+
         self._print("Requesting on demand configuration collection ({})".format(sync))
         traking_id = None
         try:
@@ -220,7 +221,7 @@ class NetMRIEasy(object):
     def set_variable(self, name, value):
         if not hasattr(self, 'cli_connection'):
             return
-        
+
         command = '${name} ="{value}"'.format(name=name, value=value)
         result = self._get_cli_broker().set_variable(
             id=self.dis_session.SessionID,
@@ -234,7 +235,7 @@ class NetMRIEasy(object):
     def get_template(self, template_name, stage):
         if not hasattr(self, 'cli_connection'):
             return
-        
+
         result = self._get_cli_broker().get_template(
             id=self.dis_session.SessionID,
             device_id=self.device_id,
@@ -248,7 +249,7 @@ class NetMRIEasy(object):
     def get_list_value(self, list_name, key_column, key_value, value_column, default):
         if not hasattr(self, 'cli_connection'):
             return
-        
+
         result = self._get_cli_broker().get_list_value(
             id=self.dis_session.SessionID,
             device_id=self.device_id,

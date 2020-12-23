@@ -215,15 +215,15 @@ class InfobloxNetMRI(object):
             dict
         """
 
-        _CHUNK_SIZE = 1024 * 1000
+        chunk_size = 1024 * 1000
 
         try:
             with open(filename, 'wb') as f:
-                for chunk in response.iter_content(chunk_size=_CHUNK_SIZE):
+                for chunk in response.iter_content(chunk_size=chunk_size):
                     f.write(chunk)
         except TypeError:
             with open(filename, 'w') as f:
-                for chunk in response.iter_content(chunk_size=_CHUNK_SIZE):
+                for chunk in response.iter_content(chunk_size=chunk_size):
                     f.write(chunk)
         except (IOError, Exception):
             return {'Status': 'FAIL', 'Filename': filename}

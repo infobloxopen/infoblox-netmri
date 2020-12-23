@@ -1,6 +1,7 @@
 from infoblox_netmri.utils.utils import locate, to_snake
 from infoblox_netmri.api.exceptions.netmri_exceptions import NotImplementedException
 
+
 class Broker(object):
     """ Base class for broker instances, provides methods for API requests.
         And return responces wrapped with specific class

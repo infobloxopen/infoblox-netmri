@@ -202,8 +202,7 @@ class InfobloxNetMRI(object):
         else:
             raise HTTPError("Unknown Content-Type!", response=res)
 
-    @staticmethod
-    def _download_file(_content_type, filename, response):
+    def _download_file(self, _content_type, filename, response):
         """Downloads a file via HTTP
 
         Args:
@@ -248,8 +247,7 @@ class InfobloxNetMRI(object):
         self._send_request(url, method="post", data=data)
         self._is_authenticated = True
 
-    @staticmethod
-    def _controller_name(objtype):
+    def _controller_name(self, objtype):
         """Determines the controller name for the object's type
 
         Args:

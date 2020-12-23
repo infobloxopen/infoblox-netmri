@@ -148,12 +148,12 @@ class InfobloxNetMRI(object):
             try:
                 with gzip.GzipFile(fileobj=io.BytesIO(content)) as gz:
                     content = gz.read()
-            except:
+            except (ValueError, Exception):
                 content = content_copy
 
         try:
             content = content.decode()
-        except:
+        except (UnicodeDecodeError, Exception):
             pass
 
         if 'application/json' in content_type:
@@ -191,7 +191,7 @@ class InfobloxNetMRI(object):
                     content_disposition = res.headers['content-disposition']
                 except KeyError:
                     raise HTTPError("Unknown Content-Disposition", response=res)
-                except:
+                except (HTTPError, Exception):
                     raise HTTPError(res.content, response=res)
 
                 m = re.search("filename=\"(.+)\"", content_disposition)
@@ -215,17 +215,17 @@ class InfobloxNetMRI(object):
             dict
         """
 
-        CHUNK_SIZE = 1024 * 1000
+        _CHUNK_SIZE = 1024 * 1000
 
         try:
             with open(filename, 'wb') as f:
-                for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
+                for chunk in response.iter_content(chunk_size=_CHUNK_SIZE):
                     f.write(chunk)
         except TypeError:
             with open(filename, 'w') as f:
-                for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
+                for chunk in response.iter_content(chunk_size=_CHUNK_SIZE):
                     f.write(chunk)
-        except:
+        except (IOError, Exception):
             return {'Status': 'FAIL', 'Filename': filename}
 
         return {'Status': 'OK', 'Filename': filename}

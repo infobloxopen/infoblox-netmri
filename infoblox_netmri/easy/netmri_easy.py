@@ -185,7 +185,7 @@ class NetMRIEasy(object):
             )
             traking_id = res.get('TrackingID')
 
-        except RuntimeError as e:
+        except RuntimeError:
             raise RuntimeError("Api version {} not support this command. Minimal version: 2.10".format(
                 self.client.api_version
             ))

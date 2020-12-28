@@ -1,5 +1,4 @@
 from ..remote import RemoteModel
-from infoblox_netmri.utils.utils import check_api_availability
 
 
 class NotificationSentGridRemote(RemoteModel):

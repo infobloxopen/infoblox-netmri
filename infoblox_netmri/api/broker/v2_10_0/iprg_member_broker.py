@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class IprgMemberBroker(Broker):
     controller = "iprg_members"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified iprg member.
 
             **Inputs**
@@ -45,13 +44,10 @@ class IprgMemberBroker(Broker):
              :rtype iprg_member: IprgMember
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available iprg members. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -219,13 +215,10 @@ class IprgMemberBroker(Broker):
              :rtype iprg_members: Array of IprgMember
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available iprg members matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -809,13 +802,10 @@ class IprgMemberBroker(Broker):
              :rtype iprg_members: Array of IprgMember
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available iprg members matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceID, DeviceID, InterfaceID, IprgID, IprgMemberActiveDeviceID, IprgMemberActiveIPDotted, IprgMemberActiveIPNumeric, IprgMemberActiveInterfaceID, IprgMemberChangedCols, IprgMemberConfiguredHelloTime, IprgMemberConfiguredHoldTime, IprgMemberEndTime, IprgMemberID, IprgMemberLearnedHelloTime, IprgMemberLearnedHoldTime, IprgMemberPreemptDelay, IprgMemberPreemptInd, IprgMemberPriority, IprgMemberStandbyDeviceID, IprgMemberStandbyIPDotted, IprgMemberStandbyIPNumeric, IprgMemberStandbyInterfaceID, IprgMemberStartTime, IprgMemberState, IprgMemberTimestamp, IprgMemberUseConfigVirtualIPInd, IprgMemberUseConfiguredTimersInd, IprgMemberVirtualIPDotted, IprgMemberVirtualIPNumeric.
 
             **Inputs**
@@ -1623,13 +1613,10 @@ class IprgMemberBroker(Broker):
              :rtype iprg_members: Array of IprgMember
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The collector NetMRI that collected this data record.
 
             **Inputs**
@@ -1653,13 +1640,10 @@ class IprgMemberBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def iprg(self, **kwargs):
-    
         """The HSRP/VRRP group to which this membership pertains.
 
             **Inputs**
@@ -1683,13 +1667,10 @@ class IprgMemberBroker(Broker):
              :rtype : Iprg
 
             """
-        
+
         return self.api_request(self._get_method_fullname("iprg"), kwargs)
-        
-    
-    
+
     def interface(self, **kwargs):
-    
         """The interface configured with this HSRP/VRRP membership.
 
             **Inputs**
@@ -1713,13 +1694,10 @@ class IprgMemberBroker(Broker):
              :rtype : Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("interface"), kwargs)
-        
-    
-    
+
     def active_router(self, **kwargs):
-    
         """The device that this router believes is the current active or master device.
 
             **Inputs**
@@ -1743,13 +1721,10 @@ class IprgMemberBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("active_router"), kwargs)
-        
-    
-    
+
     def standby_router(self, **kwargs):
-    
         """The device that this router believes is the current standby or backup device.
 
             **Inputs**
@@ -1773,13 +1748,10 @@ class IprgMemberBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("standby_router"), kwargs)
-        
-    
-    
+
     def active_interface(self, **kwargs):
-    
         """The interface object corresponding to the active/master IP address, if available.
 
             **Inputs**
@@ -1803,13 +1775,10 @@ class IprgMemberBroker(Broker):
              :rtype : Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("active_interface"), kwargs)
-        
-    
-    
+
     def standby_interface(self, **kwargs):
-    
         """The interface object corresponding to the  standby/backup IP address, if available.
 
             **Inputs**
@@ -1833,13 +1802,10 @@ class IprgMemberBroker(Broker):
              :rtype : Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("standby_interface"), kwargs)
-        
-    
-    
+
     def infradevice(self, **kwargs):
-    
         """The device configured with this HSRP/VRRP membership.
 
             **Inputs**
@@ -1863,13 +1829,10 @@ class IprgMemberBroker(Broker):
              :rtype : InfraDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("infradevice"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device configured with this HSRP/VRRP membership.
 
             **Inputs**
@@ -1893,7 +1856,5 @@ class IprgMemberBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    

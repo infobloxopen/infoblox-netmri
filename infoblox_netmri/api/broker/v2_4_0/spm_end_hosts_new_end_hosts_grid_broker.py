@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class SpmEndHostsNewEndHostsGridBroker(Broker):
     controller = "spm_end_hosts_new_end_hosts_grids"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available spm end hosts new end hosts grids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -117,7 +116,5 @@ class SpmEndHostsNewEndHostsGridBroker(Broker):
              :rtype summary: Hash
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    

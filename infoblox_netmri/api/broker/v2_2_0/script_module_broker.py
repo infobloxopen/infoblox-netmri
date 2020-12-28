@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class ScriptModuleBroker(Broker):
     controller = "script_modules"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available script modules. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -93,13 +92,10 @@ class ScriptModuleBroker(Broker):
              :rtype script_modules: Array of ScriptModule
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified script module from NetMRI.
 
             **Inputs**
@@ -115,13 +111,10 @@ class ScriptModuleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def export(self, **kwargs):
-    
         """This method exports a Script Module
 
             **Inputs**
@@ -137,13 +130,10 @@ class ScriptModuleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("export"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new script module.
 
             **Inputs**
@@ -231,13 +221,10 @@ class ScriptModuleBroker(Broker):
              :rtype script_module: ScriptModule
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing script module.
 
             **Inputs**
@@ -333,13 +320,10 @@ class ScriptModuleBroker(Broker):
              :rtype script_module: ScriptModule
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """This method will make return the specified library module
 
             **Inputs**
@@ -355,13 +339,10 @@ class ScriptModuleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def duplicate(self, **kwargs):
-    
         """This method will make a copy of the specified script
 
             **Inputs**
@@ -385,12 +366,10 @@ class ScriptModuleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("duplicate"), kwargs)
-        
-    
+
     def import_data(self, **kwargs):
-    
         """This method imports a script module
 
             **Inputs**
@@ -422,7 +401,5 @@ class ScriptModuleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("import"), kwargs)
-        
-    

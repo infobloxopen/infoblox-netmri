@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class GlobalProxySettingsBroker(Broker):
     controller = "global_proxy_settings"
-    
-    
+
     def index(self, **kwargs):
-    
         """Returns Global Proxy Settings.
 
             **Inputs**
@@ -13,13 +12,10 @@ class GlobalProxySettingsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def decoded_index(self, **kwargs):
-    
         """Returns Global Proxy Settings with password decoded.
 
             **Inputs**
@@ -27,13 +23,10 @@ class GlobalProxySettingsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("decoded_index"), kwargs)
-        
-    
-    
+
     def collector_proxy(self, **kwargs):
-    
         """Returns Collector Proxy Settings,
 
             **Inputs**
@@ -49,13 +42,10 @@ class GlobalProxySettingsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("collector_proxy"), kwargs)
-        
-    
-    
+
     def update_collector(self, **kwargs):
-    
         """Updates proxy settings on collector.
 
             **Inputs**
@@ -111,13 +101,10 @@ class GlobalProxySettingsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_collector"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates Global Proxy Settings.
 
             **Inputs**
@@ -173,7 +160,5 @@ class GlobalProxySettingsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    

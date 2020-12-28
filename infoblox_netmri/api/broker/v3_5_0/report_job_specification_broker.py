@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class ReportJobSpecificationBroker(Broker):
     controller = "report_job_specifications"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available report job specifications. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -85,13 +84,10 @@ class ReportJobSpecificationBroker(Broker):
              :rtype report_job_specifications: Array of ReportJobSpecification
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available report job specifications matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -291,13 +287,10 @@ class ReportJobSpecificationBroker(Broker):
              :rtype report_job_specifications: Array of ReportJobSpecification
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available report job specifications matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: auth_user_id, content_type, created_at, created_by, description, id, is_scheduled, last_run, name, recipients, report_id, schedule, schedule_json, updated_at.
 
             **Inputs**
@@ -713,13 +706,10 @@ class ReportJobSpecificationBroker(Broker):
              :rtype report_job_specifications: Array of ReportJobSpecification
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified report job specification.
 
             **Inputs**
@@ -743,13 +733,10 @@ class ReportJobSpecificationBroker(Broker):
              :rtype report_job_specification: ReportJobSpecification
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new Report Job specification record. If this is for an on-demand report, this method will also create a report_job_runs record.
 
             **Inputs**
@@ -773,7 +760,5 @@ class ReportJobSpecificationBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    

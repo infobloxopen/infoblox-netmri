@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceSupportBundleBroker(Broker):
     controller = "device_support_bundles"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available device support bundles. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -93,13 +92,10 @@ class DeviceSupportBundleBroker(Broker):
              :rtype device_support_bundles: Array of DeviceSupportBundle
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified device support bundle from NetMRI.
 
             **Inputs**
@@ -115,13 +111,10 @@ class DeviceSupportBundleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def delete(self, **kwargs):
-    
         """Delete a device support bundle specified by name
 
             **Inputs**
@@ -153,13 +146,10 @@ class DeviceSupportBundleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("delete"), kwargs)
-        
-    
-    
+
     def export(self, **kwargs):
-    
         """Export specified device support bundle in tgz format.
 
             **Inputs**
@@ -175,12 +165,10 @@ class DeviceSupportBundleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("export"), kwargs)
-        
-    
+
     def import_data(self, **kwargs):
-    
         """Import Device Support Bundles in bulk via a xml, tgz, tar, or zip file
 
             **Inputs**
@@ -212,7 +200,5 @@ class DeviceSupportBundleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("import"), kwargs)
-        
-    

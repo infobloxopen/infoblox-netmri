@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class AuthServerBroker(Broker):
     controller = "auth_servers"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified auth server.
 
             **Inputs**
@@ -29,13 +28,10 @@ class AuthServerBroker(Broker):
              :rtype auth_server: AuthServer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available auth servers. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -123,13 +119,10 @@ class AuthServerBroker(Broker):
              :rtype auth_servers: Array of AuthServer
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available auth servers matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -337,13 +330,10 @@ class AuthServerBroker(Broker):
              :rtype auth_servers: Array of AuthServer
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available auth servers matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: auth_cert, auth_encryption, auth_port, auth_protocol, auth_server, auth_service_id, auth_shared_secret, auth_version, created_at, enabled_ind, id, priority, secure_version, source_interface_id, updated_at.
 
             **Inputs**
@@ -783,13 +773,10 @@ class AuthServerBroker(Broker):
              :rtype auth_servers: Array of AuthServer
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new auth server.
 
             **Inputs**
@@ -909,13 +896,10 @@ class AuthServerBroker(Broker):
              :rtype auth_server: AuthServer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing auth server.
 
             **Inputs**
@@ -1051,13 +1035,10 @@ class AuthServerBroker(Broker):
              :rtype auth_server: AuthServer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified auth server from NetMRI.
 
             **Inputs**
@@ -1073,13 +1054,10 @@ class AuthServerBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def add_or_update_auth_server(self, **kwargs):
-    
         """Creates a new auth server.
 
             **Inputs**
@@ -1207,13 +1185,10 @@ class AuthServerBroker(Broker):
              :rtype auth_server: AuthServer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("add_or_update_auth_server"), kwargs)
-        
-    
-    
+
     def duplicate(self, **kwargs):
-    
         """Duplicate an authentication server.
 
             **Inputs**
@@ -1245,13 +1220,10 @@ class AuthServerBroker(Broker):
              :rtype auth_server: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("duplicate"), kwargs)
-        
-    
-    
+
     def del_auth_server(self, **kwargs):
-    
         """Remove a given server from the specified Authentication Service
 
             **Inputs**
@@ -1275,7 +1247,5 @@ class AuthServerBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("del_auth_server"), kwargs)
-        
-    

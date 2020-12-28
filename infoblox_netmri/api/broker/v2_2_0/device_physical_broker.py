@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DevicePhysicalBroker(Broker):
     controller = "device_physicals"
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing device physical.
 
             **Inputs**
@@ -53,7 +52,5 @@ class DevicePhysicalBroker(Broker):
              :rtype device_physical: DevicePhysical
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    

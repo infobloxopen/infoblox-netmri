@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class SdnSettingBroker(Broker):
     controller = "sdn_settings"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available sdn settings. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -85,13 +84,10 @@ class SdnSettingBroker(Broker):
              :rtype sdn_settings: Array of SdnSetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available sdn settings matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -355,13 +351,10 @@ class SdnSettingBroker(Broker):
              :rtype sdn_settings: Array of SdnSetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available sdn settings matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: SecureVersion, UnitID, api_key, blackout_duration, ca_cert_content, ca_cert_id, collect_offline_devices, controller_address, created_at, handle, id, max_requests_per_second, on_prem, protocol, scan_interface_id, sdn_password, sdn_type, sdn_username, start_blackout_schedule, updated_at, use_global_proxy, virtual_network_id.
 
             **Inputs**
@@ -969,13 +962,10 @@ class SdnSettingBroker(Broker):
              :rtype sdn_settings: Array of SdnSetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified sdn setting.
 
             **Inputs**
@@ -999,13 +989,10 @@ class SdnSettingBroker(Broker):
              :rtype sdn_setting: SdnSetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new sdn setting.
 
             **Inputs**
@@ -1141,7 +1128,7 @@ class SdnSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param start_blackout_schedule: The blackout start time in cron format.
              :type start_blackout_schedule: String
@@ -1197,13 +1184,10 @@ class SdnSettingBroker(Broker):
              :rtype sdn_setting: SdnSetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing sdn setting.
 
             **Inputs**
@@ -1347,7 +1331,7 @@ class SdnSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param start_blackout_schedule: The blackout start time in cron format. If omitted, this field will be updated to the default value.
              :type start_blackout_schedule: String
@@ -1403,13 +1387,10 @@ class SdnSettingBroker(Broker):
              :rtype sdn_setting: SdnSetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified sdn setting from NetMRI.
 
             **Inputs**
@@ -1425,13 +1406,10 @@ class SdnSettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def destroy_many(self, **kwargs):
-    
         """Remove several configurations of SDN Controllers
 
             **Inputs**
@@ -1447,13 +1425,10 @@ class SdnSettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy_many"), kwargs)
-        
-    
-    
+
     def dump_sdn_controllers(self, **kwargs):
-    
         """List all SDN Controllers
 
             **Inputs**
@@ -1509,13 +1484,10 @@ class SdnSettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("dump_sdn_controllers"), kwargs)
-        
-    
-    
+
     def import_controllers(self, **kwargs):
-    
         """Imports a list of discovery settings into the database
 
             **Inputs**
@@ -1539,13 +1511,10 @@ class SdnSettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("import_controllers"), kwargs)
-        
-    
-    
+
     def check_credentials(self, **kwargs):
-    
         """Performs connection to SDN/SDWAN controller, checks credentials and returns results or status id based on async_ind
 
             **Inputs**
@@ -1681,7 +1650,7 @@ class SdnSettingBroker(Broker):
             |  ``api version min:`` 3.6
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param start_blackout_schedule: Blackout schedule
              :type start_blackout_schedule: String
@@ -1713,13 +1682,10 @@ class SdnSettingBroker(Broker):
              :rtype id: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("check_credentials"), kwargs)
-        
-    
-    
+
     def check_credentials_status(self, **kwargs):
-    
         """Status of SDN/SDWAN controller credentials check
 
             **Inputs**
@@ -1767,7 +1733,5 @@ class SdnSettingBroker(Broker):
              :rtype end: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("check_credentials_status"), kwargs)
-        
-    

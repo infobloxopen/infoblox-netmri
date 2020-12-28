@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class AccessObjectsBroker(Broker):
     controller = "access_objects"
-    
-    
+
     def children(self, **kwargs):
-    
         """Returns tree-format information about this children of a node, in a tree view.
 
             **Inputs**
@@ -37,7 +36,7 @@ class AccessObjectsBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param search: String to search in the objects names or direct values
              :type search: String
@@ -93,13 +92,10 @@ class AccessObjectsBroker(Broker):
              :rtype children: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("children"), kwargs)
-        
-    
-    
+
     def cancel_search(self, **kwargs):
-    
         """Cancels background search processes. Currently only works for contextual search.
 
             **Inputs**
@@ -115,13 +111,10 @@ class AccessObjectsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cancel_search"), kwargs)
-        
-    
-    
+
     def parents(self, **kwargs):
-    
         """Returns the parents of this node.
 
             **Inputs**
@@ -145,13 +138,10 @@ class AccessObjectsBroker(Broker):
              :rtype parents: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("parents"), kwargs)
-        
-    
-    
+
     def to_detail(self, **kwargs):
-    
         """Returns the detail for an object.
 
             **Inputs**
@@ -183,13 +173,10 @@ class AccessObjectsBroker(Broker):
              :rtype detail: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("to_detail"), kwargs)
-        
-    
-    
+
     def object_picker(self, **kwargs):
-    
         """Returns a tree-format of the full sub-tree for this node. Expected to be displayed as a separate tree in a tree-popup window
 
             **Inputs**
@@ -213,7 +200,5 @@ class AccessObjectsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("object_picker"), kwargs)
-        
-    

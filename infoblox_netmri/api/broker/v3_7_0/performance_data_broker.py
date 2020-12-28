@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class PerformanceDataBroker(Broker):
     controller = "performance_data"
-    
-    
+
     def get_data(self, **kwargs):
-    
         """Returns performance data from category for period of time listed in params.
 
             **Inputs**
@@ -45,13 +44,10 @@ class PerformanceDataBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_data"), kwargs)
-        
-    
-    
+
     def get_chart_data(self, **kwargs):
-    
         """Returns data for specific performance dashboard chart for period of time listed in params.
 
             **Inputs**
@@ -99,13 +95,10 @@ class PerformanceDataBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_chart_data"), kwargs)
-        
-    
-    
+
     def get_last_data(self, **kwargs):
-    
         """Returns last records of selected columns.
 
             **Inputs**
@@ -137,13 +130,10 @@ class PerformanceDataBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_last_data"), kwargs)
-        
-    
-    
+
     def get_metrics_data(self, **kwargs):
-    
         """Returns performance data for selected metric.
 
             **Inputs**
@@ -183,7 +173,5 @@ class PerformanceDataBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_metrics_data"), kwargs)
-        
-    

@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class EffectivePolicyBroker(Broker):
     controller = "effective_policies"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified effective policy.
 
             **Inputs**
@@ -45,13 +44,10 @@ class EffectivePolicyBroker(Broker):
              :rtype effective_policy: EffectivePolicy
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available effective policies. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -187,13 +183,10 @@ class EffectivePolicyBroker(Broker):
              :rtype effective_policies: Array of EffectivePolicy
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available effective policies matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -569,13 +562,10 @@ class EffectivePolicyBroker(Broker):
              :rtype effective_policies: Array of EffectivePolicy
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available effective policies matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceID, PolicyAuthor, PolicyChangedCols, PolicyCreatedAt, PolicyDescription, PolicyEndTime, PolicyFirstSeenTime, PolicyID, PolicyName, PolicyReadOnlyInd, PolicyScheduleMode, PolicySetFilter, PolicyShortName, PolicyStartTime, PolicyTimestamp, PolicyUpdatedAt.
 
             **Inputs**
@@ -1071,13 +1061,10 @@ class EffectivePolicyBroker(Broker):
              :rtype effective_policies: Array of EffectivePolicy
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The collector NetMRI that collected this data record.
 
             **Inputs**
@@ -1101,13 +1088,10 @@ class EffectivePolicyBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def policy_set_filter_text(self, **kwargs):
-    
         """Returns a human-readable text version of the policy set filter.
 
             **Inputs**
@@ -1131,7 +1115,5 @@ class EffectivePolicyBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("policy_set_filter_text"), kwargs)
-        
-    

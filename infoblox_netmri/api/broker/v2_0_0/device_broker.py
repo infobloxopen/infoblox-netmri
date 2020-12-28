@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceBroker(Broker):
     controller = "devices"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available devices. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -229,13 +228,10 @@ class DeviceBroker(Broker):
              :rtype devices: Array of DeviceConfig
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified device.
 
             **Inputs**
@@ -275,13 +271,10 @@ class DeviceBroker(Broker):
              :rtype device: DeviceConfig
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified device from NetMRI.
 
             **Inputs**
@@ -305,13 +298,10 @@ class DeviceBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def delete(self, **kwargs):
-    
         """Remove many devices, with the option to remove them from discovery
 
             **Inputs**
@@ -335,7 +325,5 @@ class DeviceBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("delete"), kwargs)
-        
-    

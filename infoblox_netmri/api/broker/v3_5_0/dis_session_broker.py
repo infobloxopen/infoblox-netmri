@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DisSessionBroker(Broker):
     controller = "dis_sessions"
-    
-    
+
     def open(self, **kwargs):
-    
         """Opens a DIS session.
 
             **Inputs**
@@ -29,13 +28,10 @@ class DisSessionBroker(Broker):
              :rtype dis_session: DisSession
 
             """
-        
+
         return self.api_request(self._get_method_fullname("open"), kwargs)
-        
-    
-    
+
     def close(self, **kwargs):
-    
         """Closes an open DIS session and all underlying connections.
 
             **Inputs**
@@ -59,13 +55,10 @@ class DisSessionBroker(Broker):
              :rtype command_response: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("close"), kwargs)
-        
-    
-    
+
     def close_with_logs(self, **kwargs):
-    
         """Closes an open DIS session and sends logs archive in response.
 
             **Inputs**
@@ -81,13 +74,10 @@ class DisSessionBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_mixed_request(self._get_method_fullname("close_with_logs"), kwargs)
-        
-    
-    
+
     def open_connection(self, **kwargs):
-    
         """Opens a CLI connection with the device.
 
             **Inputs**
@@ -119,13 +109,10 @@ class DisSessionBroker(Broker):
              :rtype cli_connection: CliConnection
 
             """
-        
+
         return self.api_request(self._get_method_fullname("open_connection"), kwargs)
-        
-    
-    
+
     def open_session_and_connection(self, **kwargs):
-    
         """Opens a new DIS session and CLI connection at once.
 
             **Inputs**
@@ -149,13 +136,10 @@ class DisSessionBroker(Broker):
              :rtype cli_connection: CliConnection
 
             """
-        
+
         return self.api_request(self._get_method_fullname("open_session_and_connection"), kwargs)
-        
-    
-    
+
     def download_logs(self, **kwargs):
-    
         """Download session log files as a single ZIP archive.  Available only after DIS Session is closed.
 
             **Inputs**
@@ -171,7 +155,5 @@ class DisSessionBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_mixed_request(self._get_method_fullname("download_logs"), kwargs)
-        
-    

@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class ConfigRevisionBroker(Broker):
     controller = "config_revisions"
-    
-    
+
     def device(self, **kwargs):
-    
         """The device from which this configuration revision was collected.
 
             **Inputs**
@@ -29,7 +28,5 @@ class ConfigRevisionBroker(Broker):
              :rtype device: DeviceConfig
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    

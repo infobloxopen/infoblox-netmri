@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class PartitionsBroker(Broker):
     controller = "partitions"
-    
-    
+
     def generate(self, **kwargs):
-    
         """Generates the required partition.
 
             **Inputs**
@@ -37,7 +36,5 @@ class PartitionsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("generate"), kwargs)
-        
-    

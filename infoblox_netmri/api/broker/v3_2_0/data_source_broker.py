@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DataSourceBroker(Broker):
     controller = "data_sources"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available data sources. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -117,13 +116,10 @@ class DataSourceBroker(Broker):
              :rtype data_sources: Array of DataSource
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified data source.
 
             **Inputs**
@@ -155,13 +151,10 @@ class DataSourceBroker(Broker):
              :rtype data_source: DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available data sources matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -465,13 +458,10 @@ class DataSourceBroker(Broker):
              :rtype data_sources: Array of DataSource
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available data sources matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceChangedCols, DataSourceEndTime, DataSourceID, DataSourceIPDotted, DataSourceIPNumeric, DataSourceName, DataSourcePrivateIPDotted, DataSourcePrivateIPNumeric, DataSourceSerialNo, DataSourceStartTime, DataSourceTimestamp, Network.
 
             **Inputs**
@@ -863,7 +853,5 @@ class DataSourceBroker(Broker):
              :rtype data_sources: Array of DataSource
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    

@@ -91,7 +91,7 @@ class Broker(object):
             :param data: API responce data
             :return: RemoteModel child class
         """
-        if not data or type(data) != dict:
+        if not data or not isinstance(data, dict):
             return data
 
         class_name = data.get("_class")

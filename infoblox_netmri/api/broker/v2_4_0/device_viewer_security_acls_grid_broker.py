@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceViewerSecurityAclsGridBroker(Broker):
     controller = "device_viewer_security_acls_grids"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available device viewer security acls grids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -109,7 +108,5 @@ class DeviceViewerSecurityAclsGridBroker(Broker):
              :rtype summary: Hash
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    

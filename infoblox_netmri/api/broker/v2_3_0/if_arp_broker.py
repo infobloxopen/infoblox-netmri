@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class IfArpBroker(Broker):
     controller = "if_arps"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified if arp.
 
             **Inputs**
@@ -45,13 +44,10 @@ class IfArpBroker(Broker):
              :rtype if_arp: IfArp
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available if arps. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -267,13 +263,10 @@ class IfArpBroker(Broker):
              :rtype if_arps: Array of IfArp
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available if arps matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -633,13 +626,10 @@ class IfArpBroker(Broker):
              :rtype if_arps: Array of IfArp
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available if arps matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: ArpChangedCols, ArpDeviceID, ArpEndTime, ArpInterfaceID, ArpStartTime, ArpTimestamp, DataSourceID, DeviceID, IPAddrDotted, IPAddrNumeric, IfArpID, InterfaceID, PhysicalAddr, VrfID, ifIndex.
 
             **Inputs**
@@ -1111,13 +1101,10 @@ class IfArpBroker(Broker):
              :rtype if_arps: Array of IfArp
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def interface(self, **kwargs):
-    
         """The local interface for this ARP table entry.
 
             **Inputs**
@@ -1141,13 +1128,10 @@ class IfArpBroker(Broker):
              :rtype : Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("interface"), kwargs)
-        
-    
-    
+
     def remote_device(self, **kwargs):
-    
         """The remote device to which the ARP entry refers, if available.
 
             **Inputs**
@@ -1171,13 +1155,10 @@ class IfArpBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("remote_device"), kwargs)
-        
-    
-    
+
     def remote_interface(self, **kwargs):
-    
         """The remote interface to which the ARP entry refers, if available.
 
             **Inputs**
@@ -1201,13 +1182,10 @@ class IfArpBroker(Broker):
              :rtype : Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("remote_interface"), kwargs)
-        
-    
-    
+
     def infradevice(self, **kwargs):
-    
         """The device from which this ARP entry was collected.
 
             **Inputs**
@@ -1231,13 +1209,10 @@ class IfArpBroker(Broker):
              :rtype : InfraDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("infradevice"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device from which this ARP entry was collected.
 
             **Inputs**
@@ -1261,7 +1236,5 @@ class IfArpBroker(Broker):
              :rtype device: DeviceConfig
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    

@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class RoutingAreaMemberBroker(Broker):
     controller = "routing_area_members"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified routing area member.
 
             **Inputs**
@@ -45,13 +44,10 @@ class RoutingAreaMemberBroker(Broker):
              :rtype routing_area_member: RoutingAreaMember
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available routing area members. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -203,13 +199,10 @@ class RoutingAreaMemberBroker(Broker):
              :rtype routing_area_members: Array of RoutingAreaMember
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available routing area members matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -609,13 +602,10 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
              :rtype routing_area_members: Array of RoutingAreaMember
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available routing area members matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceID, DeviceID, OspfAreaBdrRtrCount, OspfAreaLsaCksumSum, OspfAreaLsaCount, OspfAreaSummaryInd, OspfAsBdrRtrCount, OspfAuthType, OspfImportAsExtern, OspfSpfRunsDelta, RoutingAreaID, RoutingAreaMemberChangedCols, RoutingAreaMemberEndTime, RoutingAreaMemberID, RoutingAreaMemberSource, RoutingAreaMemberStartTime, RoutingAreaMemberTimestamp.
 
             **Inputs**
@@ -1139,13 +1129,10 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
              :rtype routing_area_members: Array of RoutingAreaMember
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def routing_area(self, **kwargs):
-    
         """The routing area or autonomous system associated with this membership.
 
             **Inputs**
@@ -1169,13 +1156,10 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
              :rtype : RoutingArea
 
             """
-        
+
         return self.api_request(self._get_method_fullname("routing_area"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The NetMRI collector that collected this data record.
 
             **Inputs**
@@ -1199,13 +1183,10 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def interface(self, **kwargs):
-    
         """The interface used to participate in this routing area.
 
             **Inputs**
@@ -1229,13 +1210,10 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
              :rtype : Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("interface"), kwargs)
-        
-    
-    
+
     def infradevice(self, **kwargs):
-    
         """The device from which this routing area membership was collected.
 
             **Inputs**
@@ -1259,13 +1237,10 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
              :rtype : InfraDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("infradevice"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device from which this routing area membership was collected.
 
             **Inputs**
@@ -1289,7 +1264,5 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
              :rtype device: DeviceConfig
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    

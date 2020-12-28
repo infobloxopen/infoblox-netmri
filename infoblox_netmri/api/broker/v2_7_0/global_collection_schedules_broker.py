@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class GlobalCollectionSchedulesBroker(Broker):
     controller = "global_collection_schedules"
-    
-    
+
     def spm_schedules(self, **kwargs):
-    
         """Lists the global Switch Port Management polling schedule entries.
 
             **Inputs**
@@ -13,13 +12,10 @@ class GlobalCollectionSchedulesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("spm_schedules"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates a global polling schedule entry.
 
             **Inputs**
@@ -51,13 +47,10 @@ class GlobalCollectionSchedulesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a global polling schedule entry.
 
             **Inputs**
@@ -81,13 +74,10 @@ class GlobalCollectionSchedulesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Removes a global polling schedule entry.
 
             **Inputs**
@@ -103,7 +93,5 @@ class GlobalCollectionSchedulesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    

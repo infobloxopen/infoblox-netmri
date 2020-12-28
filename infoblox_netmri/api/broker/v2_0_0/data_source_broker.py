@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DataSourceBroker(Broker):
     controller = "data_sources"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available data sources. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -117,13 +116,10 @@ class DataSourceBroker(Broker):
              :rtype data_sources: Array of DataSource
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified data source.
 
             **Inputs**
@@ -155,7 +151,5 @@ class DataSourceBroker(Broker):
              :rtype data_source: DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    

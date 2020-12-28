@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class NeighborBroker(Broker):
     controller = "neighbors"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified neighbor.
 
             **Inputs**
@@ -45,13 +44,10 @@ class NeighborBroker(Broker):
              :rtype neighbor: Neighbor
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available neighbors. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -251,13 +247,10 @@ class NeighborBroker(Broker):
              :rtype neighbors: Array of Neighbor
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available neighbors matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -873,13 +866,10 @@ class NeighborBroker(Broker):
              :rtype neighbors: Array of Neighbor
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available neighbors matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: BGPRoutedInd, CDPInd, CDPNeighborID, CombinedInd, DataSourceID, DeviceID, DirectEthernetInd, IGRPRoutedInd, IPRoutedInd, InterfaceID, LLDPInd, LLDPNeighborID, LocalRoutedInd, NeighborChangedCols, NeighborDeviceID, NeighborEndTime, NeighborFirstSeenTime, NeighborID, NeighborIfIndex, NeighborInterfaceID, NeighborNetworkDeviceInd, NeighborStartTime, NeighborTimestamp, NetworkDeviceInd, OSPFRoutedInd, ProtoRoutedInd, RevSwitchFwdInd, SerialInd, StaticRoutedInd, SwitchFwdInd, ifIndex.
 
             **Inputs**
@@ -1759,13 +1749,10 @@ class NeighborBroker(Broker):
              :rtype neighbors: Array of Neighbor
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def interface(self, **kwargs):
-    
         """The source interface in this neighbor relationship.
 
             **Inputs**
@@ -1789,13 +1776,10 @@ class NeighborBroker(Broker):
              :rtype : Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("interface"), kwargs)
-        
-    
-    
+
     def neighbor_device(self, **kwargs):
-    
         """The destination device in this neighbor relationship.
 
             **Inputs**
@@ -1819,13 +1803,10 @@ class NeighborBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("neighbor_device"), kwargs)
-        
-    
-    
+
     def neighbor_interface(self, **kwargs):
-    
         """The destination interface in this neighbor relationship.
 
             **Inputs**
@@ -1849,13 +1830,10 @@ class NeighborBroker(Broker):
              :rtype : Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("neighbor_interface"), kwargs)
-        
-    
-    
+
     def infradevice(self, **kwargs):
-    
         """The source device in this neighbor relationship.
 
             **Inputs**
@@ -1879,13 +1857,10 @@ class NeighborBroker(Broker):
              :rtype : InfraDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("infradevice"), kwargs)
-        
-    
-    
+
     def network_id(self, **kwargs):
-    
         """The Network View ID assigned to this neighbor relationship.
 
             **Inputs**
@@ -1909,13 +1884,10 @@ class NeighborBroker(Broker):
              :rtype : Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("network_id"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The source device in this neighbor relationship.
 
             **Inputs**
@@ -1939,13 +1911,10 @@ class NeighborBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    
-    
+
     def get_n_hops_neighbors(self, **kwargs):
-    
         """Determines the devices that can be reached from a starting device through a given number of Level 2 connections.
 
             **Inputs**
@@ -1969,13 +1938,10 @@ class NeighborBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_n_hops_neighbors"), kwargs)
-        
-    
-    
+
     def get_l2_reachability(self, **kwargs):
-    
         """Determine the devices that can be reached from a starting device all Level 2 connections.
 
             **Inputs**
@@ -1991,13 +1957,10 @@ class NeighborBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_l2_reachability"), kwargs)
-        
-    
-    
+
     def get_path(self, **kwargs):
-    
         """Calculates a path between 2 devices.
 
             **Inputs**
@@ -2053,13 +2016,10 @@ class NeighborBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_path"), kwargs)
-        
-    
-    
+
     def get_topology_data(self, **kwargs):
-    
         """Returns topology relationship information. The topology contains device and relationship information. This method only supports XML and JSON output.
 
             **Inputs**
@@ -2251,13 +2211,10 @@ class NeighborBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_topology_data"), kwargs)
-        
-    
-    
+
     def get_topology_relationship_count(self, **kwargs):
-    
         """Returns a count of relationships from the NetMRI topology.
 
             **Inputs**
@@ -2361,7 +2318,5 @@ class NeighborBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_topology_relationship_count"), kwargs)
-        
-    

@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceRouteBroker(Broker):
     controller = "device_routes"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified device route.
 
             **Inputs**
@@ -45,13 +44,10 @@ class DeviceRouteBroker(Broker):
              :rtype device_route: DeviceRoute
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available device routes. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -267,13 +263,10 @@ class DeviceRouteBroker(Broker):
              :rtype device_routes: Array of DeviceRoute
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available device routes matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -745,13 +738,10 @@ class DeviceRouteBroker(Broker):
              :rtype device_routes: Array of DeviceRoute
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available device routes matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceID, DeviceID, DeviceRouteID, InterfaceID, RouteAdminDistance, RouteCIDR, RouteChangedCols, RouteEndTime, RouteIfIndex, RouteMetric1, RouteMetric2, RouteNetMaskDotted, RouteNetMaskNumeric, RouteNextHopIPDotted, RouteNextHopIPNumeric, RouteProto, RouteStartTime, RouteSubnetIPDotted, RouteSubnetIPNumeric, RouteTimestamp, RouteType, VirtualNetworkMemberID.
 
             **Inputs**
@@ -1391,13 +1381,10 @@ class DeviceRouteBroker(Broker):
              :rtype device_routes: Array of DeviceRoute
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The NetMRI device that collected this record.
 
             **Inputs**
@@ -1421,13 +1408,10 @@ class DeviceRouteBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def interface(self, **kwargs):
-    
         """The outgoing interface for this route.
 
             **Inputs**
@@ -1451,13 +1435,10 @@ class DeviceRouteBroker(Broker):
              :rtype : Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("interface"), kwargs)
-        
-    
-    
+
     def infradevice(self, **kwargs):
-    
         """The device from which this routing table entry was collected.
 
             **Inputs**
@@ -1481,13 +1462,10 @@ class DeviceRouteBroker(Broker):
              :rtype : InfraDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("infradevice"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device from which this routing table entry was collected.
 
             **Inputs**
@@ -1511,7 +1489,5 @@ class DeviceRouteBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    

@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceFilterBroker(Broker):
     controller = "device_filters"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified device filter.
 
             **Inputs**
@@ -45,13 +44,10 @@ class DeviceFilterBroker(Broker):
              :rtype device_filter: DeviceFilter
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available device filters. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -171,13 +167,10 @@ class DeviceFilterBroker(Broker):
              :rtype device_filters: Array of DeviceFilter
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available device filters matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -465,13 +458,10 @@ class DeviceFilterBroker(Broker):
              :rtype device_filters: Array of DeviceFilter
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available device filters matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceID, DestDeviceObjectID, DeviceFilterID, DeviceFilterSetID, DeviceID, DeviceServiceID, FltAllowInd, FltArtificialInd, FltChangedCols, FltConfigText, FltEnabledInd, FltEndTime, FltEstablishedInd, FltFirstSeenTime, FltKey, FltOrder, FltProvisionData, FltRelevantInd, FltStartTime, FltTimestamp, SrcDeviceObjectID.
 
             **Inputs**
@@ -1087,13 +1077,10 @@ class DeviceFilterBroker(Broker):
              :rtype device_filters: Array of DeviceFilter
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The collector NetMRI that collected this data record.
 
             **Inputs**
@@ -1117,13 +1104,10 @@ class DeviceFilterBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def src_device_object(self, **kwargs):
-    
         """The network object for the source of the filtered traffic.
 
             **Inputs**
@@ -1147,13 +1131,10 @@ class DeviceFilterBroker(Broker):
              :rtype : DeviceObject
 
             """
-        
+
         return self.api_request(self._get_method_fullname("src_device_object"), kwargs)
-        
-    
-    
+
     def dest_device_object(self, **kwargs):
-    
         """The network object for the destination of the filtered traffic.
 
             **Inputs**
@@ -1177,13 +1158,10 @@ class DeviceFilterBroker(Broker):
              :rtype : DeviceObject
 
             """
-        
+
         return self.api_request(self._get_method_fullname("dest_device_object"), kwargs)
-        
-    
-    
+
     def device_service(self, **kwargs):
-    
         """The service object of this rule
 
             **Inputs**
@@ -1207,13 +1185,10 @@ class DeviceFilterBroker(Broker):
              :rtype : DeviceService
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device_service"), kwargs)
-        
-    
-    
+
     def device_filter_set(self, **kwargs):
-    
         """The rule list to which that rule belongs
 
             **Inputs**
@@ -1237,13 +1212,10 @@ class DeviceFilterBroker(Broker):
              :rtype : DeviceFilterSet
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device_filter_set"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device from which this data was collected.
 
             **Inputs**
@@ -1267,13 +1239,10 @@ class DeviceFilterBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    
-    
+
     def describe(self, **kwargs):
-    
         """Returns inquired information about this device rule based on description type.
 
             **Inputs**
@@ -1297,7 +1266,5 @@ class DeviceFilterBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("describe"), kwargs)
-        
-    

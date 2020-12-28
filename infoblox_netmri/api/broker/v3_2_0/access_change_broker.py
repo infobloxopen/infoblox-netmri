@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class AccessChangeBroker(Broker):
     controller = "access_changes"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified access change.
 
             **Inputs**
@@ -37,13 +36,10 @@ class AccessChangeBroker(Broker):
              :rtype access_change: AccessChange
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available access changes. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -131,13 +127,10 @@ class AccessChangeBroker(Broker):
              :rtype access_changes: Array of AccessChange
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available access changes matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -377,13 +370,10 @@ class AccessChangeBroker(Broker):
              :rtype access_changes: Array of AccessChange
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available access changes matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: change_set_key, change_status, created_at, deployable, edit_status, error_count, former_proposal_json, general_errors, history_json, id, job_id, job_specification_id, proposal_json, reversible, updated_at, user_name, user_proposal_json, warning_count.
 
             **Inputs**
@@ -903,13 +893,10 @@ class AccessChangeBroker(Broker):
              :rtype access_changes: Array of AccessChange
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def create_from_search(self, **kwargs):
-    
         """Creates a proposed set of changes from selected search results.
 
             **Inputs**
@@ -973,13 +960,10 @@ class AccessChangeBroker(Broker):
              :rtype access_change: AccessChange
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create_from_search"), kwargs)
-        
-    
-    
+
     def create_by_searching(self, **kwargs):
-    
         """Initiates a network access search, and uses the results to propose a set of changes.
 
             **Inputs**
@@ -1075,13 +1059,10 @@ class AccessChangeBroker(Broker):
              :rtype access_change: AccessChange
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create_by_searching"), kwargs)
-        
-    
-    
+
     def create_from_job(self, **kwargs):
-    
         """Creates a proposed set of changes to repeat or rollback a specified job.
 
             **Inputs**
@@ -1145,13 +1126,10 @@ class AccessChangeBroker(Broker):
              :rtype access_change: AccessChange
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create_from_job"), kwargs)
-        
-    
-    
+
     def create_from_job_specification(self, **kwargs):
-    
         """Recreates a proposed set of changes associated with a specific job specification.
 
             **Inputs**
@@ -1199,13 +1177,10 @@ class AccessChangeBroker(Broker):
              :rtype access_change: AccessChange
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create_from_job_specification"), kwargs)
-        
-    
-    
+
     def create_from_issue(self, **kwargs):
-    
         """Creates a set of changes to remediate a specific issue or set of issues.
 
             **Inputs**
@@ -1253,13 +1228,10 @@ class AccessChangeBroker(Broker):
              :rtype access_change: AccessChange
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create_from_issue"), kwargs)
-        
-    
-    
+
     def reset(self, **kwargs):
-    
         """Resets a modified proposal to the original proposal.
 
             **Inputs**
@@ -1315,13 +1287,10 @@ class AccessChangeBroker(Broker):
              :rtype access_change: AccessChange
 
             """
-        
+
         return self.api_request(self._get_method_fullname("reset"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates the access change proposal.
 
             **Inputs**
@@ -1476,13 +1445,10 @@ class AccessChangeBroker(Broker):
              :rtype access_change: AccessChange
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def cancel(self, **kwargs):
-    
         """Cancels a currently executing create_xxx request.
 
             **Inputs**
@@ -1498,13 +1464,10 @@ class AccessChangeBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cancel"), kwargs)
-        
-    
-    
+
     def status(self, **kwargs):
-    
         """The status of the overall create_xxx set execution.
 
             **Inputs**
@@ -1552,13 +1515,10 @@ class AccessChangeBroker(Broker):
              :rtype reversible: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("status"), kwargs)
-        
-    
-    
+
     def summary(self, **kwargs):
-    
         """Returns a summary of a network access create_by_searching request.
 
             **Inputs**
@@ -1662,13 +1622,10 @@ class AccessChangeBroker(Broker):
              :rtype reversible: String
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("summary"), kwargs)
-        
-    
-    
+
     def proposed_changes(self, **kwargs):
-    
         """Returns the proposed changes for a change set.
 
             **Inputs**
@@ -1756,13 +1713,10 @@ class AccessChangeBroker(Broker):
              :rtype proposed_changes: Array of AccessChangeProposalGrid
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("proposed_changes"), kwargs)
-        
-    
-    
+
     def run(self, **kwargs):
-    
         """Create job specification for provisioning and launch it.
 
             **Inputs**
@@ -1828,8 +1782,8 @@ class AccessChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param credential_mode: If user credentials are required, they may be set from additional inputs (credential_mode = 'manual'). 
-                      The credentials may be looked up using requestor stored credentials (credential_mode = 'requestor'). 
+             :param credential_mode: If user credentials are required, they may be set from additional inputs (credential_mode = 'manual').
+                      The credentials may be looked up using requestor stored credentials (credential_mode = 'requestor').
                       The credentials may be looked up using the approver stored credentials (credential_mode = 'approver').
              :type credential_mode: String
 
@@ -1884,13 +1838,10 @@ class AccessChangeBroker(Broker):
              :rtype job_id: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("run"), kwargs)
-        
-    
-    
+
     def cancel_job(self, **kwargs):
-    
         """Cancel any running or scheduled job for provisionning and launch it.
 
             **Inputs**
@@ -1906,13 +1857,10 @@ class AccessChangeBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cancel_job"), kwargs)
-        
-    
-    
+
     def describe(self, **kwargs):
-    
         """Returns tree-format information about this device rule based on description type.
 
             **Inputs**
@@ -1952,7 +1900,5 @@ class AccessChangeBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("describe"), kwargs)
-        
-    

@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class ChangeSummaryNetworkAnalysisGridBroker(Broker):
     controller = "change_summary_network_analysis_grids"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available change summary network analysis grids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -117,7 +116,5 @@ class ChangeSummaryNetworkAnalysisGridBroker(Broker):
              :rtype summary: Hash
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    

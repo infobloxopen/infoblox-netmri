@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceByVlannameOrVlanindexGridBroker(Broker):
     controller = "device_by_vlanname_or_vlanindex_grids"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available device by vlanname or vlanindex grids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -109,7 +108,5 @@ class DeviceByVlannameOrVlanindexGridBroker(Broker):
              :rtype summary: Hash
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    

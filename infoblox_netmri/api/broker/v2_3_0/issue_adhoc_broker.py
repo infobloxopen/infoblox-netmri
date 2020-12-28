@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class IssueAdhocBroker(Broker):
     controller = "issue_adhocs"
-    
-    
+
     def generate_issue(self, **kwargs):
-    
         """Generates an instance of a custom issue.
 
             **Inputs**
@@ -53,7 +52,5 @@ class IssueAdhocBroker(Broker):
              :rtype IssueID: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("generate_issue"), kwargs)
-        
-    

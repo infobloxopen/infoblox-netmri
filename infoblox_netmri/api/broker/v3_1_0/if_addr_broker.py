@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class IfAddrBroker(Broker):
     controller = "if_addrs"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified if addr.
 
             **Inputs**
@@ -45,13 +44,10 @@ class IfAddrBroker(Broker):
              :rtype if_addr: IfAddr
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available if addrs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -259,13 +255,10 @@ class IfAddrBroker(Broker):
              :rtype if_addrs: Array of IfAddr
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available if addrs matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -665,13 +658,10 @@ class IfAddrBroker(Broker):
              :rtype if_addrs: Array of IfAddr
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available if addrs matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: AciBdID, AciEpgID, AddrChangedCols, AddrEndTime, AddrStartTime, AddrTimestamp, DataSourceID, DeviceID, IfAddrID, InterfaceID, SubnetIPDotted, SubnetIPNumeric, ifIPDotted, ifIPNumeric, ifIndex, ifNetMaskDotted, ifNetMaskNumeric.
 
             **Inputs**
@@ -1391,13 +1381,10 @@ class IfAddrBroker(Broker):
              :rtype if_addrs: Array of IfAddr
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The NetMRI device that collected this record.
 
             **Inputs**
@@ -1421,13 +1408,10 @@ class IfAddrBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def interface(self, **kwargs):
-    
         """The interface configured with this address.
 
             **Inputs**
@@ -1451,13 +1435,10 @@ class IfAddrBroker(Broker):
              :rtype : Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("interface"), kwargs)
-        
-    
-    
+
     def infradevice(self, **kwargs):
-    
         """The device containing the interface configured with this address.
 
             **Inputs**
@@ -1481,13 +1462,10 @@ class IfAddrBroker(Broker):
              :rtype : InfraDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("infradevice"), kwargs)
-        
-    
-    
+
     def network_id(self, **kwargs):
-    
         """The Network View ID assigned to the interface.
 
             **Inputs**
@@ -1511,13 +1489,10 @@ class IfAddrBroker(Broker):
              :rtype : Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("network_id"), kwargs)
-        
-    
-    
+
     def vrf_name(self, **kwargs):
-    
         """The VRF name assigned to the interface.
 
             **Inputs**
@@ -1541,13 +1516,10 @@ class IfAddrBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("vrf_name"), kwargs)
-        
-    
-    
+
     def vrf_description(self, **kwargs):
-    
         """The VRF description of the vrf assigned to the interface.
 
             **Inputs**
@@ -1571,13 +1543,10 @@ class IfAddrBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("vrf_description"), kwargs)
-        
-    
-    
+
     def vrf_rd(self, **kwargs):
-    
         """The VRF route distinguisher of the vrf  assigned to the interface.
 
             **Inputs**
@@ -1601,13 +1570,10 @@ class IfAddrBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("vrf_rd"), kwargs)
-        
-    
-    
+
     def cap_if_net_provisioning_ipv4_ind(self, **kwargs):
-    
         """Capability to provision an ipv4 network on this interface.
 
             **Inputs**
@@ -1631,13 +1597,10 @@ class IfAddrBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_net_provisioning_ipv4_ind"), kwargs)
-        
-    
-    
+
     def cap_if_net_provisioning_ipv6_ind(self, **kwargs):
-    
         """Capability to provision an ipv6 network on this interface.
 
             **Inputs**
@@ -1661,13 +1624,10 @@ class IfAddrBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_net_provisioning_ipv6_ind"), kwargs)
-        
-    
-    
+
     def cap_if_net_deprovisioning_ipv4_ind(self, **kwargs):
-    
         """Capability of de-provisioning an ipv4 network from this interface.
 
             **Inputs**
@@ -1691,13 +1651,10 @@ class IfAddrBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_net_deprovisioning_ipv4_ind"), kwargs)
-        
-    
-    
+
     def cap_if_net_deprovisioning_ipv6_ind(self, **kwargs):
-    
         """Capability of de-provisioning an ipv6 network from this interface.
 
             **Inputs**
@@ -1721,13 +1678,10 @@ class IfAddrBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_net_deprovisioning_ipv6_ind"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device containing the interface configured with this address.
 
             **Inputs**
@@ -1751,7 +1705,5 @@ class IfAddrBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    

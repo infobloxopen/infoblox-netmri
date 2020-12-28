@@ -4,39 +4,39 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class GuiStateRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``object_name:`` none
     |  ``attribute type:`` string
-    
+
     |  ``view_name:`` none
     |  ``attribute type:`` string
-    
+
     |  ``auth_user_id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``object_state:`` none
     |  ``attribute type:`` string
-    
+
     |  ``created_at:`` none
     |  ``attribute type:`` string
-    
+
     |  ``updated_at:`` none
     |  ``attribute type:`` string
-    
+
     |  ``shared:`` none
     |  ``attribute type:`` string
-    
+
     |  ``desc:`` none
     |  ``attribute type:`` string
-    
+
     |  ``default:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -50,15 +50,3 @@ class GuiStateRemote(RemoteModel):
                   "desc",
                   "default",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

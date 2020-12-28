@@ -4,48 +4,48 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class FailOverConfigurationGridRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``unit_id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``virtual_ip:`` none
     |  ``attribute type:`` string
-    
+
     |  ``virtual_hostname:`` none
     |  ``attribute type:`` string
-    
+
     |  ``connection_mode:`` none
     |  ``attribute type:`` string
-    
+
     |  ``first_management_ip:`` none
     |  ``attribute type:`` string
-    
+
     |  ``second_management_ip:`` none
     |  ``attribute type:`` string
-    
+
     |  ``first_management_hostname:`` none
     |  ``attribute type:`` string
-    
+
     |  ``second_management_hostname:`` none
     |  ``attribute type:`` string
-    
+
     |  ``first_replication_ip:`` none
     |  ``attribute type:`` string
-    
+
     |  ``second_replication_ip:`` none
     |  ``attribute type:`` string
-    
+
     |  ``replication_port:`` none
     |  ``attribute type:`` string
-    
+
     |  ``status:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -62,18 +62,3 @@ class FailOverConfigurationGridRemote(RemoteModel):
                   "replication_port",
                   "status",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

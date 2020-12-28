@@ -4,36 +4,36 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class TaeJobLogViewerGridRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``start_time:`` none
     |  ``attribute type:`` string
-    
+
     |  ``job_id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``job_name:`` none
     |  ``attribute type:`` string
-    
+
     |  ``approved_by:`` none
     |  ``attribute type:`` string
-    
+
     |  ``created_by:`` none
     |  ``attribute type:`` string
-    
+
     |  ``status:`` none
     |  ``attribute type:`` string
-    
+
     |  ``devices_count:`` none
     |  ``attribute type:`` string
-    
+
     |  ``first_job_details_id:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -46,14 +46,3 @@ class TaeJobLogViewerGridRemote(RemoteModel):
                   "devices_count",
                   "first_job_details_id",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

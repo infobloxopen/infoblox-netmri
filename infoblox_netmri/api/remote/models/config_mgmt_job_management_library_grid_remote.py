@@ -4,36 +4,36 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class ConfigMgmtJobManagementLibraryGridRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``scriptid:`` none
     |  ``attribute type:`` string
-    
+
     |  ``name:`` none
     |  ``attribute type:`` string
-    
+
     |  ``language:`` none
     |  ``attribute type:`` string
-    
+
     |  ``category:`` none
     |  ``attribute type:`` string
-    
+
     |  ``description:`` none
     |  ``attribute type:`` string
-    
+
     |  ``created_by:`` none
     |  ``attribute type:`` string
-    
+
     |  ``created_at:`` none
     |  ``attribute type:`` string
-    
+
     |  ``updated_by:`` none
     |  ``attribute type:`` string
-    
+
     |  ``updated_at:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("scriptid",
@@ -46,14 +46,3 @@ class ConfigMgmtJobManagementLibraryGridRemote(RemoteModel):
                   "updated_by",
                   "updated_at",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

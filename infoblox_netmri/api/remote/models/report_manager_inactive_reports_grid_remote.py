@@ -4,51 +4,51 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class ReportManagerInactiveReportsGridRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``report_run_id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``report_name:`` none
     |  ``attribute type:`` string
-    
+
     |  ``report_type:`` none
     |  ``attribute type:`` string
-    
+
     |  ``created_by:`` none
     |  ``attribute type:`` string
-    
+
     |  ``column_to_sort_by:`` none
     |  ``attribute type:`` string
-    
+
     |  ``status:`` none
     |  ``attribute type:`` string
-    
+
     |  ``report_run_identifier:`` none
     |  ``attribute type:`` string
-    
+
     |  ``report_file:`` none
     |  ``attribute type:`` string
-    
+
     |  ``size:`` none
     |  ``attribute type:`` string
-    
+
     |  ``report_id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``report_identifier:`` none
     |  ``attribute type:`` string
-    
+
     |  ``content_type:`` none
     |  ``attribute type:`` string
-    
+
     |  ``last_action_timestamp:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -66,19 +66,3 @@ class ReportManagerInactiveReportsGridRemote(RemoteModel):
                   "content_type",
                   "last_action_timestamp",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

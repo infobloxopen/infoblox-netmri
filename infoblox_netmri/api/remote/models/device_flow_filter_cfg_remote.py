@@ -22,7 +22,7 @@ class DeviceFlowFilterCfgRemote(RemoteModel):
     |  ``DestDeviceZoneID:`` The internal NetMRI identifier of the Zone that is destination point for this ip packet flow definition.
     |  ``attribute type:`` number
 
-    |  ``FfcType:`` The type of operation applied on this ip packet flow definition. One of : 'filter', 'nat', 'vpn', 
+    |  ``FfcType:`` The type of operation applied on this ip packet flow definition. One of : 'filter', 'nat', 'vpn',
     |  ``attribute type:`` string
 
     |  ``FfcDisplayText:`` The associated text for display.

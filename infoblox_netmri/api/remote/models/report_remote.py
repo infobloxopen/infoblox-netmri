@@ -18,13 +18,13 @@ class ReportRemote(RemoteModel):
     |  ``description:`` Description of the report
     |  ``attribute type:`` string
 
-    |  ``category_id:`` Id of the report category 
+    |  ``category_id:`` Id of the report category
     |  ``attribute type:`` number
 
     |  ``thumbnail_url:`` url of the report image displayed in the Reports &gt; Report Gallery view
     |  ``attribute type:`` string
 
-    |  ``image_url:`` (always nil) 
+    |  ``image_url:`` (always nil)
     |  ``attribute type:`` string
 
     |  ``report_url:`` report url

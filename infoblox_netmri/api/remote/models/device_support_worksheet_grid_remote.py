@@ -33,7 +33,7 @@ class DeviceSupportWorksheetGridRemote(RemoteModel):
     |  ``StepNumber:`` The last step which the worksheet was saved at.
     |  ``attribute type:`` number
 
-    |  ``hide_download_ind:`` Internal flag to suppress a file download button when inappropriate. 
+    |  ``hide_download_ind:`` Internal flag to suppress a file download button when inappropriate.
     |  ``attribute type:`` bool
 
     |  ``DeviceIPNumeric:`` The numerical value of the device IP address.

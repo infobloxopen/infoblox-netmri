@@ -54,7 +54,7 @@ class NotificationRemote(RemoteModel):
     |  ``all_device_groups_ind:`` Do not restrict notification to particular device groups.
     |  ``attribute type:`` bool
 
-    |  ``all_interface_groups_ind:`` Do not restrict notification to particular interface groups. 
+    |  ``all_interface_groups_ind:`` Do not restrict notification to particular interface groups.
     |  ``attribute type:`` bool
 
     |  ``time_window_id:`` Time window id.

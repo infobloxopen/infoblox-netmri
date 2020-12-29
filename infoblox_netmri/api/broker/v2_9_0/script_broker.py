@@ -1184,7 +1184,7 @@ class ScriptBroker(Broker):
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
 
     def run(self, **kwargs):
-        """Run a script immediately with specified input. In addition to the listed parameters, optional parameters can be passed. Any parameter name starting with $ will be passed as Script-Variable to the script.
+        """Run a script immediately with specified input. In addition to the listed parameters, optional parameters can be passed. Any parameter name starting with /$ will be passed as Script-Variable to the script.
 
             **Inputs**
 

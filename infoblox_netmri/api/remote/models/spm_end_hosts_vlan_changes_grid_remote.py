@@ -197,12 +197,3 @@ class SpmEndHostsVlanChangesGridRemote(RemoteModel):
         ``attribute type:`` model
         """
         return self.broker.meta(**{"id": self.id})
-
-    @property
-    @check_api_availability
-    def meta(self):
-        """
-        User custom fields
-        ``attribute type:`` model
-        """
-        return self.broker.meta(**{"id": self.id})

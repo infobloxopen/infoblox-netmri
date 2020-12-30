@@ -115,12 +115,3 @@ class DeviceFlowFilterCfgRemote(RemoteModel):
         ``attribute type:`` model
         """
         return self.broker.device(**{"DeviceFlowFilterCfgID": self.DeviceFlowFilterCfgID})
-
-    @property
-    @check_api_availability
-    def data_source(self):
-        """
-        The collector NetMRI that collected this data record.
-        ``attribute type:`` model
-        """
-        return self.broker.data_source(**{"DeviceFlowFilterCfgID": self.DeviceFlowFilterCfgID})

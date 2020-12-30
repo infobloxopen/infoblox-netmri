@@ -95,12 +95,3 @@ class DeviceObjectObjectRemote(RemoteModel):
         ``attribute type:`` model
         """
         return self.broker.device(**{"DeviceObjectObjectID": self.DeviceObjectObjectID})
-
-    @property
-    @check_api_availability
-    def data_source(self):
-        """
-        The collector NetMRI that collected this data record.
-        ``attribute type:`` model
-        """
-        return self.broker.data_source(**{"DeviceObjectObjectID": self.DeviceObjectObjectID})

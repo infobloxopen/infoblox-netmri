@@ -81,12 +81,3 @@ class IfZoneRemote(RemoteModel):
         ``attribute type:`` model
         """
         return self.broker.device(**{"IfZoneID": self.IfZoneID})
-
-    @property
-    @check_api_availability
-    def data_source(self):
-        """
-        The collector NetMRI that collected this data record.
-        ``attribute type:`` model
-        """
-        return self.broker.data_source(**{"IfZoneID": self.IfZoneID})

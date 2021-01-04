@@ -12,10 +12,11 @@
 #    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #    License for the specific language governing permissions and limitations
 #    under the License.
-from client import InfobloxNetMRI
+from infoblox_netmri.client import InfobloxNetMRI
 
 __all__ = ['InfobloxNetMRI']
 
 __author__ = 'Infoblox, Inc.'
 __email__ = 'support@infoblox.com'
 __version__ = '3.7.0.0'
+

@@ -19,4 +19,3 @@ __all__ = ['InfobloxNetMRI']
 __author__ = 'Infoblox, Inc.'
 __email__ = 'support@infoblox.com'
 __version__ = '3.7.0.0'
-

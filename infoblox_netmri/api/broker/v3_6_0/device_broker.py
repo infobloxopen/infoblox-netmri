@@ -3617,6 +3617,7 @@ class DeviceBroker(Broker):
         </br>  8: Unable to determine CLI credentials.
         </br>  9: Unable to collect config file.
         </br> 10: Skipping DiscoverNow for this IP address due to blackout period in effect.
+        </br> 25: Lock-timeout: Gave up waiting for other process to finish.
              :rtype returncode: Integer
 
             """
@@ -4252,6 +4253,36 @@ class DeviceBroker(Broker):
             """
         
         return self.api_request(self._get_method_fullname("access_diff_impact"), kwargs)
+        
+    
+    
+    def get_device_ids_by_subnet(self, **kwargs):
+    
+        """This method returns a listing of Device ID for a specific CIDR and VirtualNetwork ID
+
+            **Inputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` True
+            |  ``default:`` None
+
+             :param cidr: The CIDR to search on.
+             :type cidr: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` True
+            |  ``default:`` None
+
+             :param network_id: The VirtualNetwork ID to search on.
+             :type network_id: String
+
+            **Outputs**
+
+            """
+        
+        return self.api_request(self._get_method_fullname("get_device_ids_by_subnet"), kwargs)
         
     
     

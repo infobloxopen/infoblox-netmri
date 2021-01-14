@@ -28,6 +28,9 @@ class AuthServerGridRemote(RemoteModel):
     |  ``certificate:`` none
     |  ``attribute type:`` string
     
+    |  ``ocsp_certs:`` none
+    |  ``attribute type:`` string
+    
     |  ``interface:`` none
     |  ``attribute type:`` string
     
@@ -55,6 +58,7 @@ class AuthServerGridRemote(RemoteModel):
                   "auth_encryption",
                   "auth_cert",
                   "certificate",
+                  "ocsp_certs",
                   "interface",
                   "status",
                   "auth_shared_secret",
@@ -63,6 +67,7 @@ class AuthServerGridRemote(RemoteModel):
                   "source_interface_id",
                   )
 
+    
     
     
     

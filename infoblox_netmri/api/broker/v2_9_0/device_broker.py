@@ -3617,6 +3617,7 @@ class DeviceBroker(Broker):
         </br>  8: Unable to determine CLI credentials.
         </br>  9: Unable to collect config file.
         </br> 10: Skipping DiscoverNow for this IP address due to blackout period in effect.
+        </br> 25: Lock-timeout: Gave up waiting for other process to finish.
              :rtype returncode: Integer
 
             """

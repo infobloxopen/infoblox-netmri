@@ -103,6 +103,9 @@ class DeviceGroupDefnRemote(RemoteModel):
     |  ``UseGlobalPolFreq:`` A flag indicating if Global Polling Frequency should be used instead Device Group Polling Frequency.
     |  ``attribute type:`` bool
     
+    |  ``CredentialGroupID:`` The unique identifier of the credential group.
+    |  ``attribute type:`` number
+    
     """
 
     properties = ("GroupID",
@@ -137,8 +140,10 @@ class DeviceGroupDefnRemote(RemoteModel):
                   "PrivilegedPollingInd",
                   "PolFreqModifier",
                   "UseGlobalPolFreq",
+                  "CredentialGroupID",
                   )
 
+    
     
     
     

@@ -122,7 +122,7 @@ class CustomFieldsBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param file_name: CSV file name.
+             :param file_name: The contents of the CSV file with the custom field data to be imported.
              :type file_name: String
 
             **Outputs**

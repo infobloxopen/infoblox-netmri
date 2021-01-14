@@ -49,6 +49,9 @@ class SNMPCredentialRemote(RemoteModel):
     |  ``SecureVersion:`` The encryption version of the username and passwords.
     |  ``attribute type:`` number
     
+    |  ``CredentialGroupID:`` The unique identifier of the credential group.
+    |  ``attribute type:`` number
+    
     """
 
     properties = ("PasswordID",
@@ -65,8 +68,10 @@ class SNMPCredentialRemote(RemoteModel):
                   "SNMPAuthPWSecure",
                   "SNMPPrivPWSecure",
                   "SecureVersion",
+                  "CredentialGroupID",
                   )
 
+    
     
     
     

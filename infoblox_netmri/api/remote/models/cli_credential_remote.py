@@ -40,6 +40,9 @@ class CLICredentialRemote(RemoteModel):
     |  ``SecureVersion:`` The encryption version of the username and password.
     |  ``attribute type:`` number
     
+    |  ``CredentialGroupID:`` The unique identifier of the credential group.
+    |  ``attribute type:`` number
+    
     """
 
     properties = ("UnitID",
@@ -53,8 +56,10 @@ class CLICredentialRemote(RemoteModel):
                   "UsernameSecure",
                   "PasswordSecure",
                   "SecureVersion",
+                  "CredentialGroupID",
                   )
 
+    
     
     
     

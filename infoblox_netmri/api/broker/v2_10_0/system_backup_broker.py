@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class SystemBackupBroker(Broker):
     controller = "system_backup"
-    
-    
+
     def create_archive(self, **kwargs):
-    
         """Creates backup of current system database.
 
             **Inputs**
@@ -37,13 +36,10 @@ class SystemBackupBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create_archive"), kwargs)
-        
-    
-    
+
     def create_archive_status(self, **kwargs):
-    
         """Backup database status.
 
             **Inputs**
@@ -51,13 +47,10 @@ class SystemBackupBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create_archive_status"), kwargs)
-        
-    
-    
+
     def ssh_authentication_test(self, **kwargs):
-    
         """Test SSH authentication.
 
             **Inputs**
@@ -89,7 +82,7 @@ class SystemBackupBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param password: User password on the system where archive will be copied.
              :type password: String
@@ -113,13 +106,10 @@ class SystemBackupBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("ssh_authentication_test"), kwargs)
-        
-    
-    
+
     def move_archive_to_remote_host(self, **kwargs):
-    
         """Moves database archive to remote host via SSH. Note that archive will be removed from NetMRI.
 
             **Inputs**
@@ -151,7 +141,7 @@ class SystemBackupBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param password: User password on the system where archive will be copied. Required if init is set to true.
              :type password: String
@@ -183,13 +173,10 @@ class SystemBackupBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("move_archive_to_remote_host"), kwargs)
-        
-    
-    
+
     def download_archive(self, **kwargs):
-    
         """Download database archive.
 
             **Inputs**
@@ -197,13 +184,10 @@ class SystemBackupBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_mixed_request(self._get_method_fullname("download_archive"), kwargs)
-        
-    
-    
+
     def download_archive_md5_sum(self, **kwargs):
-    
         """Download database archive md5 checksum.
 
             **Inputs**
@@ -211,13 +195,10 @@ class SystemBackupBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_mixed_request(self._get_method_fullname("download_archive_md5_sum"), kwargs)
-        
-    
-    
+
     def remove_archive(self, **kwargs):
-    
         """Database archive is stored in temporary directory on NetMRI. It's removed on schedule but you may choose to force remove it.
 
             **Inputs**
@@ -225,13 +206,10 @@ class SystemBackupBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("remove_archive"), kwargs)
-        
-    
-    
+
     def schedule_archiving(self, **kwargs):
-    
         """Schedule NetMRI database archiving. Archive will be stored on up to 2 systems supporting SCP.
 
             **Inputs**
@@ -271,7 +249,7 @@ class SystemBackupBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param password_1: User password on the system where archive will be copied.
              :type password_1: String
@@ -319,7 +297,7 @@ class SystemBackupBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param password_2: User password on the system where archive will be copied.
              :type password_2: String
@@ -383,13 +361,10 @@ class SystemBackupBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("schedule_archiving"), kwargs)
-        
-    
-    
+
     def upload_archive(self, **kwargs):
-    
         """Upload database archive to NetMRI.
 
             **Inputs**
@@ -413,13 +388,10 @@ class SystemBackupBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("upload_archive"), kwargs)
-        
-    
-    
+
     def restore_database(self, **kwargs):
-    
         """Restores database from the archive which should have been uploaded to NetMRI.
 
             **Inputs**
@@ -427,7 +399,5 @@ class SystemBackupBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("restore_database"), kwargs)
-        
-    

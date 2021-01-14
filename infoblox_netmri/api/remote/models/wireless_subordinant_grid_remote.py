@@ -1,75 +1,74 @@
 from ..remote import RemoteModel
-from infoblox_netmri.utils.utils import check_api_availability
 
 
 class WirelessSubordinantGridRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubTimestamp:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubIPDotted:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubIPNumeric:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubDevice:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubDeviceID:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubDeviceType:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubName:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubLocation:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubMac:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubOperationStatus:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubSoftwareVersion:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubBootVersion:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubModel:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubSerialNumber:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubType:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubGroupVlanName:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubAdminStatus:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubOSVersion:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubNumOfSlots:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SubMonitorOnlyMode:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -94,26 +93,3 @@ class WirelessSubordinantGridRemote(RemoteModel):
                   "SubNumOfSlots",
                   "SubMonitorOnlyMode",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

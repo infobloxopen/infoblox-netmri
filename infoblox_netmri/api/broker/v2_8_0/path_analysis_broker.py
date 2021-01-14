@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class PathAnalysisBroker(Broker):
     controller = "path_analysis"
-    
-    
+
     def create(self, **kwargs):
-    
         """Initiates a path calculation.
 
             **Inputs**
@@ -53,13 +52,10 @@ class PathAnalysisBroker(Broker):
              :rtype path_calculation_id: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def continue_path(self, **kwargs):
-    
         """Continues a path calculation.
 
             **Inputs**
@@ -107,13 +103,10 @@ class PathAnalysisBroker(Broker):
              :rtype path_calculation_id: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("continue_path"), kwargs)
-        
-    
-    
+
     def row_status(self, **kwargs):
-    
         """The current status of a row from set of paths.
 
             **Inputs**
@@ -145,13 +138,10 @@ class PathAnalysisBroker(Broker):
              :rtype status: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("row_status"), kwargs)
-        
-    
-    
+
     def status(self, **kwargs):
-    
         """The overall status of a path calculation.
 
             **Inputs**
@@ -175,13 +165,10 @@ class PathAnalysisBroker(Broker):
              :rtype status: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("status"), kwargs)
-        
-    
-    
+
     def cancel(self, **kwargs):
-    
         """Cancel calculation of paths.
 
             **Inputs**
@@ -197,13 +184,10 @@ class PathAnalysisBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cancel"), kwargs)
-        
-    
-    
+
     def compute_rule_list(self, **kwargs):
-    
         """Compute rule list for any link on selected path.
 
             **Inputs**
@@ -235,13 +219,10 @@ class PathAnalysisBroker(Broker):
              :rtype rule_list: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("compute_rule_list"), kwargs)
-        
-    
-    
+
     def compute_and_save_rule_list(self, **kwargs):
-    
         """Compute rule list for any link on selected path and save it to the selected workbook.
 
             **Inputs**
@@ -273,13 +254,10 @@ class PathAnalysisBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("compute_and_save_rule_list"), kwargs)
-        
-    
-    
+
     def compare_computed_rule_list(self, **kwargs):
-    
         """Compare computed rule list for any link to the selected workbook.
 
             **Inputs**
@@ -311,13 +289,10 @@ class PathAnalysisBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("compare_computed_rule_list"), kwargs)
-        
-    
-    
+
     def build_path_tree(self, **kwargs):
-    
         """Build tree representation of computed path.
 
             **Inputs**
@@ -349,7 +324,5 @@ class PathAnalysisBroker(Broker):
              :rtype path_tree: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("build_path_tree"), kwargs)
-        
-    

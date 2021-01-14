@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DevicePolicyRuleBroker(Broker):
     controller = "device_policy_rules"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified device policy rule.
 
             **Inputs**
@@ -45,13 +44,10 @@ class DevicePolicyRuleBroker(Broker):
              :rtype device_policy_rule: DevicePolicyRule
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available device policy rules. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -187,13 +183,10 @@ class DevicePolicyRuleBroker(Broker):
              :rtype device_policy_rules: Array of DevicePolicyRule
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available device policy rules matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -505,13 +498,10 @@ class DevicePolicyRuleBroker(Broker):
              :rtype device_policy_rules: Array of DevicePolicyRule
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available device policy rules matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceID, DevicePolicyID, DevicePolicyRuleChangedCols, DevicePolicyRuleEndTime, DevicePolicyRuleID, DevicePolicyRuleStartTime, DevicePolicyRuleTimestamp, PolicyRuleContext, PolicyRuleID, PolicyRuleLineNo, PolicyRuleMessage, PolicyRuleStatus.
 
             **Inputs**
@@ -911,13 +901,10 @@ class DevicePolicyRuleBroker(Broker):
              :rtype device_policy_rules: Array of DevicePolicyRule
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The collector NetMRI that collected this data record.
 
             **Inputs**
@@ -941,13 +928,10 @@ class DevicePolicyRuleBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def policy_name(self, **kwargs):
-    
         """The policy name associated with this usage of the rulelist.
 
             **Inputs**
@@ -971,13 +955,10 @@ class DevicePolicyRuleBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("policy_name"), kwargs)
-        
-    
-    
+
     def policy_rule_name(self, **kwargs):
-    
         """The rule name.
 
             **Inputs**
@@ -1001,13 +982,10 @@ class DevicePolicyRuleBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("policy_rule_name"), kwargs)
-        
-    
-    
+
     def policy_rule_short_name(self, **kwargs):
-    
         """The short rule name.
 
             **Inputs**
@@ -1031,13 +1009,10 @@ class DevicePolicyRuleBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("policy_rule_short_name"), kwargs)
-        
-    
-    
+
     def policy_rule_severity(self, **kwargs):
-    
         """The rule severity.
 
             **Inputs**
@@ -1061,13 +1036,10 @@ class DevicePolicyRuleBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("policy_rule_severity"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device to which this policy rule is attached.
 
             **Inputs**
@@ -1091,13 +1063,10 @@ class DevicePolicyRuleBroker(Broker):
              :rtype device: DeviceConfig
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    
-    
+
     def policy_summary(self, **kwargs):
-    
         """Provides a single method to retrieve a policy, it's rules, devices, and per-device, per-policy rule status records. The start/limit parameters apply to the devices, not to the policy rules. That is, if a device is returned, all of the policy rule status records for that device and policy will be returned, regardless of the start/limit parameters.
 
             **Inputs**
@@ -1185,7 +1154,5 @@ class DevicePolicyRuleBroker(Broker):
              :rtype device_policy_rules: Array of DevicePolicyRule
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("policy_summary"), kwargs)
-        
-    

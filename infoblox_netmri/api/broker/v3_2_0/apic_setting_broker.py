@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class ApicSettingBroker(Broker):
     controller = "apic_settings"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available apic settings. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -85,13 +84,10 @@ class ApicSettingBroker(Broker):
              :rtype apic_settings: Array of ApicSetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available apic settings matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -355,13 +351,10 @@ class ApicSettingBroker(Broker):
              :rtype apic_settings: Array of ApicSetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available apic settings matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: SecureVersion, UnitID, api_key, blackout_duration, ca_cert_content, ca_cert_id, collect_offline_devices, controller_address, created_at, handle, id, max_requests_per_second, on_prem, protocol, scan_interface_id, sdn_password, sdn_type, sdn_username, start_blackout_schedule, updated_at, use_global_proxy, virtual_network_id.
 
             **Inputs**
@@ -969,13 +962,10 @@ class ApicSettingBroker(Broker):
              :rtype apic_settings: Array of ApicSetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified apic setting.
 
             **Inputs**
@@ -999,13 +989,10 @@ class ApicSettingBroker(Broker):
              :rtype apic_setting: ApicSetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new apic setting.
 
             **Inputs**
@@ -1029,7 +1016,7 @@ class ApicSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param api_key: No description is available for api_key.
              :type api_key: String
@@ -1045,7 +1032,7 @@ class ApicSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param ca_cert_content: No description is available for ca_cert_content.
              :type ca_cert_content: String
@@ -1077,7 +1064,7 @@ class ApicSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param handle: No description is available for handle.
              :type handle: String
@@ -1117,7 +1104,7 @@ class ApicSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param sdn_password: No description is available for sdn_password.
              :type sdn_password: String
@@ -1133,7 +1120,7 @@ class ApicSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param sdn_username: No description is available for sdn_username.
              :type sdn_username: String
@@ -1141,7 +1128,7 @@ class ApicSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param start_blackout_schedule: No description is available for start_blackout_schedule.
              :type start_blackout_schedule: String
@@ -1197,13 +1184,10 @@ class ApicSettingBroker(Broker):
              :rtype apic_setting: ApicSetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing apic setting.
 
             **Inputs**
@@ -1235,7 +1219,7 @@ class ApicSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param api_key: No description is available for api_key. If omitted, this field will be updated to the default value.
              :type api_key: String
@@ -1283,7 +1267,7 @@ class ApicSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param handle: No description is available for handle. If omitted, this field will be updated to the default value.
              :type handle: String
@@ -1323,7 +1307,7 @@ class ApicSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param sdn_password: No description is available for sdn_password. If omitted, this field will be updated to the default value.
              :type sdn_password: String
@@ -1339,7 +1323,7 @@ class ApicSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param sdn_username: No description is available for sdn_username. If omitted, this field will be updated to the default value.
              :type sdn_username: String
@@ -1347,7 +1331,7 @@ class ApicSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param start_blackout_schedule: No description is available for start_blackout_schedule. If omitted, this field will be updated to the default value.
              :type start_blackout_schedule: String
@@ -1403,13 +1387,10 @@ class ApicSettingBroker(Broker):
              :rtype apic_setting: ApicSetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified apic setting from NetMRI.
 
             **Inputs**
@@ -1425,13 +1406,10 @@ class ApicSettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def destroy_many(self, **kwargs):
-    
         """Remove several configurations of Cisco ACI APIC Controllers
 
             **Inputs**
@@ -1447,13 +1425,10 @@ class ApicSettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy_many"), kwargs)
-        
-    
-    
+
     def dump_apic_controllers(self, **kwargs):
-    
         """List all APIC Controllers
 
             **Inputs**
@@ -1509,13 +1484,10 @@ class ApicSettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("dump_apic_controllers"), kwargs)
-        
-    
-    
+
     def import_controllers(self, **kwargs):
-    
         """Imports a list of discovery settings into the database
 
             **Inputs**
@@ -1539,7 +1511,5 @@ class ApicSettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("import_controllers"), kwargs)
-        
-    

@@ -1,39 +1,38 @@
 from ..remote import RemoteModel
-from infoblox_netmri.utils.utils import check_api_availability
 
 
 class SettingsAuthAuditLogGridRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``created_at:`` none
     |  ``attribute type:`` string
-    
+
     |  ``user_name:`` none
     |  ``attribute type:`` string
-    
+
     |  ``event_type:`` none
     |  ``attribute type:`` string
-    
+
     |  ``message:`` none
     |  ``attribute type:`` string
-    
+
     |  ``field_changes:`` none
     |  ``attribute type:`` string
-    
+
     |  ``field_changes_exportable:`` none
     |  ``attribute type:`` string
-    
+
     |  ``client_ip:`` none
     |  ``attribute type:`` string
-    
+
     |  ``DeviceID:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -46,14 +45,3 @@ class SettingsAuthAuditLogGridRemote(RemoteModel):
                   "client_ip",
                   "DeviceID",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

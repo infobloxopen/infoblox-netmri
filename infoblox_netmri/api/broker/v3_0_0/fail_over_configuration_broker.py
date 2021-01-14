@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class FailOverConfigurationBroker(Broker):
     controller = "fail_over_configurations"
-    
-    
+
     def get_config(self, **kwargs):
-    
         """Get the failover configuration for the specified unit.
 
             **Inputs**
@@ -45,13 +44,10 @@ class FailOverConfigurationBroker(Broker):
              :rtype sync_ok: Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_config"), kwargs)
-        
-    
-    
+
     def action_status(self, **kwargs):
-    
         """Shows failover action progress for specified unit.
 
             **Inputs**
@@ -107,13 +103,10 @@ class FailOverConfigurationBroker(Broker):
              :rtype status: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("action_status"), kwargs)
-        
-    
-    
+
     def action(self, **kwargs):
-    
         """Performs the failover action (enable or disable) for the specified unit.
 
             **Inputs**
@@ -145,13 +138,10 @@ class FailOverConfigurationBroker(Broker):
              :rtype failover_progress: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("action"), kwargs)
-        
-    
-    
+
     def failover(self, **kwargs):
-    
         """Switches the specified unit to the secondary role.
 
             **Inputs**
@@ -175,13 +165,10 @@ class FailOverConfigurationBroker(Broker):
              :rtype status: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("failover"), kwargs)
-        
-    
-    
+
     def set_config(self, **kwargs):
-    
         """Sets the failover configuration for the specified unit.
 
             **Inputs**
@@ -317,13 +304,10 @@ class FailOverConfigurationBroker(Broker):
              :rtype sync_ok: Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("set_config"), kwargs)
-        
-    
-    
+
     def status(self, **kwargs):
-    
         """Get detailed failover replication and connection status for the specified unit.
 
             **Inputs**
@@ -347,13 +331,10 @@ class FailOverConfigurationBroker(Broker):
              :rtype status: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("status"), kwargs)
-        
-    
-    
+
     def reset_config_for_collector(self, **kwargs):
-    
         """Drop failover collector on the collector to re-fetch it next time failover preferences are opened
 
             **Inputs**
@@ -377,7 +358,5 @@ class FailOverConfigurationBroker(Broker):
              :rtype status: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("reset_config_for_collector"), kwargs)
-        
-    

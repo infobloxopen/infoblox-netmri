@@ -2,7 +2,7 @@ import re
 from pydoc import safeimport
 
 
-def locate(path, forceload=0):
+def locate(path, forceload=False):
     """Locate an object by name or dotted path, importing as necessary."""
     parts = [part for part in path.split('.') if part]
     module, n = None, 0

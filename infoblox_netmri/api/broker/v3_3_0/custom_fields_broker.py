@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class CustomFieldsBroker(Broker):
     controller = "custom_fields"
-    
-    
+
     def list(self, **kwargs):
-    
         """Returns list of custom fields defined for requested model or list of custom fields defined for model object if id parameter is passed.
 
             **Inputs**
@@ -69,13 +68,10 @@ class CustomFieldsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("list"), kwargs)
-        
-    
-    
+
     def list_undefined(self, **kwargs):
-    
         """Returns list of undefined custom field for specified object.
 
             **Inputs**
@@ -99,12 +95,10 @@ class CustomFieldsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("list_undefined"), kwargs)
-        
-    
+
     def import_data(self, **kwargs):
-    
         """Allows importing custom field data using CSV format.
 
             **Inputs**
@@ -128,13 +122,10 @@ class CustomFieldsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("import"), kwargs)
-        
-    
-    
+
     def create_field(self, **kwargs):
-    
         """Allows creating new custom field for specified model.
 
             **Inputs**
@@ -166,13 +157,10 @@ class CustomFieldsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create_field"), kwargs)
-        
-    
-    
+
     def update_field(self, **kwargs):
-    
         """Allows updating properties of custom field assosiated with specified model (changing name, type).
 
             **Inputs**
@@ -212,13 +200,10 @@ class CustomFieldsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_field"), kwargs)
-        
-    
-    
+
     def delete_field(self, **kwargs):
-    
         """Allows deleting custom field assosiated with specified model.
 
             **Inputs**
@@ -242,7 +227,5 @@ class CustomFieldsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("delete_field"), kwargs)
-        
-    

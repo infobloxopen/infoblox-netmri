@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class SpmEndHostsVlanChangesGridBroker(Broker):
     controller = "spm_end_hosts_vlan_changes_grids"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available spm end hosts vlan changes grids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -117,13 +116,10 @@ class SpmEndHostsVlanChangesGridBroker(Broker):
              :rtype summary: Hash
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def data_partitions(self, **kwargs):
-    
         """Returns data partitions with their statuses for specified grid. 0 - data not available for that date, 1 - data available but must be prepared, 2 - data prepared and immediately available
 
             **Inputs**
@@ -131,7 +127,5 @@ class SpmEndHostsVlanChangesGridBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_partitions"), kwargs)
-        
-    

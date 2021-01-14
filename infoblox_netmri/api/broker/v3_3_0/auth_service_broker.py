@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class AuthServiceBroker(Broker):
     controller = "auth_services"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified auth service.
 
             **Inputs**
@@ -29,13 +28,10 @@ class AuthServiceBroker(Broker):
              :rtype auth_service: AuthService
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available auth services. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -115,13 +111,10 @@ class AuthServiceBroker(Broker):
              :rtype auth_services: Array of AuthService
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available auth services matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -297,13 +290,10 @@ class AuthServiceBroker(Broker):
              :rtype auth_services: Array of AuthService
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available auth services matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: auth_method, context_params_json, created_at, description, enabled_authz_ind, enabled_ind, id, priority, service_name, timeout, updated_at.
 
             **Inputs**
@@ -647,13 +637,10 @@ class AuthServiceBroker(Broker):
              :rtype auth_services: Array of AuthService
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified auth service from NetMRI.
 
             **Inputs**
@@ -669,13 +656,10 @@ class AuthServiceBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Create a new Authentication Service
 
             **Inputs**
@@ -789,7 +773,7 @@ class AuthServiceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` subtree
 
-             :param search_scope: Specify the scope of the LDAP search.<br> 
+             :param search_scope: Specify the scope of the LDAP search.<br>
        - 'base': Search only the base object.<br>       - 'one': Search the entries immediately below the base object.<br>       - 'subtree': Search the whole tree below (and including) the base object. This is the default.
              :type search_scope: String
 
@@ -852,13 +836,10 @@ class AuthServiceBroker(Broker):
              :rtype service_description: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Update an existing Authentication Service
 
             **Inputs**
@@ -980,7 +961,7 @@ class AuthServiceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param search_scope: Specify the scope of the LDAP search.<br> 
+             :param search_scope: Specify the scope of the LDAP search.<br>
        - 'base': Search only the base object.<br>       - 'one': Search the entries immediately below the base object.<br>       - 'subtree': Search the whole tree below (and including) the base object. This is the default.
              :type search_scope: String
 
@@ -1043,13 +1024,10 @@ class AuthServiceBroker(Broker):
              :rtype service_description: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def duplicate(self, **kwargs):
-    
         """Duplicate an authentication service.
 
             **Inputs**
@@ -1089,13 +1067,10 @@ class AuthServiceBroker(Broker):
              :rtype service_description: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("duplicate"), kwargs)
-        
-    
-    
+
     def auth_servers(self, **kwargs):
-    
         """List all servers defined for the requested Authentication Service
 
             **Inputs**
@@ -1111,13 +1086,10 @@ class AuthServiceBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("auth_servers"), kwargs)
-        
-    
-    
+
     def auth_test_creds(self, **kwargs):
-    
         """Test credentials for this service Authentication Servers that are stored in db.
 
             **Inputs**
@@ -1207,7 +1179,5 @@ class AuthServiceBroker(Broker):
              :rtype status: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("auth_test_creds"), kwargs)
-        
-    

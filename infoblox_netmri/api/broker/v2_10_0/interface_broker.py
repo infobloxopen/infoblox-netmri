@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class InterfaceBroker(Broker):
     controller = "interfaces"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified interface.
 
             **Inputs**
@@ -45,13 +44,10 @@ class InterfaceBroker(Broker):
              :rtype interface: Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available interfaces. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -291,13 +287,10 @@ class InterfaceBroker(Broker):
              :rtype interfaces: Array of Interface
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available interfaces matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -1193,13 +1186,10 @@ class InterfaceBroker(Broker):
              :rtype interfaces: Array of Interface
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available interfaces matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: AggrInterfaceID, DataSourceID, DeviceID, DownstreamSwitchCount, InterfaceID, PoEPower, PoEStatus, Port, Slot, SwitchPortNumber, VirtualNetworkMemberID, ifAdminDuplex, ifAdminStatus, ifAggrMemberInd, ifAlias, ifArtificialInd, ifChangedCols, ifConnector, ifDescr, ifDescrRaw, ifDuplex, ifEncapsulationTag, ifEncapsulationType, ifEndTime, ifFirstSeenTime, ifIndex, ifLastChange, ifLinkAggrInd, ifLinkAggrIndex, ifLinkTrap, ifLowerLayer, ifLowerLayerInterfaceID, ifMAC, ifMtu, ifName, ifNameSort, ifOperStatus, ifOperStatusChange, ifPortControlInd, ifPortFast, ifSpeed, ifStartTime, ifSwitchPortMgmtInd, ifTimestamp, ifTrunkStatus, ifTunnelInd, ifType, ifVirtualInd.
 
             **Inputs**
@@ -3071,13 +3061,10 @@ class InterfaceBroker(Broker):
              :rtype interfaces: Array of Interface
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing interface.
 
             **Inputs**
@@ -3125,13 +3112,10 @@ class InterfaceBroker(Broker):
              :rtype interface: Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def update_custom_field(self, **kwargs):
-    
         """Updates an existing interface.
 
             **Inputs**
@@ -3179,13 +3163,10 @@ class InterfaceBroker(Broker):
              :rtype interface: Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_custom_field"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The NetMRI device that collected this record.
 
             **Inputs**
@@ -3209,13 +3190,10 @@ class InterfaceBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def aggr_interface(self, **kwargs):
-    
         """The 'owning' link aggregation interface for link aggregate members (refers back to self for link aggregates).
 
             **Inputs**
@@ -3239,13 +3217,10 @@ class InterfaceBroker(Broker):
              :rtype : Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("aggr_interface"), kwargs)
-        
-    
-    
+
     def infradevice(self, **kwargs):
-    
         """The device containing this interface.
 
             **Inputs**
@@ -3269,13 +3244,10 @@ class InterfaceBroker(Broker):
              :rtype : InfraDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("infradevice"), kwargs)
-        
-    
-    
+
     def vlan(self, **kwargs):
-    
         """The first virtual LAN attached to that interface
 
             **Inputs**
@@ -3299,13 +3271,10 @@ class InterfaceBroker(Broker):
              :rtype : Vlan
 
             """
-        
+
         return self.api_request(self._get_method_fullname("vlan"), kwargs)
-        
-    
-    
+
     def network_name(self, **kwargs):
-    
         """A Network View assigned to the device.
 
             **Inputs**
@@ -3329,13 +3298,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("network_name"), kwargs)
-        
-    
-    
+
     def network_id(self, **kwargs):
-    
         """The Network View ID assigned to the interface.
 
             **Inputs**
@@ -3359,13 +3325,10 @@ class InterfaceBroker(Broker):
              :rtype : Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("network_id"), kwargs)
-        
-    
-    
+
     def vrf_name(self, **kwargs):
-    
         """The VRF name assigned to the interface.
 
             **Inputs**
@@ -3389,13 +3352,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("vrf_name"), kwargs)
-        
-    
-    
+
     def vrf_description(self, **kwargs):
-    
         """The VRF description of the vrf assigned to the interface.
 
             **Inputs**
@@ -3419,13 +3379,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("vrf_description"), kwargs)
-        
-    
-    
+
     def vrf_rd(self, **kwargs):
-    
         """The VRF route distinguisher of the vrf  assigned to the interface.
 
             **Inputs**
@@ -3449,13 +3406,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("vrf_rd"), kwargs)
-        
-    
-    
+
     def cap_if_description_ind(self, **kwargs):
-    
         """Capability of changing the description of this interface.
 
             **Inputs**
@@ -3479,13 +3433,10 @@ class InterfaceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_description_ind"), kwargs)
-        
-    
-    
+
     def cap_if_admin_status_ind(self, **kwargs):
-    
         """Capability of changing the Admin Status of this interface.
 
             **Inputs**
@@ -3509,13 +3460,10 @@ class InterfaceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_admin_status_ind"), kwargs)
-        
-    
-    
+
     def cap_if_vlan_assignment_ind(self, **kwargs):
-    
         """Capability of assigning a regular data VLAN to this interface.
 
             **Inputs**
@@ -3539,13 +3487,10 @@ class InterfaceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_vlan_assignment_ind"), kwargs)
-        
-    
-    
+
     def cap_if_voice_vlan_ind(self, **kwargs):
-    
         """Capability of assigning a voice VLAN to this interface.
 
             **Inputs**
@@ -3569,13 +3514,10 @@ class InterfaceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_voice_vlan_ind"), kwargs)
-        
-    
-    
+
     def control_capabilities(self, **kwargs):
-    
         """Configuration capabilities for this interface, related to Port Control.
 
             **Inputs**
@@ -3599,13 +3541,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("control_capabilities"), kwargs)
-        
-    
-    
+
     def cap_itf_net_deprovisioning_ind(self, **kwargs):
-    
         """Capability of de-provisioning a network from this interface.
 
             **Inputs**
@@ -3629,13 +3568,10 @@ class InterfaceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_itf_net_deprovisioning_ind"), kwargs)
-        
-    
-    
+
     def cap_if_description_na_reason(self, **kwargs):
-    
         """Reason of non ability of changing the description of this interface.
 
             **Inputs**
@@ -3659,13 +3595,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_description_na_reason"), kwargs)
-        
-    
-    
+
     def cap_if_admin_status_na_reason(self, **kwargs):
-    
         """Reason of non ability of changing the Admin Status of this interface.
 
             **Inputs**
@@ -3689,13 +3622,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_admin_status_na_reason"), kwargs)
-        
-    
-    
+
     def cap_if_vlan_assignment_na_reason(self, **kwargs):
-    
         """Reason of non ability of assigning a regular data VLAN to this interface.
 
             **Inputs**
@@ -3719,13 +3649,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_vlan_assignment_na_reason"), kwargs)
-        
-    
-    
+
     def cap_if_voice_vlan_na_reason(self, **kwargs):
-    
         """Reason of non ability of assigning a voice VLAN to this interface.
 
             **Inputs**
@@ -3749,13 +3676,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_voice_vlan_na_reason"), kwargs)
-        
-    
-    
+
     def cap_if_net_provisioning_ipv4_ind(self, **kwargs):
-    
         """Capability to provision an ipv4 network on this interface.
 
             **Inputs**
@@ -3779,13 +3703,10 @@ class InterfaceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_net_provisioning_ipv4_ind"), kwargs)
-        
-    
-    
+
     def cap_if_net_provisioning_ipv4_na_reason(self, **kwargs):
-    
         """Reason of non ability to provision an ipv4 network on this interface.
 
             **Inputs**
@@ -3809,13 +3730,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_net_provisioning_ipv4_na_reason"), kwargs)
-        
-    
-    
+
     def cap_if_net_provisioning_ipv6_ind(self, **kwargs):
-    
         """Capability to provision an ipv6 network on this interface.
 
             **Inputs**
@@ -3839,13 +3757,10 @@ class InterfaceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_net_provisioning_ipv6_ind"), kwargs)
-        
-    
-    
+
     def cap_if_net_provisioning_ipv6_na_reason(self, **kwargs):
-    
         """Reason of non ability to provision an ipv6 network on this interface.i
 
             **Inputs**
@@ -3869,13 +3784,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_net_provisioning_ipv6_na_reason"), kwargs)
-        
-    
-    
+
     def cap_if_net_deprovisioning_ipv4_ind(self, **kwargs):
-    
         """Capability of de-provisioning an ipv4 network from this interface.
 
             **Inputs**
@@ -3899,13 +3811,10 @@ class InterfaceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_net_deprovisioning_ipv4_ind"), kwargs)
-        
-    
-    
+
     def cap_if_net_deprovisioning_ipv4_na_reason(self, **kwargs):
-    
         """Reason of non ability of de-provisioning an ipv4 network from this interface.
 
             **Inputs**
@@ -3929,13 +3838,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_net_deprovisioning_ipv4_na_reason"), kwargs)
-        
-    
-    
+
     def cap_if_net_deprovisioning_ipv6_ind(self, **kwargs):
-    
         """Capability of de-provisioning an ipv6 network from this interface.
 
             **Inputs**
@@ -3959,13 +3865,10 @@ class InterfaceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_net_deprovisioning_ipv6_ind"), kwargs)
-        
-    
-    
+
     def cap_if_net_deprovisioning_ipv6_na_reason(self, **kwargs):
-    
         """Reason of non ability of de-provisioning an ipv6 network from this interface.
 
             **Inputs**
@@ -3989,13 +3892,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_if_net_deprovisioning_ipv6_na_reason"), kwargs)
-        
-    
-    
+
     def cap_itf_net_deprovisioning_na_reason(self, **kwargs):
-    
         """The reason a network from this interface was unable to be deprovisioned.
 
             **Inputs**
@@ -4019,13 +3919,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_itf_net_deprovisioning_na_reason"), kwargs)
-        
-    
-    
+
     def aggr_interface_name(self, **kwargs):
-    
         """The name of aggregated interface.
 
             **Inputs**
@@ -4049,13 +3946,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("aggr_interface_name"), kwargs)
-        
-    
-    
+
     def vpc_peer_ifname(self, **kwargs):
-    
         """The name of peer interface of VPC pair.
 
             **Inputs**
@@ -4079,13 +3973,10 @@ class InterfaceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("vpc_peer_ifname"), kwargs)
-        
-    
-    
+
     def vpc_peer_device_id(self, **kwargs):
-    
         """DeviceID of VPC peer device.
 
             **Inputs**
@@ -4109,13 +4000,10 @@ class InterfaceBroker(Broker):
              :rtype : Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("vpc_peer_device_id"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device containing this interface.
 
             **Inputs**
@@ -4139,13 +4027,10 @@ class InterfaceBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    
-    
+
     def port_status_aggregate_count(self, **kwargs):
-    
         """Switch Port Status Aggregate Counts
 
             **Inputs**
@@ -4209,7 +4094,5 @@ class InterfaceBroker(Broker):
              :rtype admin_down_oper_down_count: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("port_status_aggregate_count"), kwargs)
-        
-    

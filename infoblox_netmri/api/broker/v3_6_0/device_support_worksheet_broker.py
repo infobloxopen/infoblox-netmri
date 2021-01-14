@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceSupportWorksheetBroker(Broker):
     controller = "device_support_worksheets"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available device support worksheets. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -85,13 +84,10 @@ class DeviceSupportWorksheetBroker(Broker):
              :rtype device_support_worksheets: Array of DeviceSupportWorksheet
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available device support worksheets matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -595,13 +591,10 @@ class DeviceSupportWorksheetBroker(Broker):
              :rtype device_support_worksheets: Array of DeviceSupportWorksheet
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available device support worksheets matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: access_to_device, access_to_device_other, admin_guide_collected_ind, cli_password, cli_session_collected_ind, cli_username, contact_method, contact_name, contact_value, created_at, customer_name, delivery_addl_email, delivery_method, device_discovered_ind, device_id, device_ip_dotted, device_model, device_type, device_vendor, discovery_diagnostic_collected_ind, id, license_expiration, license_id, license_type, manual_data_entry_ind, netmri_version, os_version, package_name, preferred_cli, priv_mode_info, secure_version, snmp_auth_password, snmp_auth_protocol, snmp_auth_username, snmp_community_string, snmp_data_collected_ind, snmp_port, snmp_privacy_password, snmp_privacy_protocol, snmp_version, status, status_msg, step_number, syslogs_collected_ind, unit_id, updated_at, user_in_device_capabilities, user_in_device_model, user_in_device_type, user_in_device_vendor, user_in_os_version, virtual_network_id.
 
             **Inputs**
@@ -1929,13 +1922,10 @@ class DeviceSupportWorksheetBroker(Broker):
              :rtype device_support_worksheets: Array of DeviceSupportWorksheet
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified device support worksheet.
 
             **Inputs**
@@ -1959,7 +1949,5 @@ class DeviceSupportWorksheetBroker(Broker):
              :rtype device_support_worksheet: DeviceSupportWorksheet
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    

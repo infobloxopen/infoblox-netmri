@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class ScriptBroker(Broker):
     controller = "scripts"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available scripts. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -109,13 +108,10 @@ class ScriptBroker(Broker):
              :rtype scripts: Array of Script
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified script.
 
             **Inputs**
@@ -139,13 +135,10 @@ class ScriptBroker(Broker):
              :rtype script: Script
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Create a CCS script on NetMRI.
 
             **Inputs**
@@ -169,13 +162,10 @@ class ScriptBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Update a CCS/Perl/Python script on NetMRI.
 
             **Inputs**
@@ -215,13 +205,10 @@ class ScriptBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Delete a CCS script on NetMRI.
 
             **Inputs**
@@ -237,13 +224,10 @@ class ScriptBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def run(self, **kwargs):
-    
         """Run a script immediately with specified input. In addition to the listed parameters, optional parameters can be passed. Any parameter name starting with \$ will be passed as Script-Variable to the script.
 
             **Inputs**
@@ -283,7 +267,5 @@ class ScriptBroker(Broker):
              :rtype JobID: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("run"), kwargs)
-        
-    

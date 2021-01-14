@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class BasicServicesBroker(Broker):
     controller = "basic_services"
-    
-    
+
     def authenticate(self, **kwargs):
-    
         """Authenticates the user with NetMRI.
 
             **Inputs**
@@ -45,13 +44,10 @@ class BasicServicesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("authenticate"), kwargs)
-        
-    
-    
+
     def base_uri(self, **kwargs):
-    
         """Returns the base URI for the specified version.
 
             **Inputs**
@@ -67,13 +63,10 @@ class BasicServicesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("base_uri"), kwargs)
-        
-    
-    
+
     def license_info(self, **kwargs):
-    
         """Returns license information for this NetMRI server.
 
             **Inputs**
@@ -185,13 +178,10 @@ class BasicServicesBroker(Broker):
              :rtype modules_name: Array of String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("license_info"), kwargs)
-        
-    
-    
+
     def server_info(self, **kwargs):
-    
         """Returns basic information regarding this NetMRI server.
 
             **Inputs**
@@ -295,13 +285,10 @@ class BasicServicesBroker(Broker):
              :rtype supported_api_versions: Array of String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("server_info"), kwargs)
-        
-    
-    
+
     def server_time(self, **kwargs):
-    
         """Returns the current system time of this NetMRI server.
 
             **Inputs**
@@ -309,13 +296,10 @@ class BasicServicesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("server_time"), kwargs)
-        
-    
-    
+
     def restart(self, **kwargs):
-    
         """Restarts the application.
 
             **Inputs**
@@ -323,13 +307,10 @@ class BasicServicesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("restart"), kwargs)
-        
-    
-    
+
     def consolidate(self, **kwargs):
-    
         """Runs consolidation
 
             **Inputs**
@@ -353,13 +334,10 @@ class BasicServicesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("consolidate"), kwargs)
-        
-    
-    
+
     def settings_generate(self, **kwargs):
-    
         """Generates xml with current configuration data
 
             **Inputs**
@@ -383,13 +361,10 @@ class BasicServicesBroker(Broker):
              :rtype xml: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("settings_generate"), kwargs)
-        
-    
-    
+
     def settings_current(self, **kwargs):
-    
         """Reports the status of an xml configuration file
 
             **Inputs**
@@ -421,13 +396,10 @@ class BasicServicesBroker(Broker):
              :rtype status: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("settings_current"), kwargs)
-        
-    
-    
+
     def settings_apply(self, **kwargs):
-    
         """Parses the xml provided by config_id, then applies the changes. You should not need to call this directly!
 
             **Inputs**
@@ -475,13 +447,10 @@ class BasicServicesBroker(Broker):
              :rtype status: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("settings_apply"), kwargs)
-        
-    
-    
+
     def settings_status(self, **kwargs):
-    
         """Reports the status of an xml configuration file
 
             **Inputs**
@@ -513,13 +482,10 @@ class BasicServicesBroker(Broker):
              :rtype status: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("settings_status"), kwargs)
-        
-    
-    
+
     def settings_info(self, **kwargs):
-    
         """Shows probe info, running_config, candidate_config, and list of installed dsb
 
             **Inputs**
@@ -535,13 +501,10 @@ class BasicServicesBroker(Broker):
              :rtype grid_members: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("settings_info"), kwargs)
-        
-    
-    
+
     def set_session_value(self, **kwargs):
-    
         """save data in a cache that is session wise
 
             **Inputs**
@@ -565,13 +528,10 @@ class BasicServicesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("set_session_value"), kwargs)
-        
-    
-    
+
     def get_session_value(self, **kwargs):
-    
         """retrieve data in the session cache that formerly saved
 
             **Inputs**
@@ -603,13 +563,10 @@ class BasicServicesBroker(Broker):
              :rtype value: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_session_value"), kwargs)
-        
-    
-    
+
     def set_time_zone(self, **kwargs):
-    
         """Sets a Time Zone for the system.
 
             **Inputs**
@@ -625,7 +582,5 @@ class BasicServicesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("set_time_zone"), kwargs)
-        
-    

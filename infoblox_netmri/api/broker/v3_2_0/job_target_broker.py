@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class JobTargetBroker(Broker):
     controller = "job_targets"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified job target.
 
             **Inputs**
@@ -29,13 +28,10 @@ class JobTargetBroker(Broker):
              :rtype job_target: JobTarget
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available job targets. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -123,13 +119,10 @@ class JobTargetBroker(Broker):
              :rtype job_targets: Array of JobTarget
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available job targets matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -361,13 +354,10 @@ class JobTargetBroker(Broker):
              :rtype job_targets: Array of JobTarget
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available job targets matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: completed_at, created_at, device_filter_set_id, device_group_id, device_id, dis_session_id, id, input_data, interface_group_id, interface_id, job_id, job_specification_id, last_status_at, managed_process_id, status, status_info, target_type, updated_at.
 
             **Inputs**
@@ -879,7 +869,5 @@ class JobTargetBroker(Broker):
              :rtype job_targets: Array of JobTarget
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    

@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class AccessSearchResultPrimaryGridBroker(Broker):
     controller = "access_search_result_primary_grids"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available access search result primary grids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -109,7 +108,5 @@ class AccessSearchResultPrimaryGridBroker(Broker):
              :rtype summary: Hash
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    

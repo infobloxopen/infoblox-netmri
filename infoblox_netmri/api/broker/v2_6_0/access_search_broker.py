@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class AccessSearchBroker(Broker):
     controller = "access_searches"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified access search.
 
             **Inputs**
@@ -37,13 +36,10 @@ class AccessSearchBroker(Broker):
              :rtype access_search: AccessSearch
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available access searches. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -131,13 +127,10 @@ class AccessSearchBroker(Broker):
              :rtype access_searches: Array of AccessSearch
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available access searches matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -305,13 +298,10 @@ class AccessSearchBroker(Broker):
              :rtype access_searches: Array of AccessSearch
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available access searches matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: created_at, errors, general_errors, id, rules_json, search_set_key, status, updated_at, user_name.
 
             **Inputs**
@@ -615,13 +605,10 @@ class AccessSearchBroker(Broker):
              :rtype access_searches: Array of AccessSearch
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Initiates a network access search.
 
             **Inputs**
@@ -717,13 +704,10 @@ class AccessSearchBroker(Broker):
              :rtype access_search: AccessSearch
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def schedule_report(self, **kwargs):
-    
         """Schedule a report for future search.
 
             **Inputs**
@@ -827,13 +811,10 @@ class AccessSearchBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("schedule_report"), kwargs)
-        
-    
-    
+
     def cancel(self, **kwargs):
-    
         """Cancels a currently executing search set.
 
             **Inputs**
@@ -849,13 +830,10 @@ class AccessSearchBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cancel"), kwargs)
-        
-    
-    
+
     def input_check(self, **kwargs):
-    
         """Returns a preview summary of the user's input for a search.
 
             **Inputs**
@@ -959,13 +937,10 @@ class AccessSearchBroker(Broker):
              :rtype launchable: Boolean
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("input_check"), kwargs)
-        
-    
-    
+
     def summary(self, **kwargs):
-    
         """Returns a summary of a network access search.
 
             **Inputs**
@@ -1045,13 +1020,10 @@ class AccessSearchBroker(Broker):
              :rtype error_count: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("summary"), kwargs)
-        
-    
-    
+
     def rules(self, **kwargs):
-    
         """Returns the search rules for a search set.
 
             **Inputs**
@@ -1075,13 +1047,10 @@ class AccessSearchBroker(Broker):
              :rtype rules: Array of Hash
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("rules"), kwargs)
-        
-    
-    
+
     def primary_results(self, **kwargs):
-    
         """Returns the primary search results for a search set.
 
             **Inputs**
@@ -1185,13 +1154,10 @@ class AccessSearchBroker(Broker):
              :rtype next_updated_since: DateTime
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("primary_results"), kwargs)
-        
-    
-    
+
     def secondary_results(self, **kwargs):
-    
         """Returns the secondary search results for a search set.
 
             **Inputs**
@@ -1295,7 +1261,5 @@ class AccessSearchBroker(Broker):
              :rtype secondary_results: Array of AccessSearchResultSecondaryGrid
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("secondary_results"), kwargs)
-        
-    

@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class ConfigRevisionBroker(Broker):
     controller = "config_revisions"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified config revision.
 
             **Inputs**
@@ -45,13 +44,10 @@ class ConfigRevisionBroker(Broker):
              :rtype config_revision: ConfigRevision
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available config revisions. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -187,13 +183,10 @@ class ConfigRevisionBroker(Broker):
              :rtype config_revisions: Array of ConfigRevision
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available config revisions matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -393,13 +386,10 @@ class ConfigRevisionBroker(Broker):
              :rtype config_revisions: Array of ConfigRevision
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available config revisions matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: ConfigDiffs, ConfigRevision, ConfigRevisionID, ConfigTimestamp, ConfigType, DataSourceID, DeviceID, LastCollected, PreviousTimestamp.
 
             **Inputs**
@@ -735,13 +725,10 @@ class ConfigRevisionBroker(Broker):
              :rtype config_revisions: Array of ConfigRevision
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def text(self, **kwargs):
-    
         """Returns the text of the configuration file.
 
             **Inputs**
@@ -765,13 +752,10 @@ class ConfigRevisionBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("text"), kwargs)
-        
-    
-    
+
     def edited_by(self, **kwargs):
-    
         """The user(s) that modified the file between the last revision and this one.
 
             **Inputs**
@@ -795,13 +779,10 @@ class ConfigRevisionBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("edited_by"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The NetMRI device that collected this record.
 
             **Inputs**
@@ -825,13 +806,10 @@ class ConfigRevisionBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def infradevice(self, **kwargs):
-    
         """The device from which this configuration revision was collected.
 
             **Inputs**
@@ -855,13 +833,10 @@ class ConfigRevisionBroker(Broker):
              :rtype : InfraDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("infradevice"), kwargs)
-        
-    
-    
+
     def devicesetting(self, **kwargs):
-    
         """The device setting from which this configuration revision was collected.
 
             **Inputs**
@@ -885,13 +860,10 @@ class ConfigRevisionBroker(Broker):
              :rtype : DeviceSetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("devicesetting"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device from which this configuration revision was collected.
 
             **Inputs**
@@ -915,13 +887,10 @@ class ConfigRevisionBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    
-    
+
     def diffs(self, **kwargs):
-    
         """Difference between two Config Revision.
 
             **Inputs**
@@ -977,13 +946,10 @@ class ConfigRevisionBroker(Broker):
              :rtype text_config_revisions: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("diffs"), kwargs)
-        
-    
-    
+
     def set_baseline(self, **kwargs):
-    
         """Set a revision
 
             **Inputs**
@@ -1007,13 +973,10 @@ class ConfigRevisionBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("set_baseline"), kwargs)
-        
-    
-    
+
     def clear_baseline(self, **kwargs):
-    
         """Clear the revision.
 
             **Inputs**
@@ -1029,13 +992,10 @@ class ConfigRevisionBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("clear_baseline"), kwargs)
-        
-    
-    
+
     def get_configs(self, **kwargs):
-    
         """Request on demand configuration collection for the specified device.
 
             **Inputs**
@@ -1067,13 +1027,10 @@ class ConfigRevisionBroker(Broker):
              :rtype TrackingID: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_configs"), kwargs)
-        
-    
-    
+
     def get_configs_status(self, **kwargs):
-    
         """Get the status of an on demand configuration collection request.
 
             **Inputs**
@@ -1105,7 +1062,5 @@ class ConfigRevisionBroker(Broker):
              :rtype Timestamp: DateTime
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_configs_status"), kwargs)
-        
-    

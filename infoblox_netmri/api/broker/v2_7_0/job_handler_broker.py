@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class JobHandlerBroker(Broker):
     controller = "job_handlers"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available job handlers. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -85,13 +84,10 @@ class JobHandlerBroker(Broker):
              :rtype job_handlers: Array of JobHandler
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified job handler.
 
             **Inputs**
@@ -115,13 +111,10 @@ class JobHandlerBroker(Broker):
              :rtype job_handler: JobHandler
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available job handlers matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -329,13 +322,10 @@ class JobHandlerBroker(Broker):
              :rtype job_handlers: Array of JobHandler
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available job handlers matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: broker_admin_queue, broker_exchange, broker_password_secure, broker_password_version, broker_queue, broker_user_name, concurrent_limit, created_at, created_by, current_bid, id, last_status_at, status, unit_id, updated_at.
 
             **Inputs**
@@ -775,13 +765,10 @@ class JobHandlerBroker(Broker):
              :rtype job_handlers: Array of JobHandler
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified job handler from NetMRI.
 
             **Inputs**
@@ -797,13 +784,10 @@ class JobHandlerBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Create and register a Job Handler
 
             **Inputs**
@@ -843,13 +827,10 @@ class JobHandlerBroker(Broker):
              :rtype job_handler: JobHandler
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def download_config(self, **kwargs):
-    
         """Download Job Handler Configuration Archive
 
             **Inputs**
@@ -865,7 +846,5 @@ class JobHandlerBroker(Broker):
              :rtype config: String
 
             """
-        
+
         return self.api_mixed_request(self._get_method_fullname("download_config"), kwargs)
-        
-    

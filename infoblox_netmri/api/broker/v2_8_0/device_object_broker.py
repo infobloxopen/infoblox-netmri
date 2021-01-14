@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceObjectBroker(Broker):
     controller = "device_objects"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified device object.
 
             **Inputs**
@@ -45,13 +44,10 @@ class DeviceObjectBroker(Broker):
              :rtype device_object: DeviceObject
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available device objects. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -179,13 +175,10 @@ class DeviceObjectBroker(Broker):
              :rtype device_objects: Array of DeviceObject
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available device objects matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -417,13 +410,10 @@ class DeviceObjectBroker(Broker):
              :rtype device_objects: Array of DeviceObject
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available device objects matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceID, DeviceCfgContextID, DeviceID, DeviceObjectID, ObjArtificialInd, ObjChangedCols, ObjConfigText, ObjEndTime, ObjFirstSeenTime, ObjName, ObjProvisionData, ObjStartTime, ObjTimestamp, ObjUseCount.
 
             **Inputs**
@@ -871,13 +861,10 @@ class DeviceObjectBroker(Broker):
              :rtype device_objects: Array of DeviceObject
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The collector NetMRI that collected this data record.
 
             **Inputs**
@@ -901,13 +888,10 @@ class DeviceObjectBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def device_cfg_context(self, **kwargs):
-    
         """The configuration context to which this network object belongs.
 
             **Inputs**
@@ -931,13 +915,10 @@ class DeviceObjectBroker(Broker):
              :rtype : DeviceCfgContext
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device_cfg_context"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device from which this data was collected.
 
             **Inputs**
@@ -961,13 +942,10 @@ class DeviceObjectBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    
-    
+
     def to_detail(self, **kwargs):
-    
         """Returns the deail for an object.
 
             **Inputs**
@@ -999,7 +977,5 @@ class DeviceObjectBroker(Broker):
              :rtype detail: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("to_detail"), kwargs)
-        
-    

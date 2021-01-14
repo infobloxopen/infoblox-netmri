@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class VirtualNetworkBroker(Broker):
     controller = "virtual_networks"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available virtual networks. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -93,13 +92,10 @@ class VirtualNetworkBroker(Broker):
              :rtype virtual_networks: Array of VirtualNetwork
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified virtual network.
 
             **Inputs**
@@ -123,13 +119,10 @@ class VirtualNetworkBroker(Broker):
              :rtype virtual_network: VirtualNetwork
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available virtual networks matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -257,13 +250,10 @@ class VirtualNetworkBroker(Broker):
              :rtype virtual_networks: Array of VirtualNetwork
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available virtual networks matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: VirtualNetworkDeleteInd, VirtualNetworkDescription, VirtualNetworkID, VirtualNetworkName.
 
             **Inputs**
@@ -447,13 +437,10 @@ class VirtualNetworkBroker(Broker):
              :rtype virtual_networks: Array of VirtualNetwork
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing virtual network.
 
             **Inputs**
@@ -525,13 +512,10 @@ class VirtualNetworkBroker(Broker):
              :rtype virtual_network: VirtualNetwork
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def import_file(self, **kwargs):
-    
         """Imports a list of networks from a file
 
             **Inputs**
@@ -547,13 +531,10 @@ class VirtualNetworkBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("import_file"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Create Virtual Network
 
             **Inputs**
@@ -563,7 +544,7 @@ class VirtualNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param VirtualNetworkID: The ID for Virtual Network, must be unique, use only for collector/oc 
+             :param VirtualNetworkID: The ID for Virtual Network, must be unique, use only for collector/oc
              :type VirtualNetworkID: String
 
             |  ``api version min:`` None
@@ -593,13 +574,10 @@ class VirtualNetworkBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def create_batch(self, **kwargs):
-    
         """Create multiple Virtual Networks from batch at once
 
             **Inputs**
@@ -631,13 +609,10 @@ class VirtualNetworkBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create_batch"), kwargs)
-        
-    
-    
+
     def update_assign_unassign(self, **kwargs):
-    
         """Update Virtual Network
 
             **Inputs**
@@ -677,13 +652,10 @@ class VirtualNetworkBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_assign_unassign"), kwargs)
-        
-    
-    
+
     def delete(self, **kwargs):
-    
         """Delete Virtual Network
 
             **Inputs**
@@ -699,13 +671,10 @@ class VirtualNetworkBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("delete"), kwargs)
-        
-    
-    
+
     def assign_sdn_networks(self, **kwargs):
-    
         """Assign sdn network to a virtual network.
 
             **Inputs**
@@ -745,13 +714,10 @@ class VirtualNetworkBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("assign_sdn_networks"), kwargs)
-        
-    
-    
+
     def unassign_sdn_networks(self, **kwargs):
-    
         """Unassign sdn networks from a virtual network.
 
             **Inputs**
@@ -791,13 +757,10 @@ class VirtualNetworkBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("unassign_sdn_networks"), kwargs)
-        
-    
-    
+
     def assign_members(self, **kwargs):
-    
         """Assign virtual network members to a virtual network.
 
             **Inputs**
@@ -837,13 +800,10 @@ class VirtualNetworkBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("assign_members"), kwargs)
-        
-    
-    
+
     def unassign_members(self, **kwargs):
-    
         """Unassign virtual network members from a virtual network.
 
             **Inputs**
@@ -883,7 +843,5 @@ class VirtualNetworkBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("unassign_members"), kwargs)
-        
-    

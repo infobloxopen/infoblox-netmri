@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class GuiStateBroker(Broker):
     controller = "gui_states"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified gui state.
 
             **Inputs**
@@ -29,13 +28,10 @@ class GuiStateBroker(Broker):
              :rtype gui_state: GuiState
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available gui states. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -115,13 +111,10 @@ class GuiStateBroker(Broker):
              :rtype gui_states: Array of GuiState
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available gui states matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: auth_user_id, created_at, default, desc, id, object_name, object_state, shared, updated_at, view_name.
 
             **Inputs**
@@ -441,13 +434,10 @@ class GuiStateBroker(Broker):
              :rtype gui_states: Array of GuiState
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def default(self, **kwargs):
-    
         """Get default view
 
             **Inputs**
@@ -463,13 +453,10 @@ class GuiStateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("default"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Create view
 
             **Inputs**
@@ -525,13 +512,10 @@ class GuiStateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Update existing view
 
             **Inputs**
@@ -587,13 +571,10 @@ class GuiStateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def delete(self, **kwargs):
-    
         """Delete gui state
 
             **Inputs**
@@ -609,7 +590,5 @@ class GuiStateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("delete"), kwargs)
-        
-    

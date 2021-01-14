@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class SensorDatumBroker(Broker):
     controller = "sensor_data"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available sensor data. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -109,13 +108,10 @@ class SensorDatumBroker(Broker):
              :rtype sensor_data: Array of SensorDatum
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available sensor data matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -395,13 +391,10 @@ class SensorDatumBroker(Broker):
              :rtype sensor_data: Array of SensorDatum
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available sensor data matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: category, data_source_id, details, first_seen, id, label, name, name_index, status, units, updated_at, value.
 
             **Inputs**
@@ -769,13 +762,10 @@ class SensorDatumBroker(Broker):
              :rtype sensor_data: Array of SensorDatum
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified sensor datum.
 
             **Inputs**
@@ -799,13 +789,10 @@ class SensorDatumBroker(Broker):
              :rtype sensor_datum: SensorDatum
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def failures(self, **kwargs):
-    
         """List of sensor data which indicates an error condition.
 
             **Inputs**
@@ -821,13 +808,10 @@ class SensorDatumBroker(Broker):
              :rtype sensor_data: Array of SensorDatum
 
             """
-        
+
         return self.api_request(self._get_method_fullname("failures"), kwargs)
-        
-    
-    
+
     def raid(self, **kwargs):
-    
         """Summary of the status of the RAID as a whole.
 
             **Inputs**
@@ -851,13 +835,10 @@ class SensorDatumBroker(Broker):
              :rtype detail: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("raid"), kwargs)
-        
-    
-    
+
     def fan(self, **kwargs):
-    
         """Status for individual fans.
 
             **Inputs**
@@ -873,13 +854,10 @@ class SensorDatumBroker(Broker):
              :rtype statuses: Array of String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("fan"), kwargs)
-        
-    
-    
+
     def power_supply(self, **kwargs):
-    
         """Status for the power supplies
 
             **Inputs**
@@ -895,7 +873,5 @@ class SensorDatumBroker(Broker):
              :rtype statuses: Array of String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("power_supply"), kwargs)
-        
-    

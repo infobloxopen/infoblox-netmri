@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class JobBroker(Broker):
     controller = "jobs"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available jobs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -141,13 +140,10 @@ class JobBroker(Broker):
              :rtype jobs: Array of Job
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified job.
 
             **Inputs**
@@ -187,13 +183,10 @@ class JobBroker(Broker):
              :rtype job: Job
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def script(self, **kwargs):
-    
         """Downloads the script that ran on each device in a job.
 
             **Inputs**
@@ -217,13 +210,10 @@ class JobBroker(Broker):
              :rtype script: String
 
             """
-        
+
         return self.api_mixed_request(self._get_method_fullname("script"), kwargs)
-        
-    
-    
+
     def issues(self, **kwargs):
-    
         """List any issues associated with the specified job.
 
             **Inputs**
@@ -263,13 +253,10 @@ class JobBroker(Broker):
              :rtype issue_details: Array of IssueDetail
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("issues"), kwargs)
-        
-    
-    
+
     def job_files(self, **kwargs):
-    
         """Lists/downloads common files for a job. If no filename is given, a list of files for the job will be returned. If a filename is passed, and it exists, it will be downloaded as type "application/octet-stream".
 
             **Inputs**
@@ -301,7 +288,5 @@ class JobBroker(Broker):
              :rtype filenames: Array of String
 
             """
-        
+
         return self.api_mixed_request(self._get_method_fullname("job_files"), kwargs)
-        
-    

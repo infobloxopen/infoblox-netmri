@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class ReportJobRunBroker(Broker):
     controller = "report_job_runs"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available report job runs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -93,13 +92,10 @@ class ReportJobRunBroker(Broker):
              :rtype report_job_runs: Array of ReportJobRun
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified report job run from NetMRI.
 
             **Inputs**
@@ -115,13 +111,10 @@ class ReportJobRunBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available report job runs matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -449,13 +442,10 @@ class ReportJobRunBroker(Broker):
              :rtype report_job_runs: Array of ReportJobRun
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def cancel(self, **kwargs):
-    
         """Cancels running or pending reports.
 
             **Inputs**
@@ -471,13 +461,10 @@ class ReportJobRunBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cancel"), kwargs)
-        
-    
-    
+
     def run_in_background(self, **kwargs):
-    
         """Run reports in background.
 
             **Inputs**
@@ -493,13 +480,10 @@ class ReportJobRunBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("run_in_background"), kwargs)
-        
-    
-    
+
     def delete(self, **kwargs):
-    
         """Deletes reports that have been canceled or completed.
 
             **Inputs**
@@ -515,13 +499,10 @@ class ReportJobRunBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("delete"), kwargs)
-        
-    
-    
+
     def run_next(self, **kwargs):
-    
         """Increases a report jobs priority to the highest pending job
 
             **Inputs**
@@ -537,13 +518,10 @@ class ReportJobRunBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("run_next"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows ReportJob details
 
             **Inputs**
@@ -575,7 +553,5 @@ class ReportJobRunBroker(Broker):
              :rtype queue_size: Integer
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("show"), kwargs)
-        
-    

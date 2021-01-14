@@ -1,36 +1,35 @@
 from ..remote import RemoteModel
-from infoblox_netmri.utils.utils import check_api_availability
 
 
 class TaeIssuesAndApprovalsGridRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``Time:`` none
     |  ``attribute type:`` string
-    
+
     |  ``Type:`` none
     |  ``attribute type:`` string
-    
+
     |  ``Severity:`` none
     |  ``attribute type:`` string
-    
+
     |  ``SeverityID:`` none
     |  ``attribute type:`` string
-    
+
     |  ``Name:`` none
     |  ``attribute type:`` string
-    
+
     |  ``DeviceNumber:`` none
     |  ``attribute type:`` string
-    
+
     |  ``Action:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -42,13 +41,3 @@ class TaeIssuesAndApprovalsGridRemote(RemoteModel):
                   "DeviceNumber",
                   "Action",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    

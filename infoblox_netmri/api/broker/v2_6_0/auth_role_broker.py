@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class AuthRoleBroker(Broker):
     controller = "auth_roles"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available auth roles. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -93,13 +92,10 @@ class AuthRoleBroker(Broker):
              :rtype auth_roles: Array of AuthRole
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified auth role.
 
             **Inputs**
@@ -123,13 +119,10 @@ class AuthRoleBroker(Broker):
              :rtype auth_role: AuthRole
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available auth roles matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -313,13 +306,10 @@ class AuthRoleBroker(Broker):
              :rtype auth_roles: Array of AuthRole
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available auth roles matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: created_at, description, id, is_system, role_name, updated_at.
 
             **Inputs**
@@ -543,13 +533,10 @@ class AuthRoleBroker(Broker):
              :rtype auth_roles: Array of AuthRole
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new auth role.
 
             **Inputs**
@@ -605,13 +592,10 @@ class AuthRoleBroker(Broker):
              :rtype auth_role: AuthRole
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing auth role.
 
             **Inputs**
@@ -675,13 +659,10 @@ class AuthRoleBroker(Broker):
              :rtype auth_role: AuthRole
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified auth role from NetMRI.
 
             **Inputs**
@@ -697,13 +678,10 @@ class AuthRoleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def auth_privileges(self, **kwargs):
-    
         """Shows the associated AuthPrivilege objects for the specified auth role.
 
             **Inputs**
@@ -727,13 +705,10 @@ class AuthRoleBroker(Broker):
              :rtype auth_privileges: Array of AuthPrivilege
 
             """
-        
+
         return self.api_request(self._get_method_fullname("auth_privileges"), kwargs)
-        
-    
-    
+
     def add_auth_privileges(self, **kwargs):
-    
         """Associates the AuthPrivilege object with the specified auth role.
 
             **Inputs**
@@ -773,13 +748,10 @@ class AuthRoleBroker(Broker):
              :rtype auth_privilege: AuthPrivilege
 
             """
-        
+
         return self.api_request(self._get_method_fullname("add_auth_privileges"), kwargs)
-        
-    
-    
+
     def remove_auth_privileges(self, **kwargs):
-    
         """Associates the AuthPrivilege object with the specified auth role.
 
             **Inputs**
@@ -819,7 +791,5 @@ class AuthRoleBroker(Broker):
              :rtype auth_privilege: AuthPrivilege
 
             """
-        
+
         return self.api_request(self._get_method_fullname("remove_auth_privileges"), kwargs)
-        
-    

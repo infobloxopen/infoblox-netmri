@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class PolicyRuleBroker(Broker):
     controller = "policy_rules"
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new policy rule.
 
             **Inputs**
@@ -117,13 +116,10 @@ class PolicyRuleBroker(Broker):
              :rtype policy_rule: PolicyRule
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing policy rule.
 
             **Inputs**
@@ -235,13 +231,10 @@ class PolicyRuleBroker(Broker):
              :rtype policy_rule: PolicyRule
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available policy rules matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -537,13 +530,10 @@ class PolicyRuleBroker(Broker):
              :rtype policy_rules: Array of PolicyRule
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available policy rules. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -663,13 +653,10 @@ class PolicyRuleBroker(Broker):
              :rtype policy_rules: Array of PolicyRule
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified policy rule.
 
             **Inputs**
@@ -693,13 +680,10 @@ class PolicyRuleBroker(Broker):
              :rtype policy_rule: PolicyRule
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available policy rules matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: action_after_exec, author, created_at, description, id, name, read_only, remediation, rule_logic, set_filter, severity, short_name, updated_at.
 
             **Inputs**
@@ -1091,13 +1075,10 @@ class PolicyRuleBroker(Broker):
              :rtype policy_rules: Array of PolicyRule
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified policy rule from NetMRI.
 
             **Inputs**
@@ -1121,13 +1102,10 @@ class PolicyRuleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def validate(self, **kwargs):
-    
         """Validates the rule XML syntax and against the XML Schema.
 
             **Inputs**
@@ -1159,13 +1137,10 @@ class PolicyRuleBroker(Broker):
              :rtype rule_logic: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("validate"), kwargs)
-        
-    
-    
+
     def test(self, **kwargs):
-    
         """Tests the specified policy against a specified device, configuration revision, and/or attributes. This will be a test only; no associated issue will be generated, no triggered jobs will be executed, and the results will not be stored. The results will only be returned to the caller, and will not appear in the user interface.
 
             **Inputs**
@@ -1199,9 +1174,9 @@ class PolicyRuleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param attribute_fields: Each device attribute field variable to be matched should be included as a separate input, 
-                  starting the input name with $ (no actual input named attribute_fields is needed). For example, 
-                  you can set the variable "foo" to "bar" by passing "$foo" as the input name, along with the 
+             :param attribute_fields: Each device attribute field variable to be matched should be included as a separate input,
+                  starting the input name with $ (no actual input named attribute_fields is needed). For example,
+                  you can set the variable "foo" to "bar" by passing "$foo" as the input name, along with the
                   value "bar".
              :type attribute_fields: String
 
@@ -1264,13 +1239,10 @@ class PolicyRuleBroker(Broker):
              :rtype rule_logic_debug: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("test"), kwargs)
-        
-    
-    
+
     def download_schema(self, **kwargs):
-    
         """Retrieves a copy of the XML Schema.
 
             **Inputs**
@@ -1286,7 +1258,5 @@ class PolicyRuleBroker(Broker):
              :rtype xml_schema: String
 
             """
-        
+
         return self.api_mixed_request(self._get_method_fullname("download_schema"), kwargs)
-        
-    

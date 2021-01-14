@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class IfVlanBroker(Broker):
     controller = "if_vlans"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified if vlan.
 
             **Inputs**
@@ -45,13 +44,10 @@ class IfVlanBroker(Broker):
              :rtype if_vlan: IfVlan
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available if vlans. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -219,13 +215,10 @@ class IfVlanBroker(Broker):
              :rtype if_vlans: Array of IfVlan
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available if vlans matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -585,13 +578,10 @@ class IfVlanBroker(Broker):
              :rtype if_vlans: Array of IfVlan
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available if vlans matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceID, DeviceID, IfVlanID, InterfaceID, StpPortDesignatedBridge, StpPortState, VlanExtensionInd, VlanID, VlanInterfaceInd, VlanMemberID, ifVlanChangedCols, ifVlanEndTime, ifVlanSource, ifVlanStartTime, ifVlanTimestamp.
 
             **Inputs**
@@ -1063,13 +1053,10 @@ class IfVlanBroker(Broker):
              :rtype if_vlans: Array of IfVlan
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The NetMRI device that collected this record.
 
             **Inputs**
@@ -1093,13 +1080,10 @@ class IfVlanBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def interface(self, **kwargs):
-    
         """The interface participating in the VLAN.
 
             **Inputs**
@@ -1123,13 +1107,10 @@ class IfVlanBroker(Broker):
              :rtype : Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("interface"), kwargs)
-        
-    
-    
+
     def vlan(self, **kwargs):
-    
         """The VLAN to which this interface VLAN membership belongs.
 
             **Inputs**
@@ -1153,13 +1134,10 @@ class IfVlanBroker(Broker):
              :rtype : Vlan
 
             """
-        
+
         return self.api_request(self._get_method_fullname("vlan"), kwargs)
-        
-    
-    
+
     def vlan_member(self, **kwargs):
-    
         """The VLAN membership record of the device to which the interface belongs, for this VLAN.
 
             **Inputs**
@@ -1183,13 +1161,10 @@ class IfVlanBroker(Broker):
              :rtype : VlanMember
 
             """
-        
+
         return self.api_request(self._get_method_fullname("vlan_member"), kwargs)
-        
-    
-    
+
     def infradevice(self, **kwargs):
-    
         """The device to which the interface belongs.
 
             **Inputs**
@@ -1213,13 +1188,10 @@ class IfVlanBroker(Broker):
              :rtype : InfraDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("infradevice"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device to which the interface belongs.
 
             **Inputs**
@@ -1243,7 +1215,5 @@ class IfVlanBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    

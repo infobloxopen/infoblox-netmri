@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class ConfigTemplateBroker(Broker):
     controller = "config_templates"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available config templates. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -117,13 +116,10 @@ class ConfigTemplateBroker(Broker):
              :rtype config_templates: Array of ConfigTemplate
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available config templates matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -427,13 +423,10 @@ class ConfigTemplateBroker(Broker):
              :rtype config_templates: Array of ConfigTemplate
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available config templates matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: created_at, created_by, description, device_type, id, model, name, risk_level, template_type, updated_at, updated_by, vendor, version.
 
             **Inputs**
@@ -833,13 +826,10 @@ class ConfigTemplateBroker(Broker):
              :rtype config_templates: Array of ConfigTemplate
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """This method will return the specified configuration template
 
             **Inputs**
@@ -855,13 +845,10 @@ class ConfigTemplateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified config template from NetMRI.
 
             **Inputs**
@@ -877,13 +864,10 @@ class ConfigTemplateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new config template.
 
             **Inputs**
@@ -1035,13 +1019,10 @@ class ConfigTemplateBroker(Broker):
              :rtype config_template: ConfigTemplate
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing config template.
 
             **Inputs**
@@ -1185,13 +1166,10 @@ class ConfigTemplateBroker(Broker):
              :rtype config_template: ConfigTemplate
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def export_file(self, **kwargs):
-    
         """Export a Config Template from the server.
 
             **Inputs**
@@ -1215,13 +1193,10 @@ class ConfigTemplateBroker(Broker):
              :rtype content: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("export_file"), kwargs)
-        
-    
-    
+
     def import_file(self, **kwargs):
-    
         """Import a Config Template into the server.
 
             **Inputs**
@@ -1245,13 +1220,10 @@ class ConfigTemplateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("import_file"), kwargs)
-        
-    
-    
+
     def duplicate(self, **kwargs):
-    
         """This method will make a copy of the specified configuration template
 
             **Inputs**
@@ -1275,13 +1247,10 @@ class ConfigTemplateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("duplicate"), kwargs)
-        
-    
-    
+
     def populate_template(self, **kwargs):
-    
         """This method populates a new configuration template with information from the selected configuration revision of a device
 
             **Inputs**
@@ -1305,13 +1274,10 @@ class ConfigTemplateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("populate_template"), kwargs)
-        
-    
-    
+
     def export(self, **kwargs):
-    
         """This method exports a configuration template
 
             **Inputs**
@@ -1327,12 +1293,10 @@ class ConfigTemplateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("export"), kwargs)
-        
-    
+
     def import_data(self, **kwargs):
-    
         """This method imports a configuration template
 
             **Inputs**
@@ -1356,13 +1320,10 @@ class ConfigTemplateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("import"), kwargs)
-        
-    
-    
+
     def run(self, **kwargs):
-    
         """Run a config template immediately with specified input.
 
             **Inputs**
@@ -1442,13 +1403,10 @@ class ConfigTemplateBroker(Broker):
              :rtype JobID: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("run"), kwargs)
-        
-    
-    
+
     def variables(self, **kwargs):
-    
         """List the variables for the specified config template (tailored for input forms)
 
             **Inputs**
@@ -1464,7 +1422,5 @@ class ConfigTemplateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("variables"), kwargs)
-        
-    

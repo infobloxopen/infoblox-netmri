@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class SwitchPortMgmtBroker(Broker):
     controller = "switch_port_mgmt"
-    
-    
+
     def start_poll(self, **kwargs):
-    
         """Start Switch Port Management polling
 
             **Inputs**
@@ -37,7 +36,5 @@ class SwitchPortMgmtBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("start_poll"), kwargs)
-        
-    

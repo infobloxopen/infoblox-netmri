@@ -25,6 +25,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 from infoblox_netmri.utils.utils import locate, to_underscore_notation, to_snake
 
+
 class InfobloxNetMRI(object):
     def __init__(self, host, username, password, api_version="auto",
                  use_ssl=True, ssl_verify=False, http_pool_connections=5,
@@ -131,7 +132,7 @@ class InfobloxNetMRI(object):
 
         res = self.session.request(method, url, headers=headers, data=data, stream=True)
         content_type = res.headers.get('content-type')
-                    
+
         if 400 <= res.status_code < 600:
             if 'application/json' in content_type:
                 raise HTTPError(res.json(), response=res)
@@ -141,18 +142,18 @@ class InfobloxNetMRI(object):
         content = b''
         for chunk in res.iter_content():
             content += chunk
-                
+
         if res.headers.get('Content-Encoding') == 'gzip':
             content_copy = content
             try:
                 with gzip.GzipFile(fileobj=io.BytesIO(content)) as gz:
                     content = gz.read()
-            except:
+            except (ValueError, Exception):
                 content = content_copy
 
         try:
             content = content.decode()
-        except:
+        except (UnicodeDecodeError, Exception):
             pass
 
         if 'application/json' in content_type:
@@ -180,50 +181,50 @@ class InfobloxNetMRI(object):
         res = self.session.request(method, url, headers=headers, data=data, stream=True)
         if 400 <= res.status_code < 600:
             raise HTTPError(res.content, response=res)
-        
+
         content_type = res.headers.get('content-type')
         if content_type is not None:
-           if 'application/json' in content_type:
-               return res.json()
-           else:
-               try:
-                   content_disposition = res.headers['content-disposition']
-               except KeyError:
-                   raise HTTPError("Unknown Content-Disposition", response=res)
-               except:
-                   raise HTTPError(res.content, response=res)
+            if 'application/json' in content_type:
+                return res.json()
+            else:
+                try:
+                    content_disposition = res.headers['content-disposition']
+                except KeyError:
+                    raise HTTPError("Unknown Content-Disposition", response=res)
+                except (HTTPError, Exception):
+                    raise HTTPError(res.content, response=res)
 
-               m = re.search("filename=\"(.+)\"", content_disposition)
-               filename = m.group(1)
-               
-               result = self._download_file(content_type, filename, res)
-               return result
+                m = re.search("filename=\"(.+)\"", content_disposition)
+                filename = m.group(1)
+
+                result = self._download_file(content_type, filename, res)
+                return result
         else:
             raise HTTPError("Unknown Content-Type!", response=res)
 
-    def _download_file(self, content_type, filename, response):
+    def _download_file(self, _content_type, filename, response):
         """Downloads a file via HTTP
 
         Args:
-            content_type (str): Type of data in the HTTP response
+            _content_type (str): Type of data in the HTTP response
             filename (str): The name of the file to download
             response (Response): HTTP response object
-  
+
         Returns:
             dict
         """
 
-        CHUNK_SIZE = 1024 * 1000
+        chunk_size = 1024 * 1000
 
         try:
             with open(filename, 'wb') as f:
-                for chunk in response.iter_content(chunk_size = CHUNK_SIZE):
+                for chunk in response.iter_content(chunk_size=chunk_size):
                     f.write(chunk)
         except TypeError:
             with open(filename, 'w') as f:
-                for chunk in response.iter_content(chunk_size = CHUNK_SIZE):
+                for chunk in response.iter_content(chunk_size=chunk_size):
                     f.write(chunk)
-        except:
+        except (IOError, Exception):
             return {'Status': 'FAIL', 'Filename': filename}
 
         return {'Status': 'OK', 'Filename': filename}

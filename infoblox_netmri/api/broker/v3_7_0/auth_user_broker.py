@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class AuthUserBroker(Broker):
     controller = "auth_users"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available auth users. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -93,13 +92,10 @@ class AuthUserBroker(Broker):
              :rtype auth_users: Array of AuthUser
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified auth user.
 
             **Inputs**
@@ -123,13 +119,10 @@ class AuthUserBroker(Broker):
              :rtype auth_user: AuthUser
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available auth users matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -617,13 +610,10 @@ class AuthUserBroker(Broker):
              :rtype auth_users: Array of AuthUser
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available auth users matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: account_disabled, account_disabled_date, account_locked, account_locked_date, auth_service_id, cert, cli_creds_enabled_ind, consecutive_failed_logins, created_at, db_creds_enabled_ind, db_username, email, expiration, first_name, force_local_ind, id, is_system, last_local_authz_ind, last_login, last_name, notes, password_version, secure_version, updated_at, user_name.
 
             **Inputs**
@@ -1303,13 +1293,10 @@ class AuthUserBroker(Broker):
              :rtype auth_users: Array of AuthUser
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new auth user.
 
             **Inputs**
@@ -1349,7 +1336,7 @@ class AuthUserBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param cli_enable_password: No description is available for cli_enable_password.
              :type cli_enable_password: String
@@ -1357,7 +1344,7 @@ class AuthUserBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param cli_password: No description is available for cli_password.
              :type cli_password: String
@@ -1365,7 +1352,7 @@ class AuthUserBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param cli_user_name: No description is available for cli_user_name.
              :type cli_user_name: String
@@ -1469,13 +1456,10 @@ class AuthUserBroker(Broker):
              :rtype auth_user: AuthUser
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing auth user.
 
             **Inputs**
@@ -1659,13 +1643,10 @@ class AuthUserBroker(Broker):
              :rtype auth_user: AuthUser
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def update_own_db_credentials(self, **kwargs):
-    
         """Update database credentials for current user.
 
             **Inputs**
@@ -1737,13 +1718,10 @@ class AuthUserBroker(Broker):
              :rtype auth_user: AuthUser
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_own_db_credentials"), kwargs)
-        
-    
-    
+
     def update_own_cli_credentials(self, **kwargs):
-    
         """Update CLI terminal credentials for current user.
 
             **Inputs**
@@ -1815,13 +1793,10 @@ class AuthUserBroker(Broker):
              :rtype auth_user: AuthUser
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_own_cli_credentials"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified auth user from NetMRI.
 
             **Inputs**
@@ -1837,13 +1812,10 @@ class AuthUserBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def auth_roles(self, **kwargs):
-    
         """Returns the roles associated with the user, and the device groups to which they apply.
 
             **Inputs**
@@ -1867,13 +1839,10 @@ class AuthUserBroker(Broker):
              :rtype auth_roles: Array of AuthRole
 
             """
-        
+
         return self.api_request(self._get_method_fullname("auth_roles"), kwargs)
-        
-    
-    
+
     def add_auth_role(self, **kwargs):
-    
         """Assigns a specified role to a user within a specified list of device groups.
 
             **Inputs**
@@ -1929,13 +1898,10 @@ class AuthUserBroker(Broker):
              :rtype device_group_ids: Array of DeviceGroup
 
             """
-        
+
         return self.api_request(self._get_method_fullname("add_auth_role"), kwargs)
-        
-    
-    
+
     def remove_auth_role(self, **kwargs):
-    
         """Removes a specified role from a user for all device groups for which the current user has 'user_admin' privilege.
 
             **Inputs**
@@ -1975,7 +1941,5 @@ class AuthUserBroker(Broker):
              :rtype auth_role: AuthUser
 
             """
-        
+
         return self.api_request(self._get_method_fullname("remove_auth_role"), kwargs)
-        
-    

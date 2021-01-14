@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class InterfaceViewerAclsGridBroker(Broker):
     controller = "interface_viewer_acls_grids"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available interface viewer acls grids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -125,7 +124,5 @@ class InterfaceViewerAclsGridBroker(Broker):
              :rtype summary: Hash
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    

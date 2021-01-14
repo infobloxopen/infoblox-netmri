@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class InterfaceBroker(Broker):
     controller = "interfaces"
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing interface.
 
             **Inputs**
@@ -53,7 +52,5 @@ class InterfaceBroker(Broker):
              :rtype interface: Interface
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    

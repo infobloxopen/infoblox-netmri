@@ -5,18 +5,18 @@ from infoblox_netmri.easy import NetMRIEasy
 
 
 defaults = {
-    "api_url": api_url,
-    "http_username": http_username,
-    "http_password": http_password,
-    "job_id": job_id,
-    "device_id": device_id,
-    "batch_id": batch_id
+    "api_url": 'api_url',
+    "http_username": 'http_username',
+    "http_password": 'http_password',
+    "job_id": 'job_id',
+    "device_id": 'device_id',
+    "batch_id": 'batch_id'
 }
 
 # Create NetMRI context manager. It will close session after execution
 with NetMRIEasy(**defaults) as easy:
     field_name = "chasis_serial_number"
-    #custom field creation
+    # custom field creation
     broker = easy.client.get_broker('CustomFields')
     broker.create_field(
         model='Device',

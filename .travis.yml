@@ -27,3 +27,14 @@ script:
 
 after_success:
     - codecov -e TOXENV
+
+deploy:
+  provider: pypi
+  username: __token__
+  password:
+      secure: BJ9ofGEhc5Quo1KF+QXnZIqqKtOcjcILLTDDcoU7/qFIgwGS90dM2NvY9Um7X6XPuog97wy1MmNztoCHNKMGXXJ2jJ6KksnYEUdt9zuAvJGcsOkF9HhmcdxaNAvkVZs42qslffIEaFHumRahiC31jdabb2G3nmK27tORgHR1FBqijQ5Ru8U7gX8CIJqtjG3DSu3dyurbzyQJs0lKgdkKFP3CHNW/wa+VIUfZI9VUTMZHEO2vGBsRkDwqQg7zZLFOwb2XglKX+mrzbMWChxO1cU28ziI00qzVx6+NmML5UOFKwqGzbQ7hli5+UBKpxhD2gAfWGPIvyrO4yY0NRAqiDzld4OaAqO/ucc2NtrYkfq9WM17r0xZcInzxIY4DPqN+LFmNK9lV0Y60mLhxhDzngu8MUtenKlOLLngZ8GJetSiZClCgthREd2fMhTnGtiBfE4kmalbN7SGwofpt/kzWy0+LbW9GW1XHI3J9in7kXUkNZs4dqfSkoRKPnDyzVyJjD4L813Qu4AcHACdI2YkmlbLTu5M8Q6uUEQq2DIdpD+R6EPseGoxrznExmNZc3dAvmwptnyZQkBIuivX6pH77ggKraX5ikQmZ78Ondy/B9Cjn3dE7rMhWjlrffrXuCQG7pLNVyVJRKqRnNUHl1GiMzToLvOnVEK2d/G1IkygfQf0=
+  skip_existing: true
+  distributions: sdist bdist_wheel
+  on:
+    tags: true
+    condition: $TOXENV == py36

@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class ConfigListBroker(Broker):
     controller = "config_lists"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available config lists. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -93,13 +92,10 @@ class ConfigListBroker(Broker):
              :rtype config_lists: Array of ConfigList
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified config list.
 
             **Inputs**
@@ -123,13 +119,10 @@ class ConfigListBroker(Broker):
              :rtype config_list: ConfigList
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available config lists matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -313,13 +306,10 @@ class ConfigListBroker(Broker):
              :rtype config_lists: Array of ConfigList
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available config lists matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: auth_user_id, created_at, description, id, name, updated_at.
 
             **Inputs**
@@ -543,13 +533,10 @@ class ConfigListBroker(Broker):
              :rtype config_lists: Array of ConfigList
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """This method will delete selected list.
 
             **Inputs**
@@ -565,13 +552,10 @@ class ConfigListBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def tree(self, **kwargs):
-    
         """Generates a tree representation of lists. Tailored to ExtJS tree requirements.
 
             **Inputs**
@@ -579,13 +563,10 @@ class ConfigListBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("tree"), kwargs)
-        
-    
-    
+
     def rows(self, **kwargs):
-    
         """This method will return all rows which are assigned to specific list.
 
             **Inputs**
@@ -617,13 +598,10 @@ class ConfigListBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("rows"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """This method will create a config list.
 
             **Inputs**
@@ -647,13 +625,10 @@ class ConfigListBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """This method will update selected list.
 
             **Inputs**
@@ -685,13 +660,10 @@ class ConfigListBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def update_rows(self, **kwargs):
-    
         """This method will update all rows which are assigned to selected list.
 
             **Inputs**
@@ -723,13 +695,10 @@ class ConfigListBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_rows"), kwargs)
-        
-    
-    
+
     def delete_rows(self, **kwargs):
-    
         """This method will delete all rows which are assigned to selected list.
 
             **Inputs**
@@ -753,13 +722,10 @@ class ConfigListBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("delete_rows"), kwargs)
-        
-    
-    
+
     def export(self, **kwargs):
-    
         """This method will return xml data for selected list.
 
             **Inputs**
@@ -775,12 +741,10 @@ class ConfigListBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("export"), kwargs)
-        
-    
+
     def import_data(self, **kwargs):
-    
         """This method will create or replace a list with input from a CSV file.
 
             **Inputs**
@@ -804,13 +768,10 @@ class ConfigListBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("import"), kwargs)
-        
-    
-    
+
     def find_column(self, **kwargs):
-    
         """For the given list this method will find the first occurrence (row) of the value key_value in the column key_column.
                  If found, for the row, return the value in the column value_column. If not found, return default.
 
@@ -843,7 +804,7 @@ class ConfigListBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param default_value: Value which will be returned if nothing will found
              :type default_value: String
@@ -859,7 +820,5 @@ class ConfigListBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("find_column"), kwargs)
-        
-    

@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class BasicServicesBroker(Broker):
     controller = "basic_services"
-    
-    
+
     def authenticate(self, **kwargs):
-    
         """Authenticates the user with NetMRI.
 
             **Inputs**
@@ -45,13 +44,10 @@ class BasicServicesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("authenticate"), kwargs)
-        
-    
-    
+
     def base_uri(self, **kwargs):
-    
         """Returns the base URI for the specified version.
 
             **Inputs**
@@ -67,13 +63,10 @@ class BasicServicesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("base_uri"), kwargs)
-        
-    
-    
+
     def server_info(self, **kwargs):
-    
         """Returns basic information regarding this NetMRI server.
 
             **Inputs**
@@ -177,13 +170,10 @@ class BasicServicesBroker(Broker):
              :rtype supported_api_versions: Array of String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("server_info"), kwargs)
-        
-    
-    
+
     def restart(self, **kwargs):
-    
         """Restarts the application.
 
             **Inputs**
@@ -191,7 +181,5 @@ class BasicServicesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("restart"), kwargs)
-        
-    

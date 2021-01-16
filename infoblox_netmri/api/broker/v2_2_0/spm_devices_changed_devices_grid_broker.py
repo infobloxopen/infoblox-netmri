@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class SpmDevicesChangedDevicesGridBroker(Broker):
     controller = "spm_devices_changed_devices_grids"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available spm devices changed devices grids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -117,7 +116,5 @@ class SpmDevicesChangedDevicesGridBroker(Broker):
              :rtype summary: Hash
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    

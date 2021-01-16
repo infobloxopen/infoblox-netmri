@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceSendSupportBundlesBroker(Broker):
     controller = "device_send_support_bundles"
-    
-    
+
     def groups_and_definitions(self, **kwargs):
-    
         """Returns set of Log files groupings and definitions of them
 
             **Inputs**
@@ -29,13 +28,10 @@ class DeviceSendSupportBundlesBroker(Broker):
              :rtype definitions: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("groups_and_definitions"), kwargs)
-        
-    
-    
+
     def support_bundle_statuses(self, **kwargs):
-    
         """Returns set of Support Bundle statuses
 
             **Inputs**
@@ -83,13 +79,10 @@ class DeviceSendSupportBundlesBroker(Broker):
              :rtype updated: DateTime
 
             """
-        
+
         return self.api_request(self._get_method_fullname("support_bundle_statuses"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Initiates a Device Support Bundle Request
 
             **Inputs**
@@ -233,13 +226,10 @@ class DeviceSendSupportBundlesBroker(Broker):
              :rtype id: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def delete_log_file(self, **kwargs):
-    
         """Delete the Support Bundle log file
 
             **Inputs**
@@ -255,13 +245,10 @@ class DeviceSendSupportBundlesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("delete_log_file"), kwargs)
-        
-    
-    
+
     def resend_log_file(self, **kwargs):
-    
         """Resend the Support Bundle log file
 
             **Inputs**
@@ -277,13 +264,10 @@ class DeviceSendSupportBundlesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("resend_log_file"), kwargs)
-        
-    
-    
+
     def download_status_log(self, **kwargs):
-    
         """Download log file associated with the Support Bundle status
 
             **Inputs**
@@ -307,7 +291,5 @@ class DeviceSendSupportBundlesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_mixed_request(self._get_method_fullname("download_status_log"), kwargs)
-        
-    

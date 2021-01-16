@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class SecuritySettingsBroker(Broker):
     controller = "security_settings"
-    
-    
+
     def index(self, **kwargs):
-    
         """Show the settings of HTTP, SSH, SNMP, and contents of HTTPS and IFMAP Client certificates
 
             **Inputs**
@@ -13,13 +12,10 @@ class SecuritySettingsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def update_http(self, **kwargs):
-    
         """Update HTTP settings and restart the service
 
             **Inputs**
@@ -51,13 +47,10 @@ class SecuritySettingsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_http"), kwargs)
-        
-    
-    
+
     def update_ssh(self, **kwargs):
-    
         """Update SSH settings and restart the service
 
             **Inputs**
@@ -113,13 +106,10 @@ class SecuritySettingsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_ssh"), kwargs)
-        
-    
-    
+
     def update_snmp(self, **kwargs):
-    
         """Update SNMP settings and restart the service
 
             **Inputs**
@@ -159,13 +149,10 @@ class SecuritySettingsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_snmp"), kwargs)
-        
-    
-    
+
     def activate_certificate(self, **kwargs):
-    
         """Activate HTTPS or IFMAP client certificate. HTTPS certificate activation restarts HTTPS service
 
             **Inputs**
@@ -189,7 +176,5 @@ class SecuritySettingsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("activate_certificate"), kwargs)
-        
-    

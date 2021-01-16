@@ -1,30 +1,29 @@
 from ..remote import RemoteModel
-from infoblox_netmri.utils.utils import check_api_availability
 
 
 class WorkbookHistoryGridRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``workbook_history_id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``created_at:`` none
     |  ``attribute type:`` string
-    
+
     |  ``user_name:`` none
     |  ``attribute type:`` string
-    
+
     |  ``source:`` none
     |  ``attribute type:`` string
-    
+
     |  ``summary:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -34,11 +33,3 @@ class WorkbookHistoryGridRemote(RemoteModel):
                   "source",
                   "summary",
                   )
-
-    
-    
-    
-    
-    
-    
-    

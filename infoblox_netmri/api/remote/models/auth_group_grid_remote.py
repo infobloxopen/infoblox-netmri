@@ -1,36 +1,35 @@
 from ..remote import RemoteModel
-from infoblox_netmri.utils.utils import check_api_availability
 
 
 class AuthGroupGridRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``auth_service_id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``group_name:`` none
     |  ``attribute type:`` string
-    
+
     |  ``description:`` none
     |  ``attribute type:`` string
-    
+
     |  ``enabled_ind:`` none
     |  ``attribute type:`` string
-    
+
     |  ``status:`` none
     |  ``attribute type:`` string
-    
+
     |  ``roles:`` none
     |  ``attribute type:`` string
-    
+
     |  ``last_login:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -42,13 +41,3 @@ class AuthGroupGridRemote(RemoteModel):
                   "roles",
                   "last_login",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    

@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DiscoveryStatusesBroker(Broker):
     controller = "discovery_statuses"
-    
-    
+
     def static(self, **kwargs):
-    
         """Displays the current discovery statuses
 
             **Inputs**
@@ -53,13 +52,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("static"), kwargs)
-        
-    
-    
+
     def telnet_queue(self, **kwargs):
-    
         """Displays the telnet queue
 
             **Inputs**
@@ -83,13 +79,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("telnet_queue"), kwargs)
-        
-    
-    
+
     def ssh_queue(self, **kwargs):
-    
         """Displays the ssh queue
 
             **Inputs**
@@ -113,13 +106,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("ssh_queue"), kwargs)
-        
-    
-    
+
     def snmp_queue(self, **kwargs):
-    
         """Displays the snmp queue
 
             **Inputs**
@@ -143,13 +133,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("snmp_queue"), kwargs)
-        
-    
-    
+
     def summary(self, **kwargs):
-    
         """Summary data for discovery statuses
 
             **Inputs**
@@ -157,13 +144,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("summary"), kwargs)
-        
-    
-    
+
     def discover_next(self, **kwargs):
-    
         """Set the given device ids to be discovered next
 
             **Inputs**
@@ -179,13 +163,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("discover_next"), kwargs)
-        
-    
-    
+
     def discover_now(self, **kwargs):
-    
         """Set the "DeviceID" of the given device to be discovered now and check the status of previously started discovery process. If the "id" parameter is not set, the method starts a new Discover Now process and returns its id for further tracking the process status. If the "id" parameter is set, the method returns a chunk of log output of the corresponding discovery process. The number of bytes to read is defined by the "read" parameter.
 
             **Inputs**
@@ -249,13 +230,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("discover_now"), kwargs)
-        
-    
-    
+
     def abort_discovery(self, **kwargs):
-    
         """Abort an outstanding discover now session
 
             **Inputs**
@@ -279,13 +257,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("abort_discovery"), kwargs)
-        
-    
-    
+
     def override_licenses(self, **kwargs):
-    
         """Overrides a license for all or some devices
 
             **Inputs**
@@ -325,13 +300,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("override_licenses"), kwargs)
-        
-    
-    
+
     def unmanage(self, **kwargs):
-    
         """Set one or more specified devices to unmanaged
 
             **Inputs**
@@ -355,13 +327,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("unmanage"), kwargs)
-        
-    
-    
+
     def update_snmp(self, **kwargs):
-    
         """Update the SNMP read credential for a device
 
             **Inputs**
@@ -425,13 +394,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_snmp"), kwargs)
-        
-    
-    
+
     def update_cli_credentials(self, **kwargs):
-    
         """Update the CLI credential for a device
 
             **Inputs**
@@ -503,13 +469,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_cli_credentials"), kwargs)
-        
-    
-    
+
     def cli_guesses(self, **kwargs):
-    
         """Displays the status of all devices CLI guesses
 
             **Inputs**
@@ -533,13 +496,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cli_guesses"), kwargs)
-        
-    
-    
+
     def snmp_guesses(self, **kwargs):
-    
         """Displays the status of all devices SNMP guesses
 
             **Inputs**
@@ -563,13 +523,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("snmp_guesses"), kwargs)
-        
-    
-    
+
     def show_opsec_certificate(self, **kwargs):
-    
         """Return OPSEC device certificate
 
             **Inputs**
@@ -585,13 +542,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show_opsec_certificate"), kwargs)
-        
-    
-    
+
     def opsec_guesses(self, **kwargs):
-    
         """Displays the status of all devices OPSEC guesses
 
             **Inputs**
@@ -615,13 +569,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("opsec_guesses"), kwargs)
-        
-    
-    
+
     def status_management(self, **kwargs):
-    
         """Returns a list of discovery statuses of the device with given id
 
             **Inputs**
@@ -637,13 +588,10 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("status_management"), kwargs)
-        
-    
-    
+
     def setup_summary(self, **kwargs):
-    
         """Discovery Wizard setup summary information
 
             **Inputs**
@@ -651,7 +599,5 @@ class DiscoveryStatusesBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("setup_summary"), kwargs)
-        
-    

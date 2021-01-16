@@ -1,51 +1,50 @@
 from ..remote import RemoteModel
-from infoblox_netmri.utils.utils import check_api_availability
 
 
 class ManagementServerSummaryGridRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``DeviceID:`` none
     |  ``attribute type:`` string
-    
+
     |  ``ManagementServerID:`` none
     |  ``attribute type:`` string
-    
+
     |  ``ManagementServerName:`` none
     |  ``attribute type:`` string
-    
+
     |  ``ManagementServerIPDotted:`` none
     |  ``attribute type:`` string
-    
+
     |  ``ManagementServerIPNumeric:`` none
     |  ``attribute type:`` string
-    
+
     |  ``ManagementServerType:`` none
     |  ``attribute type:`` string
-    
+
     |  ``Network:`` none
     |  ``attribute type:`` string
-    
+
     |  ``Collector:`` none
     |  ``attribute type:`` string
-    
+
     |  ``DeviceIPDotted:`` none
     |  ``attribute type:`` string
-    
+
     |  ``DeviceIPNumeric:`` none
     |  ``attribute type:`` string
-    
+
     |  ``DeviceName:`` none
     |  ``attribute type:`` string
-    
+
     |  ``DeviceMAC:`` none
     |  ``attribute type:`` string
-    
+
     |  ``AssetType:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("DeviceID",
@@ -62,18 +61,3 @@ class ManagementServerSummaryGridRemote(RemoteModel):
                   "DeviceMAC",
                   "AssetType",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

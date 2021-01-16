@@ -1,6 +1,7 @@
 from infoblox_netmri.utils.utils import locate, to_snake
 from infoblox_netmri.api.exceptions.netmri_exceptions import NotImplementedException
 
+
 class Broker(object):
     """ Base class for broker instances, provides methods for API requests.
         And return responces wrapped with specific class
@@ -90,7 +91,7 @@ class Broker(object):
             :param data: API responce data
             :return: RemoteModel child class
         """
-        if not data or type(data) != dict:
+        if not data or not isinstance(data, dict):
             return data
 
         class_name = data.get("_class")

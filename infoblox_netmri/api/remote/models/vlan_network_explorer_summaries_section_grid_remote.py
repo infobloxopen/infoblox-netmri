@@ -1,51 +1,50 @@
 from ..remote import RemoteModel
-from infoblox_netmri.utils.utils import check_api_availability
 
 
 class VlanNetworkExplorerSummariesSectionGridRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``VlanID:`` none
     |  ``attribute type:`` string
-    
+
     |  ``DeviceID:`` none
     |  ``attribute type:`` string
-    
+
     |  ``VlanIndex:`` none
     |  ``attribute type:`` string
-    
+
     |  ``VlanName:`` none
     |  ``attribute type:`` string
-    
+
     |  ``VirtualNetworkID:`` none
     |  ``attribute type:`` string
-    
+
     |  ``Network:`` none
     |  ``attribute type:`` string
-    
+
     |  ``RootBridgeDeviceName:`` none
     |  ``attribute type:`` string
-    
+
     |  ``VlanCount:`` none
     |  ``attribute type:`` string
-    
+
     |  ``RootVlanMemberID:`` none
     |  ``attribute type:`` string
-    
+
     |  ``RootBridgeDeviceID:`` none
     |  ``attribute type:`` string
-    
+
     |  ``RootBridgeDeviceIPDotted:`` none
     |  ``attribute type:`` string
-    
+
     |  ``RootBridgeDeviceIPNumeric:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -62,18 +61,3 @@ class VlanNetworkExplorerSummariesSectionGridRemote(RemoteModel):
                   "RootBridgeDeviceIPDotted",
                   "RootBridgeDeviceIPNumeric",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

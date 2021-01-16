@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class CredentialsBroker(Broker):
     controller = "credentials"
-    
-    
+
     def snmp_test(self, **kwargs):
-    
         """Executes SNMP Test and returns results
 
             **Inputs**
@@ -151,13 +150,10 @@ class CredentialsBroker(Broker):
              :rtype status: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("snmp_test"), kwargs)
-        
-    
-    
+
     def cli_test(self, **kwargs):
-    
         """Executes a cli credential test against a supplied device
 
             **Inputs**
@@ -311,13 +307,10 @@ class CredentialsBroker(Broker):
              :rtype status: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cli_test"), kwargs)
-        
-    
-    
+
     def import_file(self, **kwargs):
-    
         """Imports credentials from a file
 
             **Inputs**
@@ -357,7 +350,5 @@ class CredentialsBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("import_file"), kwargs)
-        
-    

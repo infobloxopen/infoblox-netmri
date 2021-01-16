@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class CollectionScheduleBroker(Broker):
     controller = "collection_schedules"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available collection schedules. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -93,13 +92,10 @@ class CollectionScheduleBroker(Broker):
              :rtype collection_schedules: Array of CollectionSchedule
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified collection schedule from NetMRI.
 
             **Inputs**
@@ -115,13 +111,10 @@ class CollectionScheduleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates a device group specific polling schedule.
 
             **Inputs**
@@ -153,13 +146,10 @@ class CollectionScheduleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates device group specific polling schedule.
 
             **Inputs**
@@ -199,13 +189,10 @@ class CollectionScheduleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def spm_schedules(self, **kwargs):
-    
         """Lists the Switch Port Management polling schedule entries for a device group.
 
             **Inputs**
@@ -221,7 +208,5 @@ class CollectionScheduleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("spm_schedules"), kwargs)
-        
-    

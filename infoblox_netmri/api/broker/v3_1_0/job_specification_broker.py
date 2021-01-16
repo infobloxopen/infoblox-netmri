@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class JobSpecificationBroker(Broker):
     controller = "job_specifications"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available job specifications. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -141,13 +140,10 @@ class JobSpecificationBroker(Broker):
              :rtype job_specifications: Array of JobSpecification
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified job specification.
 
             **Inputs**
@@ -187,13 +183,10 @@ class JobSpecificationBroker(Broker):
              :rtype job_specification: JobSpecification
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available job specifications matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -665,13 +658,10 @@ class JobSpecificationBroker(Broker):
              :rtype job_specifications: Array of JobSpecification
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available job specifications matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: approval_note, approved_by, approved_by_name, approved_timestamp, category, config_template_id, created_at, created_by, deployable_ind, description, id, job_type, last_run, name, provision_data, push_mode, revertable_ind, schedule, script, script_id, transactional_ind, unapproved_notification_trigger, updated_at.
 
             **Inputs**
@@ -1319,13 +1309,10 @@ class JobSpecificationBroker(Broker):
              :rtype job_specifications: Array of JobSpecification
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified job specification from NetMRI.
 
             **Inputs**
@@ -1341,13 +1328,10 @@ class JobSpecificationBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new job specification.
 
             **Inputs**
@@ -1483,13 +1467,10 @@ class JobSpecificationBroker(Broker):
              :rtype job_specification: JobSpecification
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing job specification.
 
             **Inputs**
@@ -1657,13 +1638,10 @@ class JobSpecificationBroker(Broker):
              :rtype job_specification: JobSpecification
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def run(self, **kwargs):
-    
         """Runs the specified job specification immediately.
 
             **Inputs**
@@ -1695,13 +1673,10 @@ class JobSpecificationBroker(Broker):
              :rtype id: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("run"), kwargs)
-        
-    
-    
+
     def approve(self, **kwargs):
-    
         """Approves the specified job specification immediately.
 
             **Inputs**
@@ -1725,13 +1700,10 @@ class JobSpecificationBroker(Broker):
              :rtype job_specification: JobSpecification
 
             """
-        
+
         return self.api_request(self._get_method_fullname("approve"), kwargs)
-        
-    
-    
+
     def unapprove(self, **kwargs):
-    
         """Unapproves the specified job specification.
 
             **Inputs**
@@ -1755,13 +1727,10 @@ class JobSpecificationBroker(Broker):
              :rtype job_specification: JobSpecification
 
             """
-        
+
         return self.api_request(self._get_method_fullname("unapprove"), kwargs)
-        
-    
-    
+
     def copy_and_run(self, **kwargs):
-    
         """Rerun a script
 
             **Inputs**
@@ -1809,7 +1778,5 @@ class JobSpecificationBroker(Broker):
              :rtype job_id: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("copy_and_run"), kwargs)
-        
-    

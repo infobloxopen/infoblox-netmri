@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class SdnSettingBroker(Broker):
     controller = "sdn_settings"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available sdn settings. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -39,7 +38,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, ca_cert_id, ca_cert_content.
+             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -55,7 +54,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each SdnSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each SdnSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -85,13 +84,10 @@ class SdnSettingBroker(Broker):
              :rtype sdn_settings: Array of SdnSetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available sdn settings matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -143,6 +139,14 @@ class SdnSettingBroker(Broker):
 
              :param ca_cert_id: ID of custom CA certificate.
              :type ca_cert_id: Array of Integer
+
+            |  ``api version min:`` 3.4
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param collect_offline_devices: Collect Devices In Offline Status
+             :type collect_offline_devices: Array of Boolean
 
             |  ``api version min:`` 3.4
             |  ``api version max:`` None
@@ -285,7 +289,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, ca_cert_id, ca_cert_content.
+             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -301,7 +305,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each SdnSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each SdnSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -325,7 +329,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param query: This value will be matched against sdn settings, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: SecureVersion, UnitID, api_key, blackout_duration, ca_cert_content, ca_cert_id, controller_address, created_at, handle, id, max_requests_per_second, on_prem, protocol, scan_interface_id, sdn_password, sdn_type, sdn_username, start_blackout_schedule, updated_at, use_global_proxy, virtual_network_id.
+             :param query: This value will be matched against sdn settings, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: SecureVersion, UnitID, api_key, blackout_duration, ca_cert_content, ca_cert_id, collect_offline_devices, controller_address, created_at, handle, id, max_requests_per_second, on_prem, protocol, scan_interface_id, sdn_password, sdn_type, sdn_username, start_blackout_schedule, updated_at, use_global_proxy, virtual_network_id.
              :type query: String
 
             |  ``api version min:`` 2.3
@@ -347,14 +351,11 @@ class SdnSettingBroker(Broker):
              :rtype sdn_settings: Array of SdnSetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
-        """Lists the available sdn settings matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: SecureVersion, UnitID, api_key, blackout_duration, ca_cert_content, ca_cert_id, controller_address, created_at, handle, id, max_requests_per_second, on_prem, protocol, scan_interface_id, sdn_password, sdn_type, sdn_username, start_blackout_schedule, updated_at, use_global_proxy, virtual_network_id.
+        """Lists the available sdn settings matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: SecureVersion, UnitID, api_key, blackout_duration, ca_cert_content, ca_cert_id, collect_offline_devices, controller_address, created_at, handle, id, max_requests_per_second, on_prem, protocol, scan_interface_id, sdn_password, sdn_type, sdn_username, start_blackout_schedule, updated_at, use_global_proxy, virtual_network_id.
 
             **Inputs**
 
@@ -501,6 +502,30 @@ class SdnSettingBroker(Broker):
 
              :param val_c_ca_cert_id: If op_ca_cert_id is specified, this value will be compared to the value in ca_cert_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ca_cert_id must be specified if op_ca_cert_id is specified.
              :type val_c_ca_cert_id: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param op_collect_offline_devices: The operator to apply to the field collect_offline_devices. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. collect_offline_devices: Collect Devices In Offline Status For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :type op_collect_offline_devices: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_f_collect_offline_devices: If op_collect_offline_devices is specified, the field named in this input will be compared to the value in collect_offline_devices using the specified operator. That is, the value in this input will be treated as another field name, rather than a constant value. Either this field or val_c_collect_offline_devices must be specified if op_collect_offline_devices is specified.
+             :type val_f_collect_offline_devices: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_c_collect_offline_devices: If op_collect_offline_devices is specified, this value will be compared to the value in collect_offline_devices using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_collect_offline_devices must be specified if op_collect_offline_devices is specified.
+             :type val_c_collect_offline_devices: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -883,7 +908,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, ca_cert_id, ca_cert_content.
+             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -899,7 +924,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each SdnSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each SdnSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -937,13 +962,10 @@ class SdnSettingBroker(Broker):
              :rtype sdn_settings: Array of SdnSetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified sdn setting.
 
             **Inputs**
@@ -967,13 +989,10 @@ class SdnSettingBroker(Broker):
              :rtype sdn_setting: SdnSetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new sdn setting.
 
             **Inputs**
@@ -1025,6 +1044,14 @@ class SdnSettingBroker(Broker):
 
              :param ca_cert_id: ID of custom CA certificate.
              :type ca_cert_id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` True
+
+             :param collect_offline_devices: Collect Devices In Offline Status
+             :type collect_offline_devices: Boolean
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -1101,7 +1128,7 @@ class SdnSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param start_blackout_schedule: The blackout start time in cron format.
              :type start_blackout_schedule: String
@@ -1157,13 +1184,10 @@ class SdnSettingBroker(Broker):
              :rtype sdn_setting: SdnSetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing sdn setting.
 
             **Inputs**
@@ -1223,6 +1247,14 @@ class SdnSettingBroker(Broker):
 
              :param ca_cert_id: ID of custom CA certificate. If omitted, this field will not be updated.
              :type ca_cert_id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` True
+
+             :param collect_offline_devices: Collect Devices In Offline Status If omitted, this field will be updated to the default value.
+             :type collect_offline_devices: Boolean
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -1299,7 +1331,7 @@ class SdnSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param start_blackout_schedule: The blackout start time in cron format. If omitted, this field will be updated to the default value.
              :type start_blackout_schedule: String
@@ -1355,13 +1387,10 @@ class SdnSettingBroker(Broker):
              :rtype sdn_setting: SdnSetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified sdn setting from NetMRI.
 
             **Inputs**
@@ -1377,13 +1406,10 @@ class SdnSettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def destroy_many(self, **kwargs):
-    
         """Remove several configurations of SDN Controllers
 
             **Inputs**
@@ -1399,13 +1425,10 @@ class SdnSettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy_many"), kwargs)
-        
-    
-    
+
     def dump_sdn_controllers(self, **kwargs):
-    
         """List all SDN Controllers
 
             **Inputs**
@@ -1461,13 +1484,10 @@ class SdnSettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("dump_sdn_controllers"), kwargs)
-        
-    
-    
+
     def import_controllers(self, **kwargs):
-    
         """Imports a list of discovery settings into the database
 
             **Inputs**
@@ -1491,13 +1511,10 @@ class SdnSettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("import_controllers"), kwargs)
-        
-    
-    
+
     def check_credentials(self, **kwargs):
-    
         """Performs connection to SDN/SDWAN controller, checks credentials and returns results or status id based on async_ind
 
             **Inputs**
@@ -1630,6 +1647,22 @@ class SdnSettingBroker(Broker):
              :param async_ind: When false, the credential check will be run synchronously, and the API call will block until it is complete. When true, credential check id will be returned to use for subsequent calls
              :type async_ind: Boolean
 
+            |  ``api version min:`` 3.6
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:``
+
+             :param start_blackout_schedule: Blackout schedule
+             :type start_blackout_schedule: String
+
+            |  ``api version min:`` 3.6
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` 0
+
+             :param blackout_duration: Blackout duration
+             :type blackout_duration: Integer
+
             **Outputs**
 
             |  ``api version min:`` None
@@ -1649,13 +1682,10 @@ class SdnSettingBroker(Broker):
              :rtype id: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("check_credentials"), kwargs)
-        
-    
-    
+
     def check_credentials_status(self, **kwargs):
-    
         """Status of SDN/SDWAN controller credentials check
 
             **Inputs**
@@ -1703,7 +1733,5 @@ class SdnSettingBroker(Broker):
              :rtype end: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("check_credentials_status"), kwargs)
-        
-    

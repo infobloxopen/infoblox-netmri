@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class ScriptBroker(Broker):
     controller = "scripts"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available scripts. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -109,13 +108,10 @@ class ScriptBroker(Broker):
              :rtype scripts: Array of Script
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified script.
 
             **Inputs**
@@ -139,13 +135,10 @@ class ScriptBroker(Broker):
              :rtype script: Script
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available scripts matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -521,13 +514,10 @@ class ScriptBroker(Broker):
              :rtype scripts: Array of Script
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available scripts matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: category, created_at, created_by, description, id, language, module, name, read_only, risk_level, target_mapping, taskflow_create, taskflow_edit, taskflow_revert, transactional_ind, updated_at, updated_by, visible.
 
             **Inputs**
@@ -1039,13 +1029,10 @@ class ScriptBroker(Broker):
              :rtype scripts: Array of Script
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Create a CCS/Perl/Python script on NetMRI.
 
             **Inputs**
@@ -1077,13 +1064,10 @@ class ScriptBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Update a CCS/Perl/Python script on NetMRI.
 
             **Inputs**
@@ -1123,13 +1107,10 @@ class ScriptBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Delete a CCS script on NetMRI.
 
             **Inputs**
@@ -1145,13 +1126,10 @@ class ScriptBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def run(self, **kwargs):
-    
         """Run a script immediately with specified input. In addition to the listed parameters, optional parameters can be passed. Any parameter name starting with \$ will be passed as Script-Variable to the script.
 
             **Inputs**
@@ -1271,7 +1249,5 @@ class ScriptBroker(Broker):
              :rtype payload: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("run"), kwargs)
-        
-    

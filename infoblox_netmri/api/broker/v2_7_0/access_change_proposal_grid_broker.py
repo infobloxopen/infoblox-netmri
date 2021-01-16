@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class AccessChangeProposalGridBroker(Broker):
     controller = "access_change_proposal_grids"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available access change proposal grids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -109,7 +108,5 @@ class AccessChangeProposalGridBroker(Broker):
              :rtype summary: Hash
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    

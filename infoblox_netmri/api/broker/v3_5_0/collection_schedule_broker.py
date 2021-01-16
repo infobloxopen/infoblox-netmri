@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class CollectionScheduleBroker(Broker):
     controller = "collection_schedules"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available collection schedules. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -93,13 +92,10 @@ class CollectionScheduleBroker(Broker):
              :rtype collection_schedules: Array of CollectionSchedule
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified collection schedule.
 
             **Inputs**
@@ -123,13 +119,10 @@ class CollectionScheduleBroker(Broker):
              :rtype collection_schedule: CollectionSchedule
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available collection schedules matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -297,13 +290,10 @@ class CollectionScheduleBroker(Broker):
              :rtype collection_schedules: Array of CollectionSchedule
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available collection schedules matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: device_group_id, device_id, id, schedule, schedule_type.
 
             **Inputs**
@@ -503,13 +493,10 @@ class CollectionScheduleBroker(Broker):
              :rtype collection_schedules: Array of CollectionSchedule
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified collection schedule from NetMRI.
 
             **Inputs**
@@ -525,13 +512,10 @@ class CollectionScheduleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates a device group specific polling schedule.
 
             **Inputs**
@@ -563,13 +547,10 @@ class CollectionScheduleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates device group specific polling schedule.
 
             **Inputs**
@@ -609,13 +590,10 @@ class CollectionScheduleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def spm_schedules(self, **kwargs):
-    
         """Lists the Switch Port Management polling schedule entries for a device group.
 
             **Inputs**
@@ -631,7 +609,5 @@ class CollectionScheduleBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("spm_schedules"), kwargs)
-        
-    

@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceBroker(Broker):
     controller = "devices"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available devices. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -229,13 +228,10 @@ class DeviceBroker(Broker):
              :rtype devices: Array of Device
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available devices matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -859,13 +855,10 @@ class DeviceBroker(Broker):
              :rtype devices: Array of Device
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available devices matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceID, DeviceAddlInfo, DeviceAssurance, DeviceChangedCols, DeviceDNSName, DeviceEndTime, DeviceFirstOccurrenceTime, DeviceID, DeviceIPDotted, DeviceIPNumeric, DeviceMAC, DeviceModel, DeviceName, DeviceNetBIOSName, DeviceOUI, DeviceStartTime, DeviceSysContact, DeviceSysDescr, DeviceSysLocation, DeviceSysName, DeviceTimestamp, DeviceType, DeviceUniqueKey, DeviceVendor, DeviceVersion, InfraDeviceInd, MgmtServerDeviceID, NetworkDeviceInd, ParentDeviceID, VirtualInd, VirtualNetworkID.
 
             **Inputs**
@@ -2089,13 +2082,10 @@ class DeviceBroker(Broker):
              :rtype devices: Array of Device
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified device.
 
             **Inputs**
@@ -2135,13 +2125,10 @@ class DeviceBroker(Broker):
              :rtype device: Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing device.
 
             **Inputs**
@@ -2189,13 +2176,10 @@ class DeviceBroker(Broker):
              :rtype device: Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def update_custom_field(self, **kwargs):
-    
         """Updates an existing device.
 
             **Inputs**
@@ -2243,13 +2227,10 @@ class DeviceBroker(Broker):
              :rtype device: Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_custom_field"), kwargs)
-        
-    
-    
+
     def running_config_text(self, **kwargs):
-    
         """The contents of the newest saved running config.
 
             **Inputs**
@@ -2273,13 +2254,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("running_config_text"), kwargs)
-        
-    
-    
+
     def saved_config_text(self, **kwargs):
-    
         """The contents of the newest saved startup config.
 
             **Inputs**
@@ -2303,13 +2281,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("saved_config_text"), kwargs)
-        
-    
-    
+
     def DeviceCommunity(self, **kwargs):
-    
         """The community string.
 
             **Inputs**
@@ -2333,13 +2308,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("DeviceCommunity"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The collector NetMRI that collected this data record.
 
             **Inputs**
@@ -2363,13 +2335,10 @@ class DeviceBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def parent_device(self, **kwargs):
-    
         """The device containing this virtual device.
 
             **Inputs**
@@ -2393,13 +2362,10 @@ class DeviceBroker(Broker):
              :rtype : InfraDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("parent_device"), kwargs)
-        
-    
-    
+
     def gateway_device(self, **kwargs):
-    
         """Returns the default gateway router for this device, based on the following in order of preference: device routing table, device configuration file, device subnet and common conventions.
 
             **Inputs**
@@ -2423,13 +2389,10 @@ class DeviceBroker(Broker):
              :rtype : InfraDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("gateway_device"), kwargs)
-        
-    
-    
+
     def running_config(self, **kwargs):
-    
         """Returns the ConfigRevision object corresponding to the device's current running configuration.
 
             **Inputs**
@@ -2453,13 +2416,10 @@ class DeviceBroker(Broker):
              :rtype : ConfigRevision
 
             """
-        
+
         return self.api_request(self._get_method_fullname("running_config"), kwargs)
-        
-    
-    
+
     def saved_config(self, **kwargs):
-    
         """Returns the ConfigRevision object corresponding to the device's current startup configuration.
 
             **Inputs**
@@ -2483,13 +2443,10 @@ class DeviceBroker(Broker):
              :rtype : ConfigRevision
 
             """
-        
+
         return self.api_request(self._get_method_fullname("saved_config"), kwargs)
-        
-    
-    
+
     def device_setting(self, **kwargs):
-    
         """Returns settings for selected device
 
             **Inputs**
@@ -2513,13 +2470,10 @@ class DeviceBroker(Broker):
              :rtype : DeviceSetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device_setting"), kwargs)
-        
-    
-    
+
     def running_config_diff(self, **kwargs):
-    
         """The differences between the current and previous running config.
 
             **Inputs**
@@ -2543,13 +2497,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("running_config_diff"), kwargs)
-        
-    
-    
+
     def saved_config_diff(self, **kwargs):
-    
         """The differences between the current and previous saved config.
 
             **Inputs**
@@ -2573,13 +2524,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("saved_config_diff"), kwargs)
-        
-    
-    
+
     def asset_type(self, **kwargs):
-    
         """The physical/virtual aspect of the device (Virtual Host, Virtual Device, or Physical Device).
 
             **Inputs**
@@ -2603,13 +2551,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("asset_type"), kwargs)
-        
-    
-    
+
     def SwitchingInd(self, **kwargs):
-    
         """A flag indicating if this device act as a switcher
 
             **Inputs**
@@ -2633,13 +2578,10 @@ class DeviceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("SwitchingInd"), kwargs)
-        
-    
-    
+
     def RoutingInd(self, **kwargs):
-    
         """A flag indicating if this device act as a router
 
             **Inputs**
@@ -2663,13 +2605,10 @@ class DeviceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("RoutingInd"), kwargs)
-        
-    
-    
+
     def DeviceSAAVersion(self, **kwargs):
-    
         """the SAA version of this device
 
             **Inputs**
@@ -2693,13 +2632,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("DeviceSAAVersion"), kwargs)
-        
-    
-    
+
     def DeviceRebootTime(self, **kwargs):
-    
         """the reboot time of this device
 
             **Inputs**
@@ -2723,13 +2659,10 @@ class DeviceBroker(Broker):
              :rtype : DateTime
 
             """
-        
+
         return self.api_request(self._get_method_fullname("DeviceRebootTime"), kwargs)
-        
-    
-    
+
     def DeviceCommunitySecure(self, **kwargs):
-    
         """The secured community name
 
             **Inputs**
@@ -2753,13 +2686,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("DeviceCommunitySecure"), kwargs)
-        
-    
-    
+
     def DeviceRank(self, **kwargs):
-    
         """The rank of this device in its virtual brotherhood
 
             **Inputs**
@@ -2783,13 +2713,10 @@ class DeviceBroker(Broker):
              :rtype : Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("DeviceRank"), kwargs)
-        
-    
-    
+
     def DeviceFirstOccurrence(self, **kwargs):
-    
         """The first occurrence of this device
 
             **Inputs**
@@ -2813,13 +2740,10 @@ class DeviceBroker(Broker):
              :rtype : DateTime
 
             """
-        
+
         return self.api_request(self._get_method_fullname("DeviceFirstOccurrence"), kwargs)
-        
-    
-    
+
     def virtual_child_count(self, **kwargs):
-    
         """The number of virtual devices hosted on this device
 
             **Inputs**
@@ -2843,13 +2767,10 @@ class DeviceBroker(Broker):
              :rtype : Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("virtual_child_count"), kwargs)
-        
-    
-    
+
     def data_collection_status(self, **kwargs):
-    
         """All information about collection of data for this device
 
             **Inputs**
@@ -2873,13 +2794,10 @@ class DeviceBroker(Broker):
              :rtype : DataCollectionStatus
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_collection_status"), kwargs)
-        
-    
-    
+
     def DeviceContextName(self, **kwargs):
-    
         """The name of the virtual context of this virtual device.
 
             **Inputs**
@@ -2903,13 +2821,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("DeviceContextName"), kwargs)
-        
-    
-    
+
     def virtual_network(self, **kwargs):
-    
         """A Virtual Network model assigned to the device.
 
             **Inputs**
@@ -2933,13 +2848,10 @@ class DeviceBroker(Broker):
              :rtype : VirtualNetwork
 
             """
-        
+
         return self.api_request(self._get_method_fullname("virtual_network"), kwargs)
-        
-    
-    
+
     def network_name(self, **kwargs):
-    
         """A Network View assigned to the device.
 
             **Inputs**
@@ -2963,13 +2875,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("network_name"), kwargs)
-        
-    
-    
+
     def control_capabilities(self, **kwargs):
-    
         """Configuration capabilities for this interface, related to Port Control.
 
             **Inputs**
@@ -2993,13 +2902,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("control_capabilities"), kwargs)
-        
-    
-    
+
     def cap_description_ind(self, **kwargs):
-    
         """Capability of changing the description of an interface of this device.
 
             **Inputs**
@@ -3023,13 +2929,10 @@ class DeviceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_description_ind"), kwargs)
-        
-    
-    
+
     def cap_admin_status_ind(self, **kwargs):
-    
         """Capability of changing the Admin Status of an interface of this device.
 
             **Inputs**
@@ -3053,13 +2956,10 @@ class DeviceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_admin_status_ind"), kwargs)
-        
-    
-    
+
     def cap_vlan_assignment_ind(self, **kwargs):
-    
         """Capability of assigning a regular data VLAN to an interface of this device.
 
             **Inputs**
@@ -3083,13 +2983,10 @@ class DeviceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_vlan_assignment_ind"), kwargs)
-        
-    
-    
+
     def cap_voice_vlan_ind(self, **kwargs):
-    
         """Capability of assigning a voice VLAN to an interface of this device.
 
             **Inputs**
@@ -3113,13 +3010,10 @@ class DeviceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_voice_vlan_ind"), kwargs)
-        
-    
-    
+
     def cap_net_provisioning_ind(self, **kwargs):
-    
         """Capability of provisioning a network on an interface of this device.
 
             **Inputs**
@@ -3143,13 +3037,10 @@ class DeviceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_net_provisioning_ind"), kwargs)
-        
-    
-    
+
     def cap_net_vlan_provisioning_ind(self, **kwargs):
-    
         """Capability of creating a VLAN and provision a netowrk on its virtual interface.
 
             **Inputs**
@@ -3173,13 +3064,10 @@ class DeviceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_net_vlan_provisioning_ind"), kwargs)
-        
-    
-    
+
     def cap_net_deprovisioning_ind(self, **kwargs):
-    
         """Capability of de-provisioning a network from this device.
 
             **Inputs**
@@ -3203,13 +3091,10 @@ class DeviceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_net_deprovisioning_ind"), kwargs)
-        
-    
-    
+
     def cap_description_na_reason(self, **kwargs):
-    
         """Reason of non ability of changing the description of an interface of this device.
 
             **Inputs**
@@ -3233,13 +3118,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_description_na_reason"), kwargs)
-        
-    
-    
+
     def cap_admin_status_na_reason(self, **kwargs):
-    
         """Reason of non ability of changing the Admin Status of an interface of this device.
 
             **Inputs**
@@ -3263,13 +3145,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_admin_status_na_reason"), kwargs)
-        
-    
-    
+
     def cap_vlan_assignment_na_reason(self, **kwargs):
-    
         """Reason of non ability of assigning a regular data VLAN to an interface of this device.
 
             **Inputs**
@@ -3293,13 +3172,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_vlan_assignment_na_reason"), kwargs)
-        
-    
-    
+
     def cap_voice_vlan_na_reason(self, **kwargs):
-    
         """Reason of non ability of assigning a voice VLAN to an interface of this device.
 
             **Inputs**
@@ -3323,13 +3199,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_voice_vlan_na_reason"), kwargs)
-        
-    
-    
+
     def cap_net_provisioning_na_reason(self, **kwargs):
-    
         """Reason of non ability of provisioning a network on an interface of this device.
 
             **Inputs**
@@ -3353,13 +3226,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_net_provisioning_na_reason"), kwargs)
-        
-    
-    
+
     def cap_net_vlan_provisioning_na_reason(self, **kwargs):
-    
         """Reason of non ability of creating a VLAN and provision a netowrk on its virtual interface.
 
             **Inputs**
@@ -3383,13 +3253,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_net_vlan_provisioning_na_reason"), kwargs)
-        
-    
-    
+
     def cap_net_deprovisioning_na_reason(self, **kwargs):
-    
         """Reason of non ability of de-provisioning a network from this device.
 
             **Inputs**
@@ -3413,13 +3280,10 @@ class DeviceBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("cap_net_deprovisioning_na_reason"), kwargs)
-        
-    
-    
+
     def privileged_polling(self, **kwargs):
-    
         """A flag indicating whether to poll the device in privileged mode.
 
             **Inputs**
@@ -3443,13 +3307,10 @@ class DeviceBroker(Broker):
              :rtype : Boolean
 
             """
-        
+
         return self.api_request(self._get_method_fullname("privileged_polling"), kwargs)
-        
-    
-    
+
     def discover(self, **kwargs):
-    
         """Performs an immediate discovery on an IP address, returning the new or updated Device.
 
             **Inputs**
@@ -3617,16 +3478,14 @@ class DeviceBroker(Broker):
         </br>  8: Unable to determine CLI credentials.
         </br>  9: Unable to collect config file.
         </br> 10: Skipping DiscoverNow for this IP address due to blackout period in effect.
+        </br> 25: Lock-timeout: Gave up waiting for other process to finish.
              :rtype returncode: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("discover"), kwargs)
-        
-    
-    
+
     def count_open_issues(self, **kwargs):
-    
         """Returns a count of Open Issues for a specified device
 
             **Inputs**
@@ -3650,13 +3509,10 @@ class DeviceBroker(Broker):
              :rtype open_issue_counts: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("count_open_issues"), kwargs)
-        
-    
-    
+
     def poll(self, **kwargs):
-    
         """Polls the device, either by SNMP or CLI, depending on the object and the device type, vendor, model, and OS version. The device must be licensed, and within a group with collection enabled.
 
             **Inputs**
@@ -3720,13 +3576,10 @@ class DeviceBroker(Broker):
              :rtype id: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("poll"), kwargs)
-        
-    
-    
+
     def poll_status(self, **kwargs):
-    
         """Poll on Demand Status
 
             **Inputs**
@@ -3758,13 +3611,10 @@ class DeviceBroker(Broker):
              :rtype text: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("poll_status"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified device from NetMRI.
 
             **Inputs**
@@ -3788,13 +3638,10 @@ class DeviceBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def delete(self, **kwargs):
-    
         """Remove many devices, with the option to remove them from discovery
 
             **Inputs**
@@ -3818,13 +3665,10 @@ class DeviceBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("delete"), kwargs)
-        
-    
-    
+
     def scan_port_for_open_dhcp(self, **kwargs):
-    
         """Scans device for open DHCP services by sending a bogus request packet.
 
             **Inputs**
@@ -3848,13 +3692,10 @@ class DeviceBroker(Broker):
              :rtype status: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("scan_port_for_open_dhcp"), kwargs)
-        
-    
-    
+
     def config_diff(self, **kwargs):
-    
         """Compute the difference between two configuration revisions for a specified device.
 
             **Inputs**
@@ -3934,13 +3775,10 @@ class DeviceBroker(Broker):
              :rtype config_diff: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("config_diff"), kwargs)
-        
-    
-    
+
     def build_access_diff_tree(self, **kwargs):
-    
         """prepare a diff-compute for that device, return an array of tree element, prepared for jstree viewer, diff identifier is on the root of each tree
 
             **Inputs**
@@ -3988,13 +3826,10 @@ class DeviceBroker(Broker):
              :rtype elements: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("build_access_diff_tree"), kwargs)
-        
-    
-    
+
     def access_diff_impact_tree(self, **kwargs):
-    
         """ask for impacted elements of a specified element, needs to have an already computed access_diffi, output format as Array of tree
 
             **Inputs**
@@ -4034,13 +3869,10 @@ class DeviceBroker(Broker):
              :rtype impacted: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("access_diff_impact_tree"), kwargs)
-        
-    
-    
+
     def build_access_diff(self, **kwargs):
-    
         """Retrieve existing access diff or build a new one, return the id for status info and result
 
             **Inputs**
@@ -4088,13 +3920,10 @@ class DeviceBroker(Broker):
              :rtype diff_identifier: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("build_access_diff"), kwargs)
-        
-    
-    
+
     def access_diff_building_status(self, **kwargs):
-    
         """Return information about status of current building an access diff
 
             **Inputs**
@@ -4134,13 +3963,10 @@ class DeviceBroker(Broker):
              :rtype step: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("access_diff_building_status"), kwargs)
-        
-    
-    
+
     def access_diff_tree(self, **kwargs):
-    
         """Return an array of tree element, prepared for jstree viewer, diff identifier is on the root of each tree. The diff-computer for that device MUST already exist
 
             **Inputs**
@@ -4172,13 +3998,10 @@ class DeviceBroker(Broker):
              :rtype elements: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("access_diff_tree"), kwargs)
-        
-    
-    
+
     def access_diff_impact(self, **kwargs):
-    
         """ask for impacted elements of a specified element, needs to have an already computed access_diff
 
             **Inputs**
@@ -4226,13 +4049,10 @@ class DeviceBroker(Broker):
              :rtype impacted: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("access_diff_impact"), kwargs)
-        
-    
-    
+
     def port_control_protocol_preference(self, **kwargs):
-    
         """Returns the protocol used for port control operations on the indicated device.
 
             **Inputs**
@@ -4264,13 +4084,10 @@ class DeviceBroker(Broker):
              :rtype port_control_protocol_preference: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("port_control_protocol_preference"), kwargs)
-        
-    
-    
+
     def port_admin_status_change(self, **kwargs):
-    
         """Returns the set of commands used to control interface admin status for the indicated device.
 
             **Inputs**
@@ -4286,13 +4103,10 @@ class DeviceBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("port_admin_status_change"), kwargs)
-        
-    
-    
+
     def port_descr_change(self, **kwargs):
-    
         """Returns the set of commands used to set an interface description for the indicated device.
 
             **Inputs**
@@ -4308,13 +4122,10 @@ class DeviceBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("port_descr_change"), kwargs)
-        
-    
-    
+
     def port_vlan_change(self, **kwargs):
-    
         """Returns the set of commands used to assign it to a VLAN for the indicated device.
 
             **Inputs**
@@ -4330,13 +4141,10 @@ class DeviceBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("port_vlan_change"), kwargs)
-        
-    
-    
+
     def config_save_via_snmp(self, **kwargs):
-    
         """Returns the set of commands used to save a config via SNMP.
 
             **Inputs**
@@ -4352,13 +4160,10 @@ class DeviceBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("config_save_via_snmp"), kwargs)
-        
-    
-    
+
     def update_intfs_admin_status(self, **kwargs):
-    
         """Updates the admin status of one or more interfaces via CLI or SNMP
 
             **Inputs**
@@ -4390,13 +4195,10 @@ class DeviceBroker(Broker):
              :rtype JobID: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_intfs_admin_status"), kwargs)
-        
-    
-    
+
     def update_intfs_description(self, **kwargs):
-    
         """Updates the description(s) of one or more interfaces via CLI or SNMP
 
             **Inputs**
@@ -4428,13 +4230,10 @@ class DeviceBroker(Broker):
              :rtype JobID: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_intfs_description"), kwargs)
-        
-    
-    
+
     def update_intfs_vlan_assignment(self, **kwargs):
-    
         """Updates the VLAN assignment(s) of one or more interfaces via CLI or SNMP
 
             **Inputs**
@@ -4474,13 +4273,10 @@ class DeviceBroker(Broker):
              :rtype JobID: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_intfs_vlan_assignment"), kwargs)
-        
-    
-    
+
     def update_intfs_admin_status_via_snmp(self, **kwargs):
-    
         """Updates the admin status of one or more interfaces via SNMP
 
             **Inputs**
@@ -4512,13 +4308,10 @@ class DeviceBroker(Broker):
              :rtype message: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_intfs_admin_status_via_snmp"), kwargs)
-        
-    
-    
+
     def update_intfs_description_via_snmp(self, **kwargs):
-    
         """Updates the description(s) of the specified interface(s) via SNMP.
 
             **Inputs**
@@ -4550,13 +4343,10 @@ class DeviceBroker(Broker):
              :rtype message: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_intfs_description_via_snmp"), kwargs)
-        
-    
-    
+
     def diagnostic(self, **kwargs):
-    
         """Discovery Diagnostics
 
             **Inputs**
@@ -4660,13 +4450,10 @@ class DeviceBroker(Broker):
              :rtype id: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("diagnostic"), kwargs)
-        
-    
-    
+
     def diagnostic_status(self, **kwargs):
-    
         """Discovery Diagnostics Status
 
             **Inputs**
@@ -4714,7 +4501,5 @@ class DeviceBroker(Broker):
              :rtype end: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("diagnostic_status"), kwargs)
-        
-    

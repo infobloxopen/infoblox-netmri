@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DiscoveryHintBroker(Broker):
     controller = "discovery_hints"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available discovery hints. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -109,13 +108,10 @@ class DiscoveryHintBroker(Broker):
              :rtype discovery_hints: Array of DiscoveryHint
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available discovery hints matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -219,13 +215,10 @@ class DiscoveryHintBroker(Broker):
              :rtype discovery_hints: Array of DiscoveryHint
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available discovery hints matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: UnitID, cli_enable_password_secure, cli_user_name_secure_ssh, cli_user_name_secure_telnet, cli_user_password_secure_ssh, cli_user_password_secure_telnet, created_at, created_by, device_type, hint, id, secure_version, snmp_auth_password_secure, snmp_auth_protocol, snmp_community_secure, snmp_private_password_secure, snmp_private_protocol, snmp_protocol, updated_at, updated_by.
 
             **Inputs**
@@ -785,13 +778,10 @@ class DiscoveryHintBroker(Broker):
              :rtype discovery_hints: Array of DiscoveryHint
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified discovery hint.
 
             **Inputs**
@@ -815,13 +805,10 @@ class DiscoveryHintBroker(Broker):
              :rtype discovery_hint: DiscoveryHint
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new discovery hint.
 
             **Inputs**
@@ -885,13 +872,10 @@ class DiscoveryHintBroker(Broker):
              :rtype discovery_hint: DiscoveryHint
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing discovery hint.
 
             **Inputs**
@@ -963,13 +947,10 @@ class DiscoveryHintBroker(Broker):
              :rtype discovery_hint: DiscoveryHint
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified discovery hint from NetMRI.
 
             **Inputs**
@@ -985,7 +966,5 @@ class DiscoveryHintBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    

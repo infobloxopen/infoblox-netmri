@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class NotificationBroker(Broker):
     controller = "notifications"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available notifications. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -85,13 +84,10 @@ class NotificationBroker(Broker):
              :rtype notifications: Array of Notification
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified notification.
 
             **Inputs**
@@ -115,13 +111,10 @@ class NotificationBroker(Broker):
              :rtype notification: Notification
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available notifications matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -147,7 +140,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param all_interface_groups_ind: Do not restrict notification to particular interface groups. 
+             :param all_interface_groups_ind: Do not restrict notification to particular interface groups.
              :type all_interface_groups_ind: Array of Boolean
 
             |  ``api version min:`` 2.9
@@ -385,13 +378,10 @@ class NotificationBroker(Broker):
              :rtype notifications: Array of Notification
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available notifications matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: all_device_groups_ind, all_in_category_ind, all_interface_groups_ind, auth_user_id, category, created_at, cron, delivery_method, details_template, event_type, from, from_name, id, last_run, message_template, mime, send_clearing_ind, severity, subject, time_window_id, to, updated_at.
 
             **Inputs**
@@ -999,13 +989,10 @@ class NotificationBroker(Broker):
              :rtype notifications: Array of Notification
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified notification from NetMRI.
 
             **Inputs**
@@ -1021,13 +1008,10 @@ class NotificationBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new notification.
 
             **Inputs**
@@ -1053,7 +1037,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param all_interface_groups_ind: Do not restrict notification to particular interface groups. 
+             :param all_interface_groups_ind: Do not restrict notification to particular interface groups.
              :type all_interface_groups_ind: Boolean
 
             |  ``api version min:`` None
@@ -1227,13 +1211,10 @@ class NotificationBroker(Broker):
              :rtype notification: Notification
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing notification.
 
             **Inputs**
@@ -1441,13 +1422,10 @@ class NotificationBroker(Broker):
              :rtype notification: Notification
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def test(self, **kwargs):
-    
         """Test the specified notification
 
             **Inputs**
@@ -1471,13 +1449,10 @@ class NotificationBroker(Broker):
              :rtype result: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("test"), kwargs)
-        
-    
-    
+
     def update_settings(self, **kwargs):
-    
         """Update the global notifications settings.
 
             **Inputs**
@@ -1837,13 +1812,10 @@ class NotificationBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update_settings"), kwargs)
-        
-    
-    
+
     def reset_settings(self, **kwargs):
-    
         """Reset the global notifications settings to defaults.
 
             **Inputs**
@@ -1851,7 +1823,5 @@ class NotificationBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("reset_settings"), kwargs)
-        
-    

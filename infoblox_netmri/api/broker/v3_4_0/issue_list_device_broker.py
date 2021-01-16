@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class IssueListDeviceBroker(Broker):
     controller = "issue_list_devices"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified issue list device.
 
             **Inputs**
@@ -45,13 +44,10 @@ class IssueListDeviceBroker(Broker):
              :rtype issue_list_device: IssueListDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available issue list devices. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -179,13 +175,10 @@ class IssueListDeviceBroker(Broker):
              :rtype issue_list_devices: Array of IssueListDevice
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available issue list devices matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -601,13 +594,10 @@ class IssueListDeviceBroker(Broker):
              :rtype issue_list_devices: Array of IssueListDevice
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available issue list devices matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: Adds, Component, Correctness, Count, DataSourceID, Deletes, DeviceID, EndTime, FirstSeen, IssueTimestamp, Same, SeverityID, SeverityName, Stability, Status, Suppressed, Timestamp, TotalCount.
 
             **Inputs**
@@ -1159,13 +1149,10 @@ class IssueListDeviceBroker(Broker):
              :rtype issue_list_devices: Array of IssueListDevice
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The collector NetMRI that collected this data record.
 
             **Inputs**
@@ -1189,7 +1176,5 @@ class IssueListDeviceBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    

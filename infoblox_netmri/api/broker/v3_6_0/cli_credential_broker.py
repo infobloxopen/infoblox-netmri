@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class CLICredentialBroker(Broker):
     controller = "cli_credentials"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available cli credentials. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -63,7 +62,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion.
+             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -79,7 +78,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each CLICredential. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each CLICredential. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -109,13 +108,10 @@ class CLICredentialBroker(Broker):
              :rtype cli_credentials: Array of CLICredential
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified cli credential.
 
             **Inputs**
@@ -139,16 +135,29 @@ class CLICredentialBroker(Broker):
              :rtype cli_credential: CLICredential
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available cli credentials matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
+
+            |  ``api version min:`` 2.3
+            |  ``api version max:`` 2.4
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param CredentialGroupID: The unique identifier of the credential group.
+             :type CredentialGroupID: Integer
+
+            |  ``api version min:`` 2.5
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param CredentialGroupID: The unique identifier of the credential group.
+             :type CredentialGroupID: Array of Integer
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` 2.4
@@ -347,7 +356,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion.
+             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -363,7 +372,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each CLICredential. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each CLICredential. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -387,7 +396,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param query: This value will be matched against cli credentials, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: HitCount, Origination, PasswordSecure, Priority, Protocol, SecureVersion, UPWUse, UnitID, UsernameSecure, Vendor, id.
+             :param query: This value will be matched against cli credentials, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: CredentialGroupID, HitCount, Origination, PasswordSecure, Priority, Protocol, SecureVersion, UPWUse, UnitID, UsernameSecure, Vendor, id.
              :type query: String
 
             |  ``api version min:`` 2.3
@@ -409,16 +418,37 @@ class CLICredentialBroker(Broker):
              :rtype cli_credentials: Array of CLICredential
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
-        """Lists the available cli credentials matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: HitCount, Origination, PasswordSecure, Priority, Protocol, SecureVersion, UPWUse, UnitID, UsernameSecure, Vendor, id.
+        """Lists the available cli credentials matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: CredentialGroupID, HitCount, Origination, PasswordSecure, Priority, Protocol, SecureVersion, UPWUse, UnitID, UsernameSecure, Vendor, id.
 
             **Inputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param op_CredentialGroupID: The operator to apply to the field CredentialGroupID. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. CredentialGroupID: The unique identifier of the credential group. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :type op_CredentialGroupID: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_f_CredentialGroupID: If op_CredentialGroupID is specified, the field named in this input will be compared to the value in CredentialGroupID using the specified operator. That is, the value in this input will be treated as another field name, rather than a constant value. Either this field or val_c_CredentialGroupID must be specified if op_CredentialGroupID is specified.
+             :type val_f_CredentialGroupID: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_c_CredentialGroupID: If op_CredentialGroupID is specified, this value will be compared to the value in CredentialGroupID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CredentialGroupID must be specified if op_CredentialGroupID is specified.
+             :type val_c_CredentialGroupID: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -705,7 +735,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion.
+             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -721,7 +751,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each CLICredential. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each CLICredential. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -759,16 +789,21 @@ class CLICredentialBroker(Broker):
              :rtype cli_credentials: Array of CLICredential
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new cli credential.
 
             **Inputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` 1
+
+             :param CredentialGroupID: The unique identifier of the credential group.
+             :type CredentialGroupID: Integer
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -869,13 +904,10 @@ class CLICredentialBroker(Broker):
              :rtype cli_credential: CLICredential
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing cli credential.
 
             **Inputs**
@@ -887,6 +919,14 @@ class CLICredentialBroker(Broker):
 
              :param id: The internal NetMRI identifier for this credential.
              :type id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param CredentialGroupID: The unique identifier of the credential group. If omitted, this field will not be updated.
+             :type CredentialGroupID: Integer
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -979,13 +1019,10 @@ class CLICredentialBroker(Broker):
              :rtype cli_credential: CLICredential
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified cli credential from NetMRI.
 
             **Inputs**
@@ -1001,13 +1038,10 @@ class CLICredentialBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def test_ssh_telnet(self, **kwargs):
-    
         """Executes cli credential test and returns results or status id based on async_ind
 
             **Inputs**
@@ -1111,13 +1145,10 @@ class CLICredentialBroker(Broker):
              :rtype id: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("test_ssh_telnet"), kwargs)
-        
-    
-    
+
     def test_ssh_telnet_status(self, **kwargs):
-    
         """CLI credential test status
 
             **Inputs**
@@ -1165,7 +1196,16 @@ class CLICredentialBroker(Broker):
              :rtype end: Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("test_ssh_telnet_status"), kwargs)
-        
-    
+
+    def reset_cli(self, **kwargs):
+        """Reset CLI Credentials
+
+            **Inputs**
+
+            **Outputs**
+
+            """
+
+        return self.api_request(self._get_method_fullname("reset_cli"), kwargs)

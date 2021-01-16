@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DevicePolicyBroker(Broker):
     controller = "device_policies"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified device policy.
 
             **Inputs**
@@ -45,13 +44,10 @@ class DevicePolicyBroker(Broker):
              :rtype device_policy: DevicePolicy
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available device policies. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -203,13 +199,10 @@ class DevicePolicyBroker(Broker):
              :rtype device_policies: Array of DevicePolicy
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available device policies matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -649,13 +642,10 @@ class DevicePolicyBroker(Broker):
              :rtype device_policies: Array of DevicePolicy
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available device policies matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceID, DeviceID, DevicePolicyChangedCols, DevicePolicyEndTime, DevicePolicyID, DevicePolicyStartTime, DevicePolicyTimestamp, PolicyID, PolicyRulesChecked, PolicyRulesError, PolicyRulesFailed, PolicyRulesInfo, PolicyRulesInvalid, PolicyRulesPassed, PolicyRulesSkipped, PolicyRulesTotal, PolicyRulesUnknown, PolicyRulesValid, PolicyRulesWarning, PolicyStatus.
 
             **Inputs**
@@ -1247,13 +1237,10 @@ class DevicePolicyBroker(Broker):
              :rtype device_policies: Array of DevicePolicy
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The NetMRI device that collected this record.
 
             **Inputs**
@@ -1277,13 +1264,10 @@ class DevicePolicyBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def infradevice(self, **kwargs):
-    
         """The device whose policy status this record represents.
 
             **Inputs**
@@ -1307,13 +1291,10 @@ class DevicePolicyBroker(Broker):
              :rtype : InfraDevice
 
             """
-        
+
         return self.api_request(self._get_method_fullname("infradevice"), kwargs)
-        
-    
-    
+
     def policy_name(self, **kwargs):
-    
         """The policy name.
 
             **Inputs**
@@ -1337,13 +1318,10 @@ class DevicePolicyBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("policy_name"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device whose policy status this record represents.
 
             **Inputs**
@@ -1367,13 +1345,10 @@ class DevicePolicyBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    
-    
+
     def summary(self, **kwargs):
-    
         """Provides a single method to retrieve policies, devices, and per-device, per-policy status summaries. The start/limit parameters apply to the devices, not to the policies. That is, if a device is returned, all of the policy status summaries for that device will be returned, regardless of the start/limit parameters.
 
             **Inputs**
@@ -1445,13 +1420,10 @@ class DevicePolicyBroker(Broker):
              :rtype device_policies: Array of DevicePolicy
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("summary"), kwargs)
-        
-    
-    
+
     def count_statuses_by_device(self, **kwargs):
-    
         """Returns a count of Policy Statuses for a specified device
 
             **Inputs**
@@ -1483,7 +1455,5 @@ class DevicePolicyBroker(Broker):
              :rtype statuses_per_device: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("count_statuses_by_device"), kwargs)
-        
-    

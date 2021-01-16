@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceSettingBroker(Broker):
     controller = "device_settings"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available device settings. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -95,7 +94,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, DeviceID, DevSetStartTime, DevSetEndTime, DevSetChangedCols, DevSetTimestamp, DeviceSNMPVersion, DeviceSNMP3AuthProto, DeviceSNMP3PrivProto, DeviceSNMPTimestamp, DeviceSNMPCommunityReadSource, DeviceRespTime, DeviceRank, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DevicePrivilegedPollingInd, DeviceSNMPPollingInd, DeviceCLIPollingInd, DeviceConfigPollingInd, DevicePortScanningInd, DeviceSNMPAnalysisInd, DeviceFingerPrintInd, DeviceCCSCollectionInd, DeviceVendorDefaultCollectionInd, DeviceStandardsComplianceInd, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, SPMLicensedInd, ARPCacheRefreshInd, DeviceCommunitySecure, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityWriteSecure, DeviceSNMP3AuthPWSecure, DeviceSNMP3PrivPWSecure, SecureVersion, SAMLicensedInd, UseGlobalPolFreq, PolFreqModifier.
+             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, DeviceID, DevSetStartTime, DevSetEndTime, DevSetChangedCols, DevSetTimestamp, DeviceSNMPVersion, DeviceSNMP3AuthProto, DeviceSNMP3PrivProto, DeviceSNMPTimestamp, DeviceSNMPCommunityReadSource, DeviceRespTime, DeviceRank, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DevicePrivilegedPollingInd, DeviceSNMPPollingInd, DeviceCLIPollingInd, DeviceConfigPollingInd, DevicePortScanningInd, DeviceSNMPAnalysisInd, DeviceFingerPrintInd, DeviceCCSCollectionInd, DeviceVendorDefaultCollectionInd, DeviceStandardsComplianceInd, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, SPMLicensedInd, ARPCacheRefreshInd, DeviceCommunitySecure, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityWriteSecure, DeviceSNMP3AuthPWSecure, DeviceSNMP3PrivPWSecure, SecureVersion, SAMLicensedInd, UseGlobalPolFreq, PolFreqModifier, CredentialGroupID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -111,7 +110,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each DeviceSetting. Valid values are DataSourceID, DeviceID, DevSetStartTime, DevSetEndTime, DevSetChangedCols, DevSetTimestamp, DeviceSNMPVersion, DeviceSNMP3AuthProto, DeviceSNMP3PrivProto, DeviceSNMPTimestamp, DeviceSNMPCommunityReadSource, DeviceRespTime, DeviceRank, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DevicePrivilegedPollingInd, DeviceSNMPPollingInd, DeviceCLIPollingInd, DeviceConfigPollingInd, DevicePortScanningInd, DeviceSNMPAnalysisInd, DeviceFingerPrintInd, DeviceCCSCollectionInd, DeviceVendorDefaultCollectionInd, DeviceStandardsComplianceInd, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, SPMLicensedInd, ARPCacheRefreshInd, DeviceCommunitySecure, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityWriteSecure, DeviceSNMP3AuthPWSecure, DeviceSNMP3PrivPWSecure, SecureVersion, SAMLicensedInd, UseGlobalPolFreq, PolFreqModifier. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each DeviceSetting. Valid values are DataSourceID, DeviceID, DevSetStartTime, DevSetEndTime, DevSetChangedCols, DevSetTimestamp, DeviceSNMPVersion, DeviceSNMP3AuthProto, DeviceSNMP3PrivProto, DeviceSNMPTimestamp, DeviceSNMPCommunityReadSource, DeviceRespTime, DeviceRank, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DevicePrivilegedPollingInd, DeviceSNMPPollingInd, DeviceCLIPollingInd, DeviceConfigPollingInd, DevicePortScanningInd, DeviceSNMPAnalysisInd, DeviceFingerPrintInd, DeviceCCSCollectionInd, DeviceVendorDefaultCollectionInd, DeviceStandardsComplianceInd, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, SPMLicensedInd, ARPCacheRefreshInd, DeviceCommunitySecure, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityWriteSecure, DeviceSNMP3AuthPWSecure, DeviceSNMP3PrivPWSecure, SecureVersion, SAMLicensedInd, UseGlobalPolFreq, PolFreqModifier, CredentialGroupID. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -141,13 +140,10 @@ class DeviceSettingBroker(Broker):
              :rtype device_settings: Array of DeviceSetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified device setting.
 
             **Inputs**
@@ -187,13 +183,10 @@ class DeviceSettingBroker(Broker):
              :rtype device_setting: DeviceSetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available device settings matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -213,6 +206,22 @@ class DeviceSettingBroker(Broker):
 
              :param ARPCacheRefreshInd: A flag indicating if NetMRI refreshes ARP caches to aid in switch-port data collection.
              :type ARPCacheRefreshInd: Array of Boolean
+
+            |  ``api version min:`` 2.4
+            |  ``api version max:`` 2.4
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param CredentialGroupID: The unique identifier of the credential group.
+             :type CredentialGroupID: Integer
+
+            |  ``api version min:`` 2.5
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param CredentialGroupID: The unique identifier of the credential group.
+             :type CredentialGroupID: Array of Integer
 
             |  ``api version min:`` 2.4
             |  ``api version max:`` 2.4
@@ -907,7 +916,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, DeviceID, DevSetStartTime, DevSetEndTime, DevSetChangedCols, DevSetTimestamp, DeviceSNMPVersion, DeviceSNMP3AuthProto, DeviceSNMP3PrivProto, DeviceSNMPTimestamp, DeviceSNMPCommunityReadSource, DeviceRespTime, DeviceRank, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DevicePrivilegedPollingInd, DeviceSNMPPollingInd, DeviceCLIPollingInd, DeviceConfigPollingInd, DevicePortScanningInd, DeviceSNMPAnalysisInd, DeviceFingerPrintInd, DeviceCCSCollectionInd, DeviceVendorDefaultCollectionInd, DeviceStandardsComplianceInd, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, SPMLicensedInd, ARPCacheRefreshInd, DeviceCommunitySecure, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityWriteSecure, DeviceSNMP3AuthPWSecure, DeviceSNMP3PrivPWSecure, SecureVersion, SAMLicensedInd, UseGlobalPolFreq, PolFreqModifier.
+             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, DeviceID, DevSetStartTime, DevSetEndTime, DevSetChangedCols, DevSetTimestamp, DeviceSNMPVersion, DeviceSNMP3AuthProto, DeviceSNMP3PrivProto, DeviceSNMPTimestamp, DeviceSNMPCommunityReadSource, DeviceRespTime, DeviceRank, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DevicePrivilegedPollingInd, DeviceSNMPPollingInd, DeviceCLIPollingInd, DeviceConfigPollingInd, DevicePortScanningInd, DeviceSNMPAnalysisInd, DeviceFingerPrintInd, DeviceCCSCollectionInd, DeviceVendorDefaultCollectionInd, DeviceStandardsComplianceInd, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, SPMLicensedInd, ARPCacheRefreshInd, DeviceCommunitySecure, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityWriteSecure, DeviceSNMP3AuthPWSecure, DeviceSNMP3PrivPWSecure, SecureVersion, SAMLicensedInd, UseGlobalPolFreq, PolFreqModifier, CredentialGroupID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -923,7 +932,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each DeviceSetting. Valid values are DataSourceID, DeviceID, DevSetStartTime, DevSetEndTime, DevSetChangedCols, DevSetTimestamp, DeviceSNMPVersion, DeviceSNMP3AuthProto, DeviceSNMP3PrivProto, DeviceSNMPTimestamp, DeviceSNMPCommunityReadSource, DeviceRespTime, DeviceRank, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DevicePrivilegedPollingInd, DeviceSNMPPollingInd, DeviceCLIPollingInd, DeviceConfigPollingInd, DevicePortScanningInd, DeviceSNMPAnalysisInd, DeviceFingerPrintInd, DeviceCCSCollectionInd, DeviceVendorDefaultCollectionInd, DeviceStandardsComplianceInd, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, SPMLicensedInd, ARPCacheRefreshInd, DeviceCommunitySecure, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityWriteSecure, DeviceSNMP3AuthPWSecure, DeviceSNMP3PrivPWSecure, SecureVersion, SAMLicensedInd, UseGlobalPolFreq, PolFreqModifier. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each DeviceSetting. Valid values are DataSourceID, DeviceID, DevSetStartTime, DevSetEndTime, DevSetChangedCols, DevSetTimestamp, DeviceSNMPVersion, DeviceSNMP3AuthProto, DeviceSNMP3PrivProto, DeviceSNMPTimestamp, DeviceSNMPCommunityReadSource, DeviceRespTime, DeviceRank, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DevicePrivilegedPollingInd, DeviceSNMPPollingInd, DeviceCLIPollingInd, DeviceConfigPollingInd, DevicePortScanningInd, DeviceSNMPAnalysisInd, DeviceFingerPrintInd, DeviceCCSCollectionInd, DeviceVendorDefaultCollectionInd, DeviceStandardsComplianceInd, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, SPMLicensedInd, ARPCacheRefreshInd, DeviceCommunitySecure, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityWriteSecure, DeviceSNMP3AuthPWSecure, DeviceSNMP3PrivPWSecure, SecureVersion, SAMLicensedInd, UseGlobalPolFreq, PolFreqModifier, CredentialGroupID. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -947,7 +956,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param query: This value will be matched against device settings, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: ARPCacheRefreshInd, DataSourceID, DevSetChangedCols, DevSetEndTime, DevSetStartTime, DevSetTimestamp, DeviceCCSCollectionInd, DeviceCLIPollingInd, DeviceCommunitySecure, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DeviceConfigPollingInd, DeviceFingerPrintInd, DeviceID, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, DevicePortScanningInd, DevicePrivilegedPollingInd, DeviceRank, DeviceRespTime, DeviceSNMP3AuthPWSecure, DeviceSNMP3AuthProto, DeviceSNMP3PrivPWSecure, DeviceSNMP3PrivProto, DeviceSNMPAnalysisInd, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityReadSource, DeviceSNMPCommunityWriteSecure, DeviceSNMPPollingInd, DeviceSNMPTimestamp, DeviceSNMPVersion, DeviceStandardsComplianceInd, DeviceVendorDefaultCollectionInd, PolFreqModifier, SAMLicensedInd, SPMLicensedInd, SecureVersion, UseGlobalPolFreq.
+             :param query: This value will be matched against device settings, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: ARPCacheRefreshInd, CredentialGroupID, DataSourceID, DevSetChangedCols, DevSetEndTime, DevSetStartTime, DevSetTimestamp, DeviceCCSCollectionInd, DeviceCLIPollingInd, DeviceCommunitySecure, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DeviceConfigPollingInd, DeviceFingerPrintInd, DeviceID, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, DevicePortScanningInd, DevicePrivilegedPollingInd, DeviceRank, DeviceRespTime, DeviceSNMP3AuthPWSecure, DeviceSNMP3AuthProto, DeviceSNMP3PrivPWSecure, DeviceSNMP3PrivProto, DeviceSNMPAnalysisInd, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityReadSource, DeviceSNMPCommunityWriteSecure, DeviceSNMPPollingInd, DeviceSNMPTimestamp, DeviceSNMPVersion, DeviceStandardsComplianceInd, DeviceVendorDefaultCollectionInd, PolFreqModifier, SAMLicensedInd, SPMLicensedInd, SecureVersion, UseGlobalPolFreq.
              :type query: String
 
             |  ``api version min:`` 2.3
@@ -969,14 +978,11 @@ class DeviceSettingBroker(Broker):
              :rtype device_settings: Array of DeviceSetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
-        """Lists the available device settings matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: ARPCacheRefreshInd, DataSourceID, DevSetChangedCols, DevSetEndTime, DevSetStartTime, DevSetTimestamp, DeviceCCSCollectionInd, DeviceCLIPollingInd, DeviceCommunitySecure, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DeviceConfigPollingInd, DeviceFingerPrintInd, DeviceID, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, DevicePortScanningInd, DevicePrivilegedPollingInd, DeviceRank, DeviceRespTime, DeviceSNMP3AuthPWSecure, DeviceSNMP3AuthProto, DeviceSNMP3PrivPWSecure, DeviceSNMP3PrivProto, DeviceSNMPAnalysisInd, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityReadSource, DeviceSNMPCommunityWriteSecure, DeviceSNMPPollingInd, DeviceSNMPTimestamp, DeviceSNMPVersion, DeviceStandardsComplianceInd, DeviceVendorDefaultCollectionInd, PolFreqModifier, SAMLicensedInd, SPMLicensedInd, SecureVersion, UseGlobalPolFreq.
+        """Lists the available device settings matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: ARPCacheRefreshInd, CredentialGroupID, DataSourceID, DevSetChangedCols, DevSetEndTime, DevSetStartTime, DevSetTimestamp, DeviceCCSCollectionInd, DeviceCLIPollingInd, DeviceCommunitySecure, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DeviceConfigPollingInd, DeviceFingerPrintInd, DeviceID, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, DevicePortScanningInd, DevicePrivilegedPollingInd, DeviceRank, DeviceRespTime, DeviceSNMP3AuthPWSecure, DeviceSNMP3AuthProto, DeviceSNMP3PrivPWSecure, DeviceSNMP3PrivProto, DeviceSNMPAnalysisInd, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityReadSource, DeviceSNMPCommunityWriteSecure, DeviceSNMPPollingInd, DeviceSNMPTimestamp, DeviceSNMPVersion, DeviceStandardsComplianceInd, DeviceVendorDefaultCollectionInd, PolFreqModifier, SAMLicensedInd, SPMLicensedInd, SecureVersion, UseGlobalPolFreq.
 
             **Inputs**
 
@@ -1003,6 +1009,30 @@ class DeviceSettingBroker(Broker):
 
              :param val_c_ARPCacheRefreshInd: If op_ARPCacheRefreshInd is specified, this value will be compared to the value in ARPCacheRefreshInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ARPCacheRefreshInd must be specified if op_ARPCacheRefreshInd is specified.
              :type val_c_ARPCacheRefreshInd: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param op_CredentialGroupID: The operator to apply to the field CredentialGroupID. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. CredentialGroupID: The unique identifier of the credential group. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :type op_CredentialGroupID: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_f_CredentialGroupID: If op_CredentialGroupID is specified, the field named in this input will be compared to the value in CredentialGroupID using the specified operator. That is, the value in this input will be treated as another field name, rather than a constant value. Either this field or val_c_CredentialGroupID must be specified if op_CredentialGroupID is specified.
+             :type val_f_CredentialGroupID: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_c_CredentialGroupID: If op_CredentialGroupID is specified, this value will be compared to the value in CredentialGroupID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CredentialGroupID must be specified if op_CredentialGroupID is specified.
+             :type val_c_CredentialGroupID: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -2017,7 +2047,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, DeviceID, DevSetStartTime, DevSetEndTime, DevSetChangedCols, DevSetTimestamp, DeviceSNMPVersion, DeviceSNMP3AuthProto, DeviceSNMP3PrivProto, DeviceSNMPTimestamp, DeviceSNMPCommunityReadSource, DeviceRespTime, DeviceRank, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DevicePrivilegedPollingInd, DeviceSNMPPollingInd, DeviceCLIPollingInd, DeviceConfigPollingInd, DevicePortScanningInd, DeviceSNMPAnalysisInd, DeviceFingerPrintInd, DeviceCCSCollectionInd, DeviceVendorDefaultCollectionInd, DeviceStandardsComplianceInd, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, SPMLicensedInd, ARPCacheRefreshInd, DeviceCommunitySecure, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityWriteSecure, DeviceSNMP3AuthPWSecure, DeviceSNMP3PrivPWSecure, SecureVersion, SAMLicensedInd, UseGlobalPolFreq, PolFreqModifier.
+             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, DeviceID, DevSetStartTime, DevSetEndTime, DevSetChangedCols, DevSetTimestamp, DeviceSNMPVersion, DeviceSNMP3AuthProto, DeviceSNMP3PrivProto, DeviceSNMPTimestamp, DeviceSNMPCommunityReadSource, DeviceRespTime, DeviceRank, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DevicePrivilegedPollingInd, DeviceSNMPPollingInd, DeviceCLIPollingInd, DeviceConfigPollingInd, DevicePortScanningInd, DeviceSNMPAnalysisInd, DeviceFingerPrintInd, DeviceCCSCollectionInd, DeviceVendorDefaultCollectionInd, DeviceStandardsComplianceInd, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, SPMLicensedInd, ARPCacheRefreshInd, DeviceCommunitySecure, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityWriteSecure, DeviceSNMP3AuthPWSecure, DeviceSNMP3PrivPWSecure, SecureVersion, SAMLicensedInd, UseGlobalPolFreq, PolFreqModifier, CredentialGroupID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -2033,7 +2063,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each DeviceSetting. Valid values are DataSourceID, DeviceID, DevSetStartTime, DevSetEndTime, DevSetChangedCols, DevSetTimestamp, DeviceSNMPVersion, DeviceSNMP3AuthProto, DeviceSNMP3PrivProto, DeviceSNMPTimestamp, DeviceSNMPCommunityReadSource, DeviceRespTime, DeviceRank, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DevicePrivilegedPollingInd, DeviceSNMPPollingInd, DeviceCLIPollingInd, DeviceConfigPollingInd, DevicePortScanningInd, DeviceSNMPAnalysisInd, DeviceFingerPrintInd, DeviceCCSCollectionInd, DeviceVendorDefaultCollectionInd, DeviceStandardsComplianceInd, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, SPMLicensedInd, ARPCacheRefreshInd, DeviceCommunitySecure, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityWriteSecure, DeviceSNMP3AuthPWSecure, DeviceSNMP3PrivPWSecure, SecureVersion, SAMLicensedInd, UseGlobalPolFreq, PolFreqModifier. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each DeviceSetting. Valid values are DataSourceID, DeviceID, DevSetStartTime, DevSetEndTime, DevSetChangedCols, DevSetTimestamp, DeviceSNMPVersion, DeviceSNMP3AuthProto, DeviceSNMP3PrivProto, DeviceSNMPTimestamp, DeviceSNMPCommunityReadSource, DeviceRespTime, DeviceRank, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChangedTime, DeviceConfigLockedInd, DevicePrivilegedPollingInd, DeviceSNMPPollingInd, DeviceCLIPollingInd, DeviceConfigPollingInd, DevicePortScanningInd, DeviceSNMPAnalysisInd, DeviceFingerPrintInd, DeviceCCSCollectionInd, DeviceVendorDefaultCollectionInd, DeviceStandardsComplianceInd, DeviceLicensedInd, DeviceManagedInd, DeviceNetBIOSScanningInd, DevicePerfEnvPollingInd, SPMLicensedInd, ARPCacheRefreshInd, DeviceCommunitySecure, DeviceSNMPCommunityReadSecure, DeviceSNMPCommunityWriteSecure, DeviceSNMP3AuthPWSecure, DeviceSNMP3PrivPWSecure, SecureVersion, SAMLicensedInd, UseGlobalPolFreq, PolFreqModifier, CredentialGroupID. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -2071,13 +2101,10 @@ class DeviceSettingBroker(Broker):
              :rtype device_settings: Array of DeviceSetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The collector NetMRI that collected this data record.
 
             **Inputs**
@@ -2101,7 +2128,5 @@ class DeviceSettingBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    

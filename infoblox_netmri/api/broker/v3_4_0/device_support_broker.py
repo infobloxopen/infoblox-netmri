@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceSupportBroker(Broker):
     controller = "device_support"
-    
-    
+
     def get_device_support_info(self, **kwargs):
-    
         """This method retrieves all the device support information and the data collection status for a particular device.
 
             **Inputs**
@@ -37,7 +36,5 @@ class DeviceSupportBroker(Broker):
              :rtype device_support_info: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_device_support_info"), kwargs)
-        
-    

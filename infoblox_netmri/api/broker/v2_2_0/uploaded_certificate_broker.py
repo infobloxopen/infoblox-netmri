@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class UploadedCertificateBroker(Broker):
     controller = "uploaded_certificates"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available uploaded certificates. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -109,13 +108,10 @@ class UploadedCertificateBroker(Broker):
              :rtype uploaded_certificates: Array of UploadedCertificate
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """This method uploads a certificate in the repository
 
             **Inputs**
@@ -139,13 +135,10 @@ class UploadedCertificateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def export(self, **kwargs):
-    
         """This method exports a certificate from the repository
 
             **Inputs**
@@ -161,13 +154,10 @@ class UploadedCertificateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("export"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """This method deletes a certificate from the repository
 
             **Inputs**
@@ -183,13 +173,10 @@ class UploadedCertificateBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def index_with_detail(self, **kwargs):
-    
         """Lists the available uploaded certificates. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -293,7 +280,5 @@ class UploadedCertificateBroker(Broker):
              :rtype uploaded_certificates: Array of UploadedCertificate
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index_with_detail"), kwargs)
-        
-    

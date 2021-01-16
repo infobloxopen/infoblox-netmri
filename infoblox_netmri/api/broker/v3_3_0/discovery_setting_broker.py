@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DiscoverySettingBroker(Broker):
     controller = "discovery_settings"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available discovery settings. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -125,13 +124,10 @@ class DiscoverySettingBroker(Broker):
              :rtype discovery_settings: Array of DiscoverySetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available discovery settings matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -235,13 +231,10 @@ class DiscoverySettingBroker(Broker):
              :rtype discovery_settings: Array of DiscoverySetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available discovery settings matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: UnitID, blackout_duration, cidr_count, created_at, created_by, discovery_status, id, ping_sweep_ind, port_control_blackout_duration, range_end, range_end_numeric, range_mask, range_start, range_start_numeric, range_type, range_value, smart_ping_sweep_ind, start_blackout_schedule, start_port_control_blackout_schedule, updated_at, updated_by, virtual_network_id.
 
             **Inputs**
@@ -849,13 +842,10 @@ class DiscoverySettingBroker(Broker):
              :rtype discovery_settings: Array of DiscoverySetting
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified discovery setting.
 
             **Inputs**
@@ -879,13 +869,10 @@ class DiscoverySettingBroker(Broker):
              :rtype discovery_setting: DiscoverySetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new discovery setting.
 
             **Inputs**
@@ -941,7 +928,7 @@ class DiscoverySettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param start_blackout_schedule: The blackout start time in cron format.
              :type start_blackout_schedule: String
@@ -957,7 +944,7 @@ class DiscoverySettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param start_port_control_blackout_schedule: Port Control Blackout schedule in CRON format
              :type start_port_control_blackout_schedule: String
@@ -1005,13 +992,10 @@ class DiscoverySettingBroker(Broker):
              :rtype discovery_setting: DiscoverySetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing discovery setting.
 
             **Inputs**
@@ -1139,13 +1123,10 @@ class DiscoverySettingBroker(Broker):
              :rtype discovery_setting: DiscoverySetting
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified discovery setting from NetMRI.
 
             **Inputs**
@@ -1161,13 +1142,10 @@ class DiscoverySettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def destroy_many(self, **kwargs):
-    
         """Remove several discovery settings
 
             **Inputs**
@@ -1183,13 +1161,10 @@ class DiscoverySettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy_many"), kwargs)
-        
-    
-    
+
     def import_settings(self, **kwargs):
-    
         """Imports a list of discovery settings into the database
 
             **Inputs**
@@ -1221,13 +1196,10 @@ class DiscoverySettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("import_settings"), kwargs)
-        
-    
-    
+
     def seed_information(self, **kwargs):
-    
         """Returns the following information: if at least one seed exists, if at least one seed has been discovered, if any IPv6 range is missing a seed
 
             **Inputs**
@@ -1235,13 +1207,10 @@ class DiscoverySettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("seed_information"), kwargs)
-        
-    
-    
+
     def seed_status(self, **kwargs):
-    
         """List of all Device Seeds and the entire Discovery Status for each one.
 
             **Inputs**
@@ -1297,7 +1266,5 @@ class DiscoverySettingBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("seed_status"), kwargs)
-        
-    

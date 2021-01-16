@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class TimeWindowBroker(Broker):
     controller = "time_windows"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified time window.
 
             **Inputs**
@@ -29,13 +28,10 @@ class TimeWindowBroker(Broker):
              :rtype time_window: TimeWindow
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available time windows. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -123,13 +119,10 @@ class TimeWindowBroker(Broker):
              :rtype time_windows: Array of TimeWindow
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available time windows matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -665,13 +658,10 @@ class TimeWindowBroker(Broker):
              :rtype time_windows: Array of TimeWindow
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available time windows matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: created_at, end_date, end_min, fri_end, fri_start, id, interval, mon_end, mon_start, ordinal, period_mins, recur_type, sat_end, sat_start, schedule_name, start_date, start_min, sun_end, sun_start, system_window_ind, thu_end, thu_start, time_zone, tue_end, tue_start, updated_at, wed_end, wed_start.
 
             **Inputs**
@@ -1423,13 +1413,10 @@ class TimeWindowBroker(Broker):
              :rtype time_windows: Array of TimeWindow
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new time window.
 
             **Inputs**
@@ -1669,13 +1656,10 @@ class TimeWindowBroker(Broker):
              :rtype time_window: TimeWindow
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing time window.
 
             **Inputs**
@@ -1923,13 +1907,10 @@ class TimeWindowBroker(Broker):
              :rtype time_window: TimeWindow
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified time window from NetMRI.
 
             **Inputs**
@@ -1945,13 +1926,10 @@ class TimeWindowBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def generate(self, **kwargs):
-    
         """Generates DimTime entries for the specified time window.
 
             **Inputs**
@@ -1967,13 +1945,10 @@ class TimeWindowBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("generate"), kwargs)
-        
-    
-    
+
     def enumerate(self, **kwargs):
-    
         """Enumerate for the specified time window.
 
             **Inputs**
@@ -1989,7 +1964,7 @@ class TimeWindowBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 2020-08-19 02:08:42
+            |  ``default:`` 2020-11-27 08:21:47
 
              :param start_date: Starting date of the time period to enumerate.
              :type start_date: DateTime
@@ -1997,7 +1972,7 @@ class TimeWindowBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 2020-09-18 02:08:42
+            |  ``default:`` 2020-12-27 08:21:47
 
              :param end_date: Ending date of the time period to enumerate.
              :type end_date: DateTime
@@ -2013,13 +1988,10 @@ class TimeWindowBroker(Broker):
              :rtype time_window_entries: Array of DateTime
 
             """
-        
+
         return self.api_request(self._get_method_fullname("enumerate"), kwargs)
-        
-    
-    
+
     def check(self, **kwargs):
-    
         """Check whether given date/time exists in the specified time window.
 
             **Inputs**
@@ -2059,7 +2031,5 @@ class TimeWindowBroker(Broker):
              :rtype timestamps_in_window: Array
 
             """
-        
+
         return self.api_request(self._get_method_fullname("check"), kwargs)
-        
-    

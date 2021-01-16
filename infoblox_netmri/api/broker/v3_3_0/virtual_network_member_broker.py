@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class VirtualNetworkMemberBroker(Broker):
     controller = "virtual_network_members"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available virtual network members. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -125,13 +124,10 @@ class VirtualNetworkMemberBroker(Broker):
              :rtype virtual_network_members: Array of VirtualNetworkMember
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified virtual network member.
 
             **Inputs**
@@ -171,13 +167,10 @@ class VirtualNetworkMemberBroker(Broker):
              :rtype virtual_network_member: VirtualNetworkMember
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available virtual network members matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -313,13 +306,10 @@ class VirtualNetworkMemberBroker(Broker):
              :rtype virtual_network_members: Array of VirtualNetworkMember
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available virtual network members matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: CurrentCount, DataSourceID, DefaultRDLeft, DefaultRDRight, DefaultRDType, DefaultVPNID, DeviceID, RouteLimit, VirtualNetworkID, VirtualNetworkMemberArtificialInd, VirtualNetworkMemberChangedCols, VirtualNetworkMemberDefaultInd, VirtualNetworkMemberDescription, VirtualNetworkMemberEndTime, VirtualNetworkMemberFirstTime, VirtualNetworkMemberID, VirtualNetworkMemberName, VirtualNetworkMemberStartTime, VirtualNetworkMemberTimestamp, WarningLimit.
 
             **Inputs**
@@ -951,13 +941,10 @@ class VirtualNetworkMemberBroker(Broker):
              :rtype virtual_network_members: Array of VirtualNetworkMember
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device from which this VRF membership configuration was collected.
 
             **Inputs**
@@ -981,13 +968,10 @@ class VirtualNetworkMemberBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    
-    
+
     def virtual_network(self, **kwargs):
-    
         """Network assigned to current VRF instance.
 
             **Inputs**
@@ -1011,13 +995,10 @@ class VirtualNetworkMemberBroker(Broker):
              :rtype : VirtualNetwork
 
             """
-        
+
         return self.api_request(self._get_method_fullname("virtual_network"), kwargs)
-        
-    
-    
+
     def member_rd(self, **kwargs):
-    
         """The displayable VRF route distinguisher of this obkect.
 
             **Inputs**
@@ -1041,13 +1022,10 @@ class VirtualNetworkMemberBroker(Broker):
              :rtype : String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("member_rd"), kwargs)
-        
-    
-    
+
     def assigned_network_id(self, **kwargs):
-    
         """The current network view id assigned.
 
             **Inputs**
@@ -1071,7 +1049,5 @@ class VirtualNetworkMemberBroker(Broker):
              :rtype : Integer
 
             """
-        
+
         return self.api_request(self._get_method_fullname("assigned_network_id"), kwargs)
-        
-    

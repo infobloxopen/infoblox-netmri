@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class JobDetailBroker(Broker):
     controller = "job_details"
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available job details matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -309,13 +308,10 @@ class JobDetailBroker(Broker):
              :rtype job_details: Array of JobDetail
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available job details matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DeviceID, EndTime, JobDetailID, JobID, LastUpdate, Module, Script, ScriptDisplayName, StartTime, Status, Visible, job_specification_id.
 
             **Inputs**
@@ -707,13 +703,10 @@ class JobDetailBroker(Broker):
              :rtype job_details: Array of JobDetail
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists per-device job details. You can filter the results by Job ID, Job Name, or by Device ID.
 
             **Inputs**
@@ -769,13 +762,10 @@ class JobDetailBroker(Broker):
              :rtype job_details: Array of JobDetail
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Lists the per-device details for the associated job id.
 
             **Inputs**
@@ -815,13 +805,10 @@ class JobDetailBroker(Broker):
              :rtype job_details: Array of JobDetail
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def device_files(self, **kwargs):
-    
         """Lists/downloads the per-device files for a job. If no filename is given, a list of files for the job will be returned. If a filename is passed, and it exists, it will be downloaded as type "application/octet-stream". If the special filename "all.zip" is passed, a ZIP file containing all job files will be created and downloaded as type "application/zip"
 
             **Inputs**
@@ -885,13 +872,10 @@ class JobDetailBroker(Broker):
              :rtype filenames: Array of String
 
             """
-        
+
         return self.api_mixed_request(self._get_method_fullname("device_files"), kwargs)
-        
-    
-    
+
     def port_control_file(self, **kwargs):
-    
         """Download a Port Control jobs log as type "application/octet-stream".
 
             **Inputs**
@@ -947,7 +931,5 @@ class JobDetailBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_mixed_request(self._get_method_fullname("port_control_file"), kwargs)
-        
-    

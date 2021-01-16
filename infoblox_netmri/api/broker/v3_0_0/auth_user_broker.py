@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class AuthUserBroker(Broker):
     controller = "auth_users"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available auth users. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -47,7 +46,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert.
+             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -63,7 +62,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each AuthUser. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each AuthUser. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -93,13 +92,10 @@ class AuthUserBroker(Broker):
              :rtype auth_users: Array of AuthUser
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified auth user.
 
             **Inputs**
@@ -123,13 +119,10 @@ class AuthUserBroker(Broker):
              :rtype auth_user: AuthUser
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available auth users matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -277,6 +270,38 @@ class AuthUserBroker(Broker):
 
              :param created_at: The date and time the record was initially created in NetMRI.
              :type created_at: Array of DateTime
+
+            |  ``api version min:`` 2.3
+            |  ``api version max:`` 2.4
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param db_creds_enabled_ind: A flag which indicates that the user has database credentials enabled.
+             :type db_creds_enabled_ind: Boolean
+
+            |  ``api version min:`` 2.5
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param db_creds_enabled_ind: A flag which indicates that the user has database credentials enabled.
+             :type db_creds_enabled_ind: Array of Boolean
+
+            |  ``api version min:`` 2.3
+            |  ``api version max:`` 2.4
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param db_username: Username for MySQL Database.
+             :type db_username: String
+
+            |  ``api version min:`` 2.5
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param db_username: Username for MySQL Database.
+             :type db_username: Array of String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` 2.4
@@ -523,7 +548,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert.
+             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -539,7 +564,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each AuthUser. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each AuthUser. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -563,7 +588,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param query: This value will be matched against auth users, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: account_disabled, account_disabled_date, account_locked, account_locked_date, auth_service_id, cert, cli_creds_enabled_ind, consecutive_failed_logins, created_at, email, expiration, first_name, force_local_ind, id, is_system, last_local_authz_ind, last_login, last_name, notes, password_version, secure_version, updated_at, user_name.
+             :param query: This value will be matched against auth users, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: account_disabled, account_disabled_date, account_locked, account_locked_date, auth_service_id, cert, cli_creds_enabled_ind, consecutive_failed_logins, created_at, db_creds_enabled_ind, db_username, email, expiration, first_name, force_local_ind, id, is_system, last_local_authz_ind, last_login, last_name, notes, password_version, secure_version, updated_at, user_name.
              :type query: String
 
             |  ``api version min:`` 2.3
@@ -585,14 +610,11 @@ class AuthUserBroker(Broker):
              :rtype auth_users: Array of AuthUser
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
-        """Lists the available auth users matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: account_disabled, account_disabled_date, account_locked, account_locked_date, auth_service_id, cert, cli_creds_enabled_ind, consecutive_failed_logins, created_at, email, expiration, first_name, force_local_ind, id, is_system, last_local_authz_ind, last_login, last_name, notes, password_version, secure_version, updated_at, user_name.
+        """Lists the available auth users matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: account_disabled, account_disabled_date, account_locked, account_locked_date, auth_service_id, cert, cli_creds_enabled_ind, consecutive_failed_logins, created_at, db_creds_enabled_ind, db_username, email, expiration, first_name, force_local_ind, id, is_system, last_local_authz_ind, last_login, last_name, notes, password_version, secure_version, updated_at, user_name.
 
             **Inputs**
 
@@ -811,6 +833,54 @@ class AuthUserBroker(Broker):
 
              :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
              :type val_c_created_at: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param op_db_creds_enabled_ind: The operator to apply to the field db_creds_enabled_ind. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. db_creds_enabled_ind: A flag which indicates that the user has database credentials enabled. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :type op_db_creds_enabled_ind: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_f_db_creds_enabled_ind: If op_db_creds_enabled_ind is specified, the field named in this input will be compared to the value in db_creds_enabled_ind using the specified operator. That is, the value in this input will be treated as another field name, rather than a constant value. Either this field or val_c_db_creds_enabled_ind must be specified if op_db_creds_enabled_ind is specified.
+             :type val_f_db_creds_enabled_ind: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_c_db_creds_enabled_ind: If op_db_creds_enabled_ind is specified, this value will be compared to the value in db_creds_enabled_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_db_creds_enabled_ind must be specified if op_db_creds_enabled_ind is specified.
+             :type val_c_db_creds_enabled_ind: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param op_db_username: The operator to apply to the field db_username. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. db_username: Username for MySQL Database. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :type op_db_username: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_f_db_username: If op_db_username is specified, the field named in this input will be compared to the value in db_username using the specified operator. That is, the value in this input will be treated as another field name, rather than a constant value. Either this field or val_c_db_username must be specified if op_db_username is specified.
+             :type val_f_db_username: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_c_db_username: If op_db_username is specified, this value will be compared to the value in db_username using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_db_username must be specified if op_db_username is specified.
+             :type val_c_db_username: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -1169,7 +1239,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert.
+             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1185,7 +1255,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each AuthUser. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each AuthUser. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -1223,13 +1293,10 @@ class AuthUserBroker(Broker):
              :rtype auth_users: Array of AuthUser
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def create(self, **kwargs):
-    
         """Creates a new auth user.
 
             **Inputs**
@@ -1269,7 +1336,7 @@ class AuthUserBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param cli_enable_password: No description is available for cli_enable_password.
              :type cli_enable_password: String
@@ -1277,7 +1344,7 @@ class AuthUserBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param cli_password: No description is available for cli_password.
              :type cli_password: String
@@ -1285,7 +1352,7 @@ class AuthUserBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param cli_user_name: No description is available for cli_user_name.
              :type cli_user_name: String
@@ -1389,13 +1456,10 @@ class AuthUserBroker(Broker):
              :rtype auth_user: AuthUser
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing auth user.
 
             **Inputs**
@@ -1463,6 +1527,30 @@ class AuthUserBroker(Broker):
 
              :param cli_user_name: No description is available for cli_user_name. If omitted, this field will not be updated.
              :type cli_user_name: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param db_creds_enabled_ind: A flag which indicates that the user has database credentials enabled. If omitted, this field will not be updated.
+             :type db_creds_enabled_ind: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param db_password: No description is available for db_password. If omitted, this field will not be updated.
+             :type db_password: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param db_username: Username for MySQL Database. If omitted, this field will not be updated.
+             :type db_username: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -1555,13 +1643,10 @@ class AuthUserBroker(Broker):
              :rtype auth_user: AuthUser
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    
-    
+
     def destroy(self, **kwargs):
-    
         """Deletes the specified auth user from NetMRI.
 
             **Inputs**
@@ -1577,13 +1662,10 @@ class AuthUserBroker(Broker):
             **Outputs**
 
             """
-        
+
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-        
-    
-    
+
     def auth_roles(self, **kwargs):
-    
         """Returns the roles associated with the user, and the device groups to which they apply.
 
             **Inputs**
@@ -1607,13 +1689,10 @@ class AuthUserBroker(Broker):
              :rtype auth_roles: Array of AuthRole
 
             """
-        
+
         return self.api_request(self._get_method_fullname("auth_roles"), kwargs)
-        
-    
-    
+
     def add_auth_role(self, **kwargs):
-    
         """Assigns a specified role to a user within a specified list of device groups.
 
             **Inputs**
@@ -1669,13 +1748,10 @@ class AuthUserBroker(Broker):
              :rtype device_group_ids: Array of DeviceGroup
 
             """
-        
+
         return self.api_request(self._get_method_fullname("add_auth_role"), kwargs)
-        
-    
-    
+
     def remove_auth_role(self, **kwargs):
-    
         """Removes a specified role from a user for all device groups for which the current user has 'user_admin' privilege.
 
             **Inputs**
@@ -1715,7 +1791,5 @@ class AuthUserBroker(Broker):
              :rtype auth_role: AuthUser
 
             """
-        
+
         return self.api_request(self._get_method_fullname("remove_auth_role"), kwargs)
-        
-    

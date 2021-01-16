@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class ChangesDeviceViewerGridBroker(Broker):
     controller = "changes_device_viewer_grids"
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available changes device viewer grids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -101,7 +100,5 @@ class ChangesDeviceViewerGridBroker(Broker):
              :rtype summary: Hash
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    

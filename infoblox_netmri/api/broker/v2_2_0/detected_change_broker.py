@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DetectedChangeBroker(Broker):
     controller = "detected_changes"
-    
-    
+
     def update(self, **kwargs):
-    
         """Updates an existing detected change.
 
             **Inputs**
@@ -53,7 +52,5 @@ class DetectedChangeBroker(Broker):
              :rtype detected_change: DetectedChange
 
             """
-        
+
         return self.api_request(self._get_method_fullname("update"), kwargs)
-        
-    

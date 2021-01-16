@@ -1,60 +1,59 @@
 from ..remote import RemoteModel
-from infoblox_netmri.utils.utils import check_api_availability
 
 
 class TriggeredJobRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``name:`` none
     |  ``attribute type:`` string
-    
+
     |  ``description:`` none
     |  ``attribute type:`` string
-    
+
     |  ``enabled:`` none
     |  ``attribute type:`` string
-    
+
     |  ``script_id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``source:`` none
     |  ``attribute type:`` string
-    
+
     |  ``action_auto:`` none
     |  ``attribute type:`` string
-    
+
     |  ``cron:`` none
     |  ``attribute type:`` string
-    
+
     |  ``action_preapprove:`` none
     |  ``attribute type:`` string
-    
+
     |  ``last_run:`` none
     |  ``attribute type:`` string
-    
+
     |  ``created_at:`` none
     |  ``attribute type:`` string
-    
+
     |  ``updated_at:`` none
     |  ``attribute type:`` string
-    
+
     |  ``config_template_id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``job_type:`` none
     |  ``attribute type:`` string
-    
+
     |  ``created_by:`` none
     |  ``attribute type:`` string
-    
+
     |  ``updated_by:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -74,21 +73,3 @@ class TriggeredJobRemote(RemoteModel):
                   "created_by",
                   "updated_by",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

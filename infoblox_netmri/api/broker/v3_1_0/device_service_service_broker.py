@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class DeviceServiceServiceBroker(Broker):
     controller = "device_service_services"
-    
-    
+
     def show(self, **kwargs):
-    
         """Shows the details for the specified device service service.
 
             **Inputs**
@@ -45,13 +44,10 @@ class DeviceServiceServiceBroker(Broker):
              :rtype device_service_service: DeviceServiceService
 
             """
-        
+
         return self.api_request(self._get_method_fullname("show"), kwargs)
-        
-    
-    
+
     def index(self, **kwargs):
-    
         """Lists the available device service services. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
@@ -171,13 +167,10 @@ class DeviceServiceServiceBroker(Broker):
              :rtype device_service_services: Array of DeviceServiceService
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("index"), kwargs)
-        
-    
-    
+
     def search(self, **kwargs):
-    
         """Lists the available device service services matching the input criteria. This method provides a more flexible search interface than the index method, but searching using this method is more demanding on the system and will not perform to the same level as the index method. The input fields listed below will be used as in the index method, to filter the result, along with the optional query string and XML filter described below.
 
             **Inputs**
@@ -393,13 +386,10 @@ class DeviceServiceServiceBroker(Broker):
              :rtype device_service_services: Array of DeviceServiceService
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
-        
-    
-    
+
     def find(self, **kwargs):
-    
         """Lists the available device service services matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: ChildDeviceServiceID, DataSourceID, DeviceID, DeviceServiceServiceID, ParentDeviceServiceID, SvsvChangedCols, SvsvEndTime, SvsvFirstSeenTime, SvsvProvisionData, SvsvStartTime, SvsvTimestamp, SvsvUsage.
 
             **Inputs**
@@ -799,13 +789,10 @@ class DeviceServiceServiceBroker(Broker):
              :rtype device_service_services: Array of DeviceServiceService
 
             """
-        
+
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-        
-    
-    
+
     def parent_device_service(self, **kwargs):
-    
         """The parent service object of this relationship.
 
             **Inputs**
@@ -829,13 +816,10 @@ class DeviceServiceServiceBroker(Broker):
              :rtype : DeviceService
 
             """
-        
+
         return self.api_request(self._get_method_fullname("parent_device_service"), kwargs)
-        
-    
-    
+
     def child_device_service(self, **kwargs):
-    
         """The child service object of this relationship.
 
             **Inputs**
@@ -859,13 +843,10 @@ class DeviceServiceServiceBroker(Broker):
              :rtype : DeviceService
 
             """
-        
+
         return self.api_request(self._get_method_fullname("child_device_service"), kwargs)
-        
-    
-    
+
     def data_source(self, **kwargs):
-    
         """The collector NetMRI that collected this data record.
 
             **Inputs**
@@ -889,13 +870,10 @@ class DeviceServiceServiceBroker(Broker):
              :rtype : DataSource
 
             """
-        
+
         return self.api_request(self._get_method_fullname("data_source"), kwargs)
-        
-    
-    
+
     def device(self, **kwargs):
-    
         """The device from which this data was collected.
 
             **Inputs**
@@ -919,7 +897,5 @@ class DeviceServiceServiceBroker(Broker):
              :rtype : Device
 
             """
-        
+
         return self.api_request(self._get_method_fullname("device"), kwargs)
-        
-    

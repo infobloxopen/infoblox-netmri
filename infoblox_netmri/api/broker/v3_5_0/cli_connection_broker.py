@@ -1,11 +1,10 @@
 from ..broker import Broker
 
+
 class CliConnectionBroker(Broker):
     controller = "cli_connections"
-    
-    
+
     def create(self, **kwargs):
-    
         """Opens a CLI connection with the device.
 
             **Inputs**
@@ -37,13 +36,10 @@ class CliConnectionBroker(Broker):
              :rtype cli_connection: CliConnection
 
             """
-        
+
         return self.api_request(self._get_method_fullname("create"), kwargs)
-        
-    
-    
+
     def open(self, **kwargs):
-    
         """Opens a CLI connection with the device.
 
             **Inputs**
@@ -75,13 +71,10 @@ class CliConnectionBroker(Broker):
              :rtype cli_connection: CliConnection
 
             """
-        
+
         return self.api_request(self._get_method_fullname("open"), kwargs)
-        
-    
-    
+
     def close(self, **kwargs):
-    
         """Closes an open CLI connection with the device.
 
             **Inputs**
@@ -113,13 +106,10 @@ class CliConnectionBroker(Broker):
              :rtype command_response: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("close"), kwargs)
-        
-    
-    
+
     def set_variable(self, **kwargs):
-    
         """Set a local variable.
 
             **Inputs**
@@ -159,13 +149,10 @@ class CliConnectionBroker(Broker):
              :rtype command_response: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("set_variable"), kwargs)
-        
-    
-    
+
     def send_command(self, **kwargs):
-    
         """Sends a command to the device.
 
             **Inputs**
@@ -197,7 +184,7 @@ class CliConnectionBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param regex: Expected regex: prompt or question resulting of the command.
              :type regex: String
@@ -221,13 +208,10 @@ class CliConnectionBroker(Broker):
              :rtype command_response: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("send_command"), kwargs)
-        
-    
-    
+
     def send_async_command(self, **kwargs):
-    
         """Sends a command to the device asynchronously.
 
             **Inputs**
@@ -275,7 +259,7 @@ class CliConnectionBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param regex: Expected regex: prompt or question resulting of the command.
              :type regex: String
@@ -291,13 +275,10 @@ class CliConnectionBroker(Broker):
              :rtype command_response: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("send_async_command"), kwargs)
-        
-    
-    
+
     def get_async_command_status(self, **kwargs):
-    
         """Get the status of an asynchronously running command.
 
             **Inputs**
@@ -337,13 +318,10 @@ class CliConnectionBroker(Broker):
              :rtype command_response: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_async_command_status"), kwargs)
-        
-    
-    
+
     def get_template(self, **kwargs):
-    
         """get template
 
             **Inputs**
@@ -391,13 +369,10 @@ class CliConnectionBroker(Broker):
              :rtype command_response: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_template"), kwargs)
-        
-    
-    
+
     def get_list_value(self, **kwargs):
-    
         """Set local variables from a list.
 
             **Inputs**
@@ -469,13 +444,10 @@ class CliConnectionBroker(Broker):
              :rtype command_response: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("get_list_value"), kwargs)
-        
-    
-    
+
     def log_message(self, **kwargs):
-    
         """Log a message of the given severity. The message will be written to the custom.log file.
 
             **Inputs**
@@ -507,7 +479,7 @@ class CliConnectionBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 
+            |  ``default:``
 
              :param message: The message.
              :type message: String
@@ -523,7 +495,5 @@ class CliConnectionBroker(Broker):
              :rtype command_response: String
 
             """
-        
+
         return self.api_request(self._get_method_fullname("log_message"), kwargs)
-        
-    

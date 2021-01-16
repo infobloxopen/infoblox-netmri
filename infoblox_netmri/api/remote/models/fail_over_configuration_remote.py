@@ -1,60 +1,59 @@
 from ..remote import RemoteModel
-from infoblox_netmri.utils.utils import check_api_availability
 
 
 class FailOverConfigurationRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``unit_id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``status:`` none
     |  ``attribute type:`` string
-    
+
     |  ``virtual_ip:`` none
     |  ``attribute type:`` string
-    
+
     |  ``virtual_hostname:`` none
     |  ``attribute type:`` string
-    
+
     |  ``replication_direct_connect:`` none
     |  ``attribute type:`` string
-    
+
     |  ``primary_index:`` none
     |  ``attribute type:`` string
-    
+
     |  ``first_management_ip:`` none
     |  ``attribute type:`` string
-    
+
     |  ``first_management_hostname:`` none
     |  ``attribute type:`` string
-    
+
     |  ``second_management_ip:`` none
     |  ``attribute type:`` string
-    
+
     |  ``second_management_hostname:`` none
     |  ``attribute type:`` string
-    
+
     |  ``replication_port:`` none
     |  ``attribute type:`` string
-    
+
     |  ``first_replication_ip:`` none
     |  ``attribute type:`` string
-    
+
     |  ``first_replication_subnet:`` none
     |  ``attribute type:`` string
-    
+
     |  ``second_replication_ip:`` none
     |  ``attribute type:`` string
-    
+
     |  ``second_replication_subnet:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -74,21 +73,3 @@ class FailOverConfigurationRemote(RemoteModel):
                   "second_replication_ip",
                   "second_replication_subnet",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

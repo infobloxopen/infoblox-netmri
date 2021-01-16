@@ -1,33 +1,32 @@
 from ..remote import RemoteModel
-from infoblox_netmri.utils.utils import check_api_availability
 
 
 class UploadedCertificateGridRemote(RemoteModel):
     """
-    
 
-    
+
+
     |  ``id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``certificate_id:`` none
     |  ``attribute type:`` string
-    
+
     |  ``name:`` none
     |  ``attribute type:`` string
-    
+
     |  ``issuer:`` none
     |  ``attribute type:`` string
-    
+
     |  ``validFrom:`` none
     |  ``attribute type:`` string
-    
+
     |  ``validUntil:`` none
     |  ``attribute type:`` string
-    
+
     |  ``subject:`` none
     |  ``attribute type:`` string
-    
+
     """
 
     properties = ("id",
@@ -38,12 +37,3 @@ class UploadedCertificateGridRemote(RemoteModel):
                   "validUntil",
                   "subject",
                   )
-
-    
-    
-    
-    
-    
-    
-    
-    

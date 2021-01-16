@@ -26,7 +26,7 @@ setup(
     description="A simple client for the Infoblox NetMRI RESTful API.",
     long_description=readme,
     author="Infoblox, Inc.",
-    author_email='infoblox.com',
+    author_email='narslanova@infoblox.com',
     url='https://netmri_ip/api/dist',
     packages=find_packages(exclude='infoblox_netmri.tests'),
     package_dir={'infoblox_netmri':

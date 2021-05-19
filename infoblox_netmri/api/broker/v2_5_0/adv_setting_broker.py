@@ -14,7 +14,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param id: The internal NetMRI identifier of an advance setting.
+             :param id: The internal NetMRI identifier of an advanced setting.
              :type id: Integer
 
             **Outputs**
@@ -41,7 +41,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param adv_setting_def_id: The internal NetMRI identifier of an advance setting definition.
+             :param adv_setting_def_id: The internal NetMRI identifier of an advanced setting definition.
              :type adv_setting_def_id: Integer
 
             |  ``api version min:`` 2.5
@@ -49,7 +49,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param adv_setting_def_id: The internal NetMRI identifier of an advance setting definition.
+             :param adv_setting_def_id: The internal NetMRI identifier of an advanced setting definition.
              :type adv_setting_def_id: Array of Integer
 
             |  ``api version min:`` 2.3
@@ -57,7 +57,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param id: The internal NetMRI identifier of an advance setting.
+             :param id: The internal NetMRI identifier of an advanced setting.
              :type id: Integer
 
             |  ``api version min:`` 2.5
@@ -65,7 +65,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param id: The internal NetMRI identifier of an advance setting.
+             :param id: The internal NetMRI identifier of an advanced setting.
              :type id: Array of Integer
 
             |  ``api version min:`` None
@@ -148,7 +148,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param adv_setting_def_id: The internal NetMRI identifier of an advance setting definition.
+             :param adv_setting_def_id: The internal NetMRI identifier of an advanced setting definition.
              :type adv_setting_def_id: Integer
 
             |  ``api version min:`` 2.5
@@ -156,7 +156,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param adv_setting_def_id: The internal NetMRI identifier of an advance setting definition.
+             :param adv_setting_def_id: The internal NetMRI identifier of an advanced setting definition.
              :type adv_setting_def_id: Array of Integer
 
             |  ``api version min:`` 2.3
@@ -164,7 +164,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param id: The internal NetMRI identifier of an advance setting.
+             :param id: The internal NetMRI identifier of an advanced setting.
              :type id: Integer
 
             |  ``api version min:`` 2.5
@@ -172,7 +172,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param id: The internal NetMRI identifier of an advance setting.
+             :param id: The internal NetMRI identifier of an advanced setting.
              :type id: Array of Integer
 
             |  ``api version min:`` 2.3
@@ -196,7 +196,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param value: The value of a n advance setting.
+             :param value: The value of advanced setting.
              :type value: String
 
             |  ``api version min:`` 2.5
@@ -204,7 +204,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param value: The value of a n advance setting.
+             :param value: The value of advanced setting.
              :type value: Array of String
 
             |  ``api version min:`` None
@@ -303,7 +303,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_adv_setting_def_id: The operator to apply to the field adv_setting_def_id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. adv_setting_def_id: The internal NetMRI identifier of an advance setting definition. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_adv_setting_def_id: The operator to apply to the field adv_setting_def_id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. adv_setting_def_id: The internal NetMRI identifier of an advanced setting definition. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_adv_setting_def_id: String
 
             |  ``api version min:`` None
@@ -327,7 +327,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_id: The operator to apply to the field id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. id: The internal NetMRI identifier of an advance setting. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_id: The operator to apply to the field id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. id: The internal NetMRI identifier of an advanced setting. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_id: String
 
             |  ``api version min:`` None
@@ -375,7 +375,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_value: The operator to apply to the field value. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. value: The value of a n advance setting. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_value: The operator to apply to the field value. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. value: The value of advanced setting. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_value: String
 
             |  ``api version min:`` None
@@ -482,7 +482,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param id: The internal NetMRI identifier of an advance setting.
+             :param id: The internal NetMRI identifier of an advanced setting.
              :type id: Integer
 
             |  ``api version min:`` None
@@ -490,7 +490,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param value: The value of a n advance setting.
+             :param value: The value of advanced setting.
              :type value: String
 
             **Outputs**
@@ -541,7 +541,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param id: The internal NetMRI identifier of an advance setting.
+             :param id: The internal NetMRI identifier of an advanced setting.
              :type id: Integer
 
             |  ``api version min:`` None
@@ -549,7 +549,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param value: The value of a n advance setting. If omitted, this field will not be updated.
+             :param value: The value of advanced setting. If omitted, this field will not be updated.
              :type value: String
 
             **Outputs**
@@ -600,7 +600,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param id: The internal NetMRI identifier of an advance setting.
+             :param id: The internal NetMRI identifier of an advanced setting.
              :type id: Integer
 
             **Outputs**

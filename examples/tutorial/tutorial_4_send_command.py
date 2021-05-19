@@ -1,8 +1,6 @@
 from infoblox_netmri.easy import NetMRIEasy
 
 # This values will be provided by NetMRI before execution
-
-
 defaults = {
     "api_url": 'api_url',
     "http_username": 'http_username',

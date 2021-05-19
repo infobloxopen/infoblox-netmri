@@ -1,14 +1,14 @@
 Metadata-Version: 1.1
 Name: infoblox-netmri
-Version: 3.7.0.0
+Version: 3.8.0.0
 Summary: A simple client for the Infoblox NetMRI RESTful API.
 Home-page: https://netmri_ip/api/dist
 Author: Infoblox, Inc.
-Author-email: infoblox.com
+Author-email: support@infoblox.com
 License: Apache
 Description: Infoblox NetMRI Client
         ======================
-
+        
 Keywords: infoblox_netmri netmri infoblox network automation
 Platform: UNKNOWN
 Classifier: Development Status :: 5 - Production/Stable

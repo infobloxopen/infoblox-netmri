@@ -73,7 +73,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param PolicyShortName: The short name of the policy, as entered in the policy design center at the time of policy creation.
+             :param PolicyShortName: The short name of the policy, was entered in the policy design center at the time of policy creation.
              :type PolicyShortName: String
 
             |  ``api version min:`` 2.5
@@ -81,7 +81,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param PolicyShortName: The short name of the policy, as entered in the policy design center at the time of policy creation.
+             :param PolicyShortName: The short name of the policy, was entered in the policy design center at the time of policy creation.
              :type PolicyShortName: Array of String
 
             |  ``api version min:`` None
@@ -260,7 +260,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param PolicyDescription: The policy description, as entered at the time of policy execution.
+             :param PolicyDescription: The policy description, was entered at the time of policy execution.
              :type PolicyDescription: String
 
             |  ``api version min:`` 2.5
@@ -268,7 +268,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param PolicyDescription: The policy description, as entered at the time of policy execution.
+             :param PolicyDescription: The policy description, was entered at the time of policy execution.
              :type PolicyDescription: Array of String
 
             |  ``api version min:`` 2.3
@@ -388,7 +388,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param PolicyShortName: The short name of the policy, as entered in the policy design center at the time of policy creation.
+             :param PolicyShortName: The short name of the policy, was entered in the policy design center at the time of policy creation.
              :type PolicyShortName: String
 
             |  ``api version min:`` 2.5
@@ -396,7 +396,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param PolicyShortName: The short name of the policy, as entered in the policy design center at the time of policy creation.
+             :param PolicyShortName: The short name of the policy, was entered in the policy design center at the time of policy creation.
              :type PolicyShortName: Array of String
 
             |  ``api version min:`` 2.3
@@ -671,7 +671,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_PolicyDescription: The operator to apply to the field PolicyDescription. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. PolicyDescription: The policy description, as entered at the time of policy execution. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_PolicyDescription: The operator to apply to the field PolicyDescription. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. PolicyDescription: The policy description, was entered at the time of policy execution. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_PolicyDescription: String
 
             |  ``api version min:`` None
@@ -863,7 +863,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_PolicyShortName: The operator to apply to the field PolicyShortName. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. PolicyShortName: The short name of the policy, as entered in the policy design center at the time of policy creation. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_PolicyShortName: The operator to apply to the field PolicyShortName. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. PolicyShortName: The short name of the policy, was entered in the policy design center at the time of policy creation. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_PolicyShortName: String
 
             |  ``api version min:`` None

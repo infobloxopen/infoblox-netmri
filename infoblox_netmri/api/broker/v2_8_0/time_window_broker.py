@@ -1964,7 +1964,7 @@ class TimeWindowBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 2020-11-27 08:21:47
+            |  ``default:`` 2021-05-13 01:53:31
 
              :param start_date: Starting date of the time period to enumerate.
              :type start_date: DateTime
@@ -1972,7 +1972,7 @@ class TimeWindowBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 2020-12-27 08:21:47
+            |  ``default:`` 2021-06-12 01:53:31
 
              :param end_date: Ending date of the time period to enumerate.
              :type end_date: DateTime

@@ -10,10 +10,10 @@ class JobSpecificationRemote(RemoteModel):
     |  ``id:`` The internal NetMRI identifier for the job specification.
     |  ``attribute type:`` number
 
-    |  ``name:`` The job name as entered when creating the job.
+    |  ``name:`` The job name was entered when creating the job.
     |  ``attribute type:`` string
 
-    |  ``description:`` The description of the job as entered when creating the job.
+    |  ``description:`` The description of the job was entered when creating the job.
     |  ``attribute type:`` string
 
     |  ``script_id:`` The internal NetMRI identifier for the script associated with this job.

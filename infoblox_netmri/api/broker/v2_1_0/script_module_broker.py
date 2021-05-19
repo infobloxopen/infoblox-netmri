@@ -167,7 +167,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param name: The unique name of the of the Script Module.
+             :param name: The unique name of the Script Module.
              :type name: String
 
             |  ``api version min:`` None
@@ -266,7 +266,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param name: The unique name of the of the Script Module.
+             :param name: The unique name of the Script Module.
              :type name: String
 
             |  ``api version min:`` None
@@ -387,7 +387,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The configuration template file name
+             :param name: The script module file name
              :type name: String
 
             |  ``api version min:`` None

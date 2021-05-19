@@ -677,7 +677,7 @@ class AuthServiceBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param auth_method: The authentication method of the service. One of (local, radius, tacacs, ldap, activedirectory).
+             :param auth_method: The authentication method of the service. One of (local, radius, tacacs, ldap, activedirectory, saml, ocsp).
              :type auth_method: String
 
             |  ``api version min:`` None
@@ -806,8 +806,64 @@ class AuthServiceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` 10
 
-             :param radius_vsa_id: The Vendor Specific Attribute ID as defined in the radius server dictionary to retrieve the user's groups list.<br>        ATTRIBUTE       na-group-info          10    string   infoblox
+             :param radius_vsa_id: The Vendor Specific Attribute ID as defined in the radius server dictionary to retrieve the user's groups list.<br>        ATTRIBUTE na-group-info 10 string infoblox
              :type radius_vsa_id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_entity_id: SAML Entity ID
+             :type saml_entity_id: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_metadata: SAML Metadata URL
+             :type saml_metadata: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_group_attr: SAML Group membership attribute ID
+             :type saml_group_attr: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_cacert: SAML Certificate
+             :type saml_cacert: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_cacert_fn: SAML Certificate file name
+             :type saml_cacert_fn: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_cacert_key: SAML Key
+             :type saml_cacert_key: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_cacert_key_fn: SAML Key file name
+             :type saml_cacert_key_fn: String
 
             **Outputs**
 
@@ -834,54 +890,6 @@ class AuthServiceBroker(Broker):
 
              :return service_description: The new authentication service description.
              :rtype service_description: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return saml_entity_id: SAML Entity ID
-             :rtype saml_entity_id: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return saml_metadata: SAML Metadata URL
-             :rtype saml_metadata: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return saml_cacert: SAML Certificate
-             :rtype saml_cacert: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return saml_cacert_fn: SAML Certificate file name
-             :rtype saml_cacert_fn: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return saml_cacert_key: SAML Key
-             :rtype saml_cacert_key: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return saml_cacert_key_fn: SAML Key file name
-             :rtype saml_cacert_key_fn: String
 
             """
 
@@ -913,7 +921,7 @@ class AuthServiceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param auth_method: The authentication method of the service. One of (local, radius, tacacs, ldap, activedirectory).
+             :param auth_method: The authentication method of the service. One of (local, radius, tacacs, ldap, activedirectory, saml, ocsp).
              :type auth_method: String
 
             |  ``api version min:`` None
@@ -1042,8 +1050,64 @@ class AuthServiceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param radius_vsa_id: The Vendor Specific Attribute ID as defined in the radius server dictionary to retrieve the user's groups list.<br>        ATTRIBUTE       na-group-info          10    string   infoblox
+             :param radius_vsa_id: The Vendor Specific Attribute ID as defined in the radius server dictionary to retrieve the user's groups list.<br>        ATTRIBUTE na-group-info 10 string infoblox
              :type radius_vsa_id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_entity_id: SAML Entity ID
+             :type saml_entity_id: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_metadata: SAML Metadata URL
+             :type saml_metadata: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_group_attr: SAML Group membership attribute ID
+             :type saml_group_attr: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_cacert: SAML Certificate
+             :type saml_cacert: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_cacert_fn: SAML Certificate file name
+             :type saml_cacert_fn: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_cacert_key: SAML Key
+             :type saml_cacert_key: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param saml_cacert_key_fn: SAML Key file name
+             :type saml_cacert_key_fn: String
 
             **Outputs**
 
@@ -1070,54 +1134,6 @@ class AuthServiceBroker(Broker):
 
              :return service_description: The new authentication service description.
              :rtype service_description: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return saml_entity_id: SAML Entity ID
-             :rtype saml_entity_id: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return saml_metadata: SAML Metadata URL
-             :rtype saml_metadata: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return saml_cacert: SAML Certificate
-             :rtype saml_cacert: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return saml_cacert_fn: SAML Certificate file name
-             :rtype saml_cacert_fn: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return saml_cacert_key: SAML Key
-             :rtype saml_cacert_key: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return saml_cacert_key_fn: SAML Key file name
-             :rtype saml_cacert_key_fn: String
 
             """
 

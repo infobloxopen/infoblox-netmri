@@ -444,7 +444,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param VrrpIpTtlErrors: The total number of IP address error occurred in the Vrrp Router Statistics.
+             :param VrrpIpTtlErrors: The total number of IP address errors occurred in the Vrrp Router Statistics.
              :type VrrpIpTtlErrors: String
 
             |  ``api version min:`` 2.5
@@ -452,7 +452,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param VrrpIpTtlErrors: The total number of IP address error occurred in the Vrrp Router Statistics.
+             :param VrrpIpTtlErrors: The total number of IP address errors occurred in the Vrrp Router Statistics.
              :type VrrpIpTtlErrors: Array of String
 
             |  ``api version min:`` 2.4
@@ -1007,7 +1007,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_VrrpIpTtlErrors: The operator to apply to the field VrrpIpTtlErrors. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. VrrpIpTtlErrors: The total number of IP address error occurred in the Vrrp Router Statistics. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_VrrpIpTtlErrors: The operator to apply to the field VrrpIpTtlErrors. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. VrrpIpTtlErrors: The total number of IP address errors occurred in the Vrrp Router Statistics. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_VrrpIpTtlErrors: String
 
             |  ``api version min:`` None

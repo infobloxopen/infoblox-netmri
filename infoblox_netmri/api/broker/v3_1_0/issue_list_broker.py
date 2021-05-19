@@ -260,7 +260,7 @@ class IssueListBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param Deletes: Remove a issue from the list.
+             :param Deletes: Remove an issue from the list.
              :type Deletes: String
 
             |  ``api version min:`` 2.5
@@ -268,7 +268,7 @@ class IssueListBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param Deletes: Remove a issue from the list.
+             :param Deletes: Remove an issue from the list.
              :type Deletes: Array of String
 
             |  ``api version min:`` 2.4
@@ -484,7 +484,7 @@ class IssueListBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param Suppressed: A flag indicates whether a issue is suppressed or not.
+             :param Suppressed: A flag indicates whether an issue is suppressed or not.
              :type Suppressed: String
 
             |  ``api version min:`` 2.5
@@ -492,7 +492,7 @@ class IssueListBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param Suppressed: A flag indicates whether a issue is suppressed or not.
+             :param Suppressed: A flag indicates whether an issue is suppressed or not.
              :type Suppressed: Array of String
 
             |  ``api version min:`` 2.4
@@ -548,7 +548,7 @@ class IssueListBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param UnixDimDate: The unique dimensional date and time od device statistics.
+             :param UnixDimDate: The unique dimensional date and time of device statistics.
              :type UnixDimDate: DateTime
 
             |  ``api version min:`` 2.5
@@ -556,7 +556,7 @@ class IssueListBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param UnixDimDate: The unique dimensional date and time od device statistics.
+             :param UnixDimDate: The unique dimensional date and time of device statistics.
              :type UnixDimDate: Array of DateTime
 
             |  ``api version min:`` None
@@ -807,7 +807,7 @@ class IssueListBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_Deletes: The operator to apply to the field Deletes. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. Deletes: Remove a issue from the list. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_Deletes: The operator to apply to the field Deletes. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. Deletes: Remove an issue from the list. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_Deletes: String
 
             |  ``api version min:`` None
@@ -1143,7 +1143,7 @@ class IssueListBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_Suppressed: The operator to apply to the field Suppressed. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. Suppressed: A flag indicates whether a issue is suppressed or not. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_Suppressed: The operator to apply to the field Suppressed. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. Suppressed: A flag indicates whether an issue is suppressed or not. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_Suppressed: String
 
             |  ``api version min:`` None
@@ -1239,7 +1239,7 @@ class IssueListBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_UnixDimDate: The operator to apply to the field UnixDimDate. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. UnixDimDate: The unique dimensional date and time od device statistics. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_UnixDimDate: The operator to apply to the field UnixDimDate. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. UnixDimDate: The unique dimensional date and time of device statistics. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_UnixDimDate: String
 
             |  ``api version min:`` None

@@ -12,6 +12,7 @@ with open('README.rst') as readme_file:
 
 requirements = [
     'requests>=2.5.2',
+    'PyYAML>=5.3.1'
 ]
 
 test_requirements = [
@@ -22,11 +23,11 @@ test_requirements = [
 
 setup(
     name='infoblox-netmri',
-    version="3.7.0.0",
+    version="3.8.0.0",
     description="A simple client for the Infoblox NetMRI RESTful API.",
     long_description=readme,
     author="Infoblox, Inc.",
-    author_email='narslanova@infoblox.com',
+    author_email='support@infoblox.com',
     url='https://netmri_ip/api/dist',
     packages=find_packages(exclude='infoblox_netmri.tests'),
     package_dir={'infoblox_netmri':

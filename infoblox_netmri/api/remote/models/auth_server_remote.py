@@ -51,7 +51,7 @@ class AuthServerRemote(RemoteModel):
     |  ``source_interface_id:`` The NetMRI interface to use as source of the packets sent to the authentication server.
     |  ``attribute type:`` number
 
-    |  ``auth_version:`` The version use for the authentication (LDAP).
+    |  ``auth_version:`` The version used for the authentication (LDAP).
     |  ``attribute type:`` number
 
     """

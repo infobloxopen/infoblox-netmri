@@ -56,16 +56,16 @@ class DeviceSettingRemote(RemoteModel):
     |  ``DeviceConfigLockedInd:`` If true, then changes detected will be considered unauthorized.
     |  ``attribute type:`` bool
 
-    |  ``DeviceSNMPPollingInd:`` If true, than NetMRI SNMP polling is enabled for the device.
+    |  ``DeviceSNMPPollingInd:`` If true, then NetMRI SNMP polling is enabled for the device.
     |  ``attribute type:`` bool
 
-    |  ``DeviceConfigPollingInd:`` If true, than NetMRI configuration collection is enabled for the device.
+    |  ``DeviceConfigPollingInd:`` If true, then NetMRI configuration collection is enabled for the device.
     |  ``attribute type:`` bool
 
-    |  ``DevicePortScanningInd:`` If true, than NetMRI port scanning is enabled for the device.
+    |  ``DevicePortScanningInd:`` If true, then NetMRI port scanning is enabled for the device.
     |  ``attribute type:`` bool
 
-    |  ``DeviceSNMPAnalysisInd:`` If true, than NetMRI performs analysis on the device. NOTE: Despite the 'SNMP' in the name, this represents all analysis.
+    |  ``DeviceSNMPAnalysisInd:`` If true, then NetMRI performs analysis on the device. NOTE: Despite the 'SNMP' in the name, this represents all analysis.
     |  ``attribute type:`` bool
 
     |  ``DeviceFingerPrintInd:`` If true, then NetMRI fingerprinting is enabled for the device.
@@ -77,7 +77,7 @@ class DeviceSettingRemote(RemoteModel):
     |  ``DeviceVendorDefaultCollectionInd:`` If true, then NetMRI vendor default credential checking is enabled for the device.
     |  ``attribute type:`` bool
 
-    |  ``DeviceStandardsComplianceInd:`` If true, than this device should be considered during standards compliance checks.
+    |  ``DeviceStandardsComplianceInd:`` If true, then this device should be considered during standards compliance checks.
     |  ``attribute type:`` bool
 
     |  ``DeviceLicensedInd:`` If true, then this device is licensed as a network device by NetMRI.
@@ -116,7 +116,7 @@ class DeviceSettingRemote(RemoteModel):
     |  ``SAMLicensedInd:`` This flag indicating if the Device Security Control enabled.
     |  ``attribute type:`` string
 
-    |  ``DeviceCLIPollingInd:`` If true, than NetMRI CLI polling is enabled for the device.
+    |  ``DeviceCLIPollingInd:`` If true, then NetMRI CLI polling is enabled for the device.
     |  ``attribute type:`` bool
 
     |  ``DevicePerfEnvPollingInd:`` A flag that indicates if Performance and Environment polling is enabled for this device.

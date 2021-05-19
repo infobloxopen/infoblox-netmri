@@ -104,7 +104,7 @@ class InfraDeviceRemote(RemoteModel):
     |  ``attribute type:`` string
 
     |  ``available_mgmt_ips:`` Available Management IPs for a device.
-    |  ``attribute type:`` string
+    |  ``attribute type:`` list
 
     |  ``InfraDeviceTimestamp:`` The date and time this record was collected.
     |  ``attribute type:`` datetime
@@ -216,7 +216,7 @@ class InfraDeviceRemote(RemoteModel):
     |  ``cap_net_provisioning_ind:`` Capability of provisioning a network on an interface of this device.
     |  ``attribute type:`` bool
 
-    |  ``cap_net_vlan_provisioning_ind:`` Capability of creating a VLAN and provision a netowrk on its virtual interface.
+    |  ``cap_net_vlan_provisioning_ind:`` Capability of creating a VLAN and provision a network on its virtual interface.
     |  ``attribute type:`` bool
 
     |  ``cap_net_deprovisioning_ind:`` Capability of de-provisioning a network from this device.
@@ -237,7 +237,7 @@ class InfraDeviceRemote(RemoteModel):
     |  ``cap_net_provisioning_na_reason:`` Reason of non ability of provisioning a network on an interface of this device.
     |  ``attribute type:`` string
 
-    |  ``cap_net_vlan_provisioning_na_reason:`` Reason of non ability of creating a VLAN and provision a netowrk on its virtual interface.
+    |  ``cap_net_vlan_provisioning_na_reason:`` Reason of non ability of creating a VLAN and provision a network on its virtual interface.
     |  ``attribute type:`` string
 
     |  ``cap_net_deprovisioning_na_reason:`` Reason of non ability of de-provisioning a network from this device.
@@ -475,7 +475,7 @@ class InfraDeviceRemote(RemoteModel):
     @check_api_availability
     def config_revisions(self):
         """
-        Returns an array of cofiguration revisions on this device.
+        Returns an array of configuration revisions on this device.
         ``attribute type:`` model
         """
         return self.broker.config_revisions(**{"DeviceID": self.DeviceID})

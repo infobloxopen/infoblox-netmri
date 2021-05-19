@@ -41,7 +41,7 @@ class IfWirelessSSIDAuthRemote(RemoteModel):
     |  ``SSIDAuthEnabledInd:`` A flag indicates SSID Authentication is enabled or not.
     |  ``attribute type:`` bool
 
-    |  ``SSIDEAPRequiredInd:`` A flag indicates whether a extensible authentication protocol is required or not.
+    |  ``SSIDEAPRequiredInd:`` A flag indicates whether an extensible authentication protocol is required or not.
     |  ``attribute type:`` bool
 
     |  ``SSIDEAPMethod:`` The Extensible Authentication Protocol Method is used in theWirelessSSIDAuth.

@@ -55,6 +55,9 @@ class DevicePasswordLogRemote(RemoteModel):
     |  ``attribute type:`` number
 
 
+    |  ``Port:`` The port for cli connection.
+    |  ``attribute type:`` number
+
     """
 
     properties = ("DevicePwLogID",
@@ -72,6 +75,7 @@ class DevicePasswordLogRemote(RemoteModel):
                   "DevicePwLogSNMPAuthPWSecure",
                   "DevicePwLogSNMPPrivPWSecure",
                   "SecureVersion",
+                  "Port",
                   )
 
     @property

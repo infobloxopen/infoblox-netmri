@@ -39,16 +39,16 @@ class AccessChangeRemote(RemoteModel):
     |  ``user_proposal_json:`` The proposals accepted and modified by user, last sent to analysis - json format.
     |  ``attribute type:`` string
 
-    |  ``warning_count:`` The total number of warning raised in the last analysis.
+    |  ``warning_count:`` The total number of warnings raised in the last analysis.
     |  ``attribute type:`` number
 
     |  ``error_count:`` The total number of errors raised in last analysis.
     |  ``attribute type:`` number
 
-    |  ``job_specification_id:`` The internal NetMRI identifier of the job that hold the provisioning.
+    |  ``job_specification_id:`` The internal NetMRI identifier of the job that holds the provisioning.
     |  ``attribute type:`` number
 
-    |  ``job_id:`` The internal NetMRI identifier of execution of job.
+    |  ``job_id:`` The internal NetMRI identifier of job execution.
     |  ``attribute type:`` number
 
     |  ``former_proposal_json:`` The one level history of the proposals, aka proposals of the former analysis - json format.

@@ -209,7 +209,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param query: This value will be matched against discovery settings, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: range_value, range_type, {"ping_sweep_ind"=>{1=>"Enable", 0=>"Disable"}}, {"discovery_status"=>{"INCLUDE"=>"Include in discovery", "EXCLUDE"=>"Exclude from discovery", "IGNORE"=>"Exclude from management"}}, VirtualNetworkName.
+             :param query: This value will be matched against discovery settings, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: range_value, range_type, ping_sweep_ind (1, 0), discovery_status (INCLUDE, EXCLUDE, IGNORE), VirtualNetworkName.
              :type query: String
 
             |  ``api version min:`` 2.3

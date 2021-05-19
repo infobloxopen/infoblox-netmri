@@ -212,7 +212,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param MemberCount: The total number of member in an interface group.
+             :param MemberCount: The total number of members in an interface group.
              :type MemberCount: Integer
 
             |  ``api version min:`` 2.5
@@ -220,7 +220,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param MemberCount: The total number of member in an interface group.
+             :param MemberCount: The total number of members in an interface group.
              :type MemberCount: Array of Integer
 
             |  ``api version min:`` 2.4
@@ -495,7 +495,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_MemberCount: The operator to apply to the field MemberCount. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. MemberCount: The total number of member in an interface group. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_MemberCount: The operator to apply to the field MemberCount. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. MemberCount: The total number of members in an interface group. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_MemberCount: String
 
             |  ``api version min:`` None
@@ -746,7 +746,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param MemberCount: The total number of member in an interface group.
+             :param MemberCount: The total number of members in an interface group.
              :type MemberCount: Integer
 
             |  ``api version min:`` None
@@ -896,7 +896,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param MemberCount: The total number of member in an interface group. If omitted, this field will not be updated.
+             :param MemberCount: The total number of members in an interface group. If omitted, this field will not be updated.
              :type MemberCount: Integer
 
             |  ``api version min:`` None

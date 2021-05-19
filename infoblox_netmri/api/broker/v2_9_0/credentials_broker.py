@@ -249,6 +249,22 @@ class CredentialsBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
+            |  ``default:`` 22
+
+             :param config.SSH.Port: CLI SSH Port
+             :type config.SSH.Port: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` 23
+
+             :param config.Telnet.Port: CLI Telnet Port
+             :type config.Telnet.Port: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
             |  ``default:`` True
 
              :param DoPostLogin: Flag to indicate if test should just attempt log in or log in and attempt to access enable mode

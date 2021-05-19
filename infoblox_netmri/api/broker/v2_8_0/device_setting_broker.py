@@ -324,7 +324,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceCLIPollingInd: If true, than NetMRI CLI polling is enabled for the device.
+             :param DeviceCLIPollingInd: If true, then NetMRI CLI polling is enabled for the device.
              :type DeviceCLIPollingInd: Boolean
 
             |  ``api version min:`` 2.5
@@ -332,7 +332,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceCLIPollingInd: If true, than NetMRI CLI polling is enabled for the device.
+             :param DeviceCLIPollingInd: If true, then NetMRI CLI polling is enabled for the device.
              :type DeviceCLIPollingInd: Array of Boolean
 
             |  ``api version min:`` 2.4
@@ -404,7 +404,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceConfigPollingInd: If true, than NetMRI configuration collection is enabled for the device.
+             :param DeviceConfigPollingInd: If true, then NetMRI configuration collection is enabled for the device.
              :type DeviceConfigPollingInd: Boolean
 
             |  ``api version min:`` 2.5
@@ -412,7 +412,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceConfigPollingInd: If true, than NetMRI configuration collection is enabled for the device.
+             :param DeviceConfigPollingInd: If true, then NetMRI configuration collection is enabled for the device.
              :type DeviceConfigPollingInd: Array of Boolean
 
             |  ``api version min:`` 2.4
@@ -516,7 +516,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DevicePortScanningInd: If true, than NetMRI port scanning is enabled for the device.
+             :param DevicePortScanningInd: If true, then NetMRI port scanning is enabled for the device.
              :type DevicePortScanningInd: Boolean
 
             |  ``api version min:`` 2.5
@@ -524,7 +524,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DevicePortScanningInd: If true, than NetMRI port scanning is enabled for the device.
+             :param DevicePortScanningInd: If true, then NetMRI port scanning is enabled for the device.
              :type DevicePortScanningInd: Array of Boolean
 
             |  ``api version min:`` 2.4
@@ -644,7 +644,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceSNMPAnalysisInd: If true, than NetMRI performs analysis on the device. NOTE: Despite the 'SNMP' in the name, this represents all analysis.
+             :param DeviceSNMPAnalysisInd: If true, then NetMRI performs analysis on the device. NOTE: Despite the 'SNMP' in the name, this represents all analysis.
              :type DeviceSNMPAnalysisInd: Boolean
 
             |  ``api version min:`` 2.5
@@ -652,7 +652,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceSNMPAnalysisInd: If true, than NetMRI performs analysis on the device. NOTE: Despite the 'SNMP' in the name, this represents all analysis.
+             :param DeviceSNMPAnalysisInd: If true, then NetMRI performs analysis on the device. NOTE: Despite the 'SNMP' in the name, this represents all analysis.
              :type DeviceSNMPAnalysisInd: Array of Boolean
 
             |  ``api version min:`` 2.4
@@ -708,7 +708,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceSNMPPollingInd: If true, than NetMRI SNMP polling is enabled for the device.
+             :param DeviceSNMPPollingInd: If true, then NetMRI SNMP polling is enabled for the device.
              :type DeviceSNMPPollingInd: Boolean
 
             |  ``api version min:`` 2.5
@@ -716,7 +716,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceSNMPPollingInd: If true, than NetMRI SNMP polling is enabled for the device.
+             :param DeviceSNMPPollingInd: If true, then NetMRI SNMP polling is enabled for the device.
              :type DeviceSNMPPollingInd: Array of Boolean
 
             |  ``api version min:`` 2.4
@@ -756,7 +756,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceStandardsComplianceInd: If true, than this device should be considered during standards compliance checks.
+             :param DeviceStandardsComplianceInd: If true, then this device should be considered during standards compliance checks.
              :type DeviceStandardsComplianceInd: Boolean
 
             |  ``api version min:`` 2.5
@@ -764,7 +764,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceStandardsComplianceInd: If true, than this device should be considered during standards compliance checks.
+             :param DeviceStandardsComplianceInd: If true, then this device should be considered during standards compliance checks.
              :type DeviceStandardsComplianceInd: Array of Boolean
 
             |  ``api version min:`` 2.4
@@ -1183,7 +1183,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_DeviceCLIPollingInd: The operator to apply to the field DeviceCLIPollingInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DeviceCLIPollingInd: If true, than NetMRI CLI polling is enabled for the device. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_DeviceCLIPollingInd: The operator to apply to the field DeviceCLIPollingInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DeviceCLIPollingInd: If true, then NetMRI CLI polling is enabled for the device. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_DeviceCLIPollingInd: String
 
             |  ``api version min:`` None
@@ -1303,7 +1303,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_DeviceConfigPollingInd: The operator to apply to the field DeviceConfigPollingInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DeviceConfigPollingInd: If true, than NetMRI configuration collection is enabled for the device. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_DeviceConfigPollingInd: The operator to apply to the field DeviceConfigPollingInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DeviceConfigPollingInd: If true, then NetMRI configuration collection is enabled for the device. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_DeviceConfigPollingInd: String
 
             |  ``api version min:`` None
@@ -1471,7 +1471,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_DevicePortScanningInd: The operator to apply to the field DevicePortScanningInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DevicePortScanningInd: If true, than NetMRI port scanning is enabled for the device. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_DevicePortScanningInd: The operator to apply to the field DevicePortScanningInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DevicePortScanningInd: If true, then NetMRI port scanning is enabled for the device. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_DevicePortScanningInd: String
 
             |  ``api version min:`` None
@@ -1663,7 +1663,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_DeviceSNMPAnalysisInd: The operator to apply to the field DeviceSNMPAnalysisInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DeviceSNMPAnalysisInd: If true, than NetMRI performs analysis on the device. NOTE: Despite the 'SNMP' in the name, this represents all analysis. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_DeviceSNMPAnalysisInd: The operator to apply to the field DeviceSNMPAnalysisInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DeviceSNMPAnalysisInd: If true, then NetMRI performs analysis on the device. NOTE: Despite the 'SNMP' in the name, this represents all analysis. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_DeviceSNMPAnalysisInd: String
 
             |  ``api version min:`` None
@@ -1759,7 +1759,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_DeviceSNMPPollingInd: The operator to apply to the field DeviceSNMPPollingInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DeviceSNMPPollingInd: If true, than NetMRI SNMP polling is enabled for the device. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_DeviceSNMPPollingInd: The operator to apply to the field DeviceSNMPPollingInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DeviceSNMPPollingInd: If true, then NetMRI SNMP polling is enabled for the device. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_DeviceSNMPPollingInd: String
 
             |  ``api version min:`` None
@@ -1831,7 +1831,7 @@ class DeviceSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_DeviceStandardsComplianceInd: The operator to apply to the field DeviceStandardsComplianceInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DeviceStandardsComplianceInd: If true, than this device should be considered during standards compliance checks. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_DeviceStandardsComplianceInd: The operator to apply to the field DeviceStandardsComplianceInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DeviceStandardsComplianceInd: If true, then this device should be considered during standards compliance checks. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_DeviceStandardsComplianceInd: String
 
             |  ``api version min:`` None

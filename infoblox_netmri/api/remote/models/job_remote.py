@@ -10,7 +10,7 @@ class JobRemote(RemoteModel):
     |  ``JobID:`` The internal NetMRI identifier for this job.
     |  ``attribute type:`` number
 
-    |  ``Name:`` The name of this job, as entered when the job specification was defined, or when the job was executed from a script.
+    |  ``Name:`` The name of this job, was entered when the job specification was defined, or when the job was executed from a script.
     |  ``attribute type:`` string
 
     |  ``Type:`` The type of job. This can be Scheduled, Ad Hoc, or Run Now.
@@ -28,7 +28,7 @@ class JobRemote(RemoteModel):
     |  ``id:`` The internal NetMRI identifier for this job.
     |  ``attribute type:`` number
 
-    |  ``name:`` The name of this job, as entered when the job specification was defined, or when the job was executed from a script.
+    |  ``name:`` The name of this job, was entered when the job specification was defined, or when the job was executed from a script.
     |  ``attribute type:`` string
 
     |  ``job_type:`` The type of job. This can be Scheduled, Ad Hoc, or Run Now.

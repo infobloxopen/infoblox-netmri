@@ -32,7 +32,7 @@ class DeviceGroupPolicyRemote(RemoteModel):
     |  ``attribute type:`` number
 
 
-    |  ``PolicyStatus:`` The overall status for this device group an policy.
+    |  ``PolicyStatus:`` The overall status for this device group and policy.
     |  ``attribute type:`` string
 
     |  ``DevicesTotal:`` The number of devices in this device group against which this policy was deployed at the time of evaluation.

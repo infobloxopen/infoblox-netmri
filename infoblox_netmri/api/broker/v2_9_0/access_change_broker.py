@@ -220,7 +220,7 @@ class AccessChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param job_id: The internal NetMRI identifier of execution of job.
+             :param job_id: The internal NetMRI identifier of job execution.
              :type job_id: Array of Integer
 
             |  ``api version min:`` 2.6
@@ -228,7 +228,7 @@ class AccessChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param job_specification_id: The internal NetMRI identifier of the job that hold the provisioning.
+             :param job_specification_id: The internal NetMRI identifier of the job that holds the provisioning.
              :type job_specification_id: Array of Integer
 
             |  ``api version min:`` 2.6
@@ -276,7 +276,7 @@ class AccessChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param warning_count: The total number of warning raised in the last analysis.
+             :param warning_count: The total number of warnings raised in the last analysis.
              :type warning_count: Array of Integer
 
             |  ``api version min:`` None
@@ -623,7 +623,7 @@ class AccessChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_job_id: The operator to apply to the field job_id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. job_id: The internal NetMRI identifier of execution of job. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_job_id: The operator to apply to the field job_id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. job_id: The internal NetMRI identifier of job execution. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_job_id: String
 
             |  ``api version min:`` None
@@ -647,7 +647,7 @@ class AccessChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_job_specification_id: The operator to apply to the field job_specification_id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. job_specification_id: The internal NetMRI identifier of the job that hold the provisioning. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_job_specification_id: The operator to apply to the field job_specification_id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. job_specification_id: The internal NetMRI identifier of the job that holds the provisioning. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_job_specification_id: String
 
             |  ``api version min:`` None
@@ -791,7 +791,7 @@ class AccessChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_warning_count: The operator to apply to the field warning_count. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. warning_count: The total number of warning raised in the last analysis. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_warning_count: The operator to apply to the field warning_count. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. warning_count: The total number of warnings raised in the last analysis. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_warning_count: String
 
             |  ``api version min:`` None

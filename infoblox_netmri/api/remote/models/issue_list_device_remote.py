@@ -23,7 +23,7 @@ class IssueListDeviceRemote(RemoteModel):
     |  ``Adds:`` Added a new type of issue in the list device.
     |  ``attribute type:`` string
 
-    |  ``Deletes:`` Remove a issue from the list device.
+    |  ``Deletes:`` Remove an issue from the list device.
     |  ``attribute type:`` string
 
     |  ``Same:`` Maintain the issues as in the list device.

@@ -815,6 +815,70 @@ class SystemHealthSummaryBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return actual_category: Actual category
+             :rtype actual_category: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return category: Category name
+             :rtype category: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return datasource_id: The internal identifier for this data source
+             :rtype datasource_id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return expanded: Expanded?
+             :rtype expanded: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return children: Array of available child objects
+             :rtype children: Array
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return iconCls: Icon class name
+             :rtype iconCls: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return leaf: Leaf?
+             :rtype leaf: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return updated_at: The date and time the record was last modified
+             :rtype updated_at: DateTime
+
             """
 
         return self.api_request(self._get_method_fullname("tree"), kwargs)
@@ -833,6 +897,38 @@ class SystemHealthSummaryBroker(Broker):
              :type datasource_id: Integer
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return name: Metric name
+             :rtype name: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return value: Total amount of free bytes
+             :rtype value: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return date: Timestamp
+             :rtype date: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return caption: Partition caption: OS Storage, Archive Storage, Database Storage, User Storage, Log Storage, Temporary Storage or Application Storage
+             :rtype caption: String
 
             """
 
@@ -880,6 +976,54 @@ class SystemHealthSummaryBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return critical_count: The total number of critical messages
+             :rtype critical_count: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return warning_count: The total number of warning messages
+             :rtype warning_count: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return offline_count: The total number of offline messages
+             :rtype offline_count: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return rebooting_count: The total number of rebooting messages
+             :rtype rebooting_count: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return ok_count: The total number of OK messages
+             :rtype ok_count: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return health_status_outdated: Is health status outdated?
+             :rtype health_status_outdated: Boolean
+
             """
 
         return self.api_request(self._get_method_fullname("overall_system_health"), kwargs)
@@ -890,6 +1034,14 @@ class SystemHealthSummaryBroker(Broker):
             **Inputs**
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return layout: Always returns false
+             :rtype layout: Boolean
 
             """
 
@@ -910,6 +1062,14 @@ class SystemHealthSummaryBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return health_status_outdated: Is health status outdated?
+             :rtype health_status_outdated: Boolean
+
             """
 
         return self.api_request(self._get_method_fullname("license_issue_summary"), kwargs)
@@ -920,6 +1080,14 @@ class SystemHealthSummaryBroker(Broker):
             **Inputs**
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return layout: Always returns false
+             :rtype layout: Boolean
 
             """
 

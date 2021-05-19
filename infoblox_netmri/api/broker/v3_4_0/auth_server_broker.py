@@ -188,7 +188,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param auth_version: The version use for the authentication (LDAP).
+             :param auth_version: The version used for the authentication (LDAP).
              :type auth_version: Array of Integer
 
             |  ``api version min:`` 2.5
@@ -511,7 +511,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_auth_version: The operator to apply to the field auth_version. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. auth_version: The version use for the authentication (LDAP). For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_auth_version: The operator to apply to the field auth_version. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. auth_version: The version used for the authentication (LDAP). For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_auth_version: String
 
             |  ``api version min:`` None
@@ -834,7 +834,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param auth_version: The version use for the authentication (LDAP).
+             :param auth_version: The version used for the authentication (LDAP).
              :type auth_version: Integer
 
             |  ``api version min:`` None
@@ -973,7 +973,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param auth_version: The version use for the authentication (LDAP). If omitted, this field will not be updated.
+             :param auth_version: The version used for the authentication (LDAP). If omitted, this field will not be updated.
              :type auth_version: Integer
 
             |  ``api version min:`` None
@@ -1115,7 +1115,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param auth_version: The version use for the authentication (LDAP).
+             :param auth_version: The version used for the authentication (LDAP).
              :type auth_version: Integer
 
             |  ``api version min:`` None

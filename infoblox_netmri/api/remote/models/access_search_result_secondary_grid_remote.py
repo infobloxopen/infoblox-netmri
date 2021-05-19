@@ -30,10 +30,10 @@ class AccessSearchResultSecondaryGridRemote(RemoteModel):
     |  ``FltOrder:`` The rule order in the rule list.
     |  ``attribute type:`` number
 
-    |  ``DeviceConfigSummary:`` The original text of the configuration from witch this rule is built.
+    |  ``DeviceConfigSummary:`` The original text of the configuration from which this rule is built.
     |  ``attribute type:`` string
 
-    |  ``DeviceConfigHasDetailInd:`` A flag indicating if the original text has been shorten.
+    |  ``DeviceConfigHasDetailInd:`` A flag indicating if the original text has been shortened.
     |  ``attribute type:`` bool
 
     |  ``SrcObjName:`` The name of the source network object element of this rule.
@@ -42,7 +42,7 @@ class AccessSearchResultSecondaryGridRemote(RemoteModel):
     |  ``SrcObjSummary:`` The description of the source network object element of the rule.
     |  ``attribute type:`` string
 
-    |  ``SrcObjHasDetailInd:`` A flag indicating whether the description of the source network object has been shorten or not.
+    |  ``SrcObjHasDetailInd:`` A flag indicating whether the description of the source network object has been shortened or not.
     |  ``attribute type:`` bool
 
     |  ``DestObjName:`` The name of the destination network object element of this rule.
@@ -51,7 +51,7 @@ class AccessSearchResultSecondaryGridRemote(RemoteModel):
     |  ``DestObjSummary:`` The description of the destination network object element of the rule.
     |  ``attribute type:`` string
 
-    |  ``DestObjHasDetailInd:`` A flag indicating whether the description of the destination network object has been shorten or not.
+    |  ``DestObjHasDetailInd:`` A flag indicating whether the description of the destination network object has been shortened or not.
     |  ``attribute type:`` bool
 
     |  ``SvcProtocol:`` The name of the protocol, part of the service element of this rule.
@@ -60,7 +60,7 @@ class AccessSearchResultSecondaryGridRemote(RemoteModel):
     |  ``SvcProtocolSummary:`` The description of the protocol element of the rule.
     |  ``attribute type:`` string
 
-    |  ``SvcProtocolHasDetailInd:`` A flag indicating whether the description of the protocol has been shorten or not.
+    |  ``SvcProtocolHasDetailInd:`` A flag indicating whether the description of the protocol has been shortened or not.
     |  ``attribute type:`` bool
 
     |  ``SvcSourcePort:`` The text of the source ports, part of the service element of this rule.
@@ -69,7 +69,7 @@ class AccessSearchResultSecondaryGridRemote(RemoteModel):
     |  ``SvcSourcePortSummary:`` The description of the source-port element of the rule.
     |  ``attribute type:`` string
 
-    |  ``SvcSourceHasDetailInd:`` A flag indicating whether the source-port has been shorten or not.
+    |  ``SvcSourceHasDetailInd:`` A flag indicating whether the source-port has been shortened or not.
     |  ``attribute type:`` bool
 
     |  ``SvcName:`` The description of the service element of the rule.
@@ -78,7 +78,7 @@ class AccessSearchResultSecondaryGridRemote(RemoteModel):
     |  ``SvcSummary:`` The description of the service element of the rule.
     |  ``attribute type:`` string
 
-    |  ``SvcHasDetailInd:`` A flag indicating whether the service has been shorten or not.
+    |  ``SvcHasDetailInd:`` A flag indicating whether the service has been shortened or not.
     |  ``attribute type:`` bool
 
     |  ``HitCount:`` The number of hit count collected on this rule.

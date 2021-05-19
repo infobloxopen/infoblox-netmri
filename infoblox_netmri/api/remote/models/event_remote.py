@@ -29,7 +29,7 @@ class EventRemote(RemoteModel):
     |  ``EventState:`` The state of an event.
     |  ``attribute type:`` string
 
-    |  ``EventDetail:`` The detail of an event.
+    |  ``EventDetail:`` The details of an event.
     |  ``attribute type:`` string
 
     """

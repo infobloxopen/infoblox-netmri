@@ -255,7 +255,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param hint: The hint used the by discovery engine.
+             :param hint: The hint used by the discovery engine.
              :type hint: String
 
             |  ``api version min:`` None
@@ -330,7 +330,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param hint: The hint used the by discovery engine. If omitted, this field will not be updated.
+             :param hint: The hint used by the discovery engine. If omitted, this field will not be updated.
              :type hint: String
 
             |  ``api version min:`` None

@@ -284,7 +284,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param EventDetail: The detail of an event.
+             :param EventDetail: The details of an event.
              :type EventDetail: String
 
             |  ``api version min:`` 2.5
@@ -292,7 +292,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param EventDetail: The detail of an event.
+             :param EventDetail: The details of an event.
              :type EventDetail: Array of String
 
             |  ``api version min:`` 2.4
@@ -567,7 +567,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_EventDetail: The operator to apply to the field EventDetail. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. EventDetail: The detail of an event. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_EventDetail: The operator to apply to the field EventDetail. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. EventDetail: The details of an event. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_EventDetail: String
 
             |  ``api version min:`` None
@@ -858,7 +858,7 @@ class EventBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param EventDetail: The detail of an event.
+             :param EventDetail: The details of an event.
              :type EventDetail: String
 
             **Outputs**

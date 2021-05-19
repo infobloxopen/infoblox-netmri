@@ -30,7 +30,7 @@ class JobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param Name: The name of this job, as entered when the job specification was defined, or when the job was executed from a script.
+             :param Name: The name of this job, was entered when the job specification was defined, or when the job was executed from a script.
              :type Name: String
 
             |  ``api version min:`` 2.5
@@ -38,7 +38,7 @@ class JobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param Name: The name of this job, as entered when the job specification was defined, or when the job was executed from a script.
+             :param Name: The name of this job, was entered when the job specification was defined, or when the job was executed from a script.
              :type Name: Array of String
 
             |  ``api version min:`` 2
@@ -452,7 +452,7 @@ class JobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The name of this job, as entered when the job specification was defined, or when the job was executed from a script.
+             :param name: The name of this job, was entered when the job specification was defined, or when the job was executed from a script.
              :type name: String
 
             |  ``api version min:`` 2.5
@@ -460,7 +460,7 @@ class JobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The name of this job, as entered when the job specification was defined, or when the job was executed from a script.
+             :param name: The name of this job, was entered when the job specification was defined, or when the job was executed from a script.
              :type name: Array of String
 
             |  ``api version min:`` 2.3
@@ -1119,7 +1119,7 @@ class JobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_name: The operator to apply to the field name. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. name: The name of this job, as entered when the job specification was defined, or when the job was executed from a script. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_name: The operator to apply to the field name. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. name: The name of this job, was entered when the job specification was defined, or when the job was executed from a script. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_name: String
 
             |  ``api version min:`` None

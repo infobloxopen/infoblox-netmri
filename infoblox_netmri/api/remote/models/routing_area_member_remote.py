@@ -63,7 +63,7 @@ class RoutingAreaMemberRemote(RemoteModel):
 
     |  ``OspfAreaSummaryInd:`` Indicates how the router handles import of summary LSAs into stub areas. It has no effect on other areas.
 
-If true, than the router will both summarize and propagate summary LSAs into the stub area.
+If true, then the router will both summarize and propagate summary LSAs into the stub area.
 
 Otherwise, the router will neither originate nor propagate summary LSAs. It will rely entirely on its default route.
     |  ``attribute type:`` bool

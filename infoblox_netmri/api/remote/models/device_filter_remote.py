@@ -67,7 +67,7 @@ class DeviceFilterRemote(RemoteModel):
     |  ``FltArtificialInd:`` A flag indicating that this rule has no counterpart in the device configuration.
     |  ``attribute type:`` bool
 
-    |  ``FltConfigText:`` The original text of the configuration from witch this rule is built.
+    |  ``FltConfigText:`` The original text of the configuration from which this rule is built.
     |  ``attribute type:`` string
 
     |  ``FltProvisionData:`` Internal data - do not modify, may change without warning.

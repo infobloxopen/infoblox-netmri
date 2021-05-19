@@ -43,7 +43,7 @@ class AccessProvisioningDevicesGridRemote(RemoteModel):
     |  ``DeviceFilterSetID:`` The internal NetMRI identifier of the rule list.
     |  ``attribute type:`` string
 
-    |  ``FltSetName:`` The name the rule list.
+    |  ``FltSetName:`` The name of the rule list.
     |  ``attribute type:`` string
 
     |  ``Network:`` The name of the Network View associated.

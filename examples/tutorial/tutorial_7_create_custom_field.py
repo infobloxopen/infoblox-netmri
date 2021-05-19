@@ -45,3 +45,4 @@ with NetMRIEasy(**defaults) as easy:
         }
         result = device_broker.update(**params)
         print(result.custom_chasis_serial_number)
+

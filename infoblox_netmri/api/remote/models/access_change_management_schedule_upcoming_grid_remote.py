@@ -24,7 +24,7 @@ class AccessChangeManagementScheduleUpcomingGridRemote(RemoteModel):
     |  ``status:`` The status of the scheduled job.
     |  ``attribute type:`` string
 
-    |  ``last_run_start:`` The date and time this job was last time ran.
+    |  ``last_run_start:`` The date and time this job was last run.
     |  ``attribute type:`` string
 
     |  ``last_run_status:`` The last execution status for this job when already ran.
@@ -33,7 +33,7 @@ class AccessChangeManagementScheduleUpcomingGridRemote(RemoteModel):
     |  ``description:`` The description of the job.
     |  ``attribute type:`` string
 
-    |  ``approved_by:`` The user that approve the job.
+    |  ``approved_by:`` The user that approves the job.
     |  ``attribute type:`` string
 
     |  ``created_by:`` The user that creates the job.

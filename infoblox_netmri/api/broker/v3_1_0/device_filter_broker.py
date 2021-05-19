@@ -252,7 +252,7 @@ class DeviceFilterBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param FltConfigText: The original text of the configuration from witch this rule is built.
+             :param FltConfigText: The original text of the configuration from which this rule is built.
              :type FltConfigText: Array of String
 
             |  ``api version min:`` 2.6
@@ -687,7 +687,7 @@ class DeviceFilterBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_FltConfigText: The operator to apply to the field FltConfigText. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. FltConfigText: The original text of the configuration from witch this rule is built. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_FltConfigText: The operator to apply to the field FltConfigText. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. FltConfigText: The original text of the configuration from which this rule is built. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_FltConfigText: String
 
             |  ``api version min:`` None

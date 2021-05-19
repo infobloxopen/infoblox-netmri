@@ -806,7 +806,7 @@ class AuthServiceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` 10
 
-             :param radius_vsa_id: The Vendor Specific Attribute ID as defined in the radius server dictionary to retrieve the user's groups list.<br>        ATTRIBUTE       na-group-info          10    string   infoblox
+             :param radius_vsa_id: The Vendor Specific Attribute ID as defined in the radius server dictionary to retrieve the user's groups list.<br>        ATTRIBUTE na-group-info 10 string infoblox
              :type radius_vsa_id: Integer
 
             **Outputs**
@@ -994,7 +994,7 @@ class AuthServiceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param radius_vsa_id: The Vendor Specific Attribute ID as defined in the radius server dictionary to retrieve the user's groups list.<br>        ATTRIBUTE       na-group-info          10    string   infoblox
+             :param radius_vsa_id: The Vendor Specific Attribute ID as defined in the radius server dictionary to retrieve the user's groups list.<br>        ATTRIBUTE na-group-info 10 string infoblox
              :type radius_vsa_id: Integer
 
             **Outputs**

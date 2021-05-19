@@ -21,3 +21,4 @@ with NetMRIEasy(**defaults) as easy:
     # send async command. As result return TrakingID. If flag wait_until_finished=True, will work as send_command
     result = easy.send_async_command('show version', 60, '', wait_until_finished=False)
     print(result)
+

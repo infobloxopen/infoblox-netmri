@@ -500,7 +500,7 @@ class DeviceGroupPolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param PolicyStatus: The overall status for this device group an policy.
+             :param PolicyStatus: The overall status for this device group and policy.
              :type PolicyStatus: String
 
             |  ``api version min:`` 2.5
@@ -508,7 +508,7 @@ class DeviceGroupPolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param PolicyStatus: The overall status for this device group an policy.
+             :param PolicyStatus: The overall status for this device group and policy.
              :type PolicyStatus: Array of String
 
             |  ``api version min:`` None
@@ -1087,7 +1087,7 @@ class DeviceGroupPolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_PolicyStatus: The operator to apply to the field PolicyStatus. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. PolicyStatus: The overall status for this device group an policy. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_PolicyStatus: The operator to apply to the field PolicyStatus. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. PolicyStatus: The overall status for this device group and policy. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_PolicyStatus: String
 
             |  ``api version min:`` None

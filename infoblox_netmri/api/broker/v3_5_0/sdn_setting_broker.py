@@ -193,7 +193,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param on_prem: True if controller is on premises. Otherwise we consider it is in cloud.
+             :param on_prem: True if controller is on premises. Otherwise we consider it is in the cloud.
              :type on_prem: Array of Boolean
 
             |  ``api version min:`` 3.4
@@ -217,7 +217,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param sdn_password: Password used to connect SDN controller.
+             :param sdn_password: Password used to connect to the SDN controller.
              :type sdn_password: Array of String
 
             |  ``api version min:`` 3.4
@@ -233,7 +233,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param sdn_username: Username used to connect SDN controller.
+             :param sdn_username: Username used to connect to the SDN controller.
              :type sdn_username: Array of String
 
             |  ``api version min:`` 3.4
@@ -652,7 +652,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_on_prem: The operator to apply to the field on_prem. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. on_prem: True if controller is on premises. Otherwise we consider it is in cloud. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_on_prem: The operator to apply to the field on_prem. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. on_prem: True if controller is on premises. Otherwise we consider it is in the cloud. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_on_prem: String
 
             |  ``api version min:`` None
@@ -724,7 +724,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_sdn_password: The operator to apply to the field sdn_password. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. sdn_password: Password used to connect SDN controller. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_sdn_password: The operator to apply to the field sdn_password. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. sdn_password: Password used to connect to the SDN controller. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_sdn_password: String
 
             |  ``api version min:`` None
@@ -772,7 +772,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_sdn_username: The operator to apply to the field sdn_username. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. sdn_username: Username used to connect SDN controller. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_sdn_username: The operator to apply to the field sdn_username. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. sdn_username: Username used to connect to the SDN controller. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_sdn_username: String
 
             |  ``api version min:`` None
@@ -1082,7 +1082,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param on_prem: True if controller is on premises. Otherwise we consider it is in cloud.
+             :param on_prem: True if controller is on premises. Otherwise we consider it is in the cloud.
              :type on_prem: Boolean
 
             |  ``api version min:`` None
@@ -1106,7 +1106,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param sdn_password: Password used to connect SDN controller.
+             :param sdn_password: Password used to connect to the SDN controller.
              :type sdn_password: String
 
             |  ``api version min:`` None
@@ -1122,7 +1122,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param sdn_username: Username used to connect SDN controller.
+             :param sdn_username: Username used to connect to the SDN controller.
              :type sdn_username: String
 
             |  ``api version min:`` None
@@ -1285,7 +1285,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param on_prem: True if controller is on premises. Otherwise we consider it is in cloud. If omitted, this field will not be updated.
+             :param on_prem: True if controller is on premises. Otherwise we consider it is in the cloud. If omitted, this field will not be updated.
              :type on_prem: Boolean
 
             |  ``api version min:`` None
@@ -1309,7 +1309,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param sdn_password: Password used to connect SDN controller. If omitted, this field will not be updated.
+             :param sdn_password: Password used to connect to the SDN controller. If omitted, this field will not be updated.
              :type sdn_password: String
 
             |  ``api version min:`` None
@@ -1325,7 +1325,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param sdn_username: Username used to connect SDN controller. If omitted, this field will not be updated.
+             :param sdn_username: Username used to connect to the SDN controller. If omitted, this field will not be updated.
              :type sdn_username: String
 
             |  ``api version min:`` None

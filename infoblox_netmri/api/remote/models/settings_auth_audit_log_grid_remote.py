@@ -12,6 +12,9 @@ class SettingsAuthAuditLogGridRemote(RemoteModel):
     |  ``created_at:`` none
     |  ``attribute type:`` string
 
+    |  ``unit_name:`` none
+    |  ``attribute type:`` string
+
     |  ``user_name:`` none
     |  ``attribute type:`` string
 
@@ -37,6 +40,7 @@ class SettingsAuthAuditLogGridRemote(RemoteModel):
 
     properties = ("id",
                   "created_at",
+                  "unit_name",
                   "user_name",
                   "event_type",
                   "message",

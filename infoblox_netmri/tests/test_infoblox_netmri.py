@@ -9,8 +9,12 @@ Tests for `infoblox_netmri` module.
 """
 
 import unittest
+import yaml
 import json
 from requests import Session
+
+from os import rename, remove
+from os.path import isfile, expanduser
 
 from httmock import with_httmock, urlmatch
 from mock import patch
@@ -113,6 +117,29 @@ def send_command_result(*_, **__):
     return {'command_response': "OK"}
 
 
+CREDENTIALS_FILE = expanduser('~/.netmri.yml')
+TEST_CREDENTIALS_FILE = expanduser('~/.netmri_test.yml')
+
+
+def save_non_test_file():
+    if isfile(CREDENTIALS_FILE):
+        rename(CREDENTIALS_FILE, TEST_CREDENTIALS_FILE)
+
+
+def create_test_file(**kwargs):
+    save_non_test_file()
+    with open(CREDENTIALS_FILE, 'w') as file:
+        if kwargs:
+            yaml.dump(kwargs, file)
+
+
+def restore_files():
+    if isfile(CREDENTIALS_FILE):
+        remove(CREDENTIALS_FILE)
+    if isfile(TEST_CREDENTIALS_FILE):
+        rename(TEST_CREDENTIALS_FILE, CREDENTIALS_FILE)
+
+
 class TestInfobloxNetmri(unittest.TestCase):
     opts = {"host": "localhost",
             "username": "admin",
@@ -130,16 +157,56 @@ class TestInfobloxNetmri(unittest.TestCase):
     @with_httmock(authenticate_response)
     def test_init_missing(self):
         self.assertRaises(TypeError, InfobloxNetMRI,
-                          host="localhost",
-                          user="admin")
+                          username="admin",
+                          password="admin",
+                          api_version="3.1")
 
-        self.assertRaises(TypeError, InfobloxNetMRI,
-                          host="localhost",
-                          password="admin")
+    @with_httmock(authenticate_response)
+    def test_init_from_file(self):
+        username = 'user'
+        password = 'pass'
+        create_test_file(username=username, password=password)
 
-        self.assertRaises(TypeError, InfobloxNetMRI,
-                          user="admin",
-                          password="admin")
+        netmri = InfobloxNetMRI(host="localhost", api_version="3.1")
+        self.assertEqual(type(netmri), InfobloxNetMRI)
+        self.assertEqual(username, netmri.username)
+        self.assertEqual(password, netmri.password)
+
+        restore_files()
+
+    @with_httmock(authenticate_response)
+    def test_init_from_file_missing(self):
+        # wrong key in file (user instead of username, passw instead of password)
+        username = 'user'
+        password = 'pass'
+        create_test_file(user=username, passw=password)
+
+        netmri = InfobloxNetMRI(host="localhost", api_version="3.1")
+        self.assertEqual(type(netmri), InfobloxNetMRI)
+        self.assertEqual(None, netmri.username)
+        self.assertEqual(None, netmri.password)
+
+        restore_files()
+
+        # missing keys in file
+        create_test_file()
+
+        netmri = InfobloxNetMRI(host="localhost", api_version="3.1")
+        self.assertEqual(type(netmri), InfobloxNetMRI)
+        self.assertEqual(None, netmri.username)
+        self.assertEqual(None, netmri.password)
+
+        restore_files()
+
+        # no file
+        save_non_test_file()
+
+        netmri = InfobloxNetMRI(host="localhost", api_version="3.1")
+        self.assertEqual(type(netmri), InfobloxNetMRI)
+        self.assertEqual(None, netmri.username)
+        self.assertEqual(None, netmri.password)
+
+        restore_files()
 
     @with_httmock(authenticate_response)
     def test_init_ssl_verify_bool(self):
@@ -321,3 +388,4 @@ if __name__ == '__main__':
     import sys
 
     sys.exit(unittest.main())
+

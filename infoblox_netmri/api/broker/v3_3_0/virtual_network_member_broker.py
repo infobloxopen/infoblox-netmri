@@ -367,7 +367,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_DefaultRDLeft: The operator to apply to the field DefaultRDLeft. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DefaultRDLeft: The left-hand portion of the default Route Distinguisher; use DefaultRDType to identify if it is an AS number or and IPv4 address. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_DefaultRDLeft: The operator to apply to the field DefaultRDLeft. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. DefaultRDLeft: The left-hand portion of the default Route Distinguisher; use DefaultRDType to identify if it is an AS number or an IPv4 address. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_DefaultRDLeft: String
 
             |  ``api version min:`` None
@@ -823,7 +823,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_member_rd: The operator to apply to the field member_rd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. member_rd: The displayable VRF route distinguisher of this obkect. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_member_rd: The operator to apply to the field member_rd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. member_rd: The displayable VRF route distinguisher of this object. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_member_rd: String
 
             |  ``api version min:`` None
@@ -999,7 +999,7 @@ class VirtualNetworkMemberBroker(Broker):
         return self.api_request(self._get_method_fullname("virtual_network"), kwargs)
 
     def member_rd(self, **kwargs):
-        """The displayable VRF route distinguisher of this obkect.
+        """The displayable VRF route distinguisher of this object.
 
             **Inputs**
 
@@ -1018,7 +1018,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The displayable VRF route distinguisher of this obkect.
+             :return : The displayable VRF route distinguisher of this object.
              :rtype : String
 
             """

@@ -444,7 +444,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_hint: The operator to apply to the field hint. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. hint: The hint used the by discovery engine. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_hint: The operator to apply to the field hint. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. hint: The hint used by the discovery engine. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_hint: String
 
             |  ``api version min:`` None
@@ -818,7 +818,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param hint: The hint used the by discovery engine.
+             :param hint: The hint used by the discovery engine.
              :type hint: String
 
             |  ``api version min:`` None
@@ -893,7 +893,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param hint: The hint used the by discovery engine. If omitted, this field will not be updated.
+             :param hint: The hint used by the discovery engine. If omitted, this field will not be updated.
              :type hint: String
 
             |  ``api version min:`` None

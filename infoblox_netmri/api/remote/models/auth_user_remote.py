@@ -18,7 +18,7 @@ class AuthUserRemote(RemoteModel):
     |  ``email:`` The user's email address.
     |  ``attribute type:`` string
 
-    |  ``notes:`` Notes on the user, as entered by the administrator.
+    |  ``notes:`` Notes on the user, was entered by the administrator.
     |  ``attribute type:`` string
 
     |  ``created_at:`` The date and time the record was initially created in NetMRI.
@@ -36,7 +36,7 @@ class AuthUserRemote(RemoteModel):
     |  ``is_system:`` A flag indicating whether this is a built-in user. Built-in users cannot be removed.
     |  ``attribute type:`` number
 
-    |  ``last_login:`` The date and time this use last logged into the NetMRI.
+    |  ``last_login:`` The date and time this user last logged into the NetMRI.
     |  ``attribute type:`` datetime
 
     |  ``expiration:`` The expiration date for this user's password.
@@ -81,13 +81,13 @@ class AuthUserRemote(RemoteModel):
     |  ``auth_service_id:`` The id of the last authentication service where this user was authenticated.
     |  ``attribute type:`` number
 
-    |  ``force_local_ind:`` A flag indicating whether user is forced to use local authorisation or not.
+    |  ``force_local_ind:`` A flag indicating whether user is forced to use local authorization or not.
     |  ``attribute type:`` bool
 
     |  ``last_local_authz_ind:`` The source where the last authorization came from. May be 0 - Remote, 1 - Local, 2 - Forced Local
     |  ``attribute type:`` number
 
-    |  ``cert:`` Client Certificate stored on clinet success authorization when CAC is enabled
+    |  ``cert:`` Client Certificate stored on client success authorization when CAC is enabled
     |  ``attribute type:`` string
 
     |  ``db_username:`` Username for MySQL Database.

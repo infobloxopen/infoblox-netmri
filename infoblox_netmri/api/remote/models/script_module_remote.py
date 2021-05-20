@@ -9,7 +9,7 @@ class ScriptModuleRemote(RemoteModel):
     |  ``id:`` The internal NetMRI identifier of the Script Module.
     |  ``attribute type:`` number
 
-    |  ``name:`` The unique name of the of the Script Module.
+    |  ``name:`` The unique name of the Script Module.
     |  ``attribute type:`` string
 
     |  ``category:`` User defined category of the Script Module.

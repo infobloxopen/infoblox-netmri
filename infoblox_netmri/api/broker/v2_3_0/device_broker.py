@@ -3990,7 +3990,7 @@ class DeviceBroker(Broker):
         return self.api_request(self._get_method_fullname("cap_net_provisioning_ind"), kwargs)
 
     def cap_net_vlan_provisioning_ind(self, **kwargs):
-        """Capability of creating a VLAN and provision a netowrk on its virtual interface.
+        """Capability of creating a VLAN and provision a network on its virtual interface.
 
             **Inputs**
 
@@ -4009,7 +4009,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of creating a VLAN and provision a netowrk on its virtual interface.
+             :return : Capability of creating a VLAN and provision a network on its virtual interface.
              :rtype : Boolean
 
             """
@@ -4179,7 +4179,7 @@ class DeviceBroker(Broker):
         return self.api_request(self._get_method_fullname("cap_net_provisioning_na_reason"), kwargs)
 
     def cap_net_vlan_provisioning_na_reason(self, **kwargs):
-        """Reason of non ability of creating a VLAN and provision a netowrk on its virtual interface.
+        """Reason of non ability of creating a VLAN and provision a network on its virtual interface.
 
             **Inputs**
 
@@ -4198,7 +4198,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of creating a VLAN and provision a netowrk on its virtual interface.
+             :return : Reason of non ability of creating a VLAN and provision a network on its virtual interface.
              :rtype : String
 
             """

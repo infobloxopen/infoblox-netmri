@@ -43,7 +43,7 @@ class VrrpRouterStatRemote(RemoteModel):
     |  ``VrrpAuthFailures:`` The total number of authentication failures occurred in the Vrrp router statistics.
     |  ``attribute type:`` string
 
-    |  ``VrrpIpTtlErrors:`` The total number of IP address error occurred in the Vrrp Router Statistics.
+    |  ``VrrpIpTtlErrors:`` The total number of IP address errors occurred in the Vrrp Router Statistics.
     |  ``attribute type:`` string
 
     |  ``VrrpPriorityZeroPktsRcvd:`` The packet received with priority zero.

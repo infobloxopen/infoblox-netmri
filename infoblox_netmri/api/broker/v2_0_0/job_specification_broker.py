@@ -30,7 +30,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The job name as entered when creating the job.
+             :param name: The job name was entered when creating the job.
              :type name: String
 
             |  ``api version min:`` 2.5
@@ -38,7 +38,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The job name as entered when creating the job.
+             :param name: The job name was entered when creating the job.
              :type name: Array of String
 
             |  ``api version min:`` 2
@@ -215,7 +215,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param name: The job name as entered when creating the job.
+             :param name: The job name was entered when creating the job.
              :type name: String
 
             |  ``api version min:`` None
@@ -330,7 +330,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The job name as entered when creating the job. If omitted, this field will not be updated.
+             :param name: The job name was entered when creating the job. If omitted, this field will not be updated.
              :type name: String
 
             |  ``api version min:`` None

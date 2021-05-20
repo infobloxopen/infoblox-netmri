@@ -30,7 +30,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The job name as entered when creating the job.
+             :param name: The job name was entered when creating the job.
              :type name: String
 
             |  ``api version min:`` 2.5
@@ -38,7 +38,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The job name as entered when creating the job.
+             :param name: The job name was entered when creating the job.
              :type name: Array of String
 
             |  ``api version min:`` 2
@@ -340,7 +340,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param description: The description of the job as entered when creating the job.
+             :param description: The description of the job was entered when creating the job.
              :type description: String
 
             |  ``api version min:`` 2.5
@@ -348,7 +348,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param description: The description of the job as entered when creating the job.
+             :param description: The description of the job was entered when creating the job.
              :type description: Array of String
 
             |  ``api version min:`` 2.3
@@ -404,7 +404,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The job name as entered when creating the job.
+             :param name: The job name was entered when creating the job.
              :type name: String
 
             |  ``api version min:`` 2.5
@@ -412,7 +412,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The job name as entered when creating the job.
+             :param name: The job name was entered when creating the job.
              :type name: Array of String
 
             |  ``api version min:`` 2.3
@@ -887,7 +887,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_description: The operator to apply to the field description. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. description: The description of the job as entered when creating the job. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_description: The operator to apply to the field description. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. description: The description of the job was entered when creating the job. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_description: String
 
             |  ``api version min:`` None
@@ -983,7 +983,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_name: The operator to apply to the field name. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. name: The job name as entered when creating the job. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_name: The operator to apply to the field name. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. name: The job name was entered when creating the job. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_name: String
 
             |  ``api version min:`` None
@@ -1341,7 +1341,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param name: The job name as entered when creating the job.
+             :param name: The job name was entered when creating the job.
              :type name: String
 
             |  ``api version min:`` None
@@ -1488,7 +1488,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The job name as entered when creating the job. If omitted, this field will not be updated.
+             :param name: The job name was entered when creating the job. If omitted, this field will not be updated.
              :type name: String
 
             |  ``api version min:`` None

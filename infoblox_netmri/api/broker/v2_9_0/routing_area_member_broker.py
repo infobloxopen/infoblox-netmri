@@ -294,7 +294,7 @@ class RoutingAreaMemberBroker(Broker):
 
              :param OspfAreaSummaryInd: Indicates how the router handles import of summary LSAs into stub areas. It has no effect on other areas.
 
-If true, than the router will both summarize and propagate summary LSAs into the stub area.
+If true, then the router will both summarize and propagate summary LSAs into the stub area.
 
 Otherwise, the router will neither originate nor propagate summary LSAs. It will rely entirely on its default route.
              :type OspfAreaSummaryInd: Boolean
@@ -306,7 +306,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
 
              :param OspfAreaSummaryInd: Indicates how the router handles import of summary LSAs into stub areas. It has no effect on other areas.
 
-If true, than the router will both summarize and propagate summary LSAs into the stub area.
+If true, then the router will both summarize and propagate summary LSAs into the stub area.
 
 Otherwise, the router will neither originate nor propagate summary LSAs. It will rely entirely on its default route.
              :type OspfAreaSummaryInd: Array of Boolean
@@ -737,7 +737,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
 
              :param op_OspfAreaSummaryInd: The operator to apply to the field OspfAreaSummaryInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. OspfAreaSummaryInd: Indicates how the router handles import of summary LSAs into stub areas. It has no effect on other areas.
 
-If true, than the router will both summarize and propagate summary LSAs into the stub area.
+If true, then the router will both summarize and propagate summary LSAs into the stub area.
 
 Otherwise, the router will neither originate nor propagate summary LSAs. It will rely entirely on its default route. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_OspfAreaSummaryInd: String

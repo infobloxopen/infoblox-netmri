@@ -21,7 +21,7 @@ class BackgroundTaskRemote(RemoteModel):
     |  ``name:`` The name of background task.
     |  ``attribute type:`` string
 
-    |  ``progress_value:`` The value of background task progress in percents.
+    |  ``progress_value:`` The value of background task progress in percent.
     |  ``attribute type:`` number
 
     |  ``status:`` The status of background task.

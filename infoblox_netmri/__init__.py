@@ -1,4 +1,4 @@
-# Copyright 2015 Infoblox Inc.
+# Copyright 2021 Infoblox Inc.
 # All Rights Reserved.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -18,4 +18,4 @@ __all__ = ['InfobloxNetMRI']
 
 __author__ = 'Infoblox, Inc.'
 __email__ = 'support@infoblox.com'
-__version__ = '3.7.0.0'
+__version__ = '3.8.0.0'

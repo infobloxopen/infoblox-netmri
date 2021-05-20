@@ -32,7 +32,7 @@ class EffectivePolicyRemote(RemoteModel):
     |  ``PolicyName:`` The long name of the policy.
     |  ``attribute type:`` string
 
-    |  ``PolicyDescription:`` The policy description, as entered at the time of policy execution.
+    |  ``PolicyDescription:`` The policy description, was entered at the time of policy execution.
     |  ``attribute type:`` string
 
     |  ``PolicyAuthor:`` The policy author name.
@@ -50,7 +50,7 @@ class EffectivePolicyRemote(RemoteModel):
     |  ``PolicyScheduleMode:`` Not used.
     |  ``attribute type:`` string
 
-    |  ``PolicyShortName:`` The short name of the policy, as entered in the policy design center at the time of policy creation.
+    |  ``PolicyShortName:`` The short name of the policy, was entered in the policy design center at the time of policy creation.
     |  ``attribute type:`` string
 
     |  ``PolicyReadOnlyInd:`` A flag indicating whether this policy was a read-only policy at the time of execution.

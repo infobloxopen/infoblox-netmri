@@ -30,7 +30,7 @@ class JobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param Name: The name of this job, as entered when the job specification was defined, or when the job was executed from a script.
+             :param Name: The name of this job, was entered when the job specification was defined, or when the job was executed from a script.
              :type Name: String
 
             |  ``api version min:`` 2.5
@@ -38,7 +38,7 @@ class JobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param Name: The name of this job, as entered when the job specification was defined, or when the job was executed from a script.
+             :param Name: The name of this job, was entered when the job specification was defined, or when the job was executed from a script.
              :type Name: Array of String
 
             |  ``api version min:`` 2

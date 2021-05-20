@@ -1249,7 +1249,7 @@ class ConfigTemplateBroker(Broker):
 
             |  ``api version min:`` None
             |  ``api version max:`` None
-            |  ``required:`` False
+            |  ``required:`` True
             |  ``default:`` None
 
              :param template_file: The configuration template file contents

@@ -51,7 +51,7 @@ class AccessChangeProposalGridRemote(RemoteModel):
     |  ``SrcObjName:`` The name of the network object associated as source element to the rule involved in this proposal.
     |  ``attribute type:`` string
 
-    |  ``SrcMatchedObjNames:`` An array of available network object that can be used to define the source element of the new rule of this proposal. Each row of this array contains a couple : internal NetMRI identifier of the object, name of the object
+    |  ``SrcMatchedObjNames:`` An array of available network objects that can be used to define the source element of the new rule of this proposal. Each row of this array contains a couple : internal NetMRI identifier of the object, name of the object
     |  ``attribute type:`` string
 
     |  ``SrcObjSummary:`` A summary text for the expected value for this source element of the rule involved in this proposal.
@@ -60,7 +60,7 @@ class AccessChangeProposalGridRemote(RemoteModel):
     |  ``SrcObjEditableInd:`` A flag indicating that the  source element of this rule can be associated with a new object.
     |  ``attribute type:`` bool
 
-    |  ``SrcObjHasDetailInd:`` A flag indicating that the summary has been shorten, thus more detail is available for the source network object for this rule.
+    |  ``SrcObjHasDetailInd:`` A flag indicating that the summary has been shortened, thus more detail is available for the source network object for this rule.
     |  ``attribute type:`` bool
 
     |  ``DestObjID:`` The internal NetMRI Identifier of the network object associated with this proposal as destination element of the adding rule. Value -1 if it is a new object, not already defined in the database.
@@ -69,7 +69,7 @@ class AccessChangeProposalGridRemote(RemoteModel):
     |  ``DestObjName:`` The name of the network object associated as destination to the rule involved in this proposal.
     |  ``attribute type:`` string
 
-    |  ``DestMatchedObjNames:`` An array of available network object that can be used to define the destination element of the new rule of this proposal. Each row of this array contains a couple : internal NetMRI identifier of the object, name of the object.
+    |  ``DestMatchedObjNames:`` An array of available network objects that can be used to define the destination element of the new rule of this proposal. Each row of this array contains a couple : internal NetMRI identifier of the object, name of the object.
     |  ``attribute type:`` string
 
     |  ``DestObjSummary:`` A summary text for the expected value for this destination element of the rule involved in this proposal.
@@ -78,7 +78,7 @@ class AccessChangeProposalGridRemote(RemoteModel):
     |  ``DestObjEditableInd:`` A flag indicating that the  destination element of this rule can be associated with a new object.
     |  ``attribute type:`` bool
 
-    |  ``DestObjHasDetailInd:`` A flag indicating that the summary has been shorten, thus more detail is available for the destination network object for this rule.
+    |  ``DestObjHasDetailInd:`` A flag indicating that the summary has been shortened, thus more detail is available for the destination network object for this rule.
     |  ``attribute type:`` bool
 
     |  ``SvcID:`` The internal NetMRI Identifier of the service object associated with this proposal for the adding rule. Value -1 if it is a new service not already defined in the database.
@@ -96,7 +96,7 @@ class AccessChangeProposalGridRemote(RemoteModel):
     |  ``SvcEditableInd:`` A flag indicating that the  service element of this rule can be associated with a new service.
     |  ``attribute type:`` bool
 
-    |  ``SvcHasDetailInd:`` A flag indicating that the summary has been shorten, thus more detail is available for the service object for this rule.
+    |  ``SvcHasDetailInd:`` A flag indicating that the summary has been shortened, thus more detail is available for the service object for this rule.
     |  ``attribute type:`` bool
 
     |  ``SrcSvcName:`` Unused
@@ -117,7 +117,7 @@ class AccessChangeProposalGridRemote(RemoteModel):
     |  ``WarningMsgHasDetailInd:`` A flag indicating that the warning message has been shortened, thus more detail is available for the whole list of warnings or errors
     |  ``attribute type:`` bool
 
-    |  ``SrcGroupTag:`` A group indicator for all source fields able to share the same selection: all fields of same group are synchronized.
+    |  ``SrcGroupTag:`` A group indicator for all source fields able to share the same selection: all fields of the same group are synchronized.
     |  ``attribute type:`` string
 
     |  ``DestGroupTag:`` A group indicator for all destination fields able to share the same selectionDestGroupTag.

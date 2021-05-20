@@ -1,4 +1,4 @@
-# Copyright 2015 Infoblox Inc.
+# Copyright 2021 Infoblox Inc.
 # All Rights Reserved.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -17,7 +17,8 @@ import json
 import re
 import io
 import gzip
-from os.path import isfile
+import yaml
+from os.path import isfile, expanduser
 
 import requests
 from requests.exceptions import HTTPError
@@ -27,7 +28,7 @@ from infoblox_netmri.utils.utils import locate, to_underscore_notation, to_snake
 
 
 class InfobloxNetMRI(object):
-    def __init__(self, host, username, password, api_version="auto",
+    def __init__(self, host, username=None, password=None, api_version="auto",
                  use_ssl=True, ssl_verify=False, http_pool_connections=5,
                  http_pool_maxsize=10, max_retries=5):
 
@@ -60,6 +61,8 @@ class InfobloxNetMRI(object):
         # Authentication parameters
         self.username = username
         self.password = password
+        if self.username is None or self.password is None:
+            self._set_credentials_from_file()
         self._is_authenticated = False
 
         # Disable ssl warnings
@@ -81,6 +84,26 @@ class InfobloxNetMRI(object):
             self.api_version = self._get_api_version()
         else:
             raise ValueError("Incorrect API version")
+
+    def _set_credentials_from_file(self):
+        """Set credentials (username, password) from file('~/.netmri.yml') located in home directory,
+           if they weren't passed in parameters
+
+        Args:
+        Returns:
+            None
+        """
+        credentials_file = expanduser('~/.netmri.yml')
+        if not isfile(credentials_file):
+            return
+        with open(credentials_file) as file:
+            credentials = yaml.load(file, Loader=yaml.FullLoader)
+            if credentials is None:
+                return
+            if self.username is None:
+                self.username = credentials.get('username')
+            if self.password is None:
+                self.password = credentials.get('password')
 
     def _make_request(self, url, method="get", data=None, extra_headers=None, downloadable=False):
         """Prepares the request, checks for authentication and retries in case of issues

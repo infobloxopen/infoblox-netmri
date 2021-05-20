@@ -26,13 +26,13 @@ class IssueListRemote(RemoteModel):
     |  ``Adds:`` Added a new type of issue in the list.
     |  ``attribute type:`` string
 
-    |  ``Deletes:`` Remove a issue from the list.
+    |  ``Deletes:`` Remove an issue from the list.
     |  ``attribute type:`` string
 
     |  ``Same:`` Maintain the issues as in the list.
     |  ``attribute type:`` string
 
-    |  ``Suppressed:`` A flag indicates whether a issue is suppressed or not.
+    |  ``Suppressed:`` A flag indicates whether an issue is suppressed or not.
     |  ``attribute type:`` string
 
     |  ``FirstSeen:`` The timestamp of when NetMRI first discovered this NetMRI.
@@ -53,7 +53,7 @@ class IssueListRemote(RemoteModel):
     |  ``ShortDate:`` The short date and time defined in the device statistics.
     |  ``attribute type:`` datetime
 
-    |  ``UnixDimDate:`` The unique dimensional date and time od device statistics.
+    |  ``UnixDimDate:`` The unique dimensional date and time of device statistics.
     |  ``attribute type:`` datetime
 
     |  ``Component:`` The issue component (Device,Configuration,VLANs,etc.)

@@ -18,10 +18,10 @@ class SdnSettingRemote(RemoteModel):
     |  ``protocol:`` Protocol used to communicate with controller.
     |  ``attribute type:`` string
 
-    |  ``sdn_username:`` Username used to connect SDN controller.
+    |  ``sdn_username:`` Username used to connect to the SDN controller.
     |  ``attribute type:`` string
 
-    |  ``sdn_password:`` Password used to connect SDN controller.
+    |  ``sdn_password:`` Password used to connect to the SDN controller.
     |  ``attribute type:`` string
 
     |  ``SecureVersion:`` Internal version of the encryption method
@@ -42,7 +42,7 @@ class SdnSettingRemote(RemoteModel):
     |  ``api_key:`` API key to access the SDN controller (MERAKI)
     |  ``attribute type:`` string
 
-    |  ``on_prem:`` True if controller is on premises. Otherwise we consider it is in cloud.
+    |  ``on_prem:`` True if controller is on premises. Otherwise we consider it is in the cloud.
     |  ``attribute type:`` bool
 
     |  ``use_global_proxy:`` Use global proxy settings to access SDN controller.

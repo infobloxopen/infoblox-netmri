@@ -89,7 +89,7 @@ class BackgroundTaskBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param progress_value: The value of background task progress in percents.
+             :param progress_value: The value of background task progress in percent.
              :type progress_value: Array of Integer
 
             |  ``api version min:`` 2.6
@@ -423,7 +423,7 @@ class BackgroundTaskBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_progress_value: The operator to apply to the field progress_value. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. progress_value: The value of background task progress in percents. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_progress_value: The operator to apply to the field progress_value. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. progress_value: The value of background task progress in percent. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_progress_value: String
 
             |  ``api version min:`` None
@@ -634,7 +634,7 @@ class BackgroundTaskBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param progress_value: The value of background task progress in percents.
+             :param progress_value: The value of background task progress in percent.
              :type progress_value: Integer
 
             |  ``api version min:`` None
@@ -725,7 +725,7 @@ class BackgroundTaskBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param progress_value: The value of background task progress in percents. If omitted, this field will not be updated.
+             :param progress_value: The value of background task progress in percent. If omitted, this field will not be updated.
              :type progress_value: Integer
 
             |  ``api version min:`` None

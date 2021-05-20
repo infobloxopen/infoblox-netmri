@@ -42,7 +42,7 @@ class SensorDatumRemote(RemoteModel):
     |  ``first_seen:`` The time when the failure was first detected.
     |  ``attribute type:`` string
 
-    |  ``type:`` The type of a data defined in a sensor.
+    |  ``type:`` The type of data defined in a sensor.
     |  ``attribute type:`` string
 
     |  ``description:`` The description defined in a SensorDatum.

@@ -9,7 +9,7 @@ class DiscoveryHintRemote(RemoteModel):
     |  ``id:`` The internal NetMRI identifier for the discovery hint.
     |  ``attribute type:`` number
 
-    |  ``hint:`` The hint used the by discovery engine.
+    |  ``hint:`` The hint used by the discovery engine.
     |  ``attribute type:`` string
 
     |  ``device_type:`` The device type applied to the given discovery hint.

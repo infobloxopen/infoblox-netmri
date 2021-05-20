@@ -196,7 +196,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param RTLeftSide: The left-hand portion of the route target; use Type to identify if it is an AS number or and IPv4 address.
+             :param RTLeftSide: The left-hand portion of the route target; use Type to identify if it is an AS number or an IPv4 address.
              :type RTLeftSide: Array of Integer
 
             |  ``api version min:`` 2.10
@@ -455,7 +455,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_RTLeftSide: The operator to apply to the field RTLeftSide. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. RTLeftSide: The left-hand portion of the route target; use Type to identify if it is an AS number or and IPv4 address. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_RTLeftSide: The operator to apply to the field RTLeftSide. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. RTLeftSide: The left-hand portion of the route target; use Type to identify if it is an AS number or an IPv4 address. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_RTLeftSide: String
 
             |  ``api version min:`` None

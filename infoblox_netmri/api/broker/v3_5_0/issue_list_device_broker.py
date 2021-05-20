@@ -268,7 +268,7 @@ class IssueListDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param Deletes: Remove a issue from the list device.
+             :param Deletes: Remove an issue from the list device.
              :type Deletes: String
 
             |  ``api version min:`` 2.5
@@ -276,7 +276,7 @@ class IssueListDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param Deletes: Remove a issue from the list device.
+             :param Deletes: Remove an issue from the list device.
              :type Deletes: Array of String
 
             |  ``api version min:`` 2.4
@@ -727,7 +727,7 @@ class IssueListDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_Deletes: The operator to apply to the field Deletes. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. Deletes: Remove a issue from the list device. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_Deletes: The operator to apply to the field Deletes. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. Deletes: Remove an issue from the list device. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_Deletes: String
 
             |  ``api version min:`` None

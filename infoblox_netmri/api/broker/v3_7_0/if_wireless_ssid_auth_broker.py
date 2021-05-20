@@ -340,7 +340,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param SSIDEAPRequiredInd: A flag indicates whether a extensible authentication protocol is required or not.
+             :param SSIDEAPRequiredInd: A flag indicates whether an extensible authentication protocol is required or not.
              :type SSIDEAPRequiredInd: Boolean
 
             |  ``api version min:`` 2.5
@@ -348,7 +348,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param SSIDEAPRequiredInd: A flag indicates whether a extensible authentication protocol is required or not.
+             :param SSIDEAPRequiredInd: A flag indicates whether an extensible authentication protocol is required or not.
              :type SSIDEAPRequiredInd: Array of Boolean
 
             |  ``api version min:`` 2.4
@@ -823,7 +823,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_SSIDEAPRequiredInd: The operator to apply to the field SSIDEAPRequiredInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. SSIDEAPRequiredInd: A flag indicates whether a extensible authentication protocol is required or not. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_SSIDEAPRequiredInd: The operator to apply to the field SSIDEAPRequiredInd. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. SSIDEAPRequiredInd: A flag indicates whether an extensible authentication protocol is required or not. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_SSIDEAPRequiredInd: String
 
             |  ``api version min:`` None

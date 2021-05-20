@@ -30,7 +30,7 @@ class IfGroupDefnRemote(RemoteModel):
     |  ``Timestamp:`` The date and time this record was collected.
     |  ``attribute type:`` datetime
 
-    |  ``MemberCount:`` The total number of member in an interface group.
+    |  ``MemberCount:`` The total number of members in an interface group.
     |  ``attribute type:`` number
 
     |  ``UpdatedAt:`` The date and time this record was last modified.

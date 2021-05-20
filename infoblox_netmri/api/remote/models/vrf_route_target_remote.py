@@ -45,7 +45,7 @@ class VrfRouteTargetRemote(RemoteModel):
     |  ``RTType:`` The style of the route target, asn or ipv4.
     |  ``attribute type:`` string
 
-    |  ``RTLeftSide:`` The left-hand portion of the route target; use Type to identify if it is an AS number or and IPv4 address.
+    |  ``RTLeftSide:`` The left-hand portion of the route target; use Type to identify if it is an AS number or an IPv4 address.
     |  ``attribute type:`` number
 
     |  ``RTRightSide:`` The right-hand portion of the route target.

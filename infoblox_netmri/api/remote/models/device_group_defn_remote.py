@@ -87,7 +87,7 @@ class DeviceGroupDefnRemote(RemoteModel):
     |  ``IncludeEndHostsInd:`` A flag indicating whether this group should include end host devices.
     |  ``attribute type:`` bool
 
-    |  ``ParentDeviceGroupID:`` Internal identifier for the parent device group. A valus of 0 is used for root level groups.
+    |  ``ParentDeviceGroupID:`` Internal identifier for the parent device group. A value of 0 is used for root level groups.
     |  ``attribute type:`` number
 
     |  ``PerfEnvPollingInd:`` A flag that indicates if Performance and Environment polling is enabled for the device group members.
@@ -104,6 +104,9 @@ class DeviceGroupDefnRemote(RemoteModel):
 
     |  ``CredentialGroupID:`` The unique identifier of the credential group.
     |  ``attribute type:`` number
+
+    |  ``SystemGroupInd:`` A flag indicating if this device group is system-created
+    |  ``attribute type:`` bool
 
     """
 
@@ -140,4 +143,5 @@ class DeviceGroupDefnRemote(RemoteModel):
                   "PolFreqModifier",
                   "UseGlobalPolFreq",
                   "CredentialGroupID",
+                  "SystemGroupInd",
                   )

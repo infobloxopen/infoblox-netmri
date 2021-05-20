@@ -50,7 +50,7 @@ class VirtualNetworkMemberRemote(RemoteModel):
     |  ``DefaultRDType:`` The style of the default Route Distinguisher, asn or ipv4.
     |  ``attribute type:`` string
 
-    |  ``DefaultRDLeft:`` The left-hand portion of the default Route Distinguisher; use DefaultRDType to identify if it is an AS number or and IPv4 address.
+    |  ``DefaultRDLeft:`` The left-hand portion of the default Route Distinguisher; use DefaultRDType to identify if it is an AS number or an IPv4 address.
     |  ``attribute type:`` number
 
     |  ``DefaultRDRight:`` The right-hand portion of the default Route Distinguisher.
@@ -69,7 +69,7 @@ class VirtualNetworkMemberRemote(RemoteModel):
     |  ``attribute type:`` bool
 
 
-    |  ``member_rd:`` The displayable VRF route distinguisher of this obkect.
+    |  ``member_rd:`` The displayable VRF route distinguisher of this object.
     |  ``attribute type:`` string
 
     |  ``assigned_network_id:`` The current network view id assigned.

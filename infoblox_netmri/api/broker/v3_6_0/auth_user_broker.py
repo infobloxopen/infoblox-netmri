@@ -212,7 +212,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param cert: Client Certificate stored on clinet success authorization when CAC is enabled
+             :param cert: Client Certificate stored on client success authorization when CAC is enabled
              :type cert: String
 
             |  ``api version min:`` 2.5
@@ -220,7 +220,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param cert: Client Certificate stored on clinet success authorization when CAC is enabled
+             :param cert: Client Certificate stored on client success authorization when CAC is enabled
              :type cert: Array of String
 
             |  ``api version min:`` 2.3
@@ -356,7 +356,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param force_local_ind: A flag indicating whether user is forced to use local authorisation or not.
+             :param force_local_ind: A flag indicating whether user is forced to use local authorization or not.
              :type force_local_ind: Boolean
 
             |  ``api version min:`` 2.5
@@ -364,7 +364,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param force_local_ind: A flag indicating whether user is forced to use local authorisation or not.
+             :param force_local_ind: A flag indicating whether user is forced to use local authorization or not.
              :type force_local_ind: Array of Boolean
 
             |  ``api version min:`` 2.3
@@ -420,7 +420,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param last_login: The date and time this use last logged into the NetMRI.
+             :param last_login: The date and time this user last logged into the NetMRI.
              :type last_login: DateTime
 
             |  ``api version min:`` 2.5
@@ -428,7 +428,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param last_login: The date and time this use last logged into the NetMRI.
+             :param last_login: The date and time this user last logged into the NetMRI.
              :type last_login: Array of DateTime
 
             |  ``api version min:`` 2.3
@@ -452,7 +452,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param notes: Notes on the user, as entered by the administrator.
+             :param notes: Notes on the user, was entered by the administrator.
              :type notes: String
 
             |  ``api version min:`` 2.5
@@ -460,7 +460,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param notes: Notes on the user, as entered by the administrator.
+             :param notes: Notes on the user, was entered by the administrator.
              :type notes: Array of String
 
             |  ``api version min:`` 2.3
@@ -743,7 +743,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_cert: The operator to apply to the field cert. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. cert: Client Certificate stored on clinet success authorization when CAC is enabled For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_cert: The operator to apply to the field cert. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. cert: Client Certificate stored on client success authorization when CAC is enabled For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_cert: String
 
             |  ``api version min:`` None
@@ -959,7 +959,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_force_local_ind: The operator to apply to the field force_local_ind. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. force_local_ind: A flag indicating whether user is forced to use local authorisation or not. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_force_local_ind: The operator to apply to the field force_local_ind. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. force_local_ind: A flag indicating whether user is forced to use local authorization or not. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_force_local_ind: String
 
             |  ``api version min:`` None
@@ -1055,7 +1055,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_last_login: The operator to apply to the field last_login. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. last_login: The date and time this use last logged into the NetMRI. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_last_login: The operator to apply to the field last_login. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. last_login: The date and time this user last logged into the NetMRI. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_last_login: String
 
             |  ``api version min:`` None
@@ -1103,7 +1103,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_notes: The operator to apply to the field notes. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. notes: Notes on the user, as entered by the administrator. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_notes: The operator to apply to the field notes. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. notes: Notes on the user, was entered by the administrator. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_notes: String
 
             |  ``api version min:`` None
@@ -1322,7 +1322,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param cert: Client Certificate stored on clinet success authorization when CAC is enabled
+             :param cert: Client Certificate stored on client success authorization when CAC is enabled
              :type cert: String
 
             |  ``api version min:`` None
@@ -1378,7 +1378,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` True
 
-             :param force_local_ind: A flag indicating whether user is forced to use local authorisation or not.
+             :param force_local_ind: A flag indicating whether user is forced to use local authorization or not.
              :type force_local_ind: Boolean
 
             |  ``api version min:`` None
@@ -1402,7 +1402,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param notes: Notes on the user, as entered by the administrator.
+             :param notes: Notes on the user, was entered by the administrator.
              :type notes: String
 
             |  ``api version min:`` None
@@ -1493,7 +1493,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param cert: Client Certificate stored on clinet success authorization when CAC is enabled If omitted, this field will not be updated.
+             :param cert: Client Certificate stored on client success authorization when CAC is enabled If omitted, this field will not be updated.
              :type cert: String
 
             |  ``api version min:`` None
@@ -1573,7 +1573,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param force_local_ind: A flag indicating whether user is forced to use local authorisation or not. If omitted, this field will not be updated.
+             :param force_local_ind: A flag indicating whether user is forced to use local authorization or not. If omitted, this field will not be updated.
              :type force_local_ind: Boolean
 
             |  ``api version min:`` None
@@ -1597,7 +1597,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param notes: Notes on the user, as entered by the administrator. If omitted, this field will not be updated.
+             :param notes: Notes on the user, was entered by the administrator. If omitted, this field will not be updated.
              :type notes: String
 
             |  ``api version min:`` None

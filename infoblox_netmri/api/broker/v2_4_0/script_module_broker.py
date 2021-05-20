@@ -201,7 +201,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The unique name of the of the Script Module.
+             :param name: The unique name of the Script Module.
              :type name: String
 
             |  ``api version min:`` 2.5
@@ -209,7 +209,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The unique name of the of the Script Module.
+             :param name: The unique name of the Script Module.
              :type name: Array of String
 
             |  ``api version min:`` 2.3
@@ -484,7 +484,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_name: The operator to apply to the field name. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. name: The unique name of the of the Script Module. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_name: The operator to apply to the field name. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. name: The unique name of the Script Module. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_name: String
 
             |  ``api version min:`` None
@@ -701,7 +701,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param name: The unique name of the of the Script Module.
+             :param name: The unique name of the Script Module.
              :type name: String
 
             |  ``api version min:`` None
@@ -800,7 +800,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param name: The unique name of the of the Script Module.
+             :param name: The unique name of the Script Module.
              :type name: String
 
             |  ``api version min:`` None
@@ -921,7 +921,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param name: The configuration template file name
+             :param name: The script module file name
              :type name: String
 
             |  ``api version min:`` None

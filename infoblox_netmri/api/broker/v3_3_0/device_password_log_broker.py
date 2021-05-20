@@ -94,7 +94,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePwLogID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePwLogID. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion.
+             :param sort: The data field(s) to use for sorting the output. Default is DevicePwLogID. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -110,7 +110,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each DevicePasswordLog. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each DevicePasswordLog. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -404,6 +404,22 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
+             :param Port: The port for cli connection.
+             :type Port: Integer
+
+            |  ``api version min:`` 2.5
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param Port: The port for cli connection.
+             :type Port: Array of Integer
+
+            |  ``api version min:`` 2.4
+            |  ``api version max:`` 2.4
+            |  ``required:`` False
+            |  ``default:`` None
+
              :param SecureVersion: The encryption version of the username and passwords.
              :type SecureVersion: Integer
 
@@ -468,7 +484,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePwLogID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePwLogID. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion.
+             :param sort: The data field(s) to use for sorting the output. Default is DevicePwLogID. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -484,7 +500,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each DevicePasswordLog. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each DevicePasswordLog. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8
@@ -508,7 +524,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param query: This value will be matched against device password logs, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: DataSourceID, DeviceID, DevicePwLogEnablePasswordSecure, DevicePwLogID, DevicePwLogPasswordSecure, DevicePwLogProtocol, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivPWSecure, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogTimestamp, DevicePwLogUsernameSecure, SecureVersion.
+             :param query: This value will be matched against device password logs, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: DataSourceID, DeviceID, DevicePwLogEnablePasswordSecure, DevicePwLogID, DevicePwLogPasswordSecure, DevicePwLogProtocol, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivPWSecure, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogTimestamp, DevicePwLogUsernameSecure, Port, SecureVersion.
              :type query: String
 
             |  ``api version min:`` 2.3
@@ -534,7 +550,7 @@ class DevicePasswordLogBroker(Broker):
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
 
     def find(self, **kwargs):
-        """Lists the available device password logs matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceID, DeviceID, DevicePwLogEnablePasswordSecure, DevicePwLogID, DevicePwLogPasswordSecure, DevicePwLogProtocol, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivPWSecure, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogTimestamp, DevicePwLogUsernameSecure, SecureVersion.
+        """Lists the available device password logs matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: DataSourceID, DeviceID, DevicePwLogEnablePasswordSecure, DevicePwLogID, DevicePwLogPasswordSecure, DevicePwLogProtocol, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivPWSecure, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogTimestamp, DevicePwLogUsernameSecure, Port, SecureVersion.
 
             **Inputs**
 
@@ -855,6 +871,30 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
+             :param op_Port: The operator to apply to the field Port. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. Port: The port for cli connection. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :type op_Port: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_f_Port: If op_Port is specified, the field named in this input will be compared to the value in Port using the specified operator. That is, the value in this input will be treated as another field name, rather than a constant value. Either this field or val_c_Port must be specified if op_Port is specified.
+             :type val_f_Port: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param val_c_Port: If op_Port is specified, this value will be compared to the value in Port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Port must be specified if op_Port is specified.
+             :type val_c_Port: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
              :param op_SecureVersion: The operator to apply to the field SecureVersion. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. SecureVersion: The encryption version of the username and passwords. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_SecureVersion: String
 
@@ -927,7 +967,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePwLogID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePwLogID. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion.
+             :param sort: The data field(s) to use for sorting the output. Default is DevicePwLogID. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -943,7 +983,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each DevicePasswordLog. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each DevicePasswordLog. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port. If empty or omitted, all attributes will be returned.
              :type select: Array
 
             |  ``api version min:`` 2.8

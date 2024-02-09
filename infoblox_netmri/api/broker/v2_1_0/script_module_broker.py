@@ -5,7 +5,7 @@ class ScriptModuleBroker(Broker):
     controller = "script_modules"
 
     def index(self, **kwargs):
-        """Lists the available script modules. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available script modules. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -46,7 +46,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, category, language, description, created_by, updated_by, created_at, updated_at.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, category, language, description, created_by, updated_by, created_at, updated_at.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -54,7 +54,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -64,22 +64,6 @@ class ScriptModuleBroker(Broker):
 
              :param select: The list of attributes to return for each ScriptModule. Valid values are id, name, category, language, description, created_by, updated_by, created_at, updated_at. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -209,7 +193,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created script module.
+             :return uri: The URI that may be used to retrieve the newly created script module.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -308,7 +292,7 @@ class ScriptModuleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated script module.
+             :return uri: The URI that may be used to retrieve the updated script module.
              :rtype uri: String
 
             |  ``api version min:`` None

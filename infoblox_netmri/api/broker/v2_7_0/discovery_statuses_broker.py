@@ -1044,7 +1044,7 @@ class DiscoveryStatusesBroker(Broker):
         return self.api_request(self._get_method_fullname("summary"), kwargs)
 
     def discover_next(self, **kwargs):
-        """Set the given device ids to be discovered next
+        """Set the given device ids to be discovered next (SDN Element devices will be skipped)
 
             **Inputs**
 
@@ -1053,7 +1053,7 @@ class DiscoveryStatusesBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param DeviceIDs: An array of device ids to be discovered next
+             :param DeviceIDs: An array of device ids to be discovered next (SDN Element devices will be skipped)
              :type DeviceIDs: Array
 
             **Outputs**
@@ -1226,6 +1226,14 @@ class DiscoveryStatusesBroker(Broker):
              :type AccessProvisioning: String
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return status: Status as 200 and Success as true
+             :rtype status: Integer
 
             """
 
@@ -1613,52 +1621,6 @@ class DiscoveryStatusesBroker(Broker):
             """
 
         return self.api_request(self._get_method_fullname("snmp_guesses"), kwargs)
-
-    def show_opsec_certificate(self, **kwargs):
-        """Return OPSEC device certificate
-
-            **Inputs**
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` True
-            |  ``default:`` None
-
-             :param DeviceID: The id of the device
-             :type DeviceID: Integer
-
-            **Outputs**
-
-            """
-
-        return self.api_request(self._get_method_fullname("show_opsec_certificate"), kwargs)
-
-    def opsec_guesses(self, **kwargs):
-        """Displays the status of all devices OPSEC guesses
-
-            **Inputs**
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` True
-            |  ``default:`` None
-
-             :param DeviceID: The id of the device
-             :type DeviceID: Integer
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param filename: Filename for exported data
-             :type filename: String
-
-            **Outputs**
-
-            """
-
-        return self.api_request(self._get_method_fullname("opsec_guesses"), kwargs)
 
     def status_management(self, **kwargs):
         """Returns a list of discovery statuses of the device with given id

@@ -5,7 +5,7 @@ class ConfigErrorBroker(Broker):
     controller = "config_errors"
 
     def index(self, **kwargs):
-        """Lists the available config errors. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available config errors. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -86,7 +86,7 @@ class ConfigErrorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ConfigErrorID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ConfigErrorID. Valid values are ConfigErrorID, DeviceID, Timestamp, ErrMsg, DatasourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are ConfigErrorID, DeviceID, Timestamp, ErrMsg, DatasourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -94,7 +94,7 @@ class ConfigErrorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -104,22 +104,6 @@ class ConfigErrorBroker(Broker):
 
              :param select: The list of attributes to return for each ConfigError. Valid values are ConfigErrorID, DeviceID, Timestamp, ErrMsg, DatasourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -292,7 +276,7 @@ class ConfigErrorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ConfigErrorID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ConfigErrorID. Valid values are ConfigErrorID, DeviceID, Timestamp, ErrMsg, DatasourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are ConfigErrorID, DeviceID, Timestamp, ErrMsg, DatasourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -300,7 +284,7 @@ class ConfigErrorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -310,22 +294,6 @@ class ConfigErrorBroker(Broker):
 
              :param select: The list of attributes to return for each ConfigError. Valid values are ConfigErrorID, DeviceID, Timestamp, ErrMsg, DatasourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -383,7 +351,7 @@ class ConfigErrorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ConfigErrorID: If op_ConfigErrorID is specified, this value will be compared to the value in ConfigErrorID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigErrorID must be specified if op_ConfigErrorID is specified.
+             :param val_c_ConfigErrorID: If op_ConfigErrorID is specified, this value will be compared to the value in ConfigErrorID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigErrorID must be specified if op_ConfigErrorID is specified. If the rlike or not rlike value is specified in the op_ConfigErrorID field, escape regex special characters because a regular expression is expected.
              :type val_c_ConfigErrorID: String
 
             |  ``api version min:`` None
@@ -407,7 +375,7 @@ class ConfigErrorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DatasourceID: If op_DatasourceID is specified, this value will be compared to the value in DatasourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DatasourceID must be specified if op_DatasourceID is specified.
+             :param val_c_DatasourceID: If op_DatasourceID is specified, this value will be compared to the value in DatasourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DatasourceID must be specified if op_DatasourceID is specified. If the rlike or not rlike value is specified in the op_DatasourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DatasourceID: String
 
             |  ``api version min:`` None
@@ -431,7 +399,7 @@ class ConfigErrorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -455,7 +423,7 @@ class ConfigErrorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ErrMsg: If op_ErrMsg is specified, this value will be compared to the value in ErrMsg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ErrMsg must be specified if op_ErrMsg is specified.
+             :param val_c_ErrMsg: If op_ErrMsg is specified, this value will be compared to the value in ErrMsg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ErrMsg must be specified if op_ErrMsg is specified. If the rlike or not rlike value is specified in the op_ErrMsg field, escape regex special characters because a regular expression is expected.
              :type val_c_ErrMsg: String
 
             |  ``api version min:`` None
@@ -479,7 +447,7 @@ class ConfigErrorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Timestamp: If op_Timestamp is specified, this value will be compared to the value in Timestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Timestamp must be specified if op_Timestamp is specified.
+             :param val_c_Timestamp: If op_Timestamp is specified, this value will be compared to the value in Timestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Timestamp must be specified if op_Timestamp is specified. If the rlike or not rlike value is specified in the op_Timestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_Timestamp: String
 
             |  ``api version min:`` None
@@ -527,7 +495,7 @@ class ConfigErrorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ConfigErrorID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ConfigErrorID. Valid values are ConfigErrorID, DeviceID, Timestamp, ErrMsg, DatasourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are ConfigErrorID, DeviceID, Timestamp, ErrMsg, DatasourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -535,7 +503,7 @@ class ConfigErrorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -545,22 +513,6 @@ class ConfigErrorBroker(Broker):
 
              :param select: The list of attributes to return for each ConfigError. Valid values are ConfigErrorID, DeviceID, Timestamp, ErrMsg, DatasourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

@@ -5,7 +5,7 @@ class DiscoverySettingBroker(Broker):
     controller = "discovery_settings"
 
     def index(self, **kwargs):
-        """Lists the available discovery settings. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available discovery settings. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -78,7 +78,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -86,7 +86,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -96,22 +96,6 @@ class DiscoverySettingBroker(Broker):
 
              :param select: The list of attributes to return for each DiscoverySetting. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -185,7 +169,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -193,7 +177,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -203,22 +187,6 @@ class DiscoverySettingBroker(Broker):
 
              :param select: The list of attributes to return for each DiscoverySetting. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -276,7 +244,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UnitID: If op_UnitID is specified, this value will be compared to the value in UnitID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitID must be specified if op_UnitID is specified.
+             :param val_c_UnitID: If op_UnitID is specified, this value will be compared to the value in UnitID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitID must be specified if op_UnitID is specified. If the rlike or not rlike value is specified in the op_UnitID field, escape regex special characters because a regular expression is expected.
              :type val_c_UnitID: String
 
             |  ``api version min:`` None
@@ -300,7 +268,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_blackout_duration: If op_blackout_duration is specified, this value will be compared to the value in blackout_duration using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_blackout_duration must be specified if op_blackout_duration is specified.
+             :param val_c_blackout_duration: If op_blackout_duration is specified, this value will be compared to the value in blackout_duration using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_blackout_duration must be specified if op_blackout_duration is specified. If the rlike or not rlike value is specified in the op_blackout_duration field, escape regex special characters because a regular expression is expected.
              :type val_c_blackout_duration: String
 
             |  ``api version min:`` None
@@ -324,7 +292,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cidr_count: If op_cidr_count is specified, this value will be compared to the value in cidr_count using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cidr_count must be specified if op_cidr_count is specified.
+             :param val_c_cidr_count: If op_cidr_count is specified, this value will be compared to the value in cidr_count using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cidr_count must be specified if op_cidr_count is specified. If the rlike or not rlike value is specified in the op_cidr_count field, escape regex special characters because a regular expression is expected.
              :type val_c_cidr_count: String
 
             |  ``api version min:`` None
@@ -348,7 +316,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -372,7 +340,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_by: If op_created_by is specified, this value will be compared to the value in created_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_by must be specified if op_created_by is specified.
+             :param val_c_created_by: If op_created_by is specified, this value will be compared to the value in created_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_by must be specified if op_created_by is specified. If the rlike or not rlike value is specified in the op_created_by field, escape regex special characters because a regular expression is expected.
              :type val_c_created_by: String
 
             |  ``api version min:`` None
@@ -396,7 +364,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_discovery_status: If op_discovery_status is specified, this value will be compared to the value in discovery_status using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_discovery_status must be specified if op_discovery_status is specified.
+             :param val_c_discovery_status: If op_discovery_status is specified, this value will be compared to the value in discovery_status using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_discovery_status must be specified if op_discovery_status is specified. If the rlike or not rlike value is specified in the op_discovery_status field, escape regex special characters because a regular expression is expected.
              :type val_c_discovery_status: String
 
             |  ``api version min:`` None
@@ -420,7 +388,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -444,7 +412,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ping_sweep_ind: If op_ping_sweep_ind is specified, this value will be compared to the value in ping_sweep_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ping_sweep_ind must be specified if op_ping_sweep_ind is specified.
+             :param val_c_ping_sweep_ind: If op_ping_sweep_ind is specified, this value will be compared to the value in ping_sweep_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ping_sweep_ind must be specified if op_ping_sweep_ind is specified. If the rlike or not rlike value is specified in the op_ping_sweep_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_ping_sweep_ind: String
 
             |  ``api version min:`` None
@@ -468,7 +436,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_port_control_blackout_duration: If op_port_control_blackout_duration is specified, this value will be compared to the value in port_control_blackout_duration using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_port_control_blackout_duration must be specified if op_port_control_blackout_duration is specified.
+             :param val_c_port_control_blackout_duration: If op_port_control_blackout_duration is specified, this value will be compared to the value in port_control_blackout_duration using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_port_control_blackout_duration must be specified if op_port_control_blackout_duration is specified. If the rlike or not rlike value is specified in the op_port_control_blackout_duration field, escape regex special characters because a regular expression is expected.
              :type val_c_port_control_blackout_duration: String
 
             |  ``api version min:`` None
@@ -492,7 +460,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_range_end: If op_range_end is specified, this value will be compared to the value in range_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_end must be specified if op_range_end is specified.
+             :param val_c_range_end: If op_range_end is specified, this value will be compared to the value in range_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_end must be specified if op_range_end is specified. If the rlike or not rlike value is specified in the op_range_end field, escape regex special characters because a regular expression is expected.
              :type val_c_range_end: String
 
             |  ``api version min:`` None
@@ -516,7 +484,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_range_end_numeric: If op_range_end_numeric is specified, this value will be compared to the value in range_end_numeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_end_numeric must be specified if op_range_end_numeric is specified.
+             :param val_c_range_end_numeric: If op_range_end_numeric is specified, this value will be compared to the value in range_end_numeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_end_numeric must be specified if op_range_end_numeric is specified. If the rlike or not rlike value is specified in the op_range_end_numeric field, escape regex special characters because a regular expression is expected.
              :type val_c_range_end_numeric: String
 
             |  ``api version min:`` None
@@ -540,7 +508,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_range_mask: If op_range_mask is specified, this value will be compared to the value in range_mask using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_mask must be specified if op_range_mask is specified.
+             :param val_c_range_mask: If op_range_mask is specified, this value will be compared to the value in range_mask using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_mask must be specified if op_range_mask is specified. If the rlike or not rlike value is specified in the op_range_mask field, escape regex special characters because a regular expression is expected.
              :type val_c_range_mask: String
 
             |  ``api version min:`` None
@@ -564,7 +532,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_range_start: If op_range_start is specified, this value will be compared to the value in range_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_start must be specified if op_range_start is specified.
+             :param val_c_range_start: If op_range_start is specified, this value will be compared to the value in range_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_start must be specified if op_range_start is specified. If the rlike or not rlike value is specified in the op_range_start field, escape regex special characters because a regular expression is expected.
              :type val_c_range_start: String
 
             |  ``api version min:`` None
@@ -588,7 +556,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_range_start_numeric: If op_range_start_numeric is specified, this value will be compared to the value in range_start_numeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_start_numeric must be specified if op_range_start_numeric is specified.
+             :param val_c_range_start_numeric: If op_range_start_numeric is specified, this value will be compared to the value in range_start_numeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_start_numeric must be specified if op_range_start_numeric is specified. If the rlike or not rlike value is specified in the op_range_start_numeric field, escape regex special characters because a regular expression is expected.
              :type val_c_range_start_numeric: String
 
             |  ``api version min:`` None
@@ -612,7 +580,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_range_type: If op_range_type is specified, this value will be compared to the value in range_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_type must be specified if op_range_type is specified.
+             :param val_c_range_type: If op_range_type is specified, this value will be compared to the value in range_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_type must be specified if op_range_type is specified. If the rlike or not rlike value is specified in the op_range_type field, escape regex special characters because a regular expression is expected.
              :type val_c_range_type: String
 
             |  ``api version min:`` None
@@ -636,7 +604,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_range_value: If op_range_value is specified, this value will be compared to the value in range_value using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_value must be specified if op_range_value is specified.
+             :param val_c_range_value: If op_range_value is specified, this value will be compared to the value in range_value using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_range_value must be specified if op_range_value is specified. If the rlike or not rlike value is specified in the op_range_value field, escape regex special characters because a regular expression is expected.
              :type val_c_range_value: String
 
             |  ``api version min:`` None
@@ -660,7 +628,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_smart_ping_sweep_ind: If op_smart_ping_sweep_ind is specified, this value will be compared to the value in smart_ping_sweep_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_smart_ping_sweep_ind must be specified if op_smart_ping_sweep_ind is specified.
+             :param val_c_smart_ping_sweep_ind: If op_smart_ping_sweep_ind is specified, this value will be compared to the value in smart_ping_sweep_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_smart_ping_sweep_ind must be specified if op_smart_ping_sweep_ind is specified. If the rlike or not rlike value is specified in the op_smart_ping_sweep_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_smart_ping_sweep_ind: String
 
             |  ``api version min:`` None
@@ -684,7 +652,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_start_blackout_schedule: If op_start_blackout_schedule is specified, this value will be compared to the value in start_blackout_schedule using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_start_blackout_schedule must be specified if op_start_blackout_schedule is specified.
+             :param val_c_start_blackout_schedule: If op_start_blackout_schedule is specified, this value will be compared to the value in start_blackout_schedule using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_start_blackout_schedule must be specified if op_start_blackout_schedule is specified. If the rlike or not rlike value is specified in the op_start_blackout_schedule field, escape regex special characters because a regular expression is expected.
              :type val_c_start_blackout_schedule: String
 
             |  ``api version min:`` None
@@ -708,7 +676,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_start_port_control_blackout_schedule: If op_start_port_control_blackout_schedule is specified, this value will be compared to the value in start_port_control_blackout_schedule using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_start_port_control_blackout_schedule must be specified if op_start_port_control_blackout_schedule is specified.
+             :param val_c_start_port_control_blackout_schedule: If op_start_port_control_blackout_schedule is specified, this value will be compared to the value in start_port_control_blackout_schedule using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_start_port_control_blackout_schedule must be specified if op_start_port_control_blackout_schedule is specified. If the rlike or not rlike value is specified in the op_start_port_control_blackout_schedule field, escape regex special characters because a regular expression is expected.
              :type val_c_start_port_control_blackout_schedule: String
 
             |  ``api version min:`` None
@@ -732,7 +700,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -756,7 +724,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_by: If op_updated_by is specified, this value will be compared to the value in updated_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_by must be specified if op_updated_by is specified.
+             :param val_c_updated_by: If op_updated_by is specified, this value will be compared to the value in updated_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_by must be specified if op_updated_by is specified. If the rlike or not rlike value is specified in the op_updated_by field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_by: String
 
             |  ``api version min:`` None
@@ -780,7 +748,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_virtual_network_id: If op_virtual_network_id is specified, this value will be compared to the value in virtual_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_virtual_network_id must be specified if op_virtual_network_id is specified.
+             :param val_c_virtual_network_id: If op_virtual_network_id is specified, this value will be compared to the value in virtual_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_virtual_network_id must be specified if op_virtual_network_id is specified. If the rlike or not rlike value is specified in the op_virtual_network_id field, escape regex special characters because a regular expression is expected.
              :type val_c_virtual_network_id: String
 
             |  ``api version min:`` None
@@ -804,7 +772,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -812,7 +780,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -822,22 +790,6 @@ class DiscoverySettingBroker(Broker):
 
              :param select: The list of attributes to return for each DiscoverySetting. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -956,7 +908,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created discovery setting.
+             :return uri: The URI that may be used to retrieve the newly created discovery setting.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -1047,7 +999,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated discovery setting.
+             :return uri: The URI that may be used to retrieve the updated discovery setting.
              :rtype uri: String
 
             |  ``api version min:`` None

@@ -5,7 +5,7 @@ class DeviceGroupScoreBroker(Broker):
     controller = "device_group_scores"
 
     def index(self, **kwargs):
-        """Lists the available device group scores. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device group scores. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -38,7 +38,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` GroupSetID
 
-             :param sort: The data field(s) to use for sorting the output. Default is GroupSetID. Valid values are Timestamp, GroupSetID, Component, Correctness, Stability, Info, Warn, Error, InfoDetails, WarnDetails, ErrorDetails.
+             :param sort: The data field(s) to use for sorting the output. Valid values are Timestamp, GroupSetID, Component, Correctness, Stability, Info, Warn, Error, InfoDetails, WarnDetails, ErrorDetails.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -46,7 +46,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -56,22 +56,6 @@ class DeviceGroupScoreBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceGroupScore. Valid values are Timestamp, GroupSetID, Component, Correctness, Stability, Info, Warn, Error, InfoDetails, WarnDetails, ErrorDetails. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -228,7 +212,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` GroupSetID
 
-             :param sort: The data field(s) to use for sorting the output. Default is GroupSetID. Valid values are Timestamp, GroupSetID, Component, Correctness, Stability, Info, Warn, Error, InfoDetails, WarnDetails, ErrorDetails.
+             :param sort: The data field(s) to use for sorting the output. Valid values are Timestamp, GroupSetID, Component, Correctness, Stability, Info, Warn, Error, InfoDetails, WarnDetails, ErrorDetails.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -236,7 +220,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -246,22 +230,6 @@ class DeviceGroupScoreBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceGroupScore. Valid values are Timestamp, GroupSetID, Component, Correctness, Stability, Info, Warn, Error, InfoDetails, WarnDetails, ErrorDetails. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -319,7 +287,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Component: If op_Component is specified, this value will be compared to the value in Component using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Component must be specified if op_Component is specified.
+             :param val_c_Component: If op_Component is specified, this value will be compared to the value in Component using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Component must be specified if op_Component is specified. If the rlike or not rlike value is specified in the op_Component field, escape regex special characters because a regular expression is expected.
              :type val_c_Component: String
 
             |  ``api version min:`` None
@@ -343,7 +311,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Correctness: If op_Correctness is specified, this value will be compared to the value in Correctness using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Correctness must be specified if op_Correctness is specified.
+             :param val_c_Correctness: If op_Correctness is specified, this value will be compared to the value in Correctness using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Correctness must be specified if op_Correctness is specified. If the rlike or not rlike value is specified in the op_Correctness field, escape regex special characters because a regular expression is expected.
              :type val_c_Correctness: String
 
             |  ``api version min:`` None
@@ -367,7 +335,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Error: If op_Error is specified, this value will be compared to the value in Error using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Error must be specified if op_Error is specified.
+             :param val_c_Error: If op_Error is specified, this value will be compared to the value in Error using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Error must be specified if op_Error is specified. If the rlike or not rlike value is specified in the op_Error field, escape regex special characters because a regular expression is expected.
              :type val_c_Error: String
 
             |  ``api version min:`` None
@@ -391,7 +359,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ErrorDetails: If op_ErrorDetails is specified, this value will be compared to the value in ErrorDetails using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ErrorDetails must be specified if op_ErrorDetails is specified.
+             :param val_c_ErrorDetails: If op_ErrorDetails is specified, this value will be compared to the value in ErrorDetails using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ErrorDetails must be specified if op_ErrorDetails is specified. If the rlike or not rlike value is specified in the op_ErrorDetails field, escape regex special characters because a regular expression is expected.
              :type val_c_ErrorDetails: String
 
             |  ``api version min:`` None
@@ -415,7 +383,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GroupSetID: If op_GroupSetID is specified, this value will be compared to the value in GroupSetID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GroupSetID must be specified if op_GroupSetID is specified.
+             :param val_c_GroupSetID: If op_GroupSetID is specified, this value will be compared to the value in GroupSetID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GroupSetID must be specified if op_GroupSetID is specified. If the rlike or not rlike value is specified in the op_GroupSetID field, escape regex special characters because a regular expression is expected.
              :type val_c_GroupSetID: String
 
             |  ``api version min:`` None
@@ -439,7 +407,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Info: If op_Info is specified, this value will be compared to the value in Info using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Info must be specified if op_Info is specified.
+             :param val_c_Info: If op_Info is specified, this value will be compared to the value in Info using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Info must be specified if op_Info is specified. If the rlike or not rlike value is specified in the op_Info field, escape regex special characters because a regular expression is expected.
              :type val_c_Info: String
 
             |  ``api version min:`` None
@@ -463,7 +431,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InfoDetails: If op_InfoDetails is specified, this value will be compared to the value in InfoDetails using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InfoDetails must be specified if op_InfoDetails is specified.
+             :param val_c_InfoDetails: If op_InfoDetails is specified, this value will be compared to the value in InfoDetails using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InfoDetails must be specified if op_InfoDetails is specified. If the rlike or not rlike value is specified in the op_InfoDetails field, escape regex special characters because a regular expression is expected.
              :type val_c_InfoDetails: String
 
             |  ``api version min:`` None
@@ -487,7 +455,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Stability: If op_Stability is specified, this value will be compared to the value in Stability using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Stability must be specified if op_Stability is specified.
+             :param val_c_Stability: If op_Stability is specified, this value will be compared to the value in Stability using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Stability must be specified if op_Stability is specified. If the rlike or not rlike value is specified in the op_Stability field, escape regex special characters because a regular expression is expected.
              :type val_c_Stability: String
 
             |  ``api version min:`` None
@@ -511,7 +479,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Timestamp: If op_Timestamp is specified, this value will be compared to the value in Timestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Timestamp must be specified if op_Timestamp is specified.
+             :param val_c_Timestamp: If op_Timestamp is specified, this value will be compared to the value in Timestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Timestamp must be specified if op_Timestamp is specified. If the rlike or not rlike value is specified in the op_Timestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_Timestamp: String
 
             |  ``api version min:`` None
@@ -535,7 +503,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Warn: If op_Warn is specified, this value will be compared to the value in Warn using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Warn must be specified if op_Warn is specified.
+             :param val_c_Warn: If op_Warn is specified, this value will be compared to the value in Warn using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Warn must be specified if op_Warn is specified. If the rlike or not rlike value is specified in the op_Warn field, escape regex special characters because a regular expression is expected.
              :type val_c_Warn: String
 
             |  ``api version min:`` None
@@ -559,7 +527,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WarnDetails: If op_WarnDetails is specified, this value will be compared to the value in WarnDetails using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WarnDetails must be specified if op_WarnDetails is specified.
+             :param val_c_WarnDetails: If op_WarnDetails is specified, this value will be compared to the value in WarnDetails using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WarnDetails must be specified if op_WarnDetails is specified. If the rlike or not rlike value is specified in the op_WarnDetails field, escape regex special characters because a regular expression is expected.
              :type val_c_WarnDetails: String
 
             |  ``api version min:`` None
@@ -583,7 +551,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` GroupSetID
 
-             :param sort: The data field(s) to use for sorting the output. Default is GroupSetID. Valid values are Timestamp, GroupSetID, Component, Correctness, Stability, Info, Warn, Error, InfoDetails, WarnDetails, ErrorDetails.
+             :param sort: The data field(s) to use for sorting the output. Valid values are Timestamp, GroupSetID, Component, Correctness, Stability, Info, Warn, Error, InfoDetails, WarnDetails, ErrorDetails.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class DeviceGroupScoreBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -601,22 +569,6 @@ class DeviceGroupScoreBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceGroupScore. Valid values are Timestamp, GroupSetID, Component, Correctness, Stability, Info, Warn, Error, InfoDetails, WarnDetails, ErrorDetails. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

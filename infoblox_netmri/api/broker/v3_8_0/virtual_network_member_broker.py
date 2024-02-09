@@ -5,7 +5,7 @@ class VirtualNetworkMemberBroker(Broker):
     controller = "virtual_network_members"
 
     def index(self, **kwargs):
-        """Lists the available virtual network members. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available virtual network members. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -78,7 +78,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VirtualNetworkMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VirtualNetworkMemberID. Valid values are VirtualNetworkMemberID, VirtualNetworkMemberStartTime, VirtualNetworkMemberEndTime, VirtualNetworkMemberChangedCols, VirtualNetworkMemberTimestamp, VirtualNetworkMemberFirstTime, DataSourceID, DeviceID, VirtualNetworkID, VirtualNetworkMemberName, VirtualNetworkMemberDescription, VirtualNetworkMemberArtificialInd, VirtualNetworkMemberDefaultInd, DefaultRDType, DefaultRDLeft, DefaultRDRight, DefaultVPNID, RouteLimit, WarningLimit, CurrentCount.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VirtualNetworkMemberID, VirtualNetworkMemberStartTime, VirtualNetworkMemberEndTime, VirtualNetworkMemberChangedCols, VirtualNetworkMemberTimestamp, VirtualNetworkMemberFirstTime, DataSourceID, DeviceID, VirtualNetworkID, VirtualNetworkMemberName, VirtualNetworkMemberDescription, VirtualNetworkMemberArtificialInd, VirtualNetworkMemberDefaultInd, DefaultRDType, DefaultRDLeft, DefaultRDRight, DefaultVPNID, RouteLimit, WarningLimit, CurrentCount.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -86,7 +86,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -96,22 +96,6 @@ class VirtualNetworkMemberBroker(Broker):
 
              :param select: The list of attributes to return for each VirtualNetworkMember. Valid values are VirtualNetworkMemberID, VirtualNetworkMemberStartTime, VirtualNetworkMemberEndTime, VirtualNetworkMemberChangedCols, VirtualNetworkMemberTimestamp, VirtualNetworkMemberFirstTime, DataSourceID, DeviceID, VirtualNetworkID, VirtualNetworkMemberName, VirtualNetworkMemberDescription, VirtualNetworkMemberArtificialInd, VirtualNetworkMemberDefaultInd, DefaultRDType, DefaultRDLeft, DefaultRDRight, DefaultVPNID, RouteLimit, WarningLimit, CurrentCount. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -244,7 +228,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VirtualNetworkMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VirtualNetworkMemberID. Valid values are VirtualNetworkMemberID, VirtualNetworkMemberStartTime, VirtualNetworkMemberEndTime, VirtualNetworkMemberChangedCols, VirtualNetworkMemberTimestamp, VirtualNetworkMemberFirstTime, DataSourceID, DeviceID, VirtualNetworkID, VirtualNetworkMemberName, VirtualNetworkMemberDescription, VirtualNetworkMemberArtificialInd, VirtualNetworkMemberDefaultInd, DefaultRDType, DefaultRDLeft, DefaultRDRight, DefaultVPNID, RouteLimit, WarningLimit, CurrentCount.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VirtualNetworkMemberID, VirtualNetworkMemberStartTime, VirtualNetworkMemberEndTime, VirtualNetworkMemberChangedCols, VirtualNetworkMemberTimestamp, VirtualNetworkMemberFirstTime, DataSourceID, DeviceID, VirtualNetworkID, VirtualNetworkMemberName, VirtualNetworkMemberDescription, VirtualNetworkMemberArtificialInd, VirtualNetworkMemberDefaultInd, DefaultRDType, DefaultRDLeft, DefaultRDRight, DefaultVPNID, RouteLimit, WarningLimit, CurrentCount.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -252,7 +236,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -262,22 +246,6 @@ class VirtualNetworkMemberBroker(Broker):
 
              :param select: The list of attributes to return for each VirtualNetworkMember. Valid values are VirtualNetworkMemberID, VirtualNetworkMemberStartTime, VirtualNetworkMemberEndTime, VirtualNetworkMemberChangedCols, VirtualNetworkMemberTimestamp, VirtualNetworkMemberFirstTime, DataSourceID, DeviceID, VirtualNetworkID, VirtualNetworkMemberName, VirtualNetworkMemberDescription, VirtualNetworkMemberArtificialInd, VirtualNetworkMemberDefaultInd, DefaultRDType, DefaultRDLeft, DefaultRDRight, DefaultVPNID, RouteLimit, WarningLimit, CurrentCount. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -335,7 +303,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CurrentCount: If op_CurrentCount is specified, this value will be compared to the value in CurrentCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CurrentCount must be specified if op_CurrentCount is specified.
+             :param val_c_CurrentCount: If op_CurrentCount is specified, this value will be compared to the value in CurrentCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CurrentCount must be specified if op_CurrentCount is specified. If the rlike or not rlike value is specified in the op_CurrentCount field, escape regex special characters because a regular expression is expected.
              :type val_c_CurrentCount: String
 
             |  ``api version min:`` None
@@ -359,7 +327,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -383,7 +351,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DefaultRDLeft: If op_DefaultRDLeft is specified, this value will be compared to the value in DefaultRDLeft using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DefaultRDLeft must be specified if op_DefaultRDLeft is specified.
+             :param val_c_DefaultRDLeft: If op_DefaultRDLeft is specified, this value will be compared to the value in DefaultRDLeft using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DefaultRDLeft must be specified if op_DefaultRDLeft is specified. If the rlike or not rlike value is specified in the op_DefaultRDLeft field, escape regex special characters because a regular expression is expected.
              :type val_c_DefaultRDLeft: String
 
             |  ``api version min:`` None
@@ -407,7 +375,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DefaultRDRight: If op_DefaultRDRight is specified, this value will be compared to the value in DefaultRDRight using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DefaultRDRight must be specified if op_DefaultRDRight is specified.
+             :param val_c_DefaultRDRight: If op_DefaultRDRight is specified, this value will be compared to the value in DefaultRDRight using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DefaultRDRight must be specified if op_DefaultRDRight is specified. If the rlike or not rlike value is specified in the op_DefaultRDRight field, escape regex special characters because a regular expression is expected.
              :type val_c_DefaultRDRight: String
 
             |  ``api version min:`` None
@@ -431,7 +399,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DefaultRDType: If op_DefaultRDType is specified, this value will be compared to the value in DefaultRDType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DefaultRDType must be specified if op_DefaultRDType is specified.
+             :param val_c_DefaultRDType: If op_DefaultRDType is specified, this value will be compared to the value in DefaultRDType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DefaultRDType must be specified if op_DefaultRDType is specified. If the rlike or not rlike value is specified in the op_DefaultRDType field, escape regex special characters because a regular expression is expected.
              :type val_c_DefaultRDType: String
 
             |  ``api version min:`` None
@@ -455,7 +423,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DefaultVPNID: If op_DefaultVPNID is specified, this value will be compared to the value in DefaultVPNID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DefaultVPNID must be specified if op_DefaultVPNID is specified.
+             :param val_c_DefaultVPNID: If op_DefaultVPNID is specified, this value will be compared to the value in DefaultVPNID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DefaultVPNID must be specified if op_DefaultVPNID is specified. If the rlike or not rlike value is specified in the op_DefaultVPNID field, escape regex special characters because a regular expression is expected.
              :type val_c_DefaultVPNID: String
 
             |  ``api version min:`` None
@@ -479,7 +447,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -503,7 +471,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteLimit: If op_RouteLimit is specified, this value will be compared to the value in RouteLimit using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteLimit must be specified if op_RouteLimit is specified.
+             :param val_c_RouteLimit: If op_RouteLimit is specified, this value will be compared to the value in RouteLimit using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteLimit must be specified if op_RouteLimit is specified. If the rlike or not rlike value is specified in the op_RouteLimit field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteLimit: String
 
             |  ``api version min:`` None
@@ -527,7 +495,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkID: If op_VirtualNetworkID is specified, this value will be compared to the value in VirtualNetworkID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkID must be specified if op_VirtualNetworkID is specified.
+             :param val_c_VirtualNetworkID: If op_VirtualNetworkID is specified, this value will be compared to the value in VirtualNetworkID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkID must be specified if op_VirtualNetworkID is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkID field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkID: String
 
             |  ``api version min:`` None
@@ -551,7 +519,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberArtificialInd: If op_VirtualNetworkMemberArtificialInd is specified, this value will be compared to the value in VirtualNetworkMemberArtificialInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberArtificialInd must be specified if op_VirtualNetworkMemberArtificialInd is specified.
+             :param val_c_VirtualNetworkMemberArtificialInd: If op_VirtualNetworkMemberArtificialInd is specified, this value will be compared to the value in VirtualNetworkMemberArtificialInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberArtificialInd must be specified if op_VirtualNetworkMemberArtificialInd is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberArtificialInd field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberArtificialInd: String
 
             |  ``api version min:`` None
@@ -575,7 +543,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberChangedCols: If op_VirtualNetworkMemberChangedCols is specified, this value will be compared to the value in VirtualNetworkMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberChangedCols must be specified if op_VirtualNetworkMemberChangedCols is specified.
+             :param val_c_VirtualNetworkMemberChangedCols: If op_VirtualNetworkMemberChangedCols is specified, this value will be compared to the value in VirtualNetworkMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberChangedCols must be specified if op_VirtualNetworkMemberChangedCols is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberChangedCols: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberDefaultInd: If op_VirtualNetworkMemberDefaultInd is specified, this value will be compared to the value in VirtualNetworkMemberDefaultInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberDefaultInd must be specified if op_VirtualNetworkMemberDefaultInd is specified.
+             :param val_c_VirtualNetworkMemberDefaultInd: If op_VirtualNetworkMemberDefaultInd is specified, this value will be compared to the value in VirtualNetworkMemberDefaultInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberDefaultInd must be specified if op_VirtualNetworkMemberDefaultInd is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberDefaultInd field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberDefaultInd: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberDescription: If op_VirtualNetworkMemberDescription is specified, this value will be compared to the value in VirtualNetworkMemberDescription using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberDescription must be specified if op_VirtualNetworkMemberDescription is specified.
+             :param val_c_VirtualNetworkMemberDescription: If op_VirtualNetworkMemberDescription is specified, this value will be compared to the value in VirtualNetworkMemberDescription using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberDescription must be specified if op_VirtualNetworkMemberDescription is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberDescription field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberDescription: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberEndTime: If op_VirtualNetworkMemberEndTime is specified, this value will be compared to the value in VirtualNetworkMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberEndTime must be specified if op_VirtualNetworkMemberEndTime is specified.
+             :param val_c_VirtualNetworkMemberEndTime: If op_VirtualNetworkMemberEndTime is specified, this value will be compared to the value in VirtualNetworkMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberEndTime must be specified if op_VirtualNetworkMemberEndTime is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberEndTime: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberFirstTime: If op_VirtualNetworkMemberFirstTime is specified, this value will be compared to the value in VirtualNetworkMemberFirstTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberFirstTime must be specified if op_VirtualNetworkMemberFirstTime is specified.
+             :param val_c_VirtualNetworkMemberFirstTime: If op_VirtualNetworkMemberFirstTime is specified, this value will be compared to the value in VirtualNetworkMemberFirstTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberFirstTime must be specified if op_VirtualNetworkMemberFirstTime is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberFirstTime field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberFirstTime: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberID: If op_VirtualNetworkMemberID is specified, this value will be compared to the value in VirtualNetworkMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberID must be specified if op_VirtualNetworkMemberID is specified.
+             :param val_c_VirtualNetworkMemberID: If op_VirtualNetworkMemberID is specified, this value will be compared to the value in VirtualNetworkMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberID must be specified if op_VirtualNetworkMemberID is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberID: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberName: If op_VirtualNetworkMemberName is specified, this value will be compared to the value in VirtualNetworkMemberName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberName must be specified if op_VirtualNetworkMemberName is specified.
+             :param val_c_VirtualNetworkMemberName: If op_VirtualNetworkMemberName is specified, this value will be compared to the value in VirtualNetworkMemberName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberName must be specified if op_VirtualNetworkMemberName is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberName field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberName: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberStartTime: If op_VirtualNetworkMemberStartTime is specified, this value will be compared to the value in VirtualNetworkMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberStartTime must be specified if op_VirtualNetworkMemberStartTime is specified.
+             :param val_c_VirtualNetworkMemberStartTime: If op_VirtualNetworkMemberStartTime is specified, this value will be compared to the value in VirtualNetworkMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberStartTime must be specified if op_VirtualNetworkMemberStartTime is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberStartTime: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberTimestamp: If op_VirtualNetworkMemberTimestamp is specified, this value will be compared to the value in VirtualNetworkMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberTimestamp must be specified if op_VirtualNetworkMemberTimestamp is specified.
+             :param val_c_VirtualNetworkMemberTimestamp: If op_VirtualNetworkMemberTimestamp is specified, this value will be compared to the value in VirtualNetworkMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberTimestamp must be specified if op_VirtualNetworkMemberTimestamp is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberTimestamp: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WarningLimit: If op_WarningLimit is specified, this value will be compared to the value in WarningLimit using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WarningLimit must be specified if op_WarningLimit is specified.
+             :param val_c_WarningLimit: If op_WarningLimit is specified, this value will be compared to the value in WarningLimit using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WarningLimit must be specified if op_WarningLimit is specified. If the rlike or not rlike value is specified in the op_WarningLimit field, escape regex special characters because a regular expression is expected.
              :type val_c_WarningLimit: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_assigned_network_id: If op_assigned_network_id is specified, this value will be compared to the value in assigned_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_assigned_network_id must be specified if op_assigned_network_id is specified.
+             :param val_c_assigned_network_id: If op_assigned_network_id is specified, this value will be compared to the value in assigned_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_assigned_network_id must be specified if op_assigned_network_id is specified. If the rlike or not rlike value is specified in the op_assigned_network_id field, escape regex special characters because a regular expression is expected.
              :type val_c_assigned_network_id: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_member_rd: If op_member_rd is specified, this value will be compared to the value in member_rd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_member_rd must be specified if op_member_rd is specified.
+             :param val_c_member_rd: If op_member_rd is specified, this value will be compared to the value in member_rd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_member_rd must be specified if op_member_rd is specified. If the rlike or not rlike value is specified in the op_member_rd field, escape regex special characters because a regular expression is expected.
              :type val_c_member_rd: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VirtualNetworkMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VirtualNetworkMemberID. Valid values are VirtualNetworkMemberID, VirtualNetworkMemberStartTime, VirtualNetworkMemberEndTime, VirtualNetworkMemberChangedCols, VirtualNetworkMemberTimestamp, VirtualNetworkMemberFirstTime, DataSourceID, DeviceID, VirtualNetworkID, VirtualNetworkMemberName, VirtualNetworkMemberDescription, VirtualNetworkMemberArtificialInd, VirtualNetworkMemberDefaultInd, DefaultRDType, DefaultRDLeft, DefaultRDRight, DefaultVPNID, RouteLimit, WarningLimit, CurrentCount.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VirtualNetworkMemberID, VirtualNetworkMemberStartTime, VirtualNetworkMemberEndTime, VirtualNetworkMemberChangedCols, VirtualNetworkMemberTimestamp, VirtualNetworkMemberFirstTime, DataSourceID, DeviceID, VirtualNetworkID, VirtualNetworkMemberName, VirtualNetworkMemberDescription, VirtualNetworkMemberArtificialInd, VirtualNetworkMemberDefaultInd, DefaultRDType, DefaultRDLeft, DefaultRDRight, DefaultVPNID, RouteLimit, WarningLimit, CurrentCount.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -895,7 +863,7 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -905,22 +873,6 @@ class VirtualNetworkMemberBroker(Broker):
 
              :param select: The list of attributes to return for each VirtualNetworkMember. Valid values are VirtualNetworkMemberID, VirtualNetworkMemberStartTime, VirtualNetworkMemberEndTime, VirtualNetworkMemberChangedCols, VirtualNetworkMemberTimestamp, VirtualNetworkMemberFirstTime, DataSourceID, DeviceID, VirtualNetworkID, VirtualNetworkMemberName, VirtualNetworkMemberDescription, VirtualNetworkMemberArtificialInd, VirtualNetworkMemberDefaultInd, DefaultRDType, DefaultRDLeft, DefaultRDRight, DefaultVPNID, RouteLimit, WarningLimit, CurrentCount. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -964,8 +916,8 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this VRF membership configuration was collected.
-             :rtype : Device
+             :return device: The device from which this VRF membership configuration was collected.
+             :rtype device: Device
 
             """
 
@@ -991,8 +943,8 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Network assigned to current VRF instance.
-             :rtype : VirtualNetwork
+             :return virtual_network: Network assigned to current VRF instance.
+             :rtype virtual_network: VirtualNetwork
 
             """
 
@@ -1018,8 +970,8 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The displayable VRF route distinguisher of this object.
-             :rtype : String
+             :return member_rd: The displayable VRF route distinguisher of this object.
+             :rtype member_rd: String
 
             """
 
@@ -1045,8 +997,8 @@ class VirtualNetworkMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The current network view id assigned.
-             :rtype : Integer
+             :return assigned_network_id: The current network view id assigned.
+             :rtype assigned_network_id: Integer
 
             """
 

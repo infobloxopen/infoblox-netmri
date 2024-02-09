@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class IpRoutedNeighborRemote(RemoteModel):
     """
-    Neighbor relationships between devices as defined by device routing tables.  There is one per route carried over the neighbor relationship.
+    Neighbor relationships between devices as defined by device routing tables. There is one per route carried over the neighbor relationship.
 
 
     |  ``DataSourceID:`` The internal NetMRI identifier for the collector NetMRI that collected this data record.

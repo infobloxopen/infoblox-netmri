@@ -48,7 +48,7 @@ class NeighborBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available neighbors. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available neighbors. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -201,7 +201,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NeighborID. Valid values are DataSourceID, NeighborID, DeviceID, InterfaceID, ifIndex, NeighborDeviceID, NeighborInterfaceID, NeighborIfIndex, NeighborFirstSeenTime, NeighborStartTime, NeighborEndTime, NeighborChangedCols, NeighborTimestamp, CombinedInd, CDPInd, LLDPInd, SerialInd, SwitchFwdInd, RevSwitchFwdInd, DirectEthernetInd, IPRoutedInd, StaticRoutedInd, LocalRoutedInd, ProtoRoutedInd, BGPRoutedInd, OSPFRoutedInd, IGRPRoutedInd, NetworkDeviceInd, NeighborNetworkDeviceInd, CDPNeighborID, LLDPNeighborID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, NeighborID, DeviceID, InterfaceID, ifIndex, NeighborDeviceID, NeighborInterfaceID, NeighborIfIndex, NeighborFirstSeenTime, NeighborStartTime, NeighborEndTime, NeighborChangedCols, NeighborTimestamp, CombinedInd, CDPInd, LLDPInd, SerialInd, SwitchFwdInd, RevSwitchFwdInd, DirectEthernetInd, IPRoutedInd, StaticRoutedInd, LocalRoutedInd, ProtoRoutedInd, BGPRoutedInd, OSPFRoutedInd, IGRPRoutedInd, NetworkDeviceInd, NeighborNetworkDeviceInd, CDPNeighborID, LLDPNeighborID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -209,7 +209,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -219,22 +219,6 @@ class NeighborBroker(Broker):
 
              :param select: The list of attributes to return for each Neighbor. Valid values are DataSourceID, NeighborID, DeviceID, InterfaceID, ifIndex, NeighborDeviceID, NeighborInterfaceID, NeighborIfIndex, NeighborFirstSeenTime, NeighborStartTime, NeighborEndTime, NeighborChangedCols, NeighborTimestamp, CombinedInd, CDPInd, LLDPInd, SerialInd, SwitchFwdInd, RevSwitchFwdInd, DirectEthernetInd, IPRoutedInd, StaticRoutedInd, LocalRoutedInd, ProtoRoutedInd, BGPRoutedInd, OSPFRoutedInd, IGRPRoutedInd, NetworkDeviceInd, NeighborNetworkDeviceInd, CDPNeighborID, LLDPNeighborID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -804,7 +788,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NeighborID. Valid values are DataSourceID, NeighborID, DeviceID, InterfaceID, ifIndex, NeighborDeviceID, NeighborInterfaceID, NeighborIfIndex, NeighborFirstSeenTime, NeighborStartTime, NeighborEndTime, NeighborChangedCols, NeighborTimestamp, CombinedInd, CDPInd, LLDPInd, SerialInd, SwitchFwdInd, RevSwitchFwdInd, DirectEthernetInd, IPRoutedInd, StaticRoutedInd, LocalRoutedInd, ProtoRoutedInd, BGPRoutedInd, OSPFRoutedInd, IGRPRoutedInd, NetworkDeviceInd, NeighborNetworkDeviceInd, CDPNeighborID, LLDPNeighborID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, NeighborID, DeviceID, InterfaceID, ifIndex, NeighborDeviceID, NeighborInterfaceID, NeighborIfIndex, NeighborFirstSeenTime, NeighborStartTime, NeighborEndTime, NeighborChangedCols, NeighborTimestamp, CombinedInd, CDPInd, LLDPInd, SerialInd, SwitchFwdInd, RevSwitchFwdInd, DirectEthernetInd, IPRoutedInd, StaticRoutedInd, LocalRoutedInd, ProtoRoutedInd, BGPRoutedInd, OSPFRoutedInd, IGRPRoutedInd, NetworkDeviceInd, NeighborNetworkDeviceInd, CDPNeighborID, LLDPNeighborID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -812,7 +796,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -822,22 +806,6 @@ class NeighborBroker(Broker):
 
              :param select: The list of attributes to return for each Neighbor. Valid values are DataSourceID, NeighborID, DeviceID, InterfaceID, ifIndex, NeighborDeviceID, NeighborInterfaceID, NeighborIfIndex, NeighborFirstSeenTime, NeighborStartTime, NeighborEndTime, NeighborChangedCols, NeighborTimestamp, CombinedInd, CDPInd, LLDPInd, SerialInd, SwitchFwdInd, RevSwitchFwdInd, DirectEthernetInd, IPRoutedInd, StaticRoutedInd, LocalRoutedInd, ProtoRoutedInd, BGPRoutedInd, OSPFRoutedInd, IGRPRoutedInd, NetworkDeviceInd, NeighborNetworkDeviceInd, CDPNeighborID, LLDPNeighborID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -895,7 +863,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BGPRoutedInd: If op_BGPRoutedInd is specified, this value will be compared to the value in BGPRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BGPRoutedInd must be specified if op_BGPRoutedInd is specified.
+             :param val_c_BGPRoutedInd: If op_BGPRoutedInd is specified, this value will be compared to the value in BGPRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BGPRoutedInd must be specified if op_BGPRoutedInd is specified. If the rlike or not rlike value is specified in the op_BGPRoutedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_BGPRoutedInd: String
 
             |  ``api version min:`` None
@@ -919,7 +887,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPInd: If op_CDPInd is specified, this value will be compared to the value in CDPInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPInd must be specified if op_CDPInd is specified.
+             :param val_c_CDPInd: If op_CDPInd is specified, this value will be compared to the value in CDPInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPInd must be specified if op_CDPInd is specified. If the rlike or not rlike value is specified in the op_CDPInd field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPInd: String
 
             |  ``api version min:`` None
@@ -943,7 +911,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborID: If op_CDPNeighborID is specified, this value will be compared to the value in CDPNeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborID must be specified if op_CDPNeighborID is specified.
+             :param val_c_CDPNeighborID: If op_CDPNeighborID is specified, this value will be compared to the value in CDPNeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborID must be specified if op_CDPNeighborID is specified. If the rlike or not rlike value is specified in the op_CDPNeighborID field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborID: String
 
             |  ``api version min:`` None
@@ -967,7 +935,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CombinedInd: If op_CombinedInd is specified, this value will be compared to the value in CombinedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CombinedInd must be specified if op_CombinedInd is specified.
+             :param val_c_CombinedInd: If op_CombinedInd is specified, this value will be compared to the value in CombinedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CombinedInd must be specified if op_CombinedInd is specified. If the rlike or not rlike value is specified in the op_CombinedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_CombinedInd: String
 
             |  ``api version min:`` None
@@ -991,7 +959,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -1015,7 +983,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -1039,7 +1007,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DirectEthernetInd: If op_DirectEthernetInd is specified, this value will be compared to the value in DirectEthernetInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DirectEthernetInd must be specified if op_DirectEthernetInd is specified.
+             :param val_c_DirectEthernetInd: If op_DirectEthernetInd is specified, this value will be compared to the value in DirectEthernetInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DirectEthernetInd must be specified if op_DirectEthernetInd is specified. If the rlike or not rlike value is specified in the op_DirectEthernetInd field, escape regex special characters because a regular expression is expected.
              :type val_c_DirectEthernetInd: String
 
             |  ``api version min:`` None
@@ -1063,7 +1031,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IGRPRoutedInd: If op_IGRPRoutedInd is specified, this value will be compared to the value in IGRPRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IGRPRoutedInd must be specified if op_IGRPRoutedInd is specified.
+             :param val_c_IGRPRoutedInd: If op_IGRPRoutedInd is specified, this value will be compared to the value in IGRPRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IGRPRoutedInd must be specified if op_IGRPRoutedInd is specified. If the rlike or not rlike value is specified in the op_IGRPRoutedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_IGRPRoutedInd: String
 
             |  ``api version min:`` None
@@ -1087,7 +1055,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IPRoutedInd: If op_IPRoutedInd is specified, this value will be compared to the value in IPRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedInd must be specified if op_IPRoutedInd is specified.
+             :param val_c_IPRoutedInd: If op_IPRoutedInd is specified, this value will be compared to the value in IPRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedInd must be specified if op_IPRoutedInd is specified. If the rlike or not rlike value is specified in the op_IPRoutedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_IPRoutedInd: String
 
             |  ``api version min:`` None
@@ -1111,7 +1079,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -1135,7 +1103,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPInd: If op_LLDPInd is specified, this value will be compared to the value in LLDPInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPInd must be specified if op_LLDPInd is specified.
+             :param val_c_LLDPInd: If op_LLDPInd is specified, this value will be compared to the value in LLDPInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPInd must be specified if op_LLDPInd is specified. If the rlike or not rlike value is specified in the op_LLDPInd field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPInd: String
 
             |  ``api version min:`` None
@@ -1159,7 +1127,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborID: If op_LLDPNeighborID is specified, this value will be compared to the value in LLDPNeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborID must be specified if op_LLDPNeighborID is specified.
+             :param val_c_LLDPNeighborID: If op_LLDPNeighborID is specified, this value will be compared to the value in LLDPNeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborID must be specified if op_LLDPNeighborID is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborID field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborID: String
 
             |  ``api version min:`` None
@@ -1183,7 +1151,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LocalRoutedInd: If op_LocalRoutedInd is specified, this value will be compared to the value in LocalRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LocalRoutedInd must be specified if op_LocalRoutedInd is specified.
+             :param val_c_LocalRoutedInd: If op_LocalRoutedInd is specified, this value will be compared to the value in LocalRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LocalRoutedInd must be specified if op_LocalRoutedInd is specified. If the rlike or not rlike value is specified in the op_LocalRoutedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_LocalRoutedInd: String
 
             |  ``api version min:`` None
@@ -1207,7 +1175,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborChangedCols: If op_NeighborChangedCols is specified, this value will be compared to the value in NeighborChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborChangedCols must be specified if op_NeighborChangedCols is specified.
+             :param val_c_NeighborChangedCols: If op_NeighborChangedCols is specified, this value will be compared to the value in NeighborChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborChangedCols must be specified if op_NeighborChangedCols is specified. If the rlike or not rlike value is specified in the op_NeighborChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborChangedCols: String
 
             |  ``api version min:`` None
@@ -1231,7 +1199,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborDeviceID: If op_NeighborDeviceID is specified, this value will be compared to the value in NeighborDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborDeviceID must be specified if op_NeighborDeviceID is specified.
+             :param val_c_NeighborDeviceID: If op_NeighborDeviceID is specified, this value will be compared to the value in NeighborDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborDeviceID must be specified if op_NeighborDeviceID is specified. If the rlike or not rlike value is specified in the op_NeighborDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborDeviceID: String
 
             |  ``api version min:`` None
@@ -1255,7 +1223,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborEndTime: If op_NeighborEndTime is specified, this value will be compared to the value in NeighborEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborEndTime must be specified if op_NeighborEndTime is specified.
+             :param val_c_NeighborEndTime: If op_NeighborEndTime is specified, this value will be compared to the value in NeighborEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborEndTime must be specified if op_NeighborEndTime is specified. If the rlike or not rlike value is specified in the op_NeighborEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborEndTime: String
 
             |  ``api version min:`` None
@@ -1279,7 +1247,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborFirstSeenTime: If op_NeighborFirstSeenTime is specified, this value will be compared to the value in NeighborFirstSeenTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborFirstSeenTime must be specified if op_NeighborFirstSeenTime is specified.
+             :param val_c_NeighborFirstSeenTime: If op_NeighborFirstSeenTime is specified, this value will be compared to the value in NeighborFirstSeenTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborFirstSeenTime must be specified if op_NeighborFirstSeenTime is specified. If the rlike or not rlike value is specified in the op_NeighborFirstSeenTime field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborFirstSeenTime: String
 
             |  ``api version min:`` None
@@ -1303,7 +1271,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborID: If op_NeighborID is specified, this value will be compared to the value in NeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborID must be specified if op_NeighborID is specified.
+             :param val_c_NeighborID: If op_NeighborID is specified, this value will be compared to the value in NeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborID must be specified if op_NeighborID is specified. If the rlike or not rlike value is specified in the op_NeighborID field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborID: String
 
             |  ``api version min:`` None
@@ -1327,7 +1295,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborIfIndex: If op_NeighborIfIndex is specified, this value will be compared to the value in NeighborIfIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborIfIndex must be specified if op_NeighborIfIndex is specified.
+             :param val_c_NeighborIfIndex: If op_NeighborIfIndex is specified, this value will be compared to the value in NeighborIfIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborIfIndex must be specified if op_NeighborIfIndex is specified. If the rlike or not rlike value is specified in the op_NeighborIfIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborIfIndex: String
 
             |  ``api version min:`` None
@@ -1351,7 +1319,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborInterfaceID: If op_NeighborInterfaceID is specified, this value will be compared to the value in NeighborInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborInterfaceID must be specified if op_NeighborInterfaceID is specified.
+             :param val_c_NeighborInterfaceID: If op_NeighborInterfaceID is specified, this value will be compared to the value in NeighborInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborInterfaceID must be specified if op_NeighborInterfaceID is specified. If the rlike or not rlike value is specified in the op_NeighborInterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborInterfaceID: String
 
             |  ``api version min:`` None
@@ -1375,7 +1343,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborNetworkDeviceInd: If op_NeighborNetworkDeviceInd is specified, this value will be compared to the value in NeighborNetworkDeviceInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborNetworkDeviceInd must be specified if op_NeighborNetworkDeviceInd is specified.
+             :param val_c_NeighborNetworkDeviceInd: If op_NeighborNetworkDeviceInd is specified, this value will be compared to the value in NeighborNetworkDeviceInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborNetworkDeviceInd must be specified if op_NeighborNetworkDeviceInd is specified. If the rlike or not rlike value is specified in the op_NeighborNetworkDeviceInd field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborNetworkDeviceInd: String
 
             |  ``api version min:`` None
@@ -1399,7 +1367,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborStartTime: If op_NeighborStartTime is specified, this value will be compared to the value in NeighborStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborStartTime must be specified if op_NeighborStartTime is specified.
+             :param val_c_NeighborStartTime: If op_NeighborStartTime is specified, this value will be compared to the value in NeighborStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborStartTime must be specified if op_NeighborStartTime is specified. If the rlike or not rlike value is specified in the op_NeighborStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborStartTime: String
 
             |  ``api version min:`` None
@@ -1423,7 +1391,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborTimestamp: If op_NeighborTimestamp is specified, this value will be compared to the value in NeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborTimestamp must be specified if op_NeighborTimestamp is specified.
+             :param val_c_NeighborTimestamp: If op_NeighborTimestamp is specified, this value will be compared to the value in NeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborTimestamp must be specified if op_NeighborTimestamp is specified. If the rlike or not rlike value is specified in the op_NeighborTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborTimestamp: String
 
             |  ``api version min:`` None
@@ -1447,7 +1415,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NetworkDeviceInd: If op_NetworkDeviceInd is specified, this value will be compared to the value in NetworkDeviceInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NetworkDeviceInd must be specified if op_NetworkDeviceInd is specified.
+             :param val_c_NetworkDeviceInd: If op_NetworkDeviceInd is specified, this value will be compared to the value in NetworkDeviceInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NetworkDeviceInd must be specified if op_NetworkDeviceInd is specified. If the rlike or not rlike value is specified in the op_NetworkDeviceInd field, escape regex special characters because a regular expression is expected.
              :type val_c_NetworkDeviceInd: String
 
             |  ``api version min:`` None
@@ -1471,7 +1439,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OSPFRoutedInd: If op_OSPFRoutedInd is specified, this value will be compared to the value in OSPFRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OSPFRoutedInd must be specified if op_OSPFRoutedInd is specified.
+             :param val_c_OSPFRoutedInd: If op_OSPFRoutedInd is specified, this value will be compared to the value in OSPFRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OSPFRoutedInd must be specified if op_OSPFRoutedInd is specified. If the rlike or not rlike value is specified in the op_OSPFRoutedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_OSPFRoutedInd: String
 
             |  ``api version min:`` None
@@ -1495,7 +1463,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ProtoRoutedInd: If op_ProtoRoutedInd is specified, this value will be compared to the value in ProtoRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ProtoRoutedInd must be specified if op_ProtoRoutedInd is specified.
+             :param val_c_ProtoRoutedInd: If op_ProtoRoutedInd is specified, this value will be compared to the value in ProtoRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ProtoRoutedInd must be specified if op_ProtoRoutedInd is specified. If the rlike or not rlike value is specified in the op_ProtoRoutedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ProtoRoutedInd: String
 
             |  ``api version min:`` None
@@ -1519,7 +1487,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RevSwitchFwdInd: If op_RevSwitchFwdInd is specified, this value will be compared to the value in RevSwitchFwdInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RevSwitchFwdInd must be specified if op_RevSwitchFwdInd is specified.
+             :param val_c_RevSwitchFwdInd: If op_RevSwitchFwdInd is specified, this value will be compared to the value in RevSwitchFwdInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RevSwitchFwdInd must be specified if op_RevSwitchFwdInd is specified. If the rlike or not rlike value is specified in the op_RevSwitchFwdInd field, escape regex special characters because a regular expression is expected.
              :type val_c_RevSwitchFwdInd: String
 
             |  ``api version min:`` None
@@ -1543,7 +1511,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SerialInd: If op_SerialInd is specified, this value will be compared to the value in SerialInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialInd must be specified if op_SerialInd is specified.
+             :param val_c_SerialInd: If op_SerialInd is specified, this value will be compared to the value in SerialInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialInd must be specified if op_SerialInd is specified. If the rlike or not rlike value is specified in the op_SerialInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SerialInd: String
 
             |  ``api version min:`` None
@@ -1567,7 +1535,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StaticRoutedInd: If op_StaticRoutedInd is specified, this value will be compared to the value in StaticRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StaticRoutedInd must be specified if op_StaticRoutedInd is specified.
+             :param val_c_StaticRoutedInd: If op_StaticRoutedInd is specified, this value will be compared to the value in StaticRoutedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StaticRoutedInd must be specified if op_StaticRoutedInd is specified. If the rlike or not rlike value is specified in the op_StaticRoutedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_StaticRoutedInd: String
 
             |  ``api version min:`` None
@@ -1591,7 +1559,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchFwdInd: If op_SwitchFwdInd is specified, this value will be compared to the value in SwitchFwdInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchFwdInd must be specified if op_SwitchFwdInd is specified.
+             :param val_c_SwitchFwdInd: If op_SwitchFwdInd is specified, this value will be compared to the value in SwitchFwdInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchFwdInd must be specified if op_SwitchFwdInd is specified. If the rlike or not rlike value is specified in the op_SwitchFwdInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchFwdInd: String
 
             |  ``api version min:`` None
@@ -1615,7 +1583,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -1639,7 +1607,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_network_id: If op_network_id is specified, this value will be compared to the value in network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_network_id must be specified if op_network_id is specified.
+             :param val_c_network_id: If op_network_id is specified, this value will be compared to the value in network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_network_id must be specified if op_network_id is specified. If the rlike or not rlike value is specified in the op_network_id field, escape regex special characters because a regular expression is expected.
              :type val_c_network_id: String
 
             |  ``api version min:`` None
@@ -1695,7 +1663,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NeighborID. Valid values are DataSourceID, NeighborID, DeviceID, InterfaceID, ifIndex, NeighborDeviceID, NeighborInterfaceID, NeighborIfIndex, NeighborFirstSeenTime, NeighborStartTime, NeighborEndTime, NeighborChangedCols, NeighborTimestamp, CombinedInd, CDPInd, LLDPInd, SerialInd, SwitchFwdInd, RevSwitchFwdInd, DirectEthernetInd, IPRoutedInd, StaticRoutedInd, LocalRoutedInd, ProtoRoutedInd, BGPRoutedInd, OSPFRoutedInd, IGRPRoutedInd, NetworkDeviceInd, NeighborNetworkDeviceInd, CDPNeighborID, LLDPNeighborID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, NeighborID, DeviceID, InterfaceID, ifIndex, NeighborDeviceID, NeighborInterfaceID, NeighborIfIndex, NeighborFirstSeenTime, NeighborStartTime, NeighborEndTime, NeighborChangedCols, NeighborTimestamp, CombinedInd, CDPInd, LLDPInd, SerialInd, SwitchFwdInd, RevSwitchFwdInd, DirectEthernetInd, IPRoutedInd, StaticRoutedInd, LocalRoutedInd, ProtoRoutedInd, BGPRoutedInd, OSPFRoutedInd, IGRPRoutedInd, NetworkDeviceInd, NeighborNetworkDeviceInd, CDPNeighborID, LLDPNeighborID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1703,7 +1671,7 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1713,22 +1681,6 @@ class NeighborBroker(Broker):
 
              :param select: The list of attributes to return for each Neighbor. Valid values are DataSourceID, NeighborID, DeviceID, InterfaceID, ifIndex, NeighborDeviceID, NeighborInterfaceID, NeighborIfIndex, NeighborFirstSeenTime, NeighborStartTime, NeighborEndTime, NeighborChangedCols, NeighborTimestamp, CombinedInd, CDPInd, LLDPInd, SerialInd, SwitchFwdInd, RevSwitchFwdInd, DirectEthernetInd, IPRoutedInd, StaticRoutedInd, LocalRoutedInd, ProtoRoutedInd, BGPRoutedInd, OSPFRoutedInd, IGRPRoutedInd, NetworkDeviceInd, NeighborNetworkDeviceInd, CDPNeighborID, LLDPNeighborID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1772,8 +1724,8 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The source interface in this neighbor relationship.
-             :rtype : Interface
+             :return interface: The source interface in this neighbor relationship.
+             :rtype interface: Interface
 
             """
 
@@ -1799,8 +1751,8 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The destination device in this neighbor relationship.
-             :rtype : Device
+             :return neighbor_device: The destination device in this neighbor relationship.
+             :rtype neighbor_device: Device
 
             """
 
@@ -1826,8 +1778,8 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The destination interface in this neighbor relationship.
-             :rtype : Interface
+             :return neighbor_interface: The destination interface in this neighbor relationship.
+             :rtype neighbor_interface: Interface
 
             """
 
@@ -1853,8 +1805,8 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The source device in this neighbor relationship.
-             :rtype : InfraDevice
+             :return infradevice: The source device in this neighbor relationship.
+             :rtype infradevice: InfraDevice
 
             """
 
@@ -1880,8 +1832,8 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The Network View ID assigned to this neighbor relationship.
-             :rtype : Integer
+             :return network_id: The Network View ID assigned to this neighbor relationship.
+             :rtype network_id: Integer
 
             """
 
@@ -1907,8 +1859,8 @@ class NeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The source device in this neighbor relationship.
-             :rtype : Device
+             :return device: The source device in this neighbor relationship.
+             :rtype device: Device
 
             """
 

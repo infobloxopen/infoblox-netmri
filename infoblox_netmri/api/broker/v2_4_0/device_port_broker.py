@@ -5,7 +5,7 @@ class DevicePortBroker(Broker):
     controller = "device_ports"
 
     def index(self, **kwargs):
-        """Lists the available device ports. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device ports. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -126,7 +126,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePortID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePortID. Valid values are DevicePortID, DataSourceID, DeviceID, Port, PortProtocol, PortStartTime, PortEndTime, PortChangedCols, PortTimestamp, PortState, Service, ExpectedService, FirstOccurrence, ListenAddr.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevicePortID, DataSourceID, DeviceID, Port, PortProtocol, PortStartTime, PortEndTime, PortChangedCols, PortTimestamp, PortState, Service, ExpectedService, FirstOccurrence, ListenAddr.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -134,7 +134,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -144,22 +144,6 @@ class DevicePortBroker(Broker):
 
              :param select: The list of attributes to return for each DevicePort. Valid values are DevicePortID, DataSourceID, DeviceID, Port, PortProtocol, PortStartTime, PortEndTime, PortChangedCols, PortTimestamp, PortState, Service, ExpectedService, FirstOccurrence, ListenAddr. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -500,7 +484,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePortID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePortID. Valid values are DevicePortID, DataSourceID, DeviceID, Port, PortProtocol, PortStartTime, PortEndTime, PortChangedCols, PortTimestamp, PortState, Service, ExpectedService, FirstOccurrence, ListenAddr.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevicePortID, DataSourceID, DeviceID, Port, PortProtocol, PortStartTime, PortEndTime, PortChangedCols, PortTimestamp, PortState, Service, ExpectedService, FirstOccurrence, ListenAddr.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -508,7 +492,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -518,22 +502,6 @@ class DevicePortBroker(Broker):
 
              :param select: The list of attributes to return for each DevicePort. Valid values are DevicePortID, DataSourceID, DeviceID, Port, PortProtocol, PortStartTime, PortEndTime, PortChangedCols, PortTimestamp, PortState, Service, ExpectedService, FirstOccurrence, ListenAddr. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -591,7 +559,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePortID: If op_DevicePortID is specified, this value will be compared to the value in DevicePortID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePortID must be specified if op_DevicePortID is specified.
+             :param val_c_DevicePortID: If op_DevicePortID is specified, this value will be compared to the value in DevicePortID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePortID must be specified if op_DevicePortID is specified. If the rlike or not rlike value is specified in the op_DevicePortID field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePortID: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ExpectedService: If op_ExpectedService is specified, this value will be compared to the value in ExpectedService using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ExpectedService must be specified if op_ExpectedService is specified.
+             :param val_c_ExpectedService: If op_ExpectedService is specified, this value will be compared to the value in ExpectedService using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ExpectedService must be specified if op_ExpectedService is specified. If the rlike or not rlike value is specified in the op_ExpectedService field, escape regex special characters because a regular expression is expected.
              :type val_c_ExpectedService: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FirstOccurrence: If op_FirstOccurrence is specified, this value will be compared to the value in FirstOccurrence using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FirstOccurrence must be specified if op_FirstOccurrence is specified.
+             :param val_c_FirstOccurrence: If op_FirstOccurrence is specified, this value will be compared to the value in FirstOccurrence using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FirstOccurrence must be specified if op_FirstOccurrence is specified. If the rlike or not rlike value is specified in the op_FirstOccurrence field, escape regex special characters because a regular expression is expected.
              :type val_c_FirstOccurrence: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ListenAddr: If op_ListenAddr is specified, this value will be compared to the value in ListenAddr using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ListenAddr must be specified if op_ListenAddr is specified.
+             :param val_c_ListenAddr: If op_ListenAddr is specified, this value will be compared to the value in ListenAddr using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ListenAddr must be specified if op_ListenAddr is specified. If the rlike or not rlike value is specified in the op_ListenAddr field, escape regex special characters because a regular expression is expected.
              :type val_c_ListenAddr: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Port: If op_Port is specified, this value will be compared to the value in Port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Port must be specified if op_Port is specified.
+             :param val_c_Port: If op_Port is specified, this value will be compared to the value in Port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Port must be specified if op_Port is specified. If the rlike or not rlike value is specified in the op_Port field, escape regex special characters because a regular expression is expected.
              :type val_c_Port: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PortChangedCols: If op_PortChangedCols is specified, this value will be compared to the value in PortChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PortChangedCols must be specified if op_PortChangedCols is specified.
+             :param val_c_PortChangedCols: If op_PortChangedCols is specified, this value will be compared to the value in PortChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PortChangedCols must be specified if op_PortChangedCols is specified. If the rlike or not rlike value is specified in the op_PortChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_PortChangedCols: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PortEndTime: If op_PortEndTime is specified, this value will be compared to the value in PortEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PortEndTime must be specified if op_PortEndTime is specified.
+             :param val_c_PortEndTime: If op_PortEndTime is specified, this value will be compared to the value in PortEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PortEndTime must be specified if op_PortEndTime is specified. If the rlike or not rlike value is specified in the op_PortEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_PortEndTime: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PortProtocol: If op_PortProtocol is specified, this value will be compared to the value in PortProtocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PortProtocol must be specified if op_PortProtocol is specified.
+             :param val_c_PortProtocol: If op_PortProtocol is specified, this value will be compared to the value in PortProtocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PortProtocol must be specified if op_PortProtocol is specified. If the rlike or not rlike value is specified in the op_PortProtocol field, escape regex special characters because a regular expression is expected.
              :type val_c_PortProtocol: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PortStartTime: If op_PortStartTime is specified, this value will be compared to the value in PortStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PortStartTime must be specified if op_PortStartTime is specified.
+             :param val_c_PortStartTime: If op_PortStartTime is specified, this value will be compared to the value in PortStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PortStartTime must be specified if op_PortStartTime is specified. If the rlike or not rlike value is specified in the op_PortStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_PortStartTime: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PortState: If op_PortState is specified, this value will be compared to the value in PortState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PortState must be specified if op_PortState is specified.
+             :param val_c_PortState: If op_PortState is specified, this value will be compared to the value in PortState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PortState must be specified if op_PortState is specified. If the rlike or not rlike value is specified in the op_PortState field, escape regex special characters because a regular expression is expected.
              :type val_c_PortState: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PortTimestamp: If op_PortTimestamp is specified, this value will be compared to the value in PortTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PortTimestamp must be specified if op_PortTimestamp is specified.
+             :param val_c_PortTimestamp: If op_PortTimestamp is specified, this value will be compared to the value in PortTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PortTimestamp must be specified if op_PortTimestamp is specified. If the rlike or not rlike value is specified in the op_PortTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_PortTimestamp: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Service: If op_Service is specified, this value will be compared to the value in Service using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Service must be specified if op_Service is specified.
+             :param val_c_Service: If op_Service is specified, this value will be compared to the value in Service using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Service must be specified if op_Service is specified. If the rlike or not rlike value is specified in the op_Service field, escape regex special characters because a regular expression is expected.
              :type val_c_Service: String
 
             |  ``api version min:`` None
@@ -959,7 +927,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePortID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePortID. Valid values are DevicePortID, DataSourceID, DeviceID, Port, PortProtocol, PortStartTime, PortEndTime, PortChangedCols, PortTimestamp, PortState, Service, ExpectedService, FirstOccurrence, ListenAddr.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevicePortID, DataSourceID, DeviceID, Port, PortProtocol, PortStartTime, PortEndTime, PortChangedCols, PortTimestamp, PortState, Service, ExpectedService, FirstOccurrence, ListenAddr.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -967,7 +935,7 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -977,22 +945,6 @@ class DevicePortBroker(Broker):
 
              :param select: The list of attributes to return for each DevicePort. Valid values are DevicePortID, DataSourceID, DeviceID, Port, PortProtocol, PortStartTime, PortEndTime, PortChangedCols, PortTimestamp, PortState, Service, ExpectedService, FirstOccurrence, ListenAddr. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1036,8 +988,8 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1063,8 +1015,8 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -1090,8 +1042,8 @@ class DevicePortBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

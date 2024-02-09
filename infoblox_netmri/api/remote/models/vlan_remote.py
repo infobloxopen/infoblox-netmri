@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class VlanRemote(RemoteModel):
     """
-    Distinct VLANs in the network.  Note that <i>VlanID</i> refers to NetMRI internal ID for the Vlan.  The <i>VlanIndex</i> is the network VLAN ID.
+    Distinct VLANs in the network. Note that VlanID refers to NetMRI internal ID for the Vlan. The VlanIndex is the network VLAN ID.
 
 
     |  ``DataSourceID:`` The internal NetMRI identifier for the collector assigned to this VLAN (members may come from more than one collector).

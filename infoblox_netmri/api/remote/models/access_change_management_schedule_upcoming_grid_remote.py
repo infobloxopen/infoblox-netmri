@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class AccessChangeManagementScheduleUpcomingGridRemote(RemoteModel):
     """
-    list of scheduled jobs not yet executed for provisioning purposes
+    List of scheduled jobs not yet executed for provisioning purposes.
 
 
     |  ``job_id:`` The internal NetMRI identifier of the job scheduled.

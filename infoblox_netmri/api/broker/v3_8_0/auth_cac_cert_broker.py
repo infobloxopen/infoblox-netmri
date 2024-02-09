@@ -5,7 +5,7 @@ class AuthCacCertBroker(Broker):
     controller = "auth_cac_certs"
 
     def index(self, **kwargs):
-        """Lists the available auth cac certs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available auth cac certs. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -46,7 +46,7 @@ class AuthCacCertBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, auth_server_id, uploaded_certificate_id, is_ocsp_cert.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, auth_server_id, uploaded_certificate_id, is_ocsp_cert.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -54,7 +54,7 @@ class AuthCacCertBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -64,22 +64,6 @@ class AuthCacCertBroker(Broker):
 
              :param select: The list of attributes to return for each AuthCacCert. Valid values are id, auth_server_id, uploaded_certificate_id, is_ocsp_cert. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -180,7 +164,7 @@ class AuthCacCertBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, auth_server_id, uploaded_certificate_id, is_ocsp_cert.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, auth_server_id, uploaded_certificate_id, is_ocsp_cert.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -188,7 +172,7 @@ class AuthCacCertBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -198,22 +182,6 @@ class AuthCacCertBroker(Broker):
 
              :param select: The list of attributes to return for each AuthCacCert. Valid values are id, auth_server_id, uploaded_certificate_id, is_ocsp_cert. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -271,7 +239,7 @@ class AuthCacCertBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_server_id: If op_auth_server_id is specified, this value will be compared to the value in auth_server_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_server_id must be specified if op_auth_server_id is specified.
+             :param val_c_auth_server_id: If op_auth_server_id is specified, this value will be compared to the value in auth_server_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_server_id must be specified if op_auth_server_id is specified. If the rlike or not rlike value is specified in the op_auth_server_id field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_server_id: String
 
             |  ``api version min:`` None
@@ -295,7 +263,7 @@ class AuthCacCertBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -319,7 +287,7 @@ class AuthCacCertBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_is_ocsp_cert: If op_is_ocsp_cert is specified, this value will be compared to the value in is_ocsp_cert using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_is_ocsp_cert must be specified if op_is_ocsp_cert is specified.
+             :param val_c_is_ocsp_cert: If op_is_ocsp_cert is specified, this value will be compared to the value in is_ocsp_cert using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_is_ocsp_cert must be specified if op_is_ocsp_cert is specified. If the rlike or not rlike value is specified in the op_is_ocsp_cert field, escape regex special characters because a regular expression is expected.
              :type val_c_is_ocsp_cert: String
 
             |  ``api version min:`` None
@@ -343,7 +311,7 @@ class AuthCacCertBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_uploaded_certificate_id: If op_uploaded_certificate_id is specified, this value will be compared to the value in uploaded_certificate_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_uploaded_certificate_id must be specified if op_uploaded_certificate_id is specified.
+             :param val_c_uploaded_certificate_id: If op_uploaded_certificate_id is specified, this value will be compared to the value in uploaded_certificate_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_uploaded_certificate_id must be specified if op_uploaded_certificate_id is specified. If the rlike or not rlike value is specified in the op_uploaded_certificate_id field, escape regex special characters because a regular expression is expected.
              :type val_c_uploaded_certificate_id: String
 
             |  ``api version min:`` None
@@ -367,7 +335,7 @@ class AuthCacCertBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, auth_server_id, uploaded_certificate_id, is_ocsp_cert.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, auth_server_id, uploaded_certificate_id, is_ocsp_cert.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -375,7 +343,7 @@ class AuthCacCertBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -385,22 +353,6 @@ class AuthCacCertBroker(Broker):
 
              :param select: The list of attributes to return for each AuthCacCert. Valid values are id, auth_server_id, uploaded_certificate_id, is_ocsp_cert. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -476,7 +428,7 @@ class AuthCacCertBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created auth cac cert.
+             :return uri: The URI that may be used to retrieve the newly created auth cac cert.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -551,7 +503,7 @@ class AuthCacCertBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated auth cac cert.
+             :return uri: The URI that may be used to retrieve the updated auth cac cert.
              :rtype uri: String
 
             |  ``api version min:`` None

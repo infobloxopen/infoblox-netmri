@@ -5,7 +5,7 @@ class SdnNetworkBroker(Broker):
     controller = "sdn_networks"
 
     def index(self, **kwargs):
-        """Lists the available sdn networks. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available sdn networks. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -54,7 +54,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` sdn_network_id
 
-             :param sort: The data field(s) to use for sorting the output. Default is sdn_network_id. Valid values are sdn_network_id, sdn_network_key, sdn_network_name, fabric_id, virtual_network_id, StartTime, EndTime.
+             :param sort: The data field(s) to use for sorting the output. Valid values are sdn_network_id, sdn_network_key, sdn_network_name, fabric_id, virtual_network_id, StartTime, EndTime.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -62,7 +62,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -72,22 +72,6 @@ class SdnNetworkBroker(Broker):
 
              :param select: The list of attributes to return for each SdnNetwork. Valid values are sdn_network_id, sdn_network_key, sdn_network_name, fabric_id, virtual_network_id, StartTime, EndTime. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -193,7 +177,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` sdn_network_id
 
-             :param sort: The data field(s) to use for sorting the output. Default is sdn_network_id. Valid values are sdn_network_id, sdn_network_key, sdn_network_name, fabric_id, virtual_network_id, StartTime, EndTime.
+             :param sort: The data field(s) to use for sorting the output. Valid values are sdn_network_id, sdn_network_key, sdn_network_name, fabric_id, virtual_network_id, StartTime, EndTime.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -201,7 +185,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -211,22 +195,6 @@ class SdnNetworkBroker(Broker):
 
              :param select: The list of attributes to return for each SdnNetwork. Valid values are sdn_network_id, sdn_network_key, sdn_network_name, fabric_id, virtual_network_id, StartTime, EndTime. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -284,7 +252,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified.
+             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified. If the rlike or not rlike value is specified in the op_EndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_EndTime: String
 
             |  ``api version min:`` None
@@ -308,7 +276,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified.
+             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified. If the rlike or not rlike value is specified in the op_StartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_StartTime: String
 
             |  ``api version min:`` None
@@ -332,7 +300,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_fabric_handle: If op_fabric_handle is specified, this value will be compared to the value in fabric_handle using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_fabric_handle must be specified if op_fabric_handle is specified.
+             :param val_c_fabric_handle: If op_fabric_handle is specified, this value will be compared to the value in fabric_handle using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_fabric_handle must be specified if op_fabric_handle is specified. If the rlike or not rlike value is specified in the op_fabric_handle field, escape regex special characters because a regular expression is expected.
              :type val_c_fabric_handle: String
 
             |  ``api version min:`` None
@@ -356,7 +324,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_fabric_id: If op_fabric_id is specified, this value will be compared to the value in fabric_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_fabric_id must be specified if op_fabric_id is specified.
+             :param val_c_fabric_id: If op_fabric_id is specified, this value will be compared to the value in fabric_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_fabric_id must be specified if op_fabric_id is specified. If the rlike or not rlike value is specified in the op_fabric_id field, escape regex special characters because a regular expression is expected.
              :type val_c_fabric_id: String
 
             |  ``api version min:`` None
@@ -380,7 +348,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_sdn_network_id: If op_sdn_network_id is specified, this value will be compared to the value in sdn_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sdn_network_id must be specified if op_sdn_network_id is specified.
+             :param val_c_sdn_network_id: If op_sdn_network_id is specified, this value will be compared to the value in sdn_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sdn_network_id must be specified if op_sdn_network_id is specified. If the rlike or not rlike value is specified in the op_sdn_network_id field, escape regex special characters because a regular expression is expected.
              :type val_c_sdn_network_id: String
 
             |  ``api version min:`` None
@@ -404,7 +372,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_sdn_network_key: If op_sdn_network_key is specified, this value will be compared to the value in sdn_network_key using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sdn_network_key must be specified if op_sdn_network_key is specified.
+             :param val_c_sdn_network_key: If op_sdn_network_key is specified, this value will be compared to the value in sdn_network_key using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sdn_network_key must be specified if op_sdn_network_key is specified. If the rlike or not rlike value is specified in the op_sdn_network_key field, escape regex special characters because a regular expression is expected.
              :type val_c_sdn_network_key: String
 
             |  ``api version min:`` None
@@ -428,7 +396,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_sdn_network_name: If op_sdn_network_name is specified, this value will be compared to the value in sdn_network_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sdn_network_name must be specified if op_sdn_network_name is specified.
+             :param val_c_sdn_network_name: If op_sdn_network_name is specified, this value will be compared to the value in sdn_network_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sdn_network_name must be specified if op_sdn_network_name is specified. If the rlike or not rlike value is specified in the op_sdn_network_name field, escape regex special characters because a regular expression is expected.
              :type val_c_sdn_network_name: String
 
             |  ``api version min:`` None
@@ -452,7 +420,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_virtual_network_id: If op_virtual_network_id is specified, this value will be compared to the value in virtual_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_virtual_network_id must be specified if op_virtual_network_id is specified.
+             :param val_c_virtual_network_id: If op_virtual_network_id is specified, this value will be compared to the value in virtual_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_virtual_network_id must be specified if op_virtual_network_id is specified. If the rlike or not rlike value is specified in the op_virtual_network_id field, escape regex special characters because a regular expression is expected.
              :type val_c_virtual_network_id: String
 
             |  ``api version min:`` None
@@ -484,7 +452,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` sdn_network_id
 
-             :param sort: The data field(s) to use for sorting the output. Default is sdn_network_id. Valid values are sdn_network_id, sdn_network_key, sdn_network_name, fabric_id, virtual_network_id, StartTime, EndTime.
+             :param sort: The data field(s) to use for sorting the output. Valid values are sdn_network_id, sdn_network_key, sdn_network_name, fabric_id, virtual_network_id, StartTime, EndTime.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -492,7 +460,7 @@ class SdnNetworkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -502,22 +470,6 @@ class SdnNetworkBroker(Broker):
 
              :param select: The list of attributes to return for each SdnNetwork. Valid values are sdn_network_id, sdn_network_key, sdn_network_name, fabric_id, virtual_network_id, StartTime, EndTime. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

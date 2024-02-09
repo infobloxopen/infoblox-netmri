@@ -5,7 +5,7 @@ class DeviceBroker(Broker):
     controller = "devices"
 
     def index(self, **kwargs):
-        """Lists the available devices. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available devices. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -174,7 +174,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -182,7 +182,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -192,22 +192,6 @@ class DeviceBroker(Broker):
 
              :param select: The list of attributes to return for each Device. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -1185,7 +1169,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1193,7 +1177,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1203,22 +1187,6 @@ class DeviceBroker(Broker):
 
              :param select: The list of attributes to return for each Device. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -1337,7 +1305,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated device.
+             :return uri: The URI that may be used to retrieve the updated device.
              :rtype uri: String
 
             |  ``api version min:`` None

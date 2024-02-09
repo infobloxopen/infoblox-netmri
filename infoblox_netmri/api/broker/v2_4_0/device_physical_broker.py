@@ -48,7 +48,7 @@ class DevicePhysicalBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available device physicals. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device physicals. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -137,7 +137,7 @@ class DevicePhysicalBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePhysicalID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePhysicalID. Valid values are DevicePhysicalID, DataSourceID, DeviceID, PhysicalIndex, PhysicalStartTime, PhysicalEndTime, PhysicalChangedCols, PhysicalTimestamp, PhysicalDescr, PhysicalVendorType, PhysicalContainedIn, PhysicalClass, PhysicalParentRelPos, PhysicalName, PhysicalHardwareRev, PhysicalFirmwareRev, PhysicalSoftwareRev, PhysicalSerialNum, PhysicalMfgName, PhysicalModelName, PhysicalAlias, PhysicalAssetID, UnitState.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevicePhysicalID, DataSourceID, DeviceID, PhysicalIndex, PhysicalStartTime, PhysicalEndTime, PhysicalChangedCols, PhysicalTimestamp, PhysicalDescr, PhysicalVendorType, PhysicalContainedIn, PhysicalClass, PhysicalParentRelPos, PhysicalName, PhysicalHardwareRev, PhysicalFirmwareRev, PhysicalSoftwareRev, PhysicalSerialNum, PhysicalMfgName, PhysicalModelName, PhysicalAlias, PhysicalAssetID, UnitState.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -145,7 +145,7 @@ class DevicePhysicalBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -155,22 +155,6 @@ class DevicePhysicalBroker(Broker):
 
              :param select: The list of attributes to return for each DevicePhysical. Valid values are DevicePhysicalID, DataSourceID, DeviceID, PhysicalIndex, PhysicalStartTime, PhysicalEndTime, PhysicalChangedCols, PhysicalTimestamp, PhysicalDescr, PhysicalVendorType, PhysicalContainedIn, PhysicalClass, PhysicalParentRelPos, PhysicalName, PhysicalHardwareRev, PhysicalFirmwareRev, PhysicalSoftwareRev, PhysicalSerialNum, PhysicalMfgName, PhysicalModelName, PhysicalAlias, PhysicalAssetID, UnitState. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -616,7 +600,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` DevicePhysicalID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePhysicalID. Valid values are DevicePhysicalID, DataSourceID, DeviceID, PhysicalIndex, PhysicalStartTime, PhysicalEndTime, PhysicalChangedCols, PhysicalTimestamp, PhysicalDescr, PhysicalVendorType, PhysicalContainedIn, PhysicalClass, PhysicalParentRelPos, PhysicalName, PhysicalHardwareRev, PhysicalFirmwareRev, PhysicalSoftwareRev, PhysicalSerialNum, PhysicalMfgName, PhysicalModelName, PhysicalAlias, PhysicalAssetID, UnitState.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevicePhysicalID, DataSourceID, DeviceID, PhysicalIndex, PhysicalStartTime, PhysicalEndTime, PhysicalChangedCols, PhysicalTimestamp, PhysicalDescr, PhysicalVendorType, PhysicalContainedIn, PhysicalClass, PhysicalParentRelPos, PhysicalName, PhysicalHardwareRev, PhysicalFirmwareRev, PhysicalSoftwareRev, PhysicalSerialNum, PhysicalMfgName, PhysicalModelName, PhysicalAlias, PhysicalAssetID, UnitState.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -624,7 +608,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -634,22 +618,6 @@ In the event that a physical entity is contained by more than one physical entit
 
              :param select: The list of attributes to return for each DevicePhysical. Valid values are DevicePhysicalID, DataSourceID, DeviceID, PhysicalIndex, PhysicalStartTime, PhysicalEndTime, PhysicalChangedCols, PhysicalTimestamp, PhysicalDescr, PhysicalVendorType, PhysicalContainedIn, PhysicalClass, PhysicalParentRelPos, PhysicalName, PhysicalHardwareRev, PhysicalFirmwareRev, PhysicalSoftwareRev, PhysicalSerialNum, PhysicalMfgName, PhysicalModelName, PhysicalAlias, PhysicalAssetID, UnitState. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -707,7 +675,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -731,7 +699,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -755,7 +723,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePhysicalID: If op_DevicePhysicalID is specified, this value will be compared to the value in DevicePhysicalID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePhysicalID must be specified if op_DevicePhysicalID is specified.
+             :param val_c_DevicePhysicalID: If op_DevicePhysicalID is specified, this value will be compared to the value in DevicePhysicalID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePhysicalID must be specified if op_DevicePhysicalID is specified. If the rlike or not rlike value is specified in the op_DevicePhysicalID field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePhysicalID: String
 
             |  ``api version min:`` None
@@ -779,7 +747,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalAlias: If op_PhysicalAlias is specified, this value will be compared to the value in PhysicalAlias using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalAlias must be specified if op_PhysicalAlias is specified.
+             :param val_c_PhysicalAlias: If op_PhysicalAlias is specified, this value will be compared to the value in PhysicalAlias using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalAlias must be specified if op_PhysicalAlias is specified. If the rlike or not rlike value is specified in the op_PhysicalAlias field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalAlias: String
 
             |  ``api version min:`` None
@@ -803,7 +771,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalAssetID: If op_PhysicalAssetID is specified, this value will be compared to the value in PhysicalAssetID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalAssetID must be specified if op_PhysicalAssetID is specified.
+             :param val_c_PhysicalAssetID: If op_PhysicalAssetID is specified, this value will be compared to the value in PhysicalAssetID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalAssetID must be specified if op_PhysicalAssetID is specified. If the rlike or not rlike value is specified in the op_PhysicalAssetID field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalAssetID: String
 
             |  ``api version min:`` None
@@ -827,7 +795,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalChangedCols: If op_PhysicalChangedCols is specified, this value will be compared to the value in PhysicalChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalChangedCols must be specified if op_PhysicalChangedCols is specified.
+             :param val_c_PhysicalChangedCols: If op_PhysicalChangedCols is specified, this value will be compared to the value in PhysicalChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalChangedCols must be specified if op_PhysicalChangedCols is specified. If the rlike or not rlike value is specified in the op_PhysicalChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalChangedCols: String
 
             |  ``api version min:`` None
@@ -851,7 +819,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalClass: If op_PhysicalClass is specified, this value will be compared to the value in PhysicalClass using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalClass must be specified if op_PhysicalClass is specified.
+             :param val_c_PhysicalClass: If op_PhysicalClass is specified, this value will be compared to the value in PhysicalClass using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalClass must be specified if op_PhysicalClass is specified. If the rlike or not rlike value is specified in the op_PhysicalClass field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalClass: String
 
             |  ``api version min:`` None
@@ -877,7 +845,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalContainedIn: If op_PhysicalContainedIn is specified, this value will be compared to the value in PhysicalContainedIn using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalContainedIn must be specified if op_PhysicalContainedIn is specified.
+             :param val_c_PhysicalContainedIn: If op_PhysicalContainedIn is specified, this value will be compared to the value in PhysicalContainedIn using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalContainedIn must be specified if op_PhysicalContainedIn is specified. If the rlike or not rlike value is specified in the op_PhysicalContainedIn field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalContainedIn: String
 
             |  ``api version min:`` None
@@ -901,7 +869,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalDescr: If op_PhysicalDescr is specified, this value will be compared to the value in PhysicalDescr using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalDescr must be specified if op_PhysicalDescr is specified.
+             :param val_c_PhysicalDescr: If op_PhysicalDescr is specified, this value will be compared to the value in PhysicalDescr using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalDescr must be specified if op_PhysicalDescr is specified. If the rlike or not rlike value is specified in the op_PhysicalDescr field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalDescr: String
 
             |  ``api version min:`` None
@@ -925,7 +893,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalEndTime: If op_PhysicalEndTime is specified, this value will be compared to the value in PhysicalEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalEndTime must be specified if op_PhysicalEndTime is specified.
+             :param val_c_PhysicalEndTime: If op_PhysicalEndTime is specified, this value will be compared to the value in PhysicalEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalEndTime must be specified if op_PhysicalEndTime is specified. If the rlike or not rlike value is specified in the op_PhysicalEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalEndTime: String
 
             |  ``api version min:`` None
@@ -949,7 +917,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalFirmwareRev: If op_PhysicalFirmwareRev is specified, this value will be compared to the value in PhysicalFirmwareRev using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalFirmwareRev must be specified if op_PhysicalFirmwareRev is specified.
+             :param val_c_PhysicalFirmwareRev: If op_PhysicalFirmwareRev is specified, this value will be compared to the value in PhysicalFirmwareRev using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalFirmwareRev must be specified if op_PhysicalFirmwareRev is specified. If the rlike or not rlike value is specified in the op_PhysicalFirmwareRev field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalFirmwareRev: String
 
             |  ``api version min:`` None
@@ -973,7 +941,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalHardwareRev: If op_PhysicalHardwareRev is specified, this value will be compared to the value in PhysicalHardwareRev using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalHardwareRev must be specified if op_PhysicalHardwareRev is specified.
+             :param val_c_PhysicalHardwareRev: If op_PhysicalHardwareRev is specified, this value will be compared to the value in PhysicalHardwareRev using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalHardwareRev must be specified if op_PhysicalHardwareRev is specified. If the rlike or not rlike value is specified in the op_PhysicalHardwareRev field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalHardwareRev: String
 
             |  ``api version min:`` None
@@ -997,7 +965,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalIndex: If op_PhysicalIndex is specified, this value will be compared to the value in PhysicalIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalIndex must be specified if op_PhysicalIndex is specified.
+             :param val_c_PhysicalIndex: If op_PhysicalIndex is specified, this value will be compared to the value in PhysicalIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalIndex must be specified if op_PhysicalIndex is specified. If the rlike or not rlike value is specified in the op_PhysicalIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalIndex: String
 
             |  ``api version min:`` None
@@ -1021,7 +989,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalMfgName: If op_PhysicalMfgName is specified, this value will be compared to the value in PhysicalMfgName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalMfgName must be specified if op_PhysicalMfgName is specified.
+             :param val_c_PhysicalMfgName: If op_PhysicalMfgName is specified, this value will be compared to the value in PhysicalMfgName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalMfgName must be specified if op_PhysicalMfgName is specified. If the rlike or not rlike value is specified in the op_PhysicalMfgName field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalMfgName: String
 
             |  ``api version min:`` None
@@ -1045,7 +1013,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalModelName: If op_PhysicalModelName is specified, this value will be compared to the value in PhysicalModelName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalModelName must be specified if op_PhysicalModelName is specified.
+             :param val_c_PhysicalModelName: If op_PhysicalModelName is specified, this value will be compared to the value in PhysicalModelName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalModelName must be specified if op_PhysicalModelName is specified. If the rlike or not rlike value is specified in the op_PhysicalModelName field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalModelName: String
 
             |  ``api version min:`` None
@@ -1069,7 +1037,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalName: If op_PhysicalName is specified, this value will be compared to the value in PhysicalName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalName must be specified if op_PhysicalName is specified.
+             :param val_c_PhysicalName: If op_PhysicalName is specified, this value will be compared to the value in PhysicalName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalName must be specified if op_PhysicalName is specified. If the rlike or not rlike value is specified in the op_PhysicalName field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalName: String
 
             |  ``api version min:`` None
@@ -1093,7 +1061,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalParentRelPos: If op_PhysicalParentRelPos is specified, this value will be compared to the value in PhysicalParentRelPos using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalParentRelPos must be specified if op_PhysicalParentRelPos is specified.
+             :param val_c_PhysicalParentRelPos: If op_PhysicalParentRelPos is specified, this value will be compared to the value in PhysicalParentRelPos using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalParentRelPos must be specified if op_PhysicalParentRelPos is specified. If the rlike or not rlike value is specified in the op_PhysicalParentRelPos field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalParentRelPos: String
 
             |  ``api version min:`` None
@@ -1117,7 +1085,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalSerialNum: If op_PhysicalSerialNum is specified, this value will be compared to the value in PhysicalSerialNum using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalSerialNum must be specified if op_PhysicalSerialNum is specified.
+             :param val_c_PhysicalSerialNum: If op_PhysicalSerialNum is specified, this value will be compared to the value in PhysicalSerialNum using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalSerialNum must be specified if op_PhysicalSerialNum is specified. If the rlike or not rlike value is specified in the op_PhysicalSerialNum field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalSerialNum: String
 
             |  ``api version min:`` None
@@ -1141,7 +1109,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalSoftwareRev: If op_PhysicalSoftwareRev is specified, this value will be compared to the value in PhysicalSoftwareRev using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalSoftwareRev must be specified if op_PhysicalSoftwareRev is specified.
+             :param val_c_PhysicalSoftwareRev: If op_PhysicalSoftwareRev is specified, this value will be compared to the value in PhysicalSoftwareRev using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalSoftwareRev must be specified if op_PhysicalSoftwareRev is specified. If the rlike or not rlike value is specified in the op_PhysicalSoftwareRev field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalSoftwareRev: String
 
             |  ``api version min:`` None
@@ -1165,7 +1133,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalStartTime: If op_PhysicalStartTime is specified, this value will be compared to the value in PhysicalStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalStartTime must be specified if op_PhysicalStartTime is specified.
+             :param val_c_PhysicalStartTime: If op_PhysicalStartTime is specified, this value will be compared to the value in PhysicalStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalStartTime must be specified if op_PhysicalStartTime is specified. If the rlike or not rlike value is specified in the op_PhysicalStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalStartTime: String
 
             |  ``api version min:`` None
@@ -1189,7 +1157,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalTimestamp: If op_PhysicalTimestamp is specified, this value will be compared to the value in PhysicalTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalTimestamp must be specified if op_PhysicalTimestamp is specified.
+             :param val_c_PhysicalTimestamp: If op_PhysicalTimestamp is specified, this value will be compared to the value in PhysicalTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalTimestamp must be specified if op_PhysicalTimestamp is specified. If the rlike or not rlike value is specified in the op_PhysicalTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalTimestamp: String
 
             |  ``api version min:`` None
@@ -1213,7 +1181,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalVendorType: If op_PhysicalVendorType is specified, this value will be compared to the value in PhysicalVendorType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalVendorType must be specified if op_PhysicalVendorType is specified.
+             :param val_c_PhysicalVendorType: If op_PhysicalVendorType is specified, this value will be compared to the value in PhysicalVendorType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalVendorType must be specified if op_PhysicalVendorType is specified. If the rlike or not rlike value is specified in the op_PhysicalVendorType field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalVendorType: String
 
             |  ``api version min:`` None
@@ -1237,7 +1205,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UnitState: If op_UnitState is specified, this value will be compared to the value in UnitState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitState must be specified if op_UnitState is specified.
+             :param val_c_UnitState: If op_UnitState is specified, this value will be compared to the value in UnitState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitState must be specified if op_UnitState is specified. If the rlike or not rlike value is specified in the op_UnitState field, escape regex special characters because a regular expression is expected.
              :type val_c_UnitState: String
 
             |  ``api version min:`` None
@@ -1261,7 +1229,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_network_id: If op_network_id is specified, this value will be compared to the value in network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_network_id must be specified if op_network_id is specified.
+             :param val_c_network_id: If op_network_id is specified, this value will be compared to the value in network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_network_id must be specified if op_network_id is specified. If the rlike or not rlike value is specified in the op_network_id field, escape regex special characters because a regular expression is expected.
              :type val_c_network_id: String
 
             |  ``api version min:`` None
@@ -1317,7 +1285,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` DevicePhysicalID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePhysicalID. Valid values are DevicePhysicalID, DataSourceID, DeviceID, PhysicalIndex, PhysicalStartTime, PhysicalEndTime, PhysicalChangedCols, PhysicalTimestamp, PhysicalDescr, PhysicalVendorType, PhysicalContainedIn, PhysicalClass, PhysicalParentRelPos, PhysicalName, PhysicalHardwareRev, PhysicalFirmwareRev, PhysicalSoftwareRev, PhysicalSerialNum, PhysicalMfgName, PhysicalModelName, PhysicalAlias, PhysicalAssetID, UnitState.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevicePhysicalID, DataSourceID, DeviceID, PhysicalIndex, PhysicalStartTime, PhysicalEndTime, PhysicalChangedCols, PhysicalTimestamp, PhysicalDescr, PhysicalVendorType, PhysicalContainedIn, PhysicalClass, PhysicalParentRelPos, PhysicalName, PhysicalHardwareRev, PhysicalFirmwareRev, PhysicalSoftwareRev, PhysicalSerialNum, PhysicalMfgName, PhysicalModelName, PhysicalAlias, PhysicalAssetID, UnitState.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1325,7 +1293,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1335,22 +1303,6 @@ In the event that a physical entity is contained by more than one physical entit
 
              :param select: The list of attributes to return for each DevicePhysical. Valid values are DevicePhysicalID, DataSourceID, DeviceID, PhysicalIndex, PhysicalStartTime, PhysicalEndTime, PhysicalChangedCols, PhysicalTimestamp, PhysicalDescr, PhysicalVendorType, PhysicalContainedIn, PhysicalClass, PhysicalParentRelPos, PhysicalName, PhysicalHardwareRev, PhysicalFirmwareRev, PhysicalSoftwareRev, PhysicalSerialNum, PhysicalMfgName, PhysicalModelName, PhysicalAlias, PhysicalAssetID, UnitState. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1410,7 +1362,7 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated device physical.
+             :return uri: The URI that may be used to retrieve the updated device physical.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -1445,8 +1397,8 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The NetMRI device that collected this record.
-             :rtype : DataSource
+             :return data_source: The NetMRI device that collected this record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1472,8 +1424,8 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device containing this component.
-             :rtype : InfraDevice
+             :return infradevice: The device containing this component.
+             :rtype infradevice: InfraDevice
 
             """
 
@@ -1499,8 +1451,8 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The Network View ID assigned to this component.
-             :rtype : Integer
+             :return network_id: The Network View ID assigned to this component.
+             :rtype network_id: Integer
 
             """
 
@@ -1526,8 +1478,8 @@ In the event that a physical entity is contained by more than one physical entit
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device containing this component.
-             :rtype : Device
+             :return device: The device containing this component.
+             :rtype device: Device
 
             """
 

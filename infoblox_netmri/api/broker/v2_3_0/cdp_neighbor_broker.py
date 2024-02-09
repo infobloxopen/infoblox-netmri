@@ -48,7 +48,7 @@ class CdpNeighborBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available cdp neighbors. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available cdp neighbors. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -169,7 +169,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` CDPNeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is CDPNeighborID. Valid values are DataSourceID, CDPNeighborID, DeviceID, InterfaceID, ifIndex, CDPNeighborDeviceID, CDPNeighborInterfaceID, CDPNeighborIfIndex, CDPNeighborStartTime, CDPNeighborEndTime, CDPNeighborChangedCols, CDPNeighborTimestamp, CDPNeighborMapSource, CDPNeighborOrigTable, CDPNeighborVersion, CDPNeighborDescription, CDPNeighborPortName, CDPNeighborPlatform, CDPNeighborCapabilities, CDPNeighborIPDotted, CDPNeighborIPNumeric, CDPNeighborMAC.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, CDPNeighborID, DeviceID, InterfaceID, ifIndex, CDPNeighborDeviceID, CDPNeighborInterfaceID, CDPNeighborIfIndex, CDPNeighborStartTime, CDPNeighborEndTime, CDPNeighborChangedCols, CDPNeighborTimestamp, CDPNeighborMapSource, CDPNeighborOrigTable, CDPNeighborVersion, CDPNeighborDescription, CDPNeighborPortName, CDPNeighborPlatform, CDPNeighborCapabilities, CDPNeighborIPDotted, CDPNeighborIPNumeric, CDPNeighborMAC.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -177,7 +177,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -187,22 +187,6 @@ class CdpNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each CdpNeighbor. Valid values are DataSourceID, CDPNeighborID, DeviceID, InterfaceID, ifIndex, CDPNeighborDeviceID, CDPNeighborInterfaceID, CDPNeighborIfIndex, CDPNeighborStartTime, CDPNeighborEndTime, CDPNeighborChangedCols, CDPNeighborTimestamp, CDPNeighborMapSource, CDPNeighborOrigTable, CDPNeighborVersion, CDPNeighborDescription, CDPNeighborPortName, CDPNeighborPlatform, CDPNeighborCapabilities, CDPNeighborIPDotted, CDPNeighborIPNumeric, CDPNeighborMAC. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -628,7 +612,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` CDPNeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is CDPNeighborID. Valid values are DataSourceID, CDPNeighborID, DeviceID, InterfaceID, ifIndex, CDPNeighborDeviceID, CDPNeighborInterfaceID, CDPNeighborIfIndex, CDPNeighborStartTime, CDPNeighborEndTime, CDPNeighborChangedCols, CDPNeighborTimestamp, CDPNeighborMapSource, CDPNeighborOrigTable, CDPNeighborVersion, CDPNeighborDescription, CDPNeighborPortName, CDPNeighborPlatform, CDPNeighborCapabilities, CDPNeighborIPDotted, CDPNeighborIPNumeric, CDPNeighborMAC.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, CDPNeighborID, DeviceID, InterfaceID, ifIndex, CDPNeighborDeviceID, CDPNeighborInterfaceID, CDPNeighborIfIndex, CDPNeighborStartTime, CDPNeighborEndTime, CDPNeighborChangedCols, CDPNeighborTimestamp, CDPNeighborMapSource, CDPNeighborOrigTable, CDPNeighborVersion, CDPNeighborDescription, CDPNeighborPortName, CDPNeighborPlatform, CDPNeighborCapabilities, CDPNeighborIPDotted, CDPNeighborIPNumeric, CDPNeighborMAC.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -636,7 +620,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -646,22 +630,6 @@ class CdpNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each CdpNeighbor. Valid values are DataSourceID, CDPNeighborID, DeviceID, InterfaceID, ifIndex, CDPNeighborDeviceID, CDPNeighborInterfaceID, CDPNeighborIfIndex, CDPNeighborStartTime, CDPNeighborEndTime, CDPNeighborChangedCols, CDPNeighborTimestamp, CDPNeighborMapSource, CDPNeighborOrigTable, CDPNeighborVersion, CDPNeighborDescription, CDPNeighborPortName, CDPNeighborPlatform, CDPNeighborCapabilities, CDPNeighborIPDotted, CDPNeighborIPNumeric, CDPNeighborMAC. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -719,7 +687,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborCapabilities: If op_CDPNeighborCapabilities is specified, this value will be compared to the value in CDPNeighborCapabilities using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborCapabilities must be specified if op_CDPNeighborCapabilities is specified.
+             :param val_c_CDPNeighborCapabilities: If op_CDPNeighborCapabilities is specified, this value will be compared to the value in CDPNeighborCapabilities using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborCapabilities must be specified if op_CDPNeighborCapabilities is specified. If the rlike or not rlike value is specified in the op_CDPNeighborCapabilities field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborCapabilities: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborChangedCols: If op_CDPNeighborChangedCols is specified, this value will be compared to the value in CDPNeighborChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborChangedCols must be specified if op_CDPNeighborChangedCols is specified.
+             :param val_c_CDPNeighborChangedCols: If op_CDPNeighborChangedCols is specified, this value will be compared to the value in CDPNeighborChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborChangedCols must be specified if op_CDPNeighborChangedCols is specified. If the rlike or not rlike value is specified in the op_CDPNeighborChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborChangedCols: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborDescription: If op_CDPNeighborDescription is specified, this value will be compared to the value in CDPNeighborDescription using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborDescription must be specified if op_CDPNeighborDescription is specified.
+             :param val_c_CDPNeighborDescription: If op_CDPNeighborDescription is specified, this value will be compared to the value in CDPNeighborDescription using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborDescription must be specified if op_CDPNeighborDescription is specified. If the rlike or not rlike value is specified in the op_CDPNeighborDescription field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborDescription: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborDeviceID: If op_CDPNeighborDeviceID is specified, this value will be compared to the value in CDPNeighborDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborDeviceID must be specified if op_CDPNeighborDeviceID is specified.
+             :param val_c_CDPNeighborDeviceID: If op_CDPNeighborDeviceID is specified, this value will be compared to the value in CDPNeighborDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborDeviceID must be specified if op_CDPNeighborDeviceID is specified. If the rlike or not rlike value is specified in the op_CDPNeighborDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborDeviceID: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborEndTime: If op_CDPNeighborEndTime is specified, this value will be compared to the value in CDPNeighborEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborEndTime must be specified if op_CDPNeighborEndTime is specified.
+             :param val_c_CDPNeighborEndTime: If op_CDPNeighborEndTime is specified, this value will be compared to the value in CDPNeighborEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborEndTime must be specified if op_CDPNeighborEndTime is specified. If the rlike or not rlike value is specified in the op_CDPNeighborEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborEndTime: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborID: If op_CDPNeighborID is specified, this value will be compared to the value in CDPNeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborID must be specified if op_CDPNeighborID is specified.
+             :param val_c_CDPNeighborID: If op_CDPNeighborID is specified, this value will be compared to the value in CDPNeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborID must be specified if op_CDPNeighborID is specified. If the rlike or not rlike value is specified in the op_CDPNeighborID field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborID: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborIPDotted: If op_CDPNeighborIPDotted is specified, this value will be compared to the value in CDPNeighborIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborIPDotted must be specified if op_CDPNeighborIPDotted is specified.
+             :param val_c_CDPNeighborIPDotted: If op_CDPNeighborIPDotted is specified, this value will be compared to the value in CDPNeighborIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborIPDotted must be specified if op_CDPNeighborIPDotted is specified. If the rlike or not rlike value is specified in the op_CDPNeighborIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborIPDotted: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborIPNumeric: If op_CDPNeighborIPNumeric is specified, this value will be compared to the value in CDPNeighborIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborIPNumeric must be specified if op_CDPNeighborIPNumeric is specified.
+             :param val_c_CDPNeighborIPNumeric: If op_CDPNeighborIPNumeric is specified, this value will be compared to the value in CDPNeighborIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborIPNumeric must be specified if op_CDPNeighborIPNumeric is specified. If the rlike or not rlike value is specified in the op_CDPNeighborIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborIPNumeric: String
 
             |  ``api version min:`` None
@@ -911,7 +879,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborIfIndex: If op_CDPNeighborIfIndex is specified, this value will be compared to the value in CDPNeighborIfIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborIfIndex must be specified if op_CDPNeighborIfIndex is specified.
+             :param val_c_CDPNeighborIfIndex: If op_CDPNeighborIfIndex is specified, this value will be compared to the value in CDPNeighborIfIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborIfIndex must be specified if op_CDPNeighborIfIndex is specified. If the rlike or not rlike value is specified in the op_CDPNeighborIfIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborIfIndex: String
 
             |  ``api version min:`` None
@@ -935,7 +903,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborInterfaceID: If op_CDPNeighborInterfaceID is specified, this value will be compared to the value in CDPNeighborInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborInterfaceID must be specified if op_CDPNeighborInterfaceID is specified.
+             :param val_c_CDPNeighborInterfaceID: If op_CDPNeighborInterfaceID is specified, this value will be compared to the value in CDPNeighborInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborInterfaceID must be specified if op_CDPNeighborInterfaceID is specified. If the rlike or not rlike value is specified in the op_CDPNeighborInterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborInterfaceID: String
 
             |  ``api version min:`` None
@@ -959,7 +927,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborMAC: If op_CDPNeighborMAC is specified, this value will be compared to the value in CDPNeighborMAC using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborMAC must be specified if op_CDPNeighborMAC is specified.
+             :param val_c_CDPNeighborMAC: If op_CDPNeighborMAC is specified, this value will be compared to the value in CDPNeighborMAC using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborMAC must be specified if op_CDPNeighborMAC is specified. If the rlike or not rlike value is specified in the op_CDPNeighborMAC field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborMAC: String
 
             |  ``api version min:`` None
@@ -983,7 +951,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborMapSource: If op_CDPNeighborMapSource is specified, this value will be compared to the value in CDPNeighborMapSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborMapSource must be specified if op_CDPNeighborMapSource is specified.
+             :param val_c_CDPNeighborMapSource: If op_CDPNeighborMapSource is specified, this value will be compared to the value in CDPNeighborMapSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborMapSource must be specified if op_CDPNeighborMapSource is specified. If the rlike or not rlike value is specified in the op_CDPNeighborMapSource field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborMapSource: String
 
             |  ``api version min:`` None
@@ -1007,7 +975,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborOrigTable: If op_CDPNeighborOrigTable is specified, this value will be compared to the value in CDPNeighborOrigTable using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborOrigTable must be specified if op_CDPNeighborOrigTable is specified.
+             :param val_c_CDPNeighborOrigTable: If op_CDPNeighborOrigTable is specified, this value will be compared to the value in CDPNeighborOrigTable using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborOrigTable must be specified if op_CDPNeighborOrigTable is specified. If the rlike or not rlike value is specified in the op_CDPNeighborOrigTable field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborOrigTable: String
 
             |  ``api version min:`` None
@@ -1031,7 +999,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborPlatform: If op_CDPNeighborPlatform is specified, this value will be compared to the value in CDPNeighborPlatform using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborPlatform must be specified if op_CDPNeighborPlatform is specified.
+             :param val_c_CDPNeighborPlatform: If op_CDPNeighborPlatform is specified, this value will be compared to the value in CDPNeighborPlatform using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborPlatform must be specified if op_CDPNeighborPlatform is specified. If the rlike or not rlike value is specified in the op_CDPNeighborPlatform field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborPlatform: String
 
             |  ``api version min:`` None
@@ -1055,7 +1023,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborPortName: If op_CDPNeighborPortName is specified, this value will be compared to the value in CDPNeighborPortName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborPortName must be specified if op_CDPNeighborPortName is specified.
+             :param val_c_CDPNeighborPortName: If op_CDPNeighborPortName is specified, this value will be compared to the value in CDPNeighborPortName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborPortName must be specified if op_CDPNeighborPortName is specified. If the rlike or not rlike value is specified in the op_CDPNeighborPortName field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborPortName: String
 
             |  ``api version min:`` None
@@ -1079,7 +1047,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborStartTime: If op_CDPNeighborStartTime is specified, this value will be compared to the value in CDPNeighborStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborStartTime must be specified if op_CDPNeighborStartTime is specified.
+             :param val_c_CDPNeighborStartTime: If op_CDPNeighborStartTime is specified, this value will be compared to the value in CDPNeighborStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborStartTime must be specified if op_CDPNeighborStartTime is specified. If the rlike or not rlike value is specified in the op_CDPNeighborStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborStartTime: String
 
             |  ``api version min:`` None
@@ -1103,7 +1071,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborTimestamp: If op_CDPNeighborTimestamp is specified, this value will be compared to the value in CDPNeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborTimestamp must be specified if op_CDPNeighborTimestamp is specified.
+             :param val_c_CDPNeighborTimestamp: If op_CDPNeighborTimestamp is specified, this value will be compared to the value in CDPNeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborTimestamp must be specified if op_CDPNeighborTimestamp is specified. If the rlike or not rlike value is specified in the op_CDPNeighborTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborTimestamp: String
 
             |  ``api version min:`` None
@@ -1127,7 +1095,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CDPNeighborVersion: If op_CDPNeighborVersion is specified, this value will be compared to the value in CDPNeighborVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborVersion must be specified if op_CDPNeighborVersion is specified.
+             :param val_c_CDPNeighborVersion: If op_CDPNeighborVersion is specified, this value will be compared to the value in CDPNeighborVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CDPNeighborVersion must be specified if op_CDPNeighborVersion is specified. If the rlike or not rlike value is specified in the op_CDPNeighborVersion field, escape regex special characters because a regular expression is expected.
              :type val_c_CDPNeighborVersion: String
 
             |  ``api version min:`` None
@@ -1151,7 +1119,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -1175,7 +1143,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -1199,7 +1167,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -1223,7 +1191,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -1279,7 +1247,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` CDPNeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is CDPNeighborID. Valid values are DataSourceID, CDPNeighborID, DeviceID, InterfaceID, ifIndex, CDPNeighborDeviceID, CDPNeighborInterfaceID, CDPNeighborIfIndex, CDPNeighborStartTime, CDPNeighborEndTime, CDPNeighborChangedCols, CDPNeighborTimestamp, CDPNeighborMapSource, CDPNeighborOrigTable, CDPNeighborVersion, CDPNeighborDescription, CDPNeighborPortName, CDPNeighborPlatform, CDPNeighborCapabilities, CDPNeighborIPDotted, CDPNeighborIPNumeric, CDPNeighborMAC.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, CDPNeighborID, DeviceID, InterfaceID, ifIndex, CDPNeighborDeviceID, CDPNeighborInterfaceID, CDPNeighborIfIndex, CDPNeighborStartTime, CDPNeighborEndTime, CDPNeighborChangedCols, CDPNeighborTimestamp, CDPNeighborMapSource, CDPNeighborOrigTable, CDPNeighborVersion, CDPNeighborDescription, CDPNeighborPortName, CDPNeighborPlatform, CDPNeighborCapabilities, CDPNeighborIPDotted, CDPNeighborIPNumeric, CDPNeighborMAC.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1287,7 +1255,7 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1297,22 +1265,6 @@ class CdpNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each CdpNeighbor. Valid values are DataSourceID, CDPNeighborID, DeviceID, InterfaceID, ifIndex, CDPNeighborDeviceID, CDPNeighborInterfaceID, CDPNeighborIfIndex, CDPNeighborStartTime, CDPNeighborEndTime, CDPNeighborChangedCols, CDPNeighborTimestamp, CDPNeighborMapSource, CDPNeighborOrigTable, CDPNeighborVersion, CDPNeighborDescription, CDPNeighborPortName, CDPNeighborPlatform, CDPNeighborCapabilities, CDPNeighborIPDotted, CDPNeighborIPNumeric, CDPNeighborMAC. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1356,8 +1308,8 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The NetMRI device that collected this record.
-             :rtype : DataSource
+             :return data_source: The NetMRI device that collected this record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1383,8 +1335,8 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The local interface for this CDP neighbor table entry.
-             :rtype : Interface
+             :return interface: The local interface for this CDP neighbor table entry.
+             :rtype interface: Interface
 
             """
 
@@ -1410,8 +1362,8 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The neighbor interface reported by CDP, if available.
-             :rtype : Interface
+             :return neighbor_interface: The neighbor interface reported by CDP, if available.
+             :rtype neighbor_interface: Interface
 
             """
 
@@ -1437,8 +1389,8 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The neighbor device reported by CDP, if available.
-             :rtype : Device
+             :return neighbor_device: The neighbor device reported by CDP, if available.
+             :rtype neighbor_device: Device
 
             """
 
@@ -1464,8 +1416,8 @@ class CdpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this CDP data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this CDP data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

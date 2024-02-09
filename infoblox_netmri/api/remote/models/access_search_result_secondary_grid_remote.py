@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class AccessSearchResultSecondaryGridRemote(RemoteModel):
     """
-    list of rules impacted by an elementary search
+    List of rules impacted by an elementary search.
 
 
     |  ``id:`` The internal NetMRI identifier for this search result detailed.

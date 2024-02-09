@@ -48,7 +48,7 @@ class DeviceRouteBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available device routes. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device routes. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -217,7 +217,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceRouteID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceRouteID. Valid values are DeviceRouteID, RouteStartTime, RouteEndTime, RouteChangedCols, RouteTimestamp, DataSourceID, DeviceID, InterfaceID, RouteSubnetIPDotted, RouteSubnetIPNumeric, RouteCIDR, RouteIfIndex, RouteNetMaskDotted, RouteNetMaskNumeric, RouteMetric1, RouteMetric2, RouteNextHopIPDotted, RouteNextHopIPNumeric, RouteProto, RouteType, RouteAdminDistance, VirtualNetworkMemberID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceRouteID, RouteStartTime, RouteEndTime, RouteChangedCols, RouteTimestamp, DataSourceID, DeviceID, InterfaceID, RouteSubnetIPDotted, RouteSubnetIPNumeric, RouteCIDR, RouteIfIndex, RouteNetMaskDotted, RouteNetMaskNumeric, RouteMetric1, RouteMetric2, RouteNextHopIPDotted, RouteNextHopIPNumeric, RouteProto, RouteType, RouteAdminDistance, VirtualNetworkMemberID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -225,7 +225,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -235,22 +235,6 @@ class DeviceRouteBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceRoute. Valid values are DeviceRouteID, RouteStartTime, RouteEndTime, RouteChangedCols, RouteTimestamp, DataSourceID, DeviceID, InterfaceID, RouteSubnetIPDotted, RouteSubnetIPNumeric, RouteCIDR, RouteIfIndex, RouteNetMaskDotted, RouteNetMaskNumeric, RouteMetric1, RouteMetric2, RouteNextHopIPDotted, RouteNextHopIPNumeric, RouteProto, RouteType, RouteAdminDistance, VirtualNetworkMemberID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -676,7 +660,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceRouteID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceRouteID. Valid values are DeviceRouteID, RouteStartTime, RouteEndTime, RouteChangedCols, RouteTimestamp, DataSourceID, DeviceID, InterfaceID, RouteSubnetIPDotted, RouteSubnetIPNumeric, RouteCIDR, RouteIfIndex, RouteNetMaskDotted, RouteNetMaskNumeric, RouteMetric1, RouteMetric2, RouteNextHopIPDotted, RouteNextHopIPNumeric, RouteProto, RouteType, RouteAdminDistance, VirtualNetworkMemberID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceRouteID, RouteStartTime, RouteEndTime, RouteChangedCols, RouteTimestamp, DataSourceID, DeviceID, InterfaceID, RouteSubnetIPDotted, RouteSubnetIPNumeric, RouteCIDR, RouteIfIndex, RouteNetMaskDotted, RouteNetMaskNumeric, RouteMetric1, RouteMetric2, RouteNextHopIPDotted, RouteNextHopIPNumeric, RouteProto, RouteType, RouteAdminDistance, VirtualNetworkMemberID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -684,7 +668,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -694,22 +678,6 @@ class DeviceRouteBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceRoute. Valid values are DeviceRouteID, RouteStartTime, RouteEndTime, RouteChangedCols, RouteTimestamp, DataSourceID, DeviceID, InterfaceID, RouteSubnetIPDotted, RouteSubnetIPNumeric, RouteCIDR, RouteIfIndex, RouteNetMaskDotted, RouteNetMaskNumeric, RouteMetric1, RouteMetric2, RouteNextHopIPDotted, RouteNextHopIPNumeric, RouteProto, RouteType, RouteAdminDistance, VirtualNetworkMemberID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -767,7 +735,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceRouteID: If op_DeviceRouteID is specified, this value will be compared to the value in DeviceRouteID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRouteID must be specified if op_DeviceRouteID is specified.
+             :param val_c_DeviceRouteID: If op_DeviceRouteID is specified, this value will be compared to the value in DeviceRouteID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRouteID must be specified if op_DeviceRouteID is specified. If the rlike or not rlike value is specified in the op_DeviceRouteID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceRouteID: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteAdminDistance: If op_RouteAdminDistance is specified, this value will be compared to the value in RouteAdminDistance using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteAdminDistance must be specified if op_RouteAdminDistance is specified.
+             :param val_c_RouteAdminDistance: If op_RouteAdminDistance is specified, this value will be compared to the value in RouteAdminDistance using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteAdminDistance must be specified if op_RouteAdminDistance is specified. If the rlike or not rlike value is specified in the op_RouteAdminDistance field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteAdminDistance: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteCIDR: If op_RouteCIDR is specified, this value will be compared to the value in RouteCIDR using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteCIDR must be specified if op_RouteCIDR is specified.
+             :param val_c_RouteCIDR: If op_RouteCIDR is specified, this value will be compared to the value in RouteCIDR using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteCIDR must be specified if op_RouteCIDR is specified. If the rlike or not rlike value is specified in the op_RouteCIDR field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteCIDR: String
 
             |  ``api version min:`` None
@@ -911,7 +879,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteChangedCols: If op_RouteChangedCols is specified, this value will be compared to the value in RouteChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteChangedCols must be specified if op_RouteChangedCols is specified.
+             :param val_c_RouteChangedCols: If op_RouteChangedCols is specified, this value will be compared to the value in RouteChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteChangedCols must be specified if op_RouteChangedCols is specified. If the rlike or not rlike value is specified in the op_RouteChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteChangedCols: String
 
             |  ``api version min:`` None
@@ -935,7 +903,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteEndTime: If op_RouteEndTime is specified, this value will be compared to the value in RouteEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteEndTime must be specified if op_RouteEndTime is specified.
+             :param val_c_RouteEndTime: If op_RouteEndTime is specified, this value will be compared to the value in RouteEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteEndTime must be specified if op_RouteEndTime is specified. If the rlike or not rlike value is specified in the op_RouteEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteEndTime: String
 
             |  ``api version min:`` None
@@ -959,7 +927,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteIfIndex: If op_RouteIfIndex is specified, this value will be compared to the value in RouteIfIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteIfIndex must be specified if op_RouteIfIndex is specified.
+             :param val_c_RouteIfIndex: If op_RouteIfIndex is specified, this value will be compared to the value in RouteIfIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteIfIndex must be specified if op_RouteIfIndex is specified. If the rlike or not rlike value is specified in the op_RouteIfIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteIfIndex: String
 
             |  ``api version min:`` None
@@ -983,7 +951,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteMetric1: If op_RouteMetric1 is specified, this value will be compared to the value in RouteMetric1 using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteMetric1 must be specified if op_RouteMetric1 is specified.
+             :param val_c_RouteMetric1: If op_RouteMetric1 is specified, this value will be compared to the value in RouteMetric1 using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteMetric1 must be specified if op_RouteMetric1 is specified. If the rlike or not rlike value is specified in the op_RouteMetric1 field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteMetric1: String
 
             |  ``api version min:`` None
@@ -1007,7 +975,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteMetric2: If op_RouteMetric2 is specified, this value will be compared to the value in RouteMetric2 using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteMetric2 must be specified if op_RouteMetric2 is specified.
+             :param val_c_RouteMetric2: If op_RouteMetric2 is specified, this value will be compared to the value in RouteMetric2 using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteMetric2 must be specified if op_RouteMetric2 is specified. If the rlike or not rlike value is specified in the op_RouteMetric2 field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteMetric2: String
 
             |  ``api version min:`` None
@@ -1031,7 +999,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteNetMaskDotted: If op_RouteNetMaskDotted is specified, this value will be compared to the value in RouteNetMaskDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteNetMaskDotted must be specified if op_RouteNetMaskDotted is specified.
+             :param val_c_RouteNetMaskDotted: If op_RouteNetMaskDotted is specified, this value will be compared to the value in RouteNetMaskDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteNetMaskDotted must be specified if op_RouteNetMaskDotted is specified. If the rlike or not rlike value is specified in the op_RouteNetMaskDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteNetMaskDotted: String
 
             |  ``api version min:`` None
@@ -1055,7 +1023,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteNetMaskNumeric: If op_RouteNetMaskNumeric is specified, this value will be compared to the value in RouteNetMaskNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteNetMaskNumeric must be specified if op_RouteNetMaskNumeric is specified.
+             :param val_c_RouteNetMaskNumeric: If op_RouteNetMaskNumeric is specified, this value will be compared to the value in RouteNetMaskNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteNetMaskNumeric must be specified if op_RouteNetMaskNumeric is specified. If the rlike or not rlike value is specified in the op_RouteNetMaskNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteNetMaskNumeric: String
 
             |  ``api version min:`` None
@@ -1079,7 +1047,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteNextHopIPDotted: If op_RouteNextHopIPDotted is specified, this value will be compared to the value in RouteNextHopIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteNextHopIPDotted must be specified if op_RouteNextHopIPDotted is specified.
+             :param val_c_RouteNextHopIPDotted: If op_RouteNextHopIPDotted is specified, this value will be compared to the value in RouteNextHopIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteNextHopIPDotted must be specified if op_RouteNextHopIPDotted is specified. If the rlike or not rlike value is specified in the op_RouteNextHopIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteNextHopIPDotted: String
 
             |  ``api version min:`` None
@@ -1103,7 +1071,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteNextHopIPNumeric: If op_RouteNextHopIPNumeric is specified, this value will be compared to the value in RouteNextHopIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteNextHopIPNumeric must be specified if op_RouteNextHopIPNumeric is specified.
+             :param val_c_RouteNextHopIPNumeric: If op_RouteNextHopIPNumeric is specified, this value will be compared to the value in RouteNextHopIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteNextHopIPNumeric must be specified if op_RouteNextHopIPNumeric is specified. If the rlike or not rlike value is specified in the op_RouteNextHopIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteNextHopIPNumeric: String
 
             |  ``api version min:`` None
@@ -1127,7 +1095,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteProto: If op_RouteProto is specified, this value will be compared to the value in RouteProto using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteProto must be specified if op_RouteProto is specified.
+             :param val_c_RouteProto: If op_RouteProto is specified, this value will be compared to the value in RouteProto using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteProto must be specified if op_RouteProto is specified. If the rlike or not rlike value is specified in the op_RouteProto field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteProto: String
 
             |  ``api version min:`` None
@@ -1151,7 +1119,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteStartTime: If op_RouteStartTime is specified, this value will be compared to the value in RouteStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteStartTime must be specified if op_RouteStartTime is specified.
+             :param val_c_RouteStartTime: If op_RouteStartTime is specified, this value will be compared to the value in RouteStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteStartTime must be specified if op_RouteStartTime is specified. If the rlike or not rlike value is specified in the op_RouteStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteStartTime: String
 
             |  ``api version min:`` None
@@ -1175,7 +1143,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteSubnetIPDotted: If op_RouteSubnetIPDotted is specified, this value will be compared to the value in RouteSubnetIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteSubnetIPDotted must be specified if op_RouteSubnetIPDotted is specified.
+             :param val_c_RouteSubnetIPDotted: If op_RouteSubnetIPDotted is specified, this value will be compared to the value in RouteSubnetIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteSubnetIPDotted must be specified if op_RouteSubnetIPDotted is specified. If the rlike or not rlike value is specified in the op_RouteSubnetIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteSubnetIPDotted: String
 
             |  ``api version min:`` None
@@ -1199,7 +1167,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteSubnetIPNumeric: If op_RouteSubnetIPNumeric is specified, this value will be compared to the value in RouteSubnetIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteSubnetIPNumeric must be specified if op_RouteSubnetIPNumeric is specified.
+             :param val_c_RouteSubnetIPNumeric: If op_RouteSubnetIPNumeric is specified, this value will be compared to the value in RouteSubnetIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteSubnetIPNumeric must be specified if op_RouteSubnetIPNumeric is specified. If the rlike or not rlike value is specified in the op_RouteSubnetIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteSubnetIPNumeric: String
 
             |  ``api version min:`` None
@@ -1223,7 +1191,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteTimestamp: If op_RouteTimestamp is specified, this value will be compared to the value in RouteTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteTimestamp must be specified if op_RouteTimestamp is specified.
+             :param val_c_RouteTimestamp: If op_RouteTimestamp is specified, this value will be compared to the value in RouteTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteTimestamp must be specified if op_RouteTimestamp is specified. If the rlike or not rlike value is specified in the op_RouteTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteTimestamp: String
 
             |  ``api version min:`` None
@@ -1247,7 +1215,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteType: If op_RouteType is specified, this value will be compared to the value in RouteType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteType must be specified if op_RouteType is specified.
+             :param val_c_RouteType: If op_RouteType is specified, this value will be compared to the value in RouteType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteType must be specified if op_RouteType is specified. If the rlike or not rlike value is specified in the op_RouteType field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteType: String
 
             |  ``api version min:`` None
@@ -1271,7 +1239,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberID: If op_VirtualNetworkMemberID is specified, this value will be compared to the value in VirtualNetworkMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberID must be specified if op_VirtualNetworkMemberID is specified.
+             :param val_c_VirtualNetworkMemberID: If op_VirtualNetworkMemberID is specified, this value will be compared to the value in VirtualNetworkMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberID must be specified if op_VirtualNetworkMemberID is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberID: String
 
             |  ``api version min:`` None
@@ -1327,7 +1295,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceRouteID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceRouteID. Valid values are DeviceRouteID, RouteStartTime, RouteEndTime, RouteChangedCols, RouteTimestamp, DataSourceID, DeviceID, InterfaceID, RouteSubnetIPDotted, RouteSubnetIPNumeric, RouteCIDR, RouteIfIndex, RouteNetMaskDotted, RouteNetMaskNumeric, RouteMetric1, RouteMetric2, RouteNextHopIPDotted, RouteNextHopIPNumeric, RouteProto, RouteType, RouteAdminDistance, VirtualNetworkMemberID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceRouteID, RouteStartTime, RouteEndTime, RouteChangedCols, RouteTimestamp, DataSourceID, DeviceID, InterfaceID, RouteSubnetIPDotted, RouteSubnetIPNumeric, RouteCIDR, RouteIfIndex, RouteNetMaskDotted, RouteNetMaskNumeric, RouteMetric1, RouteMetric2, RouteNextHopIPDotted, RouteNextHopIPNumeric, RouteProto, RouteType, RouteAdminDistance, VirtualNetworkMemberID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1335,7 +1303,7 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1345,22 +1313,6 @@ class DeviceRouteBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceRoute. Valid values are DeviceRouteID, RouteStartTime, RouteEndTime, RouteChangedCols, RouteTimestamp, DataSourceID, DeviceID, InterfaceID, RouteSubnetIPDotted, RouteSubnetIPNumeric, RouteCIDR, RouteIfIndex, RouteNetMaskDotted, RouteNetMaskNumeric, RouteMetric1, RouteMetric2, RouteNextHopIPDotted, RouteNextHopIPNumeric, RouteProto, RouteType, RouteAdminDistance, VirtualNetworkMemberID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1404,8 +1356,8 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The NetMRI device that collected this record.
-             :rtype : DataSource
+             :return data_source: The NetMRI device that collected this record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1431,8 +1383,8 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The outgoing interface for this route.
-             :rtype : Interface
+             :return interface: The outgoing interface for this route.
+             :rtype interface: Interface
 
             """
 
@@ -1458,8 +1410,8 @@ class DeviceRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this routing table entry was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this routing table entry was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

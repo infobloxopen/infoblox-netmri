@@ -5,7 +5,7 @@ class ScanInterfaceBroker(Broker):
     controller = "scan_interfaces"
 
     def index(self, **kwargs):
-        """Lists the available scan interfaces. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available scan interfaces. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -38,7 +38,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, unit_id, if_dev, name, physical_if_id, encap_tag, ipv4_address, ipv4_mask, ipv4_gateway, ipv6_address, ipv6_prefix, ipv6_gateway, virtual_network_id, primary_dns_server, secondary_dns_server, search_domains.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, unit_id, if_dev, name, physical_if_id, encap_tag, ipv4_address, ipv4_mask, ipv4_gateway, ipv6_address, ipv6_prefix, ipv6_gateway, virtual_network_id, primary_dns_server, secondary_dns_server, search_domains.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -46,7 +46,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -56,22 +56,6 @@ class ScanInterfaceBroker(Broker):
 
              :param select: The list of attributes to return for each ScanInterface. Valid values are id, unit_id, if_dev, name, physical_if_id, encap_tag, ipv4_address, ipv4_mask, ipv4_gateway, ipv6_address, ipv6_prefix, ipv6_gateway, virtual_network_id, primary_dns_server, secondary_dns_server, search_domains. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -268,7 +252,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, unit_id, if_dev, name, physical_if_id, encap_tag, ipv4_address, ipv4_mask, ipv4_gateway, ipv6_address, ipv6_prefix, ipv6_gateway, virtual_network_id, primary_dns_server, secondary_dns_server, search_domains.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, unit_id, if_dev, name, physical_if_id, encap_tag, ipv4_address, ipv4_mask, ipv4_gateway, ipv6_address, ipv6_prefix, ipv6_gateway, virtual_network_id, primary_dns_server, secondary_dns_server, search_domains.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -276,7 +260,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -286,22 +270,6 @@ class ScanInterfaceBroker(Broker):
 
              :param select: The list of attributes to return for each ScanInterface. Valid values are id, unit_id, if_dev, name, physical_if_id, encap_tag, ipv4_address, ipv4_mask, ipv4_gateway, ipv6_address, ipv6_prefix, ipv6_gateway, virtual_network_id, primary_dns_server, secondary_dns_server, search_domains. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -359,7 +327,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_encap_tag: If op_encap_tag is specified, this value will be compared to the value in encap_tag using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_encap_tag must be specified if op_encap_tag is specified.
+             :param val_c_encap_tag: If op_encap_tag is specified, this value will be compared to the value in encap_tag using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_encap_tag must be specified if op_encap_tag is specified. If the rlike or not rlike value is specified in the op_encap_tag field, escape regex special characters because a regular expression is expected.
              :type val_c_encap_tag: String
 
             |  ``api version min:`` None
@@ -383,7 +351,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -407,7 +375,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_if_dev: If op_if_dev is specified, this value will be compared to the value in if_dev using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_if_dev must be specified if op_if_dev is specified.
+             :param val_c_if_dev: If op_if_dev is specified, this value will be compared to the value in if_dev using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_if_dev must be specified if op_if_dev is specified. If the rlike or not rlike value is specified in the op_if_dev field, escape regex special characters because a regular expression is expected.
              :type val_c_if_dev: String
 
             |  ``api version min:`` None
@@ -431,7 +399,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ipv4_address: If op_ipv4_address is specified, this value will be compared to the value in ipv4_address using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ipv4_address must be specified if op_ipv4_address is specified.
+             :param val_c_ipv4_address: If op_ipv4_address is specified, this value will be compared to the value in ipv4_address using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ipv4_address must be specified if op_ipv4_address is specified. If the rlike or not rlike value is specified in the op_ipv4_address field, escape regex special characters because a regular expression is expected.
              :type val_c_ipv4_address: String
 
             |  ``api version min:`` None
@@ -455,7 +423,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ipv4_gateway: If op_ipv4_gateway is specified, this value will be compared to the value in ipv4_gateway using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ipv4_gateway must be specified if op_ipv4_gateway is specified.
+             :param val_c_ipv4_gateway: If op_ipv4_gateway is specified, this value will be compared to the value in ipv4_gateway using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ipv4_gateway must be specified if op_ipv4_gateway is specified. If the rlike or not rlike value is specified in the op_ipv4_gateway field, escape regex special characters because a regular expression is expected.
              :type val_c_ipv4_gateway: String
 
             |  ``api version min:`` None
@@ -479,7 +447,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ipv4_mask: If op_ipv4_mask is specified, this value will be compared to the value in ipv4_mask using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ipv4_mask must be specified if op_ipv4_mask is specified.
+             :param val_c_ipv4_mask: If op_ipv4_mask is specified, this value will be compared to the value in ipv4_mask using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ipv4_mask must be specified if op_ipv4_mask is specified. If the rlike or not rlike value is specified in the op_ipv4_mask field, escape regex special characters because a regular expression is expected.
              :type val_c_ipv4_mask: String
 
             |  ``api version min:`` None
@@ -503,7 +471,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ipv6_address: If op_ipv6_address is specified, this value will be compared to the value in ipv6_address using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ipv6_address must be specified if op_ipv6_address is specified.
+             :param val_c_ipv6_address: If op_ipv6_address is specified, this value will be compared to the value in ipv6_address using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ipv6_address must be specified if op_ipv6_address is specified. If the rlike or not rlike value is specified in the op_ipv6_address field, escape regex special characters because a regular expression is expected.
              :type val_c_ipv6_address: String
 
             |  ``api version min:`` None
@@ -527,7 +495,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ipv6_gateway: If op_ipv6_gateway is specified, this value will be compared to the value in ipv6_gateway using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ipv6_gateway must be specified if op_ipv6_gateway is specified.
+             :param val_c_ipv6_gateway: If op_ipv6_gateway is specified, this value will be compared to the value in ipv6_gateway using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ipv6_gateway must be specified if op_ipv6_gateway is specified. If the rlike or not rlike value is specified in the op_ipv6_gateway field, escape regex special characters because a regular expression is expected.
              :type val_c_ipv6_gateway: String
 
             |  ``api version min:`` None
@@ -551,7 +519,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ipv6_prefix: If op_ipv6_prefix is specified, this value will be compared to the value in ipv6_prefix using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ipv6_prefix must be specified if op_ipv6_prefix is specified.
+             :param val_c_ipv6_prefix: If op_ipv6_prefix is specified, this value will be compared to the value in ipv6_prefix using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ipv6_prefix must be specified if op_ipv6_prefix is specified. If the rlike or not rlike value is specified in the op_ipv6_prefix field, escape regex special characters because a regular expression is expected.
              :type val_c_ipv6_prefix: String
 
             |  ``api version min:`` None
@@ -575,7 +543,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified.
+             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified. If the rlike or not rlike value is specified in the op_name field, escape regex special characters because a regular expression is expected.
              :type val_c_name: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_physical_if_id: If op_physical_if_id is specified, this value will be compared to the value in physical_if_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_physical_if_id must be specified if op_physical_if_id is specified.
+             :param val_c_physical_if_id: If op_physical_if_id is specified, this value will be compared to the value in physical_if_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_physical_if_id must be specified if op_physical_if_id is specified. If the rlike or not rlike value is specified in the op_physical_if_id field, escape regex special characters because a regular expression is expected.
              :type val_c_physical_if_id: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_primary_dns_server: If op_primary_dns_server is specified, this value will be compared to the value in primary_dns_server using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_primary_dns_server must be specified if op_primary_dns_server is specified.
+             :param val_c_primary_dns_server: If op_primary_dns_server is specified, this value will be compared to the value in primary_dns_server using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_primary_dns_server must be specified if op_primary_dns_server is specified. If the rlike or not rlike value is specified in the op_primary_dns_server field, escape regex special characters because a regular expression is expected.
              :type val_c_primary_dns_server: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_search_domains: If op_search_domains is specified, this value will be compared to the value in search_domains using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_search_domains must be specified if op_search_domains is specified.
+             :param val_c_search_domains: If op_search_domains is specified, this value will be compared to the value in search_domains using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_search_domains must be specified if op_search_domains is specified. If the rlike or not rlike value is specified in the op_search_domains field, escape regex special characters because a regular expression is expected.
              :type val_c_search_domains: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_secondary_dns_server: If op_secondary_dns_server is specified, this value will be compared to the value in secondary_dns_server using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_secondary_dns_server must be specified if op_secondary_dns_server is specified.
+             :param val_c_secondary_dns_server: If op_secondary_dns_server is specified, this value will be compared to the value in secondary_dns_server using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_secondary_dns_server must be specified if op_secondary_dns_server is specified. If the rlike or not rlike value is specified in the op_secondary_dns_server field, escape regex special characters because a regular expression is expected.
              :type val_c_secondary_dns_server: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_unit_id: If op_unit_id is specified, this value will be compared to the value in unit_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_unit_id must be specified if op_unit_id is specified.
+             :param val_c_unit_id: If op_unit_id is specified, this value will be compared to the value in unit_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_unit_id must be specified if op_unit_id is specified. If the rlike or not rlike value is specified in the op_unit_id field, escape regex special characters because a regular expression is expected.
              :type val_c_unit_id: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_virtual_network_id: If op_virtual_network_id is specified, this value will be compared to the value in virtual_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_virtual_network_id must be specified if op_virtual_network_id is specified.
+             :param val_c_virtual_network_id: If op_virtual_network_id is specified, this value will be compared to the value in virtual_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_virtual_network_id must be specified if op_virtual_network_id is specified. If the rlike or not rlike value is specified in the op_virtual_network_id field, escape regex special characters because a regular expression is expected.
              :type val_c_virtual_network_id: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, unit_id, if_dev, name, physical_if_id, encap_tag, ipv4_address, ipv4_mask, ipv4_gateway, ipv6_address, ipv6_prefix, ipv6_gateway, virtual_network_id, primary_dns_server, secondary_dns_server, search_domains.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, unit_id, if_dev, name, physical_if_id, encap_tag, ipv4_address, ipv4_mask, ipv4_gateway, ipv6_address, ipv6_prefix, ipv6_gateway, virtual_network_id, primary_dns_server, secondary_dns_server, search_domains.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -751,7 +719,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -761,22 +729,6 @@ class ScanInterfaceBroker(Broker):
 
              :param select: The list of attributes to return for each ScanInterface. Valid values are id, unit_id, if_dev, name, physical_if_id, encap_tag, ipv4_address, ipv4_mask, ipv4_gateway, ipv6_address, ipv6_prefix, ipv6_gateway, virtual_network_id, primary_dns_server, secondary_dns_server, search_domains. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -898,7 +850,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param primary_dns_server: The IP address or hostname of the scan interface's primary DNS server
+             :param primary_dns_server: The IP address of the scan interface's primary DNS server
              :type primary_dns_server: String
 
             |  ``api version min:`` None
@@ -906,7 +858,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param secondary_dns_server: The IP address or hostname of the scan interface's secondary DNS server
+             :param secondary_dns_server: The IP address of the scan interface's secondary DNS server
              :type secondary_dns_server: String
 
             |  ``api version min:`` None
@@ -1045,7 +997,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param primary_dns_server: The IP address or hostname of the scan interface's primary DNS server
+             :param primary_dns_server: The IP address of the scan interface's primary DNS server
              :type primary_dns_server: String
 
             |  ``api version min:`` None
@@ -1053,7 +1005,7 @@ class ScanInterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param secondary_dns_server: The IP address or hostname of the scan interface's secondary DNS server
+             :param secondary_dns_server: The IP address of the scan interface's secondary DNS server
              :type secondary_dns_server: String
 
             |  ``api version min:`` None
@@ -1063,14 +1015,6 @@ class ScanInterfaceBroker(Broker):
 
              :param search_domains: Default domain for DNS resolving.
              :type search_domains: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param host_name: Computer host name.
-             :type host_name: String
 
             **Outputs**
 

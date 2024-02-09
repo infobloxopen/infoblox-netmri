@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class DeviceDiskUtilizationRemote(RemoteModel):
     """
-    This table list out entries of Device Disk Utilization
+    This table list out entries of Device Disk Utilization.
 
 
     |  ``HRStorageID:`` The internal NetMRI identifier of the high rate storage in the device disk utilization.

@@ -5,7 +5,7 @@ class CollectionScheduleBroker(Broker):
     controller = "collection_schedules"
 
     def index(self, **kwargs):
-        """Lists the available collection schedules. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available collection schedules. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -46,7 +46,7 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, device_group_id, device_id, schedule, schedule_type.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, device_group_id, device_id, schedule, schedule_type.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -54,7 +54,7 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -64,22 +64,6 @@ class CollectionScheduleBroker(Broker):
 
              :param select: The list of attributes to return for each CollectionSchedule. Valid values are id, device_group_id, device_id, schedule, schedule_type. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -228,7 +212,7 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, device_group_id, device_id, schedule, schedule_type.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, device_group_id, device_id, schedule, schedule_type.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -236,7 +220,7 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -246,22 +230,6 @@ class CollectionScheduleBroker(Broker):
 
              :param select: The list of attributes to return for each CollectionSchedule. Valid values are id, device_group_id, device_id, schedule, schedule_type. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -319,7 +287,7 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_device_group_id: If op_device_group_id is specified, this value will be compared to the value in device_group_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_group_id must be specified if op_device_group_id is specified.
+             :param val_c_device_group_id: If op_device_group_id is specified, this value will be compared to the value in device_group_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_group_id must be specified if op_device_group_id is specified. If the rlike or not rlike value is specified in the op_device_group_id field, escape regex special characters because a regular expression is expected.
              :type val_c_device_group_id: String
 
             |  ``api version min:`` None
@@ -343,7 +311,7 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_device_id: If op_device_id is specified, this value will be compared to the value in device_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_id must be specified if op_device_id is specified.
+             :param val_c_device_id: If op_device_id is specified, this value will be compared to the value in device_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_id must be specified if op_device_id is specified. If the rlike or not rlike value is specified in the op_device_id field, escape regex special characters because a regular expression is expected.
              :type val_c_device_id: String
 
             |  ``api version min:`` None
@@ -367,7 +335,7 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -391,7 +359,7 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_schedule: If op_schedule is specified, this value will be compared to the value in schedule using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_schedule must be specified if op_schedule is specified.
+             :param val_c_schedule: If op_schedule is specified, this value will be compared to the value in schedule using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_schedule must be specified if op_schedule is specified. If the rlike or not rlike value is specified in the op_schedule field, escape regex special characters because a regular expression is expected.
              :type val_c_schedule: String
 
             |  ``api version min:`` None
@@ -415,7 +383,7 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_schedule_type: If op_schedule_type is specified, this value will be compared to the value in schedule_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_schedule_type must be specified if op_schedule_type is specified.
+             :param val_c_schedule_type: If op_schedule_type is specified, this value will be compared to the value in schedule_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_schedule_type must be specified if op_schedule_type is specified. If the rlike or not rlike value is specified in the op_schedule_type field, escape regex special characters because a regular expression is expected.
              :type val_c_schedule_type: String
 
             |  ``api version min:`` None
@@ -439,7 +407,7 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, device_group_id, device_id, schedule, schedule_type.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, device_group_id, device_id, schedule, schedule_type.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -447,7 +415,7 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -457,22 +425,6 @@ class CollectionScheduleBroker(Broker):
 
              :param select: The list of attributes to return for each CollectionSchedule. Valid values are id, device_group_id, device_id, schedule, schedule_type. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -525,7 +477,7 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param id: Id of the polling schedule to update.
+             :param id: The internal NetMRI identifier for schedule.
              :type id: Integer
 
             |  ``api version min:`` None
@@ -560,16 +512,16 @@ class CollectionScheduleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param device_group_id: Device group Id polling schedule belongs to.
-             :type device_group_id: String
+             :param device_group_id: Device group ID polling schedule belongs to. Can be blank if not using device group.
+             :type device_group_id: Integer
 
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
             |  ``default:`` None
 
-             :param device_id: Device Id polling schedule belongs to.
-             :type device_id: String
+             :param device_id: Device ID polling schedule belongs to. Can be blank if only using device group.
+             :type device_id: Integer
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -588,6 +540,14 @@ class CollectionScheduleBroker(Broker):
              :type schedule_json: String
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return id: The internal NetMRI identifier for schedule.
+             :rtype id: Integer
 
             """
 

@@ -48,7 +48,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available aggregated link group memberships. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available aggregated link group memberships. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -121,7 +121,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` aggLinkGroupMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is aggLinkGroupMemberID. Valid values are DataSourceID, aggLinkGroupMemberID, aggLinkGroupMemberGroupName, aggLinkGroupMemberGroupIndex, DeviceID, aggLinkGroupMemberAggregateInterface, aggLinkGroupMemberPhysicalInterface, aggLinkGroupMemberStartTime, aggLinkGroupMemberEndTime, aggLinkGroupMemberTimestamp, aggLinkGroupMemberChangedCols.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, aggLinkGroupMemberID, aggLinkGroupMemberGroupName, aggLinkGroupMemberGroupIndex, DeviceID, aggLinkGroupMemberAggregateInterface, aggLinkGroupMemberPhysicalInterface, aggLinkGroupMemberStartTime, aggLinkGroupMemberEndTime, aggLinkGroupMemberTimestamp, aggLinkGroupMemberChangedCols.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -129,7 +129,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -139,22 +139,6 @@ class AggregatedLinkGroupMembershipBroker(Broker):
 
              :param select: The list of attributes to return for each AggregatedLinkGroupMembership. Valid values are DataSourceID, aggLinkGroupMemberID, aggLinkGroupMemberGroupName, aggLinkGroupMemberGroupIndex, DeviceID, aggLinkGroupMemberAggregateInterface, aggLinkGroupMemberPhysicalInterface, aggLinkGroupMemberStartTime, aggLinkGroupMemberEndTime, aggLinkGroupMemberTimestamp, aggLinkGroupMemberChangedCols. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -316,7 +300,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` aggLinkGroupMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is aggLinkGroupMemberID. Valid values are DataSourceID, aggLinkGroupMemberID, aggLinkGroupMemberGroupName, aggLinkGroupMemberGroupIndex, DeviceID, aggLinkGroupMemberAggregateInterface, aggLinkGroupMemberPhysicalInterface, aggLinkGroupMemberStartTime, aggLinkGroupMemberEndTime, aggLinkGroupMemberTimestamp, aggLinkGroupMemberChangedCols.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, aggLinkGroupMemberID, aggLinkGroupMemberGroupName, aggLinkGroupMemberGroupIndex, DeviceID, aggLinkGroupMemberAggregateInterface, aggLinkGroupMemberPhysicalInterface, aggLinkGroupMemberStartTime, aggLinkGroupMemberEndTime, aggLinkGroupMemberTimestamp, aggLinkGroupMemberChangedCols.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -324,7 +308,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -334,22 +318,6 @@ class AggregatedLinkGroupMembershipBroker(Broker):
 
              :param select: The list of attributes to return for each AggregatedLinkGroupMembership. Valid values are DataSourceID, aggLinkGroupMemberID, aggLinkGroupMemberGroupName, aggLinkGroupMemberGroupIndex, DeviceID, aggLinkGroupMemberAggregateInterface, aggLinkGroupMemberPhysicalInterface, aggLinkGroupMemberStartTime, aggLinkGroupMemberEndTime, aggLinkGroupMemberTimestamp, aggLinkGroupMemberChangedCols. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -407,7 +375,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -431,7 +399,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -455,7 +423,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_aggLinkGroupMemberAggregateInterface: If op_aggLinkGroupMemberAggregateInterface is specified, this value will be compared to the value in aggLinkGroupMemberAggregateInterface using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberAggregateInterface must be specified if op_aggLinkGroupMemberAggregateInterface is specified.
+             :param val_c_aggLinkGroupMemberAggregateInterface: If op_aggLinkGroupMemberAggregateInterface is specified, this value will be compared to the value in aggLinkGroupMemberAggregateInterface using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberAggregateInterface must be specified if op_aggLinkGroupMemberAggregateInterface is specified. If the rlike or not rlike value is specified in the op_aggLinkGroupMemberAggregateInterface field, escape regex special characters because a regular expression is expected.
              :type val_c_aggLinkGroupMemberAggregateInterface: String
 
             |  ``api version min:`` None
@@ -479,7 +447,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_aggLinkGroupMemberChangedCols: If op_aggLinkGroupMemberChangedCols is specified, this value will be compared to the value in aggLinkGroupMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberChangedCols must be specified if op_aggLinkGroupMemberChangedCols is specified.
+             :param val_c_aggLinkGroupMemberChangedCols: If op_aggLinkGroupMemberChangedCols is specified, this value will be compared to the value in aggLinkGroupMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberChangedCols must be specified if op_aggLinkGroupMemberChangedCols is specified. If the rlike or not rlike value is specified in the op_aggLinkGroupMemberChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_aggLinkGroupMemberChangedCols: String
 
             |  ``api version min:`` None
@@ -503,7 +471,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_aggLinkGroupMemberEndTime: If op_aggLinkGroupMemberEndTime is specified, this value will be compared to the value in aggLinkGroupMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberEndTime must be specified if op_aggLinkGroupMemberEndTime is specified.
+             :param val_c_aggLinkGroupMemberEndTime: If op_aggLinkGroupMemberEndTime is specified, this value will be compared to the value in aggLinkGroupMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberEndTime must be specified if op_aggLinkGroupMemberEndTime is specified. If the rlike or not rlike value is specified in the op_aggLinkGroupMemberEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_aggLinkGroupMemberEndTime: String
 
             |  ``api version min:`` None
@@ -527,7 +495,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_aggLinkGroupMemberGroupIndex: If op_aggLinkGroupMemberGroupIndex is specified, this value will be compared to the value in aggLinkGroupMemberGroupIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberGroupIndex must be specified if op_aggLinkGroupMemberGroupIndex is specified.
+             :param val_c_aggLinkGroupMemberGroupIndex: If op_aggLinkGroupMemberGroupIndex is specified, this value will be compared to the value in aggLinkGroupMemberGroupIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberGroupIndex must be specified if op_aggLinkGroupMemberGroupIndex is specified. If the rlike or not rlike value is specified in the op_aggLinkGroupMemberGroupIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_aggLinkGroupMemberGroupIndex: String
 
             |  ``api version min:`` None
@@ -551,7 +519,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_aggLinkGroupMemberGroupName: If op_aggLinkGroupMemberGroupName is specified, this value will be compared to the value in aggLinkGroupMemberGroupName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberGroupName must be specified if op_aggLinkGroupMemberGroupName is specified.
+             :param val_c_aggLinkGroupMemberGroupName: If op_aggLinkGroupMemberGroupName is specified, this value will be compared to the value in aggLinkGroupMemberGroupName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberGroupName must be specified if op_aggLinkGroupMemberGroupName is specified. If the rlike or not rlike value is specified in the op_aggLinkGroupMemberGroupName field, escape regex special characters because a regular expression is expected.
              :type val_c_aggLinkGroupMemberGroupName: String
 
             |  ``api version min:`` None
@@ -575,7 +543,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_aggLinkGroupMemberID: If op_aggLinkGroupMemberID is specified, this value will be compared to the value in aggLinkGroupMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberID must be specified if op_aggLinkGroupMemberID is specified.
+             :param val_c_aggLinkGroupMemberID: If op_aggLinkGroupMemberID is specified, this value will be compared to the value in aggLinkGroupMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberID must be specified if op_aggLinkGroupMemberID is specified. If the rlike or not rlike value is specified in the op_aggLinkGroupMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_aggLinkGroupMemberID: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_aggLinkGroupMemberPhysicalInterface: If op_aggLinkGroupMemberPhysicalInterface is specified, this value will be compared to the value in aggLinkGroupMemberPhysicalInterface using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberPhysicalInterface must be specified if op_aggLinkGroupMemberPhysicalInterface is specified.
+             :param val_c_aggLinkGroupMemberPhysicalInterface: If op_aggLinkGroupMemberPhysicalInterface is specified, this value will be compared to the value in aggLinkGroupMemberPhysicalInterface using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberPhysicalInterface must be specified if op_aggLinkGroupMemberPhysicalInterface is specified. If the rlike or not rlike value is specified in the op_aggLinkGroupMemberPhysicalInterface field, escape regex special characters because a regular expression is expected.
              :type val_c_aggLinkGroupMemberPhysicalInterface: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_aggLinkGroupMemberStartTime: If op_aggLinkGroupMemberStartTime is specified, this value will be compared to the value in aggLinkGroupMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberStartTime must be specified if op_aggLinkGroupMemberStartTime is specified.
+             :param val_c_aggLinkGroupMemberStartTime: If op_aggLinkGroupMemberStartTime is specified, this value will be compared to the value in aggLinkGroupMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberStartTime must be specified if op_aggLinkGroupMemberStartTime is specified. If the rlike or not rlike value is specified in the op_aggLinkGroupMemberStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_aggLinkGroupMemberStartTime: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_aggLinkGroupMemberTimestamp: If op_aggLinkGroupMemberTimestamp is specified, this value will be compared to the value in aggLinkGroupMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberTimestamp must be specified if op_aggLinkGroupMemberTimestamp is specified.
+             :param val_c_aggLinkGroupMemberTimestamp: If op_aggLinkGroupMemberTimestamp is specified, this value will be compared to the value in aggLinkGroupMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggLinkGroupMemberTimestamp must be specified if op_aggLinkGroupMemberTimestamp is specified. If the rlike or not rlike value is specified in the op_aggLinkGroupMemberTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_aggLinkGroupMemberTimestamp: String
 
             |  ``api version min:`` None
@@ -703,7 +671,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` aggLinkGroupMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is aggLinkGroupMemberID. Valid values are DataSourceID, aggLinkGroupMemberID, aggLinkGroupMemberGroupName, aggLinkGroupMemberGroupIndex, DeviceID, aggLinkGroupMemberAggregateInterface, aggLinkGroupMemberPhysicalInterface, aggLinkGroupMemberStartTime, aggLinkGroupMemberEndTime, aggLinkGroupMemberTimestamp, aggLinkGroupMemberChangedCols.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, aggLinkGroupMemberID, aggLinkGroupMemberGroupName, aggLinkGroupMemberGroupIndex, DeviceID, aggLinkGroupMemberAggregateInterface, aggLinkGroupMemberPhysicalInterface, aggLinkGroupMemberStartTime, aggLinkGroupMemberEndTime, aggLinkGroupMemberTimestamp, aggLinkGroupMemberChangedCols.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class AggregatedLinkGroupMembershipBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -721,22 +689,6 @@ class AggregatedLinkGroupMembershipBroker(Broker):
 
              :param select: The list of attributes to return for each AggregatedLinkGroupMembership. Valid values are DataSourceID, aggLinkGroupMemberID, aggLinkGroupMemberGroupName, aggLinkGroupMemberGroupIndex, DeviceID, aggLinkGroupMemberAggregateInterface, aggLinkGroupMemberPhysicalInterface, aggLinkGroupMemberStartTime, aggLinkGroupMemberEndTime, aggLinkGroupMemberTimestamp, aggLinkGroupMemberChangedCols. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

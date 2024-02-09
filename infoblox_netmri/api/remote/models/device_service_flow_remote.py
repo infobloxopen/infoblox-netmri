@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class DeviceServiceFlowRemote(RemoteModel):
     """
-    Network flow definition - protocol and ports
+    Network flow definition - protocol and ports.
 
 
     |  ``DeviceServiceFlowID:`` The internal NetMRI identifier for this flow description.

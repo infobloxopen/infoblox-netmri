@@ -27,7 +27,7 @@ class GlobalProxySettingsBroker(Broker):
         return self.api_request(self._get_method_fullname("decoded_index"), kwargs)
 
     def collector_proxy(self, **kwargs):
-        """Returns Collector Proxy Settings,
+        """Returns Collector Proxy Settings.
 
             **Inputs**
 

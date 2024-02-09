@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class DeviceIpRangeRemote(RemoteModel):
     """
-    Network IP Ranges definition
+    Network IP Ranges definition.
 
 
     |  ``DeviceIPRangeID:`` The internal NetMRI identifier for ip address range definition.

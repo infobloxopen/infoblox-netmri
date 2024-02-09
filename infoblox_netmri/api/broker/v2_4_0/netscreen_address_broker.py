@@ -5,7 +5,7 @@ class NetscreenAddressBroker(Broker):
     controller = "netscreen_addresses"
 
     def index(self, **kwargs):
-        """Lists the available netscreen addresses. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available netscreen addresses. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -94,7 +94,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NSAddressID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NSAddressID. Valid values are NSAddressID, DeviceID, NSAddressStartTime, NSAddressEndTime, NSAddressTimeStamp, NSAddressChangedCols, NSAddressIndex, NSAddressName, NSAddressZone, NSAddressIpDotted, NSAddressIpNumeric, NSAddressDomainDotted, NSAddressDomainNumeric, NSAddressNetmaskDotted, NSAddressNetmaskNumeric, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are NSAddressID, DeviceID, NSAddressStartTime, NSAddressEndTime, NSAddressTimeStamp, NSAddressChangedCols, NSAddressIndex, NSAddressName, NSAddressZone, NSAddressIpDotted, NSAddressIpNumeric, NSAddressDomainDotted, NSAddressDomainNumeric, NSAddressNetmaskDotted, NSAddressNetmaskNumeric, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -102,7 +102,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -112,22 +112,6 @@ class NetscreenAddressBroker(Broker):
 
              :param select: The list of attributes to return for each NetscreenAddress. Valid values are NSAddressID, DeviceID, NSAddressStartTime, NSAddressEndTime, NSAddressTimeStamp, NSAddressChangedCols, NSAddressIndex, NSAddressName, NSAddressZone, NSAddressIpDotted, NSAddressIpNumeric, NSAddressDomainDotted, NSAddressDomainNumeric, NSAddressNetmaskDotted, NSAddressNetmaskNumeric, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -500,7 +484,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NSAddressID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NSAddressID. Valid values are NSAddressID, DeviceID, NSAddressStartTime, NSAddressEndTime, NSAddressTimeStamp, NSAddressChangedCols, NSAddressIndex, NSAddressName, NSAddressZone, NSAddressIpDotted, NSAddressIpNumeric, NSAddressDomainDotted, NSAddressDomainNumeric, NSAddressNetmaskDotted, NSAddressNetmaskNumeric, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are NSAddressID, DeviceID, NSAddressStartTime, NSAddressEndTime, NSAddressTimeStamp, NSAddressChangedCols, NSAddressIndex, NSAddressName, NSAddressZone, NSAddressIpDotted, NSAddressIpNumeric, NSAddressDomainDotted, NSAddressDomainNumeric, NSAddressNetmaskDotted, NSAddressNetmaskNumeric, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -508,7 +492,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -518,22 +502,6 @@ class NetscreenAddressBroker(Broker):
 
              :param select: The list of attributes to return for each NetscreenAddress. Valid values are NSAddressID, DeviceID, NSAddressStartTime, NSAddressEndTime, NSAddressTimeStamp, NSAddressChangedCols, NSAddressIndex, NSAddressName, NSAddressZone, NSAddressIpDotted, NSAddressIpNumeric, NSAddressDomainDotted, NSAddressDomainNumeric, NSAddressNetmaskDotted, NSAddressNetmaskNumeric, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -591,7 +559,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressChangedCols: If op_NSAddressChangedCols is specified, this value will be compared to the value in NSAddressChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressChangedCols must be specified if op_NSAddressChangedCols is specified.
+             :param val_c_NSAddressChangedCols: If op_NSAddressChangedCols is specified, this value will be compared to the value in NSAddressChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressChangedCols must be specified if op_NSAddressChangedCols is specified. If the rlike or not rlike value is specified in the op_NSAddressChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressChangedCols: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressDomainDotted: If op_NSAddressDomainDotted is specified, this value will be compared to the value in NSAddressDomainDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressDomainDotted must be specified if op_NSAddressDomainDotted is specified.
+             :param val_c_NSAddressDomainDotted: If op_NSAddressDomainDotted is specified, this value will be compared to the value in NSAddressDomainDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressDomainDotted must be specified if op_NSAddressDomainDotted is specified. If the rlike or not rlike value is specified in the op_NSAddressDomainDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressDomainDotted: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressDomainNumeric: If op_NSAddressDomainNumeric is specified, this value will be compared to the value in NSAddressDomainNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressDomainNumeric must be specified if op_NSAddressDomainNumeric is specified.
+             :param val_c_NSAddressDomainNumeric: If op_NSAddressDomainNumeric is specified, this value will be compared to the value in NSAddressDomainNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressDomainNumeric must be specified if op_NSAddressDomainNumeric is specified. If the rlike or not rlike value is specified in the op_NSAddressDomainNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressDomainNumeric: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressEndTime: If op_NSAddressEndTime is specified, this value will be compared to the value in NSAddressEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressEndTime must be specified if op_NSAddressEndTime is specified.
+             :param val_c_NSAddressEndTime: If op_NSAddressEndTime is specified, this value will be compared to the value in NSAddressEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressEndTime must be specified if op_NSAddressEndTime is specified. If the rlike or not rlike value is specified in the op_NSAddressEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressEndTime: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressID: If op_NSAddressID is specified, this value will be compared to the value in NSAddressID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressID must be specified if op_NSAddressID is specified.
+             :param val_c_NSAddressID: If op_NSAddressID is specified, this value will be compared to the value in NSAddressID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressID must be specified if op_NSAddressID is specified. If the rlike or not rlike value is specified in the op_NSAddressID field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressID: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressIndex: If op_NSAddressIndex is specified, this value will be compared to the value in NSAddressIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressIndex must be specified if op_NSAddressIndex is specified.
+             :param val_c_NSAddressIndex: If op_NSAddressIndex is specified, this value will be compared to the value in NSAddressIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressIndex must be specified if op_NSAddressIndex is specified. If the rlike or not rlike value is specified in the op_NSAddressIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressIndex: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressIpDotted: If op_NSAddressIpDotted is specified, this value will be compared to the value in NSAddressIpDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressIpDotted must be specified if op_NSAddressIpDotted is specified.
+             :param val_c_NSAddressIpDotted: If op_NSAddressIpDotted is specified, this value will be compared to the value in NSAddressIpDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressIpDotted must be specified if op_NSAddressIpDotted is specified. If the rlike or not rlike value is specified in the op_NSAddressIpDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressIpDotted: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressIpNumeric: If op_NSAddressIpNumeric is specified, this value will be compared to the value in NSAddressIpNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressIpNumeric must be specified if op_NSAddressIpNumeric is specified.
+             :param val_c_NSAddressIpNumeric: If op_NSAddressIpNumeric is specified, this value will be compared to the value in NSAddressIpNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressIpNumeric must be specified if op_NSAddressIpNumeric is specified. If the rlike or not rlike value is specified in the op_NSAddressIpNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressIpNumeric: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressName: If op_NSAddressName is specified, this value will be compared to the value in NSAddressName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressName must be specified if op_NSAddressName is specified.
+             :param val_c_NSAddressName: If op_NSAddressName is specified, this value will be compared to the value in NSAddressName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressName must be specified if op_NSAddressName is specified. If the rlike or not rlike value is specified in the op_NSAddressName field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressName: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressNetmaskDotted: If op_NSAddressNetmaskDotted is specified, this value will be compared to the value in NSAddressNetmaskDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressNetmaskDotted must be specified if op_NSAddressNetmaskDotted is specified.
+             :param val_c_NSAddressNetmaskDotted: If op_NSAddressNetmaskDotted is specified, this value will be compared to the value in NSAddressNetmaskDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressNetmaskDotted must be specified if op_NSAddressNetmaskDotted is specified. If the rlike or not rlike value is specified in the op_NSAddressNetmaskDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressNetmaskDotted: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressNetmaskNumeric: If op_NSAddressNetmaskNumeric is specified, this value will be compared to the value in NSAddressNetmaskNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressNetmaskNumeric must be specified if op_NSAddressNetmaskNumeric is specified.
+             :param val_c_NSAddressNetmaskNumeric: If op_NSAddressNetmaskNumeric is specified, this value will be compared to the value in NSAddressNetmaskNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressNetmaskNumeric must be specified if op_NSAddressNetmaskNumeric is specified. If the rlike or not rlike value is specified in the op_NSAddressNetmaskNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressNetmaskNumeric: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressStartTime: If op_NSAddressStartTime is specified, this value will be compared to the value in NSAddressStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressStartTime must be specified if op_NSAddressStartTime is specified.
+             :param val_c_NSAddressStartTime: If op_NSAddressStartTime is specified, this value will be compared to the value in NSAddressStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressStartTime must be specified if op_NSAddressStartTime is specified. If the rlike or not rlike value is specified in the op_NSAddressStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressStartTime: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressTimeStamp: If op_NSAddressTimeStamp is specified, this value will be compared to the value in NSAddressTimeStamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressTimeStamp must be specified if op_NSAddressTimeStamp is specified.
+             :param val_c_NSAddressTimeStamp: If op_NSAddressTimeStamp is specified, this value will be compared to the value in NSAddressTimeStamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressTimeStamp must be specified if op_NSAddressTimeStamp is specified. If the rlike or not rlike value is specified in the op_NSAddressTimeStamp field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressTimeStamp: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSAddressZone: If op_NSAddressZone is specified, this value will be compared to the value in NSAddressZone using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressZone must be specified if op_NSAddressZone is specified.
+             :param val_c_NSAddressZone: If op_NSAddressZone is specified, this value will be compared to the value in NSAddressZone using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSAddressZone must be specified if op_NSAddressZone is specified. If the rlike or not rlike value is specified in the op_NSAddressZone field, escape regex special characters because a regular expression is expected.
              :type val_c_NSAddressZone: String
 
             |  ``api version min:`` None
@@ -1007,7 +975,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NSAddressID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NSAddressID. Valid values are NSAddressID, DeviceID, NSAddressStartTime, NSAddressEndTime, NSAddressTimeStamp, NSAddressChangedCols, NSAddressIndex, NSAddressName, NSAddressZone, NSAddressIpDotted, NSAddressIpNumeric, NSAddressDomainDotted, NSAddressDomainNumeric, NSAddressNetmaskDotted, NSAddressNetmaskNumeric, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are NSAddressID, DeviceID, NSAddressStartTime, NSAddressEndTime, NSAddressTimeStamp, NSAddressChangedCols, NSAddressIndex, NSAddressName, NSAddressZone, NSAddressIpDotted, NSAddressIpNumeric, NSAddressDomainDotted, NSAddressDomainNumeric, NSAddressNetmaskDotted, NSAddressNetmaskNumeric, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1015,7 +983,7 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1025,22 +993,6 @@ class NetscreenAddressBroker(Broker):
 
              :param select: The list of attributes to return for each NetscreenAddress. Valid values are NSAddressID, DeviceID, NSAddressStartTime, NSAddressEndTime, NSAddressTimeStamp, NSAddressChangedCols, NSAddressIndex, NSAddressName, NSAddressZone, NSAddressIpDotted, NSAddressIpNumeric, NSAddressDomainDotted, NSAddressDomainNumeric, NSAddressNetmaskDotted, NSAddressNetmaskNumeric, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1084,8 +1036,8 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1111,8 +1063,8 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -1138,8 +1090,8 @@ class NetscreenAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

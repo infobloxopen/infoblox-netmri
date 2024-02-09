@@ -5,7 +5,7 @@ class DiscoveryHintBroker(Broker):
     controller = "discovery_hints"
 
     def index(self, **kwargs):
-        """Lists the available discovery hints. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available discovery hints. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -62,7 +62,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -70,7 +70,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -80,22 +80,6 @@ class DiscoveryHintBroker(Broker):
 
              :param select: The list of attributes to return for each DiscoveryHint. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -153,7 +137,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -161,7 +145,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -171,22 +155,6 @@ class DiscoveryHintBroker(Broker):
 
              :param select: The list of attributes to return for each DiscoveryHint. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -244,7 +212,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UnitID: If op_UnitID is specified, this value will be compared to the value in UnitID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitID must be specified if op_UnitID is specified.
+             :param val_c_UnitID: If op_UnitID is specified, this value will be compared to the value in UnitID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitID must be specified if op_UnitID is specified. If the rlike or not rlike value is specified in the op_UnitID field, escape regex special characters because a regular expression is expected.
              :type val_c_UnitID: String
 
             |  ``api version min:`` None
@@ -268,7 +236,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cli_enable_password_secure: If op_cli_enable_password_secure is specified, this value will be compared to the value in cli_enable_password_secure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_enable_password_secure must be specified if op_cli_enable_password_secure is specified.
+             :param val_c_cli_enable_password_secure: If op_cli_enable_password_secure is specified, this value will be compared to the value in cli_enable_password_secure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_enable_password_secure must be specified if op_cli_enable_password_secure is specified. If the rlike or not rlike value is specified in the op_cli_enable_password_secure field, escape regex special characters because a regular expression is expected.
              :type val_c_cli_enable_password_secure: String
 
             |  ``api version min:`` None
@@ -292,7 +260,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cli_user_name_secure_ssh: If op_cli_user_name_secure_ssh is specified, this value will be compared to the value in cli_user_name_secure_ssh using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_user_name_secure_ssh must be specified if op_cli_user_name_secure_ssh is specified.
+             :param val_c_cli_user_name_secure_ssh: If op_cli_user_name_secure_ssh is specified, this value will be compared to the value in cli_user_name_secure_ssh using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_user_name_secure_ssh must be specified if op_cli_user_name_secure_ssh is specified. If the rlike or not rlike value is specified in the op_cli_user_name_secure_ssh field, escape regex special characters because a regular expression is expected.
              :type val_c_cli_user_name_secure_ssh: String
 
             |  ``api version min:`` None
@@ -316,7 +284,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cli_user_name_secure_telnet: If op_cli_user_name_secure_telnet is specified, this value will be compared to the value in cli_user_name_secure_telnet using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_user_name_secure_telnet must be specified if op_cli_user_name_secure_telnet is specified.
+             :param val_c_cli_user_name_secure_telnet: If op_cli_user_name_secure_telnet is specified, this value will be compared to the value in cli_user_name_secure_telnet using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_user_name_secure_telnet must be specified if op_cli_user_name_secure_telnet is specified. If the rlike or not rlike value is specified in the op_cli_user_name_secure_telnet field, escape regex special characters because a regular expression is expected.
              :type val_c_cli_user_name_secure_telnet: String
 
             |  ``api version min:`` None
@@ -340,7 +308,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cli_user_password_secure_ssh: If op_cli_user_password_secure_ssh is specified, this value will be compared to the value in cli_user_password_secure_ssh using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_user_password_secure_ssh must be specified if op_cli_user_password_secure_ssh is specified.
+             :param val_c_cli_user_password_secure_ssh: If op_cli_user_password_secure_ssh is specified, this value will be compared to the value in cli_user_password_secure_ssh using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_user_password_secure_ssh must be specified if op_cli_user_password_secure_ssh is specified. If the rlike or not rlike value is specified in the op_cli_user_password_secure_ssh field, escape regex special characters because a regular expression is expected.
              :type val_c_cli_user_password_secure_ssh: String
 
             |  ``api version min:`` None
@@ -364,7 +332,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cli_user_password_secure_telnet: If op_cli_user_password_secure_telnet is specified, this value will be compared to the value in cli_user_password_secure_telnet using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_user_password_secure_telnet must be specified if op_cli_user_password_secure_telnet is specified.
+             :param val_c_cli_user_password_secure_telnet: If op_cli_user_password_secure_telnet is specified, this value will be compared to the value in cli_user_password_secure_telnet using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_user_password_secure_telnet must be specified if op_cli_user_password_secure_telnet is specified. If the rlike or not rlike value is specified in the op_cli_user_password_secure_telnet field, escape regex special characters because a regular expression is expected.
              :type val_c_cli_user_password_secure_telnet: String
 
             |  ``api version min:`` None
@@ -388,7 +356,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -412,7 +380,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_by: If op_created_by is specified, this value will be compared to the value in created_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_by must be specified if op_created_by is specified.
+             :param val_c_created_by: If op_created_by is specified, this value will be compared to the value in created_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_by must be specified if op_created_by is specified. If the rlike or not rlike value is specified in the op_created_by field, escape regex special characters because a regular expression is expected.
              :type val_c_created_by: String
 
             |  ``api version min:`` None
@@ -436,7 +404,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_device_type: If op_device_type is specified, this value will be compared to the value in device_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_type must be specified if op_device_type is specified.
+             :param val_c_device_type: If op_device_type is specified, this value will be compared to the value in device_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_type must be specified if op_device_type is specified. If the rlike or not rlike value is specified in the op_device_type field, escape regex special characters because a regular expression is expected.
              :type val_c_device_type: String
 
             |  ``api version min:`` None
@@ -460,7 +428,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_hint: If op_hint is specified, this value will be compared to the value in hint using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_hint must be specified if op_hint is specified.
+             :param val_c_hint: If op_hint is specified, this value will be compared to the value in hint using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_hint must be specified if op_hint is specified. If the rlike or not rlike value is specified in the op_hint field, escape regex special characters because a regular expression is expected.
              :type val_c_hint: String
 
             |  ``api version min:`` None
@@ -484,7 +452,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -508,7 +476,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_secure_version: If op_secure_version is specified, this value will be compared to the value in secure_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_secure_version must be specified if op_secure_version is specified.
+             :param val_c_secure_version: If op_secure_version is specified, this value will be compared to the value in secure_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_secure_version must be specified if op_secure_version is specified. If the rlike or not rlike value is specified in the op_secure_version field, escape regex special characters because a regular expression is expected.
              :type val_c_secure_version: String
 
             |  ``api version min:`` None
@@ -532,7 +500,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_auth_password_secure: If op_snmp_auth_password_secure is specified, this value will be compared to the value in snmp_auth_password_secure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_auth_password_secure must be specified if op_snmp_auth_password_secure is specified.
+             :param val_c_snmp_auth_password_secure: If op_snmp_auth_password_secure is specified, this value will be compared to the value in snmp_auth_password_secure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_auth_password_secure must be specified if op_snmp_auth_password_secure is specified. If the rlike or not rlike value is specified in the op_snmp_auth_password_secure field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_auth_password_secure: String
 
             |  ``api version min:`` None
@@ -556,7 +524,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_auth_protocol: If op_snmp_auth_protocol is specified, this value will be compared to the value in snmp_auth_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_auth_protocol must be specified if op_snmp_auth_protocol is specified.
+             :param val_c_snmp_auth_protocol: If op_snmp_auth_protocol is specified, this value will be compared to the value in snmp_auth_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_auth_protocol must be specified if op_snmp_auth_protocol is specified. If the rlike or not rlike value is specified in the op_snmp_auth_protocol field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_auth_protocol: String
 
             |  ``api version min:`` None
@@ -580,7 +548,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_community_secure: If op_snmp_community_secure is specified, this value will be compared to the value in snmp_community_secure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_community_secure must be specified if op_snmp_community_secure is specified.
+             :param val_c_snmp_community_secure: If op_snmp_community_secure is specified, this value will be compared to the value in snmp_community_secure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_community_secure must be specified if op_snmp_community_secure is specified. If the rlike or not rlike value is specified in the op_snmp_community_secure field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_community_secure: String
 
             |  ``api version min:`` None
@@ -604,7 +572,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_private_password_secure: If op_snmp_private_password_secure is specified, this value will be compared to the value in snmp_private_password_secure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_private_password_secure must be specified if op_snmp_private_password_secure is specified.
+             :param val_c_snmp_private_password_secure: If op_snmp_private_password_secure is specified, this value will be compared to the value in snmp_private_password_secure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_private_password_secure must be specified if op_snmp_private_password_secure is specified. If the rlike or not rlike value is specified in the op_snmp_private_password_secure field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_private_password_secure: String
 
             |  ``api version min:`` None
@@ -628,7 +596,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_private_protocol: If op_snmp_private_protocol is specified, this value will be compared to the value in snmp_private_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_private_protocol must be specified if op_snmp_private_protocol is specified.
+             :param val_c_snmp_private_protocol: If op_snmp_private_protocol is specified, this value will be compared to the value in snmp_private_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_private_protocol must be specified if op_snmp_private_protocol is specified. If the rlike or not rlike value is specified in the op_snmp_private_protocol field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_private_protocol: String
 
             |  ``api version min:`` None
@@ -652,7 +620,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_protocol: If op_snmp_protocol is specified, this value will be compared to the value in snmp_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_protocol must be specified if op_snmp_protocol is specified.
+             :param val_c_snmp_protocol: If op_snmp_protocol is specified, this value will be compared to the value in snmp_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_protocol must be specified if op_snmp_protocol is specified. If the rlike or not rlike value is specified in the op_snmp_protocol field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_protocol: String
 
             |  ``api version min:`` None
@@ -676,7 +644,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -700,7 +668,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_by: If op_updated_by is specified, this value will be compared to the value in updated_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_by must be specified if op_updated_by is specified.
+             :param val_c_updated_by: If op_updated_by is specified, this value will be compared to the value in updated_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_by must be specified if op_updated_by is specified. If the rlike or not rlike value is specified in the op_updated_by field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_by: String
 
             |  ``api version min:`` None
@@ -724,7 +692,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -732,7 +700,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -742,22 +710,6 @@ class DiscoveryHintBroker(Broker):
 
              :param select: The list of attributes to return for each DiscoveryHint. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -860,7 +812,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created discovery hint.
+             :return uri: The URI that may be used to retrieve the newly created discovery hint.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -935,7 +887,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated discovery hint.
+             :return uri: The URI that may be used to retrieve the updated discovery hint.
              :rtype uri: String
 
             |  ``api version min:`` None

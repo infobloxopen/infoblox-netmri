@@ -48,7 +48,7 @@ class IssueDetailBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available issue details. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available issue details. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -265,7 +265,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IssueID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IssueID. Valid values are DataSourceID, IssueID, StartTime, EndTime, ChangedCols, Timestamp, IssueTypeID, DetailID, DeviceID, InterfaceID, VlanID, SubnetID, IprgID, BatchID, AltDeviceID, Criteria, IssueValue, Component, SeverityID, Correctness, Stability, SuppressedInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, IssueID, StartTime, EndTime, ChangedCols, Timestamp, IssueTypeID, DetailID, DeviceID, InterfaceID, VlanID, SubnetID, IprgID, BatchID, AltDeviceID, Criteria, IssueValue, Component, SeverityID, Correctness, Stability, SuppressedInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -273,7 +273,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -283,22 +283,6 @@ class IssueDetailBroker(Broker):
 
              :param select: The list of attributes to return for each IssueDetail. Valid values are DataSourceID, IssueID, StartTime, EndTime, ChangedCols, Timestamp, IssueTypeID, DetailID, DeviceID, InterfaceID, VlanID, SubnetID, IprgID, BatchID, AltDeviceID, Criteria, IssueValue, Component, SeverityID, Correctness, Stability, SuppressedInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -724,7 +708,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IssueID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IssueID. Valid values are DataSourceID, IssueID, StartTime, EndTime, ChangedCols, Timestamp, IssueTypeID, DetailID, DeviceID, InterfaceID, VlanID, SubnetID, IprgID, BatchID, AltDeviceID, Criteria, IssueValue, Component, SeverityID, Correctness, Stability, SuppressedInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, IssueID, StartTime, EndTime, ChangedCols, Timestamp, IssueTypeID, DetailID, DeviceID, InterfaceID, VlanID, SubnetID, IprgID, BatchID, AltDeviceID, Criteria, IssueValue, Component, SeverityID, Correctness, Stability, SuppressedInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -732,7 +716,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -742,22 +726,6 @@ class IssueDetailBroker(Broker):
 
              :param select: The list of attributes to return for each IssueDetail. Valid values are DataSourceID, IssueID, StartTime, EndTime, ChangedCols, Timestamp, IssueTypeID, DetailID, DeviceID, InterfaceID, VlanID, SubnetID, IprgID, BatchID, AltDeviceID, Criteria, IssueValue, Component, SeverityID, Correctness, Stability, SuppressedInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -815,7 +783,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AltDeviceID: If op_AltDeviceID is specified, this value will be compared to the value in AltDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AltDeviceID must be specified if op_AltDeviceID is specified.
+             :param val_c_AltDeviceID: If op_AltDeviceID is specified, this value will be compared to the value in AltDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AltDeviceID must be specified if op_AltDeviceID is specified. If the rlike or not rlike value is specified in the op_AltDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_AltDeviceID: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BatchID: If op_BatchID is specified, this value will be compared to the value in BatchID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BatchID must be specified if op_BatchID is specified.
+             :param val_c_BatchID: If op_BatchID is specified, this value will be compared to the value in BatchID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BatchID must be specified if op_BatchID is specified. If the rlike or not rlike value is specified in the op_BatchID field, escape regex special characters because a regular expression is expected.
              :type val_c_BatchID: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangedCols: If op_ChangedCols is specified, this value will be compared to the value in ChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangedCols must be specified if op_ChangedCols is specified.
+             :param val_c_ChangedCols: If op_ChangedCols is specified, this value will be compared to the value in ChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangedCols must be specified if op_ChangedCols is specified. If the rlike or not rlike value is specified in the op_ChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangedCols: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Component: If op_Component is specified, this value will be compared to the value in Component using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Component must be specified if op_Component is specified.
+             :param val_c_Component: If op_Component is specified, this value will be compared to the value in Component using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Component must be specified if op_Component is specified. If the rlike or not rlike value is specified in the op_Component field, escape regex special characters because a regular expression is expected.
              :type val_c_Component: String
 
             |  ``api version min:`` None
@@ -911,7 +879,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Correctness: If op_Correctness is specified, this value will be compared to the value in Correctness using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Correctness must be specified if op_Correctness is specified.
+             :param val_c_Correctness: If op_Correctness is specified, this value will be compared to the value in Correctness using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Correctness must be specified if op_Correctness is specified. If the rlike or not rlike value is specified in the op_Correctness field, escape regex special characters because a regular expression is expected.
              :type val_c_Correctness: String
 
             |  ``api version min:`` None
@@ -935,7 +903,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Criteria: If op_Criteria is specified, this value will be compared to the value in Criteria using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Criteria must be specified if op_Criteria is specified.
+             :param val_c_Criteria: If op_Criteria is specified, this value will be compared to the value in Criteria using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Criteria must be specified if op_Criteria is specified. If the rlike or not rlike value is specified in the op_Criteria field, escape regex special characters because a regular expression is expected.
              :type val_c_Criteria: String
 
             |  ``api version min:`` None
@@ -959,7 +927,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -983,7 +951,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DetailID: If op_DetailID is specified, this value will be compared to the value in DetailID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DetailID must be specified if op_DetailID is specified.
+             :param val_c_DetailID: If op_DetailID is specified, this value will be compared to the value in DetailID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DetailID must be specified if op_DetailID is specified. If the rlike or not rlike value is specified in the op_DetailID field, escape regex special characters because a regular expression is expected.
              :type val_c_DetailID: String
 
             |  ``api version min:`` None
@@ -1007,7 +975,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -1031,7 +999,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified.
+             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified. If the rlike or not rlike value is specified in the op_EndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_EndTime: String
 
             |  ``api version min:`` None
@@ -1055,7 +1023,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -1079,7 +1047,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgID: If op_IprgID is specified, this value will be compared to the value in IprgID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgID must be specified if op_IprgID is specified.
+             :param val_c_IprgID: If op_IprgID is specified, this value will be compared to the value in IprgID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgID must be specified if op_IprgID is specified. If the rlike or not rlike value is specified in the op_IprgID field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgID: String
 
             |  ``api version min:`` None
@@ -1103,7 +1071,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IssueID: If op_IssueID is specified, this value will be compared to the value in IssueID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IssueID must be specified if op_IssueID is specified.
+             :param val_c_IssueID: If op_IssueID is specified, this value will be compared to the value in IssueID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IssueID must be specified if op_IssueID is specified. If the rlike or not rlike value is specified in the op_IssueID field, escape regex special characters because a regular expression is expected.
              :type val_c_IssueID: String
 
             |  ``api version min:`` None
@@ -1127,7 +1095,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IssueTypeID: If op_IssueTypeID is specified, this value will be compared to the value in IssueTypeID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IssueTypeID must be specified if op_IssueTypeID is specified.
+             :param val_c_IssueTypeID: If op_IssueTypeID is specified, this value will be compared to the value in IssueTypeID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IssueTypeID must be specified if op_IssueTypeID is specified. If the rlike or not rlike value is specified in the op_IssueTypeID field, escape regex special characters because a regular expression is expected.
              :type val_c_IssueTypeID: String
 
             |  ``api version min:`` None
@@ -1151,7 +1119,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IssueValue: If op_IssueValue is specified, this value will be compared to the value in IssueValue using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IssueValue must be specified if op_IssueValue is specified.
+             :param val_c_IssueValue: If op_IssueValue is specified, this value will be compared to the value in IssueValue using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IssueValue must be specified if op_IssueValue is specified. If the rlike or not rlike value is specified in the op_IssueValue field, escape regex special characters because a regular expression is expected.
              :type val_c_IssueValue: String
 
             |  ``api version min:`` None
@@ -1175,7 +1143,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SeverityID: If op_SeverityID is specified, this value will be compared to the value in SeverityID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SeverityID must be specified if op_SeverityID is specified.
+             :param val_c_SeverityID: If op_SeverityID is specified, this value will be compared to the value in SeverityID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SeverityID must be specified if op_SeverityID is specified. If the rlike or not rlike value is specified in the op_SeverityID field, escape regex special characters because a regular expression is expected.
              :type val_c_SeverityID: String
 
             |  ``api version min:`` None
@@ -1199,7 +1167,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Stability: If op_Stability is specified, this value will be compared to the value in Stability using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Stability must be specified if op_Stability is specified.
+             :param val_c_Stability: If op_Stability is specified, this value will be compared to the value in Stability using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Stability must be specified if op_Stability is specified. If the rlike or not rlike value is specified in the op_Stability field, escape regex special characters because a regular expression is expected.
              :type val_c_Stability: String
 
             |  ``api version min:`` None
@@ -1223,7 +1191,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified.
+             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified. If the rlike or not rlike value is specified in the op_StartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_StartTime: String
 
             |  ``api version min:`` None
@@ -1247,7 +1215,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubnetID: If op_SubnetID is specified, this value will be compared to the value in SubnetID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetID must be specified if op_SubnetID is specified.
+             :param val_c_SubnetID: If op_SubnetID is specified, this value will be compared to the value in SubnetID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetID must be specified if op_SubnetID is specified. If the rlike or not rlike value is specified in the op_SubnetID field, escape regex special characters because a regular expression is expected.
              :type val_c_SubnetID: String
 
             |  ``api version min:`` None
@@ -1271,7 +1239,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SuppressedInd: If op_SuppressedInd is specified, this value will be compared to the value in SuppressedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SuppressedInd must be specified if op_SuppressedInd is specified.
+             :param val_c_SuppressedInd: If op_SuppressedInd is specified, this value will be compared to the value in SuppressedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SuppressedInd must be specified if op_SuppressedInd is specified. If the rlike or not rlike value is specified in the op_SuppressedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SuppressedInd: String
 
             |  ``api version min:`` None
@@ -1295,7 +1263,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Timestamp: If op_Timestamp is specified, this value will be compared to the value in Timestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Timestamp must be specified if op_Timestamp is specified.
+             :param val_c_Timestamp: If op_Timestamp is specified, this value will be compared to the value in Timestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Timestamp must be specified if op_Timestamp is specified. If the rlike or not rlike value is specified in the op_Timestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_Timestamp: String
 
             |  ``api version min:`` None
@@ -1319,7 +1287,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanID: If op_VlanID is specified, this value will be compared to the value in VlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanID must be specified if op_VlanID is specified.
+             :param val_c_VlanID: If op_VlanID is specified, this value will be compared to the value in VlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanID must be specified if op_VlanID is specified. If the rlike or not rlike value is specified in the op_VlanID field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanID: String
 
             |  ``api version min:`` None
@@ -1375,7 +1343,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IssueID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IssueID. Valid values are DataSourceID, IssueID, StartTime, EndTime, ChangedCols, Timestamp, IssueTypeID, DetailID, DeviceID, InterfaceID, VlanID, SubnetID, IprgID, BatchID, AltDeviceID, Criteria, IssueValue, Component, SeverityID, Correctness, Stability, SuppressedInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, IssueID, StartTime, EndTime, ChangedCols, Timestamp, IssueTypeID, DetailID, DeviceID, InterfaceID, VlanID, SubnetID, IprgID, BatchID, AltDeviceID, Criteria, IssueValue, Component, SeverityID, Correctness, Stability, SuppressedInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1383,7 +1351,7 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1393,22 +1361,6 @@ class IssueDetailBroker(Broker):
 
              :param select: The list of attributes to return for each IssueDetail. Valid values are DataSourceID, IssueID, StartTime, EndTime, ChangedCols, Timestamp, IssueTypeID, DetailID, DeviceID, InterfaceID, VlanID, SubnetID, IprgID, BatchID, AltDeviceID, Criteria, IssueValue, Component, SeverityID, Correctness, Stability, SuppressedInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1439,6 +1391,30 @@ class IssueDetailBroker(Broker):
 
             |  ``api version min:`` None
             |  ``api version max:`` None
+            |  ``required:`` True
+            |  ``default:`` None
+
+             :param issue_id: ID of the issue.
+             :type issue_id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` True
+            |  ``default:`` None
+
+             :param issue_type_id: ID of the issue type.
+             :type issue_type_id: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` True
+            |  ``default:`` None
+
+             :param device_id: ID of the device.
+             :type device_id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
             |  ``required:`` False
             |  ``default:`` None
 
@@ -1450,63 +1426,31 @@ class IssueDetailBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param start_time: None
-             :type start_time: String
+             :param start_time: The start time for which to retrieve the data.
+             :type start_time: DateTime
 
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
             |  ``default:`` None
 
-             :param end_time: None
-             :type end_time: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` True
-            |  ``default:`` None
-
-             :param device_id: None
-             :type device_id: Integer
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` True
-            |  ``default:`` None
-
-             :param issue_type_id: None
-             :type issue_type_id: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` True
-            |  ``default:`` None
-
-             :param issue_id: None
-             :type issue_id: Integer
+             :param end_time: The end time for which to retrieve the data.
+             :type end_time: DateTime
 
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
             |  ``default:`` None
 
-             :param group_ids: None
+             :param group_ids: A comma delimited string of device group ids.
              :type group_ids: Array
 
             |  ``api version min:`` None
             |  ``api version max:`` None
-            |  ``required:`` True
-            |  ``default:`` None
-
-             :param issue_id: Id of the issue.
-             :type issue_id: Integer
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` None
+            |  ``default:`` All
 
-             :param mode: None
+             :param mode: Results mode. Valid values are: Current, CurrentAll, All, New, Deleted, Suppressed.
              :type mode: String
 
             **Outputs**

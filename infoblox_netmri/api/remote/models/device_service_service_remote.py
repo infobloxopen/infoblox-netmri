@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class DeviceServiceServiceRemote(RemoteModel):
     """
-    Network services cross usage
+    Network services cross usage.
 
 
     |  ``DeviceServiceServiceID:`` The internal NetMRI identifier of this usage relationship between service objects.

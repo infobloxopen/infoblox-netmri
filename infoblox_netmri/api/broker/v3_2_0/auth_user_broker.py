@@ -5,7 +5,7 @@ class AuthUserBroker(Broker):
     controller = "auth_users"
 
     def index(self, **kwargs):
-        """Lists the available auth users. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available auth users. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -46,7 +46,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -54,7 +54,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -64,22 +64,6 @@ class AuthUserBroker(Broker):
 
              :param select: The list of attributes to return for each AuthUser. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -548,7 +532,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -556,7 +540,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -566,22 +550,6 @@ class AuthUserBroker(Broker):
 
              :param select: The list of attributes to return for each AuthUser. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -639,7 +607,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_account_disabled: If op_account_disabled is specified, this value will be compared to the value in account_disabled using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_account_disabled must be specified if op_account_disabled is specified.
+             :param val_c_account_disabled: If op_account_disabled is specified, this value will be compared to the value in account_disabled using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_account_disabled must be specified if op_account_disabled is specified. If the rlike or not rlike value is specified in the op_account_disabled field, escape regex special characters because a regular expression is expected.
              :type val_c_account_disabled: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_account_disabled_date: If op_account_disabled_date is specified, this value will be compared to the value in account_disabled_date using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_account_disabled_date must be specified if op_account_disabled_date is specified.
+             :param val_c_account_disabled_date: If op_account_disabled_date is specified, this value will be compared to the value in account_disabled_date using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_account_disabled_date must be specified if op_account_disabled_date is specified. If the rlike or not rlike value is specified in the op_account_disabled_date field, escape regex special characters because a regular expression is expected.
              :type val_c_account_disabled_date: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_account_locked: If op_account_locked is specified, this value will be compared to the value in account_locked using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_account_locked must be specified if op_account_locked is specified.
+             :param val_c_account_locked: If op_account_locked is specified, this value will be compared to the value in account_locked using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_account_locked must be specified if op_account_locked is specified. If the rlike or not rlike value is specified in the op_account_locked field, escape regex special characters because a regular expression is expected.
              :type val_c_account_locked: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_account_locked_date: If op_account_locked_date is specified, this value will be compared to the value in account_locked_date using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_account_locked_date must be specified if op_account_locked_date is specified.
+             :param val_c_account_locked_date: If op_account_locked_date is specified, this value will be compared to the value in account_locked_date using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_account_locked_date must be specified if op_account_locked_date is specified. If the rlike or not rlike value is specified in the op_account_locked_date field, escape regex special characters because a regular expression is expected.
              :type val_c_account_locked_date: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_service_id: If op_auth_service_id is specified, this value will be compared to the value in auth_service_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_service_id must be specified if op_auth_service_id is specified.
+             :param val_c_auth_service_id: If op_auth_service_id is specified, this value will be compared to the value in auth_service_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_service_id must be specified if op_auth_service_id is specified. If the rlike or not rlike value is specified in the op_auth_service_id field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_service_id: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cert: If op_cert is specified, this value will be compared to the value in cert using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cert must be specified if op_cert is specified.
+             :param val_c_cert: If op_cert is specified, this value will be compared to the value in cert using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cert must be specified if op_cert is specified. If the rlike or not rlike value is specified in the op_cert field, escape regex special characters because a regular expression is expected.
              :type val_c_cert: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cli_creds_enabled_ind: If op_cli_creds_enabled_ind is specified, this value will be compared to the value in cli_creds_enabled_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_creds_enabled_ind must be specified if op_cli_creds_enabled_ind is specified.
+             :param val_c_cli_creds_enabled_ind: If op_cli_creds_enabled_ind is specified, this value will be compared to the value in cli_creds_enabled_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_creds_enabled_ind must be specified if op_cli_creds_enabled_ind is specified. If the rlike or not rlike value is specified in the op_cli_creds_enabled_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cli_creds_enabled_ind: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_consecutive_failed_logins: If op_consecutive_failed_logins is specified, this value will be compared to the value in consecutive_failed_logins using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_consecutive_failed_logins must be specified if op_consecutive_failed_logins is specified.
+             :param val_c_consecutive_failed_logins: If op_consecutive_failed_logins is specified, this value will be compared to the value in consecutive_failed_logins using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_consecutive_failed_logins must be specified if op_consecutive_failed_logins is specified. If the rlike or not rlike value is specified in the op_consecutive_failed_logins field, escape regex special characters because a regular expression is expected.
              :type val_c_consecutive_failed_logins: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_db_creds_enabled_ind: If op_db_creds_enabled_ind is specified, this value will be compared to the value in db_creds_enabled_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_db_creds_enabled_ind must be specified if op_db_creds_enabled_ind is specified.
+             :param val_c_db_creds_enabled_ind: If op_db_creds_enabled_ind is specified, this value will be compared to the value in db_creds_enabled_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_db_creds_enabled_ind must be specified if op_db_creds_enabled_ind is specified. If the rlike or not rlike value is specified in the op_db_creds_enabled_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_db_creds_enabled_ind: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_db_username: If op_db_username is specified, this value will be compared to the value in db_username using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_db_username must be specified if op_db_username is specified.
+             :param val_c_db_username: If op_db_username is specified, this value will be compared to the value in db_username using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_db_username must be specified if op_db_username is specified. If the rlike or not rlike value is specified in the op_db_username field, escape regex special characters because a regular expression is expected.
              :type val_c_db_username: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_email: If op_email is specified, this value will be compared to the value in email using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_email must be specified if op_email is specified.
+             :param val_c_email: If op_email is specified, this value will be compared to the value in email using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_email must be specified if op_email is specified. If the rlike or not rlike value is specified in the op_email field, escape regex special characters because a regular expression is expected.
              :type val_c_email: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_expiration: If op_expiration is specified, this value will be compared to the value in expiration using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_expiration must be specified if op_expiration is specified.
+             :param val_c_expiration: If op_expiration is specified, this value will be compared to the value in expiration using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_expiration must be specified if op_expiration is specified. If the rlike or not rlike value is specified in the op_expiration field, escape regex special characters because a regular expression is expected.
              :type val_c_expiration: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_first_name: If op_first_name is specified, this value will be compared to the value in first_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_first_name must be specified if op_first_name is specified.
+             :param val_c_first_name: If op_first_name is specified, this value will be compared to the value in first_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_first_name must be specified if op_first_name is specified. If the rlike or not rlike value is specified in the op_first_name field, escape regex special characters because a regular expression is expected.
              :type val_c_first_name: String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_force_local_ind: If op_force_local_ind is specified, this value will be compared to the value in force_local_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_force_local_ind must be specified if op_force_local_ind is specified.
+             :param val_c_force_local_ind: If op_force_local_ind is specified, this value will be compared to the value in force_local_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_force_local_ind must be specified if op_force_local_ind is specified. If the rlike or not rlike value is specified in the op_force_local_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_force_local_ind: String
 
             |  ``api version min:`` None
@@ -999,7 +967,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_is_system: If op_is_system is specified, this value will be compared to the value in is_system using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_is_system must be specified if op_is_system is specified.
+             :param val_c_is_system: If op_is_system is specified, this value will be compared to the value in is_system using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_is_system must be specified if op_is_system is specified. If the rlike or not rlike value is specified in the op_is_system field, escape regex special characters because a regular expression is expected.
              :type val_c_is_system: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_last_local_authz_ind: If op_last_local_authz_ind is specified, this value will be compared to the value in last_local_authz_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_last_local_authz_ind must be specified if op_last_local_authz_ind is specified.
+             :param val_c_last_local_authz_ind: If op_last_local_authz_ind is specified, this value will be compared to the value in last_local_authz_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_last_local_authz_ind must be specified if op_last_local_authz_ind is specified. If the rlike or not rlike value is specified in the op_last_local_authz_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_last_local_authz_ind: String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_last_login: If op_last_login is specified, this value will be compared to the value in last_login using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_last_login must be specified if op_last_login is specified.
+             :param val_c_last_login: If op_last_login is specified, this value will be compared to the value in last_login using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_last_login must be specified if op_last_login is specified. If the rlike or not rlike value is specified in the op_last_login field, escape regex special characters because a regular expression is expected.
              :type val_c_last_login: String
 
             |  ``api version min:`` None
@@ -1095,7 +1063,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_last_name: If op_last_name is specified, this value will be compared to the value in last_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_last_name must be specified if op_last_name is specified.
+             :param val_c_last_name: If op_last_name is specified, this value will be compared to the value in last_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_last_name must be specified if op_last_name is specified. If the rlike or not rlike value is specified in the op_last_name field, escape regex special characters because a regular expression is expected.
              :type val_c_last_name: String
 
             |  ``api version min:`` None
@@ -1119,7 +1087,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_notes: If op_notes is specified, this value will be compared to the value in notes using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_notes must be specified if op_notes is specified.
+             :param val_c_notes: If op_notes is specified, this value will be compared to the value in notes using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_notes must be specified if op_notes is specified. If the rlike or not rlike value is specified in the op_notes field, escape regex special characters because a regular expression is expected.
              :type val_c_notes: String
 
             |  ``api version min:`` None
@@ -1143,7 +1111,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_password_version: If op_password_version is specified, this value will be compared to the value in password_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_password_version must be specified if op_password_version is specified.
+             :param val_c_password_version: If op_password_version is specified, this value will be compared to the value in password_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_password_version must be specified if op_password_version is specified. If the rlike or not rlike value is specified in the op_password_version field, escape regex special characters because a regular expression is expected.
              :type val_c_password_version: String
 
             |  ``api version min:`` None
@@ -1167,7 +1135,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_secure_version: If op_secure_version is specified, this value will be compared to the value in secure_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_secure_version must be specified if op_secure_version is specified.
+             :param val_c_secure_version: If op_secure_version is specified, this value will be compared to the value in secure_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_secure_version must be specified if op_secure_version is specified. If the rlike or not rlike value is specified in the op_secure_version field, escape regex special characters because a regular expression is expected.
              :type val_c_secure_version: String
 
             |  ``api version min:`` None
@@ -1191,7 +1159,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -1215,7 +1183,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_user_name: If op_user_name is specified, this value will be compared to the value in user_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_user_name must be specified if op_user_name is specified.
+             :param val_c_user_name: If op_user_name is specified, this value will be compared to the value in user_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_user_name must be specified if op_user_name is specified. If the rlike or not rlike value is specified in the op_user_name field, escape regex special characters because a regular expression is expected.
              :type val_c_user_name: String
 
             |  ``api version min:`` None
@@ -1239,7 +1207,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1247,7 +1215,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1257,22 +1225,6 @@ class AuthUserBroker(Broker):
 
              :param select: The list of attributes to return for each AuthUser. Valid values are id, user_name, email, notes, created_at, updated_at, first_name, last_name, is_system, last_login, expiration, consecutive_failed_logins, account_locked, account_locked_date, account_disabled, account_disabled_date, cli_creds_enabled_ind, password_secure, password_version, cli_user_name_secure, cli_password_secure, cli_enable_password_secure, secure_version, auth_service_id, force_local_ind, last_local_authz_ind, cert, db_creds_enabled_ind, db_username, db_password_secure. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1444,7 +1396,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created auth user.
+             :return uri: The URI that may be used to retrieve the newly created auth user.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -1631,7 +1583,7 @@ class AuthUserBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated auth user.
+             :return uri: The URI that may be used to retrieve the updated auth user.
              :rtype uri: String
 
             |  ``api version min:`` None

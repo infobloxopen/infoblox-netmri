@@ -48,7 +48,7 @@ class SubnetMemberBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available subnet members. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available subnet members. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -153,7 +153,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` SubnetMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is SubnetMemberID. Valid values are SubnetMemberID, SubnetID, DeviceID, IfAddrID, DataSourceID, SubnetMemberSource, AciBdID, AciEpgID, SubnetMemberStartTime, SubnetMemberEndTime, SubnetMemberChangedCols, SubnetMemberTimestamp.
+             :param sort: The data field(s) to use for sorting the output. Valid values are SubnetMemberID, SubnetID, DeviceID, IfAddrID, DataSourceID, SubnetMemberSource, AciBdID, AciEpgID, SubnetMemberStartTime, SubnetMemberEndTime, SubnetMemberChangedCols, SubnetMemberTimestamp.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -161,7 +161,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -171,22 +171,6 @@ class SubnetMemberBroker(Broker):
 
              :param select: The list of attributes to return for each SubnetMember. Valid values are SubnetMemberID, SubnetID, DeviceID, IfAddrID, DataSourceID, SubnetMemberSource, AciBdID, AciEpgID, SubnetMemberStartTime, SubnetMemberEndTime, SubnetMemberChangedCols, SubnetMemberTimestamp. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -452,7 +436,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` SubnetMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is SubnetMemberID. Valid values are SubnetMemberID, SubnetID, DeviceID, IfAddrID, DataSourceID, SubnetMemberSource, AciBdID, AciEpgID, SubnetMemberStartTime, SubnetMemberEndTime, SubnetMemberChangedCols, SubnetMemberTimestamp.
+             :param sort: The data field(s) to use for sorting the output. Valid values are SubnetMemberID, SubnetID, DeviceID, IfAddrID, DataSourceID, SubnetMemberSource, AciBdID, AciEpgID, SubnetMemberStartTime, SubnetMemberEndTime, SubnetMemberChangedCols, SubnetMemberTimestamp.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -460,7 +444,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -470,22 +454,6 @@ class SubnetMemberBroker(Broker):
 
              :param select: The list of attributes to return for each SubnetMember. Valid values are SubnetMemberID, SubnetID, DeviceID, IfAddrID, DataSourceID, SubnetMemberSource, AciBdID, AciEpgID, SubnetMemberStartTime, SubnetMemberEndTime, SubnetMemberChangedCols, SubnetMemberTimestamp. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -543,7 +511,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AciBdID: If op_AciBdID is specified, this value will be compared to the value in AciBdID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AciBdID must be specified if op_AciBdID is specified.
+             :param val_c_AciBdID: If op_AciBdID is specified, this value will be compared to the value in AciBdID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AciBdID must be specified if op_AciBdID is specified. If the rlike or not rlike value is specified in the op_AciBdID field, escape regex special characters because a regular expression is expected.
              :type val_c_AciBdID: String
 
             |  ``api version min:`` None
@@ -567,7 +535,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AciEpgID: If op_AciEpgID is specified, this value will be compared to the value in AciEpgID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AciEpgID must be specified if op_AciEpgID is specified.
+             :param val_c_AciEpgID: If op_AciEpgID is specified, this value will be compared to the value in AciEpgID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AciEpgID must be specified if op_AciEpgID is specified. If the rlike or not rlike value is specified in the op_AciEpgID field, escape regex special characters because a regular expression is expected.
              :type val_c_AciEpgID: String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IfAddrID: If op_IfAddrID is specified, this value will be compared to the value in IfAddrID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IfAddrID must be specified if op_IfAddrID is specified.
+             :param val_c_IfAddrID: If op_IfAddrID is specified, this value will be compared to the value in IfAddrID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IfAddrID must be specified if op_IfAddrID is specified. If the rlike or not rlike value is specified in the op_IfAddrID field, escape regex special characters because a regular expression is expected.
              :type val_c_IfAddrID: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubnetID: If op_SubnetID is specified, this value will be compared to the value in SubnetID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetID must be specified if op_SubnetID is specified.
+             :param val_c_SubnetID: If op_SubnetID is specified, this value will be compared to the value in SubnetID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetID must be specified if op_SubnetID is specified. If the rlike or not rlike value is specified in the op_SubnetID field, escape regex special characters because a regular expression is expected.
              :type val_c_SubnetID: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubnetMemberChangedCols: If op_SubnetMemberChangedCols is specified, this value will be compared to the value in SubnetMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetMemberChangedCols must be specified if op_SubnetMemberChangedCols is specified.
+             :param val_c_SubnetMemberChangedCols: If op_SubnetMemberChangedCols is specified, this value will be compared to the value in SubnetMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetMemberChangedCols must be specified if op_SubnetMemberChangedCols is specified. If the rlike or not rlike value is specified in the op_SubnetMemberChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_SubnetMemberChangedCols: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubnetMemberEndTime: If op_SubnetMemberEndTime is specified, this value will be compared to the value in SubnetMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetMemberEndTime must be specified if op_SubnetMemberEndTime is specified.
+             :param val_c_SubnetMemberEndTime: If op_SubnetMemberEndTime is specified, this value will be compared to the value in SubnetMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetMemberEndTime must be specified if op_SubnetMemberEndTime is specified. If the rlike or not rlike value is specified in the op_SubnetMemberEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_SubnetMemberEndTime: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubnetMemberID: If op_SubnetMemberID is specified, this value will be compared to the value in SubnetMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetMemberID must be specified if op_SubnetMemberID is specified.
+             :param val_c_SubnetMemberID: If op_SubnetMemberID is specified, this value will be compared to the value in SubnetMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetMemberID must be specified if op_SubnetMemberID is specified. If the rlike or not rlike value is specified in the op_SubnetMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_SubnetMemberID: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubnetMemberSource: If op_SubnetMemberSource is specified, this value will be compared to the value in SubnetMemberSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetMemberSource must be specified if op_SubnetMemberSource is specified.
+             :param val_c_SubnetMemberSource: If op_SubnetMemberSource is specified, this value will be compared to the value in SubnetMemberSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetMemberSource must be specified if op_SubnetMemberSource is specified. If the rlike or not rlike value is specified in the op_SubnetMemberSource field, escape regex special characters because a regular expression is expected.
              :type val_c_SubnetMemberSource: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubnetMemberStartTime: If op_SubnetMemberStartTime is specified, this value will be compared to the value in SubnetMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetMemberStartTime must be specified if op_SubnetMemberStartTime is specified.
+             :param val_c_SubnetMemberStartTime: If op_SubnetMemberStartTime is specified, this value will be compared to the value in SubnetMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetMemberStartTime must be specified if op_SubnetMemberStartTime is specified. If the rlike or not rlike value is specified in the op_SubnetMemberStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_SubnetMemberStartTime: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubnetMemberTimestamp: If op_SubnetMemberTimestamp is specified, this value will be compared to the value in SubnetMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetMemberTimestamp must be specified if op_SubnetMemberTimestamp is specified.
+             :param val_c_SubnetMemberTimestamp: If op_SubnetMemberTimestamp is specified, this value will be compared to the value in SubnetMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetMemberTimestamp must be specified if op_SubnetMemberTimestamp is specified. If the rlike or not rlike value is specified in the op_SubnetMemberTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_SubnetMemberTimestamp: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` SubnetMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is SubnetMemberID. Valid values are SubnetMemberID, SubnetID, DeviceID, IfAddrID, DataSourceID, SubnetMemberSource, AciBdID, AciEpgID, SubnetMemberStartTime, SubnetMemberEndTime, SubnetMemberChangedCols, SubnetMemberTimestamp.
+             :param sort: The data field(s) to use for sorting the output. Valid values are SubnetMemberID, SubnetID, DeviceID, IfAddrID, DataSourceID, SubnetMemberSource, AciBdID, AciEpgID, SubnetMemberStartTime, SubnetMemberEndTime, SubnetMemberChangedCols, SubnetMemberTimestamp.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -871,7 +839,7 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -881,22 +849,6 @@ class SubnetMemberBroker(Broker):
 
              :param select: The list of attributes to return for each SubnetMember. Valid values are SubnetMemberID, SubnetID, DeviceID, IfAddrID, DataSourceID, SubnetMemberSource, AciBdID, AciEpgID, SubnetMemberStartTime, SubnetMemberEndTime, SubnetMemberChangedCols, SubnetMemberTimestamp. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -940,8 +892,8 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The NetMRI device that collected this record.
-             :rtype : DataSource
+             :return data_source: The NetMRI device that collected this record.
+             :rtype data_source: DataSource
 
             """
 
@@ -967,8 +919,8 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Returns the associated Subnet object for this subnet member.
-             :rtype : Subnet
+             :return subnet: Returns the associated Subnet object for this subnet member.
+             :rtype subnet: Subnet
 
             """
 
@@ -994,8 +946,8 @@ class SubnetMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device associated with this subnet membership.
-             :rtype : InfraDevice
+             :return infradevice: The device associated with this subnet membership.
+             :rtype infradevice: InfraDevice
 
             """
 

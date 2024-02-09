@@ -5,7 +5,7 @@ class ExcludedDeviceBroker(Broker):
     controller = "excluded_devices"
 
     def index(self, **kwargs):
-        """Lists the available excluded devices. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available excluded devices. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -54,7 +54,7 @@ class ExcludedDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ExclusionID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ExclusionID. Valid values are ExclusionID, SNMPEngineID, IPAddress, UnitID, LastUpdate, VirtualNetworkName.
+             :param sort: The data field(s) to use for sorting the output. Valid values are ExclusionID, SNMPEngineID, IPAddress, UnitID, LastUpdate, VirtualNetworkName.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -62,7 +62,7 @@ class ExcludedDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -72,22 +72,6 @@ class ExcludedDeviceBroker(Broker):
 
              :param select: The list of attributes to return for each ExcludedDevice. Valid values are ExclusionID, SNMPEngineID, IPAddress, UnitID, LastUpdate, VirtualNetworkName. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -177,7 +161,7 @@ class ExcludedDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ExclusionID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ExclusionID. Valid values are ExclusionID, SNMPEngineID, IPAddress, UnitID, LastUpdate, VirtualNetworkName.
+             :param sort: The data field(s) to use for sorting the output. Valid values are ExclusionID, SNMPEngineID, IPAddress, UnitID, LastUpdate, VirtualNetworkName.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -185,7 +169,7 @@ class ExcludedDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -195,22 +179,6 @@ class ExcludedDeviceBroker(Broker):
 
              :param select: The list of attributes to return for each ExcludedDevice. Valid values are ExclusionID, SNMPEngineID, IPAddress, UnitID, LastUpdate, VirtualNetworkName. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -268,7 +236,7 @@ class ExcludedDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ExclusionID: If op_ExclusionID is specified, this value will be compared to the value in ExclusionID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ExclusionID must be specified if op_ExclusionID is specified.
+             :param val_c_ExclusionID: If op_ExclusionID is specified, this value will be compared to the value in ExclusionID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ExclusionID must be specified if op_ExclusionID is specified. If the rlike or not rlike value is specified in the op_ExclusionID field, escape regex special characters because a regular expression is expected.
              :type val_c_ExclusionID: String
 
             |  ``api version min:`` None
@@ -292,7 +260,7 @@ class ExcludedDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IPAddress: If op_IPAddress is specified, this value will be compared to the value in IPAddress using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPAddress must be specified if op_IPAddress is specified.
+             :param val_c_IPAddress: If op_IPAddress is specified, this value will be compared to the value in IPAddress using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPAddress must be specified if op_IPAddress is specified. If the rlike or not rlike value is specified in the op_IPAddress field, escape regex special characters because a regular expression is expected.
              :type val_c_IPAddress: String
 
             |  ``api version min:`` None
@@ -316,7 +284,7 @@ class ExcludedDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LastUpdate: If op_LastUpdate is specified, this value will be compared to the value in LastUpdate using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LastUpdate must be specified if op_LastUpdate is specified.
+             :param val_c_LastUpdate: If op_LastUpdate is specified, this value will be compared to the value in LastUpdate using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LastUpdate must be specified if op_LastUpdate is specified. If the rlike or not rlike value is specified in the op_LastUpdate field, escape regex special characters because a regular expression is expected.
              :type val_c_LastUpdate: String
 
             |  ``api version min:`` None
@@ -340,7 +308,7 @@ class ExcludedDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SNMPEngineID: If op_SNMPEngineID is specified, this value will be compared to the value in SNMPEngineID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SNMPEngineID must be specified if op_SNMPEngineID is specified.
+             :param val_c_SNMPEngineID: If op_SNMPEngineID is specified, this value will be compared to the value in SNMPEngineID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SNMPEngineID must be specified if op_SNMPEngineID is specified. If the rlike or not rlike value is specified in the op_SNMPEngineID field, escape regex special characters because a regular expression is expected.
              :type val_c_SNMPEngineID: String
 
             |  ``api version min:`` None
@@ -364,7 +332,7 @@ class ExcludedDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UnitID: If op_UnitID is specified, this value will be compared to the value in UnitID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitID must be specified if op_UnitID is specified.
+             :param val_c_UnitID: If op_UnitID is specified, this value will be compared to the value in UnitID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitID must be specified if op_UnitID is specified. If the rlike or not rlike value is specified in the op_UnitID field, escape regex special characters because a regular expression is expected.
              :type val_c_UnitID: String
 
             |  ``api version min:`` None
@@ -388,7 +356,7 @@ class ExcludedDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkName: If op_VirtualNetworkName is specified, this value will be compared to the value in VirtualNetworkName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkName must be specified if op_VirtualNetworkName is specified.
+             :param val_c_VirtualNetworkName: If op_VirtualNetworkName is specified, this value will be compared to the value in VirtualNetworkName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkName must be specified if op_VirtualNetworkName is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkName field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkName: String
 
             |  ``api version min:`` None
@@ -412,7 +380,7 @@ class ExcludedDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ExclusionID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ExclusionID. Valid values are ExclusionID, SNMPEngineID, IPAddress, UnitID, LastUpdate, VirtualNetworkName.
+             :param sort: The data field(s) to use for sorting the output. Valid values are ExclusionID, SNMPEngineID, IPAddress, UnitID, LastUpdate, VirtualNetworkName.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -420,7 +388,7 @@ class ExcludedDeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -430,22 +398,6 @@ class ExcludedDeviceBroker(Broker):
 
              :param select: The list of attributes to return for each ExcludedDevice. Valid values are ExclusionID, SNMPEngineID, IPAddress, UnitID, LastUpdate, VirtualNetworkName. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

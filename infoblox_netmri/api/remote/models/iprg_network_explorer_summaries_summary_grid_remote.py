@@ -15,6 +15,12 @@ class IprgNetworkExplorerSummariesSummaryGridRemote(RemoteModel):
     |  ``IprgID:`` none
     |  ``attribute type:`` string
 
+    |  ``VirtualNetworkID:`` none
+    |  ``attribute type:`` string
+
+    |  ``Network:`` none
+    |  ``attribute type:`` string
+
     |  ``DeviceName:`` none
     |  ``attribute type:`` string
 
@@ -27,6 +33,9 @@ class IprgNetworkExplorerSummariesSummaryGridRemote(RemoteModel):
     |  ``ifDescr:`` none
     |  ``attribute type:`` string
 
+    |  ``VirtualNetworkMemberName:`` none
+    |  ``attribute type:`` string
+
     |  ``ifIndex:`` none
     |  ``attribute type:`` string
 
@@ -36,7 +45,25 @@ class IprgNetworkExplorerSummariesSummaryGridRemote(RemoteModel):
     |  ``IprgMemberPriority:`` none
     |  ``attribute type:`` string
 
+    |  ``IprgMemberPreemptDelay:`` none
+    |  ``attribute type:`` string
+
+    |  ``IprgMemberLearnedHelloTime:`` none
+    |  ``attribute type:`` string
+
     |  ``IprgMemberConfiguredHelloTime:`` none
+    |  ``attribute type:`` string
+
+    |  ``IprgMemberLearnedHoldTime:`` none
+    |  ``attribute type:`` string
+
+    |  ``IprgNumber:`` none
+    |  ``attribute type:`` string
+
+    |  ``IprgIPDotted:`` none
+    |  ``attribute type:`` string
+
+    |  ``IprgIPNumeric:`` none
     |  ``attribute type:`` string
 
     |  ``IprgType:`` none
@@ -47,13 +74,22 @@ class IprgNetworkExplorerSummariesSummaryGridRemote(RemoteModel):
     properties = ("id",
                   "DeviceID",
                   "IprgID",
+                  "VirtualNetworkID",
+                  "Network",
                   "DeviceName",
                   "DeviceIPNumeric",
                   "DeviceIPDotted",
                   "ifDescr",
+                  "VirtualNetworkMemberName",
                   "ifIndex",
                   "IprgMemberState",
                   "IprgMemberPriority",
+                  "IprgMemberPreemptDelay",
+                  "IprgMemberLearnedHelloTime",
                   "IprgMemberConfiguredHelloTime",
+                  "IprgMemberLearnedHoldTime",
+                  "IprgNumber",
+                  "IprgIPDotted",
+                  "IprgIPNumeric",
                   "IprgType",
                   )

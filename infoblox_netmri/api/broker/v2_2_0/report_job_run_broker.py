@@ -5,7 +5,7 @@ class ReportJobRunBroker(Broker):
     controller = "report_job_runs"
 
     def index(self, **kwargs):
-        """Lists the available report job runs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available report job runs. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -46,7 +46,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -54,7 +54,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -64,22 +64,6 @@ class ReportJobRunBroker(Broker):
 
              :param select: The list of attributes to return for each ReportJobRun. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -380,7 +364,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -388,7 +372,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -398,22 +382,6 @@ class ReportJobRunBroker(Broker):
 
              :param select: The list of attributes to return for each ReportJobRun. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None

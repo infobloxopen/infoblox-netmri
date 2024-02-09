@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 
@@ -6,6 +6,8 @@ try:
     from setuptools import setup, find_packages
 except ImportError:
     from distutils.core import setup
+
+from infoblox_netmri import __version__
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -23,7 +25,7 @@ test_requirements = [
 
 setup(
     name='infoblox-netmri',
-    version="3.8.0.0",
+    version=__version__,
     description="A simple client for the Infoblox NetMRI RESTful API.",
     long_description=readme,
     author="Infoblox, Inc.",

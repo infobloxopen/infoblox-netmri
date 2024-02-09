@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class SensorDatumRemote(RemoteModel):
     """
-    Sensor data about the health of the NetMRI
+    Sensor data about the health of the NetMRI.
 
 
     |  ``id:`` The internal NetMRI identifier for the table entry.

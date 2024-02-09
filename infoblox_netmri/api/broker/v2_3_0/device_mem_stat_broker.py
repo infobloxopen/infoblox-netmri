@@ -48,7 +48,7 @@ class DeviceMemStatBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available device mem stats. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device mem stats. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -177,7 +177,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceMemStatsID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceMemStatsID. Valid values are DeviceMemStatsID, DataSourceID, DeviceID, StartTime, EndTime, UsedMem, FreeMem, Utilization5Min.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceMemStatsID, DataSourceID, DeviceID, StartTime, EndTime, UsedMem, FreeMem, Utilization5Min.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -185,7 +185,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -195,22 +195,6 @@ class DeviceMemStatBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceMemStat. Valid values are DeviceMemStatsID, DataSourceID, DeviceID, StartTime, EndTime, UsedMem, FreeMem, Utilization5Min. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -420,7 +404,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceMemStatsID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceMemStatsID. Valid values are DeviceMemStatsID, DataSourceID, DeviceID, StartTime, EndTime, UsedMem, FreeMem, Utilization5Min.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceMemStatsID, DataSourceID, DeviceID, StartTime, EndTime, UsedMem, FreeMem, Utilization5Min.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -428,7 +412,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -438,22 +422,6 @@ class DeviceMemStatBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceMemStat. Valid values are DeviceMemStatsID, DataSourceID, DeviceID, StartTime, EndTime, UsedMem, FreeMem, Utilization5Min. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -511,7 +479,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -535,7 +503,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -559,7 +527,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceMemStatsID: If op_DeviceMemStatsID is specified, this value will be compared to the value in DeviceMemStatsID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceMemStatsID must be specified if op_DeviceMemStatsID is specified.
+             :param val_c_DeviceMemStatsID: If op_DeviceMemStatsID is specified, this value will be compared to the value in DeviceMemStatsID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceMemStatsID must be specified if op_DeviceMemStatsID is specified. If the rlike or not rlike value is specified in the op_DeviceMemStatsID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceMemStatsID: String
 
             |  ``api version min:`` None
@@ -583,7 +551,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified.
+             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified. If the rlike or not rlike value is specified in the op_EndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_EndTime: String
 
             |  ``api version min:`` None
@@ -607,7 +575,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FreeMem: If op_FreeMem is specified, this value will be compared to the value in FreeMem using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FreeMem must be specified if op_FreeMem is specified.
+             :param val_c_FreeMem: If op_FreeMem is specified, this value will be compared to the value in FreeMem using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FreeMem must be specified if op_FreeMem is specified. If the rlike or not rlike value is specified in the op_FreeMem field, escape regex special characters because a regular expression is expected.
              :type val_c_FreeMem: String
 
             |  ``api version min:`` None
@@ -631,7 +599,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified.
+             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified. If the rlike or not rlike value is specified in the op_StartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_StartTime: String
 
             |  ``api version min:`` None
@@ -655,7 +623,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UsedMem: If op_UsedMem is specified, this value will be compared to the value in UsedMem using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UsedMem must be specified if op_UsedMem is specified.
+             :param val_c_UsedMem: If op_UsedMem is specified, this value will be compared to the value in UsedMem using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UsedMem must be specified if op_UsedMem is specified. If the rlike or not rlike value is specified in the op_UsedMem field, escape regex special characters because a regular expression is expected.
              :type val_c_UsedMem: String
 
             |  ``api version min:`` None
@@ -679,7 +647,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Utilization5Min: If op_Utilization5Min is specified, this value will be compared to the value in Utilization5Min using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Utilization5Min must be specified if op_Utilization5Min is specified.
+             :param val_c_Utilization5Min: If op_Utilization5Min is specified, this value will be compared to the value in Utilization5Min using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Utilization5Min must be specified if op_Utilization5Min is specified. If the rlike or not rlike value is specified in the op_Utilization5Min field, escape regex special characters because a regular expression is expected.
              :type val_c_Utilization5Min: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceMemStatsID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceMemStatsID. Valid values are DeviceMemStatsID, DataSourceID, DeviceID, StartTime, EndTime, UsedMem, FreeMem, Utilization5Min.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceMemStatsID, DataSourceID, DeviceID, StartTime, EndTime, UsedMem, FreeMem, Utilization5Min.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -751,7 +719,7 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -761,22 +729,6 @@ class DeviceMemStatBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceMemStat. Valid values are DeviceMemStatsID, DataSourceID, DeviceID, StartTime, EndTime, UsedMem, FreeMem, Utilization5Min. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -820,8 +772,8 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -847,8 +799,8 @@ class DeviceMemStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

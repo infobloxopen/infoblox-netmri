@@ -54,6 +54,12 @@ class ApicSettingRemote(RemoteModel):
     |  ``scan_interface_id:`` none
     |  ``attribute type:`` string
 
+    |  ``ca_cert_id:`` none
+    |  ``attribute type:`` string
+
+    |  ``ca_cert_content:`` none
+    |  ``attribute type:`` string
+
     |  ``start_blackout_schedule:`` none
     |  ``attribute type:`` string
 
@@ -64,12 +70,6 @@ class ApicSettingRemote(RemoteModel):
     |  ``attribute type:`` string
 
     |  ``collect_offline_devices:`` none
-    |  ``attribute type:`` string
-
-    |  ``ca_cert_id:`` none
-    |  ``attribute type:`` string
-
-    |  ``ca_cert_content:`` none
     |  ``attribute type:`` string
 
     """
@@ -90,10 +90,10 @@ class ApicSettingRemote(RemoteModel):
                   "use_global_proxy",
                   "handle",
                   "scan_interface_id",
+                  "ca_cert_id",
+                  "ca_cert_content",
                   "start_blackout_schedule",
                   "blackout_duration",
                   "max_requests_per_second",
                   "collect_offline_devices",
-                  "ca_cert_id",
-                  "ca_cert_content",
                   )

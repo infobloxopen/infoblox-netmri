@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class WorkbookRemote(RemoteModel):
     """
-    A collection of user-selected Device Rule List
+    A collection of user-selected Device Rule List.
 
 
     |  ``id:`` The identifier for Workbook.

@@ -18,9 +18,6 @@ class CLICredentialRemote(RemoteModel):
     |  ``UPWUse:`` Determines the function of the credential. 'GUESS' indicates that this will only be used if vendor default credential collection is enabled, whereas 'LOCAL' means that this credential will be used in all guessing.
     |  ``attribute type:`` string
 
-    |  ``HitCount:`` The number of successful uses of this credential.
-    |  ``attribute type:`` number
-
     |  ``Vendor:`` The vendor devices against which to try this credential.
     |  ``attribute type:`` string
 
@@ -28,7 +25,7 @@ class CLICredentialRemote(RemoteModel):
     |  ``attribute type:`` number
 
     |  ``Priority:`` The priority order in which to attempt this credential.
-    |  ``attribute type:`` string
+    |  ``attribute type:`` number
 
     |  ``UsernameSecure:`` The username portion of the credential.
     |  ``attribute type:`` string
@@ -48,7 +45,6 @@ class CLICredentialRemote(RemoteModel):
                   "Protocol",
                   "Origination",
                   "UPWUse",
-                  "HitCount",
                   "Vendor",
                   "id",
                   "Priority",

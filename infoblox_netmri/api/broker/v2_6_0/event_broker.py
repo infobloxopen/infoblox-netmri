@@ -5,7 +5,7 @@ class EventBroker(Broker):
     controller = "events"
 
     def index(self, **kwargs):
-        """Lists the available events. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available events. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -134,7 +134,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` EventID
 
-             :param sort: The data field(s) to use for sorting the output. Default is EventID. Valid values are EventID, DataSourceID, EventCategory, EventCategoryID, EventType, EventTimestamp, EventState, EventDetail.
+             :param sort: The data field(s) to use for sorting the output. Valid values are EventID, DataSourceID, EventCategory, EventCategoryID, EventType, EventTimestamp, EventState, EventDetail.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -142,7 +142,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -152,22 +152,6 @@ class EventBroker(Broker):
 
              :param select: The list of attributes to return for each Event. Valid values are EventID, DataSourceID, EventCategory, EventCategoryID, EventType, EventTimestamp, EventState, EventDetail. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -420,7 +404,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` EventID
 
-             :param sort: The data field(s) to use for sorting the output. Default is EventID. Valid values are EventID, DataSourceID, EventCategory, EventCategoryID, EventType, EventTimestamp, EventState, EventDetail.
+             :param sort: The data field(s) to use for sorting the output. Valid values are EventID, DataSourceID, EventCategory, EventCategoryID, EventType, EventTimestamp, EventState, EventDetail.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -428,7 +412,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -438,22 +422,6 @@ class EventBroker(Broker):
 
              :param select: The list of attributes to return for each Event. Valid values are EventID, DataSourceID, EventCategory, EventCategoryID, EventType, EventTimestamp, EventState, EventDetail. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -511,7 +479,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -535,7 +503,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EventCategory: If op_EventCategory is specified, this value will be compared to the value in EventCategory using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventCategory must be specified if op_EventCategory is specified.
+             :param val_c_EventCategory: If op_EventCategory is specified, this value will be compared to the value in EventCategory using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventCategory must be specified if op_EventCategory is specified. If the rlike or not rlike value is specified in the op_EventCategory field, escape regex special characters because a regular expression is expected.
              :type val_c_EventCategory: String
 
             |  ``api version min:`` None
@@ -559,7 +527,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EventCategoryID: If op_EventCategoryID is specified, this value will be compared to the value in EventCategoryID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventCategoryID must be specified if op_EventCategoryID is specified.
+             :param val_c_EventCategoryID: If op_EventCategoryID is specified, this value will be compared to the value in EventCategoryID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventCategoryID must be specified if op_EventCategoryID is specified. If the rlike or not rlike value is specified in the op_EventCategoryID field, escape regex special characters because a regular expression is expected.
              :type val_c_EventCategoryID: String
 
             |  ``api version min:`` None
@@ -583,7 +551,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EventDetail: If op_EventDetail is specified, this value will be compared to the value in EventDetail using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventDetail must be specified if op_EventDetail is specified.
+             :param val_c_EventDetail: If op_EventDetail is specified, this value will be compared to the value in EventDetail using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventDetail must be specified if op_EventDetail is specified. If the rlike or not rlike value is specified in the op_EventDetail field, escape regex special characters because a regular expression is expected.
              :type val_c_EventDetail: String
 
             |  ``api version min:`` None
@@ -607,7 +575,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EventID: If op_EventID is specified, this value will be compared to the value in EventID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventID must be specified if op_EventID is specified.
+             :param val_c_EventID: If op_EventID is specified, this value will be compared to the value in EventID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventID must be specified if op_EventID is specified. If the rlike or not rlike value is specified in the op_EventID field, escape regex special characters because a regular expression is expected.
              :type val_c_EventID: String
 
             |  ``api version min:`` None
@@ -631,7 +599,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EventState: If op_EventState is specified, this value will be compared to the value in EventState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventState must be specified if op_EventState is specified.
+             :param val_c_EventState: If op_EventState is specified, this value will be compared to the value in EventState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventState must be specified if op_EventState is specified. If the rlike or not rlike value is specified in the op_EventState field, escape regex special characters because a regular expression is expected.
              :type val_c_EventState: String
 
             |  ``api version min:`` None
@@ -655,7 +623,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EventTimestamp: If op_EventTimestamp is specified, this value will be compared to the value in EventTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventTimestamp must be specified if op_EventTimestamp is specified.
+             :param val_c_EventTimestamp: If op_EventTimestamp is specified, this value will be compared to the value in EventTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventTimestamp must be specified if op_EventTimestamp is specified. If the rlike or not rlike value is specified in the op_EventTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_EventTimestamp: String
 
             |  ``api version min:`` None
@@ -679,7 +647,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EventType: If op_EventType is specified, this value will be compared to the value in EventType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventType must be specified if op_EventType is specified.
+             :param val_c_EventType: If op_EventType is specified, this value will be compared to the value in EventType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EventType must be specified if op_EventType is specified. If the rlike or not rlike value is specified in the op_EventType field, escape regex special characters because a regular expression is expected.
              :type val_c_EventType: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` EventID
 
-             :param sort: The data field(s) to use for sorting the output. Default is EventID. Valid values are EventID, DataSourceID, EventCategory, EventCategoryID, EventType, EventTimestamp, EventState, EventDetail.
+             :param sort: The data field(s) to use for sorting the output. Valid values are EventID, DataSourceID, EventCategory, EventCategoryID, EventType, EventTimestamp, EventState, EventDetail.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -751,7 +719,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -761,22 +729,6 @@ class EventBroker(Broker):
 
              :param select: The list of attributes to return for each Event. Valid values are EventID, DataSourceID, EventCategory, EventCategoryID, EventType, EventTimestamp, EventState, EventDetail. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -884,7 +836,7 @@ class EventBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created event.
+             :return uri: The URI that may be used to retrieve the newly created event.
              :rtype uri: String
 
             |  ``api version min:`` None

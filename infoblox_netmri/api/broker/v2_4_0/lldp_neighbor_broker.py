@@ -48,7 +48,7 @@ class LldpNeighborBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available lldp neighbors. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available lldp neighbors. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -169,7 +169,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` LLDPNeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is LLDPNeighborID. Valid values are DataSourceID, LLDPNeighborID, DeviceID, InterfaceID, ifIndex, LLDPNeighborStartTime, LLDPNeighborEndTime, LLDPNeighborChangedCols, LLDPNeighborTimestamp, LLDPNeighborDeviceID, LLDPNeighborInterfaceID, LLDPNeighborIfIndex, LLDPNeighborName, LLDPNeighborDescription, LLDPNeighborPortName, LLDPNeighborCapabilities, LLDPNeighborCapabilitiesNumeric, LLDPNeighborPrimaryIPDotted, LLDPNeighborPrimaryIPNumeric, LLDPNeighborSecondaryIPDotted, LLDPNeighborSecondaryIPNumeric, LLDPNeighborMAC, LLDPNeighborVersion.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, LLDPNeighborID, DeviceID, InterfaceID, ifIndex, LLDPNeighborStartTime, LLDPNeighborEndTime, LLDPNeighborChangedCols, LLDPNeighborTimestamp, LLDPNeighborDeviceID, LLDPNeighborInterfaceID, LLDPNeighborIfIndex, LLDPNeighborName, LLDPNeighborDescription, LLDPNeighborPortName, LLDPNeighborCapabilities, LLDPNeighborCapabilitiesNumeric, LLDPNeighborPrimaryIPDotted, LLDPNeighborPrimaryIPNumeric, LLDPNeighborSecondaryIPDotted, LLDPNeighborSecondaryIPNumeric, LLDPNeighborMAC, LLDPNeighborVersion.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -177,7 +177,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -187,22 +187,6 @@ class LldpNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each LldpNeighbor. Valid values are DataSourceID, LLDPNeighborID, DeviceID, InterfaceID, ifIndex, LLDPNeighborStartTime, LLDPNeighborEndTime, LLDPNeighborChangedCols, LLDPNeighborTimestamp, LLDPNeighborDeviceID, LLDPNeighborInterfaceID, LLDPNeighborIfIndex, LLDPNeighborName, LLDPNeighborDescription, LLDPNeighborPortName, LLDPNeighborCapabilities, LLDPNeighborCapabilitiesNumeric, LLDPNeighborPrimaryIPDotted, LLDPNeighborPrimaryIPNumeric, LLDPNeighborSecondaryIPDotted, LLDPNeighborSecondaryIPNumeric, LLDPNeighborMAC, LLDPNeighborVersion. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -644,7 +628,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` LLDPNeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is LLDPNeighborID. Valid values are DataSourceID, LLDPNeighborID, DeviceID, InterfaceID, ifIndex, LLDPNeighborStartTime, LLDPNeighborEndTime, LLDPNeighborChangedCols, LLDPNeighborTimestamp, LLDPNeighborDeviceID, LLDPNeighborInterfaceID, LLDPNeighborIfIndex, LLDPNeighborName, LLDPNeighborDescription, LLDPNeighborPortName, LLDPNeighborCapabilities, LLDPNeighborCapabilitiesNumeric, LLDPNeighborPrimaryIPDotted, LLDPNeighborPrimaryIPNumeric, LLDPNeighborSecondaryIPDotted, LLDPNeighborSecondaryIPNumeric, LLDPNeighborMAC, LLDPNeighborVersion.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, LLDPNeighborID, DeviceID, InterfaceID, ifIndex, LLDPNeighborStartTime, LLDPNeighborEndTime, LLDPNeighborChangedCols, LLDPNeighborTimestamp, LLDPNeighborDeviceID, LLDPNeighborInterfaceID, LLDPNeighborIfIndex, LLDPNeighborName, LLDPNeighborDescription, LLDPNeighborPortName, LLDPNeighborCapabilities, LLDPNeighborCapabilitiesNumeric, LLDPNeighborPrimaryIPDotted, LLDPNeighborPrimaryIPNumeric, LLDPNeighborSecondaryIPDotted, LLDPNeighborSecondaryIPNumeric, LLDPNeighborMAC, LLDPNeighborVersion.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -652,7 +636,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -662,22 +646,6 @@ class LldpNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each LldpNeighbor. Valid values are DataSourceID, LLDPNeighborID, DeviceID, InterfaceID, ifIndex, LLDPNeighborStartTime, LLDPNeighborEndTime, LLDPNeighborChangedCols, LLDPNeighborTimestamp, LLDPNeighborDeviceID, LLDPNeighborInterfaceID, LLDPNeighborIfIndex, LLDPNeighborName, LLDPNeighborDescription, LLDPNeighborPortName, LLDPNeighborCapabilities, LLDPNeighborCapabilitiesNumeric, LLDPNeighborPrimaryIPDotted, LLDPNeighborPrimaryIPNumeric, LLDPNeighborSecondaryIPDotted, LLDPNeighborSecondaryIPNumeric, LLDPNeighborMAC, LLDPNeighborVersion. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -735,7 +703,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborCapabilities: If op_LLDPNeighborCapabilities is specified, this value will be compared to the value in LLDPNeighborCapabilities using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborCapabilities must be specified if op_LLDPNeighborCapabilities is specified.
+             :param val_c_LLDPNeighborCapabilities: If op_LLDPNeighborCapabilities is specified, this value will be compared to the value in LLDPNeighborCapabilities using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborCapabilities must be specified if op_LLDPNeighborCapabilities is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborCapabilities field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborCapabilities: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborCapabilitiesNumeric: If op_LLDPNeighborCapabilitiesNumeric is specified, this value will be compared to the value in LLDPNeighborCapabilitiesNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborCapabilitiesNumeric must be specified if op_LLDPNeighborCapabilitiesNumeric is specified.
+             :param val_c_LLDPNeighborCapabilitiesNumeric: If op_LLDPNeighborCapabilitiesNumeric is specified, this value will be compared to the value in LLDPNeighborCapabilitiesNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborCapabilitiesNumeric must be specified if op_LLDPNeighborCapabilitiesNumeric is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborCapabilitiesNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborCapabilitiesNumeric: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborChangedCols: If op_LLDPNeighborChangedCols is specified, this value will be compared to the value in LLDPNeighborChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborChangedCols must be specified if op_LLDPNeighborChangedCols is specified.
+             :param val_c_LLDPNeighborChangedCols: If op_LLDPNeighborChangedCols is specified, this value will be compared to the value in LLDPNeighborChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborChangedCols must be specified if op_LLDPNeighborChangedCols is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborChangedCols: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborDescription: If op_LLDPNeighborDescription is specified, this value will be compared to the value in LLDPNeighborDescription using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborDescription must be specified if op_LLDPNeighborDescription is specified.
+             :param val_c_LLDPNeighborDescription: If op_LLDPNeighborDescription is specified, this value will be compared to the value in LLDPNeighborDescription using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborDescription must be specified if op_LLDPNeighborDescription is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborDescription field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborDescription: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborDeviceID: If op_LLDPNeighborDeviceID is specified, this value will be compared to the value in LLDPNeighborDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborDeviceID must be specified if op_LLDPNeighborDeviceID is specified.
+             :param val_c_LLDPNeighborDeviceID: If op_LLDPNeighborDeviceID is specified, this value will be compared to the value in LLDPNeighborDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborDeviceID must be specified if op_LLDPNeighborDeviceID is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborDeviceID: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborEndTime: If op_LLDPNeighborEndTime is specified, this value will be compared to the value in LLDPNeighborEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborEndTime must be specified if op_LLDPNeighborEndTime is specified.
+             :param val_c_LLDPNeighborEndTime: If op_LLDPNeighborEndTime is specified, this value will be compared to the value in LLDPNeighborEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborEndTime must be specified if op_LLDPNeighborEndTime is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborEndTime: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborID: If op_LLDPNeighborID is specified, this value will be compared to the value in LLDPNeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborID must be specified if op_LLDPNeighborID is specified.
+             :param val_c_LLDPNeighborID: If op_LLDPNeighborID is specified, this value will be compared to the value in LLDPNeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborID must be specified if op_LLDPNeighborID is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborID field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborID: String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborIfIndex: If op_LLDPNeighborIfIndex is specified, this value will be compared to the value in LLDPNeighborIfIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborIfIndex must be specified if op_LLDPNeighborIfIndex is specified.
+             :param val_c_LLDPNeighborIfIndex: If op_LLDPNeighborIfIndex is specified, this value will be compared to the value in LLDPNeighborIfIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborIfIndex must be specified if op_LLDPNeighborIfIndex is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborIfIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborIfIndex: String
 
             |  ``api version min:`` None
@@ -999,7 +967,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborInterfaceID: If op_LLDPNeighborInterfaceID is specified, this value will be compared to the value in LLDPNeighborInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborInterfaceID must be specified if op_LLDPNeighborInterfaceID is specified.
+             :param val_c_LLDPNeighborInterfaceID: If op_LLDPNeighborInterfaceID is specified, this value will be compared to the value in LLDPNeighborInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborInterfaceID must be specified if op_LLDPNeighborInterfaceID is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborInterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborInterfaceID: String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborMAC: If op_LLDPNeighborMAC is specified, this value will be compared to the value in LLDPNeighborMAC using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborMAC must be specified if op_LLDPNeighborMAC is specified.
+             :param val_c_LLDPNeighborMAC: If op_LLDPNeighborMAC is specified, this value will be compared to the value in LLDPNeighborMAC using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborMAC must be specified if op_LLDPNeighborMAC is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborMAC field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborMAC: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborName: If op_LLDPNeighborName is specified, this value will be compared to the value in LLDPNeighborName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborName must be specified if op_LLDPNeighborName is specified.
+             :param val_c_LLDPNeighborName: If op_LLDPNeighborName is specified, this value will be compared to the value in LLDPNeighborName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborName must be specified if op_LLDPNeighborName is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborName field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborName: String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborPortName: If op_LLDPNeighborPortName is specified, this value will be compared to the value in LLDPNeighborPortName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborPortName must be specified if op_LLDPNeighborPortName is specified.
+             :param val_c_LLDPNeighborPortName: If op_LLDPNeighborPortName is specified, this value will be compared to the value in LLDPNeighborPortName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborPortName must be specified if op_LLDPNeighborPortName is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborPortName field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborPortName: String
 
             |  ``api version min:`` None
@@ -1095,7 +1063,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborPrimaryIPDotted: If op_LLDPNeighborPrimaryIPDotted is specified, this value will be compared to the value in LLDPNeighborPrimaryIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborPrimaryIPDotted must be specified if op_LLDPNeighborPrimaryIPDotted is specified.
+             :param val_c_LLDPNeighborPrimaryIPDotted: If op_LLDPNeighborPrimaryIPDotted is specified, this value will be compared to the value in LLDPNeighborPrimaryIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborPrimaryIPDotted must be specified if op_LLDPNeighborPrimaryIPDotted is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborPrimaryIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborPrimaryIPDotted: String
 
             |  ``api version min:`` None
@@ -1119,7 +1087,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborPrimaryIPNumeric: If op_LLDPNeighborPrimaryIPNumeric is specified, this value will be compared to the value in LLDPNeighborPrimaryIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborPrimaryIPNumeric must be specified if op_LLDPNeighborPrimaryIPNumeric is specified.
+             :param val_c_LLDPNeighborPrimaryIPNumeric: If op_LLDPNeighborPrimaryIPNumeric is specified, this value will be compared to the value in LLDPNeighborPrimaryIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborPrimaryIPNumeric must be specified if op_LLDPNeighborPrimaryIPNumeric is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborPrimaryIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborPrimaryIPNumeric: String
 
             |  ``api version min:`` None
@@ -1143,7 +1111,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborSecondaryIPDotted: If op_LLDPNeighborSecondaryIPDotted is specified, this value will be compared to the value in LLDPNeighborSecondaryIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborSecondaryIPDotted must be specified if op_LLDPNeighborSecondaryIPDotted is specified.
+             :param val_c_LLDPNeighborSecondaryIPDotted: If op_LLDPNeighborSecondaryIPDotted is specified, this value will be compared to the value in LLDPNeighborSecondaryIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborSecondaryIPDotted must be specified if op_LLDPNeighborSecondaryIPDotted is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborSecondaryIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborSecondaryIPDotted: String
 
             |  ``api version min:`` None
@@ -1167,7 +1135,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborSecondaryIPNumeric: If op_LLDPNeighborSecondaryIPNumeric is specified, this value will be compared to the value in LLDPNeighborSecondaryIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborSecondaryIPNumeric must be specified if op_LLDPNeighborSecondaryIPNumeric is specified.
+             :param val_c_LLDPNeighborSecondaryIPNumeric: If op_LLDPNeighborSecondaryIPNumeric is specified, this value will be compared to the value in LLDPNeighborSecondaryIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborSecondaryIPNumeric must be specified if op_LLDPNeighborSecondaryIPNumeric is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborSecondaryIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborSecondaryIPNumeric: String
 
             |  ``api version min:`` None
@@ -1191,7 +1159,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborStartTime: If op_LLDPNeighborStartTime is specified, this value will be compared to the value in LLDPNeighborStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborStartTime must be specified if op_LLDPNeighborStartTime is specified.
+             :param val_c_LLDPNeighborStartTime: If op_LLDPNeighborStartTime is specified, this value will be compared to the value in LLDPNeighborStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborStartTime must be specified if op_LLDPNeighborStartTime is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborStartTime: String
 
             |  ``api version min:`` None
@@ -1215,7 +1183,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborTimestamp: If op_LLDPNeighborTimestamp is specified, this value will be compared to the value in LLDPNeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborTimestamp must be specified if op_LLDPNeighborTimestamp is specified.
+             :param val_c_LLDPNeighborTimestamp: If op_LLDPNeighborTimestamp is specified, this value will be compared to the value in LLDPNeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborTimestamp must be specified if op_LLDPNeighborTimestamp is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborTimestamp: String
 
             |  ``api version min:`` None
@@ -1239,7 +1207,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LLDPNeighborVersion: If op_LLDPNeighborVersion is specified, this value will be compared to the value in LLDPNeighborVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborVersion must be specified if op_LLDPNeighborVersion is specified.
+             :param val_c_LLDPNeighborVersion: If op_LLDPNeighborVersion is specified, this value will be compared to the value in LLDPNeighborVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LLDPNeighborVersion must be specified if op_LLDPNeighborVersion is specified. If the rlike or not rlike value is specified in the op_LLDPNeighborVersion field, escape regex special characters because a regular expression is expected.
              :type val_c_LLDPNeighborVersion: String
 
             |  ``api version min:`` None
@@ -1263,7 +1231,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -1319,7 +1287,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` LLDPNeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is LLDPNeighborID. Valid values are DataSourceID, LLDPNeighborID, DeviceID, InterfaceID, ifIndex, LLDPNeighborStartTime, LLDPNeighborEndTime, LLDPNeighborChangedCols, LLDPNeighborTimestamp, LLDPNeighborDeviceID, LLDPNeighborInterfaceID, LLDPNeighborIfIndex, LLDPNeighborName, LLDPNeighborDescription, LLDPNeighborPortName, LLDPNeighborCapabilities, LLDPNeighborCapabilitiesNumeric, LLDPNeighborPrimaryIPDotted, LLDPNeighborPrimaryIPNumeric, LLDPNeighborSecondaryIPDotted, LLDPNeighborSecondaryIPNumeric, LLDPNeighborMAC, LLDPNeighborVersion.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, LLDPNeighborID, DeviceID, InterfaceID, ifIndex, LLDPNeighborStartTime, LLDPNeighborEndTime, LLDPNeighborChangedCols, LLDPNeighborTimestamp, LLDPNeighborDeviceID, LLDPNeighborInterfaceID, LLDPNeighborIfIndex, LLDPNeighborName, LLDPNeighborDescription, LLDPNeighborPortName, LLDPNeighborCapabilities, LLDPNeighborCapabilitiesNumeric, LLDPNeighborPrimaryIPDotted, LLDPNeighborPrimaryIPNumeric, LLDPNeighborSecondaryIPDotted, LLDPNeighborSecondaryIPNumeric, LLDPNeighborMAC, LLDPNeighborVersion.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1327,7 +1295,7 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1337,22 +1305,6 @@ class LldpNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each LldpNeighbor. Valid values are DataSourceID, LLDPNeighborID, DeviceID, InterfaceID, ifIndex, LLDPNeighborStartTime, LLDPNeighborEndTime, LLDPNeighborChangedCols, LLDPNeighborTimestamp, LLDPNeighborDeviceID, LLDPNeighborInterfaceID, LLDPNeighborIfIndex, LLDPNeighborName, LLDPNeighborDescription, LLDPNeighborPortName, LLDPNeighborCapabilities, LLDPNeighborCapabilitiesNumeric, LLDPNeighborPrimaryIPDotted, LLDPNeighborPrimaryIPNumeric, LLDPNeighborSecondaryIPDotted, LLDPNeighborSecondaryIPNumeric, LLDPNeighborMAC, LLDPNeighborVersion. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1396,8 +1348,8 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1423,8 +1375,8 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -1450,8 +1402,8 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The interface object on which the LLDP neighbor was reported.
-             :rtype : Interface
+             :return interface: The interface object on which the LLDP neighbor was reported.
+             :rtype interface: Interface
 
             """
 
@@ -1477,8 +1429,8 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device object corresponding to the LLDP neighbor.
-             :rtype : Device
+             :return neighbor_device: The device object corresponding to the LLDP neighbor.
+             :rtype neighbor_device: Device
 
             """
 
@@ -1504,8 +1456,8 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The interface object on the neighboring device.
-             :rtype : Interface
+             :return neighbor_interface: The interface object on the neighboring device.
+             :rtype neighbor_interface: Interface
 
             """
 
@@ -1531,8 +1483,8 @@ class LldpNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

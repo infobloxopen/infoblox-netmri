@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class AccessObjectsAccessSearchIssueTypeRemote(RemoteModel):
     """
-    Objects, or direct values, related to Alerts (whitelist or Blacklist) definition
+    Objects, or direct values, related to Alerts (whitelist or blacklist) definition.
 
 
     |  ``id:`` The internal NetMRI identifier for this access search alert.

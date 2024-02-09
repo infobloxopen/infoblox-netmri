@@ -32,7 +32,7 @@ class TimeWindowBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available time windows. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available time windows. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -73,7 +73,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, schedule_name, time_zone, system_window_ind, recur_type, start_date, end_date, interval, ordinal, period_mins, start_min, end_min, sun_start, sun_end, mon_start, mon_end, tue_start, tue_end, wed_start, wed_end, thu_start, thu_end, fri_start, fri_end, sat_start, sat_end, created_at, updated_at.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, schedule_name, time_zone, system_window_ind, recur_type, start_date, end_date, interval, ordinal, period_mins, start_min, end_min, sun_start, sun_end, mon_start, mon_end, tue_start, tue_end, wed_start, wed_end, thu_start, thu_end, fri_start, fri_end, sat_start, sat_end, created_at, updated_at.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -81,7 +81,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -91,22 +91,6 @@ class TimeWindowBroker(Broker):
 
              :param select: The list of attributes to return for each TimeWindow. Valid values are id, schedule_name, time_zone, system_window_ind, recur_type, start_date, end_date, interval, ordinal, period_mins, start_min, end_min, sun_start, sun_end, mon_start, mon_end, tue_start, tue_end, wed_start, wed_end, thu_start, thu_end, fri_start, fri_end, sat_start, sat_end, created_at, updated_at. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -596,7 +580,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, schedule_name, time_zone, system_window_ind, recur_type, start_date, end_date, interval, ordinal, period_mins, start_min, end_min, sun_start, sun_end, mon_start, mon_end, tue_start, tue_end, wed_start, wed_end, thu_start, thu_end, fri_start, fri_end, sat_start, sat_end, created_at, updated_at.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, schedule_name, time_zone, system_window_ind, recur_type, start_date, end_date, interval, ordinal, period_mins, start_min, end_min, sun_start, sun_end, mon_start, mon_end, tue_start, tue_end, wed_start, wed_end, thu_start, thu_end, fri_start, fri_end, sat_start, sat_end, created_at, updated_at.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -604,7 +588,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -614,22 +598,6 @@ class TimeWindowBroker(Broker):
 
              :param select: The list of attributes to return for each TimeWindow. Valid values are id, schedule_name, time_zone, system_window_ind, recur_type, start_date, end_date, interval, ordinal, period_mins, start_min, end_min, sun_start, sun_end, mon_start, mon_end, tue_start, tue_end, wed_start, wed_end, thu_start, thu_end, fri_start, fri_end, sat_start, sat_end, created_at, updated_at. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -687,7 +655,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_end_date: If op_end_date is specified, this value will be compared to the value in end_date using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_end_date must be specified if op_end_date is specified.
+             :param val_c_end_date: If op_end_date is specified, this value will be compared to the value in end_date using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_end_date must be specified if op_end_date is specified. If the rlike or not rlike value is specified in the op_end_date field, escape regex special characters because a regular expression is expected.
              :type val_c_end_date: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_end_min: If op_end_min is specified, this value will be compared to the value in end_min using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_end_min must be specified if op_end_min is specified.
+             :param val_c_end_min: If op_end_min is specified, this value will be compared to the value in end_min using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_end_min must be specified if op_end_min is specified. If the rlike or not rlike value is specified in the op_end_min field, escape regex special characters because a regular expression is expected.
              :type val_c_end_min: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_fri_end: If op_fri_end is specified, this value will be compared to the value in fri_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_fri_end must be specified if op_fri_end is specified.
+             :param val_c_fri_end: If op_fri_end is specified, this value will be compared to the value in fri_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_fri_end must be specified if op_fri_end is specified. If the rlike or not rlike value is specified in the op_fri_end field, escape regex special characters because a regular expression is expected.
              :type val_c_fri_end: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_fri_start: If op_fri_start is specified, this value will be compared to the value in fri_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_fri_start must be specified if op_fri_start is specified.
+             :param val_c_fri_start: If op_fri_start is specified, this value will be compared to the value in fri_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_fri_start must be specified if op_fri_start is specified. If the rlike or not rlike value is specified in the op_fri_start field, escape regex special characters because a regular expression is expected.
              :type val_c_fri_start: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_interval: If op_interval is specified, this value will be compared to the value in interval using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_interval must be specified if op_interval is specified.
+             :param val_c_interval: If op_interval is specified, this value will be compared to the value in interval using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_interval must be specified if op_interval is specified. If the rlike or not rlike value is specified in the op_interval field, escape regex special characters because a regular expression is expected.
              :type val_c_interval: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_mon_end: If op_mon_end is specified, this value will be compared to the value in mon_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_mon_end must be specified if op_mon_end is specified.
+             :param val_c_mon_end: If op_mon_end is specified, this value will be compared to the value in mon_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_mon_end must be specified if op_mon_end is specified. If the rlike or not rlike value is specified in the op_mon_end field, escape regex special characters because a regular expression is expected.
              :type val_c_mon_end: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_mon_start: If op_mon_start is specified, this value will be compared to the value in mon_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_mon_start must be specified if op_mon_start is specified.
+             :param val_c_mon_start: If op_mon_start is specified, this value will be compared to the value in mon_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_mon_start must be specified if op_mon_start is specified. If the rlike or not rlike value is specified in the op_mon_start field, escape regex special characters because a regular expression is expected.
              :type val_c_mon_start: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ordinal: If op_ordinal is specified, this value will be compared to the value in ordinal using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ordinal must be specified if op_ordinal is specified.
+             :param val_c_ordinal: If op_ordinal is specified, this value will be compared to the value in ordinal using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ordinal must be specified if op_ordinal is specified. If the rlike or not rlike value is specified in the op_ordinal field, escape regex special characters because a regular expression is expected.
              :type val_c_ordinal: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_period_mins: If op_period_mins is specified, this value will be compared to the value in period_mins using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_period_mins must be specified if op_period_mins is specified.
+             :param val_c_period_mins: If op_period_mins is specified, this value will be compared to the value in period_mins using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_period_mins must be specified if op_period_mins is specified. If the rlike or not rlike value is specified in the op_period_mins field, escape regex special characters because a regular expression is expected.
              :type val_c_period_mins: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_recur_type: If op_recur_type is specified, this value will be compared to the value in recur_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_recur_type must be specified if op_recur_type is specified.
+             :param val_c_recur_type: If op_recur_type is specified, this value will be compared to the value in recur_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_recur_type must be specified if op_recur_type is specified. If the rlike or not rlike value is specified in the op_recur_type field, escape regex special characters because a regular expression is expected.
              :type val_c_recur_type: String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_sat_end: If op_sat_end is specified, this value will be compared to the value in sat_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sat_end must be specified if op_sat_end is specified.
+             :param val_c_sat_end: If op_sat_end is specified, this value will be compared to the value in sat_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sat_end must be specified if op_sat_end is specified. If the rlike or not rlike value is specified in the op_sat_end field, escape regex special characters because a regular expression is expected.
              :type val_c_sat_end: String
 
             |  ``api version min:`` None
@@ -999,7 +967,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_sat_start: If op_sat_start is specified, this value will be compared to the value in sat_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sat_start must be specified if op_sat_start is specified.
+             :param val_c_sat_start: If op_sat_start is specified, this value will be compared to the value in sat_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sat_start must be specified if op_sat_start is specified. If the rlike or not rlike value is specified in the op_sat_start field, escape regex special characters because a regular expression is expected.
              :type val_c_sat_start: String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_schedule_name: If op_schedule_name is specified, this value will be compared to the value in schedule_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_schedule_name must be specified if op_schedule_name is specified.
+             :param val_c_schedule_name: If op_schedule_name is specified, this value will be compared to the value in schedule_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_schedule_name must be specified if op_schedule_name is specified. If the rlike or not rlike value is specified in the op_schedule_name field, escape regex special characters because a regular expression is expected.
              :type val_c_schedule_name: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_start_date: If op_start_date is specified, this value will be compared to the value in start_date using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_start_date must be specified if op_start_date is specified.
+             :param val_c_start_date: If op_start_date is specified, this value will be compared to the value in start_date using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_start_date must be specified if op_start_date is specified. If the rlike or not rlike value is specified in the op_start_date field, escape regex special characters because a regular expression is expected.
              :type val_c_start_date: String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_start_min: If op_start_min is specified, this value will be compared to the value in start_min using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_start_min must be specified if op_start_min is specified.
+             :param val_c_start_min: If op_start_min is specified, this value will be compared to the value in start_min using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_start_min must be specified if op_start_min is specified. If the rlike or not rlike value is specified in the op_start_min field, escape regex special characters because a regular expression is expected.
              :type val_c_start_min: String
 
             |  ``api version min:`` None
@@ -1095,7 +1063,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_sun_end: If op_sun_end is specified, this value will be compared to the value in sun_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sun_end must be specified if op_sun_end is specified.
+             :param val_c_sun_end: If op_sun_end is specified, this value will be compared to the value in sun_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sun_end must be specified if op_sun_end is specified. If the rlike or not rlike value is specified in the op_sun_end field, escape regex special characters because a regular expression is expected.
              :type val_c_sun_end: String
 
             |  ``api version min:`` None
@@ -1119,7 +1087,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_sun_start: If op_sun_start is specified, this value will be compared to the value in sun_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sun_start must be specified if op_sun_start is specified.
+             :param val_c_sun_start: If op_sun_start is specified, this value will be compared to the value in sun_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sun_start must be specified if op_sun_start is specified. If the rlike or not rlike value is specified in the op_sun_start field, escape regex special characters because a regular expression is expected.
              :type val_c_sun_start: String
 
             |  ``api version min:`` None
@@ -1143,7 +1111,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_system_window_ind: If op_system_window_ind is specified, this value will be compared to the value in system_window_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_system_window_ind must be specified if op_system_window_ind is specified.
+             :param val_c_system_window_ind: If op_system_window_ind is specified, this value will be compared to the value in system_window_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_system_window_ind must be specified if op_system_window_ind is specified. If the rlike or not rlike value is specified in the op_system_window_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_system_window_ind: String
 
             |  ``api version min:`` None
@@ -1167,7 +1135,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_thu_end: If op_thu_end is specified, this value will be compared to the value in thu_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_thu_end must be specified if op_thu_end is specified.
+             :param val_c_thu_end: If op_thu_end is specified, this value will be compared to the value in thu_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_thu_end must be specified if op_thu_end is specified. If the rlike or not rlike value is specified in the op_thu_end field, escape regex special characters because a regular expression is expected.
              :type val_c_thu_end: String
 
             |  ``api version min:`` None
@@ -1191,7 +1159,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_thu_start: If op_thu_start is specified, this value will be compared to the value in thu_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_thu_start must be specified if op_thu_start is specified.
+             :param val_c_thu_start: If op_thu_start is specified, this value will be compared to the value in thu_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_thu_start must be specified if op_thu_start is specified. If the rlike or not rlike value is specified in the op_thu_start field, escape regex special characters because a regular expression is expected.
              :type val_c_thu_start: String
 
             |  ``api version min:`` None
@@ -1215,7 +1183,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_time_zone: If op_time_zone is specified, this value will be compared to the value in time_zone using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_time_zone must be specified if op_time_zone is specified.
+             :param val_c_time_zone: If op_time_zone is specified, this value will be compared to the value in time_zone using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_time_zone must be specified if op_time_zone is specified. If the rlike or not rlike value is specified in the op_time_zone field, escape regex special characters because a regular expression is expected.
              :type val_c_time_zone: String
 
             |  ``api version min:`` None
@@ -1239,7 +1207,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_tue_end: If op_tue_end is specified, this value will be compared to the value in tue_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_tue_end must be specified if op_tue_end is specified.
+             :param val_c_tue_end: If op_tue_end is specified, this value will be compared to the value in tue_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_tue_end must be specified if op_tue_end is specified. If the rlike or not rlike value is specified in the op_tue_end field, escape regex special characters because a regular expression is expected.
              :type val_c_tue_end: String
 
             |  ``api version min:`` None
@@ -1263,7 +1231,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_tue_start: If op_tue_start is specified, this value will be compared to the value in tue_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_tue_start must be specified if op_tue_start is specified.
+             :param val_c_tue_start: If op_tue_start is specified, this value will be compared to the value in tue_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_tue_start must be specified if op_tue_start is specified. If the rlike or not rlike value is specified in the op_tue_start field, escape regex special characters because a regular expression is expected.
              :type val_c_tue_start: String
 
             |  ``api version min:`` None
@@ -1287,7 +1255,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -1311,7 +1279,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_wed_end: If op_wed_end is specified, this value will be compared to the value in wed_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_wed_end must be specified if op_wed_end is specified.
+             :param val_c_wed_end: If op_wed_end is specified, this value will be compared to the value in wed_end using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_wed_end must be specified if op_wed_end is specified. If the rlike or not rlike value is specified in the op_wed_end field, escape regex special characters because a regular expression is expected.
              :type val_c_wed_end: String
 
             |  ``api version min:`` None
@@ -1335,7 +1303,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_wed_start: If op_wed_start is specified, this value will be compared to the value in wed_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_wed_start must be specified if op_wed_start is specified.
+             :param val_c_wed_start: If op_wed_start is specified, this value will be compared to the value in wed_start using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_wed_start must be specified if op_wed_start is specified. If the rlike or not rlike value is specified in the op_wed_start field, escape regex special characters because a regular expression is expected.
              :type val_c_wed_start: String
 
             |  ``api version min:`` None
@@ -1359,7 +1327,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, schedule_name, time_zone, system_window_ind, recur_type, start_date, end_date, interval, ordinal, period_mins, start_min, end_min, sun_start, sun_end, mon_start, mon_end, tue_start, tue_end, wed_start, wed_end, thu_start, thu_end, fri_start, fri_end, sat_start, sat_end, created_at, updated_at.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, schedule_name, time_zone, system_window_ind, recur_type, start_date, end_date, interval, ordinal, period_mins, start_min, end_min, sun_start, sun_end, mon_start, mon_end, tue_start, tue_end, wed_start, wed_end, thu_start, thu_end, fri_start, fri_end, sat_start, sat_end, created_at, updated_at.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1367,7 +1335,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1377,22 +1345,6 @@ class TimeWindowBroker(Broker):
 
              :param select: The list of attributes to return for each TimeWindow. Valid values are id, schedule_name, time_zone, system_window_ind, recur_type, start_date, end_date, interval, ordinal, period_mins, start_min, end_min, sun_start, sun_end, mon_start, mon_end, tue_start, tue_end, wed_start, wed_end, thu_start, thu_end, fri_start, fri_end, sat_start, sat_end, created_at, updated_at. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1644,7 +1596,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created time window.
+             :return uri: The URI that may be used to retrieve the newly created time window.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -1895,7 +1847,7 @@ class TimeWindowBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated time window.
+             :return uri: The URI that may be used to retrieve the updated time window.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -1964,7 +1916,7 @@ class TimeWindowBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 2021-05-13 01:53:31
+            |  ``default:`` 2023-10-17 12:15:05
 
              :param start_date: Starting date of the time period to enumerate.
              :type start_date: DateTime
@@ -1972,7 +1924,7 @@ class TimeWindowBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` 2021-06-12 01:53:31
+            |  ``default:`` 2023-11-16 12:15:05
 
              :param end_date: Ending date of the time period to enumerate.
              :type end_date: DateTime

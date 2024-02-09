@@ -5,7 +5,7 @@ class DeviceByVlannameOrVlanindexGridBroker(Broker):
     controller = "device_by_vlanname_or_vlanindex_grids"
 
     def index(self, **kwargs):
-        """Lists the available device by vlanname or vlanindex grids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device by vlanname or vlanindex grids. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -38,7 +38,7 @@ class DeviceByVlannameOrVlanindexGridBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, DeviceID, DeviceIPDotted, DeviceName, DeviceType, VlanName, VlanIndex, Network, VirtualNetworkID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, DeviceID, DeviceIPDotted, DeviceName, DeviceType, VlanName, VlanIndex, Network, VirtualNetworkID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -46,7 +46,7 @@ class DeviceByVlannameOrVlanindexGridBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -56,22 +56,6 @@ class DeviceByVlannameOrVlanindexGridBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceByVlannameOrVlanindexGrid. Valid values are id, DeviceID, DeviceIPDotted, DeviceName, DeviceType, VlanName, VlanIndex, Network, VirtualNetworkID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None

@@ -5,7 +5,7 @@ class ChangesDeviceViewerGridBroker(Broker):
     controller = "changes_device_viewer_grids"
 
     def index(self, **kwargs):
-        """Lists the available changes device viewer grids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available changes device viewer grids. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -30,7 +30,7 @@ class ChangesDeviceViewerGridBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, ChangeTime, ChangeDetectedTime, ChangeID, HardwareInd, SoftwareInd, AdminInd, ExternalInd, SNMPPollInd, SNMPTrapInd, SyslogInd, ConfigPollInd, DeviceID, DeviceIPDotted, Network, VirtualNetworkID, DeviceName, DeviceVendor, DeviceModel, DeviceIPNumeric, DeviceType, ChangeUser, ChangeAuthorizedInd, ChangeMethod, ChangeType, RunningChangedRev, SavedChangedRev, HideRunning, HideSaved, DeviceAssurance, HideAccess, configstate, CustomFieldsEditInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, ChangeTime, ChangeDetectedTime, ChangeID, HardwareInd, SoftwareInd, AdminInd, ExternalInd, SNMPPollInd, SNMPTrapInd, SyslogInd, ConfigPollInd, DeviceID, DeviceIPDotted, Network, VirtualNetworkID, DeviceName, DeviceVendor, DeviceModel, DeviceIPNumeric, DeviceType, ChangeUser, ChangeAuthorizedInd, ChangeMethod, ChangeType, RunningChangedRev, SavedChangedRev, HideRunning, HideSaved, DeviceAssurance, HideAccess, configstate, CustomFieldsEditInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -38,7 +38,7 @@ class ChangesDeviceViewerGridBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -48,22 +48,6 @@ class ChangesDeviceViewerGridBroker(Broker):
 
              :param select: The list of attributes to return for each ChangesDeviceViewerGrid. Valid values are id, ChangeTime, ChangeDetectedTime, ChangeID, HardwareInd, SoftwareInd, AdminInd, ExternalInd, SNMPPollInd, SNMPTrapInd, SyslogInd, ConfigPollInd, DeviceID, DeviceIPDotted, Network, VirtualNetworkID, DeviceName, DeviceVendor, DeviceModel, DeviceIPNumeric, DeviceType, ChangeUser, ChangeAuthorizedInd, ChangeMethod, ChangeType, RunningChangedRev, SavedChangedRev, HideRunning, HideSaved, DeviceAssurance, HideAccess, configstate, CustomFieldsEditInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None

@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class AccessChangeManagementScheduleCompletedGridRemote(RemoteModel):
     """
-    list of executed jobs for provisioning purposes
+    List of executed jobs for provisioning purposes.
 
 
     |  ``BatchID:`` The internal NetMRI Identifier of the job executed.

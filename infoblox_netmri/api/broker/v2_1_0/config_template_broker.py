@@ -5,7 +5,7 @@ class ConfigTemplateBroker(Broker):
     controller = "config_templates"
 
     def index(self, **kwargs):
-        """Lists the available config templates. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available config templates. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -70,7 +70,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, vendor, model, version, device_type, description, created_by, updated_by, created_at, updated_at, template_type, risk_level.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, vendor, model, version, device_type, description, created_by, updated_by, created_at, updated_at, template_type, risk_level.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -78,7 +78,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -88,22 +88,6 @@ class ConfigTemplateBroker(Broker):
 
              :param select: The list of attributes to return for each ConfigTemplate. Valid values are id, name, vendor, model, version, device_type, description, created_by, updated_by, created_at, updated_at, template_type, risk_level. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -263,7 +247,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param overwrite_ind: If set to 1, overwrite existing template file. If set to 0, do not overwrite existing template file
+             :param overwrite_ind: If set to 1, overwrite existing template file. If set to 0, do not overwrite existing template file.
              :type overwrite_ind: Boolean
 
             |  ``api version min:`` 2.5
@@ -297,7 +281,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created config template.
+             :return uri: The URI that may be used to retrieve the newly created config template.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -410,7 +394,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` 1
 
-             :param overwrite_ind: An indicator to overwrite an existing template file with the same name. Overwrite if set to 1. Do not overwrite if set to 0
+             :param overwrite_ind: An indicator to overwrite an existing template file with the same name. Overwrite if set to 1. Do not overwrite if set to 0.
              :type overwrite_ind: Boolean
 
             |  ``api version min:`` 2.5
@@ -444,7 +428,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated config template.
+             :return uri: The URI that may be used to retrieve the updated config template.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -493,6 +477,38 @@ class ConfigTemplateBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return id: The ID of the duplicated config template.
+             :rtype id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return model: The class name of the duplicated config template.
+             :rtype model: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return uri: The URI that may be used to retrieve the duplicated config template.
+             :rtype uri: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return config_template: The duplicated config template.
+             :rtype config_template: ConfigTemplate
+
             """
 
         return self.api_request(self._get_method_fullname("duplicate"), kwargs)
@@ -520,6 +536,22 @@ class ConfigTemplateBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return config_template: The config template.
+             :rtype config_template: ConfigTemplate
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False.
+             :rtype success: Boolean
+
             """
 
         return self.api_request(self._get_method_fullname("populate_template"), kwargs)
@@ -538,6 +570,14 @@ class ConfigTemplateBroker(Broker):
              :type id: Integer
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return attachment: Configuration template file as an attachment for download.
+             :rtype attachment: String
 
             """
 
@@ -566,6 +606,30 @@ class ConfigTemplateBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return id: The ID of the config template.
+             :rtype id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return message: System message.
+             :rtype message: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False.
+             :rtype success: Boolean
+
             """
 
         return self.api_request(self._get_method_fullname("import"), kwargs)
@@ -588,7 +652,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param device_group_ids: A comma delimited string of device group ids. Can be blank if not using device groups.
+             :param device_group_ids: A comma delimited string of device group IDs. Can be blank if not using device groups.
              :type device_group_ids: String
 
             |  ``api version min:`` None
@@ -596,7 +660,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param device_ids: A comma delimited string of device ids. Can be blank if ONLY using device groups.
+             :param device_ids: A comma delimited string of device IDs. Can be blank if ONLY using device groups.
              :type device_ids: String
 
             |  ``api version min:`` None
@@ -606,6 +670,14 @@ class ConfigTemplateBroker(Broker):
 
              :param template_variables: Optional variables to be passed to the template. Any variable name starting with $ will be passed through as input to the template.
              :type template_variables: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` bulk
+
+             :param push_mode: Defines the push mode (bulk or line_by_line) used for template based jobs.
+             :type push_mode: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -663,10 +735,18 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param id: The ConfigTemplateID of the config template from which to obtain variables
+             :param id: The ConfigTemplateID of the config template from which to obtain variables.
              :type id: Integer
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return rows: An array of variables for the specified config template.
+             :rtype rows: Array
 
             """
 

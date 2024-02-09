@@ -5,7 +5,7 @@ class CLICredentialBroker(Broker):
     controller = "cli_credentials"
 
     def index(self, **kwargs):
-        """Lists the available cli credentials. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available cli credentials. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -62,7 +62,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are UnitID, Protocol, Origination, UPWUse, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -70,7 +70,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -78,24 +78,8 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each CLICredential. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each CLICredential. Valid values are UnitID, Protocol, Origination, UPWUse, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -164,22 +148,6 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param HitCount: The number of successful uses of this credential.
-             :type HitCount: Integer
-
-            |  ``api version min:`` 2.5
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param HitCount: The number of successful uses of this credential.
-             :type HitCount: Array of Integer
-
-            |  ``api version min:`` 2.3
-            |  ``api version max:`` 2.4
-            |  ``required:`` False
-            |  ``default:`` None
-
              :param Origination: Identifies the source of the credential. 'NETC' indicates an internal credential that may be modified or removed during upgrade processes. 'USER' indicates a user-entered credential.
              :type Origination: String
 
@@ -213,7 +181,7 @@ class CLICredentialBroker(Broker):
             |  ``default:`` None
 
              :param Priority: The priority order in which to attempt this credential.
-             :type Priority: String
+             :type Priority: Integer
 
             |  ``api version min:`` 2.5
             |  ``api version max:`` None
@@ -221,7 +189,7 @@ class CLICredentialBroker(Broker):
             |  ``default:`` None
 
              :param Priority: The priority order in which to attempt this credential.
-             :type Priority: Array of String
+             :type Priority: Array of Integer
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` 2.4
@@ -356,7 +324,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are UnitID, Protocol, Origination, UPWUse, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -364,7 +332,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -372,31 +340,15 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each CLICredential. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each CLICredential. Valid values are UnitID, Protocol, Origination, UPWUse, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
             |  ``default:`` None
 
-             :param query: This value will be matched against cli credentials, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: CredentialGroupID, HitCount, Origination, PasswordSecure, Priority, Protocol, SecureVersion, UPWUse, UnitID, UsernameSecure, Vendor, id.
+             :param query: This value will be matched against cli credentials, looking to see if one or more of the listed attributes contain the passed value. You may also surround the value with '/' and '/' to perform a regular expression search rather than a containment operation. Any record that matches will be returned. The attributes searched are: CredentialGroupID, Origination, PasswordSecure, Priority, Protocol, SecureVersion, UPWUse, UnitID, UsernameSecure, Vendor, id.
              :type query: String
 
             |  ``api version min:`` 2.3
@@ -422,7 +374,7 @@ class CLICredentialBroker(Broker):
         return self.api_list_request(self._get_method_fullname("search"), kwargs)
 
     def find(self, **kwargs):
-        """Lists the available cli credentials matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: CredentialGroupID, HitCount, Origination, PasswordSecure, Priority, Protocol, SecureVersion, UPWUse, UnitID, UsernameSecure, Vendor, id.
+        """Lists the available cli credentials matching the input specification. This provides the most flexible search specification of all the query mechanisms, enabling searching using comparison operations other than equality. However, it is more complex to use and will not perform as efficiently as the index or search methods. In the input descriptions below, 'field names' refers to the following fields: CredentialGroupID, Origination, PasswordSecure, Priority, Protocol, SecureVersion, UPWUse, UnitID, UsernameSecure, Vendor, id.
 
             **Inputs**
 
@@ -447,32 +399,8 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CredentialGroupID: If op_CredentialGroupID is specified, this value will be compared to the value in CredentialGroupID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CredentialGroupID must be specified if op_CredentialGroupID is specified.
+             :param val_c_CredentialGroupID: If op_CredentialGroupID is specified, this value will be compared to the value in CredentialGroupID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CredentialGroupID must be specified if op_CredentialGroupID is specified. If the rlike or not rlike value is specified in the op_CredentialGroupID field, escape regex special characters because a regular expression is expected.
              :type val_c_CredentialGroupID: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param op_HitCount: The operator to apply to the field HitCount. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. HitCount: The number of successful uses of this credential. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
-             :type op_HitCount: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param val_f_HitCount: If op_HitCount is specified, the field named in this input will be compared to the value in HitCount using the specified operator. That is, the value in this input will be treated as another field name, rather than a constant value. Either this field or val_c_HitCount must be specified if op_HitCount is specified.
-             :type val_f_HitCount: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param val_c_HitCount: If op_HitCount is specified, this value will be compared to the value in HitCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_HitCount must be specified if op_HitCount is specified.
-             :type val_c_HitCount: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -495,7 +423,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Origination: If op_Origination is specified, this value will be compared to the value in Origination using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Origination must be specified if op_Origination is specified.
+             :param val_c_Origination: If op_Origination is specified, this value will be compared to the value in Origination using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Origination must be specified if op_Origination is specified. If the rlike or not rlike value is specified in the op_Origination field, escape regex special characters because a regular expression is expected.
              :type val_c_Origination: String
 
             |  ``api version min:`` None
@@ -519,7 +447,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PasswordSecure: If op_PasswordSecure is specified, this value will be compared to the value in PasswordSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PasswordSecure must be specified if op_PasswordSecure is specified.
+             :param val_c_PasswordSecure: If op_PasswordSecure is specified, this value will be compared to the value in PasswordSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PasswordSecure must be specified if op_PasswordSecure is specified. If the rlike or not rlike value is specified in the op_PasswordSecure field, escape regex special characters because a regular expression is expected.
              :type val_c_PasswordSecure: String
 
             |  ``api version min:`` None
@@ -543,7 +471,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Priority: If op_Priority is specified, this value will be compared to the value in Priority using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Priority must be specified if op_Priority is specified.
+             :param val_c_Priority: If op_Priority is specified, this value will be compared to the value in Priority using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Priority must be specified if op_Priority is specified. If the rlike or not rlike value is specified in the op_Priority field, escape regex special characters because a regular expression is expected.
              :type val_c_Priority: String
 
             |  ``api version min:`` None
@@ -567,7 +495,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Protocol: If op_Protocol is specified, this value will be compared to the value in Protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Protocol must be specified if op_Protocol is specified.
+             :param val_c_Protocol: If op_Protocol is specified, this value will be compared to the value in Protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Protocol must be specified if op_Protocol is specified. If the rlike or not rlike value is specified in the op_Protocol field, escape regex special characters because a regular expression is expected.
              :type val_c_Protocol: String
 
             |  ``api version min:`` None
@@ -591,7 +519,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SecureVersion: If op_SecureVersion is specified, this value will be compared to the value in SecureVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SecureVersion must be specified if op_SecureVersion is specified.
+             :param val_c_SecureVersion: If op_SecureVersion is specified, this value will be compared to the value in SecureVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SecureVersion must be specified if op_SecureVersion is specified. If the rlike or not rlike value is specified in the op_SecureVersion field, escape regex special characters because a regular expression is expected.
              :type val_c_SecureVersion: String
 
             |  ``api version min:`` None
@@ -615,7 +543,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UPWUse: If op_UPWUse is specified, this value will be compared to the value in UPWUse using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UPWUse must be specified if op_UPWUse is specified.
+             :param val_c_UPWUse: If op_UPWUse is specified, this value will be compared to the value in UPWUse using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UPWUse must be specified if op_UPWUse is specified. If the rlike or not rlike value is specified in the op_UPWUse field, escape regex special characters because a regular expression is expected.
              :type val_c_UPWUse: String
 
             |  ``api version min:`` None
@@ -639,7 +567,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UnitID: If op_UnitID is specified, this value will be compared to the value in UnitID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitID must be specified if op_UnitID is specified.
+             :param val_c_UnitID: If op_UnitID is specified, this value will be compared to the value in UnitID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitID must be specified if op_UnitID is specified. If the rlike or not rlike value is specified in the op_UnitID field, escape regex special characters because a regular expression is expected.
              :type val_c_UnitID: String
 
             |  ``api version min:`` None
@@ -663,7 +591,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UsernameSecure: If op_UsernameSecure is specified, this value will be compared to the value in UsernameSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UsernameSecure must be specified if op_UsernameSecure is specified.
+             :param val_c_UsernameSecure: If op_UsernameSecure is specified, this value will be compared to the value in UsernameSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UsernameSecure must be specified if op_UsernameSecure is specified. If the rlike or not rlike value is specified in the op_UsernameSecure field, escape regex special characters because a regular expression is expected.
              :type val_c_UsernameSecure: String
 
             |  ``api version min:`` None
@@ -687,7 +615,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Vendor: If op_Vendor is specified, this value will be compared to the value in Vendor using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Vendor must be specified if op_Vendor is specified.
+             :param val_c_Vendor: If op_Vendor is specified, this value will be compared to the value in Vendor using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Vendor must be specified if op_Vendor is specified. If the rlike or not rlike value is specified in the op_Vendor field, escape regex special characters because a regular expression is expected.
              :type val_c_Vendor: String
 
             |  ``api version min:`` None
@@ -711,7 +639,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -735,7 +663,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are UnitID, Protocol, Origination, UPWUse, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -743,7 +671,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -751,24 +679,8 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each CLICredential. Valid values are UnitID, Protocol, Origination, UPWUse, HitCount, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each CLICredential. Valid values are UnitID, Protocol, Origination, UPWUse, Vendor, id, Priority, UsernameSecure, PasswordSecure, SecureVersion, CredentialGroupID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -808,7 +720,7 @@ class CLICredentialBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` USER
+            |  ``default:`` NETC
 
              :param Origination: Identifies the source of the credential. 'NETC' indicates an internal credential that may be modified or removed during upgrade processes. 'USER' indicates a user-entered credential.
              :type Origination: String
@@ -827,7 +739,7 @@ class CLICredentialBroker(Broker):
             |  ``default:`` None
 
              :param Priority: The priority order in which to attempt this credential.
-             :type Priority: String
+             :type Priority: Integer
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -840,7 +752,7 @@ class CLICredentialBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` LOCAL
+            |  ``default:`` GUESS
 
              :param UPWUse: Determines the function of the credential. 'GUESS' indicates that this will only be used if vendor default credential collection is enabled, whereas 'LOCAL' means that this credential will be used in all guessing.
              :type UPWUse: String
@@ -892,7 +804,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created cli credential.
+             :return uri: The URI that may be used to retrieve the newly created cli credential.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -950,7 +862,7 @@ class CLICredentialBroker(Broker):
             |  ``default:`` None
 
              :param Priority: The priority order in which to attempt this credential. If omitted, this field will not be updated.
-             :type Priority: String
+             :type Priority: Integer
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -1007,7 +919,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated cli credential.
+             :return uri: The URI that may be used to retrieve the updated cli credential.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -1042,7 +954,7 @@ class CLICredentialBroker(Broker):
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
 
     def test_ssh_telnet(self, **kwargs):
-        """Executes cli credential test and returns results or status id based on async_ind
+        """Executes CLI credential test and returns results or status id based on "async_ind"
 
             **Inputs**
 
@@ -1051,7 +963,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceID: Device ID to specify what device to test cli credentials on (takes precedence over IP address)
+             :param DeviceID: Device ID to specify what device to test CLI credentials on (takes precedence over IP address)
              :type DeviceID: Integer
 
             |  ``api version min:`` None
@@ -1067,7 +979,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param ip_address: IP Address to test id DeviceID is not given
+             :param ip_address: IP Address to test if DeviceID is not given
              :type ip_address: String
 
             |  ``api version min:`` None
@@ -1075,7 +987,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param VirtualNetworkID: The ID for Virtual Network, must be unique, only needed if DeviceID not set
+             :param VirtualNetworkID: The ID for Virtual Network, must be unique, only needed if DeviceID is not set
              :type VirtualNetworkID: Integer
 
             |  ``api version min:`` None
@@ -1113,6 +1025,22 @@ class CLICredentialBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
+            |  ``default:`` 22
+
+             :param ssh_port: CLI SSH Port
+             :type ssh_port: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` 23
+
+             :param telnet_port: CLI Telnet Port
+             :type telnet_port: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
             |  ``default:`` None
 
              :param enable_password: Enable mode password
@@ -1123,7 +1051,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` False
 
-             :param async_ind: When false, the credential test will be run synchronously, and the API call will block until it is complete. When true, credential test id will be returned to use for subsequent calls
+             :param async_ind: When false, the credential test will be run synchronously, and the API call will block until it is complete. When true, credential test ID will be returned to use for subsequent calls
              :type async_ind: Boolean
 
             **Outputs**
@@ -1141,7 +1069,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return id: The internal #{Brand.lookup(:PRODUCT_NAME_ONLY)} identifier for previously initiated credential test.
+             :return id: The internal NetMRI identifier for previously initiated credential test.
              :rtype id: String
 
             """
@@ -1158,7 +1086,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param id: Credential test id needed to retrieve status
+             :param id: Credential test ID needed to retrieve status
              :type id: String
 
             |  ``api version min:`` None
@@ -1176,7 +1104,7 @@ class CLICredentialBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return text: credential test result
+             :return text: Credential test result
              :rtype text: String
 
             |  ``api version min:`` None

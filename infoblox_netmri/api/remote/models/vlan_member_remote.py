@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class VlanMemberRemote(RemoteModel):
     """
-    Device memberships in VLANs, along with their STP configurations.  This includes switch members (BridgeMemberInd = 1) and devices attached to access ports (BridgeMemberInd = 0).
+    Device memberships in VLANs, along with their STP configurations. This includes switch members (BridgeMemberInd = 1) and devices attached to access ports (BridgeMemberInd = 0).
 
 
     |  ``BaseBridgeAddress:`` The spanning tree protocol base bridge address of this bridge. Empty for non-bridge members.

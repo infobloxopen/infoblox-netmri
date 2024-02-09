@@ -5,7 +5,7 @@ class DiscoverySettingBroker(Broker):
     controller = "discovery_settings"
 
     def index(self, **kwargs):
-        """Lists the available discovery settings. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available discovery settings. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -78,7 +78,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -86,7 +86,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -96,22 +96,6 @@ class DiscoverySettingBroker(Broker):
 
              :param select: The list of attributes to return for each DiscoverySetting. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -185,7 +169,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -193,7 +177,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -203,22 +187,6 @@ class DiscoverySettingBroker(Broker):
 
              :param select: The list of attributes to return for each DiscoverySetting. Valid values are id, range_value, range_start, range_end, range_start_numeric, range_end_numeric, range_mask, range_type, discovery_status, created_at, updated_at, UnitID, created_by, updated_by, ping_sweep_ind, smart_ping_sweep_ind, start_blackout_schedule, blackout_duration, virtual_network_id, start_port_control_blackout_schedule, port_control_blackout_duration, cidr_count. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -345,7 +313,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created discovery setting.
+             :return uri: The URI that may be used to retrieve the newly created discovery setting.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -436,7 +404,7 @@ class DiscoverySettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated discovery setting.
+             :return uri: The URI that may be used to retrieve the updated discovery setting.
              :rtype uri: String
 
             |  ``api version min:`` None

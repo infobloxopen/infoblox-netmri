@@ -36,7 +36,7 @@ class IfGroupRemote(RemoteModel):
     |  ``attribute type:`` string
 
     |  ``Rank:`` The Group rank.
-    |  ``attribute type:`` string
+    |  ``attribute type:`` number
 
     |  ``SNMPPolling:`` The SNMP Polling indicator of the Group.
     |  ``attribute type:`` string

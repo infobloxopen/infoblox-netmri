@@ -5,7 +5,7 @@ class IfWirelessSSIDBroker(Broker):
     controller = "if_wireless_ssids"
 
     def index(self, **kwargs):
-        """Lists the available if wireless ssids. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available if wireless ssids. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -110,7 +110,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IfWirelessSSIDID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IfWirelessSSIDID. Valid values are IfWirelessSSIDID, ifWirelessSSIDStartTime, ifWirelessSSIDEndTime, ifWirelessSSIDChangedCols, ifWirelessSSIDTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, SSIDIndex, SSID, SSIDMaxAssociations, WEPMICAlgorithm, WEPPermuteAlgorithm, SSIDDefaultVlanIndex, VlanID, SSIDBroadcastInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IfWirelessSSIDID, ifWirelessSSIDStartTime, ifWirelessSSIDEndTime, ifWirelessSSIDChangedCols, ifWirelessSSIDTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, SSIDIndex, SSID, SSIDMaxAssociations, WEPMICAlgorithm, WEPPermuteAlgorithm, SSIDDefaultVlanIndex, VlanID, SSIDBroadcastInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -118,7 +118,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -128,22 +128,6 @@ class IfWirelessSSIDBroker(Broker):
 
              :param select: The list of attributes to return for each IfWirelessSSID. Valid values are IfWirelessSSIDID, ifWirelessSSIDStartTime, ifWirelessSSIDEndTime, ifWirelessSSIDChangedCols, ifWirelessSSIDTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, SSIDIndex, SSID, SSIDMaxAssociations, WEPMICAlgorithm, WEPPermuteAlgorithm, SSIDDefaultVlanIndex, VlanID, SSIDBroadcastInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -532,7 +516,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IfWirelessSSIDID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IfWirelessSSIDID. Valid values are IfWirelessSSIDID, ifWirelessSSIDStartTime, ifWirelessSSIDEndTime, ifWirelessSSIDChangedCols, ifWirelessSSIDTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, SSIDIndex, SSID, SSIDMaxAssociations, WEPMICAlgorithm, WEPPermuteAlgorithm, SSIDDefaultVlanIndex, VlanID, SSIDBroadcastInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IfWirelessSSIDID, ifWirelessSSIDStartTime, ifWirelessSSIDEndTime, ifWirelessSSIDChangedCols, ifWirelessSSIDTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, SSIDIndex, SSID, SSIDMaxAssociations, WEPMICAlgorithm, WEPPermuteAlgorithm, SSIDDefaultVlanIndex, VlanID, SSIDBroadcastInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -540,7 +524,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -550,22 +534,6 @@ class IfWirelessSSIDBroker(Broker):
 
              :param select: The list of attributes to return for each IfWirelessSSID. Valid values are IfWirelessSSIDID, ifWirelessSSIDStartTime, ifWirelessSSIDEndTime, ifWirelessSSIDChangedCols, ifWirelessSSIDTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, SSIDIndex, SSID, SSIDMaxAssociations, WEPMICAlgorithm, WEPPermuteAlgorithm, SSIDDefaultVlanIndex, VlanID, SSIDBroadcastInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -623,7 +591,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IfWirelessSSIDID: If op_IfWirelessSSIDID is specified, this value will be compared to the value in IfWirelessSSIDID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IfWirelessSSIDID must be specified if op_IfWirelessSSIDID is specified.
+             :param val_c_IfWirelessSSIDID: If op_IfWirelessSSIDID is specified, this value will be compared to the value in IfWirelessSSIDID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IfWirelessSSIDID must be specified if op_IfWirelessSSIDID is specified. If the rlike or not rlike value is specified in the op_IfWirelessSSIDID field, escape regex special characters because a regular expression is expected.
              :type val_c_IfWirelessSSIDID: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSID: If op_SSID is specified, this value will be compared to the value in SSID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSID must be specified if op_SSID is specified.
+             :param val_c_SSID: If op_SSID is specified, this value will be compared to the value in SSID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSID must be specified if op_SSID is specified. If the rlike or not rlike value is specified in the op_SSID field, escape regex special characters because a regular expression is expected.
              :type val_c_SSID: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDBroadcastInd: If op_SSIDBroadcastInd is specified, this value will be compared to the value in SSIDBroadcastInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDBroadcastInd must be specified if op_SSIDBroadcastInd is specified.
+             :param val_c_SSIDBroadcastInd: If op_SSIDBroadcastInd is specified, this value will be compared to the value in SSIDBroadcastInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDBroadcastInd must be specified if op_SSIDBroadcastInd is specified. If the rlike or not rlike value is specified in the op_SSIDBroadcastInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDBroadcastInd: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDDefaultVlanIndex: If op_SSIDDefaultVlanIndex is specified, this value will be compared to the value in SSIDDefaultVlanIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDDefaultVlanIndex must be specified if op_SSIDDefaultVlanIndex is specified.
+             :param val_c_SSIDDefaultVlanIndex: If op_SSIDDefaultVlanIndex is specified, this value will be compared to the value in SSIDDefaultVlanIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDDefaultVlanIndex must be specified if op_SSIDDefaultVlanIndex is specified. If the rlike or not rlike value is specified in the op_SSIDDefaultVlanIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDDefaultVlanIndex: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDIndex: If op_SSIDIndex is specified, this value will be compared to the value in SSIDIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDIndex must be specified if op_SSIDIndex is specified.
+             :param val_c_SSIDIndex: If op_SSIDIndex is specified, this value will be compared to the value in SSIDIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDIndex must be specified if op_SSIDIndex is specified. If the rlike or not rlike value is specified in the op_SSIDIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDIndex: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDMaxAssociations: If op_SSIDMaxAssociations is specified, this value will be compared to the value in SSIDMaxAssociations using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDMaxAssociations must be specified if op_SSIDMaxAssociations is specified.
+             :param val_c_SSIDMaxAssociations: If op_SSIDMaxAssociations is specified, this value will be compared to the value in SSIDMaxAssociations using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDMaxAssociations must be specified if op_SSIDMaxAssociations is specified. If the rlike or not rlike value is specified in the op_SSIDMaxAssociations field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDMaxAssociations: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanID: If op_VlanID is specified, this value will be compared to the value in VlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanID must be specified if op_VlanID is specified.
+             :param val_c_VlanID: If op_VlanID is specified, this value will be compared to the value in VlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanID must be specified if op_VlanID is specified. If the rlike or not rlike value is specified in the op_VlanID field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanID: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WEPMICAlgorithm: If op_WEPMICAlgorithm is specified, this value will be compared to the value in WEPMICAlgorithm using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPMICAlgorithm must be specified if op_WEPMICAlgorithm is specified.
+             :param val_c_WEPMICAlgorithm: If op_WEPMICAlgorithm is specified, this value will be compared to the value in WEPMICAlgorithm using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPMICAlgorithm must be specified if op_WEPMICAlgorithm is specified. If the rlike or not rlike value is specified in the op_WEPMICAlgorithm field, escape regex special characters because a regular expression is expected.
              :type val_c_WEPMICAlgorithm: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WEPPermuteAlgorithm: If op_WEPPermuteAlgorithm is specified, this value will be compared to the value in WEPPermuteAlgorithm using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPPermuteAlgorithm must be specified if op_WEPPermuteAlgorithm is specified.
+             :param val_c_WEPPermuteAlgorithm: If op_WEPPermuteAlgorithm is specified, this value will be compared to the value in WEPPermuteAlgorithm using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPPermuteAlgorithm must be specified if op_WEPPermuteAlgorithm is specified. If the rlike or not rlike value is specified in the op_WEPPermuteAlgorithm field, escape regex special characters because a regular expression is expected.
              :type val_c_WEPPermuteAlgorithm: String
 
             |  ``api version min:`` None
@@ -911,7 +879,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -935,7 +903,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifWirelessSSIDChangedCols: If op_ifWirelessSSIDChangedCols is specified, this value will be compared to the value in ifWirelessSSIDChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDChangedCols must be specified if op_ifWirelessSSIDChangedCols is specified.
+             :param val_c_ifWirelessSSIDChangedCols: If op_ifWirelessSSIDChangedCols is specified, this value will be compared to the value in ifWirelessSSIDChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDChangedCols must be specified if op_ifWirelessSSIDChangedCols is specified. If the rlike or not rlike value is specified in the op_ifWirelessSSIDChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_ifWirelessSSIDChangedCols: String
 
             |  ``api version min:`` None
@@ -959,7 +927,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifWirelessSSIDEndTime: If op_ifWirelessSSIDEndTime is specified, this value will be compared to the value in ifWirelessSSIDEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDEndTime must be specified if op_ifWirelessSSIDEndTime is specified.
+             :param val_c_ifWirelessSSIDEndTime: If op_ifWirelessSSIDEndTime is specified, this value will be compared to the value in ifWirelessSSIDEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDEndTime must be specified if op_ifWirelessSSIDEndTime is specified. If the rlike or not rlike value is specified in the op_ifWirelessSSIDEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_ifWirelessSSIDEndTime: String
 
             |  ``api version min:`` None
@@ -983,7 +951,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifWirelessSSIDStartTime: If op_ifWirelessSSIDStartTime is specified, this value will be compared to the value in ifWirelessSSIDStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDStartTime must be specified if op_ifWirelessSSIDStartTime is specified.
+             :param val_c_ifWirelessSSIDStartTime: If op_ifWirelessSSIDStartTime is specified, this value will be compared to the value in ifWirelessSSIDStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDStartTime must be specified if op_ifWirelessSSIDStartTime is specified. If the rlike or not rlike value is specified in the op_ifWirelessSSIDStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_ifWirelessSSIDStartTime: String
 
             |  ``api version min:`` None
@@ -1007,7 +975,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifWirelessSSIDTimestamp: If op_ifWirelessSSIDTimestamp is specified, this value will be compared to the value in ifWirelessSSIDTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDTimestamp must be specified if op_ifWirelessSSIDTimestamp is specified.
+             :param val_c_ifWirelessSSIDTimestamp: If op_ifWirelessSSIDTimestamp is specified, this value will be compared to the value in ifWirelessSSIDTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDTimestamp must be specified if op_ifWirelessSSIDTimestamp is specified. If the rlike or not rlike value is specified in the op_ifWirelessSSIDTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_ifWirelessSSIDTimestamp: String
 
             |  ``api version min:`` None
@@ -1063,7 +1031,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IfWirelessSSIDID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IfWirelessSSIDID. Valid values are IfWirelessSSIDID, ifWirelessSSIDStartTime, ifWirelessSSIDEndTime, ifWirelessSSIDChangedCols, ifWirelessSSIDTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, SSIDIndex, SSID, SSIDMaxAssociations, WEPMICAlgorithm, WEPPermuteAlgorithm, SSIDDefaultVlanIndex, VlanID, SSIDBroadcastInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IfWirelessSSIDID, ifWirelessSSIDStartTime, ifWirelessSSIDEndTime, ifWirelessSSIDChangedCols, ifWirelessSSIDTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, SSIDIndex, SSID, SSIDMaxAssociations, WEPMICAlgorithm, WEPPermuteAlgorithm, SSIDDefaultVlanIndex, VlanID, SSIDBroadcastInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1081,22 +1049,6 @@ class IfWirelessSSIDBroker(Broker):
 
              :param select: The list of attributes to return for each IfWirelessSSID. Valid values are IfWirelessSSIDID, ifWirelessSSIDStartTime, ifWirelessSSIDEndTime, ifWirelessSSIDChangedCols, ifWirelessSSIDTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, SSIDIndex, SSID, SSIDMaxAssociations, WEPMICAlgorithm, WEPPermuteAlgorithm, SSIDDefaultVlanIndex, VlanID, SSIDBroadcastInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1140,8 +1092,8 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1167,8 +1119,8 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -1194,8 +1146,8 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : interface
-             :rtype : Interface
+             :return interface: interface
+             :rtype interface: Interface
 
             """
 
@@ -1221,8 +1173,8 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : vlan
-             :rtype : Vlan
+             :return vlan: vlan
+             :rtype vlan: Vlan
 
             """
 
@@ -1248,8 +1200,8 @@ class IfWirelessSSIDBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

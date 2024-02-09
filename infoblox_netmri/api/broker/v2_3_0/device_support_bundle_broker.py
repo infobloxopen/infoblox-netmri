@@ -5,7 +5,7 @@ class DeviceSupportBundleBroker(Broker):
     controller = "device_support_bundles"
 
     def index(self, **kwargs):
-        """Lists the available device support bundles. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device support bundles. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -46,7 +46,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, version, author, enabled_ind, system_ind, neighbor_ind, inventory_ind, environmental_ind, cpu_ind, memory_ind, vlan_ind, forwarding_ind, port_ind, config_ind, created_by, updated_by, created_at, updated_at, valid_ind, unit_tests, status, integrated_ind.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, version, author, enabled_ind, system_ind, neighbor_ind, inventory_ind, environmental_ind, cpu_ind, memory_ind, vlan_ind, forwarding_ind, port_ind, config_ind, created_by, updated_by, created_at, updated_at, valid_ind, unit_tests, status, integrated_ind.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -54,7 +54,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -64,22 +64,6 @@ class DeviceSupportBundleBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceSupportBundle. Valid values are id, name, version, author, enabled_ind, system_ind, neighbor_ind, inventory_ind, environmental_ind, cpu_ind, memory_ind, vlan_ind, forwarding_ind, port_ind, config_ind, created_by, updated_by, created_at, updated_at, valid_ind, unit_tests, status, integrated_ind. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -489,7 +473,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, version, author, enabled_ind, system_ind, neighbor_ind, inventory_ind, environmental_ind, cpu_ind, memory_ind, vlan_ind, forwarding_ind, port_ind, config_ind, created_by, updated_by, created_at, updated_at, valid_ind, unit_tests, status, integrated_ind.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, version, author, enabled_ind, system_ind, neighbor_ind, inventory_ind, environmental_ind, cpu_ind, memory_ind, vlan_ind, forwarding_ind, port_ind, config_ind, created_by, updated_by, created_at, updated_at, valid_ind, unit_tests, status, integrated_ind.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -497,7 +481,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -507,22 +491,6 @@ class DeviceSupportBundleBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceSupportBundle. Valid values are id, name, version, author, enabled_ind, system_ind, neighbor_ind, inventory_ind, environmental_ind, cpu_ind, memory_ind, vlan_ind, forwarding_ind, port_ind, config_ind, created_by, updated_by, created_at, updated_at, valid_ind, unit_tests, status, integrated_ind. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -580,7 +548,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_author: If op_author is specified, this value will be compared to the value in author using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_author must be specified if op_author is specified.
+             :param val_c_author: If op_author is specified, this value will be compared to the value in author using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_author must be specified if op_author is specified. If the rlike or not rlike value is specified in the op_author field, escape regex special characters because a regular expression is expected.
              :type val_c_author: String
 
             |  ``api version min:`` None
@@ -604,7 +572,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_config_ind: If op_config_ind is specified, this value will be compared to the value in config_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_config_ind must be specified if op_config_ind is specified.
+             :param val_c_config_ind: If op_config_ind is specified, this value will be compared to the value in config_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_config_ind must be specified if op_config_ind is specified. If the rlike or not rlike value is specified in the op_config_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_config_ind: String
 
             |  ``api version min:`` None
@@ -628,7 +596,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cpu_ind: If op_cpu_ind is specified, this value will be compared to the value in cpu_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cpu_ind must be specified if op_cpu_ind is specified.
+             :param val_c_cpu_ind: If op_cpu_ind is specified, this value will be compared to the value in cpu_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cpu_ind must be specified if op_cpu_ind is specified. If the rlike or not rlike value is specified in the op_cpu_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cpu_ind: String
 
             |  ``api version min:`` None
@@ -652,7 +620,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -676,7 +644,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_by: If op_created_by is specified, this value will be compared to the value in created_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_by must be specified if op_created_by is specified.
+             :param val_c_created_by: If op_created_by is specified, this value will be compared to the value in created_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_by must be specified if op_created_by is specified. If the rlike or not rlike value is specified in the op_created_by field, escape regex special characters because a regular expression is expected.
              :type val_c_created_by: String
 
             |  ``api version min:`` None
@@ -700,7 +668,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_enabled_ind: If op_enabled_ind is specified, this value will be compared to the value in enabled_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_enabled_ind must be specified if op_enabled_ind is specified.
+             :param val_c_enabled_ind: If op_enabled_ind is specified, this value will be compared to the value in enabled_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_enabled_ind must be specified if op_enabled_ind is specified. If the rlike or not rlike value is specified in the op_enabled_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_enabled_ind: String
 
             |  ``api version min:`` None
@@ -724,7 +692,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_environmental_ind: If op_environmental_ind is specified, this value will be compared to the value in environmental_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_environmental_ind must be specified if op_environmental_ind is specified.
+             :param val_c_environmental_ind: If op_environmental_ind is specified, this value will be compared to the value in environmental_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_environmental_ind must be specified if op_environmental_ind is specified. If the rlike or not rlike value is specified in the op_environmental_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_environmental_ind: String
 
             |  ``api version min:`` None
@@ -748,7 +716,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_forwarding_ind: If op_forwarding_ind is specified, this value will be compared to the value in forwarding_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_forwarding_ind must be specified if op_forwarding_ind is specified.
+             :param val_c_forwarding_ind: If op_forwarding_ind is specified, this value will be compared to the value in forwarding_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_forwarding_ind must be specified if op_forwarding_ind is specified. If the rlike or not rlike value is specified in the op_forwarding_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_forwarding_ind: String
 
             |  ``api version min:`` None
@@ -772,7 +740,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -796,7 +764,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_integrated_ind: If op_integrated_ind is specified, this value will be compared to the value in integrated_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_integrated_ind must be specified if op_integrated_ind is specified.
+             :param val_c_integrated_ind: If op_integrated_ind is specified, this value will be compared to the value in integrated_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_integrated_ind must be specified if op_integrated_ind is specified. If the rlike or not rlike value is specified in the op_integrated_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_integrated_ind: String
 
             |  ``api version min:`` None
@@ -820,7 +788,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_inventory_ind: If op_inventory_ind is specified, this value will be compared to the value in inventory_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_inventory_ind must be specified if op_inventory_ind is specified.
+             :param val_c_inventory_ind: If op_inventory_ind is specified, this value will be compared to the value in inventory_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_inventory_ind must be specified if op_inventory_ind is specified. If the rlike or not rlike value is specified in the op_inventory_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_inventory_ind: String
 
             |  ``api version min:`` None
@@ -844,7 +812,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_memory_ind: If op_memory_ind is specified, this value will be compared to the value in memory_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_memory_ind must be specified if op_memory_ind is specified.
+             :param val_c_memory_ind: If op_memory_ind is specified, this value will be compared to the value in memory_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_memory_ind must be specified if op_memory_ind is specified. If the rlike or not rlike value is specified in the op_memory_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_memory_ind: String
 
             |  ``api version min:`` None
@@ -868,7 +836,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified.
+             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified. If the rlike or not rlike value is specified in the op_name field, escape regex special characters because a regular expression is expected.
              :type val_c_name: String
 
             |  ``api version min:`` None
@@ -892,7 +860,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_neighbor_ind: If op_neighbor_ind is specified, this value will be compared to the value in neighbor_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_neighbor_ind must be specified if op_neighbor_ind is specified.
+             :param val_c_neighbor_ind: If op_neighbor_ind is specified, this value will be compared to the value in neighbor_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_neighbor_ind must be specified if op_neighbor_ind is specified. If the rlike or not rlike value is specified in the op_neighbor_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_neighbor_ind: String
 
             |  ``api version min:`` None
@@ -916,7 +884,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_port_ind: If op_port_ind is specified, this value will be compared to the value in port_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_port_ind must be specified if op_port_ind is specified.
+             :param val_c_port_ind: If op_port_ind is specified, this value will be compared to the value in port_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_port_ind must be specified if op_port_ind is specified. If the rlike or not rlike value is specified in the op_port_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_port_ind: String
 
             |  ``api version min:`` None
@@ -940,7 +908,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_status: If op_status is specified, this value will be compared to the value in status using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_status must be specified if op_status is specified.
+             :param val_c_status: If op_status is specified, this value will be compared to the value in status using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_status must be specified if op_status is specified. If the rlike or not rlike value is specified in the op_status field, escape regex special characters because a regular expression is expected.
              :type val_c_status: String
 
             |  ``api version min:`` None
@@ -964,7 +932,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_system_ind: If op_system_ind is specified, this value will be compared to the value in system_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_system_ind must be specified if op_system_ind is specified.
+             :param val_c_system_ind: If op_system_ind is specified, this value will be compared to the value in system_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_system_ind must be specified if op_system_ind is specified. If the rlike or not rlike value is specified in the op_system_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_system_ind: String
 
             |  ``api version min:`` None
@@ -988,7 +956,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_unit_tests: If op_unit_tests is specified, this value will be compared to the value in unit_tests using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_unit_tests must be specified if op_unit_tests is specified.
+             :param val_c_unit_tests: If op_unit_tests is specified, this value will be compared to the value in unit_tests using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_unit_tests must be specified if op_unit_tests is specified. If the rlike or not rlike value is specified in the op_unit_tests field, escape regex special characters because a regular expression is expected.
              :type val_c_unit_tests: String
 
             |  ``api version min:`` None
@@ -1012,7 +980,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -1036,7 +1004,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_by: If op_updated_by is specified, this value will be compared to the value in updated_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_by must be specified if op_updated_by is specified.
+             :param val_c_updated_by: If op_updated_by is specified, this value will be compared to the value in updated_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_by must be specified if op_updated_by is specified. If the rlike or not rlike value is specified in the op_updated_by field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_by: String
 
             |  ``api version min:`` None
@@ -1060,7 +1028,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_valid_ind: If op_valid_ind is specified, this value will be compared to the value in valid_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_valid_ind must be specified if op_valid_ind is specified.
+             :param val_c_valid_ind: If op_valid_ind is specified, this value will be compared to the value in valid_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_valid_ind must be specified if op_valid_ind is specified. If the rlike or not rlike value is specified in the op_valid_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_valid_ind: String
 
             |  ``api version min:`` None
@@ -1084,7 +1052,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_version: If op_version is specified, this value will be compared to the value in version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_version must be specified if op_version is specified.
+             :param val_c_version: If op_version is specified, this value will be compared to the value in version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_version must be specified if op_version is specified. If the rlike or not rlike value is specified in the op_version field, escape regex special characters because a regular expression is expected.
              :type val_c_version: String
 
             |  ``api version min:`` None
@@ -1108,7 +1076,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_vlan_ind: If op_vlan_ind is specified, this value will be compared to the value in vlan_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vlan_ind must be specified if op_vlan_ind is specified.
+             :param val_c_vlan_ind: If op_vlan_ind is specified, this value will be compared to the value in vlan_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vlan_ind must be specified if op_vlan_ind is specified. If the rlike or not rlike value is specified in the op_vlan_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_vlan_ind: String
 
             |  ``api version min:`` None
@@ -1132,7 +1100,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, version, author, enabled_ind, system_ind, neighbor_ind, inventory_ind, environmental_ind, cpu_ind, memory_ind, vlan_ind, forwarding_ind, port_ind, config_ind, created_by, updated_by, created_at, updated_at, valid_ind, unit_tests, status, integrated_ind.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, version, author, enabled_ind, system_ind, neighbor_ind, inventory_ind, environmental_ind, cpu_ind, memory_ind, vlan_ind, forwarding_ind, port_ind, config_ind, created_by, updated_by, created_at, updated_at, valid_ind, unit_tests, status, integrated_ind.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1140,7 +1108,7 @@ class DeviceSupportBundleBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1150,22 +1118,6 @@ class DeviceSupportBundleBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceSupportBundle. Valid values are id, name, version, author, enabled_ind, system_ind, neighbor_ind, inventory_ind, environmental_ind, cpu_ind, memory_ind, vlan_ind, forwarding_ind, port_ind, config_ind, created_by, updated_by, created_at, updated_at, valid_ind, unit_tests, status, integrated_ind. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

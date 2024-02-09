@@ -5,7 +5,7 @@ class NiosGridMemberBroker(Broker):
     controller = "nios_grid_members"
 
     def index(self, **kwargs):
-        """Lists the available nios grid members. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available nios grid members. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -126,7 +126,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` GridMemberStatusID
 
-             :param sort: The data field(s) to use for sorting the output. Default is GridMemberStatusID. Valid values are DataSourceID, GridMemberStatusID, GridMemberStartTime, GridMemberEndTime, GridMemberChangedCols, GridMemberTimestamp, GridMemberFirstSeenTime, DeviceID, GridMemberDeviceID, GridMemberIPDotted, GridMemberIPNumeric, GridMemberStatus, GridMemberQueueFromMaster, GridMemberLastRepTimeFromMaster, GridMemberQueueToMaster, GridMemberLastRepTimeToMaster.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, GridMemberStatusID, GridMemberStartTime, GridMemberEndTime, GridMemberChangedCols, GridMemberTimestamp, GridMemberFirstSeenTime, DeviceID, GridMemberDeviceID, GridMemberIPDotted, GridMemberIPNumeric, GridMemberStatus, GridMemberQueueFromMaster, GridMemberLastRepTimeFromMaster, GridMemberQueueToMaster, GridMemberLastRepTimeToMaster.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -134,7 +134,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -144,22 +144,6 @@ class NiosGridMemberBroker(Broker):
 
              :param select: The list of attributes to return for each NiosGridMember. Valid values are DataSourceID, GridMemberStatusID, GridMemberStartTime, GridMemberEndTime, GridMemberChangedCols, GridMemberTimestamp, GridMemberFirstSeenTime, DeviceID, GridMemberDeviceID, GridMemberIPDotted, GridMemberIPNumeric, GridMemberStatus, GridMemberQueueFromMaster, GridMemberLastRepTimeFromMaster, GridMemberQueueToMaster, GridMemberLastRepTimeToMaster. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -532,7 +516,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` GridMemberStatusID
 
-             :param sort: The data field(s) to use for sorting the output. Default is GridMemberStatusID. Valid values are DataSourceID, GridMemberStatusID, GridMemberStartTime, GridMemberEndTime, GridMemberChangedCols, GridMemberTimestamp, GridMemberFirstSeenTime, DeviceID, GridMemberDeviceID, GridMemberIPDotted, GridMemberIPNumeric, GridMemberStatus, GridMemberQueueFromMaster, GridMemberLastRepTimeFromMaster, GridMemberQueueToMaster, GridMemberLastRepTimeToMaster.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, GridMemberStatusID, GridMemberStartTime, GridMemberEndTime, GridMemberChangedCols, GridMemberTimestamp, GridMemberFirstSeenTime, DeviceID, GridMemberDeviceID, GridMemberIPDotted, GridMemberIPNumeric, GridMemberStatus, GridMemberQueueFromMaster, GridMemberLastRepTimeFromMaster, GridMemberQueueToMaster, GridMemberLastRepTimeToMaster.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -540,7 +524,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -550,22 +534,6 @@ class NiosGridMemberBroker(Broker):
 
              :param select: The list of attributes to return for each NiosGridMember. Valid values are DataSourceID, GridMemberStatusID, GridMemberStartTime, GridMemberEndTime, GridMemberChangedCols, GridMemberTimestamp, GridMemberFirstSeenTime, DeviceID, GridMemberDeviceID, GridMemberIPDotted, GridMemberIPNumeric, GridMemberStatus, GridMemberQueueFromMaster, GridMemberLastRepTimeFromMaster, GridMemberQueueToMaster, GridMemberLastRepTimeToMaster. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -623,7 +591,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberChangedCols: If op_GridMemberChangedCols is specified, this value will be compared to the value in GridMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberChangedCols must be specified if op_GridMemberChangedCols is specified.
+             :param val_c_GridMemberChangedCols: If op_GridMemberChangedCols is specified, this value will be compared to the value in GridMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberChangedCols must be specified if op_GridMemberChangedCols is specified. If the rlike or not rlike value is specified in the op_GridMemberChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberChangedCols: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberDeviceID: If op_GridMemberDeviceID is specified, this value will be compared to the value in GridMemberDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberDeviceID must be specified if op_GridMemberDeviceID is specified.
+             :param val_c_GridMemberDeviceID: If op_GridMemberDeviceID is specified, this value will be compared to the value in GridMemberDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberDeviceID must be specified if op_GridMemberDeviceID is specified. If the rlike or not rlike value is specified in the op_GridMemberDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberDeviceID: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberEndTime: If op_GridMemberEndTime is specified, this value will be compared to the value in GridMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberEndTime must be specified if op_GridMemberEndTime is specified.
+             :param val_c_GridMemberEndTime: If op_GridMemberEndTime is specified, this value will be compared to the value in GridMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberEndTime must be specified if op_GridMemberEndTime is specified. If the rlike or not rlike value is specified in the op_GridMemberEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberEndTime: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberFirstSeenTime: If op_GridMemberFirstSeenTime is specified, this value will be compared to the value in GridMemberFirstSeenTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberFirstSeenTime must be specified if op_GridMemberFirstSeenTime is specified.
+             :param val_c_GridMemberFirstSeenTime: If op_GridMemberFirstSeenTime is specified, this value will be compared to the value in GridMemberFirstSeenTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberFirstSeenTime must be specified if op_GridMemberFirstSeenTime is specified. If the rlike or not rlike value is specified in the op_GridMemberFirstSeenTime field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberFirstSeenTime: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberIPDotted: If op_GridMemberIPDotted is specified, this value will be compared to the value in GridMemberIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberIPDotted must be specified if op_GridMemberIPDotted is specified.
+             :param val_c_GridMemberIPDotted: If op_GridMemberIPDotted is specified, this value will be compared to the value in GridMemberIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberIPDotted must be specified if op_GridMemberIPDotted is specified. If the rlike or not rlike value is specified in the op_GridMemberIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberIPDotted: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberIPNumeric: If op_GridMemberIPNumeric is specified, this value will be compared to the value in GridMemberIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberIPNumeric must be specified if op_GridMemberIPNumeric is specified.
+             :param val_c_GridMemberIPNumeric: If op_GridMemberIPNumeric is specified, this value will be compared to the value in GridMemberIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberIPNumeric must be specified if op_GridMemberIPNumeric is specified. If the rlike or not rlike value is specified in the op_GridMemberIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberIPNumeric: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberLastRepTimeFromMaster: If op_GridMemberLastRepTimeFromMaster is specified, this value will be compared to the value in GridMemberLastRepTimeFromMaster using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberLastRepTimeFromMaster must be specified if op_GridMemberLastRepTimeFromMaster is specified.
+             :param val_c_GridMemberLastRepTimeFromMaster: If op_GridMemberLastRepTimeFromMaster is specified, this value will be compared to the value in GridMemberLastRepTimeFromMaster using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberLastRepTimeFromMaster must be specified if op_GridMemberLastRepTimeFromMaster is specified. If the rlike or not rlike value is specified in the op_GridMemberLastRepTimeFromMaster field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberLastRepTimeFromMaster: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberLastRepTimeToMaster: If op_GridMemberLastRepTimeToMaster is specified, this value will be compared to the value in GridMemberLastRepTimeToMaster using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberLastRepTimeToMaster must be specified if op_GridMemberLastRepTimeToMaster is specified.
+             :param val_c_GridMemberLastRepTimeToMaster: If op_GridMemberLastRepTimeToMaster is specified, this value will be compared to the value in GridMemberLastRepTimeToMaster using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberLastRepTimeToMaster must be specified if op_GridMemberLastRepTimeToMaster is specified. If the rlike or not rlike value is specified in the op_GridMemberLastRepTimeToMaster field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberLastRepTimeToMaster: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberQueueFromMaster: If op_GridMemberQueueFromMaster is specified, this value will be compared to the value in GridMemberQueueFromMaster using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberQueueFromMaster must be specified if op_GridMemberQueueFromMaster is specified.
+             :param val_c_GridMemberQueueFromMaster: If op_GridMemberQueueFromMaster is specified, this value will be compared to the value in GridMemberQueueFromMaster using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberQueueFromMaster must be specified if op_GridMemberQueueFromMaster is specified. If the rlike or not rlike value is specified in the op_GridMemberQueueFromMaster field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberQueueFromMaster: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberQueueToMaster: If op_GridMemberQueueToMaster is specified, this value will be compared to the value in GridMemberQueueToMaster using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberQueueToMaster must be specified if op_GridMemberQueueToMaster is specified.
+             :param val_c_GridMemberQueueToMaster: If op_GridMemberQueueToMaster is specified, this value will be compared to the value in GridMemberQueueToMaster using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberQueueToMaster must be specified if op_GridMemberQueueToMaster is specified. If the rlike or not rlike value is specified in the op_GridMemberQueueToMaster field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberQueueToMaster: String
 
             |  ``api version min:`` None
@@ -911,7 +879,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberStartTime: If op_GridMemberStartTime is specified, this value will be compared to the value in GridMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberStartTime must be specified if op_GridMemberStartTime is specified.
+             :param val_c_GridMemberStartTime: If op_GridMemberStartTime is specified, this value will be compared to the value in GridMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberStartTime must be specified if op_GridMemberStartTime is specified. If the rlike or not rlike value is specified in the op_GridMemberStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberStartTime: String
 
             |  ``api version min:`` None
@@ -935,7 +903,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberStatus: If op_GridMemberStatus is specified, this value will be compared to the value in GridMemberStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberStatus must be specified if op_GridMemberStatus is specified.
+             :param val_c_GridMemberStatus: If op_GridMemberStatus is specified, this value will be compared to the value in GridMemberStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberStatus must be specified if op_GridMemberStatus is specified. If the rlike or not rlike value is specified in the op_GridMemberStatus field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberStatus: String
 
             |  ``api version min:`` None
@@ -959,7 +927,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberStatusID: If op_GridMemberStatusID is specified, this value will be compared to the value in GridMemberStatusID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberStatusID must be specified if op_GridMemberStatusID is specified.
+             :param val_c_GridMemberStatusID: If op_GridMemberStatusID is specified, this value will be compared to the value in GridMemberStatusID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberStatusID must be specified if op_GridMemberStatusID is specified. If the rlike or not rlike value is specified in the op_GridMemberStatusID field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberStatusID: String
 
             |  ``api version min:`` None
@@ -983,7 +951,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GridMemberTimestamp: If op_GridMemberTimestamp is specified, this value will be compared to the value in GridMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberTimestamp must be specified if op_GridMemberTimestamp is specified.
+             :param val_c_GridMemberTimestamp: If op_GridMemberTimestamp is specified, this value will be compared to the value in GridMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GridMemberTimestamp must be specified if op_GridMemberTimestamp is specified. If the rlike or not rlike value is specified in the op_GridMemberTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_GridMemberTimestamp: String
 
             |  ``api version min:`` None
@@ -1039,7 +1007,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` GridMemberStatusID
 
-             :param sort: The data field(s) to use for sorting the output. Default is GridMemberStatusID. Valid values are DataSourceID, GridMemberStatusID, GridMemberStartTime, GridMemberEndTime, GridMemberChangedCols, GridMemberTimestamp, GridMemberFirstSeenTime, DeviceID, GridMemberDeviceID, GridMemberIPDotted, GridMemberIPNumeric, GridMemberStatus, GridMemberQueueFromMaster, GridMemberLastRepTimeFromMaster, GridMemberQueueToMaster, GridMemberLastRepTimeToMaster.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, GridMemberStatusID, GridMemberStartTime, GridMemberEndTime, GridMemberChangedCols, GridMemberTimestamp, GridMemberFirstSeenTime, DeviceID, GridMemberDeviceID, GridMemberIPDotted, GridMemberIPNumeric, GridMemberStatus, GridMemberQueueFromMaster, GridMemberLastRepTimeFromMaster, GridMemberQueueToMaster, GridMemberLastRepTimeToMaster.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1057,22 +1025,6 @@ class NiosGridMemberBroker(Broker):
 
              :param select: The list of attributes to return for each NiosGridMember. Valid values are DataSourceID, GridMemberStatusID, GridMemberStartTime, GridMemberEndTime, GridMemberChangedCols, GridMemberTimestamp, GridMemberFirstSeenTime, DeviceID, GridMemberDeviceID, GridMemberIPDotted, GridMemberIPNumeric, GridMemberStatus, GridMemberQueueFromMaster, GridMemberLastRepTimeFromMaster, GridMemberQueueToMaster, GridMemberLastRepTimeToMaster. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1116,8 +1068,8 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1143,8 +1095,8 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -1170,8 +1122,8 @@ class NiosGridMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

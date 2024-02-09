@@ -40,7 +40,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated interface.
+             :return uri: The URI that may be used to retrieve the updated interface.
              :rtype uri: String
 
             |  ``api version min:`` None

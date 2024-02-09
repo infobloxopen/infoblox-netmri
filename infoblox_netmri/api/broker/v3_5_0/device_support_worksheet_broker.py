@@ -5,7 +5,7 @@ class DeviceSupportWorksheetBroker(Broker):
     controller = "device_support_worksheets"
 
     def index(self, **kwargs):
-        """Lists the available device support worksheets. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device support worksheets. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -38,7 +38,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, device_id, device_ip_dotted, netmri_version, license_id, license_type, license_expiration, device_vendor, device_model, os_version, device_type, discovery_diagnostic_collected_ind, snmp_data_collected_ind, cli_session_collected_ind, priv_mode_info, syslogs_collected_ind, admin_guide_collected_ind, access_to_device, access_to_device_other, created_at, updated_at, user_in_device_type, user_in_device_vendor, user_in_device_model, user_in_os_version, user_in_device_capabilities, snmp_version, snmp_community_string, snmp_port, snmp_auth_username, snmp_auth_password, snmp_auth_protocol, snmp_privacy_password, snmp_privacy_protocol, preferred_cli, cli_username, cli_password, secure_version, package_name, device_discovered_ind, delivery_method, unit_id, status, step_number, delivery_addl_email, manual_data_entry_ind, status_msg, virtual_network_id, contact_method, customer_name, contact_name, contact_value.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, device_id, device_ip_dotted, netmri_version, license_id, license_type, license_expiration, device_vendor, device_model, os_version, device_type, discovery_diagnostic_collected_ind, snmp_data_collected_ind, cli_session_collected_ind, priv_mode_info, syslogs_collected_ind, admin_guide_collected_ind, access_to_device, access_to_device_other, created_at, updated_at, user_in_device_type, user_in_device_vendor, user_in_device_model, user_in_os_version, user_in_device_capabilities, snmp_version, snmp_community_string, snmp_port, snmp_auth_username, snmp_auth_password, snmp_auth_protocol, snmp_privacy_password, snmp_privacy_protocol, preferred_cli, cli_username, cli_password, secure_version, package_name, device_discovered_ind, delivery_method, unit_id, status, step_number, delivery_addl_email, manual_data_entry_ind, status_msg, virtual_network_id, contact_method, customer_name, contact_name, contact_value.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -46,7 +46,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -56,22 +56,6 @@ class DeviceSupportWorksheetBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceSupportWorksheet. Valid values are id, device_id, device_ip_dotted, netmri_version, license_id, license_type, license_expiration, device_vendor, device_model, os_version, device_type, discovery_diagnostic_collected_ind, snmp_data_collected_ind, cli_session_collected_ind, priv_mode_info, syslogs_collected_ind, admin_guide_collected_ind, access_to_device, access_to_device_other, created_at, updated_at, user_in_device_type, user_in_device_vendor, user_in_device_model, user_in_os_version, user_in_device_capabilities, snmp_version, snmp_community_string, snmp_port, snmp_auth_username, snmp_auth_password, snmp_auth_protocol, snmp_privacy_password, snmp_privacy_protocol, preferred_cli, cli_username, cli_password, secure_version, package_name, device_discovered_ind, delivery_method, unit_id, status, step_number, delivery_addl_email, manual_data_entry_ind, status_msg, virtual_network_id, contact_method, customer_name, contact_name, contact_value. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -529,7 +513,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, device_id, device_ip_dotted, netmri_version, license_id, license_type, license_expiration, device_vendor, device_model, os_version, device_type, discovery_diagnostic_collected_ind, snmp_data_collected_ind, cli_session_collected_ind, priv_mode_info, syslogs_collected_ind, admin_guide_collected_ind, access_to_device, access_to_device_other, created_at, updated_at, user_in_device_type, user_in_device_vendor, user_in_device_model, user_in_os_version, user_in_device_capabilities, snmp_version, snmp_community_string, snmp_port, snmp_auth_username, snmp_auth_password, snmp_auth_protocol, snmp_privacy_password, snmp_privacy_protocol, preferred_cli, cli_username, cli_password, secure_version, package_name, device_discovered_ind, delivery_method, unit_id, status, step_number, delivery_addl_email, manual_data_entry_ind, status_msg, virtual_network_id, contact_method, customer_name, contact_name, contact_value.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, device_id, device_ip_dotted, netmri_version, license_id, license_type, license_expiration, device_vendor, device_model, os_version, device_type, discovery_diagnostic_collected_ind, snmp_data_collected_ind, cli_session_collected_ind, priv_mode_info, syslogs_collected_ind, admin_guide_collected_ind, access_to_device, access_to_device_other, created_at, updated_at, user_in_device_type, user_in_device_vendor, user_in_device_model, user_in_os_version, user_in_device_capabilities, snmp_version, snmp_community_string, snmp_port, snmp_auth_username, snmp_auth_password, snmp_auth_protocol, snmp_privacy_password, snmp_privacy_protocol, preferred_cli, cli_username, cli_password, secure_version, package_name, device_discovered_ind, delivery_method, unit_id, status, step_number, delivery_addl_email, manual_data_entry_ind, status_msg, virtual_network_id, contact_method, customer_name, contact_name, contact_value.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -537,7 +521,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -547,22 +531,6 @@ class DeviceSupportWorksheetBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceSupportWorksheet. Valid values are id, device_id, device_ip_dotted, netmri_version, license_id, license_type, license_expiration, device_vendor, device_model, os_version, device_type, discovery_diagnostic_collected_ind, snmp_data_collected_ind, cli_session_collected_ind, priv_mode_info, syslogs_collected_ind, admin_guide_collected_ind, access_to_device, access_to_device_other, created_at, updated_at, user_in_device_type, user_in_device_vendor, user_in_device_model, user_in_os_version, user_in_device_capabilities, snmp_version, snmp_community_string, snmp_port, snmp_auth_username, snmp_auth_password, snmp_auth_protocol, snmp_privacy_password, snmp_privacy_protocol, preferred_cli, cli_username, cli_password, secure_version, package_name, device_discovered_ind, delivery_method, unit_id, status, step_number, delivery_addl_email, manual_data_entry_ind, status_msg, virtual_network_id, contact_method, customer_name, contact_name, contact_value. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -620,7 +588,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_access_to_device: If op_access_to_device is specified, this value will be compared to the value in access_to_device using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_access_to_device must be specified if op_access_to_device is specified.
+             :param val_c_access_to_device: If op_access_to_device is specified, this value will be compared to the value in access_to_device using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_access_to_device must be specified if op_access_to_device is specified. If the rlike or not rlike value is specified in the op_access_to_device field, escape regex special characters because a regular expression is expected.
              :type val_c_access_to_device: String
 
             |  ``api version min:`` None
@@ -644,7 +612,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_access_to_device_other: If op_access_to_device_other is specified, this value will be compared to the value in access_to_device_other using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_access_to_device_other must be specified if op_access_to_device_other is specified.
+             :param val_c_access_to_device_other: If op_access_to_device_other is specified, this value will be compared to the value in access_to_device_other using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_access_to_device_other must be specified if op_access_to_device_other is specified. If the rlike or not rlike value is specified in the op_access_to_device_other field, escape regex special characters because a regular expression is expected.
              :type val_c_access_to_device_other: String
 
             |  ``api version min:`` None
@@ -668,7 +636,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_admin_guide_collected_ind: If op_admin_guide_collected_ind is specified, this value will be compared to the value in admin_guide_collected_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_admin_guide_collected_ind must be specified if op_admin_guide_collected_ind is specified.
+             :param val_c_admin_guide_collected_ind: If op_admin_guide_collected_ind is specified, this value will be compared to the value in admin_guide_collected_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_admin_guide_collected_ind must be specified if op_admin_guide_collected_ind is specified. If the rlike or not rlike value is specified in the op_admin_guide_collected_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_admin_guide_collected_ind: String
 
             |  ``api version min:`` None
@@ -692,7 +660,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cli_password: If op_cli_password is specified, this value will be compared to the value in cli_password using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_password must be specified if op_cli_password is specified.
+             :param val_c_cli_password: If op_cli_password is specified, this value will be compared to the value in cli_password using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_password must be specified if op_cli_password is specified. If the rlike or not rlike value is specified in the op_cli_password field, escape regex special characters because a regular expression is expected.
              :type val_c_cli_password: String
 
             |  ``api version min:`` None
@@ -716,7 +684,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cli_session_collected_ind: If op_cli_session_collected_ind is specified, this value will be compared to the value in cli_session_collected_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_session_collected_ind must be specified if op_cli_session_collected_ind is specified.
+             :param val_c_cli_session_collected_ind: If op_cli_session_collected_ind is specified, this value will be compared to the value in cli_session_collected_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_session_collected_ind must be specified if op_cli_session_collected_ind is specified. If the rlike or not rlike value is specified in the op_cli_session_collected_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cli_session_collected_ind: String
 
             |  ``api version min:`` None
@@ -740,7 +708,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cli_username: If op_cli_username is specified, this value will be compared to the value in cli_username using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_username must be specified if op_cli_username is specified.
+             :param val_c_cli_username: If op_cli_username is specified, this value will be compared to the value in cli_username using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cli_username must be specified if op_cli_username is specified. If the rlike or not rlike value is specified in the op_cli_username field, escape regex special characters because a regular expression is expected.
              :type val_c_cli_username: String
 
             |  ``api version min:`` None
@@ -764,7 +732,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_contact_method: If op_contact_method is specified, this value will be compared to the value in contact_method using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_contact_method must be specified if op_contact_method is specified.
+             :param val_c_contact_method: If op_contact_method is specified, this value will be compared to the value in contact_method using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_contact_method must be specified if op_contact_method is specified. If the rlike or not rlike value is specified in the op_contact_method field, escape regex special characters because a regular expression is expected.
              :type val_c_contact_method: String
 
             |  ``api version min:`` None
@@ -788,7 +756,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_contact_name: If op_contact_name is specified, this value will be compared to the value in contact_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_contact_name must be specified if op_contact_name is specified.
+             :param val_c_contact_name: If op_contact_name is specified, this value will be compared to the value in contact_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_contact_name must be specified if op_contact_name is specified. If the rlike or not rlike value is specified in the op_contact_name field, escape regex special characters because a regular expression is expected.
              :type val_c_contact_name: String
 
             |  ``api version min:`` None
@@ -812,7 +780,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_contact_value: If op_contact_value is specified, this value will be compared to the value in contact_value using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_contact_value must be specified if op_contact_value is specified.
+             :param val_c_contact_value: If op_contact_value is specified, this value will be compared to the value in contact_value using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_contact_value must be specified if op_contact_value is specified. If the rlike or not rlike value is specified in the op_contact_value field, escape regex special characters because a regular expression is expected.
              :type val_c_contact_value: String
 
             |  ``api version min:`` None
@@ -836,7 +804,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -860,7 +828,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_customer_name: If op_customer_name is specified, this value will be compared to the value in customer_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_customer_name must be specified if op_customer_name is specified.
+             :param val_c_customer_name: If op_customer_name is specified, this value will be compared to the value in customer_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_customer_name must be specified if op_customer_name is specified. If the rlike or not rlike value is specified in the op_customer_name field, escape regex special characters because a regular expression is expected.
              :type val_c_customer_name: String
 
             |  ``api version min:`` None
@@ -884,7 +852,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_delivery_addl_email: If op_delivery_addl_email is specified, this value will be compared to the value in delivery_addl_email using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_delivery_addl_email must be specified if op_delivery_addl_email is specified.
+             :param val_c_delivery_addl_email: If op_delivery_addl_email is specified, this value will be compared to the value in delivery_addl_email using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_delivery_addl_email must be specified if op_delivery_addl_email is specified. If the rlike or not rlike value is specified in the op_delivery_addl_email field, escape regex special characters because a regular expression is expected.
              :type val_c_delivery_addl_email: String
 
             |  ``api version min:`` None
@@ -908,7 +876,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_delivery_method: If op_delivery_method is specified, this value will be compared to the value in delivery_method using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_delivery_method must be specified if op_delivery_method is specified.
+             :param val_c_delivery_method: If op_delivery_method is specified, this value will be compared to the value in delivery_method using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_delivery_method must be specified if op_delivery_method is specified. If the rlike or not rlike value is specified in the op_delivery_method field, escape regex special characters because a regular expression is expected.
              :type val_c_delivery_method: String
 
             |  ``api version min:`` None
@@ -932,7 +900,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_device_discovered_ind: If op_device_discovered_ind is specified, this value will be compared to the value in device_discovered_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_discovered_ind must be specified if op_device_discovered_ind is specified.
+             :param val_c_device_discovered_ind: If op_device_discovered_ind is specified, this value will be compared to the value in device_discovered_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_discovered_ind must be specified if op_device_discovered_ind is specified. If the rlike or not rlike value is specified in the op_device_discovered_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_device_discovered_ind: String
 
             |  ``api version min:`` None
@@ -956,7 +924,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_device_id: If op_device_id is specified, this value will be compared to the value in device_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_id must be specified if op_device_id is specified.
+             :param val_c_device_id: If op_device_id is specified, this value will be compared to the value in device_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_id must be specified if op_device_id is specified. If the rlike or not rlike value is specified in the op_device_id field, escape regex special characters because a regular expression is expected.
              :type val_c_device_id: String
 
             |  ``api version min:`` None
@@ -980,7 +948,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_device_ip_dotted: If op_device_ip_dotted is specified, this value will be compared to the value in device_ip_dotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_ip_dotted must be specified if op_device_ip_dotted is specified.
+             :param val_c_device_ip_dotted: If op_device_ip_dotted is specified, this value will be compared to the value in device_ip_dotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_ip_dotted must be specified if op_device_ip_dotted is specified. If the rlike or not rlike value is specified in the op_device_ip_dotted field, escape regex special characters because a regular expression is expected.
              :type val_c_device_ip_dotted: String
 
             |  ``api version min:`` None
@@ -1004,7 +972,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_device_model: If op_device_model is specified, this value will be compared to the value in device_model using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_model must be specified if op_device_model is specified.
+             :param val_c_device_model: If op_device_model is specified, this value will be compared to the value in device_model using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_model must be specified if op_device_model is specified. If the rlike or not rlike value is specified in the op_device_model field, escape regex special characters because a regular expression is expected.
              :type val_c_device_model: String
 
             |  ``api version min:`` None
@@ -1028,7 +996,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_device_type: If op_device_type is specified, this value will be compared to the value in device_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_type must be specified if op_device_type is specified.
+             :param val_c_device_type: If op_device_type is specified, this value will be compared to the value in device_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_type must be specified if op_device_type is specified. If the rlike or not rlike value is specified in the op_device_type field, escape regex special characters because a regular expression is expected.
              :type val_c_device_type: String
 
             |  ``api version min:`` None
@@ -1052,7 +1020,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_device_vendor: If op_device_vendor is specified, this value will be compared to the value in device_vendor using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_vendor must be specified if op_device_vendor is specified.
+             :param val_c_device_vendor: If op_device_vendor is specified, this value will be compared to the value in device_vendor using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_vendor must be specified if op_device_vendor is specified. If the rlike or not rlike value is specified in the op_device_vendor field, escape regex special characters because a regular expression is expected.
              :type val_c_device_vendor: String
 
             |  ``api version min:`` None
@@ -1076,7 +1044,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_discovery_diagnostic_collected_ind: If op_discovery_diagnostic_collected_ind is specified, this value will be compared to the value in discovery_diagnostic_collected_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_discovery_diagnostic_collected_ind must be specified if op_discovery_diagnostic_collected_ind is specified.
+             :param val_c_discovery_diagnostic_collected_ind: If op_discovery_diagnostic_collected_ind is specified, this value will be compared to the value in discovery_diagnostic_collected_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_discovery_diagnostic_collected_ind must be specified if op_discovery_diagnostic_collected_ind is specified. If the rlike or not rlike value is specified in the op_discovery_diagnostic_collected_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_discovery_diagnostic_collected_ind: String
 
             |  ``api version min:`` None
@@ -1100,7 +1068,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -1124,7 +1092,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_license_expiration: If op_license_expiration is specified, this value will be compared to the value in license_expiration using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_license_expiration must be specified if op_license_expiration is specified.
+             :param val_c_license_expiration: If op_license_expiration is specified, this value will be compared to the value in license_expiration using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_license_expiration must be specified if op_license_expiration is specified. If the rlike or not rlike value is specified in the op_license_expiration field, escape regex special characters because a regular expression is expected.
              :type val_c_license_expiration: String
 
             |  ``api version min:`` None
@@ -1148,7 +1116,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_license_id: If op_license_id is specified, this value will be compared to the value in license_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_license_id must be specified if op_license_id is specified.
+             :param val_c_license_id: If op_license_id is specified, this value will be compared to the value in license_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_license_id must be specified if op_license_id is specified. If the rlike or not rlike value is specified in the op_license_id field, escape regex special characters because a regular expression is expected.
              :type val_c_license_id: String
 
             |  ``api version min:`` None
@@ -1172,7 +1140,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_license_type: If op_license_type is specified, this value will be compared to the value in license_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_license_type must be specified if op_license_type is specified.
+             :param val_c_license_type: If op_license_type is specified, this value will be compared to the value in license_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_license_type must be specified if op_license_type is specified. If the rlike or not rlike value is specified in the op_license_type field, escape regex special characters because a regular expression is expected.
              :type val_c_license_type: String
 
             |  ``api version min:`` None
@@ -1196,7 +1164,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_manual_data_entry_ind: If op_manual_data_entry_ind is specified, this value will be compared to the value in manual_data_entry_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_manual_data_entry_ind must be specified if op_manual_data_entry_ind is specified.
+             :param val_c_manual_data_entry_ind: If op_manual_data_entry_ind is specified, this value will be compared to the value in manual_data_entry_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_manual_data_entry_ind must be specified if op_manual_data_entry_ind is specified. If the rlike or not rlike value is specified in the op_manual_data_entry_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_manual_data_entry_ind: String
 
             |  ``api version min:`` None
@@ -1220,7 +1188,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_netmri_version: If op_netmri_version is specified, this value will be compared to the value in netmri_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_netmri_version must be specified if op_netmri_version is specified.
+             :param val_c_netmri_version: If op_netmri_version is specified, this value will be compared to the value in netmri_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_netmri_version must be specified if op_netmri_version is specified. If the rlike or not rlike value is specified in the op_netmri_version field, escape regex special characters because a regular expression is expected.
              :type val_c_netmri_version: String
 
             |  ``api version min:`` None
@@ -1244,7 +1212,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_os_version: If op_os_version is specified, this value will be compared to the value in os_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_os_version must be specified if op_os_version is specified.
+             :param val_c_os_version: If op_os_version is specified, this value will be compared to the value in os_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_os_version must be specified if op_os_version is specified. If the rlike or not rlike value is specified in the op_os_version field, escape regex special characters because a regular expression is expected.
              :type val_c_os_version: String
 
             |  ``api version min:`` None
@@ -1268,7 +1236,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_package_name: If op_package_name is specified, this value will be compared to the value in package_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_package_name must be specified if op_package_name is specified.
+             :param val_c_package_name: If op_package_name is specified, this value will be compared to the value in package_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_package_name must be specified if op_package_name is specified. If the rlike or not rlike value is specified in the op_package_name field, escape regex special characters because a regular expression is expected.
              :type val_c_package_name: String
 
             |  ``api version min:`` None
@@ -1292,7 +1260,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_preferred_cli: If op_preferred_cli is specified, this value will be compared to the value in preferred_cli using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_preferred_cli must be specified if op_preferred_cli is specified.
+             :param val_c_preferred_cli: If op_preferred_cli is specified, this value will be compared to the value in preferred_cli using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_preferred_cli must be specified if op_preferred_cli is specified. If the rlike or not rlike value is specified in the op_preferred_cli field, escape regex special characters because a regular expression is expected.
              :type val_c_preferred_cli: String
 
             |  ``api version min:`` None
@@ -1316,7 +1284,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_priv_mode_info: If op_priv_mode_info is specified, this value will be compared to the value in priv_mode_info using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_priv_mode_info must be specified if op_priv_mode_info is specified.
+             :param val_c_priv_mode_info: If op_priv_mode_info is specified, this value will be compared to the value in priv_mode_info using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_priv_mode_info must be specified if op_priv_mode_info is specified. If the rlike or not rlike value is specified in the op_priv_mode_info field, escape regex special characters because a regular expression is expected.
              :type val_c_priv_mode_info: String
 
             |  ``api version min:`` None
@@ -1340,7 +1308,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_secure_version: If op_secure_version is specified, this value will be compared to the value in secure_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_secure_version must be specified if op_secure_version is specified.
+             :param val_c_secure_version: If op_secure_version is specified, this value will be compared to the value in secure_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_secure_version must be specified if op_secure_version is specified. If the rlike or not rlike value is specified in the op_secure_version field, escape regex special characters because a regular expression is expected.
              :type val_c_secure_version: String
 
             |  ``api version min:`` None
@@ -1364,7 +1332,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_auth_password: If op_snmp_auth_password is specified, this value will be compared to the value in snmp_auth_password using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_auth_password must be specified if op_snmp_auth_password is specified.
+             :param val_c_snmp_auth_password: If op_snmp_auth_password is specified, this value will be compared to the value in snmp_auth_password using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_auth_password must be specified if op_snmp_auth_password is specified. If the rlike or not rlike value is specified in the op_snmp_auth_password field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_auth_password: String
 
             |  ``api version min:`` None
@@ -1388,7 +1356,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_auth_protocol: If op_snmp_auth_protocol is specified, this value will be compared to the value in snmp_auth_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_auth_protocol must be specified if op_snmp_auth_protocol is specified.
+             :param val_c_snmp_auth_protocol: If op_snmp_auth_protocol is specified, this value will be compared to the value in snmp_auth_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_auth_protocol must be specified if op_snmp_auth_protocol is specified. If the rlike or not rlike value is specified in the op_snmp_auth_protocol field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_auth_protocol: String
 
             |  ``api version min:`` None
@@ -1412,7 +1380,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_auth_username: If op_snmp_auth_username is specified, this value will be compared to the value in snmp_auth_username using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_auth_username must be specified if op_snmp_auth_username is specified.
+             :param val_c_snmp_auth_username: If op_snmp_auth_username is specified, this value will be compared to the value in snmp_auth_username using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_auth_username must be specified if op_snmp_auth_username is specified. If the rlike or not rlike value is specified in the op_snmp_auth_username field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_auth_username: String
 
             |  ``api version min:`` None
@@ -1436,7 +1404,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_community_string: If op_snmp_community_string is specified, this value will be compared to the value in snmp_community_string using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_community_string must be specified if op_snmp_community_string is specified.
+             :param val_c_snmp_community_string: If op_snmp_community_string is specified, this value will be compared to the value in snmp_community_string using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_community_string must be specified if op_snmp_community_string is specified. If the rlike or not rlike value is specified in the op_snmp_community_string field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_community_string: String
 
             |  ``api version min:`` None
@@ -1460,7 +1428,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_data_collected_ind: If op_snmp_data_collected_ind is specified, this value will be compared to the value in snmp_data_collected_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_data_collected_ind must be specified if op_snmp_data_collected_ind is specified.
+             :param val_c_snmp_data_collected_ind: If op_snmp_data_collected_ind is specified, this value will be compared to the value in snmp_data_collected_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_data_collected_ind must be specified if op_snmp_data_collected_ind is specified. If the rlike or not rlike value is specified in the op_snmp_data_collected_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_data_collected_ind: String
 
             |  ``api version min:`` None
@@ -1484,7 +1452,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_port: If op_snmp_port is specified, this value will be compared to the value in snmp_port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_port must be specified if op_snmp_port is specified.
+             :param val_c_snmp_port: If op_snmp_port is specified, this value will be compared to the value in snmp_port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_port must be specified if op_snmp_port is specified. If the rlike or not rlike value is specified in the op_snmp_port field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_port: String
 
             |  ``api version min:`` None
@@ -1508,7 +1476,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_privacy_password: If op_snmp_privacy_password is specified, this value will be compared to the value in snmp_privacy_password using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_privacy_password must be specified if op_snmp_privacy_password is specified.
+             :param val_c_snmp_privacy_password: If op_snmp_privacy_password is specified, this value will be compared to the value in snmp_privacy_password using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_privacy_password must be specified if op_snmp_privacy_password is specified. If the rlike or not rlike value is specified in the op_snmp_privacy_password field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_privacy_password: String
 
             |  ``api version min:`` None
@@ -1532,7 +1500,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_privacy_protocol: If op_snmp_privacy_protocol is specified, this value will be compared to the value in snmp_privacy_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_privacy_protocol must be specified if op_snmp_privacy_protocol is specified.
+             :param val_c_snmp_privacy_protocol: If op_snmp_privacy_protocol is specified, this value will be compared to the value in snmp_privacy_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_privacy_protocol must be specified if op_snmp_privacy_protocol is specified. If the rlike or not rlike value is specified in the op_snmp_privacy_protocol field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_privacy_protocol: String
 
             |  ``api version min:`` None
@@ -1556,7 +1524,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_snmp_version: If op_snmp_version is specified, this value will be compared to the value in snmp_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_version must be specified if op_snmp_version is specified.
+             :param val_c_snmp_version: If op_snmp_version is specified, this value will be compared to the value in snmp_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_snmp_version must be specified if op_snmp_version is specified. If the rlike or not rlike value is specified in the op_snmp_version field, escape regex special characters because a regular expression is expected.
              :type val_c_snmp_version: String
 
             |  ``api version min:`` None
@@ -1580,7 +1548,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_status: If op_status is specified, this value will be compared to the value in status using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_status must be specified if op_status is specified.
+             :param val_c_status: If op_status is specified, this value will be compared to the value in status using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_status must be specified if op_status is specified. If the rlike or not rlike value is specified in the op_status field, escape regex special characters because a regular expression is expected.
              :type val_c_status: String
 
             |  ``api version min:`` None
@@ -1604,7 +1572,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_status_msg: If op_status_msg is specified, this value will be compared to the value in status_msg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_status_msg must be specified if op_status_msg is specified.
+             :param val_c_status_msg: If op_status_msg is specified, this value will be compared to the value in status_msg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_status_msg must be specified if op_status_msg is specified. If the rlike or not rlike value is specified in the op_status_msg field, escape regex special characters because a regular expression is expected.
              :type val_c_status_msg: String
 
             |  ``api version min:`` None
@@ -1628,7 +1596,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_step_number: If op_step_number is specified, this value will be compared to the value in step_number using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_step_number must be specified if op_step_number is specified.
+             :param val_c_step_number: If op_step_number is specified, this value will be compared to the value in step_number using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_step_number must be specified if op_step_number is specified. If the rlike or not rlike value is specified in the op_step_number field, escape regex special characters because a regular expression is expected.
              :type val_c_step_number: String
 
             |  ``api version min:`` None
@@ -1652,7 +1620,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_syslogs_collected_ind: If op_syslogs_collected_ind is specified, this value will be compared to the value in syslogs_collected_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_syslogs_collected_ind must be specified if op_syslogs_collected_ind is specified.
+             :param val_c_syslogs_collected_ind: If op_syslogs_collected_ind is specified, this value will be compared to the value in syslogs_collected_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_syslogs_collected_ind must be specified if op_syslogs_collected_ind is specified. If the rlike or not rlike value is specified in the op_syslogs_collected_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_syslogs_collected_ind: String
 
             |  ``api version min:`` None
@@ -1676,7 +1644,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_unit_id: If op_unit_id is specified, this value will be compared to the value in unit_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_unit_id must be specified if op_unit_id is specified.
+             :param val_c_unit_id: If op_unit_id is specified, this value will be compared to the value in unit_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_unit_id must be specified if op_unit_id is specified. If the rlike or not rlike value is specified in the op_unit_id field, escape regex special characters because a regular expression is expected.
              :type val_c_unit_id: String
 
             |  ``api version min:`` None
@@ -1700,7 +1668,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -1724,7 +1692,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_user_in_device_capabilities: If op_user_in_device_capabilities is specified, this value will be compared to the value in user_in_device_capabilities using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_user_in_device_capabilities must be specified if op_user_in_device_capabilities is specified.
+             :param val_c_user_in_device_capabilities: If op_user_in_device_capabilities is specified, this value will be compared to the value in user_in_device_capabilities using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_user_in_device_capabilities must be specified if op_user_in_device_capabilities is specified. If the rlike or not rlike value is specified in the op_user_in_device_capabilities field, escape regex special characters because a regular expression is expected.
              :type val_c_user_in_device_capabilities: String
 
             |  ``api version min:`` None
@@ -1748,7 +1716,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_user_in_device_model: If op_user_in_device_model is specified, this value will be compared to the value in user_in_device_model using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_user_in_device_model must be specified if op_user_in_device_model is specified.
+             :param val_c_user_in_device_model: If op_user_in_device_model is specified, this value will be compared to the value in user_in_device_model using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_user_in_device_model must be specified if op_user_in_device_model is specified. If the rlike or not rlike value is specified in the op_user_in_device_model field, escape regex special characters because a regular expression is expected.
              :type val_c_user_in_device_model: String
 
             |  ``api version min:`` None
@@ -1772,7 +1740,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_user_in_device_type: If op_user_in_device_type is specified, this value will be compared to the value in user_in_device_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_user_in_device_type must be specified if op_user_in_device_type is specified.
+             :param val_c_user_in_device_type: If op_user_in_device_type is specified, this value will be compared to the value in user_in_device_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_user_in_device_type must be specified if op_user_in_device_type is specified. If the rlike or not rlike value is specified in the op_user_in_device_type field, escape regex special characters because a regular expression is expected.
              :type val_c_user_in_device_type: String
 
             |  ``api version min:`` None
@@ -1796,7 +1764,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_user_in_device_vendor: If op_user_in_device_vendor is specified, this value will be compared to the value in user_in_device_vendor using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_user_in_device_vendor must be specified if op_user_in_device_vendor is specified.
+             :param val_c_user_in_device_vendor: If op_user_in_device_vendor is specified, this value will be compared to the value in user_in_device_vendor using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_user_in_device_vendor must be specified if op_user_in_device_vendor is specified. If the rlike or not rlike value is specified in the op_user_in_device_vendor field, escape regex special characters because a regular expression is expected.
              :type val_c_user_in_device_vendor: String
 
             |  ``api version min:`` None
@@ -1820,7 +1788,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_user_in_os_version: If op_user_in_os_version is specified, this value will be compared to the value in user_in_os_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_user_in_os_version must be specified if op_user_in_os_version is specified.
+             :param val_c_user_in_os_version: If op_user_in_os_version is specified, this value will be compared to the value in user_in_os_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_user_in_os_version must be specified if op_user_in_os_version is specified. If the rlike or not rlike value is specified in the op_user_in_os_version field, escape regex special characters because a regular expression is expected.
              :type val_c_user_in_os_version: String
 
             |  ``api version min:`` None
@@ -1844,7 +1812,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_virtual_network_id: If op_virtual_network_id is specified, this value will be compared to the value in virtual_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_virtual_network_id must be specified if op_virtual_network_id is specified.
+             :param val_c_virtual_network_id: If op_virtual_network_id is specified, this value will be compared to the value in virtual_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_virtual_network_id must be specified if op_virtual_network_id is specified. If the rlike or not rlike value is specified in the op_virtual_network_id field, escape regex special characters because a regular expression is expected.
              :type val_c_virtual_network_id: String
 
             |  ``api version min:`` None
@@ -1868,7 +1836,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, device_id, device_ip_dotted, netmri_version, license_id, license_type, license_expiration, device_vendor, device_model, os_version, device_type, discovery_diagnostic_collected_ind, snmp_data_collected_ind, cli_session_collected_ind, priv_mode_info, syslogs_collected_ind, admin_guide_collected_ind, access_to_device, access_to_device_other, created_at, updated_at, user_in_device_type, user_in_device_vendor, user_in_device_model, user_in_os_version, user_in_device_capabilities, snmp_version, snmp_community_string, snmp_port, snmp_auth_username, snmp_auth_password, snmp_auth_protocol, snmp_privacy_password, snmp_privacy_protocol, preferred_cli, cli_username, cli_password, secure_version, package_name, device_discovered_ind, delivery_method, unit_id, status, step_number, delivery_addl_email, manual_data_entry_ind, status_msg, virtual_network_id, contact_method, customer_name, contact_name, contact_value.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, device_id, device_ip_dotted, netmri_version, license_id, license_type, license_expiration, device_vendor, device_model, os_version, device_type, discovery_diagnostic_collected_ind, snmp_data_collected_ind, cli_session_collected_ind, priv_mode_info, syslogs_collected_ind, admin_guide_collected_ind, access_to_device, access_to_device_other, created_at, updated_at, user_in_device_type, user_in_device_vendor, user_in_device_model, user_in_os_version, user_in_device_capabilities, snmp_version, snmp_community_string, snmp_port, snmp_auth_username, snmp_auth_password, snmp_auth_protocol, snmp_privacy_password, snmp_privacy_protocol, preferred_cli, cli_username, cli_password, secure_version, package_name, device_discovered_ind, delivery_method, unit_id, status, step_number, delivery_addl_email, manual_data_entry_ind, status_msg, virtual_network_id, contact_method, customer_name, contact_name, contact_value.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1876,7 +1844,7 @@ class DeviceSupportWorksheetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1886,22 +1854,6 @@ class DeviceSupportWorksheetBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceSupportWorksheet. Valid values are id, device_id, device_ip_dotted, netmri_version, license_id, license_type, license_expiration, device_vendor, device_model, os_version, device_type, discovery_diagnostic_collected_ind, snmp_data_collected_ind, cli_session_collected_ind, priv_mode_info, syslogs_collected_ind, admin_guide_collected_ind, access_to_device, access_to_device_other, created_at, updated_at, user_in_device_type, user_in_device_vendor, user_in_device_model, user_in_os_version, user_in_device_capabilities, snmp_version, snmp_community_string, snmp_port, snmp_auth_username, snmp_auth_password, snmp_auth_protocol, snmp_privacy_password, snmp_privacy_protocol, preferred_cli, cli_username, cli_password, secure_version, package_name, device_discovered_ind, delivery_method, unit_id, status, step_number, delivery_addl_email, manual_data_entry_ind, status_msg, virtual_network_id, contact_method, customer_name, contact_name, contact_value. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

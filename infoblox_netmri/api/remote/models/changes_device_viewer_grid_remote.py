@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class ChangesDeviceViewerGridRemote(RemoteModel):
     """
-    list of device changes
+    List of device changes.
 
 
     |  ``id:`` The internal NetMRI identifier of the grid entry.

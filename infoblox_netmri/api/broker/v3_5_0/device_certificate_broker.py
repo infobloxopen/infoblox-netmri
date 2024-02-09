@@ -30,7 +30,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UnitID: If op_UnitID is specified, this value will be compared to the value in UnitID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitID must be specified if op_UnitID is specified.
+             :param val_c_UnitID: If op_UnitID is specified, this value will be compared to the value in UnitID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitID must be specified if op_UnitID is specified. If the rlike or not rlike value is specified in the op_UnitID field, escape regex special characters because a regular expression is expected.
              :type val_c_UnitID: String
 
             |  ``api version min:`` None
@@ -54,7 +54,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_certificate: If op_certificate is specified, this value will be compared to the value in certificate using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_certificate must be specified if op_certificate is specified.
+             :param val_c_certificate: If op_certificate is specified, this value will be compared to the value in certificate using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_certificate must be specified if op_certificate is specified. If the rlike or not rlike value is specified in the op_certificate field, escape regex special characters because a regular expression is expected.
              :type val_c_certificate: String
 
             |  ``api version min:`` None
@@ -78,7 +78,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_certificate_parameter: If op_certificate_parameter is specified, this value will be compared to the value in certificate_parameter using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_certificate_parameter must be specified if op_certificate_parameter is specified.
+             :param val_c_certificate_parameter: If op_certificate_parameter is specified, this value will be compared to the value in certificate_parameter using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_certificate_parameter must be specified if op_certificate_parameter is specified. If the rlike or not rlike value is specified in the op_certificate_parameter field, escape regex special characters because a regular expression is expected.
              :type val_c_certificate_parameter: String
 
             |  ``api version min:`` None
@@ -102,7 +102,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_certificate_type: If op_certificate_type is specified, this value will be compared to the value in certificate_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_certificate_type must be specified if op_certificate_type is specified.
+             :param val_c_certificate_type: If op_certificate_type is specified, this value will be compared to the value in certificate_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_certificate_type must be specified if op_certificate_type is specified. If the rlike or not rlike value is specified in the op_certificate_type field, escape regex special characters because a regular expression is expected.
              :type val_c_certificate_type: String
 
             |  ``api version min:`` None
@@ -126,7 +126,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -150,7 +150,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -174,7 +174,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ip_address_dotted: If op_ip_address_dotted is specified, this value will be compared to the value in ip_address_dotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ip_address_dotted must be specified if op_ip_address_dotted is specified.
+             :param val_c_ip_address_dotted: If op_ip_address_dotted is specified, this value will be compared to the value in ip_address_dotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ip_address_dotted must be specified if op_ip_address_dotted is specified. If the rlike or not rlike value is specified in the op_ip_address_dotted field, escape regex special characters because a regular expression is expected.
              :type val_c_ip_address_dotted: String
 
             |  ``api version min:`` None
@@ -198,7 +198,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ip_address_numeric: If op_ip_address_numeric is specified, this value will be compared to the value in ip_address_numeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ip_address_numeric must be specified if op_ip_address_numeric is specified.
+             :param val_c_ip_address_numeric: If op_ip_address_numeric is specified, this value will be compared to the value in ip_address_numeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ip_address_numeric must be specified if op_ip_address_numeric is specified. If the rlike or not rlike value is specified in the op_ip_address_numeric field, escape regex special characters because a regular expression is expected.
              :type val_c_ip_address_numeric: String
 
             |  ``api version min:`` None
@@ -222,7 +222,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified.
+             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified. If the rlike or not rlike value is specified in the op_name field, escape regex special characters because a regular expression is expected.
              :type val_c_name: String
 
             |  ``api version min:`` None
@@ -246,7 +246,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_passphrase: If op_passphrase is specified, this value will be compared to the value in passphrase using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_passphrase must be specified if op_passphrase is specified.
+             :param val_c_passphrase: If op_passphrase is specified, this value will be compared to the value in passphrase using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_passphrase must be specified if op_passphrase is specified. If the rlike or not rlike value is specified in the op_passphrase field, escape regex special characters because a regular expression is expected.
              :type val_c_passphrase: String
 
             |  ``api version min:`` None
@@ -270,7 +270,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_password: If op_password is specified, this value will be compared to the value in password using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_password must be specified if op_password is specified.
+             :param val_c_password: If op_password is specified, this value will be compared to the value in password using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_password must be specified if op_password is specified. If the rlike or not rlike value is specified in the op_password field, escape regex special characters because a regular expression is expected.
              :type val_c_password: String
 
             |  ``api version min:`` None
@@ -294,7 +294,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_port: If op_port is specified, this value will be compared to the value in port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_port must be specified if op_port is specified.
+             :param val_c_port: If op_port is specified, this value will be compared to the value in port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_port must be specified if op_port is specified. If the rlike or not rlike value is specified in the op_port field, escape regex special characters because a regular expression is expected.
              :type val_c_port: String
 
             |  ``api version min:`` None
@@ -318,7 +318,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -342,7 +342,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_username: If op_username is specified, this value will be compared to the value in username using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_username must be specified if op_username is specified.
+             :param val_c_username: If op_username is specified, this value will be compared to the value in username using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_username must be specified if op_username is specified. If the rlike or not rlike value is specified in the op_username field, escape regex special characters because a regular expression is expected.
              :type val_c_username: String
 
             |  ``api version min:`` None
@@ -366,7 +366,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, ip_address_dotted, ip_address_numeric, UnitID, certificate_type, name, port, passphrase, username, password, certificate, certificate_parameter, created_at, updated_at.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, ip_address_dotted, ip_address_numeric, UnitID, certificate_type, name, port, passphrase, username, password, certificate, certificate_parameter, created_at, updated_at.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -374,7 +374,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -384,22 +384,6 @@ class DeviceCertificateBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceCertificate. Valid values are id, ip_address_dotted, ip_address_numeric, UnitID, certificate_type, name, port, passphrase, username, password, certificate, certificate_parameter, created_at, updated_at. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -424,7 +408,7 @@ class DeviceCertificateBroker(Broker):
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available device certificates. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device certificates. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -457,7 +441,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, ip_address_dotted, ip_address_numeric, UnitID, certificate_type, name, port, passphrase, username, password, certificate, certificate_parameter, created_at, updated_at.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, ip_address_dotted, ip_address_numeric, UnitID, certificate_type, name, port, passphrase, username, password, certificate, certificate_parameter, created_at, updated_at.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -465,7 +449,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -475,22 +459,6 @@ class DeviceCertificateBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceCertificate. Valid values are id, ip_address_dotted, ip_address_numeric, UnitID, certificate_type, name, port, passphrase, username, password, certificate, certificate_parameter, created_at, updated_at. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -644,7 +612,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, ip_address_dotted, ip_address_numeric, UnitID, certificate_type, name, port, passphrase, username, password, certificate, certificate_parameter, created_at, updated_at.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, ip_address_dotted, ip_address_numeric, UnitID, certificate_type, name, port, passphrase, username, password, certificate, certificate_parameter, created_at, updated_at.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -652,7 +620,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -662,22 +630,6 @@ class DeviceCertificateBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceCertificate. Valid values are id, ip_address_dotted, ip_address_numeric, UnitID, certificate_type, name, port, passphrase, username, password, certificate, certificate_parameter, created_at, updated_at. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -844,7 +796,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created device certificate.
+             :return uri: The URI that may be used to retrieve the newly created device certificate.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -983,7 +935,7 @@ class DeviceCertificateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated device certificate.
+             :return uri: The URI that may be used to retrieve the updated device certificate.
              :rtype uri: String
 
             |  ``api version min:`` None

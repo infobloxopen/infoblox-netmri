@@ -45,6 +45,9 @@ class ReportManagerInactiveReportsGridRemote(RemoteModel):
     |  ``content_type:`` none
     |  ``attribute type:`` string
 
+    |  ``start_time:`` none
+    |  ``attribute type:`` string
+
     |  ``last_action_timestamp:`` none
     |  ``attribute type:`` string
 
@@ -63,5 +66,6 @@ class ReportManagerInactiveReportsGridRemote(RemoteModel):
                   "report_id",
                   "report_identifier",
                   "content_type",
+                  "start_time",
                   "last_action_timestamp",
                   )

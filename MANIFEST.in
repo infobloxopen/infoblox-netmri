@@ -1,10 +1,8 @@
 include LICENSE
 include README.rst
-include api
 
-recursive-exclude tests/*
+recursive-exclude infoblox_netmri/tests/ *
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
-
-recursive-exclude docs *.rst conf.py Makefile make.bat *.py
-recursive-exclude docs/*
+recursive-exclude docs/ *
+recursive-exclude infoblox_netmri/ *.tt2

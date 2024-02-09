@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class NiosGridMemberRemote(RemoteModel):
     """
-    This table list out entries of Nios Grid members
+    This table list out entries of Nios Grid members.
 
 
     |  ``DataSourceID:`` The internal NetMRI identifier for the collector NetMRI that collected this data record.

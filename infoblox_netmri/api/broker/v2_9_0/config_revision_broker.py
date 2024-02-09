@@ -48,7 +48,7 @@ class ConfigRevisionBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available config revisions. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available config revisions. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -137,7 +137,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ConfigRevisionID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ConfigRevisionID. Valid values are ConfigRevisionID, DataSourceID, DeviceID, ConfigType, ConfigRevision, ConfigTimestamp, PreviousTimestamp, ConfigDiffs, LastCollected.
+             :param sort: The data field(s) to use for sorting the output. Valid values are ConfigRevisionID, DataSourceID, DeviceID, ConfigType, ConfigRevision, ConfigTimestamp, PreviousTimestamp, ConfigDiffs, LastCollected.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -145,7 +145,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -155,22 +155,6 @@ class ConfigRevisionBroker(Broker):
 
              :param select: The list of attributes to return for each ConfigRevision. Valid values are ConfigRevisionID, DataSourceID, DeviceID, ConfigType, ConfigRevision, ConfigTimestamp, PreviousTimestamp, ConfigDiffs, LastCollected. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -324,7 +308,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ConfigRevisionID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ConfigRevisionID. Valid values are ConfigRevisionID, DataSourceID, DeviceID, ConfigType, ConfigRevision, ConfigTimestamp, PreviousTimestamp, ConfigDiffs, LastCollected.
+             :param sort: The data field(s) to use for sorting the output. Valid values are ConfigRevisionID, DataSourceID, DeviceID, ConfigType, ConfigRevision, ConfigTimestamp, PreviousTimestamp, ConfigDiffs, LastCollected.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -332,7 +316,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -342,22 +326,6 @@ class ConfigRevisionBroker(Broker):
 
              :param select: The list of attributes to return for each ConfigRevision. Valid values are ConfigRevisionID, DataSourceID, DeviceID, ConfigType, ConfigRevision, ConfigTimestamp, PreviousTimestamp, ConfigDiffs, LastCollected. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -415,7 +383,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ConfigDiffs: If op_ConfigDiffs is specified, this value will be compared to the value in ConfigDiffs using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigDiffs must be specified if op_ConfigDiffs is specified.
+             :param val_c_ConfigDiffs: If op_ConfigDiffs is specified, this value will be compared to the value in ConfigDiffs using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigDiffs must be specified if op_ConfigDiffs is specified. If the rlike or not rlike value is specified in the op_ConfigDiffs field, escape regex special characters because a regular expression is expected.
              :type val_c_ConfigDiffs: String
 
             |  ``api version min:`` None
@@ -439,7 +407,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ConfigRevision: If op_ConfigRevision is specified, this value will be compared to the value in ConfigRevision using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigRevision must be specified if op_ConfigRevision is specified.
+             :param val_c_ConfigRevision: If op_ConfigRevision is specified, this value will be compared to the value in ConfigRevision using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigRevision must be specified if op_ConfigRevision is specified. If the rlike or not rlike value is specified in the op_ConfigRevision field, escape regex special characters because a regular expression is expected.
              :type val_c_ConfigRevision: String
 
             |  ``api version min:`` None
@@ -463,7 +431,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ConfigRevisionID: If op_ConfigRevisionID is specified, this value will be compared to the value in ConfigRevisionID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigRevisionID must be specified if op_ConfigRevisionID is specified.
+             :param val_c_ConfigRevisionID: If op_ConfigRevisionID is specified, this value will be compared to the value in ConfigRevisionID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigRevisionID must be specified if op_ConfigRevisionID is specified. If the rlike or not rlike value is specified in the op_ConfigRevisionID field, escape regex special characters because a regular expression is expected.
              :type val_c_ConfigRevisionID: String
 
             |  ``api version min:`` None
@@ -487,7 +455,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ConfigTimestamp: If op_ConfigTimestamp is specified, this value will be compared to the value in ConfigTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigTimestamp must be specified if op_ConfigTimestamp is specified.
+             :param val_c_ConfigTimestamp: If op_ConfigTimestamp is specified, this value will be compared to the value in ConfigTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigTimestamp must be specified if op_ConfigTimestamp is specified. If the rlike or not rlike value is specified in the op_ConfigTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_ConfigTimestamp: String
 
             |  ``api version min:`` None
@@ -511,7 +479,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ConfigType: If op_ConfigType is specified, this value will be compared to the value in ConfigType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigType must be specified if op_ConfigType is specified.
+             :param val_c_ConfigType: If op_ConfigType is specified, this value will be compared to the value in ConfigType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigType must be specified if op_ConfigType is specified. If the rlike or not rlike value is specified in the op_ConfigType field, escape regex special characters because a regular expression is expected.
              :type val_c_ConfigType: String
 
             |  ``api version min:`` None
@@ -535,7 +503,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -559,7 +527,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -583,7 +551,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_LastCollected: If op_LastCollected is specified, this value will be compared to the value in LastCollected using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LastCollected must be specified if op_LastCollected is specified.
+             :param val_c_LastCollected: If op_LastCollected is specified, this value will be compared to the value in LastCollected using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_LastCollected must be specified if op_LastCollected is specified. If the rlike or not rlike value is specified in the op_LastCollected field, escape regex special characters because a regular expression is expected.
              :type val_c_LastCollected: String
 
             |  ``api version min:`` None
@@ -607,7 +575,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PreviousTimestamp: If op_PreviousTimestamp is specified, this value will be compared to the value in PreviousTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PreviousTimestamp must be specified if op_PreviousTimestamp is specified.
+             :param val_c_PreviousTimestamp: If op_PreviousTimestamp is specified, this value will be compared to the value in PreviousTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PreviousTimestamp must be specified if op_PreviousTimestamp is specified. If the rlike or not rlike value is specified in the op_PreviousTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_PreviousTimestamp: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ConfigRevisionID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ConfigRevisionID. Valid values are ConfigRevisionID, DataSourceID, DeviceID, ConfigType, ConfigRevision, ConfigTimestamp, PreviousTimestamp, ConfigDiffs, LastCollected.
+             :param sort: The data field(s) to use for sorting the output. Valid values are ConfigRevisionID, DataSourceID, DeviceID, ConfigType, ConfigRevision, ConfigTimestamp, PreviousTimestamp, ConfigDiffs, LastCollected.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -679,7 +647,7 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -689,22 +657,6 @@ class ConfigRevisionBroker(Broker):
 
              :param select: The list of attributes to return for each ConfigRevision. Valid values are ConfigRevisionID, DataSourceID, DeviceID, ConfigType, ConfigRevision, ConfigTimestamp, PreviousTimestamp, ConfigDiffs, LastCollected. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -748,8 +700,8 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Returns the text of the configuration file.
-             :rtype : String
+             :return text: Returns the text of the configuration file.
+             :rtype text: String
 
             """
 
@@ -775,8 +727,8 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The user(s) that modified the file between the last revision and this one.
-             :rtype : String
+             :return edited_by: The user(s) that modified the file between the last revision and this one.
+             :rtype edited_by: String
 
             """
 
@@ -802,8 +754,8 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The NetMRI device that collected this record.
-             :rtype : DataSource
+             :return data_source: The NetMRI device that collected this record.
+             :rtype data_source: DataSource
 
             """
 
@@ -829,8 +781,8 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this configuration revision was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this configuration revision was collected.
+             :rtype infradevice: InfraDevice
 
             """
 
@@ -856,8 +808,8 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device setting from which this configuration revision was collected.
-             :rtype : DeviceSetting
+             :return devicesetting: The device setting from which this configuration revision was collected.
+             :rtype devicesetting: DeviceSetting
 
             """
 
@@ -883,8 +835,8 @@ class ConfigRevisionBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this configuration revision was collected.
-             :rtype : Device
+             :return device: The device from which this configuration revision was collected.
+             :rtype device: Device
 
             """
 

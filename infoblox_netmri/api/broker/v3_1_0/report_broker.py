@@ -5,7 +5,7 @@ class ReportBroker(Broker):
     controller = "reports"
 
     def index(self, **kwargs):
-        """Lists the available reports. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available reports. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -46,7 +46,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, file_name, description, category_id, thumbnail_url, image_url, report_url, created_at, updated_at, report_type, hidden_ind, pre_packaged_ind, short_headings_ind.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, file_name, description, category_id, thumbnail_url, image_url, report_url, created_at, updated_at, report_type, hidden_ind, pre_packaged_ind, short_headings_ind.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -54,7 +54,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -64,22 +64,6 @@ class ReportBroker(Broker):
 
              :param select: The list of attributes to return for each Report. Valid values are id, name, file_name, description, category_id, thumbnail_url, image_url, report_url, created_at, updated_at, report_type, hidden_ind, pre_packaged_ind, short_headings_ind. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -233,7 +217,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, file_name, description, category_id, thumbnail_url, image_url, report_url, created_at, updated_at, report_type, hidden_ind, pre_packaged_ind, short_headings_ind.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, file_name, description, category_id, thumbnail_url, image_url, report_url, created_at, updated_at, report_type, hidden_ind, pre_packaged_ind, short_headings_ind.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -241,7 +225,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -251,22 +235,6 @@ class ReportBroker(Broker):
 
              :param select: The list of attributes to return for each Report. Valid values are id, name, file_name, description, category_id, thumbnail_url, image_url, report_url, created_at, updated_at, report_type, hidden_ind, pre_packaged_ind, short_headings_ind. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -324,7 +292,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_category_id: If op_category_id is specified, this value will be compared to the value in category_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_category_id must be specified if op_category_id is specified.
+             :param val_c_category_id: If op_category_id is specified, this value will be compared to the value in category_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_category_id must be specified if op_category_id is specified. If the rlike or not rlike value is specified in the op_category_id field, escape regex special characters because a regular expression is expected.
              :type val_c_category_id: String
 
             |  ``api version min:`` None
@@ -348,7 +316,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -372,7 +340,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_description: If op_description is specified, this value will be compared to the value in description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_description must be specified if op_description is specified.
+             :param val_c_description: If op_description is specified, this value will be compared to the value in description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_description must be specified if op_description is specified. If the rlike or not rlike value is specified in the op_description field, escape regex special characters because a regular expression is expected.
              :type val_c_description: String
 
             |  ``api version min:`` None
@@ -396,7 +364,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_file_name: If op_file_name is specified, this value will be compared to the value in file_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_file_name must be specified if op_file_name is specified.
+             :param val_c_file_name: If op_file_name is specified, this value will be compared to the value in file_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_file_name must be specified if op_file_name is specified. If the rlike or not rlike value is specified in the op_file_name field, escape regex special characters because a regular expression is expected.
              :type val_c_file_name: String
 
             |  ``api version min:`` None
@@ -420,7 +388,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_hidden_ind: If op_hidden_ind is specified, this value will be compared to the value in hidden_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_hidden_ind must be specified if op_hidden_ind is specified.
+             :param val_c_hidden_ind: If op_hidden_ind is specified, this value will be compared to the value in hidden_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_hidden_ind must be specified if op_hidden_ind is specified. If the rlike or not rlike value is specified in the op_hidden_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_hidden_ind: String
 
             |  ``api version min:`` None
@@ -444,7 +412,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -468,7 +436,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_image_url: If op_image_url is specified, this value will be compared to the value in image_url using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_image_url must be specified if op_image_url is specified.
+             :param val_c_image_url: If op_image_url is specified, this value will be compared to the value in image_url using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_image_url must be specified if op_image_url is specified. If the rlike or not rlike value is specified in the op_image_url field, escape regex special characters because a regular expression is expected.
              :type val_c_image_url: String
 
             |  ``api version min:`` None
@@ -492,7 +460,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified.
+             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified. If the rlike or not rlike value is specified in the op_name field, escape regex special characters because a regular expression is expected.
              :type val_c_name: String
 
             |  ``api version min:`` None
@@ -516,7 +484,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_pre_packaged_ind: If op_pre_packaged_ind is specified, this value will be compared to the value in pre_packaged_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_pre_packaged_ind must be specified if op_pre_packaged_ind is specified.
+             :param val_c_pre_packaged_ind: If op_pre_packaged_ind is specified, this value will be compared to the value in pre_packaged_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_pre_packaged_ind must be specified if op_pre_packaged_ind is specified. If the rlike or not rlike value is specified in the op_pre_packaged_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_pre_packaged_ind: String
 
             |  ``api version min:`` None
@@ -540,7 +508,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_report_type: If op_report_type is specified, this value will be compared to the value in report_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_report_type must be specified if op_report_type is specified.
+             :param val_c_report_type: If op_report_type is specified, this value will be compared to the value in report_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_report_type must be specified if op_report_type is specified. If the rlike or not rlike value is specified in the op_report_type field, escape regex special characters because a regular expression is expected.
              :type val_c_report_type: String
 
             |  ``api version min:`` None
@@ -564,7 +532,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_report_url: If op_report_url is specified, this value will be compared to the value in report_url using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_report_url must be specified if op_report_url is specified.
+             :param val_c_report_url: If op_report_url is specified, this value will be compared to the value in report_url using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_report_url must be specified if op_report_url is specified. If the rlike or not rlike value is specified in the op_report_url field, escape regex special characters because a regular expression is expected.
              :type val_c_report_url: String
 
             |  ``api version min:`` None
@@ -588,7 +556,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_short_headings_ind: If op_short_headings_ind is specified, this value will be compared to the value in short_headings_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_short_headings_ind must be specified if op_short_headings_ind is specified.
+             :param val_c_short_headings_ind: If op_short_headings_ind is specified, this value will be compared to the value in short_headings_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_short_headings_ind must be specified if op_short_headings_ind is specified. If the rlike or not rlike value is specified in the op_short_headings_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_short_headings_ind: String
 
             |  ``api version min:`` None
@@ -612,7 +580,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_thumbnail_url: If op_thumbnail_url is specified, this value will be compared to the value in thumbnail_url using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_thumbnail_url must be specified if op_thumbnail_url is specified.
+             :param val_c_thumbnail_url: If op_thumbnail_url is specified, this value will be compared to the value in thumbnail_url using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_thumbnail_url must be specified if op_thumbnail_url is specified. If the rlike or not rlike value is specified in the op_thumbnail_url field, escape regex special characters because a regular expression is expected.
              :type val_c_thumbnail_url: String
 
             |  ``api version min:`` None
@@ -636,7 +604,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -660,7 +628,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, file_name, description, category_id, thumbnail_url, image_url, report_url, created_at, updated_at, report_type, hidden_ind, pre_packaged_ind, short_headings_ind.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, file_name, description, category_id, thumbnail_url, image_url, report_url, created_at, updated_at, report_type, hidden_ind, pre_packaged_ind, short_headings_ind.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -668,7 +636,7 @@ class ReportBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -678,22 +646,6 @@ class ReportBroker(Broker):
 
              :param select: The list of attributes to return for each Report. Valid values are id, name, file_name, description, category_id, thumbnail_url, image_url, report_url, created_at, updated_at, report_type, hidden_ind, pre_packaged_ind, short_headings_ind. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

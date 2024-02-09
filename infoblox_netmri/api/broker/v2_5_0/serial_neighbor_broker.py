@@ -48,7 +48,7 @@ class SerialNeighborBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available serial neighbors. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available serial neighbors. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -121,7 +121,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NeighborID. Valid values are DataSourceID, NeighborID, SerialNeighborStartTime, SerialNeighborEndTime, SerialNeighborChangedCols, SerialNeighborTimestamp, SerialNeighborMapSource, SerialNeighborSubnetIPDotted, SerialNeighborSubnetIPNumeric, SerialNeighborIPDotted, SerialNeighborIPNumeric, SerialNeighborNetMaskDotted, SerialNeighborNetMaskNumeric.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, NeighborID, SerialNeighborStartTime, SerialNeighborEndTime, SerialNeighborChangedCols, SerialNeighborTimestamp, SerialNeighborMapSource, SerialNeighborSubnetIPDotted, SerialNeighborSubnetIPNumeric, SerialNeighborIPDotted, SerialNeighborIPNumeric, SerialNeighborNetMaskDotted, SerialNeighborNetMaskNumeric.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -129,7 +129,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -139,22 +139,6 @@ class SerialNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each SerialNeighbor. Valid values are DataSourceID, NeighborID, SerialNeighborStartTime, SerialNeighborEndTime, SerialNeighborChangedCols, SerialNeighborTimestamp, SerialNeighborMapSource, SerialNeighborSubnetIPDotted, SerialNeighborSubnetIPNumeric, SerialNeighborIPDotted, SerialNeighborIPNumeric, SerialNeighborNetMaskDotted, SerialNeighborNetMaskNumeric. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -436,7 +420,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NeighborID. Valid values are DataSourceID, NeighborID, SerialNeighborStartTime, SerialNeighborEndTime, SerialNeighborChangedCols, SerialNeighborTimestamp, SerialNeighborMapSource, SerialNeighborSubnetIPDotted, SerialNeighborSubnetIPNumeric, SerialNeighborIPDotted, SerialNeighborIPNumeric, SerialNeighborNetMaskDotted, SerialNeighborNetMaskNumeric.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, NeighborID, SerialNeighborStartTime, SerialNeighborEndTime, SerialNeighborChangedCols, SerialNeighborTimestamp, SerialNeighborMapSource, SerialNeighborSubnetIPDotted, SerialNeighborSubnetIPNumeric, SerialNeighborIPDotted, SerialNeighborIPNumeric, SerialNeighborNetMaskDotted, SerialNeighborNetMaskNumeric.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -444,7 +428,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -454,22 +438,6 @@ class SerialNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each SerialNeighbor. Valid values are DataSourceID, NeighborID, SerialNeighborStartTime, SerialNeighborEndTime, SerialNeighborChangedCols, SerialNeighborTimestamp, SerialNeighborMapSource, SerialNeighborSubnetIPDotted, SerialNeighborSubnetIPNumeric, SerialNeighborIPDotted, SerialNeighborIPNumeric, SerialNeighborNetMaskDotted, SerialNeighborNetMaskNumeric. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -527,7 +495,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -551,7 +519,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborID: If op_NeighborID is specified, this value will be compared to the value in NeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborID must be specified if op_NeighborID is specified.
+             :param val_c_NeighborID: If op_NeighborID is specified, this value will be compared to the value in NeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborID must be specified if op_NeighborID is specified. If the rlike or not rlike value is specified in the op_NeighborID field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborID: String
 
             |  ``api version min:`` None
@@ -575,7 +543,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SerialNeighborChangedCols: If op_SerialNeighborChangedCols is specified, this value will be compared to the value in SerialNeighborChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborChangedCols must be specified if op_SerialNeighborChangedCols is specified.
+             :param val_c_SerialNeighborChangedCols: If op_SerialNeighborChangedCols is specified, this value will be compared to the value in SerialNeighborChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborChangedCols must be specified if op_SerialNeighborChangedCols is specified. If the rlike or not rlike value is specified in the op_SerialNeighborChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_SerialNeighborChangedCols: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SerialNeighborEndTime: If op_SerialNeighborEndTime is specified, this value will be compared to the value in SerialNeighborEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborEndTime must be specified if op_SerialNeighborEndTime is specified.
+             :param val_c_SerialNeighborEndTime: If op_SerialNeighborEndTime is specified, this value will be compared to the value in SerialNeighborEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborEndTime must be specified if op_SerialNeighborEndTime is specified. If the rlike or not rlike value is specified in the op_SerialNeighborEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_SerialNeighborEndTime: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SerialNeighborIPDotted: If op_SerialNeighborIPDotted is specified, this value will be compared to the value in SerialNeighborIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborIPDotted must be specified if op_SerialNeighborIPDotted is specified.
+             :param val_c_SerialNeighborIPDotted: If op_SerialNeighborIPDotted is specified, this value will be compared to the value in SerialNeighborIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborIPDotted must be specified if op_SerialNeighborIPDotted is specified. If the rlike or not rlike value is specified in the op_SerialNeighborIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_SerialNeighborIPDotted: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SerialNeighborIPNumeric: If op_SerialNeighborIPNumeric is specified, this value will be compared to the value in SerialNeighborIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborIPNumeric must be specified if op_SerialNeighborIPNumeric is specified.
+             :param val_c_SerialNeighborIPNumeric: If op_SerialNeighborIPNumeric is specified, this value will be compared to the value in SerialNeighborIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborIPNumeric must be specified if op_SerialNeighborIPNumeric is specified. If the rlike or not rlike value is specified in the op_SerialNeighborIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_SerialNeighborIPNumeric: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SerialNeighborMapSource: If op_SerialNeighborMapSource is specified, this value will be compared to the value in SerialNeighborMapSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborMapSource must be specified if op_SerialNeighborMapSource is specified.
+             :param val_c_SerialNeighborMapSource: If op_SerialNeighborMapSource is specified, this value will be compared to the value in SerialNeighborMapSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborMapSource must be specified if op_SerialNeighborMapSource is specified. If the rlike or not rlike value is specified in the op_SerialNeighborMapSource field, escape regex special characters because a regular expression is expected.
              :type val_c_SerialNeighborMapSource: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SerialNeighborNetMaskDotted: If op_SerialNeighborNetMaskDotted is specified, this value will be compared to the value in SerialNeighborNetMaskDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborNetMaskDotted must be specified if op_SerialNeighborNetMaskDotted is specified.
+             :param val_c_SerialNeighborNetMaskDotted: If op_SerialNeighborNetMaskDotted is specified, this value will be compared to the value in SerialNeighborNetMaskDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborNetMaskDotted must be specified if op_SerialNeighborNetMaskDotted is specified. If the rlike or not rlike value is specified in the op_SerialNeighborNetMaskDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_SerialNeighborNetMaskDotted: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SerialNeighborNetMaskNumeric: If op_SerialNeighborNetMaskNumeric is specified, this value will be compared to the value in SerialNeighborNetMaskNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborNetMaskNumeric must be specified if op_SerialNeighborNetMaskNumeric is specified.
+             :param val_c_SerialNeighborNetMaskNumeric: If op_SerialNeighborNetMaskNumeric is specified, this value will be compared to the value in SerialNeighborNetMaskNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborNetMaskNumeric must be specified if op_SerialNeighborNetMaskNumeric is specified. If the rlike or not rlike value is specified in the op_SerialNeighborNetMaskNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_SerialNeighborNetMaskNumeric: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SerialNeighborStartTime: If op_SerialNeighborStartTime is specified, this value will be compared to the value in SerialNeighborStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborStartTime must be specified if op_SerialNeighborStartTime is specified.
+             :param val_c_SerialNeighborStartTime: If op_SerialNeighborStartTime is specified, this value will be compared to the value in SerialNeighborStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborStartTime must be specified if op_SerialNeighborStartTime is specified. If the rlike or not rlike value is specified in the op_SerialNeighborStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_SerialNeighborStartTime: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SerialNeighborSubnetIPDotted: If op_SerialNeighborSubnetIPDotted is specified, this value will be compared to the value in SerialNeighborSubnetIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborSubnetIPDotted must be specified if op_SerialNeighborSubnetIPDotted is specified.
+             :param val_c_SerialNeighborSubnetIPDotted: If op_SerialNeighborSubnetIPDotted is specified, this value will be compared to the value in SerialNeighborSubnetIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborSubnetIPDotted must be specified if op_SerialNeighborSubnetIPDotted is specified. If the rlike or not rlike value is specified in the op_SerialNeighborSubnetIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_SerialNeighborSubnetIPDotted: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SerialNeighborSubnetIPNumeric: If op_SerialNeighborSubnetIPNumeric is specified, this value will be compared to the value in SerialNeighborSubnetIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborSubnetIPNumeric must be specified if op_SerialNeighborSubnetIPNumeric is specified.
+             :param val_c_SerialNeighborSubnetIPNumeric: If op_SerialNeighborSubnetIPNumeric is specified, this value will be compared to the value in SerialNeighborSubnetIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborSubnetIPNumeric must be specified if op_SerialNeighborSubnetIPNumeric is specified. If the rlike or not rlike value is specified in the op_SerialNeighborSubnetIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_SerialNeighborSubnetIPNumeric: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SerialNeighborTimestamp: If op_SerialNeighborTimestamp is specified, this value will be compared to the value in SerialNeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborTimestamp must be specified if op_SerialNeighborTimestamp is specified.
+             :param val_c_SerialNeighborTimestamp: If op_SerialNeighborTimestamp is specified, this value will be compared to the value in SerialNeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SerialNeighborTimestamp must be specified if op_SerialNeighborTimestamp is specified. If the rlike or not rlike value is specified in the op_SerialNeighborTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_SerialNeighborTimestamp: String
 
             |  ``api version min:`` None
@@ -871,7 +839,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NeighborID. Valid values are DataSourceID, NeighborID, SerialNeighborStartTime, SerialNeighborEndTime, SerialNeighborChangedCols, SerialNeighborTimestamp, SerialNeighborMapSource, SerialNeighborSubnetIPDotted, SerialNeighborSubnetIPNumeric, SerialNeighborIPDotted, SerialNeighborIPNumeric, SerialNeighborNetMaskDotted, SerialNeighborNetMaskNumeric.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, NeighborID, SerialNeighborStartTime, SerialNeighborEndTime, SerialNeighborChangedCols, SerialNeighborTimestamp, SerialNeighborMapSource, SerialNeighborSubnetIPDotted, SerialNeighborSubnetIPNumeric, SerialNeighborIPDotted, SerialNeighborIPNumeric, SerialNeighborNetMaskDotted, SerialNeighborNetMaskNumeric.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -889,22 +857,6 @@ class SerialNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each SerialNeighbor. Valid values are DataSourceID, NeighborID, SerialNeighborStartTime, SerialNeighborEndTime, SerialNeighborChangedCols, SerialNeighborTimestamp, SerialNeighborMapSource, SerialNeighborSubnetIPDotted, SerialNeighborSubnetIPNumeric, SerialNeighborIPDotted, SerialNeighborIPNumeric, SerialNeighborNetMaskDotted, SerialNeighborNetMaskNumeric. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -948,8 +900,8 @@ class SerialNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The neighbor relationship, which contains the source and destination device information.
-             :rtype : Neighbor
+             :return neighbor: The neighbor relationship, which contains the source and destination device information.
+             :rtype neighbor: Neighbor
 
             """
 

@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class DeviceQosStatRemote(RemoteModel):
     """
-    This table list out the entries of Qos statistics of each device.
+    This table list out the entries of QoS statistics of each device.
 
 
     |  ``DeviceQosID:`` The internal NetMRI identifier for the Device Quality of Service.

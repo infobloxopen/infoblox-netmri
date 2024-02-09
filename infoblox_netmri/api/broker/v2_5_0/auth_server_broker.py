@@ -32,17 +32,9 @@ class AuthServerBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available auth servers. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available auth servers. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
-
-            |  ``api version min:`` 2.5
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param auth_service_id: The id of the authentication service, this server is member of.
-             :type auth_service_id: Array of Integer
 
             |  ``api version min:`` 2.5
             |  ``api version max:`` None
@@ -73,7 +65,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, priority, enabled_ind, auth_server, auth_port, auth_shared_secret, auth_encryption, auth_cert, created_at, updated_at, secure_version, auth_service_id, auth_protocol, source_interface_id, auth_version.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, priority, enabled_ind, auth_server, auth_port, auth_shared_secret, auth_encryption, auth_cert, created_at, updated_at, secure_version, auth_service_id, auth_protocol, source_interface_id, auth_version.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -81,7 +73,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -91,22 +83,6 @@ class AuthServerBroker(Broker):
 
              :param select: The list of attributes to return for each AuthServer. Valid values are id, priority, enabled_ind, auth_server, auth_port, auth_shared_secret, auth_encryption, auth_cert, created_at, updated_at, secure_version, auth_service_id, auth_protocol, source_interface_id, auth_version. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -268,7 +244,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, priority, enabled_ind, auth_server, auth_port, auth_shared_secret, auth_encryption, auth_cert, created_at, updated_at, secure_version, auth_service_id, auth_protocol, source_interface_id, auth_version.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, priority, enabled_ind, auth_server, auth_port, auth_shared_secret, auth_encryption, auth_cert, created_at, updated_at, secure_version, auth_service_id, auth_protocol, source_interface_id, auth_version.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -276,7 +252,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -286,22 +262,6 @@ class AuthServerBroker(Broker):
 
              :param select: The list of attributes to return for each AuthServer. Valid values are id, priority, enabled_ind, auth_server, auth_port, auth_shared_secret, auth_encryption, auth_cert, created_at, updated_at, secure_version, auth_service_id, auth_protocol, source_interface_id, auth_version. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -359,7 +319,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_cert: If op_auth_cert is specified, this value will be compared to the value in auth_cert using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_cert must be specified if op_auth_cert is specified.
+             :param val_c_auth_cert: If op_auth_cert is specified, this value will be compared to the value in auth_cert using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_cert must be specified if op_auth_cert is specified. If the rlike or not rlike value is specified in the op_auth_cert field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_cert: String
 
             |  ``api version min:`` None
@@ -383,7 +343,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_encryption: If op_auth_encryption is specified, this value will be compared to the value in auth_encryption using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_encryption must be specified if op_auth_encryption is specified.
+             :param val_c_auth_encryption: If op_auth_encryption is specified, this value will be compared to the value in auth_encryption using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_encryption must be specified if op_auth_encryption is specified. If the rlike or not rlike value is specified in the op_auth_encryption field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_encryption: String
 
             |  ``api version min:`` None
@@ -407,7 +367,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_port: If op_auth_port is specified, this value will be compared to the value in auth_port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_port must be specified if op_auth_port is specified.
+             :param val_c_auth_port: If op_auth_port is specified, this value will be compared to the value in auth_port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_port must be specified if op_auth_port is specified. If the rlike or not rlike value is specified in the op_auth_port field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_port: String
 
             |  ``api version min:`` None
@@ -431,7 +391,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_protocol: If op_auth_protocol is specified, this value will be compared to the value in auth_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_protocol must be specified if op_auth_protocol is specified.
+             :param val_c_auth_protocol: If op_auth_protocol is specified, this value will be compared to the value in auth_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_protocol must be specified if op_auth_protocol is specified. If the rlike or not rlike value is specified in the op_auth_protocol field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_protocol: String
 
             |  ``api version min:`` None
@@ -455,7 +415,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_server: If op_auth_server is specified, this value will be compared to the value in auth_server using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_server must be specified if op_auth_server is specified.
+             :param val_c_auth_server: If op_auth_server is specified, this value will be compared to the value in auth_server using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_server must be specified if op_auth_server is specified. If the rlike or not rlike value is specified in the op_auth_server field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_server: String
 
             |  ``api version min:`` None
@@ -479,7 +439,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_service_id: If op_auth_service_id is specified, this value will be compared to the value in auth_service_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_service_id must be specified if op_auth_service_id is specified.
+             :param val_c_auth_service_id: If op_auth_service_id is specified, this value will be compared to the value in auth_service_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_service_id must be specified if op_auth_service_id is specified. If the rlike or not rlike value is specified in the op_auth_service_id field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_service_id: String
 
             |  ``api version min:`` None
@@ -503,7 +463,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_shared_secret: If op_auth_shared_secret is specified, this value will be compared to the value in auth_shared_secret using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_shared_secret must be specified if op_auth_shared_secret is specified.
+             :param val_c_auth_shared_secret: If op_auth_shared_secret is specified, this value will be compared to the value in auth_shared_secret using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_shared_secret must be specified if op_auth_shared_secret is specified. If the rlike or not rlike value is specified in the op_auth_shared_secret field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_shared_secret: String
 
             |  ``api version min:`` None
@@ -527,7 +487,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_version: If op_auth_version is specified, this value will be compared to the value in auth_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_version must be specified if op_auth_version is specified.
+             :param val_c_auth_version: If op_auth_version is specified, this value will be compared to the value in auth_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_version must be specified if op_auth_version is specified. If the rlike or not rlike value is specified in the op_auth_version field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_version: String
 
             |  ``api version min:`` None
@@ -551,7 +511,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -575,7 +535,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_enabled_ind: If op_enabled_ind is specified, this value will be compared to the value in enabled_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_enabled_ind must be specified if op_enabled_ind is specified.
+             :param val_c_enabled_ind: If op_enabled_ind is specified, this value will be compared to the value in enabled_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_enabled_ind must be specified if op_enabled_ind is specified. If the rlike or not rlike value is specified in the op_enabled_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_enabled_ind: String
 
             |  ``api version min:`` None
@@ -599,7 +559,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -623,7 +583,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_priority: If op_priority is specified, this value will be compared to the value in priority using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_priority must be specified if op_priority is specified.
+             :param val_c_priority: If op_priority is specified, this value will be compared to the value in priority using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_priority must be specified if op_priority is specified. If the rlike or not rlike value is specified in the op_priority field, escape regex special characters because a regular expression is expected.
              :type val_c_priority: String
 
             |  ``api version min:`` None
@@ -647,7 +607,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_secure_version: If op_secure_version is specified, this value will be compared to the value in secure_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_secure_version must be specified if op_secure_version is specified.
+             :param val_c_secure_version: If op_secure_version is specified, this value will be compared to the value in secure_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_secure_version must be specified if op_secure_version is specified. If the rlike or not rlike value is specified in the op_secure_version field, escape regex special characters because a regular expression is expected.
              :type val_c_secure_version: String
 
             |  ``api version min:`` None
@@ -671,7 +631,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_source_interface_id: If op_source_interface_id is specified, this value will be compared to the value in source_interface_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_source_interface_id must be specified if op_source_interface_id is specified.
+             :param val_c_source_interface_id: If op_source_interface_id is specified, this value will be compared to the value in source_interface_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_source_interface_id must be specified if op_source_interface_id is specified. If the rlike or not rlike value is specified in the op_source_interface_id field, escape regex special characters because a regular expression is expected.
              :type val_c_source_interface_id: String
 
             |  ``api version min:`` None
@@ -695,7 +655,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -719,7 +679,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, priority, enabled_ind, auth_server, auth_port, auth_shared_secret, auth_encryption, auth_cert, created_at, updated_at, secure_version, auth_service_id, auth_protocol, source_interface_id, auth_version.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, priority, enabled_ind, auth_server, auth_port, auth_shared_secret, auth_encryption, auth_cert, created_at, updated_at, secure_version, auth_service_id, auth_protocol, source_interface_id, auth_version.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -727,7 +687,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -737,22 +697,6 @@ class AuthServerBroker(Broker):
 
              :param select: The list of attributes to return for each AuthServer. Valid values are id, priority, enabled_ind, auth_server, auth_port, auth_shared_secret, auth_encryption, auth_cert, created_at, updated_at, secure_version, auth_service_id, auth_protocol, source_interface_id, auth_version. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -900,7 +844,7 @@ class AuthServerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated auth server.
+             :return uri: The URI that may be used to retrieve the updated auth server.
              :rtype uri: String
 
             |  ``api version min:`` None

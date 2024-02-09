@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class NeighborRemote(RemoteModel):
     """
-     Summary of each neighbor relationship for a device.  This includes both L2 and L3 neighbor relationships.
+     Summary of each neighbor relationship for a device. This includes both L2 and L3 neighbor relationships.
 
 
     |  ``BGPRoutedInd:`` A flag indicating that this neighbor relationship represents an IP routing relationship based upon a BGP route.

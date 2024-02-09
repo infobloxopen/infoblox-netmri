@@ -105,7 +105,14 @@ class Broker(object):
             :param name: name of model
             :return: full path for model
         """
+        if not name:
+            name = self.__class__.__name__.replace("Broker", "")
+        if name:
+            pckg = to_snake(name)
+        else:
+            raise RuntimeError('Cannot determine type of the object returned by {} controller. '
+                               '_class property is missing'.format(self.controller))
         return "infoblox_netmri.api.remote.models.{pckg}_remote.{name}Remote".format(
-            pckg=to_snake(name),
+            pckg=pckg,
             name=name
         )

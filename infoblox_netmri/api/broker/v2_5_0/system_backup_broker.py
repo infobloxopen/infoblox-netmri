@@ -35,6 +35,22 @@ class SystemBackupBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return message: System message.
+             :rtype message: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return log: Log message, if exists.
+             :rtype log: String
+
             """
 
         return self.api_request(self._get_method_fullname("create_archive"), kwargs)
@@ -45,6 +61,22 @@ class SystemBackupBroker(Broker):
             **Inputs**
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return message: System message.
+             :rtype message: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return log: Log message, if exists.
+             :rtype log: String
 
             """
 
@@ -66,9 +98,9 @@ class SystemBackupBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` None
+            |  ``default:`` 22
 
-             :param port: Number of open SSH port on the system where archive will be delivered. Default value is 22 (used if no port number specified).
+             :param port: Number of open SSH port on the system where archive will be delivered.
              :type port: Integer
 
             |  ``api version min:`` None
@@ -105,6 +137,22 @@ class SystemBackupBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return message: System message.
+             :rtype message: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return log: Log message, if exists.
+             :rtype log: String
+
             """
 
         return self.api_request(self._get_method_fullname("ssh_authentication_test"), kwargs)
@@ -125,9 +173,9 @@ class SystemBackupBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` None
+            |  ``default:`` 22
 
-             :param port: Number of open SSH port on the system where archive will be delivered. Default value is 22 (used if no port number specified).
+             :param port: Number of open SSH port on the system where archive will be delivered.
              :type port: Integer
 
             |  ``api version min:`` None
@@ -172,6 +220,22 @@ class SystemBackupBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return message: System message.
+             :rtype message: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return log: Log message, if exists.
+             :rtype log: String
+
             """
 
         return self.api_request(self._get_method_fullname("move_archive_to_remote_host"), kwargs)
@@ -205,6 +269,14 @@ class SystemBackupBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return message: System message.
+             :rtype message: String
+
             """
 
         return self.api_request(self._get_method_fullname("remove_archive"), kwargs)
@@ -227,15 +299,15 @@ class SystemBackupBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param host_1: Host name or IP address of the system where archive will be copied.
+             :param host_1: Host name or IP address of the system where archive will be copied. Required if no "host_2" is specified.
              :type host_1: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` None
+            |  ``default:`` 22
 
-             :param port_1: Number of open SSH port on the system where archive will be delivered. Default value is 22 (used if no port number specified).
+             :param port_1: Number of open SSH port on the system where archive will be delivered.
              :type port_1: Integer
 
             |  ``api version min:`` None
@@ -243,7 +315,7 @@ class SystemBackupBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param user_name_1: Name of the existing user on the system where archive will be copied.
+             :param user_name_1: Name of the existing user on the system where archive will be copied. Required if no "user_name_2" is specified.
              :type user_name_1: String
 
             |  ``api version min:`` None
@@ -275,15 +347,15 @@ class SystemBackupBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param host_2: Host name or IP address of the system where archive will be copied.
+             :param host_2: Host name or IP address of the system where archive will be copied. Required if no "host_1" is specified.
              :type host_2: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` None
+            |  ``default:`` 22
 
-             :param port_2: Number of open SSH port on the system where archive will be delivered. Default value is 22 (used if no port number specified).
+             :param port_2: Number of open SSH port on the system where archive will be delivered.
              :type port_2: Integer
 
             |  ``api version min:`` None
@@ -291,7 +363,7 @@ class SystemBackupBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param user_name_2: Name of the existing user on the system where archive will be copied.
+             :param user_name_2: Name of the existing user on the system where archive will be copied. Required if no "user_name_1" is specified.
              :type user_name_2: String
 
             |  ``api version min:`` None
@@ -360,44 +432,22 @@ class SystemBackupBroker(Broker):
 
             **Outputs**
 
-            """
-
-        return self.api_request(self._get_method_fullname("schedule_archiving"), kwargs)
-
-    def upload_archive(self, **kwargs):
-        """Upload database archive to NetMRI.
-
-            **Inputs**
-
             |  ``api version min:`` None
             |  ``api version max:`` None
-            |  ``required:`` True
+            |  ``required:`` False
             |  ``default:`` None
 
-             :param archive: NetMRI database archive file.
-             :type archive: String
+             :return message: System message.
+             :rtype message: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
             |  ``default:`` None
 
-             :param md5: NetMRI database archive MD5 checksum file.
-             :type md5: String
-
-            **Outputs**
+             :return log: Log message, if exists.
+             :rtype log: String
 
             """
 
-        return self.api_request(self._get_method_fullname("upload_archive"), kwargs)
-
-    def restore_database(self, **kwargs):
-        """Restores database from the archive which should have been uploaded to NetMRI.
-
-            **Inputs**
-
-            **Outputs**
-
-            """
-
-        return self.api_request(self._get_method_fullname("restore_database"), kwargs)
+        return self.api_request(self._get_method_fullname("schedule_archiving"), kwargs)

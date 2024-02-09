@@ -32,7 +32,7 @@ class IfGroupDefnBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available if group defns. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available if group defns. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -89,7 +89,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` GroupID
 
-             :param sort: The data field(s) to use for sorting the output. Default is GroupID. Valid values are GroupID, GroupName, Criteria, Rank, SNMPPolling, FlowCollection, PerfFrequency, Timestamp, MemberCount, UpdatedAt.
+             :param sort: The data field(s) to use for sorting the output. Valid values are GroupID, GroupName, Criteria, Rank, SNMPPolling, FlowCollection, PerfFrequency, Timestamp, MemberCount, UpdatedAt.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -97,7 +97,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -107,22 +107,6 @@ class IfGroupDefnBroker(Broker):
 
              :param select: The list of attributes to return for each IfGroupDefn. Valid values are GroupID, GroupName, Criteria, Rank, SNMPPolling, FlowCollection, PerfFrequency, Timestamp, MemberCount, UpdatedAt. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -324,7 +308,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` GroupID
 
-             :param sort: The data field(s) to use for sorting the output. Default is GroupID. Valid values are GroupID, GroupName, Criteria, Rank, SNMPPolling, FlowCollection, PerfFrequency, Timestamp, MemberCount, UpdatedAt.
+             :param sort: The data field(s) to use for sorting the output. Valid values are GroupID, GroupName, Criteria, Rank, SNMPPolling, FlowCollection, PerfFrequency, Timestamp, MemberCount, UpdatedAt.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -332,7 +316,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -342,22 +326,6 @@ class IfGroupDefnBroker(Broker):
 
              :param select: The list of attributes to return for each IfGroupDefn. Valid values are GroupID, GroupName, Criteria, Rank, SNMPPolling, FlowCollection, PerfFrequency, Timestamp, MemberCount, UpdatedAt. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -415,7 +383,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Criteria: If op_Criteria is specified, this value will be compared to the value in Criteria using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Criteria must be specified if op_Criteria is specified.
+             :param val_c_Criteria: If op_Criteria is specified, this value will be compared to the value in Criteria using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Criteria must be specified if op_Criteria is specified. If the rlike or not rlike value is specified in the op_Criteria field, escape regex special characters because a regular expression is expected.
              :type val_c_Criteria: String
 
             |  ``api version min:`` None
@@ -439,7 +407,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FlowCollection: If op_FlowCollection is specified, this value will be compared to the value in FlowCollection using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FlowCollection must be specified if op_FlowCollection is specified.
+             :param val_c_FlowCollection: If op_FlowCollection is specified, this value will be compared to the value in FlowCollection using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FlowCollection must be specified if op_FlowCollection is specified. If the rlike or not rlike value is specified in the op_FlowCollection field, escape regex special characters because a regular expression is expected.
              :type val_c_FlowCollection: String
 
             |  ``api version min:`` None
@@ -463,7 +431,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GroupID: If op_GroupID is specified, this value will be compared to the value in GroupID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GroupID must be specified if op_GroupID is specified.
+             :param val_c_GroupID: If op_GroupID is specified, this value will be compared to the value in GroupID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GroupID must be specified if op_GroupID is specified. If the rlike or not rlike value is specified in the op_GroupID field, escape regex special characters because a regular expression is expected.
              :type val_c_GroupID: String
 
             |  ``api version min:`` None
@@ -487,7 +455,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GroupName: If op_GroupName is specified, this value will be compared to the value in GroupName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GroupName must be specified if op_GroupName is specified.
+             :param val_c_GroupName: If op_GroupName is specified, this value will be compared to the value in GroupName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GroupName must be specified if op_GroupName is specified. If the rlike or not rlike value is specified in the op_GroupName field, escape regex special characters because a regular expression is expected.
              :type val_c_GroupName: String
 
             |  ``api version min:`` None
@@ -511,7 +479,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_MemberCount: If op_MemberCount is specified, this value will be compared to the value in MemberCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MemberCount must be specified if op_MemberCount is specified.
+             :param val_c_MemberCount: If op_MemberCount is specified, this value will be compared to the value in MemberCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MemberCount must be specified if op_MemberCount is specified. If the rlike or not rlike value is specified in the op_MemberCount field, escape regex special characters because a regular expression is expected.
              :type val_c_MemberCount: String
 
             |  ``api version min:`` None
@@ -535,7 +503,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PerfFrequency: If op_PerfFrequency is specified, this value will be compared to the value in PerfFrequency using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PerfFrequency must be specified if op_PerfFrequency is specified.
+             :param val_c_PerfFrequency: If op_PerfFrequency is specified, this value will be compared to the value in PerfFrequency using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PerfFrequency must be specified if op_PerfFrequency is specified. If the rlike or not rlike value is specified in the op_PerfFrequency field, escape regex special characters because a regular expression is expected.
              :type val_c_PerfFrequency: String
 
             |  ``api version min:`` None
@@ -559,7 +527,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Rank: If op_Rank is specified, this value will be compared to the value in Rank using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Rank must be specified if op_Rank is specified.
+             :param val_c_Rank: If op_Rank is specified, this value will be compared to the value in Rank using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Rank must be specified if op_Rank is specified. If the rlike or not rlike value is specified in the op_Rank field, escape regex special characters because a regular expression is expected.
              :type val_c_Rank: String
 
             |  ``api version min:`` None
@@ -583,7 +551,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SNMPPolling: If op_SNMPPolling is specified, this value will be compared to the value in SNMPPolling using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SNMPPolling must be specified if op_SNMPPolling is specified.
+             :param val_c_SNMPPolling: If op_SNMPPolling is specified, this value will be compared to the value in SNMPPolling using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SNMPPolling must be specified if op_SNMPPolling is specified. If the rlike or not rlike value is specified in the op_SNMPPolling field, escape regex special characters because a regular expression is expected.
              :type val_c_SNMPPolling: String
 
             |  ``api version min:`` None
@@ -607,7 +575,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Timestamp: If op_Timestamp is specified, this value will be compared to the value in Timestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Timestamp must be specified if op_Timestamp is specified.
+             :param val_c_Timestamp: If op_Timestamp is specified, this value will be compared to the value in Timestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Timestamp must be specified if op_Timestamp is specified. If the rlike or not rlike value is specified in the op_Timestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_Timestamp: String
 
             |  ``api version min:`` None
@@ -631,7 +599,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UpdatedAt: If op_UpdatedAt is specified, this value will be compared to the value in UpdatedAt using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UpdatedAt must be specified if op_UpdatedAt is specified.
+             :param val_c_UpdatedAt: If op_UpdatedAt is specified, this value will be compared to the value in UpdatedAt using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UpdatedAt must be specified if op_UpdatedAt is specified. If the rlike or not rlike value is specified in the op_UpdatedAt field, escape regex special characters because a regular expression is expected.
              :type val_c_UpdatedAt: String
 
             |  ``api version min:`` None
@@ -655,7 +623,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` GroupID
 
-             :param sort: The data field(s) to use for sorting the output. Default is GroupID. Valid values are GroupID, GroupName, Criteria, Rank, SNMPPolling, FlowCollection, PerfFrequency, Timestamp, MemberCount, UpdatedAt.
+             :param sort: The data field(s) to use for sorting the output. Valid values are GroupID, GroupName, Criteria, Rank, SNMPPolling, FlowCollection, PerfFrequency, Timestamp, MemberCount, UpdatedAt.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -673,22 +641,6 @@ class IfGroupDefnBroker(Broker):
 
              :param select: The list of attributes to return for each IfGroupDefn. Valid values are GroupID, GroupName, Criteria, Rank, SNMPPolling, FlowCollection, PerfFrequency, Timestamp, MemberCount, UpdatedAt. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -812,7 +764,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created if group defn.
+             :return uri: The URI that may be used to retrieve the newly created if group defn.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -970,7 +922,7 @@ class IfGroupDefnBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated if group defn.
+             :return uri: The URI that may be used to retrieve the updated if group defn.
              :rtype uri: String
 
             |  ``api version min:`` None

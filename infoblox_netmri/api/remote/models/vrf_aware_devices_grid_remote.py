@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class VrfAwareDevicesGridRemote(RemoteModel):
     """
-    list of VRF aware devices
+    List of VRF aware devices.
 
 
     |  ``id:`` The internal system identifier for the worksheet.

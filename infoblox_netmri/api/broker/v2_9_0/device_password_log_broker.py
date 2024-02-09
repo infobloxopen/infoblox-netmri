@@ -5,7 +5,7 @@ class DevicePasswordLogBroker(Broker):
     controller = "device_password_logs"
 
     def index(self, **kwargs):
-        """Lists the available device password logs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device password logs. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -94,7 +94,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePwLogID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePwLogID. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -102,7 +102,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -112,22 +112,6 @@ class DevicePasswordLogBroker(Broker):
 
              :param select: The list of attributes to return for each DevicePasswordLog. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -484,7 +468,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePwLogID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePwLogID. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -492,7 +476,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -502,22 +486,6 @@ class DevicePasswordLogBroker(Broker):
 
              :param select: The list of attributes to return for each DevicePasswordLog. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -575,7 +543,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePwLogEnablePasswordSecure: If op_DevicePwLogEnablePasswordSecure is specified, this value will be compared to the value in DevicePwLogEnablePasswordSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogEnablePasswordSecure must be specified if op_DevicePwLogEnablePasswordSecure is specified.
+             :param val_c_DevicePwLogEnablePasswordSecure: If op_DevicePwLogEnablePasswordSecure is specified, this value will be compared to the value in DevicePwLogEnablePasswordSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogEnablePasswordSecure must be specified if op_DevicePwLogEnablePasswordSecure is specified. If the rlike or not rlike value is specified in the op_DevicePwLogEnablePasswordSecure field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePwLogEnablePasswordSecure: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePwLogID: If op_DevicePwLogID is specified, this value will be compared to the value in DevicePwLogID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogID must be specified if op_DevicePwLogID is specified.
+             :param val_c_DevicePwLogID: If op_DevicePwLogID is specified, this value will be compared to the value in DevicePwLogID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogID must be specified if op_DevicePwLogID is specified. If the rlike or not rlike value is specified in the op_DevicePwLogID field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePwLogID: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePwLogPasswordSecure: If op_DevicePwLogPasswordSecure is specified, this value will be compared to the value in DevicePwLogPasswordSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogPasswordSecure must be specified if op_DevicePwLogPasswordSecure is specified.
+             :param val_c_DevicePwLogPasswordSecure: If op_DevicePwLogPasswordSecure is specified, this value will be compared to the value in DevicePwLogPasswordSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogPasswordSecure must be specified if op_DevicePwLogPasswordSecure is specified. If the rlike or not rlike value is specified in the op_DevicePwLogPasswordSecure field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePwLogPasswordSecure: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePwLogProtocol: If op_DevicePwLogProtocol is specified, this value will be compared to the value in DevicePwLogProtocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogProtocol must be specified if op_DevicePwLogProtocol is specified.
+             :param val_c_DevicePwLogProtocol: If op_DevicePwLogProtocol is specified, this value will be compared to the value in DevicePwLogProtocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogProtocol must be specified if op_DevicePwLogProtocol is specified. If the rlike or not rlike value is specified in the op_DevicePwLogProtocol field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePwLogProtocol: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePwLogSNMPAuthPWSecure: If op_DevicePwLogSNMPAuthPWSecure is specified, this value will be compared to the value in DevicePwLogSNMPAuthPWSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogSNMPAuthPWSecure must be specified if op_DevicePwLogSNMPAuthPWSecure is specified.
+             :param val_c_DevicePwLogSNMPAuthPWSecure: If op_DevicePwLogSNMPAuthPWSecure is specified, this value will be compared to the value in DevicePwLogSNMPAuthPWSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogSNMPAuthPWSecure must be specified if op_DevicePwLogSNMPAuthPWSecure is specified. If the rlike or not rlike value is specified in the op_DevicePwLogSNMPAuthPWSecure field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePwLogSNMPAuthPWSecure: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePwLogSNMPAuthProto: If op_DevicePwLogSNMPAuthProto is specified, this value will be compared to the value in DevicePwLogSNMPAuthProto using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogSNMPAuthProto must be specified if op_DevicePwLogSNMPAuthProto is specified.
+             :param val_c_DevicePwLogSNMPAuthProto: If op_DevicePwLogSNMPAuthProto is specified, this value will be compared to the value in DevicePwLogSNMPAuthProto using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogSNMPAuthProto must be specified if op_DevicePwLogSNMPAuthProto is specified. If the rlike or not rlike value is specified in the op_DevicePwLogSNMPAuthProto field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePwLogSNMPAuthProto: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePwLogSNMPPrivPWSecure: If op_DevicePwLogSNMPPrivPWSecure is specified, this value will be compared to the value in DevicePwLogSNMPPrivPWSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogSNMPPrivPWSecure must be specified if op_DevicePwLogSNMPPrivPWSecure is specified.
+             :param val_c_DevicePwLogSNMPPrivPWSecure: If op_DevicePwLogSNMPPrivPWSecure is specified, this value will be compared to the value in DevicePwLogSNMPPrivPWSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogSNMPPrivPWSecure must be specified if op_DevicePwLogSNMPPrivPWSecure is specified. If the rlike or not rlike value is specified in the op_DevicePwLogSNMPPrivPWSecure field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePwLogSNMPPrivPWSecure: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePwLogSNMPPrivProto: If op_DevicePwLogSNMPPrivProto is specified, this value will be compared to the value in DevicePwLogSNMPPrivProto using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogSNMPPrivProto must be specified if op_DevicePwLogSNMPPrivProto is specified.
+             :param val_c_DevicePwLogSNMPPrivProto: If op_DevicePwLogSNMPPrivProto is specified, this value will be compared to the value in DevicePwLogSNMPPrivProto using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogSNMPPrivProto must be specified if op_DevicePwLogSNMPPrivProto is specified. If the rlike or not rlike value is specified in the op_DevicePwLogSNMPPrivProto field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePwLogSNMPPrivProto: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePwLogStatus: If op_DevicePwLogStatus is specified, this value will be compared to the value in DevicePwLogStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogStatus must be specified if op_DevicePwLogStatus is specified.
+             :param val_c_DevicePwLogStatus: If op_DevicePwLogStatus is specified, this value will be compared to the value in DevicePwLogStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogStatus must be specified if op_DevicePwLogStatus is specified. If the rlike or not rlike value is specified in the op_DevicePwLogStatus field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePwLogStatus: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePwLogTimestamp: If op_DevicePwLogTimestamp is specified, this value will be compared to the value in DevicePwLogTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogTimestamp must be specified if op_DevicePwLogTimestamp is specified.
+             :param val_c_DevicePwLogTimestamp: If op_DevicePwLogTimestamp is specified, this value will be compared to the value in DevicePwLogTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogTimestamp must be specified if op_DevicePwLogTimestamp is specified. If the rlike or not rlike value is specified in the op_DevicePwLogTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePwLogTimestamp: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePwLogUsernameSecure: If op_DevicePwLogUsernameSecure is specified, this value will be compared to the value in DevicePwLogUsernameSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogUsernameSecure must be specified if op_DevicePwLogUsernameSecure is specified.
+             :param val_c_DevicePwLogUsernameSecure: If op_DevicePwLogUsernameSecure is specified, this value will be compared to the value in DevicePwLogUsernameSecure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePwLogUsernameSecure must be specified if op_DevicePwLogUsernameSecure is specified. If the rlike or not rlike value is specified in the op_DevicePwLogUsernameSecure field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePwLogUsernameSecure: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Port: If op_Port is specified, this value will be compared to the value in Port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Port must be specified if op_Port is specified.
+             :param val_c_Port: If op_Port is specified, this value will be compared to the value in Port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Port must be specified if op_Port is specified. If the rlike or not rlike value is specified in the op_Port field, escape regex special characters because a regular expression is expected.
              :type val_c_Port: String
 
             |  ``api version min:`` None
@@ -911,7 +879,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SecureVersion: If op_SecureVersion is specified, this value will be compared to the value in SecureVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SecureVersion must be specified if op_SecureVersion is specified.
+             :param val_c_SecureVersion: If op_SecureVersion is specified, this value will be compared to the value in SecureVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SecureVersion must be specified if op_SecureVersion is specified. If the rlike or not rlike value is specified in the op_SecureVersion field, escape regex special characters because a regular expression is expected.
              :type val_c_SecureVersion: String
 
             |  ``api version min:`` None
@@ -967,7 +935,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePwLogID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePwLogID. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -985,22 +953,6 @@ class DevicePasswordLogBroker(Broker):
 
              :param select: The list of attributes to return for each DevicePasswordLog. Valid values are DevicePwLogID, DataSourceID, DeviceID, DevicePwLogTimestamp, DevicePwLogProtocol, DevicePwLogSNMPAuthProto, DevicePwLogSNMPPrivProto, DevicePwLogStatus, DevicePwLogUsernameSecure, DevicePwLogPasswordSecure, DevicePwLogEnablePasswordSecure, DevicePwLogSNMPAuthPWSecure, DevicePwLogSNMPPrivPWSecure, SecureVersion, Port. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1044,8 +996,8 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1071,8 +1023,8 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -1098,8 +1050,8 @@ class DevicePasswordLogBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

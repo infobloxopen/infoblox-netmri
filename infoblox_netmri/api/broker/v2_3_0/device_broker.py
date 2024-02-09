@@ -5,7 +5,7 @@ class DeviceBroker(Broker):
     controller = "devices"
 
     def index(self, **kwargs):
-        """Lists the available devices. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available devices. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -174,7 +174,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -182,7 +182,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -192,22 +192,6 @@ class DeviceBroker(Broker):
 
              :param select: The list of attributes to return for each Device. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -1185,7 +1169,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1193,7 +1177,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1203,22 +1187,6 @@ class DeviceBroker(Broker):
 
              :param select: The list of attributes to return for each Device. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -1284,7 +1252,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ARPCacheRefreshInd: If op_ARPCacheRefreshInd is specified, this value will be compared to the value in ARPCacheRefreshInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ARPCacheRefreshInd must be specified if op_ARPCacheRefreshInd is specified.
+             :param val_c_ARPCacheRefreshInd: If op_ARPCacheRefreshInd is specified, this value will be compared to the value in ARPCacheRefreshInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ARPCacheRefreshInd must be specified if op_ARPCacheRefreshInd is specified. If the rlike or not rlike value is specified in the op_ARPCacheRefreshInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ARPCacheRefreshInd: String
 
             |  ``api version min:`` None
@@ -1308,7 +1276,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -1332,7 +1300,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceAddlInfo: If op_DeviceAddlInfo is specified, this value will be compared to the value in DeviceAddlInfo using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceAddlInfo must be specified if op_DeviceAddlInfo is specified.
+             :param val_c_DeviceAddlInfo: If op_DeviceAddlInfo is specified, this value will be compared to the value in DeviceAddlInfo using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceAddlInfo must be specified if op_DeviceAddlInfo is specified. If the rlike or not rlike value is specified in the op_DeviceAddlInfo field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceAddlInfo: String
 
             |  ``api version min:`` None
@@ -1356,7 +1324,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceAssurance: If op_DeviceAssurance is specified, this value will be compared to the value in DeviceAssurance using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceAssurance must be specified if op_DeviceAssurance is specified.
+             :param val_c_DeviceAssurance: If op_DeviceAssurance is specified, this value will be compared to the value in DeviceAssurance using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceAssurance must be specified if op_DeviceAssurance is specified. If the rlike or not rlike value is specified in the op_DeviceAssurance field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceAssurance: String
 
             |  ``api version min:`` None
@@ -1380,7 +1348,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceCCSCollection: If op_DeviceCCSCollection is specified, this value will be compared to the value in DeviceCCSCollection using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceCCSCollection must be specified if op_DeviceCCSCollection is specified.
+             :param val_c_DeviceCCSCollection: If op_DeviceCCSCollection is specified, this value will be compared to the value in DeviceCCSCollection using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceCCSCollection must be specified if op_DeviceCCSCollection is specified. If the rlike or not rlike value is specified in the op_DeviceCCSCollection field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceCCSCollection: String
 
             |  ``api version min:`` None
@@ -1404,7 +1372,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceChangedCols: If op_DeviceChangedCols is specified, this value will be compared to the value in DeviceChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceChangedCols must be specified if op_DeviceChangedCols is specified.
+             :param val_c_DeviceChangedCols: If op_DeviceChangedCols is specified, this value will be compared to the value in DeviceChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceChangedCols must be specified if op_DeviceChangedCols is specified. If the rlike or not rlike value is specified in the op_DeviceChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceChangedCols: String
 
             |  ``api version min:`` None
@@ -1428,7 +1396,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceCommunity: If op_DeviceCommunity is specified, this value will be compared to the value in DeviceCommunity using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceCommunity must be specified if op_DeviceCommunity is specified.
+             :param val_c_DeviceCommunity: If op_DeviceCommunity is specified, this value will be compared to the value in DeviceCommunity using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceCommunity must be specified if op_DeviceCommunity is specified. If the rlike or not rlike value is specified in the op_DeviceCommunity field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceCommunity: String
 
             |  ``api version min:`` None
@@ -1452,7 +1420,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceConfigLastChecked: If op_DeviceConfigLastChecked is specified, this value will be compared to the value in DeviceConfigLastChecked using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceConfigLastChecked must be specified if op_DeviceConfigLastChecked is specified.
+             :param val_c_DeviceConfigLastChecked: If op_DeviceConfigLastChecked is specified, this value will be compared to the value in DeviceConfigLastChecked using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceConfigLastChecked must be specified if op_DeviceConfigLastChecked is specified. If the rlike or not rlike value is specified in the op_DeviceConfigLastChecked field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceConfigLastChecked: String
 
             |  ``api version min:`` None
@@ -1476,7 +1444,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceConfigLockLastChange: If op_DeviceConfigLockLastChange is specified, this value will be compared to the value in DeviceConfigLockLastChange using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceConfigLockLastChange must be specified if op_DeviceConfigLockLastChange is specified.
+             :param val_c_DeviceConfigLockLastChange: If op_DeviceConfigLockLastChange is specified, this value will be compared to the value in DeviceConfigLockLastChange using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceConfigLockLastChange must be specified if op_DeviceConfigLockLastChange is specified. If the rlike or not rlike value is specified in the op_DeviceConfigLockLastChange field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceConfigLockLastChange: String
 
             |  ``api version min:`` None
@@ -1500,7 +1468,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceConfigLockLastChangeBy: If op_DeviceConfigLockLastChangeBy is specified, this value will be compared to the value in DeviceConfigLockLastChangeBy using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceConfigLockLastChangeBy must be specified if op_DeviceConfigLockLastChangeBy is specified.
+             :param val_c_DeviceConfigLockLastChangeBy: If op_DeviceConfigLockLastChangeBy is specified, this value will be compared to the value in DeviceConfigLockLastChangeBy using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceConfigLockLastChangeBy must be specified if op_DeviceConfigLockLastChangeBy is specified. If the rlike or not rlike value is specified in the op_DeviceConfigLockLastChangeBy field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceConfigLockLastChangeBy: String
 
             |  ``api version min:`` None
@@ -1524,7 +1492,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceConfigLocked: If op_DeviceConfigLocked is specified, this value will be compared to the value in DeviceConfigLocked using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceConfigLocked must be specified if op_DeviceConfigLocked is specified.
+             :param val_c_DeviceConfigLocked: If op_DeviceConfigLocked is specified, this value will be compared to the value in DeviceConfigLocked using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceConfigLocked must be specified if op_DeviceConfigLocked is specified. If the rlike or not rlike value is specified in the op_DeviceConfigLocked field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceConfigLocked: String
 
             |  ``api version min:`` None
@@ -1548,7 +1516,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceConfigPolling: If op_DeviceConfigPolling is specified, this value will be compared to the value in DeviceConfigPolling using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceConfigPolling must be specified if op_DeviceConfigPolling is specified.
+             :param val_c_DeviceConfigPolling: If op_DeviceConfigPolling is specified, this value will be compared to the value in DeviceConfigPolling using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceConfigPolling must be specified if op_DeviceConfigPolling is specified. If the rlike or not rlike value is specified in the op_DeviceConfigPolling field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceConfigPolling: String
 
             |  ``api version min:`` None
@@ -1572,7 +1540,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceConfigTimestamp: If op_DeviceConfigTimestamp is specified, this value will be compared to the value in DeviceConfigTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceConfigTimestamp must be specified if op_DeviceConfigTimestamp is specified.
+             :param val_c_DeviceConfigTimestamp: If op_DeviceConfigTimestamp is specified, this value will be compared to the value in DeviceConfigTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceConfigTimestamp must be specified if op_DeviceConfigTimestamp is specified. If the rlike or not rlike value is specified in the op_DeviceConfigTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceConfigTimestamp: String
 
             |  ``api version min:`` None
@@ -1596,7 +1564,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceContextName: If op_DeviceContextName is specified, this value will be compared to the value in DeviceContextName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceContextName must be specified if op_DeviceContextName is specified.
+             :param val_c_DeviceContextName: If op_DeviceContextName is specified, this value will be compared to the value in DeviceContextName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceContextName must be specified if op_DeviceContextName is specified. If the rlike or not rlike value is specified in the op_DeviceContextName field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceContextName: String
 
             |  ``api version min:`` None
@@ -1620,7 +1588,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceDNSName: If op_DeviceDNSName is specified, this value will be compared to the value in DeviceDNSName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceDNSName must be specified if op_DeviceDNSName is specified.
+             :param val_c_DeviceDNSName: If op_DeviceDNSName is specified, this value will be compared to the value in DeviceDNSName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceDNSName must be specified if op_DeviceDNSName is specified. If the rlike or not rlike value is specified in the op_DeviceDNSName field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceDNSName: String
 
             |  ``api version min:`` None
@@ -1644,7 +1612,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceEndTime: If op_DeviceEndTime is specified, this value will be compared to the value in DeviceEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceEndTime must be specified if op_DeviceEndTime is specified.
+             :param val_c_DeviceEndTime: If op_DeviceEndTime is specified, this value will be compared to the value in DeviceEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceEndTime must be specified if op_DeviceEndTime is specified. If the rlike or not rlike value is specified in the op_DeviceEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceEndTime: String
 
             |  ``api version min:`` None
@@ -1668,7 +1636,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceFingerPrint: If op_DeviceFingerPrint is specified, this value will be compared to the value in DeviceFingerPrint using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceFingerPrint must be specified if op_DeviceFingerPrint is specified.
+             :param val_c_DeviceFingerPrint: If op_DeviceFingerPrint is specified, this value will be compared to the value in DeviceFingerPrint using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceFingerPrint must be specified if op_DeviceFingerPrint is specified. If the rlike or not rlike value is specified in the op_DeviceFingerPrint field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceFingerPrint: String
 
             |  ``api version min:`` None
@@ -1692,7 +1660,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceFirstOccurrence: If op_DeviceFirstOccurrence is specified, this value will be compared to the value in DeviceFirstOccurrence using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceFirstOccurrence must be specified if op_DeviceFirstOccurrence is specified.
+             :param val_c_DeviceFirstOccurrence: If op_DeviceFirstOccurrence is specified, this value will be compared to the value in DeviceFirstOccurrence using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceFirstOccurrence must be specified if op_DeviceFirstOccurrence is specified. If the rlike or not rlike value is specified in the op_DeviceFirstOccurrence field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceFirstOccurrence: String
 
             |  ``api version min:`` None
@@ -1716,7 +1684,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -1740,7 +1708,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceIPDotted: If op_DeviceIPDotted is specified, this value will be compared to the value in DeviceIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceIPDotted must be specified if op_DeviceIPDotted is specified.
+             :param val_c_DeviceIPDotted: If op_DeviceIPDotted is specified, this value will be compared to the value in DeviceIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceIPDotted must be specified if op_DeviceIPDotted is specified. If the rlike or not rlike value is specified in the op_DeviceIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceIPDotted: String
 
             |  ``api version min:`` None
@@ -1764,7 +1732,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceIPNumeric: If op_DeviceIPNumeric is specified, this value will be compared to the value in DeviceIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceIPNumeric must be specified if op_DeviceIPNumeric is specified.
+             :param val_c_DeviceIPNumeric: If op_DeviceIPNumeric is specified, this value will be compared to the value in DeviceIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceIPNumeric must be specified if op_DeviceIPNumeric is specified. If the rlike or not rlike value is specified in the op_DeviceIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceIPNumeric: String
 
             |  ``api version min:`` None
@@ -1788,7 +1756,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceLicensed: If op_DeviceLicensed is specified, this value will be compared to the value in DeviceLicensed using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceLicensed must be specified if op_DeviceLicensed is specified.
+             :param val_c_DeviceLicensed: If op_DeviceLicensed is specified, this value will be compared to the value in DeviceLicensed using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceLicensed must be specified if op_DeviceLicensed is specified. If the rlike or not rlike value is specified in the op_DeviceLicensed field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceLicensed: String
 
             |  ``api version min:`` None
@@ -1812,7 +1780,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceMAC: If op_DeviceMAC is specified, this value will be compared to the value in DeviceMAC using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceMAC must be specified if op_DeviceMAC is specified.
+             :param val_c_DeviceMAC: If op_DeviceMAC is specified, this value will be compared to the value in DeviceMAC using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceMAC must be specified if op_DeviceMAC is specified. If the rlike or not rlike value is specified in the op_DeviceMAC field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceMAC: String
 
             |  ``api version min:`` None
@@ -1836,7 +1804,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceManagedInd: If op_DeviceManagedInd is specified, this value will be compared to the value in DeviceManagedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceManagedInd must be specified if op_DeviceManagedInd is specified.
+             :param val_c_DeviceManagedInd: If op_DeviceManagedInd is specified, this value will be compared to the value in DeviceManagedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceManagedInd must be specified if op_DeviceManagedInd is specified. If the rlike or not rlike value is specified in the op_DeviceManagedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceManagedInd: String
 
             |  ``api version min:`` None
@@ -1860,7 +1828,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceModel: If op_DeviceModel is specified, this value will be compared to the value in DeviceModel using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceModel must be specified if op_DeviceModel is specified.
+             :param val_c_DeviceModel: If op_DeviceModel is specified, this value will be compared to the value in DeviceModel using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceModel must be specified if op_DeviceModel is specified. If the rlike or not rlike value is specified in the op_DeviceModel field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceModel: String
 
             |  ``api version min:`` None
@@ -1884,7 +1852,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceName: If op_DeviceName is specified, this value will be compared to the value in DeviceName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceName must be specified if op_DeviceName is specified.
+             :param val_c_DeviceName: If op_DeviceName is specified, this value will be compared to the value in DeviceName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceName must be specified if op_DeviceName is specified. If the rlike or not rlike value is specified in the op_DeviceName field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceName: String
 
             |  ``api version min:`` None
@@ -1908,7 +1876,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceNetBIOSName: If op_DeviceNetBIOSName is specified, this value will be compared to the value in DeviceNetBIOSName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceNetBIOSName must be specified if op_DeviceNetBIOSName is specified.
+             :param val_c_DeviceNetBIOSName: If op_DeviceNetBIOSName is specified, this value will be compared to the value in DeviceNetBIOSName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceNetBIOSName must be specified if op_DeviceNetBIOSName is specified. If the rlike or not rlike value is specified in the op_DeviceNetBIOSName field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceNetBIOSName: String
 
             |  ``api version min:`` None
@@ -1932,7 +1900,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceNetBIOSScanningInd: If op_DeviceNetBIOSScanningInd is specified, this value will be compared to the value in DeviceNetBIOSScanningInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceNetBIOSScanningInd must be specified if op_DeviceNetBIOSScanningInd is specified.
+             :param val_c_DeviceNetBIOSScanningInd: If op_DeviceNetBIOSScanningInd is specified, this value will be compared to the value in DeviceNetBIOSScanningInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceNetBIOSScanningInd must be specified if op_DeviceNetBIOSScanningInd is specified. If the rlike or not rlike value is specified in the op_DeviceNetBIOSScanningInd field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceNetBIOSScanningInd: String
 
             |  ``api version min:`` None
@@ -1956,7 +1924,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceOUI: If op_DeviceOUI is specified, this value will be compared to the value in DeviceOUI using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceOUI must be specified if op_DeviceOUI is specified.
+             :param val_c_DeviceOUI: If op_DeviceOUI is specified, this value will be compared to the value in DeviceOUI using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceOUI must be specified if op_DeviceOUI is specified. If the rlike or not rlike value is specified in the op_DeviceOUI field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceOUI: String
 
             |  ``api version min:`` None
@@ -1980,7 +1948,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePolicyScheduleMode: If op_DevicePolicyScheduleMode is specified, this value will be compared to the value in DevicePolicyScheduleMode using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePolicyScheduleMode must be specified if op_DevicePolicyScheduleMode is specified.
+             :param val_c_DevicePolicyScheduleMode: If op_DevicePolicyScheduleMode is specified, this value will be compared to the value in DevicePolicyScheduleMode using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePolicyScheduleMode must be specified if op_DevicePolicyScheduleMode is specified. If the rlike or not rlike value is specified in the op_DevicePolicyScheduleMode field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePolicyScheduleMode: String
 
             |  ``api version min:`` None
@@ -2004,7 +1972,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePortScanning: If op_DevicePortScanning is specified, this value will be compared to the value in DevicePortScanning using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePortScanning must be specified if op_DevicePortScanning is specified.
+             :param val_c_DevicePortScanning: If op_DevicePortScanning is specified, this value will be compared to the value in DevicePortScanning using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePortScanning must be specified if op_DevicePortScanning is specified. If the rlike or not rlike value is specified in the op_DevicePortScanning field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePortScanning: String
 
             |  ``api version min:`` None
@@ -2028,7 +1996,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceRank: If op_DeviceRank is specified, this value will be compared to the value in DeviceRank using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRank must be specified if op_DeviceRank is specified.
+             :param val_c_DeviceRank: If op_DeviceRank is specified, this value will be compared to the value in DeviceRank using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRank must be specified if op_DeviceRank is specified. If the rlike or not rlike value is specified in the op_DeviceRank field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceRank: String
 
             |  ``api version min:`` None
@@ -2052,7 +2020,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceRebootTime: If op_DeviceRebootTime is specified, this value will be compared to the value in DeviceRebootTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRebootTime must be specified if op_DeviceRebootTime is specified.
+             :param val_c_DeviceRebootTime: If op_DeviceRebootTime is specified, this value will be compared to the value in DeviceRebootTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRebootTime must be specified if op_DeviceRebootTime is specified. If the rlike or not rlike value is specified in the op_DeviceRebootTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceRebootTime: String
 
             |  ``api version min:`` None
@@ -2076,7 +2044,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceRunningConfigLastChange: If op_DeviceRunningConfigLastChange is specified, this value will be compared to the value in DeviceRunningConfigLastChange using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRunningConfigLastChange must be specified if op_DeviceRunningConfigLastChange is specified.
+             :param val_c_DeviceRunningConfigLastChange: If op_DeviceRunningConfigLastChange is specified, this value will be compared to the value in DeviceRunningConfigLastChange using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRunningConfigLastChange must be specified if op_DeviceRunningConfigLastChange is specified. If the rlike or not rlike value is specified in the op_DeviceRunningConfigLastChange field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceRunningConfigLastChange: String
 
             |  ``api version min:`` None
@@ -2100,7 +2068,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceSAAVersion: If op_DeviceSAAVersion is specified, this value will be compared to the value in DeviceSAAVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSAAVersion must be specified if op_DeviceSAAVersion is specified.
+             :param val_c_DeviceSAAVersion: If op_DeviceSAAVersion is specified, this value will be compared to the value in DeviceSAAVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSAAVersion must be specified if op_DeviceSAAVersion is specified. If the rlike or not rlike value is specified in the op_DeviceSAAVersion field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceSAAVersion: String
 
             |  ``api version min:`` None
@@ -2124,7 +2092,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceSNMPAnalysis: If op_DeviceSNMPAnalysis is specified, this value will be compared to the value in DeviceSNMPAnalysis using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSNMPAnalysis must be specified if op_DeviceSNMPAnalysis is specified.
+             :param val_c_DeviceSNMPAnalysis: If op_DeviceSNMPAnalysis is specified, this value will be compared to the value in DeviceSNMPAnalysis using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSNMPAnalysis must be specified if op_DeviceSNMPAnalysis is specified. If the rlike or not rlike value is specified in the op_DeviceSNMPAnalysis field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceSNMPAnalysis: String
 
             |  ``api version min:`` None
@@ -2148,7 +2116,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceSNMPPolling: If op_DeviceSNMPPolling is specified, this value will be compared to the value in DeviceSNMPPolling using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSNMPPolling must be specified if op_DeviceSNMPPolling is specified.
+             :param val_c_DeviceSNMPPolling: If op_DeviceSNMPPolling is specified, this value will be compared to the value in DeviceSNMPPolling using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSNMPPolling must be specified if op_DeviceSNMPPolling is specified. If the rlike or not rlike value is specified in the op_DeviceSNMPPolling field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceSNMPPolling: String
 
             |  ``api version min:`` None
@@ -2172,7 +2140,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceSavedConfigLastChange: If op_DeviceSavedConfigLastChange is specified, this value will be compared to the value in DeviceSavedConfigLastChange using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSavedConfigLastChange must be specified if op_DeviceSavedConfigLastChange is specified.
+             :param val_c_DeviceSavedConfigLastChange: If op_DeviceSavedConfigLastChange is specified, this value will be compared to the value in DeviceSavedConfigLastChange using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSavedConfigLastChange must be specified if op_DeviceSavedConfigLastChange is specified. If the rlike or not rlike value is specified in the op_DeviceSavedConfigLastChange field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceSavedConfigLastChange: String
 
             |  ``api version min:`` None
@@ -2196,7 +2164,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceStandardsCompliance: If op_DeviceStandardsCompliance is specified, this value will be compared to the value in DeviceStandardsCompliance using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceStandardsCompliance must be specified if op_DeviceStandardsCompliance is specified.
+             :param val_c_DeviceStandardsCompliance: If op_DeviceStandardsCompliance is specified, this value will be compared to the value in DeviceStandardsCompliance using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceStandardsCompliance must be specified if op_DeviceStandardsCompliance is specified. If the rlike or not rlike value is specified in the op_DeviceStandardsCompliance field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceStandardsCompliance: String
 
             |  ``api version min:`` None
@@ -2220,7 +2188,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceStartTime: If op_DeviceStartTime is specified, this value will be compared to the value in DeviceStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceStartTime must be specified if op_DeviceStartTime is specified.
+             :param val_c_DeviceStartTime: If op_DeviceStartTime is specified, this value will be compared to the value in DeviceStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceStartTime must be specified if op_DeviceStartTime is specified. If the rlike or not rlike value is specified in the op_DeviceStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceStartTime: String
 
             |  ``api version min:`` None
@@ -2244,7 +2212,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceSysContact: If op_DeviceSysContact is specified, this value will be compared to the value in DeviceSysContact using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSysContact must be specified if op_DeviceSysContact is specified.
+             :param val_c_DeviceSysContact: If op_DeviceSysContact is specified, this value will be compared to the value in DeviceSysContact using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSysContact must be specified if op_DeviceSysContact is specified. If the rlike or not rlike value is specified in the op_DeviceSysContact field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceSysContact: String
 
             |  ``api version min:`` None
@@ -2268,7 +2236,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceSysDescr: If op_DeviceSysDescr is specified, this value will be compared to the value in DeviceSysDescr using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSysDescr must be specified if op_DeviceSysDescr is specified.
+             :param val_c_DeviceSysDescr: If op_DeviceSysDescr is specified, this value will be compared to the value in DeviceSysDescr using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSysDescr must be specified if op_DeviceSysDescr is specified. If the rlike or not rlike value is specified in the op_DeviceSysDescr field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceSysDescr: String
 
             |  ``api version min:`` None
@@ -2292,7 +2260,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceSysLocation: If op_DeviceSysLocation is specified, this value will be compared to the value in DeviceSysLocation using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSysLocation must be specified if op_DeviceSysLocation is specified.
+             :param val_c_DeviceSysLocation: If op_DeviceSysLocation is specified, this value will be compared to the value in DeviceSysLocation using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSysLocation must be specified if op_DeviceSysLocation is specified. If the rlike or not rlike value is specified in the op_DeviceSysLocation field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceSysLocation: String
 
             |  ``api version min:`` None
@@ -2316,7 +2284,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceSysName: If op_DeviceSysName is specified, this value will be compared to the value in DeviceSysName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSysName must be specified if op_DeviceSysName is specified.
+             :param val_c_DeviceSysName: If op_DeviceSysName is specified, this value will be compared to the value in DeviceSysName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceSysName must be specified if op_DeviceSysName is specified. If the rlike or not rlike value is specified in the op_DeviceSysName field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceSysName: String
 
             |  ``api version min:`` None
@@ -2340,7 +2308,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceTimestamp: If op_DeviceTimestamp is specified, this value will be compared to the value in DeviceTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceTimestamp must be specified if op_DeviceTimestamp is specified.
+             :param val_c_DeviceTimestamp: If op_DeviceTimestamp is specified, this value will be compared to the value in DeviceTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceTimestamp must be specified if op_DeviceTimestamp is specified. If the rlike or not rlike value is specified in the op_DeviceTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceTimestamp: String
 
             |  ``api version min:`` None
@@ -2364,7 +2332,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceType: If op_DeviceType is specified, this value will be compared to the value in DeviceType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceType must be specified if op_DeviceType is specified.
+             :param val_c_DeviceType: If op_DeviceType is specified, this value will be compared to the value in DeviceType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceType must be specified if op_DeviceType is specified. If the rlike or not rlike value is specified in the op_DeviceType field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceType: String
 
             |  ``api version min:`` None
@@ -2388,7 +2356,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceVendor: If op_DeviceVendor is specified, this value will be compared to the value in DeviceVendor using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceVendor must be specified if op_DeviceVendor is specified.
+             :param val_c_DeviceVendor: If op_DeviceVendor is specified, this value will be compared to the value in DeviceVendor using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceVendor must be specified if op_DeviceVendor is specified. If the rlike or not rlike value is specified in the op_DeviceVendor field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceVendor: String
 
             |  ``api version min:`` None
@@ -2412,7 +2380,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceVendorDefaultCollection: If op_DeviceVendorDefaultCollection is specified, this value will be compared to the value in DeviceVendorDefaultCollection using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceVendorDefaultCollection must be specified if op_DeviceVendorDefaultCollection is specified.
+             :param val_c_DeviceVendorDefaultCollection: If op_DeviceVendorDefaultCollection is specified, this value will be compared to the value in DeviceVendorDefaultCollection using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceVendorDefaultCollection must be specified if op_DeviceVendorDefaultCollection is specified. If the rlike or not rlike value is specified in the op_DeviceVendorDefaultCollection field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceVendorDefaultCollection: String
 
             |  ``api version min:`` None
@@ -2436,7 +2404,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceVersion: If op_DeviceVersion is specified, this value will be compared to the value in DeviceVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceVersion must be specified if op_DeviceVersion is specified.
+             :param val_c_DeviceVersion: If op_DeviceVersion is specified, this value will be compared to the value in DeviceVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceVersion must be specified if op_DeviceVersion is specified. If the rlike or not rlike value is specified in the op_DeviceVersion field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceVersion: String
 
             |  ``api version min:`` None
@@ -2460,7 +2428,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FilteringInd: If op_FilteringInd is specified, this value will be compared to the value in FilteringInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FilteringInd must be specified if op_FilteringInd is specified.
+             :param val_c_FilteringInd: If op_FilteringInd is specified, this value will be compared to the value in FilteringInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FilteringInd must be specified if op_FilteringInd is specified. If the rlike or not rlike value is specified in the op_FilteringInd field, escape regex special characters because a regular expression is expected.
              :type val_c_FilteringInd: String
 
             |  ``api version min:`` None
@@ -2484,7 +2452,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NetworkDeviceInd: If op_NetworkDeviceInd is specified, this value will be compared to the value in NetworkDeviceInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NetworkDeviceInd must be specified if op_NetworkDeviceInd is specified.
+             :param val_c_NetworkDeviceInd: If op_NetworkDeviceInd is specified, this value will be compared to the value in NetworkDeviceInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NetworkDeviceInd must be specified if op_NetworkDeviceInd is specified. If the rlike or not rlike value is specified in the op_NetworkDeviceInd field, escape regex special characters because a regular expression is expected.
              :type val_c_NetworkDeviceInd: String
 
             |  ``api version min:`` None
@@ -2508,7 +2476,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ParentDeviceID: If op_ParentDeviceID is specified, this value will be compared to the value in ParentDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ParentDeviceID must be specified if op_ParentDeviceID is specified.
+             :param val_c_ParentDeviceID: If op_ParentDeviceID is specified, this value will be compared to the value in ParentDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ParentDeviceID must be specified if op_ParentDeviceID is specified. If the rlike or not rlike value is specified in the op_ParentDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_ParentDeviceID: String
 
             |  ``api version min:`` None
@@ -2532,7 +2500,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingInd: If op_RoutingInd is specified, this value will be compared to the value in RoutingInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingInd must be specified if op_RoutingInd is specified.
+             :param val_c_RoutingInd: If op_RoutingInd is specified, this value will be compared to the value in RoutingInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingInd must be specified if op_RoutingInd is specified. If the rlike or not rlike value is specified in the op_RoutingInd field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingInd: String
 
             |  ``api version min:`` None
@@ -2556,7 +2524,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SPMLicensedInd: If op_SPMLicensedInd is specified, this value will be compared to the value in SPMLicensedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SPMLicensedInd must be specified if op_SPMLicensedInd is specified.
+             :param val_c_SPMLicensedInd: If op_SPMLicensedInd is specified, this value will be compared to the value in SPMLicensedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SPMLicensedInd must be specified if op_SPMLicensedInd is specified. If the rlike or not rlike value is specified in the op_SPMLicensedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SPMLicensedInd: String
 
             |  ``api version min:`` None
@@ -2580,7 +2548,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchingInd: If op_SwitchingInd is specified, this value will be compared to the value in SwitchingInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchingInd must be specified if op_SwitchingInd is specified.
+             :param val_c_SwitchingInd: If op_SwitchingInd is specified, this value will be compared to the value in SwitchingInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchingInd must be specified if op_SwitchingInd is specified. If the rlike or not rlike value is specified in the op_SwitchingInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchingInd: String
 
             |  ``api version min:`` None
@@ -2604,7 +2572,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualInd: If op_VirtualInd is specified, this value will be compared to the value in VirtualInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualInd must be specified if op_VirtualInd is specified.
+             :param val_c_VirtualInd: If op_VirtualInd is specified, this value will be compared to the value in VirtualInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualInd must be specified if op_VirtualInd is specified. If the rlike or not rlike value is specified in the op_VirtualInd field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualInd: String
 
             |  ``api version min:`` None
@@ -2628,7 +2596,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_admin_status_ind: If op_cap_admin_status_ind is specified, this value will be compared to the value in cap_admin_status_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_admin_status_ind must be specified if op_cap_admin_status_ind is specified.
+             :param val_c_cap_admin_status_ind: If op_cap_admin_status_ind is specified, this value will be compared to the value in cap_admin_status_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_admin_status_ind must be specified if op_cap_admin_status_ind is specified. If the rlike or not rlike value is specified in the op_cap_admin_status_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_admin_status_ind: String
 
             |  ``api version min:`` None
@@ -2652,7 +2620,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_admin_status_na_reason: If op_cap_admin_status_na_reason is specified, this value will be compared to the value in cap_admin_status_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_admin_status_na_reason must be specified if op_cap_admin_status_na_reason is specified.
+             :param val_c_cap_admin_status_na_reason: If op_cap_admin_status_na_reason is specified, this value will be compared to the value in cap_admin_status_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_admin_status_na_reason must be specified if op_cap_admin_status_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_admin_status_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_admin_status_na_reason: String
 
             |  ``api version min:`` None
@@ -2676,7 +2644,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_description_ind: If op_cap_description_ind is specified, this value will be compared to the value in cap_description_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_description_ind must be specified if op_cap_description_ind is specified.
+             :param val_c_cap_description_ind: If op_cap_description_ind is specified, this value will be compared to the value in cap_description_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_description_ind must be specified if op_cap_description_ind is specified. If the rlike or not rlike value is specified in the op_cap_description_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_description_ind: String
 
             |  ``api version min:`` None
@@ -2700,7 +2668,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_description_na_reason: If op_cap_description_na_reason is specified, this value will be compared to the value in cap_description_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_description_na_reason must be specified if op_cap_description_na_reason is specified.
+             :param val_c_cap_description_na_reason: If op_cap_description_na_reason is specified, this value will be compared to the value in cap_description_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_description_na_reason must be specified if op_cap_description_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_description_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_description_na_reason: String
 
             |  ``api version min:`` None
@@ -2724,7 +2692,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_net_deprovisioning_ind: If op_cap_net_deprovisioning_ind is specified, this value will be compared to the value in cap_net_deprovisioning_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_net_deprovisioning_ind must be specified if op_cap_net_deprovisioning_ind is specified.
+             :param val_c_cap_net_deprovisioning_ind: If op_cap_net_deprovisioning_ind is specified, this value will be compared to the value in cap_net_deprovisioning_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_net_deprovisioning_ind must be specified if op_cap_net_deprovisioning_ind is specified. If the rlike or not rlike value is specified in the op_cap_net_deprovisioning_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_net_deprovisioning_ind: String
 
             |  ``api version min:`` None
@@ -2748,7 +2716,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_net_deprovisioning_na_reason: If op_cap_net_deprovisioning_na_reason is specified, this value will be compared to the value in cap_net_deprovisioning_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_net_deprovisioning_na_reason must be specified if op_cap_net_deprovisioning_na_reason is specified.
+             :param val_c_cap_net_deprovisioning_na_reason: If op_cap_net_deprovisioning_na_reason is specified, this value will be compared to the value in cap_net_deprovisioning_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_net_deprovisioning_na_reason must be specified if op_cap_net_deprovisioning_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_net_deprovisioning_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_net_deprovisioning_na_reason: String
 
             |  ``api version min:`` None
@@ -2772,7 +2740,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_net_provisioning_ind: If op_cap_net_provisioning_ind is specified, this value will be compared to the value in cap_net_provisioning_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_net_provisioning_ind must be specified if op_cap_net_provisioning_ind is specified.
+             :param val_c_cap_net_provisioning_ind: If op_cap_net_provisioning_ind is specified, this value will be compared to the value in cap_net_provisioning_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_net_provisioning_ind must be specified if op_cap_net_provisioning_ind is specified. If the rlike or not rlike value is specified in the op_cap_net_provisioning_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_net_provisioning_ind: String
 
             |  ``api version min:`` None
@@ -2796,7 +2764,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_net_provisioning_na_reason: If op_cap_net_provisioning_na_reason is specified, this value will be compared to the value in cap_net_provisioning_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_net_provisioning_na_reason must be specified if op_cap_net_provisioning_na_reason is specified.
+             :param val_c_cap_net_provisioning_na_reason: If op_cap_net_provisioning_na_reason is specified, this value will be compared to the value in cap_net_provisioning_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_net_provisioning_na_reason must be specified if op_cap_net_provisioning_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_net_provisioning_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_net_provisioning_na_reason: String
 
             |  ``api version min:`` None
@@ -2820,7 +2788,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_net_vlan_provisioning_ind: If op_cap_net_vlan_provisioning_ind is specified, this value will be compared to the value in cap_net_vlan_provisioning_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_net_vlan_provisioning_ind must be specified if op_cap_net_vlan_provisioning_ind is specified.
+             :param val_c_cap_net_vlan_provisioning_ind: If op_cap_net_vlan_provisioning_ind is specified, this value will be compared to the value in cap_net_vlan_provisioning_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_net_vlan_provisioning_ind must be specified if op_cap_net_vlan_provisioning_ind is specified. If the rlike or not rlike value is specified in the op_cap_net_vlan_provisioning_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_net_vlan_provisioning_ind: String
 
             |  ``api version min:`` None
@@ -2844,7 +2812,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_net_vlan_provisioning_na_reason: If op_cap_net_vlan_provisioning_na_reason is specified, this value will be compared to the value in cap_net_vlan_provisioning_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_net_vlan_provisioning_na_reason must be specified if op_cap_net_vlan_provisioning_na_reason is specified.
+             :param val_c_cap_net_vlan_provisioning_na_reason: If op_cap_net_vlan_provisioning_na_reason is specified, this value will be compared to the value in cap_net_vlan_provisioning_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_net_vlan_provisioning_na_reason must be specified if op_cap_net_vlan_provisioning_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_net_vlan_provisioning_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_net_vlan_provisioning_na_reason: String
 
             |  ``api version min:`` None
@@ -2868,7 +2836,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_vlan_assignment_ind: If op_cap_vlan_assignment_ind is specified, this value will be compared to the value in cap_vlan_assignment_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_vlan_assignment_ind must be specified if op_cap_vlan_assignment_ind is specified.
+             :param val_c_cap_vlan_assignment_ind: If op_cap_vlan_assignment_ind is specified, this value will be compared to the value in cap_vlan_assignment_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_vlan_assignment_ind must be specified if op_cap_vlan_assignment_ind is specified. If the rlike or not rlike value is specified in the op_cap_vlan_assignment_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_vlan_assignment_ind: String
 
             |  ``api version min:`` None
@@ -2892,7 +2860,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_vlan_assignment_na_reason: If op_cap_vlan_assignment_na_reason is specified, this value will be compared to the value in cap_vlan_assignment_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_vlan_assignment_na_reason must be specified if op_cap_vlan_assignment_na_reason is specified.
+             :param val_c_cap_vlan_assignment_na_reason: If op_cap_vlan_assignment_na_reason is specified, this value will be compared to the value in cap_vlan_assignment_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_vlan_assignment_na_reason must be specified if op_cap_vlan_assignment_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_vlan_assignment_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_vlan_assignment_na_reason: String
 
             |  ``api version min:`` None
@@ -2916,7 +2884,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_voice_vlan_ind: If op_cap_voice_vlan_ind is specified, this value will be compared to the value in cap_voice_vlan_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_voice_vlan_ind must be specified if op_cap_voice_vlan_ind is specified.
+             :param val_c_cap_voice_vlan_ind: If op_cap_voice_vlan_ind is specified, this value will be compared to the value in cap_voice_vlan_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_voice_vlan_ind must be specified if op_cap_voice_vlan_ind is specified. If the rlike or not rlike value is specified in the op_cap_voice_vlan_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_voice_vlan_ind: String
 
             |  ``api version min:`` None
@@ -2940,7 +2908,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_voice_vlan_na_reason: If op_cap_voice_vlan_na_reason is specified, this value will be compared to the value in cap_voice_vlan_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_voice_vlan_na_reason must be specified if op_cap_voice_vlan_na_reason is specified.
+             :param val_c_cap_voice_vlan_na_reason: If op_cap_voice_vlan_na_reason is specified, this value will be compared to the value in cap_voice_vlan_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_voice_vlan_na_reason must be specified if op_cap_voice_vlan_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_voice_vlan_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_voice_vlan_na_reason: String
 
             |  ``api version min:`` None
@@ -2964,7 +2932,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_privileged_polling: If op_privileged_polling is specified, this value will be compared to the value in privileged_polling using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_privileged_polling must be specified if op_privileged_polling is specified.
+             :param val_c_privileged_polling: If op_privileged_polling is specified, this value will be compared to the value in privileged_polling using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_privileged_polling must be specified if op_privileged_polling is specified. If the rlike or not rlike value is specified in the op_privileged_polling field, escape regex special characters because a regular expression is expected.
              :type val_c_privileged_polling: String
 
             |  ``api version min:`` None
@@ -3020,7 +2988,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -3028,7 +2996,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -3038,22 +3006,6 @@ class DeviceBroker(Broker):
 
              :param select: The list of attributes to return for each Device. Valid values are DataSourceID, DeviceID, DeviceStartTime, DeviceEndTime, DeviceChangedCols, DeviceIPDotted, DeviceIPNumeric, DeviceName, DeviceType, DeviceAssurance, DeviceVendor, DeviceModel, DeviceVersion, DeviceCommunity, DeviceSysName, DeviceSysDescr, DeviceSysLocation, DeviceDNSName, DeviceSNMPPolling, DeviceConfigPolling, DevicePortScanning, DeviceSNMPAnalysis, DeviceFingerPrint, DeviceCCSCollection, DeviceVendorDefaultCollection, DeviceConfigTimestamp, DeviceFirstOccurrence, DeviceTimestamp, DeviceSAAVersion, DeviceRebootTime, DeviceRunningConfigLastChange, DeviceSavedConfigLastChange, DeviceConfigLocked, DeviceConfigLockLastChangeBy, DeviceConfigLockLastChange, DeviceConfigLastChecked, DeviceLicensed, DevicePolicyScheduleMode, NetworkDeviceInd, RoutingInd, SwitchingInd, DeviceRank, DeviceAddlInfo, DeviceMAC, DeviceStandardsCompliance, ParentDeviceID, DeviceContextName, VirtualInd, DeviceSysContact, DeviceManagedInd, SPMLicensedInd, DeviceNetBIOSName, DeviceNetBIOSScanningInd, DeviceOUI, ARPCacheRefreshInd, FilteringInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -3164,7 +3116,7 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated device.
+             :return uri: The URI that may be used to retrieve the updated device.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -3199,8 +3151,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The contents of the newest saved running config.
-             :rtype : String
+             :return running_config_text: The contents of the newest saved running config.
+             :rtype running_config_text: String
 
             """
 
@@ -3226,8 +3178,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The contents of the newest saved startup config.
-             :rtype : String
+             :return saved_config_text: The contents of the newest saved startup config.
+             :rtype saved_config_text: String
 
             """
 
@@ -3253,8 +3205,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The community string.
-             :rtype : String
+             :return DeviceCommunity: The community string.
+             :rtype DeviceCommunity: String
 
             """
 
@@ -3280,8 +3232,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -3307,8 +3259,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device containing this virtual device.
-             :rtype : InfraDevice
+             :return parent_device: The device containing this virtual device.
+             :rtype parent_device: InfraDevice
 
             """
 
@@ -3334,8 +3286,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Returns the default gateway router for this device, based on the following in order of preference: device routing table, device configuration file, device subnet and common conventions.
-             :rtype : InfraDevice
+             :return gateway_device: Returns the default gateway router for this device, based on the following in order of preference: device routing table, device configuration file, device subnet and common conventions.
+             :rtype gateway_device: InfraDevice
 
             """
 
@@ -3361,8 +3313,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Returns the ConfigRevision object corresponding to the device's current running configuration.
-             :rtype : ConfigRevision
+             :return running_config: Returns the ConfigRevision object corresponding to the device's current running configuration.
+             :rtype running_config: ConfigRevision
 
             """
 
@@ -3388,8 +3340,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Returns the ConfigRevision object corresponding to the device's current startup configuration.
-             :rtype : ConfigRevision
+             :return saved_config: Returns the ConfigRevision object corresponding to the device's current startup configuration.
+             :rtype saved_config: ConfigRevision
 
             """
 
@@ -3415,8 +3367,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Returns settings for selected device
-             :rtype : DeviceSetting
+             :return device_setting: Returns settings for selected device
+             :rtype device_setting: DeviceSetting
 
             """
 
@@ -3442,8 +3394,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The differences between the current and previous running config.
-             :rtype : String
+             :return running_config_diff: The differences between the current and previous running config.
+             :rtype running_config_diff: String
 
             """
 
@@ -3469,8 +3421,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The differences between the current and previous saved config.
-             :rtype : String
+             :return saved_config_diff: The differences between the current and previous saved config.
+             :rtype saved_config_diff: String
 
             """
 
@@ -3496,8 +3448,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The physical/virtual aspect of the device (Virtual Host, Virtual Device, or Physical Device).
-             :rtype : String
+             :return asset_type: The physical/virtual aspect of the device (Virtual Host, Virtual Device, or Physical Device).
+             :rtype asset_type: String
 
             """
 
@@ -3523,8 +3475,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : A flag indicating if this device act as a switcher
-             :rtype : Boolean
+             :return SwitchingInd: A flag indicating if this device act as a switcher
+             :rtype SwitchingInd: Boolean
 
             """
 
@@ -3550,8 +3502,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : A flag indicating if this device act as a router
-             :rtype : Boolean
+             :return RoutingInd: A flag indicating if this device act as a router
+             :rtype RoutingInd: Boolean
 
             """
 
@@ -3577,8 +3529,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : the SAA version of this device
-             :rtype : String
+             :return DeviceSAAVersion: the SAA version of this device
+             :rtype DeviceSAAVersion: String
 
             """
 
@@ -3604,8 +3556,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : the reboot time of this device
-             :rtype : DateTime
+             :return DeviceRebootTime: the reboot time of this device
+             :rtype DeviceRebootTime: DateTime
 
             """
 
@@ -3631,8 +3583,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The secured community name
-             :rtype : String
+             :return DeviceCommunitySecure: The secured community name
+             :rtype DeviceCommunitySecure: String
 
             """
 
@@ -3658,8 +3610,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The rank of this device in its virtual brotherhood
-             :rtype : Integer
+             :return DeviceRank: The rank of this device in its virtual brotherhood
+             :rtype DeviceRank: Integer
 
             """
 
@@ -3685,8 +3637,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The first occurrence of this device
-             :rtype : DateTime
+             :return DeviceFirstOccurrence: The first occurrence of this device
+             :rtype DeviceFirstOccurrence: DateTime
 
             """
 
@@ -3712,8 +3664,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The number of virtual devices hosted on this device
-             :rtype : Integer
+             :return virtual_child_count: The number of virtual devices hosted on this device
+             :rtype virtual_child_count: Integer
 
             """
 
@@ -3739,8 +3691,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : All information about collection of data for this device
-             :rtype : DataCollectionStatus
+             :return data_collection_status: All information about collection of data for this device
+             :rtype data_collection_status: DataCollectionStatus
 
             """
 
@@ -3766,8 +3718,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The name of the virtual context of this virtual device.
-             :rtype : String
+             :return DeviceContextName: The name of the virtual context of this virtual device.
+             :rtype DeviceContextName: String
 
             """
 
@@ -3793,8 +3745,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : A Virtual Network model assigned to the device.
-             :rtype : VirtualNetwork
+             :return virtual_network: A Virtual Network model assigned to the device.
+             :rtype virtual_network: VirtualNetwork
 
             """
 
@@ -3820,8 +3772,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : A Network View assigned to the device.
-             :rtype : String
+             :return network_name: A Network View assigned to the device.
+             :rtype network_name: String
 
             """
 
@@ -3847,8 +3799,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Configuration capabilities for this interface, related to Port Control.
-             :rtype : String
+             :return control_capabilities: Configuration capabilities for this interface, related to Port Control.
+             :rtype control_capabilities: String
 
             """
 
@@ -3874,8 +3826,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of changing the description of an interface of this device.
-             :rtype : Boolean
+             :return cap_description_ind: Capability of changing the description of an interface of this device.
+             :rtype cap_description_ind: Boolean
 
             """
 
@@ -3901,8 +3853,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of changing the Admin Status of an interface of this device.
-             :rtype : Boolean
+             :return cap_admin_status_ind: Capability of changing the Admin Status of an interface of this device.
+             :rtype cap_admin_status_ind: Boolean
 
             """
 
@@ -3928,8 +3880,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of assigning a regular data VLAN to an interface of this device.
-             :rtype : Boolean
+             :return cap_vlan_assignment_ind: Capability of assigning a regular data VLAN to an interface of this device.
+             :rtype cap_vlan_assignment_ind: Boolean
 
             """
 
@@ -3955,8 +3907,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of assigning a voice VLAN to an interface of this device.
-             :rtype : Boolean
+             :return cap_voice_vlan_ind: Capability of assigning a voice VLAN to an interface of this device.
+             :rtype cap_voice_vlan_ind: Boolean
 
             """
 
@@ -3982,8 +3934,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of provisioning a network on an interface of this device.
-             :rtype : Boolean
+             :return cap_net_provisioning_ind: Capability of provisioning a network on an interface of this device.
+             :rtype cap_net_provisioning_ind: Boolean
 
             """
 
@@ -4009,8 +3961,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of creating a VLAN and provision a network on its virtual interface.
-             :rtype : Boolean
+             :return cap_net_vlan_provisioning_ind: Capability of creating a VLAN and provision a network on its virtual interface.
+             :rtype cap_net_vlan_provisioning_ind: Boolean
 
             """
 
@@ -4036,8 +3988,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of de-provisioning a network from this device.
-             :rtype : Boolean
+             :return cap_net_deprovisioning_ind: Capability of de-provisioning a network from this device.
+             :rtype cap_net_deprovisioning_ind: Boolean
 
             """
 
@@ -4063,8 +4015,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of changing the description of an interface of this device.
-             :rtype : String
+             :return cap_description_na_reason: Reason of non ability of changing the description of an interface of this device.
+             :rtype cap_description_na_reason: String
 
             """
 
@@ -4090,8 +4042,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of changing the Admin Status of an interface of this device.
-             :rtype : String
+             :return cap_admin_status_na_reason: Reason of non ability of changing the Admin Status of an interface of this device.
+             :rtype cap_admin_status_na_reason: String
 
             """
 
@@ -4117,8 +4069,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of assigning a regular data VLAN to an interface of this device.
-             :rtype : String
+             :return cap_vlan_assignment_na_reason: Reason of non ability of assigning a regular data VLAN to an interface of this device.
+             :rtype cap_vlan_assignment_na_reason: String
 
             """
 
@@ -4144,8 +4096,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of assigning a voice VLAN to an interface of this device.
-             :rtype : String
+             :return cap_voice_vlan_na_reason: Reason of non ability of assigning a voice VLAN to an interface of this device.
+             :rtype cap_voice_vlan_na_reason: String
 
             """
 
@@ -4171,8 +4123,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of provisioning a network on an interface of this device.
-             :rtype : String
+             :return cap_net_provisioning_na_reason: Reason of non ability of provisioning a network on an interface of this device.
+             :rtype cap_net_provisioning_na_reason: String
 
             """
 
@@ -4198,8 +4150,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of creating a VLAN and provision a network on its virtual interface.
-             :rtype : String
+             :return cap_net_vlan_provisioning_na_reason: Reason of non ability of creating a VLAN and provision a network on its virtual interface.
+             :rtype cap_net_vlan_provisioning_na_reason: String
 
             """
 
@@ -4225,8 +4177,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of de-provisioning a network from this device.
-             :rtype : String
+             :return cap_net_deprovisioning_na_reason: Reason of non ability of de-provisioning a network from this device.
+             :rtype cap_net_deprovisioning_na_reason: String
 
             """
 
@@ -4252,8 +4204,8 @@ class DeviceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : A flag indicating whether to poll the device in privileged mode.
-             :rtype : Boolean
+             :return privileged_polling: A flag indicating whether to poll the device in privileged mode.
+             :rtype privileged_polling: Boolean
 
             """
 
@@ -4427,6 +4379,7 @@ class DeviceBroker(Broker):
         </br>  8: Unable to determine CLI credentials.
         </br>  9: Unable to collect config file.
         </br> 10: Skipping DiscoverNow for this IP address due to blackout period in effect.
+        </br> 11: Skipping DiscoverNow for this SDN device due to SDN/SD-WAN polling is disabled.
         </br> 25: Lock-timeout: Gave up waiting for other process to finish.
              :rtype returncode: Integer
 

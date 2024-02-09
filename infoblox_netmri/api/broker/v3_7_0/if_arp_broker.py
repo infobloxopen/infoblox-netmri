@@ -48,7 +48,7 @@ class IfArpBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available if arps. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available if arps. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -217,7 +217,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IfArpID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IfArpID. Valid values are IfArpID, DataSourceID, InterfaceID, DeviceID, ifIndex, ArpStartTime, ArpEndTime, ArpChangedCols, ArpTimestamp, PhysicalAddr, IPAddrNumeric, IPAddrDotted, ArpDeviceID, ArpInterfaceID, VrfID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IfArpID, DataSourceID, InterfaceID, DeviceID, ifIndex, ArpStartTime, ArpEndTime, ArpChangedCols, ArpTimestamp, PhysicalAddr, IPAddrNumeric, IPAddrDotted, ArpDeviceID, ArpInterfaceID, VrfID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -225,7 +225,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -235,22 +235,6 @@ class IfArpBroker(Broker):
 
              :param select: The list of attributes to return for each IfArp. Valid values are IfArpID, DataSourceID, InterfaceID, DeviceID, ifIndex, ArpStartTime, ArpEndTime, ArpChangedCols, ArpTimestamp, PhysicalAddr, IPAddrNumeric, IPAddrDotted, ArpDeviceID, ArpInterfaceID, VrfID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -564,7 +548,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IfArpID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IfArpID. Valid values are IfArpID, DataSourceID, InterfaceID, DeviceID, ifIndex, ArpStartTime, ArpEndTime, ArpChangedCols, ArpTimestamp, PhysicalAddr, IPAddrNumeric, IPAddrDotted, ArpDeviceID, ArpInterfaceID, VrfID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IfArpID, DataSourceID, InterfaceID, DeviceID, ifIndex, ArpStartTime, ArpEndTime, ArpChangedCols, ArpTimestamp, PhysicalAddr, IPAddrNumeric, IPAddrDotted, ArpDeviceID, ArpInterfaceID, VrfID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -572,7 +556,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -582,22 +566,6 @@ class IfArpBroker(Broker):
 
              :param select: The list of attributes to return for each IfArp. Valid values are IfArpID, DataSourceID, InterfaceID, DeviceID, ifIndex, ArpStartTime, ArpEndTime, ArpChangedCols, ArpTimestamp, PhysicalAddr, IPAddrNumeric, IPAddrDotted, ArpDeviceID, ArpInterfaceID, VrfID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -655,7 +623,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ArpChangedCols: If op_ArpChangedCols is specified, this value will be compared to the value in ArpChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ArpChangedCols must be specified if op_ArpChangedCols is specified.
+             :param val_c_ArpChangedCols: If op_ArpChangedCols is specified, this value will be compared to the value in ArpChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ArpChangedCols must be specified if op_ArpChangedCols is specified. If the rlike or not rlike value is specified in the op_ArpChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_ArpChangedCols: String
 
             |  ``api version min:`` None
@@ -679,7 +647,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ArpDeviceID: If op_ArpDeviceID is specified, this value will be compared to the value in ArpDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ArpDeviceID must be specified if op_ArpDeviceID is specified.
+             :param val_c_ArpDeviceID: If op_ArpDeviceID is specified, this value will be compared to the value in ArpDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ArpDeviceID must be specified if op_ArpDeviceID is specified. If the rlike or not rlike value is specified in the op_ArpDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_ArpDeviceID: String
 
             |  ``api version min:`` None
@@ -703,7 +671,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ArpEndTime: If op_ArpEndTime is specified, this value will be compared to the value in ArpEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ArpEndTime must be specified if op_ArpEndTime is specified.
+             :param val_c_ArpEndTime: If op_ArpEndTime is specified, this value will be compared to the value in ArpEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ArpEndTime must be specified if op_ArpEndTime is specified. If the rlike or not rlike value is specified in the op_ArpEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_ArpEndTime: String
 
             |  ``api version min:`` None
@@ -727,7 +695,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ArpInterfaceID: If op_ArpInterfaceID is specified, this value will be compared to the value in ArpInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ArpInterfaceID must be specified if op_ArpInterfaceID is specified.
+             :param val_c_ArpInterfaceID: If op_ArpInterfaceID is specified, this value will be compared to the value in ArpInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ArpInterfaceID must be specified if op_ArpInterfaceID is specified. If the rlike or not rlike value is specified in the op_ArpInterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_ArpInterfaceID: String
 
             |  ``api version min:`` None
@@ -751,7 +719,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ArpStartTime: If op_ArpStartTime is specified, this value will be compared to the value in ArpStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ArpStartTime must be specified if op_ArpStartTime is specified.
+             :param val_c_ArpStartTime: If op_ArpStartTime is specified, this value will be compared to the value in ArpStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ArpStartTime must be specified if op_ArpStartTime is specified. If the rlike or not rlike value is specified in the op_ArpStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_ArpStartTime: String
 
             |  ``api version min:`` None
@@ -775,7 +743,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ArpTimestamp: If op_ArpTimestamp is specified, this value will be compared to the value in ArpTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ArpTimestamp must be specified if op_ArpTimestamp is specified.
+             :param val_c_ArpTimestamp: If op_ArpTimestamp is specified, this value will be compared to the value in ArpTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ArpTimestamp must be specified if op_ArpTimestamp is specified. If the rlike or not rlike value is specified in the op_ArpTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_ArpTimestamp: String
 
             |  ``api version min:`` None
@@ -799,7 +767,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -823,7 +791,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -847,7 +815,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IPAddrDotted: If op_IPAddrDotted is specified, this value will be compared to the value in IPAddrDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPAddrDotted must be specified if op_IPAddrDotted is specified.
+             :param val_c_IPAddrDotted: If op_IPAddrDotted is specified, this value will be compared to the value in IPAddrDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPAddrDotted must be specified if op_IPAddrDotted is specified. If the rlike or not rlike value is specified in the op_IPAddrDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_IPAddrDotted: String
 
             |  ``api version min:`` None
@@ -871,7 +839,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IPAddrNumeric: If op_IPAddrNumeric is specified, this value will be compared to the value in IPAddrNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPAddrNumeric must be specified if op_IPAddrNumeric is specified.
+             :param val_c_IPAddrNumeric: If op_IPAddrNumeric is specified, this value will be compared to the value in IPAddrNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPAddrNumeric must be specified if op_IPAddrNumeric is specified. If the rlike or not rlike value is specified in the op_IPAddrNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_IPAddrNumeric: String
 
             |  ``api version min:`` None
@@ -895,7 +863,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IfArpID: If op_IfArpID is specified, this value will be compared to the value in IfArpID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IfArpID must be specified if op_IfArpID is specified.
+             :param val_c_IfArpID: If op_IfArpID is specified, this value will be compared to the value in IfArpID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IfArpID must be specified if op_IfArpID is specified. If the rlike or not rlike value is specified in the op_IfArpID field, escape regex special characters because a regular expression is expected.
              :type val_c_IfArpID: String
 
             |  ``api version min:`` None
@@ -919,7 +887,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -943,7 +911,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PhysicalAddr: If op_PhysicalAddr is specified, this value will be compared to the value in PhysicalAddr using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalAddr must be specified if op_PhysicalAddr is specified.
+             :param val_c_PhysicalAddr: If op_PhysicalAddr is specified, this value will be compared to the value in PhysicalAddr using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PhysicalAddr must be specified if op_PhysicalAddr is specified. If the rlike or not rlike value is specified in the op_PhysicalAddr field, escape regex special characters because a regular expression is expected.
              :type val_c_PhysicalAddr: String
 
             |  ``api version min:`` None
@@ -967,7 +935,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrfID: If op_VrfID is specified, this value will be compared to the value in VrfID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfID must be specified if op_VrfID is specified.
+             :param val_c_VrfID: If op_VrfID is specified, this value will be compared to the value in VrfID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfID must be specified if op_VrfID is specified. If the rlike or not rlike value is specified in the op_VrfID field, escape regex special characters because a regular expression is expected.
              :type val_c_VrfID: String
 
             |  ``api version min:`` None
@@ -991,7 +959,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IfArpID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IfArpID. Valid values are IfArpID, DataSourceID, InterfaceID, DeviceID, ifIndex, ArpStartTime, ArpEndTime, ArpChangedCols, ArpTimestamp, PhysicalAddr, IPAddrNumeric, IPAddrDotted, ArpDeviceID, ArpInterfaceID, VrfID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IfArpID, DataSourceID, InterfaceID, DeviceID, ifIndex, ArpStartTime, ArpEndTime, ArpChangedCols, ArpTimestamp, PhysicalAddr, IPAddrNumeric, IPAddrDotted, ArpDeviceID, ArpInterfaceID, VrfID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1055,7 +1023,7 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1065,22 +1033,6 @@ class IfArpBroker(Broker):
 
              :param select: The list of attributes to return for each IfArp. Valid values are IfArpID, DataSourceID, InterfaceID, DeviceID, ifIndex, ArpStartTime, ArpEndTime, ArpChangedCols, ArpTimestamp, PhysicalAddr, IPAddrNumeric, IPAddrDotted, ArpDeviceID, ArpInterfaceID, VrfID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1124,8 +1076,8 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The local interface for this ARP table entry.
-             :rtype : Interface
+             :return interface: The local interface for this ARP table entry.
+             :rtype interface: Interface
 
             """
 
@@ -1151,8 +1103,8 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The remote device to which the ARP entry refers, if available.
-             :rtype : Device
+             :return remote_device: The remote device to which the ARP entry refers, if available.
+             :rtype remote_device: Device
 
             """
 
@@ -1178,8 +1130,8 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The remote interface to which the ARP entry refers, if available.
-             :rtype : Interface
+             :return remote_interface: The remote interface to which the ARP entry refers, if available.
+             :rtype remote_interface: Interface
 
             """
 
@@ -1205,8 +1157,8 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this ARP entry was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this ARP entry was collected.
+             :rtype infradevice: InfraDevice
 
             """
 
@@ -1232,8 +1184,8 @@ class IfArpBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this ARP entry was collected.
-             :rtype : Device
+             :return device: The device from which this ARP entry was collected.
+             :rtype device: Device
 
             """
 

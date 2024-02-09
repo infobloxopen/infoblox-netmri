@@ -48,7 +48,7 @@ class InterfaceBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available interfaces. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available interfaces. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -233,7 +233,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` InterfaceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is InterfaceID. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, ifTimestamp, ifFirstSeenTime, ifStartTime, ifEndTime, ifChangedCols, ifName, ifNameSort, ifDescr, ifType, ifMtu, ifMAC, ifLinkTrap, ifConnector, ifDuplex, ifSpeed, ifLowerLayer, ifAdminStatus, ifOperStatus, ifTrunkStatus, ifPortFast, ifTunnelInd, ifVirtualInd, ifLinkAggrInd, ifAggrMemberInd, ifArtificialInd, ifLinkAggrIndex, AggrInterfaceID, ifLastChange, ifAlias, ifDescrRaw, ifAdminDuplex, Slot, Port, PoEPower, PoEStatus, SwitchPortNumber, VirtualNetworkMemberID, ifEncapsulationType, ifEncapsulationTag, ifPortControlInd, ifSwitchPortMgmtInd, ifOperStatusChange, ifLowerLayerInterfaceID, DownstreamSwitchCount.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, ifTimestamp, ifFirstSeenTime, ifStartTime, ifEndTime, ifChangedCols, ifName, ifNameSort, ifDescr, ifType, ifMtu, ifMAC, ifLinkTrap, ifConnector, ifDuplex, ifSpeed, ifLowerLayer, ifAdminStatus, ifOperStatus, ifTrunkStatus, ifPortFast, ifTunnelInd, ifVirtualInd, ifLinkAggrInd, ifAggrMemberInd, ifArtificialInd, ifLinkAggrIndex, AggrInterfaceID, ifLastChange, ifAlias, ifDescrRaw, ifAdminDuplex, Slot, Port, PoEPower, PoEStatus, SwitchPortNumber, VirtualNetworkMemberID, ifEncapsulationType, ifEncapsulationTag, ifPortControlInd, ifSwitchPortMgmtInd, ifOperStatusChange, ifLowerLayerInterfaceID, DownstreamSwitchCount.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -241,7 +241,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -251,22 +251,6 @@ class InterfaceBroker(Broker):
 
              :param select: The list of attributes to return for each Interface. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, ifTimestamp, ifFirstSeenTime, ifStartTime, ifEndTime, ifChangedCols, ifName, ifNameSort, ifDescr, ifType, ifMtu, ifMAC, ifLinkTrap, ifConnector, ifDuplex, ifSpeed, ifLowerLayer, ifAdminStatus, ifOperStatus, ifTrunkStatus, ifPortFast, ifTunnelInd, ifVirtualInd, ifLinkAggrInd, ifAggrMemberInd, ifArtificialInd, ifLinkAggrIndex, AggrInterfaceID, ifLastChange, ifAlias, ifDescrRaw, ifAdminDuplex, Slot, Port, PoEPower, PoEStatus, SwitchPortNumber, VirtualNetworkMemberID, ifEncapsulationType, ifEncapsulationTag, ifPortControlInd, ifSwitchPortMgmtInd, ifOperStatusChange, ifLowerLayerInterfaceID, DownstreamSwitchCount. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -1116,7 +1100,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` InterfaceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is InterfaceID. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, ifTimestamp, ifFirstSeenTime, ifStartTime, ifEndTime, ifChangedCols, ifName, ifNameSort, ifDescr, ifType, ifMtu, ifMAC, ifLinkTrap, ifConnector, ifDuplex, ifSpeed, ifLowerLayer, ifAdminStatus, ifOperStatus, ifTrunkStatus, ifPortFast, ifTunnelInd, ifVirtualInd, ifLinkAggrInd, ifAggrMemberInd, ifArtificialInd, ifLinkAggrIndex, AggrInterfaceID, ifLastChange, ifAlias, ifDescrRaw, ifAdminDuplex, Slot, Port, PoEPower, PoEStatus, SwitchPortNumber, VirtualNetworkMemberID, ifEncapsulationType, ifEncapsulationTag, ifPortControlInd, ifSwitchPortMgmtInd, ifOperStatusChange, ifLowerLayerInterfaceID, DownstreamSwitchCount.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, ifTimestamp, ifFirstSeenTime, ifStartTime, ifEndTime, ifChangedCols, ifName, ifNameSort, ifDescr, ifType, ifMtu, ifMAC, ifLinkTrap, ifConnector, ifDuplex, ifSpeed, ifLowerLayer, ifAdminStatus, ifOperStatus, ifTrunkStatus, ifPortFast, ifTunnelInd, ifVirtualInd, ifLinkAggrInd, ifAggrMemberInd, ifArtificialInd, ifLinkAggrIndex, AggrInterfaceID, ifLastChange, ifAlias, ifDescrRaw, ifAdminDuplex, Slot, Port, PoEPower, PoEStatus, SwitchPortNumber, VirtualNetworkMemberID, ifEncapsulationType, ifEncapsulationTag, ifPortControlInd, ifSwitchPortMgmtInd, ifOperStatusChange, ifLowerLayerInterfaceID, DownstreamSwitchCount.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1124,7 +1108,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1134,22 +1118,6 @@ class InterfaceBroker(Broker):
 
              :param select: The list of attributes to return for each Interface. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, ifTimestamp, ifFirstSeenTime, ifStartTime, ifEndTime, ifChangedCols, ifName, ifNameSort, ifDescr, ifType, ifMtu, ifMAC, ifLinkTrap, ifConnector, ifDuplex, ifSpeed, ifLowerLayer, ifAdminStatus, ifOperStatus, ifTrunkStatus, ifPortFast, ifTunnelInd, ifVirtualInd, ifLinkAggrInd, ifAggrMemberInd, ifArtificialInd, ifLinkAggrIndex, AggrInterfaceID, ifLastChange, ifAlias, ifDescrRaw, ifAdminDuplex, Slot, Port, PoEPower, PoEStatus, SwitchPortNumber, VirtualNetworkMemberID, ifEncapsulationType, ifEncapsulationTag, ifPortControlInd, ifSwitchPortMgmtInd, ifOperStatusChange, ifLowerLayerInterfaceID, DownstreamSwitchCount. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -1226,7 +1194,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AggrInterfaceID: If op_AggrInterfaceID is specified, this value will be compared to the value in AggrInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AggrInterfaceID must be specified if op_AggrInterfaceID is specified.
+             :param val_c_AggrInterfaceID: If op_AggrInterfaceID is specified, this value will be compared to the value in AggrInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AggrInterfaceID must be specified if op_AggrInterfaceID is specified. If the rlike or not rlike value is specified in the op_AggrInterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_AggrInterfaceID: String
 
             |  ``api version min:`` None
@@ -1250,7 +1218,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -1274,7 +1242,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -1298,7 +1266,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DownstreamSwitchCount: If op_DownstreamSwitchCount is specified, this value will be compared to the value in DownstreamSwitchCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DownstreamSwitchCount must be specified if op_DownstreamSwitchCount is specified.
+             :param val_c_DownstreamSwitchCount: If op_DownstreamSwitchCount is specified, this value will be compared to the value in DownstreamSwitchCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DownstreamSwitchCount must be specified if op_DownstreamSwitchCount is specified. If the rlike or not rlike value is specified in the op_DownstreamSwitchCount field, escape regex special characters because a regular expression is expected.
              :type val_c_DownstreamSwitchCount: String
 
             |  ``api version min:`` None
@@ -1322,7 +1290,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -1346,7 +1314,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PoEPower: If op_PoEPower is specified, this value will be compared to the value in PoEPower using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PoEPower must be specified if op_PoEPower is specified.
+             :param val_c_PoEPower: If op_PoEPower is specified, this value will be compared to the value in PoEPower using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PoEPower must be specified if op_PoEPower is specified. If the rlike or not rlike value is specified in the op_PoEPower field, escape regex special characters because a regular expression is expected.
              :type val_c_PoEPower: String
 
             |  ``api version min:`` None
@@ -1370,7 +1338,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PoEStatus: If op_PoEStatus is specified, this value will be compared to the value in PoEStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PoEStatus must be specified if op_PoEStatus is specified.
+             :param val_c_PoEStatus: If op_PoEStatus is specified, this value will be compared to the value in PoEStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PoEStatus must be specified if op_PoEStatus is specified. If the rlike or not rlike value is specified in the op_PoEStatus field, escape regex special characters because a regular expression is expected.
              :type val_c_PoEStatus: String
 
             |  ``api version min:`` None
@@ -1394,7 +1362,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Port: If op_Port is specified, this value will be compared to the value in Port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Port must be specified if op_Port is specified.
+             :param val_c_Port: If op_Port is specified, this value will be compared to the value in Port using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Port must be specified if op_Port is specified. If the rlike or not rlike value is specified in the op_Port field, escape regex special characters because a regular expression is expected.
              :type val_c_Port: String
 
             |  ``api version min:`` None
@@ -1418,7 +1386,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Slot: If op_Slot is specified, this value will be compared to the value in Slot using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Slot must be specified if op_Slot is specified.
+             :param val_c_Slot: If op_Slot is specified, this value will be compared to the value in Slot using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Slot must be specified if op_Slot is specified. If the rlike or not rlike value is specified in the op_Slot field, escape regex special characters because a regular expression is expected.
              :type val_c_Slot: String
 
             |  ``api version min:`` None
@@ -1442,7 +1410,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortNumber: If op_SwitchPortNumber is specified, this value will be compared to the value in SwitchPortNumber using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortNumber must be specified if op_SwitchPortNumber is specified.
+             :param val_c_SwitchPortNumber: If op_SwitchPortNumber is specified, this value will be compared to the value in SwitchPortNumber using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortNumber must be specified if op_SwitchPortNumber is specified. If the rlike or not rlike value is specified in the op_SwitchPortNumber field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortNumber: String
 
             |  ``api version min:`` None
@@ -1466,7 +1434,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberID: If op_VirtualNetworkMemberID is specified, this value will be compared to the value in VirtualNetworkMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberID must be specified if op_VirtualNetworkMemberID is specified.
+             :param val_c_VirtualNetworkMemberID: If op_VirtualNetworkMemberID is specified, this value will be compared to the value in VirtualNetworkMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberID must be specified if op_VirtualNetworkMemberID is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberID: String
 
             |  ``api version min:`` None
@@ -1490,7 +1458,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_aggr_interface_name: If op_aggr_interface_name is specified, this value will be compared to the value in aggr_interface_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggr_interface_name must be specified if op_aggr_interface_name is specified.
+             :param val_c_aggr_interface_name: If op_aggr_interface_name is specified, this value will be compared to the value in aggr_interface_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_aggr_interface_name must be specified if op_aggr_interface_name is specified. If the rlike or not rlike value is specified in the op_aggr_interface_name field, escape regex special characters because a regular expression is expected.
              :type val_c_aggr_interface_name: String
 
             |  ``api version min:`` None
@@ -1514,7 +1482,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_admin_status_ind: If op_cap_if_admin_status_ind is specified, this value will be compared to the value in cap_if_admin_status_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_admin_status_ind must be specified if op_cap_if_admin_status_ind is specified.
+             :param val_c_cap_if_admin_status_ind: If op_cap_if_admin_status_ind is specified, this value will be compared to the value in cap_if_admin_status_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_admin_status_ind must be specified if op_cap_if_admin_status_ind is specified. If the rlike or not rlike value is specified in the op_cap_if_admin_status_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_admin_status_ind: String
 
             |  ``api version min:`` None
@@ -1538,7 +1506,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_admin_status_na_reason: If op_cap_if_admin_status_na_reason is specified, this value will be compared to the value in cap_if_admin_status_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_admin_status_na_reason must be specified if op_cap_if_admin_status_na_reason is specified.
+             :param val_c_cap_if_admin_status_na_reason: If op_cap_if_admin_status_na_reason is specified, this value will be compared to the value in cap_if_admin_status_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_admin_status_na_reason must be specified if op_cap_if_admin_status_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_if_admin_status_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_admin_status_na_reason: String
 
             |  ``api version min:`` None
@@ -1562,7 +1530,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_description_ind: If op_cap_if_description_ind is specified, this value will be compared to the value in cap_if_description_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_description_ind must be specified if op_cap_if_description_ind is specified.
+             :param val_c_cap_if_description_ind: If op_cap_if_description_ind is specified, this value will be compared to the value in cap_if_description_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_description_ind must be specified if op_cap_if_description_ind is specified. If the rlike or not rlike value is specified in the op_cap_if_description_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_description_ind: String
 
             |  ``api version min:`` None
@@ -1586,7 +1554,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_description_na_reason: If op_cap_if_description_na_reason is specified, this value will be compared to the value in cap_if_description_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_description_na_reason must be specified if op_cap_if_description_na_reason is specified.
+             :param val_c_cap_if_description_na_reason: If op_cap_if_description_na_reason is specified, this value will be compared to the value in cap_if_description_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_description_na_reason must be specified if op_cap_if_description_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_if_description_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_description_na_reason: String
 
             |  ``api version min:`` None
@@ -1610,7 +1578,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_net_deprovisioning_ipv4_ind: If op_cap_if_net_deprovisioning_ipv4_ind is specified, this value will be compared to the value in cap_if_net_deprovisioning_ipv4_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_deprovisioning_ipv4_ind must be specified if op_cap_if_net_deprovisioning_ipv4_ind is specified.
+             :param val_c_cap_if_net_deprovisioning_ipv4_ind: If op_cap_if_net_deprovisioning_ipv4_ind is specified, this value will be compared to the value in cap_if_net_deprovisioning_ipv4_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_deprovisioning_ipv4_ind must be specified if op_cap_if_net_deprovisioning_ipv4_ind is specified. If the rlike or not rlike value is specified in the op_cap_if_net_deprovisioning_ipv4_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_net_deprovisioning_ipv4_ind: String
 
             |  ``api version min:`` None
@@ -1634,7 +1602,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_net_deprovisioning_ipv4_na_reason: If op_cap_if_net_deprovisioning_ipv4_na_reason is specified, this value will be compared to the value in cap_if_net_deprovisioning_ipv4_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_deprovisioning_ipv4_na_reason must be specified if op_cap_if_net_deprovisioning_ipv4_na_reason is specified.
+             :param val_c_cap_if_net_deprovisioning_ipv4_na_reason: If op_cap_if_net_deprovisioning_ipv4_na_reason is specified, this value will be compared to the value in cap_if_net_deprovisioning_ipv4_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_deprovisioning_ipv4_na_reason must be specified if op_cap_if_net_deprovisioning_ipv4_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_if_net_deprovisioning_ipv4_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_net_deprovisioning_ipv4_na_reason: String
 
             |  ``api version min:`` None
@@ -1658,7 +1626,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_net_deprovisioning_ipv6_ind: If op_cap_if_net_deprovisioning_ipv6_ind is specified, this value will be compared to the value in cap_if_net_deprovisioning_ipv6_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_deprovisioning_ipv6_ind must be specified if op_cap_if_net_deprovisioning_ipv6_ind is specified.
+             :param val_c_cap_if_net_deprovisioning_ipv6_ind: If op_cap_if_net_deprovisioning_ipv6_ind is specified, this value will be compared to the value in cap_if_net_deprovisioning_ipv6_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_deprovisioning_ipv6_ind must be specified if op_cap_if_net_deprovisioning_ipv6_ind is specified. If the rlike or not rlike value is specified in the op_cap_if_net_deprovisioning_ipv6_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_net_deprovisioning_ipv6_ind: String
 
             |  ``api version min:`` None
@@ -1682,7 +1650,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_net_deprovisioning_ipv6_na_reason: If op_cap_if_net_deprovisioning_ipv6_na_reason is specified, this value will be compared to the value in cap_if_net_deprovisioning_ipv6_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_deprovisioning_ipv6_na_reason must be specified if op_cap_if_net_deprovisioning_ipv6_na_reason is specified.
+             :param val_c_cap_if_net_deprovisioning_ipv6_na_reason: If op_cap_if_net_deprovisioning_ipv6_na_reason is specified, this value will be compared to the value in cap_if_net_deprovisioning_ipv6_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_deprovisioning_ipv6_na_reason must be specified if op_cap_if_net_deprovisioning_ipv6_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_if_net_deprovisioning_ipv6_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_net_deprovisioning_ipv6_na_reason: String
 
             |  ``api version min:`` None
@@ -1706,7 +1674,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_net_provisioning_ipv4_ind: If op_cap_if_net_provisioning_ipv4_ind is specified, this value will be compared to the value in cap_if_net_provisioning_ipv4_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_provisioning_ipv4_ind must be specified if op_cap_if_net_provisioning_ipv4_ind is specified.
+             :param val_c_cap_if_net_provisioning_ipv4_ind: If op_cap_if_net_provisioning_ipv4_ind is specified, this value will be compared to the value in cap_if_net_provisioning_ipv4_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_provisioning_ipv4_ind must be specified if op_cap_if_net_provisioning_ipv4_ind is specified. If the rlike or not rlike value is specified in the op_cap_if_net_provisioning_ipv4_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_net_provisioning_ipv4_ind: String
 
             |  ``api version min:`` None
@@ -1730,7 +1698,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_net_provisioning_ipv4_na_reason: If op_cap_if_net_provisioning_ipv4_na_reason is specified, this value will be compared to the value in cap_if_net_provisioning_ipv4_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_provisioning_ipv4_na_reason must be specified if op_cap_if_net_provisioning_ipv4_na_reason is specified.
+             :param val_c_cap_if_net_provisioning_ipv4_na_reason: If op_cap_if_net_provisioning_ipv4_na_reason is specified, this value will be compared to the value in cap_if_net_provisioning_ipv4_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_provisioning_ipv4_na_reason must be specified if op_cap_if_net_provisioning_ipv4_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_if_net_provisioning_ipv4_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_net_provisioning_ipv4_na_reason: String
 
             |  ``api version min:`` None
@@ -1754,7 +1722,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_net_provisioning_ipv6_ind: If op_cap_if_net_provisioning_ipv6_ind is specified, this value will be compared to the value in cap_if_net_provisioning_ipv6_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_provisioning_ipv6_ind must be specified if op_cap_if_net_provisioning_ipv6_ind is specified.
+             :param val_c_cap_if_net_provisioning_ipv6_ind: If op_cap_if_net_provisioning_ipv6_ind is specified, this value will be compared to the value in cap_if_net_provisioning_ipv6_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_provisioning_ipv6_ind must be specified if op_cap_if_net_provisioning_ipv6_ind is specified. If the rlike or not rlike value is specified in the op_cap_if_net_provisioning_ipv6_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_net_provisioning_ipv6_ind: String
 
             |  ``api version min:`` None
@@ -1778,7 +1746,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_net_provisioning_ipv6_na_reason: If op_cap_if_net_provisioning_ipv6_na_reason is specified, this value will be compared to the value in cap_if_net_provisioning_ipv6_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_provisioning_ipv6_na_reason must be specified if op_cap_if_net_provisioning_ipv6_na_reason is specified.
+             :param val_c_cap_if_net_provisioning_ipv6_na_reason: If op_cap_if_net_provisioning_ipv6_na_reason is specified, this value will be compared to the value in cap_if_net_provisioning_ipv6_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_provisioning_ipv6_na_reason must be specified if op_cap_if_net_provisioning_ipv6_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_if_net_provisioning_ipv6_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_net_provisioning_ipv6_na_reason: String
 
             |  ``api version min:`` None
@@ -1802,7 +1770,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_vlan_assignment_ind: If op_cap_if_vlan_assignment_ind is specified, this value will be compared to the value in cap_if_vlan_assignment_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_vlan_assignment_ind must be specified if op_cap_if_vlan_assignment_ind is specified.
+             :param val_c_cap_if_vlan_assignment_ind: If op_cap_if_vlan_assignment_ind is specified, this value will be compared to the value in cap_if_vlan_assignment_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_vlan_assignment_ind must be specified if op_cap_if_vlan_assignment_ind is specified. If the rlike or not rlike value is specified in the op_cap_if_vlan_assignment_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_vlan_assignment_ind: String
 
             |  ``api version min:`` None
@@ -1826,7 +1794,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_vlan_assignment_na_reason: If op_cap_if_vlan_assignment_na_reason is specified, this value will be compared to the value in cap_if_vlan_assignment_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_vlan_assignment_na_reason must be specified if op_cap_if_vlan_assignment_na_reason is specified.
+             :param val_c_cap_if_vlan_assignment_na_reason: If op_cap_if_vlan_assignment_na_reason is specified, this value will be compared to the value in cap_if_vlan_assignment_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_vlan_assignment_na_reason must be specified if op_cap_if_vlan_assignment_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_if_vlan_assignment_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_vlan_assignment_na_reason: String
 
             |  ``api version min:`` None
@@ -1850,7 +1818,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_voice_vlan_ind: If op_cap_if_voice_vlan_ind is specified, this value will be compared to the value in cap_if_voice_vlan_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_voice_vlan_ind must be specified if op_cap_if_voice_vlan_ind is specified.
+             :param val_c_cap_if_voice_vlan_ind: If op_cap_if_voice_vlan_ind is specified, this value will be compared to the value in cap_if_voice_vlan_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_voice_vlan_ind must be specified if op_cap_if_voice_vlan_ind is specified. If the rlike or not rlike value is specified in the op_cap_if_voice_vlan_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_voice_vlan_ind: String
 
             |  ``api version min:`` None
@@ -1874,7 +1842,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_voice_vlan_na_reason: If op_cap_if_voice_vlan_na_reason is specified, this value will be compared to the value in cap_if_voice_vlan_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_voice_vlan_na_reason must be specified if op_cap_if_voice_vlan_na_reason is specified.
+             :param val_c_cap_if_voice_vlan_na_reason: If op_cap_if_voice_vlan_na_reason is specified, this value will be compared to the value in cap_if_voice_vlan_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_voice_vlan_na_reason must be specified if op_cap_if_voice_vlan_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_if_voice_vlan_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_voice_vlan_na_reason: String
 
             |  ``api version min:`` None
@@ -1898,7 +1866,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_itf_net_deprovisioning_ind: If op_cap_itf_net_deprovisioning_ind is specified, this value will be compared to the value in cap_itf_net_deprovisioning_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_itf_net_deprovisioning_ind must be specified if op_cap_itf_net_deprovisioning_ind is specified.
+             :param val_c_cap_itf_net_deprovisioning_ind: If op_cap_itf_net_deprovisioning_ind is specified, this value will be compared to the value in cap_itf_net_deprovisioning_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_itf_net_deprovisioning_ind must be specified if op_cap_itf_net_deprovisioning_ind is specified. If the rlike or not rlike value is specified in the op_cap_itf_net_deprovisioning_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_itf_net_deprovisioning_ind: String
 
             |  ``api version min:`` None
@@ -1922,7 +1890,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_itf_net_deprovisioning_na_reason: If op_cap_itf_net_deprovisioning_na_reason is specified, this value will be compared to the value in cap_itf_net_deprovisioning_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_itf_net_deprovisioning_na_reason must be specified if op_cap_itf_net_deprovisioning_na_reason is specified.
+             :param val_c_cap_itf_net_deprovisioning_na_reason: If op_cap_itf_net_deprovisioning_na_reason is specified, this value will be compared to the value in cap_itf_net_deprovisioning_na_reason using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_itf_net_deprovisioning_na_reason must be specified if op_cap_itf_net_deprovisioning_na_reason is specified. If the rlike or not rlike value is specified in the op_cap_itf_net_deprovisioning_na_reason field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_itf_net_deprovisioning_na_reason: String
 
             |  ``api version min:`` None
@@ -1946,7 +1914,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifAdminDuplex: If op_ifAdminDuplex is specified, this value will be compared to the value in ifAdminDuplex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifAdminDuplex must be specified if op_ifAdminDuplex is specified.
+             :param val_c_ifAdminDuplex: If op_ifAdminDuplex is specified, this value will be compared to the value in ifAdminDuplex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifAdminDuplex must be specified if op_ifAdminDuplex is specified. If the rlike or not rlike value is specified in the op_ifAdminDuplex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifAdminDuplex: String
 
             |  ``api version min:`` None
@@ -1970,7 +1938,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifAdminStatus: If op_ifAdminStatus is specified, this value will be compared to the value in ifAdminStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifAdminStatus must be specified if op_ifAdminStatus is specified.
+             :param val_c_ifAdminStatus: If op_ifAdminStatus is specified, this value will be compared to the value in ifAdminStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifAdminStatus must be specified if op_ifAdminStatus is specified. If the rlike or not rlike value is specified in the op_ifAdminStatus field, escape regex special characters because a regular expression is expected.
              :type val_c_ifAdminStatus: String
 
             |  ``api version min:`` None
@@ -1994,7 +1962,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifAggrMemberInd: If op_ifAggrMemberInd is specified, this value will be compared to the value in ifAggrMemberInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifAggrMemberInd must be specified if op_ifAggrMemberInd is specified.
+             :param val_c_ifAggrMemberInd: If op_ifAggrMemberInd is specified, this value will be compared to the value in ifAggrMemberInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifAggrMemberInd must be specified if op_ifAggrMemberInd is specified. If the rlike or not rlike value is specified in the op_ifAggrMemberInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ifAggrMemberInd: String
 
             |  ``api version min:`` None
@@ -2018,7 +1986,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifAlias: If op_ifAlias is specified, this value will be compared to the value in ifAlias using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifAlias must be specified if op_ifAlias is specified.
+             :param val_c_ifAlias: If op_ifAlias is specified, this value will be compared to the value in ifAlias using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifAlias must be specified if op_ifAlias is specified. If the rlike or not rlike value is specified in the op_ifAlias field, escape regex special characters because a regular expression is expected.
              :type val_c_ifAlias: String
 
             |  ``api version min:`` None
@@ -2042,7 +2010,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifArtificialInd: If op_ifArtificialInd is specified, this value will be compared to the value in ifArtificialInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifArtificialInd must be specified if op_ifArtificialInd is specified.
+             :param val_c_ifArtificialInd: If op_ifArtificialInd is specified, this value will be compared to the value in ifArtificialInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifArtificialInd must be specified if op_ifArtificialInd is specified. If the rlike or not rlike value is specified in the op_ifArtificialInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ifArtificialInd: String
 
             |  ``api version min:`` None
@@ -2066,7 +2034,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifChangedCols: If op_ifChangedCols is specified, this value will be compared to the value in ifChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifChangedCols must be specified if op_ifChangedCols is specified.
+             :param val_c_ifChangedCols: If op_ifChangedCols is specified, this value will be compared to the value in ifChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifChangedCols must be specified if op_ifChangedCols is specified. If the rlike or not rlike value is specified in the op_ifChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_ifChangedCols: String
 
             |  ``api version min:`` None
@@ -2090,7 +2058,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifConnector: If op_ifConnector is specified, this value will be compared to the value in ifConnector using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifConnector must be specified if op_ifConnector is specified.
+             :param val_c_ifConnector: If op_ifConnector is specified, this value will be compared to the value in ifConnector using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifConnector must be specified if op_ifConnector is specified. If the rlike or not rlike value is specified in the op_ifConnector field, escape regex special characters because a regular expression is expected.
              :type val_c_ifConnector: String
 
             |  ``api version min:`` None
@@ -2114,7 +2082,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifDescr: If op_ifDescr is specified, this value will be compared to the value in ifDescr using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifDescr must be specified if op_ifDescr is specified.
+             :param val_c_ifDescr: If op_ifDescr is specified, this value will be compared to the value in ifDescr using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifDescr must be specified if op_ifDescr is specified. If the rlike or not rlike value is specified in the op_ifDescr field, escape regex special characters because a regular expression is expected.
              :type val_c_ifDescr: String
 
             |  ``api version min:`` None
@@ -2138,7 +2106,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifDescrRaw: If op_ifDescrRaw is specified, this value will be compared to the value in ifDescrRaw using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifDescrRaw must be specified if op_ifDescrRaw is specified.
+             :param val_c_ifDescrRaw: If op_ifDescrRaw is specified, this value will be compared to the value in ifDescrRaw using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifDescrRaw must be specified if op_ifDescrRaw is specified. If the rlike or not rlike value is specified in the op_ifDescrRaw field, escape regex special characters because a regular expression is expected.
              :type val_c_ifDescrRaw: String
 
             |  ``api version min:`` None
@@ -2162,7 +2130,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifDuplex: If op_ifDuplex is specified, this value will be compared to the value in ifDuplex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifDuplex must be specified if op_ifDuplex is specified.
+             :param val_c_ifDuplex: If op_ifDuplex is specified, this value will be compared to the value in ifDuplex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifDuplex must be specified if op_ifDuplex is specified. If the rlike or not rlike value is specified in the op_ifDuplex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifDuplex: String
 
             |  ``api version min:`` None
@@ -2186,7 +2154,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifEncapsulationTag: If op_ifEncapsulationTag is specified, this value will be compared to the value in ifEncapsulationTag using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifEncapsulationTag must be specified if op_ifEncapsulationTag is specified.
+             :param val_c_ifEncapsulationTag: If op_ifEncapsulationTag is specified, this value will be compared to the value in ifEncapsulationTag using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifEncapsulationTag must be specified if op_ifEncapsulationTag is specified. If the rlike or not rlike value is specified in the op_ifEncapsulationTag field, escape regex special characters because a regular expression is expected.
              :type val_c_ifEncapsulationTag: String
 
             |  ``api version min:`` None
@@ -2210,7 +2178,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifEncapsulationType: If op_ifEncapsulationType is specified, this value will be compared to the value in ifEncapsulationType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifEncapsulationType must be specified if op_ifEncapsulationType is specified.
+             :param val_c_ifEncapsulationType: If op_ifEncapsulationType is specified, this value will be compared to the value in ifEncapsulationType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifEncapsulationType must be specified if op_ifEncapsulationType is specified. If the rlike or not rlike value is specified in the op_ifEncapsulationType field, escape regex special characters because a regular expression is expected.
              :type val_c_ifEncapsulationType: String
 
             |  ``api version min:`` None
@@ -2234,7 +2202,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifEndTime: If op_ifEndTime is specified, this value will be compared to the value in ifEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifEndTime must be specified if op_ifEndTime is specified.
+             :param val_c_ifEndTime: If op_ifEndTime is specified, this value will be compared to the value in ifEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifEndTime must be specified if op_ifEndTime is specified. If the rlike or not rlike value is specified in the op_ifEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_ifEndTime: String
 
             |  ``api version min:`` None
@@ -2258,7 +2226,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifFirstSeenTime: If op_ifFirstSeenTime is specified, this value will be compared to the value in ifFirstSeenTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifFirstSeenTime must be specified if op_ifFirstSeenTime is specified.
+             :param val_c_ifFirstSeenTime: If op_ifFirstSeenTime is specified, this value will be compared to the value in ifFirstSeenTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifFirstSeenTime must be specified if op_ifFirstSeenTime is specified. If the rlike or not rlike value is specified in the op_ifFirstSeenTime field, escape regex special characters because a regular expression is expected.
              :type val_c_ifFirstSeenTime: String
 
             |  ``api version min:`` None
@@ -2282,7 +2250,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -2306,7 +2274,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifLastChange: If op_ifLastChange is specified, this value will be compared to the value in ifLastChange using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLastChange must be specified if op_ifLastChange is specified.
+             :param val_c_ifLastChange: If op_ifLastChange is specified, this value will be compared to the value in ifLastChange using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLastChange must be specified if op_ifLastChange is specified. If the rlike or not rlike value is specified in the op_ifLastChange field, escape regex special characters because a regular expression is expected.
              :type val_c_ifLastChange: String
 
             |  ``api version min:`` None
@@ -2330,7 +2298,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifLinkAggrInd: If op_ifLinkAggrInd is specified, this value will be compared to the value in ifLinkAggrInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLinkAggrInd must be specified if op_ifLinkAggrInd is specified.
+             :param val_c_ifLinkAggrInd: If op_ifLinkAggrInd is specified, this value will be compared to the value in ifLinkAggrInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLinkAggrInd must be specified if op_ifLinkAggrInd is specified. If the rlike or not rlike value is specified in the op_ifLinkAggrInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ifLinkAggrInd: String
 
             |  ``api version min:`` None
@@ -2354,7 +2322,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifLinkAggrIndex: If op_ifLinkAggrIndex is specified, this value will be compared to the value in ifLinkAggrIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLinkAggrIndex must be specified if op_ifLinkAggrIndex is specified.
+             :param val_c_ifLinkAggrIndex: If op_ifLinkAggrIndex is specified, this value will be compared to the value in ifLinkAggrIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLinkAggrIndex must be specified if op_ifLinkAggrIndex is specified. If the rlike or not rlike value is specified in the op_ifLinkAggrIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifLinkAggrIndex: String
 
             |  ``api version min:`` None
@@ -2378,7 +2346,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifLinkTrap: If op_ifLinkTrap is specified, this value will be compared to the value in ifLinkTrap using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLinkTrap must be specified if op_ifLinkTrap is specified.
+             :param val_c_ifLinkTrap: If op_ifLinkTrap is specified, this value will be compared to the value in ifLinkTrap using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLinkTrap must be specified if op_ifLinkTrap is specified. If the rlike or not rlike value is specified in the op_ifLinkTrap field, escape regex special characters because a regular expression is expected.
              :type val_c_ifLinkTrap: String
 
             |  ``api version min:`` None
@@ -2402,7 +2370,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifLowerLayer: If op_ifLowerLayer is specified, this value will be compared to the value in ifLowerLayer using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLowerLayer must be specified if op_ifLowerLayer is specified.
+             :param val_c_ifLowerLayer: If op_ifLowerLayer is specified, this value will be compared to the value in ifLowerLayer using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLowerLayer must be specified if op_ifLowerLayer is specified. If the rlike or not rlike value is specified in the op_ifLowerLayer field, escape regex special characters because a regular expression is expected.
              :type val_c_ifLowerLayer: String
 
             |  ``api version min:`` None
@@ -2426,7 +2394,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifLowerLayerInterfaceID: If op_ifLowerLayerInterfaceID is specified, this value will be compared to the value in ifLowerLayerInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLowerLayerInterfaceID must be specified if op_ifLowerLayerInterfaceID is specified.
+             :param val_c_ifLowerLayerInterfaceID: If op_ifLowerLayerInterfaceID is specified, this value will be compared to the value in ifLowerLayerInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLowerLayerInterfaceID must be specified if op_ifLowerLayerInterfaceID is specified. If the rlike or not rlike value is specified in the op_ifLowerLayerInterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_ifLowerLayerInterfaceID: String
 
             |  ``api version min:`` None
@@ -2450,7 +2418,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifMAC: If op_ifMAC is specified, this value will be compared to the value in ifMAC using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifMAC must be specified if op_ifMAC is specified.
+             :param val_c_ifMAC: If op_ifMAC is specified, this value will be compared to the value in ifMAC using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifMAC must be specified if op_ifMAC is specified. If the rlike or not rlike value is specified in the op_ifMAC field, escape regex special characters because a regular expression is expected.
              :type val_c_ifMAC: String
 
             |  ``api version min:`` None
@@ -2474,7 +2442,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifMtu: If op_ifMtu is specified, this value will be compared to the value in ifMtu using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifMtu must be specified if op_ifMtu is specified.
+             :param val_c_ifMtu: If op_ifMtu is specified, this value will be compared to the value in ifMtu using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifMtu must be specified if op_ifMtu is specified. If the rlike or not rlike value is specified in the op_ifMtu field, escape regex special characters because a regular expression is expected.
              :type val_c_ifMtu: String
 
             |  ``api version min:`` None
@@ -2498,7 +2466,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifName: If op_ifName is specified, this value will be compared to the value in ifName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifName must be specified if op_ifName is specified.
+             :param val_c_ifName: If op_ifName is specified, this value will be compared to the value in ifName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifName must be specified if op_ifName is specified. If the rlike or not rlike value is specified in the op_ifName field, escape regex special characters because a regular expression is expected.
              :type val_c_ifName: String
 
             |  ``api version min:`` None
@@ -2522,7 +2490,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifNameSort: If op_ifNameSort is specified, this value will be compared to the value in ifNameSort using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifNameSort must be specified if op_ifNameSort is specified.
+             :param val_c_ifNameSort: If op_ifNameSort is specified, this value will be compared to the value in ifNameSort using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifNameSort must be specified if op_ifNameSort is specified. If the rlike or not rlike value is specified in the op_ifNameSort field, escape regex special characters because a regular expression is expected.
              :type val_c_ifNameSort: String
 
             |  ``api version min:`` None
@@ -2546,7 +2514,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifOperStatus: If op_ifOperStatus is specified, this value will be compared to the value in ifOperStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOperStatus must be specified if op_ifOperStatus is specified.
+             :param val_c_ifOperStatus: If op_ifOperStatus is specified, this value will be compared to the value in ifOperStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOperStatus must be specified if op_ifOperStatus is specified. If the rlike or not rlike value is specified in the op_ifOperStatus field, escape regex special characters because a regular expression is expected.
              :type val_c_ifOperStatus: String
 
             |  ``api version min:`` None
@@ -2570,7 +2538,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifOperStatusChange: If op_ifOperStatusChange is specified, this value will be compared to the value in ifOperStatusChange using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOperStatusChange must be specified if op_ifOperStatusChange is specified.
+             :param val_c_ifOperStatusChange: If op_ifOperStatusChange is specified, this value will be compared to the value in ifOperStatusChange using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOperStatusChange must be specified if op_ifOperStatusChange is specified. If the rlike or not rlike value is specified in the op_ifOperStatusChange field, escape regex special characters because a regular expression is expected.
              :type val_c_ifOperStatusChange: String
 
             |  ``api version min:`` None
@@ -2594,7 +2562,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifPortControlInd: If op_ifPortControlInd is specified, this value will be compared to the value in ifPortControlInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifPortControlInd must be specified if op_ifPortControlInd is specified.
+             :param val_c_ifPortControlInd: If op_ifPortControlInd is specified, this value will be compared to the value in ifPortControlInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifPortControlInd must be specified if op_ifPortControlInd is specified. If the rlike or not rlike value is specified in the op_ifPortControlInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ifPortControlInd: String
 
             |  ``api version min:`` None
@@ -2618,7 +2586,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifPortFast: If op_ifPortFast is specified, this value will be compared to the value in ifPortFast using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifPortFast must be specified if op_ifPortFast is specified.
+             :param val_c_ifPortFast: If op_ifPortFast is specified, this value will be compared to the value in ifPortFast using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifPortFast must be specified if op_ifPortFast is specified. If the rlike or not rlike value is specified in the op_ifPortFast field, escape regex special characters because a regular expression is expected.
              :type val_c_ifPortFast: String
 
             |  ``api version min:`` None
@@ -2642,7 +2610,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifSpeed: If op_ifSpeed is specified, this value will be compared to the value in ifSpeed using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifSpeed must be specified if op_ifSpeed is specified.
+             :param val_c_ifSpeed: If op_ifSpeed is specified, this value will be compared to the value in ifSpeed using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifSpeed must be specified if op_ifSpeed is specified. If the rlike or not rlike value is specified in the op_ifSpeed field, escape regex special characters because a regular expression is expected.
              :type val_c_ifSpeed: String
 
             |  ``api version min:`` None
@@ -2666,7 +2634,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifStartTime: If op_ifStartTime is specified, this value will be compared to the value in ifStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifStartTime must be specified if op_ifStartTime is specified.
+             :param val_c_ifStartTime: If op_ifStartTime is specified, this value will be compared to the value in ifStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifStartTime must be specified if op_ifStartTime is specified. If the rlike or not rlike value is specified in the op_ifStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_ifStartTime: String
 
             |  ``api version min:`` None
@@ -2690,7 +2658,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifSwitchPortMgmtInd: If op_ifSwitchPortMgmtInd is specified, this value will be compared to the value in ifSwitchPortMgmtInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifSwitchPortMgmtInd must be specified if op_ifSwitchPortMgmtInd is specified.
+             :param val_c_ifSwitchPortMgmtInd: If op_ifSwitchPortMgmtInd is specified, this value will be compared to the value in ifSwitchPortMgmtInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifSwitchPortMgmtInd must be specified if op_ifSwitchPortMgmtInd is specified. If the rlike or not rlike value is specified in the op_ifSwitchPortMgmtInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ifSwitchPortMgmtInd: String
 
             |  ``api version min:`` None
@@ -2714,7 +2682,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifTimestamp: If op_ifTimestamp is specified, this value will be compared to the value in ifTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifTimestamp must be specified if op_ifTimestamp is specified.
+             :param val_c_ifTimestamp: If op_ifTimestamp is specified, this value will be compared to the value in ifTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifTimestamp must be specified if op_ifTimestamp is specified. If the rlike or not rlike value is specified in the op_ifTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_ifTimestamp: String
 
             |  ``api version min:`` None
@@ -2738,7 +2706,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifTrunkStatus: If op_ifTrunkStatus is specified, this value will be compared to the value in ifTrunkStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifTrunkStatus must be specified if op_ifTrunkStatus is specified.
+             :param val_c_ifTrunkStatus: If op_ifTrunkStatus is specified, this value will be compared to the value in ifTrunkStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifTrunkStatus must be specified if op_ifTrunkStatus is specified. If the rlike or not rlike value is specified in the op_ifTrunkStatus field, escape regex special characters because a regular expression is expected.
              :type val_c_ifTrunkStatus: String
 
             |  ``api version min:`` None
@@ -2762,7 +2730,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifTunnelInd: If op_ifTunnelInd is specified, this value will be compared to the value in ifTunnelInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifTunnelInd must be specified if op_ifTunnelInd is specified.
+             :param val_c_ifTunnelInd: If op_ifTunnelInd is specified, this value will be compared to the value in ifTunnelInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifTunnelInd must be specified if op_ifTunnelInd is specified. If the rlike or not rlike value is specified in the op_ifTunnelInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ifTunnelInd: String
 
             |  ``api version min:`` None
@@ -2786,7 +2754,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifType: If op_ifType is specified, this value will be compared to the value in ifType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifType must be specified if op_ifType is specified.
+             :param val_c_ifType: If op_ifType is specified, this value will be compared to the value in ifType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifType must be specified if op_ifType is specified. If the rlike or not rlike value is specified in the op_ifType field, escape regex special characters because a regular expression is expected.
              :type val_c_ifType: String
 
             |  ``api version min:`` None
@@ -2810,7 +2778,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifVirtualInd: If op_ifVirtualInd is specified, this value will be compared to the value in ifVirtualInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifVirtualInd must be specified if op_ifVirtualInd is specified.
+             :param val_c_ifVirtualInd: If op_ifVirtualInd is specified, this value will be compared to the value in ifVirtualInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifVirtualInd must be specified if op_ifVirtualInd is specified. If the rlike or not rlike value is specified in the op_ifVirtualInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ifVirtualInd: String
 
             |  ``api version min:`` None
@@ -2834,7 +2802,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_network_id: If op_network_id is specified, this value will be compared to the value in network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_network_id must be specified if op_network_id is specified.
+             :param val_c_network_id: If op_network_id is specified, this value will be compared to the value in network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_network_id must be specified if op_network_id is specified. If the rlike or not rlike value is specified in the op_network_id field, escape regex special characters because a regular expression is expected.
              :type val_c_network_id: String
 
             |  ``api version min:`` None
@@ -2858,7 +2826,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_vpc_peer_device_id: If op_vpc_peer_device_id is specified, this value will be compared to the value in vpc_peer_device_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vpc_peer_device_id must be specified if op_vpc_peer_device_id is specified.
+             :param val_c_vpc_peer_device_id: If op_vpc_peer_device_id is specified, this value will be compared to the value in vpc_peer_device_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vpc_peer_device_id must be specified if op_vpc_peer_device_id is specified. If the rlike or not rlike value is specified in the op_vpc_peer_device_id field, escape regex special characters because a regular expression is expected.
              :type val_c_vpc_peer_device_id: String
 
             |  ``api version min:`` None
@@ -2882,7 +2850,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_vpc_peer_ifname: If op_vpc_peer_ifname is specified, this value will be compared to the value in vpc_peer_ifname using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vpc_peer_ifname must be specified if op_vpc_peer_ifname is specified.
+             :param val_c_vpc_peer_ifname: If op_vpc_peer_ifname is specified, this value will be compared to the value in vpc_peer_ifname using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vpc_peer_ifname must be specified if op_vpc_peer_ifname is specified. If the rlike or not rlike value is specified in the op_vpc_peer_ifname field, escape regex special characters because a regular expression is expected.
              :type val_c_vpc_peer_ifname: String
 
             |  ``api version min:`` None
@@ -2906,7 +2874,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_vrf_description: If op_vrf_description is specified, this value will be compared to the value in vrf_description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vrf_description must be specified if op_vrf_description is specified.
+             :param val_c_vrf_description: If op_vrf_description is specified, this value will be compared to the value in vrf_description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vrf_description must be specified if op_vrf_description is specified. If the rlike or not rlike value is specified in the op_vrf_description field, escape regex special characters because a regular expression is expected.
              :type val_c_vrf_description: String
 
             |  ``api version min:`` None
@@ -2930,7 +2898,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_vrf_name: If op_vrf_name is specified, this value will be compared to the value in vrf_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vrf_name must be specified if op_vrf_name is specified.
+             :param val_c_vrf_name: If op_vrf_name is specified, this value will be compared to the value in vrf_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vrf_name must be specified if op_vrf_name is specified. If the rlike or not rlike value is specified in the op_vrf_name field, escape regex special characters because a regular expression is expected.
              :type val_c_vrf_name: String
 
             |  ``api version min:`` None
@@ -2954,7 +2922,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_vrf_rd: If op_vrf_rd is specified, this value will be compared to the value in vrf_rd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vrf_rd must be specified if op_vrf_rd is specified.
+             :param val_c_vrf_rd: If op_vrf_rd is specified, this value will be compared to the value in vrf_rd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vrf_rd must be specified if op_vrf_rd is specified. If the rlike or not rlike value is specified in the op_vrf_rd field, escape regex special characters because a regular expression is expected.
              :type val_c_vrf_rd: String
 
             |  ``api version min:`` None
@@ -3010,7 +2978,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` InterfaceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is InterfaceID. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, ifTimestamp, ifFirstSeenTime, ifStartTime, ifEndTime, ifChangedCols, ifName, ifNameSort, ifDescr, ifType, ifMtu, ifMAC, ifLinkTrap, ifConnector, ifDuplex, ifSpeed, ifLowerLayer, ifAdminStatus, ifOperStatus, ifTrunkStatus, ifPortFast, ifTunnelInd, ifVirtualInd, ifLinkAggrInd, ifAggrMemberInd, ifArtificialInd, ifLinkAggrIndex, AggrInterfaceID, ifLastChange, ifAlias, ifDescrRaw, ifAdminDuplex, Slot, Port, PoEPower, PoEStatus, SwitchPortNumber, VirtualNetworkMemberID, ifEncapsulationType, ifEncapsulationTag, ifPortControlInd, ifSwitchPortMgmtInd, ifOperStatusChange, ifLowerLayerInterfaceID, DownstreamSwitchCount.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, ifTimestamp, ifFirstSeenTime, ifStartTime, ifEndTime, ifChangedCols, ifName, ifNameSort, ifDescr, ifType, ifMtu, ifMAC, ifLinkTrap, ifConnector, ifDuplex, ifSpeed, ifLowerLayer, ifAdminStatus, ifOperStatus, ifTrunkStatus, ifPortFast, ifTunnelInd, ifVirtualInd, ifLinkAggrInd, ifAggrMemberInd, ifArtificialInd, ifLinkAggrIndex, AggrInterfaceID, ifLastChange, ifAlias, ifDescrRaw, ifAdminDuplex, Slot, Port, PoEPower, PoEStatus, SwitchPortNumber, VirtualNetworkMemberID, ifEncapsulationType, ifEncapsulationTag, ifPortControlInd, ifSwitchPortMgmtInd, ifOperStatusChange, ifLowerLayerInterfaceID, DownstreamSwitchCount.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -3018,7 +2986,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -3028,22 +2996,6 @@ class InterfaceBroker(Broker):
 
              :param select: The list of attributes to return for each Interface. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, ifTimestamp, ifFirstSeenTime, ifStartTime, ifEndTime, ifChangedCols, ifName, ifNameSort, ifDescr, ifType, ifMtu, ifMAC, ifLinkTrap, ifConnector, ifDuplex, ifSpeed, ifLowerLayer, ifAdminStatus, ifOperStatus, ifTrunkStatus, ifPortFast, ifTunnelInd, ifVirtualInd, ifLinkAggrInd, ifAggrMemberInd, ifArtificialInd, ifLinkAggrIndex, AggrInterfaceID, ifLastChange, ifAlias, ifDescrRaw, ifAdminDuplex, Slot, Port, PoEPower, PoEStatus, SwitchPortNumber, VirtualNetworkMemberID, ifEncapsulationType, ifEncapsulationTag, ifPortControlInd, ifSwitchPortMgmtInd, ifOperStatusChange, ifLowerLayerInterfaceID, DownstreamSwitchCount. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -3111,7 +3063,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated interface.
+             :return uri: The URI that may be used to retrieve the updated interface.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -3162,7 +3114,7 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated interface.
+             :return uri: The URI that may be used to retrieve the updated interface.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -3197,8 +3149,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The NetMRI device that collected this record.
-             :rtype : DataSource
+             :return data_source: The NetMRI device that collected this record.
+             :rtype data_source: DataSource
 
             """
 
@@ -3224,8 +3176,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The 'owning' link aggregation interface for link aggregate members (refers back to self for link aggregates).
-             :rtype : Interface
+             :return aggr_interface: The 'owning' link aggregation interface for link aggregate members (refers back to self for link aggregates).
+             :rtype aggr_interface: Interface
 
             """
 
@@ -3251,8 +3203,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device containing this interface.
-             :rtype : InfraDevice
+             :return infradevice: The device containing this interface.
+             :rtype infradevice: InfraDevice
 
             """
 
@@ -3278,8 +3230,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The first virtual LAN attached to that interface
-             :rtype : Vlan
+             :return vlan: The first virtual LAN attached to that interface
+             :rtype vlan: Vlan
 
             """
 
@@ -3305,8 +3257,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : A Network View assigned to the device.
-             :rtype : String
+             :return network_name: A Network View assigned to the device.
+             :rtype network_name: String
 
             """
 
@@ -3332,8 +3284,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The Network View ID assigned to the interface.
-             :rtype : Integer
+             :return network_id: The Network View ID assigned to the interface.
+             :rtype network_id: Integer
 
             """
 
@@ -3359,8 +3311,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The VRF name assigned to the interface.
-             :rtype : String
+             :return vrf_name: The VRF name assigned to the interface.
+             :rtype vrf_name: String
 
             """
 
@@ -3386,8 +3338,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The VRF description of the vrf assigned to the interface.
-             :rtype : String
+             :return vrf_description: The VRF description of the vrf assigned to the interface.
+             :rtype vrf_description: String
 
             """
 
@@ -3413,8 +3365,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The VRF route distinguisher of the vrf  assigned to the interface.
-             :rtype : String
+             :return vrf_rd: The VRF route distinguisher of the vrf  assigned to the interface.
+             :rtype vrf_rd: String
 
             """
 
@@ -3440,8 +3392,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of changing the description of this interface.
-             :rtype : Boolean
+             :return cap_if_description_ind: Capability of changing the description of this interface.
+             :rtype cap_if_description_ind: Boolean
 
             """
 
@@ -3467,8 +3419,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of changing the Admin Status of this interface.
-             :rtype : Boolean
+             :return cap_if_admin_status_ind: Capability of changing the Admin Status of this interface.
+             :rtype cap_if_admin_status_ind: Boolean
 
             """
 
@@ -3494,8 +3446,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of assigning a regular data VLAN to this interface.
-             :rtype : Boolean
+             :return cap_if_vlan_assignment_ind: Capability of assigning a regular data VLAN to this interface.
+             :rtype cap_if_vlan_assignment_ind: Boolean
 
             """
 
@@ -3521,8 +3473,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of assigning a voice VLAN to this interface.
-             :rtype : Boolean
+             :return cap_if_voice_vlan_ind: Capability of assigning a voice VLAN to this interface.
+             :rtype cap_if_voice_vlan_ind: Boolean
 
             """
 
@@ -3548,8 +3500,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Configuration capabilities for this interface, related to Port Control.
-             :rtype : String
+             :return control_capabilities: Configuration capabilities for this interface, related to Port Control.
+             :rtype control_capabilities: String
 
             """
 
@@ -3575,8 +3527,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of de-provisioning a network from this interface.
-             :rtype : Boolean
+             :return cap_itf_net_deprovisioning_ind: Capability of de-provisioning a network from this interface.
+             :rtype cap_itf_net_deprovisioning_ind: Boolean
 
             """
 
@@ -3602,8 +3554,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of changing the description of this interface.
-             :rtype : String
+             :return cap_if_description_na_reason: Reason of non ability of changing the description of this interface.
+             :rtype cap_if_description_na_reason: String
 
             """
 
@@ -3629,8 +3581,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of changing the Admin Status of this interface.
-             :rtype : String
+             :return cap_if_admin_status_na_reason: Reason of non ability of changing the Admin Status of this interface.
+             :rtype cap_if_admin_status_na_reason: String
 
             """
 
@@ -3656,8 +3608,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of assigning a regular data VLAN to this interface.
-             :rtype : String
+             :return cap_if_vlan_assignment_na_reason: Reason of non ability of assigning a regular data VLAN to this interface.
+             :rtype cap_if_vlan_assignment_na_reason: String
 
             """
 
@@ -3683,8 +3635,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of assigning a voice VLAN to this interface.
-             :rtype : String
+             :return cap_if_voice_vlan_na_reason: Reason of non ability of assigning a voice VLAN to this interface.
+             :rtype cap_if_voice_vlan_na_reason: String
 
             """
 
@@ -3710,8 +3662,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability to provision an ipv4 network on this interface.
-             :rtype : Boolean
+             :return cap_if_net_provisioning_ipv4_ind: Capability to provision an ipv4 network on this interface.
+             :rtype cap_if_net_provisioning_ipv4_ind: Boolean
 
             """
 
@@ -3737,8 +3689,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability to provision an ipv4 network on this interface.
-             :rtype : String
+             :return cap_if_net_provisioning_ipv4_na_reason: Reason of non ability to provision an ipv4 network on this interface.
+             :rtype cap_if_net_provisioning_ipv4_na_reason: String
 
             """
 
@@ -3764,8 +3716,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability to provision an ipv6 network on this interface.
-             :rtype : Boolean
+             :return cap_if_net_provisioning_ipv6_ind: Capability to provision an ipv6 network on this interface.
+             :rtype cap_if_net_provisioning_ipv6_ind: Boolean
 
             """
 
@@ -3791,8 +3743,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability to provision an ipv6 network on this interface.i
-             :rtype : String
+             :return cap_if_net_provisioning_ipv6_na_reason: Reason of non ability to provision an ipv6 network on this interface.i
+             :rtype cap_if_net_provisioning_ipv6_na_reason: String
 
             """
 
@@ -3818,8 +3770,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of de-provisioning an ipv4 network from this interface.
-             :rtype : Boolean
+             :return cap_if_net_deprovisioning_ipv4_ind: Capability of de-provisioning an ipv4 network from this interface.
+             :rtype cap_if_net_deprovisioning_ipv4_ind: Boolean
 
             """
 
@@ -3845,8 +3797,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of de-provisioning an ipv4 network from this interface.
-             :rtype : String
+             :return cap_if_net_deprovisioning_ipv4_na_reason: Reason of non ability of de-provisioning an ipv4 network from this interface.
+             :rtype cap_if_net_deprovisioning_ipv4_na_reason: String
 
             """
 
@@ -3872,8 +3824,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of de-provisioning an ipv6 network from this interface.
-             :rtype : Boolean
+             :return cap_if_net_deprovisioning_ipv6_ind: Capability of de-provisioning an ipv6 network from this interface.
+             :rtype cap_if_net_deprovisioning_ipv6_ind: Boolean
 
             """
 
@@ -3899,8 +3851,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Reason of non ability of de-provisioning an ipv6 network from this interface.
-             :rtype : String
+             :return cap_if_net_deprovisioning_ipv6_na_reason: Reason of non ability of de-provisioning an ipv6 network from this interface.
+             :rtype cap_if_net_deprovisioning_ipv6_na_reason: String
 
             """
 
@@ -3926,8 +3878,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The reason a network from this interface was unable to be deprovisioned.
-             :rtype : String
+             :return cap_itf_net_deprovisioning_na_reason: The reason a network from this interface was unable to be deprovisioned.
+             :rtype cap_itf_net_deprovisioning_na_reason: String
 
             """
 
@@ -3953,8 +3905,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The name of aggregated interface.
-             :rtype : String
+             :return aggr_interface_name: The name of aggregated interface.
+             :rtype aggr_interface_name: String
 
             """
 
@@ -3980,8 +3932,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The name of peer interface of VPC pair.
-             :rtype : String
+             :return vpc_peer_ifname: The name of peer interface of VPC pair.
+             :rtype vpc_peer_ifname: String
 
             """
 
@@ -4007,8 +3959,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : DeviceID of VPC peer device.
-             :rtype : Integer
+             :return vpc_peer_device_id: DeviceID of VPC peer device.
+             :rtype vpc_peer_device_id: Integer
 
             """
 
@@ -4034,8 +3986,8 @@ class InterfaceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device containing this interface.
-             :rtype : Device
+             :return device: The device containing this interface.
+             :rtype device: Device
 
             """
 

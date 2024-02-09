@@ -5,7 +5,7 @@ class IfPerfHourlyBroker(Broker):
     controller = "if_perf_hourlies"
 
     def index(self, **kwargs):
-        """Lists the available if perf hourlies. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available if perf hourlies. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -70,7 +70,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, StartTime, EndTime, DeviceID, ifIndex, ifSpeed, ifTotalChanges, ifInOctets, ifInUcastPkts, ifInNUcastPkts, ifInMulticastPkts, ifInBroadcastPkts, ifInDiscards, ifInErrors, ifOutOctets, ifOutUcastPkts, ifOutNUcastPkts, ifOutMulticastPkts, ifOutBroadcastPkts, ifOutDiscards, ifOutErrors, ifAlignmentErrors, ifFCSErrors, ifLateCollisions.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, StartTime, EndTime, DeviceID, ifIndex, ifSpeed, ifTotalChanges, ifInOctets, ifInUcastPkts, ifInNUcastPkts, ifInMulticastPkts, ifInBroadcastPkts, ifInDiscards, ifInErrors, ifOutOctets, ifOutUcastPkts, ifOutNUcastPkts, ifOutMulticastPkts, ifOutBroadcastPkts, ifOutDiscards, ifOutErrors, ifAlignmentErrors, ifFCSErrors, ifLateCollisions.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -78,7 +78,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -88,22 +88,6 @@ class IfPerfHourlyBroker(Broker):
 
              :param select: The list of attributes to return for each IfPerfHourly. Valid values are DataSourceID, StartTime, EndTime, DeviceID, ifIndex, ifSpeed, ifTotalChanges, ifInOctets, ifInUcastPkts, ifInNUcastPkts, ifInMulticastPkts, ifInBroadcastPkts, ifInDiscards, ifInErrors, ifOutOctets, ifOutUcastPkts, ifOutNUcastPkts, ifOutMulticastPkts, ifOutBroadcastPkts, ifOutDiscards, ifOutErrors, ifAlignmentErrors, ifFCSErrors, ifLateCollisions. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -553,7 +537,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, StartTime, EndTime, DeviceID, ifIndex, ifSpeed, ifTotalChanges, ifInOctets, ifInUcastPkts, ifInNUcastPkts, ifInMulticastPkts, ifInBroadcastPkts, ifInDiscards, ifInErrors, ifOutOctets, ifOutUcastPkts, ifOutNUcastPkts, ifOutMulticastPkts, ifOutBroadcastPkts, ifOutDiscards, ifOutErrors, ifAlignmentErrors, ifFCSErrors, ifLateCollisions.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, StartTime, EndTime, DeviceID, ifIndex, ifSpeed, ifTotalChanges, ifInOctets, ifInUcastPkts, ifInNUcastPkts, ifInMulticastPkts, ifInBroadcastPkts, ifInDiscards, ifInErrors, ifOutOctets, ifOutUcastPkts, ifOutNUcastPkts, ifOutMulticastPkts, ifOutBroadcastPkts, ifOutDiscards, ifOutErrors, ifAlignmentErrors, ifFCSErrors, ifLateCollisions.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -561,7 +545,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -571,22 +555,6 @@ class IfPerfHourlyBroker(Broker):
 
              :param select: The list of attributes to return for each IfPerfHourly. Valid values are DataSourceID, StartTime, EndTime, DeviceID, ifIndex, ifSpeed, ifTotalChanges, ifInOctets, ifInUcastPkts, ifInNUcastPkts, ifInMulticastPkts, ifInBroadcastPkts, ifInDiscards, ifInErrors, ifOutOctets, ifOutUcastPkts, ifOutNUcastPkts, ifOutMulticastPkts, ifOutBroadcastPkts, ifOutDiscards, ifOutErrors, ifAlignmentErrors, ifFCSErrors, ifLateCollisions. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -644,7 +612,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -668,7 +636,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -692,7 +660,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified.
+             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified. If the rlike or not rlike value is specified in the op_EndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_EndTime: String
 
             |  ``api version min:`` None
@@ -716,7 +684,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified.
+             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified. If the rlike or not rlike value is specified in the op_StartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_StartTime: String
 
             |  ``api version min:`` None
@@ -740,7 +708,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifAlignmentErrors: If op_ifAlignmentErrors is specified, this value will be compared to the value in ifAlignmentErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifAlignmentErrors must be specified if op_ifAlignmentErrors is specified.
+             :param val_c_ifAlignmentErrors: If op_ifAlignmentErrors is specified, this value will be compared to the value in ifAlignmentErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifAlignmentErrors must be specified if op_ifAlignmentErrors is specified. If the rlike or not rlike value is specified in the op_ifAlignmentErrors field, escape regex special characters because a regular expression is expected.
              :type val_c_ifAlignmentErrors: String
 
             |  ``api version min:`` None
@@ -764,7 +732,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifFCSErrors: If op_ifFCSErrors is specified, this value will be compared to the value in ifFCSErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifFCSErrors must be specified if op_ifFCSErrors is specified.
+             :param val_c_ifFCSErrors: If op_ifFCSErrors is specified, this value will be compared to the value in ifFCSErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifFCSErrors must be specified if op_ifFCSErrors is specified. If the rlike or not rlike value is specified in the op_ifFCSErrors field, escape regex special characters because a regular expression is expected.
              :type val_c_ifFCSErrors: String
 
             |  ``api version min:`` None
@@ -788,7 +756,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifInBroadcastPkts: If op_ifInBroadcastPkts is specified, this value will be compared to the value in ifInBroadcastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInBroadcastPkts must be specified if op_ifInBroadcastPkts is specified.
+             :param val_c_ifInBroadcastPkts: If op_ifInBroadcastPkts is specified, this value will be compared to the value in ifInBroadcastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInBroadcastPkts must be specified if op_ifInBroadcastPkts is specified. If the rlike or not rlike value is specified in the op_ifInBroadcastPkts field, escape regex special characters because a regular expression is expected.
              :type val_c_ifInBroadcastPkts: String
 
             |  ``api version min:`` None
@@ -812,7 +780,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifInDiscards: If op_ifInDiscards is specified, this value will be compared to the value in ifInDiscards using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInDiscards must be specified if op_ifInDiscards is specified.
+             :param val_c_ifInDiscards: If op_ifInDiscards is specified, this value will be compared to the value in ifInDiscards using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInDiscards must be specified if op_ifInDiscards is specified. If the rlike or not rlike value is specified in the op_ifInDiscards field, escape regex special characters because a regular expression is expected.
              :type val_c_ifInDiscards: String
 
             |  ``api version min:`` None
@@ -836,7 +804,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifInErrors: If op_ifInErrors is specified, this value will be compared to the value in ifInErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInErrors must be specified if op_ifInErrors is specified.
+             :param val_c_ifInErrors: If op_ifInErrors is specified, this value will be compared to the value in ifInErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInErrors must be specified if op_ifInErrors is specified. If the rlike or not rlike value is specified in the op_ifInErrors field, escape regex special characters because a regular expression is expected.
              :type val_c_ifInErrors: String
 
             |  ``api version min:`` None
@@ -860,7 +828,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifInMulticastPkts: If op_ifInMulticastPkts is specified, this value will be compared to the value in ifInMulticastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInMulticastPkts must be specified if op_ifInMulticastPkts is specified.
+             :param val_c_ifInMulticastPkts: If op_ifInMulticastPkts is specified, this value will be compared to the value in ifInMulticastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInMulticastPkts must be specified if op_ifInMulticastPkts is specified. If the rlike or not rlike value is specified in the op_ifInMulticastPkts field, escape regex special characters because a regular expression is expected.
              :type val_c_ifInMulticastPkts: String
 
             |  ``api version min:`` None
@@ -884,7 +852,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifInNUcastPkts: If op_ifInNUcastPkts is specified, this value will be compared to the value in ifInNUcastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInNUcastPkts must be specified if op_ifInNUcastPkts is specified.
+             :param val_c_ifInNUcastPkts: If op_ifInNUcastPkts is specified, this value will be compared to the value in ifInNUcastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInNUcastPkts must be specified if op_ifInNUcastPkts is specified. If the rlike or not rlike value is specified in the op_ifInNUcastPkts field, escape regex special characters because a regular expression is expected.
              :type val_c_ifInNUcastPkts: String
 
             |  ``api version min:`` None
@@ -908,7 +876,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifInOctets: If op_ifInOctets is specified, this value will be compared to the value in ifInOctets using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInOctets must be specified if op_ifInOctets is specified.
+             :param val_c_ifInOctets: If op_ifInOctets is specified, this value will be compared to the value in ifInOctets using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInOctets must be specified if op_ifInOctets is specified. If the rlike or not rlike value is specified in the op_ifInOctets field, escape regex special characters because a regular expression is expected.
              :type val_c_ifInOctets: String
 
             |  ``api version min:`` None
@@ -932,7 +900,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifInUcastPkts: If op_ifInUcastPkts is specified, this value will be compared to the value in ifInUcastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInUcastPkts must be specified if op_ifInUcastPkts is specified.
+             :param val_c_ifInUcastPkts: If op_ifInUcastPkts is specified, this value will be compared to the value in ifInUcastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifInUcastPkts must be specified if op_ifInUcastPkts is specified. If the rlike or not rlike value is specified in the op_ifInUcastPkts field, escape regex special characters because a regular expression is expected.
              :type val_c_ifInUcastPkts: String
 
             |  ``api version min:`` None
@@ -956,7 +924,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -980,7 +948,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifLateCollisions: If op_ifLateCollisions is specified, this value will be compared to the value in ifLateCollisions using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLateCollisions must be specified if op_ifLateCollisions is specified.
+             :param val_c_ifLateCollisions: If op_ifLateCollisions is specified, this value will be compared to the value in ifLateCollisions using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifLateCollisions must be specified if op_ifLateCollisions is specified. If the rlike or not rlike value is specified in the op_ifLateCollisions field, escape regex special characters because a regular expression is expected.
              :type val_c_ifLateCollisions: String
 
             |  ``api version min:`` None
@@ -1004,7 +972,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifOutBroadcastPkts: If op_ifOutBroadcastPkts is specified, this value will be compared to the value in ifOutBroadcastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutBroadcastPkts must be specified if op_ifOutBroadcastPkts is specified.
+             :param val_c_ifOutBroadcastPkts: If op_ifOutBroadcastPkts is specified, this value will be compared to the value in ifOutBroadcastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutBroadcastPkts must be specified if op_ifOutBroadcastPkts is specified. If the rlike or not rlike value is specified in the op_ifOutBroadcastPkts field, escape regex special characters because a regular expression is expected.
              :type val_c_ifOutBroadcastPkts: String
 
             |  ``api version min:`` None
@@ -1028,7 +996,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifOutDiscards: If op_ifOutDiscards is specified, this value will be compared to the value in ifOutDiscards using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutDiscards must be specified if op_ifOutDiscards is specified.
+             :param val_c_ifOutDiscards: If op_ifOutDiscards is specified, this value will be compared to the value in ifOutDiscards using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutDiscards must be specified if op_ifOutDiscards is specified. If the rlike or not rlike value is specified in the op_ifOutDiscards field, escape regex special characters because a regular expression is expected.
              :type val_c_ifOutDiscards: String
 
             |  ``api version min:`` None
@@ -1052,7 +1020,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifOutErrors: If op_ifOutErrors is specified, this value will be compared to the value in ifOutErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutErrors must be specified if op_ifOutErrors is specified.
+             :param val_c_ifOutErrors: If op_ifOutErrors is specified, this value will be compared to the value in ifOutErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutErrors must be specified if op_ifOutErrors is specified. If the rlike or not rlike value is specified in the op_ifOutErrors field, escape regex special characters because a regular expression is expected.
              :type val_c_ifOutErrors: String
 
             |  ``api version min:`` None
@@ -1076,7 +1044,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifOutMulticastPkts: If op_ifOutMulticastPkts is specified, this value will be compared to the value in ifOutMulticastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutMulticastPkts must be specified if op_ifOutMulticastPkts is specified.
+             :param val_c_ifOutMulticastPkts: If op_ifOutMulticastPkts is specified, this value will be compared to the value in ifOutMulticastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutMulticastPkts must be specified if op_ifOutMulticastPkts is specified. If the rlike or not rlike value is specified in the op_ifOutMulticastPkts field, escape regex special characters because a regular expression is expected.
              :type val_c_ifOutMulticastPkts: String
 
             |  ``api version min:`` None
@@ -1100,7 +1068,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifOutNUcastPkts: If op_ifOutNUcastPkts is specified, this value will be compared to the value in ifOutNUcastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutNUcastPkts must be specified if op_ifOutNUcastPkts is specified.
+             :param val_c_ifOutNUcastPkts: If op_ifOutNUcastPkts is specified, this value will be compared to the value in ifOutNUcastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutNUcastPkts must be specified if op_ifOutNUcastPkts is specified. If the rlike or not rlike value is specified in the op_ifOutNUcastPkts field, escape regex special characters because a regular expression is expected.
              :type val_c_ifOutNUcastPkts: String
 
             |  ``api version min:`` None
@@ -1124,7 +1092,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifOutOctets: If op_ifOutOctets is specified, this value will be compared to the value in ifOutOctets using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutOctets must be specified if op_ifOutOctets is specified.
+             :param val_c_ifOutOctets: If op_ifOutOctets is specified, this value will be compared to the value in ifOutOctets using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutOctets must be specified if op_ifOutOctets is specified. If the rlike or not rlike value is specified in the op_ifOutOctets field, escape regex special characters because a regular expression is expected.
              :type val_c_ifOutOctets: String
 
             |  ``api version min:`` None
@@ -1148,7 +1116,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifOutUcastPkts: If op_ifOutUcastPkts is specified, this value will be compared to the value in ifOutUcastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutUcastPkts must be specified if op_ifOutUcastPkts is specified.
+             :param val_c_ifOutUcastPkts: If op_ifOutUcastPkts is specified, this value will be compared to the value in ifOutUcastPkts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifOutUcastPkts must be specified if op_ifOutUcastPkts is specified. If the rlike or not rlike value is specified in the op_ifOutUcastPkts field, escape regex special characters because a regular expression is expected.
              :type val_c_ifOutUcastPkts: String
 
             |  ``api version min:`` None
@@ -1172,7 +1140,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifSpeed: If op_ifSpeed is specified, this value will be compared to the value in ifSpeed using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifSpeed must be specified if op_ifSpeed is specified.
+             :param val_c_ifSpeed: If op_ifSpeed is specified, this value will be compared to the value in ifSpeed using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifSpeed must be specified if op_ifSpeed is specified. If the rlike or not rlike value is specified in the op_ifSpeed field, escape regex special characters because a regular expression is expected.
              :type val_c_ifSpeed: String
 
             |  ``api version min:`` None
@@ -1196,7 +1164,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifTotalChanges: If op_ifTotalChanges is specified, this value will be compared to the value in ifTotalChanges using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifTotalChanges must be specified if op_ifTotalChanges is specified.
+             :param val_c_ifTotalChanges: If op_ifTotalChanges is specified, this value will be compared to the value in ifTotalChanges using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifTotalChanges must be specified if op_ifTotalChanges is specified. If the rlike or not rlike value is specified in the op_ifTotalChanges field, escape regex special characters because a regular expression is expected.
              :type val_c_ifTotalChanges: String
 
             |  ``api version min:`` None
@@ -1244,7 +1212,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DataSourceID, StartTime, EndTime, DeviceID, ifIndex, ifSpeed, ifTotalChanges, ifInOctets, ifInUcastPkts, ifInNUcastPkts, ifInMulticastPkts, ifInBroadcastPkts, ifInDiscards, ifInErrors, ifOutOctets, ifOutUcastPkts, ifOutNUcastPkts, ifOutMulticastPkts, ifOutBroadcastPkts, ifOutDiscards, ifOutErrors, ifAlignmentErrors, ifFCSErrors, ifLateCollisions.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, StartTime, EndTime, DeviceID, ifIndex, ifSpeed, ifTotalChanges, ifInOctets, ifInUcastPkts, ifInNUcastPkts, ifInMulticastPkts, ifInBroadcastPkts, ifInDiscards, ifInErrors, ifOutOctets, ifOutUcastPkts, ifOutNUcastPkts, ifOutMulticastPkts, ifOutBroadcastPkts, ifOutDiscards, ifOutErrors, ifAlignmentErrors, ifFCSErrors, ifLateCollisions.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1252,7 +1220,7 @@ class IfPerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1262,22 +1230,6 @@ class IfPerfHourlyBroker(Broker):
 
              :param select: The list of attributes to return for each IfPerfHourly. Valid values are DataSourceID, StartTime, EndTime, DeviceID, ifIndex, ifSpeed, ifTotalChanges, ifInOctets, ifInUcastPkts, ifInNUcastPkts, ifInMulticastPkts, ifInBroadcastPkts, ifInDiscards, ifInErrors, ifOutOctets, ifOutUcastPkts, ifOutNUcastPkts, ifOutMulticastPkts, ifOutBroadcastPkts, ifOutDiscards, ifOutErrors, ifAlignmentErrors, ifFCSErrors, ifLateCollisions. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

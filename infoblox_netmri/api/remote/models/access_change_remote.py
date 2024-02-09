@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class AccessChangeRemote(RemoteModel):
     """
-    Active and recently completed access change (provisioning)requests.
+    Active and recently completed access change (provisioning) requests.
 
 
     |  ``id:`` The internal NetMRI identifier for this provisioning operation.

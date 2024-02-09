@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class AccessChangeAccountingRemote(RemoteModel):
     """
-    Accounting information on provisioning activity with SDC
+    Accounting information on provisioning activity with SDC.
 
 
     |  ``AccessChangeAccountingID:`` The internal NetMRI identifier for this access accounting element.

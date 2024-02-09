@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class DeviceFlowFilterCfgRemote(RemoteModel):
     """
-    Network traffic flow configuration, definition of a path of ip flow to rule
+    Network traffic flow configuration, definition of a path of IP flow to rule.
 
 
     |  ``DeviceFlowFilterCfgID:`` The internal NetMRI identifier for this ip packet flow definition.

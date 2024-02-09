@@ -5,7 +5,7 @@ class SdnSettingBroker(Broker):
     controller = "sdn_settings"
 
     def index(self, **kwargs):
-        """Lists the available sdn settings. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available sdn settings. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -38,7 +38,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, ca_cert_id, ca_cert_content, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -46,7 +46,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -54,24 +54,8 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each SdnSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each SdnSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, ca_cert_id, ca_cert_content, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -97,7 +81,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param SecureVersion: Internal version of the encryption method
+             :param SecureVersion: Internal version of the encryption method.
              :type SecureVersion: Array of Integer
 
             |  ``api version min:`` 3.4
@@ -105,7 +89,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param UnitID: The internal NetMRI identifier for collector assigned to the SDN Setting
+             :param UnitID: The internal NetMRI identifier for collector assigned to the SDN Setting. Required for OC.
              :type UnitID: Array of Integer
 
             |  ``api version min:`` 3.4
@@ -113,7 +97,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param api_key: API key to access the SDN controller (MERAKI)
+             :param api_key: API key to access the SDN controller. Required for MERAKI.
              :type api_key: Array of String
 
             |  ``api version min:`` 3.4
@@ -137,7 +121,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param ca_cert_id: ID of custom CA certificate.
+             :param ca_cert_id: ID of custom CA certificate. Required for CISCO_APIC (if protocol is HTTPS) and for VIPTELA (if controller is on premises).
              :type ca_cert_id: Array of Integer
 
             |  ``api version min:`` 3.4
@@ -145,7 +129,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param collect_offline_devices: Collect Devices In Offline Status
+             :param collect_offline_devices: Collect Devices In Offline Status.
              :type collect_offline_devices: Array of Boolean
 
             |  ``api version min:`` 3.4
@@ -169,7 +153,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param handle: Unique handle for single configuration
+             :param handle: Unique handle for single configuration.
              :type handle: Array of String
 
             |  ``api version min:`` 3.4
@@ -201,7 +185,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param protocol: Protocol used to communicate with controller.
+             :param protocol: Protocol used to communicate with controller. Allowed values are HTTP or HTTPS.
              :type protocol: Array of String
 
             |  ``api version min:`` 3.4
@@ -209,7 +193,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param scan_interface_id: ID of scan interface which used for controller connection
+             :param scan_interface_id: ID of scan interface which used for controller connection. Required for MERAKI.
              :type scan_interface_id: Array of Integer
 
             |  ``api version min:`` 3.4
@@ -225,7 +209,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param sdn_type: Type of SDN controller. Allowed values are CISCO_APIC, MERAKI, VELOCLOUD, SILVER_PEAK, VIPTELA
+             :param sdn_type: Type of SDN controller. Allowed values are CISCO_APIC, MERAKI, VIPTELA.
              :type sdn_type: Array of String
 
             |  ``api version min:`` 3.4
@@ -265,7 +249,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param virtual_network_id: The internal NetMRI identifier of the Virtual Network on which this controller is defined.
+             :param virtual_network_id: The internal NetMRI identifier of the Virtual Network on which this controller is defined. Required for CISCO_APIC and VIPTELA.
              :type virtual_network_id: Array of Integer
 
             |  ``api version min:`` None
@@ -289,7 +273,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, ca_cert_id, ca_cert_content, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -297,7 +281,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -305,24 +289,8 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each SdnSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each SdnSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, ca_cert_id, ca_cert_content, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -364,7 +332,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_SecureVersion: The operator to apply to the field SecureVersion. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. SecureVersion: Internal version of the encryption method For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_SecureVersion: The operator to apply to the field SecureVersion. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. SecureVersion: Internal version of the encryption method. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_SecureVersion: String
 
             |  ``api version min:`` None
@@ -380,7 +348,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SecureVersion: If op_SecureVersion is specified, this value will be compared to the value in SecureVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SecureVersion must be specified if op_SecureVersion is specified.
+             :param val_c_SecureVersion: If op_SecureVersion is specified, this value will be compared to the value in SecureVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SecureVersion must be specified if op_SecureVersion is specified. If the rlike or not rlike value is specified in the op_SecureVersion field, escape regex special characters because a regular expression is expected.
              :type val_c_SecureVersion: String
 
             |  ``api version min:`` None
@@ -388,7 +356,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_UnitID: The operator to apply to the field UnitID. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. UnitID: The internal NetMRI identifier for collector assigned to the SDN Setting For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_UnitID: The operator to apply to the field UnitID. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. UnitID: The internal NetMRI identifier for collector assigned to the SDN Setting. Required for OC. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_UnitID: String
 
             |  ``api version min:`` None
@@ -404,7 +372,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UnitID: If op_UnitID is specified, this value will be compared to the value in UnitID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitID must be specified if op_UnitID is specified.
+             :param val_c_UnitID: If op_UnitID is specified, this value will be compared to the value in UnitID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UnitID must be specified if op_UnitID is specified. If the rlike or not rlike value is specified in the op_UnitID field, escape regex special characters because a regular expression is expected.
              :type val_c_UnitID: String
 
             |  ``api version min:`` None
@@ -412,7 +380,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_api_key: The operator to apply to the field api_key. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. api_key: API key to access the SDN controller (MERAKI) For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_api_key: The operator to apply to the field api_key. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. api_key: API key to access the SDN controller. Required for MERAKI. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_api_key: String
 
             |  ``api version min:`` None
@@ -428,7 +396,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_api_key: If op_api_key is specified, this value will be compared to the value in api_key using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_api_key must be specified if op_api_key is specified.
+             :param val_c_api_key: If op_api_key is specified, this value will be compared to the value in api_key using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_api_key must be specified if op_api_key is specified. If the rlike or not rlike value is specified in the op_api_key field, escape regex special characters because a regular expression is expected.
              :type val_c_api_key: String
 
             |  ``api version min:`` None
@@ -452,7 +420,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_blackout_duration: If op_blackout_duration is specified, this value will be compared to the value in blackout_duration using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_blackout_duration must be specified if op_blackout_duration is specified.
+             :param val_c_blackout_duration: If op_blackout_duration is specified, this value will be compared to the value in blackout_duration using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_blackout_duration must be specified if op_blackout_duration is specified. If the rlike or not rlike value is specified in the op_blackout_duration field, escape regex special characters because a regular expression is expected.
              :type val_c_blackout_duration: String
 
             |  ``api version min:`` None
@@ -476,7 +444,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ca_cert_content: If op_ca_cert_content is specified, this value will be compared to the value in ca_cert_content using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ca_cert_content must be specified if op_ca_cert_content is specified.
+             :param val_c_ca_cert_content: If op_ca_cert_content is specified, this value will be compared to the value in ca_cert_content using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ca_cert_content must be specified if op_ca_cert_content is specified. If the rlike or not rlike value is specified in the op_ca_cert_content field, escape regex special characters because a regular expression is expected.
              :type val_c_ca_cert_content: String
 
             |  ``api version min:`` None
@@ -484,7 +452,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_ca_cert_id: The operator to apply to the field ca_cert_id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. ca_cert_id: ID of custom CA certificate. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_ca_cert_id: The operator to apply to the field ca_cert_id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. ca_cert_id: ID of custom CA certificate. Required for CISCO_APIC (if protocol is HTTPS) and for VIPTELA (if controller is on premises). For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_ca_cert_id: String
 
             |  ``api version min:`` None
@@ -500,7 +468,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ca_cert_id: If op_ca_cert_id is specified, this value will be compared to the value in ca_cert_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ca_cert_id must be specified if op_ca_cert_id is specified.
+             :param val_c_ca_cert_id: If op_ca_cert_id is specified, this value will be compared to the value in ca_cert_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ca_cert_id must be specified if op_ca_cert_id is specified. If the rlike or not rlike value is specified in the op_ca_cert_id field, escape regex special characters because a regular expression is expected.
              :type val_c_ca_cert_id: String
 
             |  ``api version min:`` None
@@ -508,7 +476,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_collect_offline_devices: The operator to apply to the field collect_offline_devices. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. collect_offline_devices: Collect Devices In Offline Status For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_collect_offline_devices: The operator to apply to the field collect_offline_devices. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. collect_offline_devices: Collect Devices In Offline Status. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_collect_offline_devices: String
 
             |  ``api version min:`` None
@@ -524,7 +492,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_collect_offline_devices: If op_collect_offline_devices is specified, this value will be compared to the value in collect_offline_devices using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_collect_offline_devices must be specified if op_collect_offline_devices is specified.
+             :param val_c_collect_offline_devices: If op_collect_offline_devices is specified, this value will be compared to the value in collect_offline_devices using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_collect_offline_devices must be specified if op_collect_offline_devices is specified. If the rlike or not rlike value is specified in the op_collect_offline_devices field, escape regex special characters because a regular expression is expected.
              :type val_c_collect_offline_devices: String
 
             |  ``api version min:`` None
@@ -548,7 +516,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_controller_address: If op_controller_address is specified, this value will be compared to the value in controller_address using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_controller_address must be specified if op_controller_address is specified.
+             :param val_c_controller_address: If op_controller_address is specified, this value will be compared to the value in controller_address using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_controller_address must be specified if op_controller_address is specified. If the rlike or not rlike value is specified in the op_controller_address field, escape regex special characters because a regular expression is expected.
              :type val_c_controller_address: String
 
             |  ``api version min:`` None
@@ -572,7 +540,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -580,7 +548,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_handle: The operator to apply to the field handle. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. handle: Unique handle for single configuration For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_handle: The operator to apply to the field handle. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. handle: Unique handle for single configuration. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_handle: String
 
             |  ``api version min:`` None
@@ -596,7 +564,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_handle: If op_handle is specified, this value will be compared to the value in handle using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_handle must be specified if op_handle is specified.
+             :param val_c_handle: If op_handle is specified, this value will be compared to the value in handle using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_handle must be specified if op_handle is specified. If the rlike or not rlike value is specified in the op_handle field, escape regex special characters because a regular expression is expected.
              :type val_c_handle: String
 
             |  ``api version min:`` None
@@ -620,7 +588,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -644,7 +612,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_max_requests_per_second: If op_max_requests_per_second is specified, this value will be compared to the value in max_requests_per_second using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_max_requests_per_second must be specified if op_max_requests_per_second is specified.
+             :param val_c_max_requests_per_second: If op_max_requests_per_second is specified, this value will be compared to the value in max_requests_per_second using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_max_requests_per_second must be specified if op_max_requests_per_second is specified. If the rlike or not rlike value is specified in the op_max_requests_per_second field, escape regex special characters because a regular expression is expected.
              :type val_c_max_requests_per_second: String
 
             |  ``api version min:`` None
@@ -668,7 +636,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_on_prem: If op_on_prem is specified, this value will be compared to the value in on_prem using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_on_prem must be specified if op_on_prem is specified.
+             :param val_c_on_prem: If op_on_prem is specified, this value will be compared to the value in on_prem using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_on_prem must be specified if op_on_prem is specified. If the rlike or not rlike value is specified in the op_on_prem field, escape regex special characters because a regular expression is expected.
              :type val_c_on_prem: String
 
             |  ``api version min:`` None
@@ -676,7 +644,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_protocol: The operator to apply to the field protocol. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. protocol: Protocol used to communicate with controller. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_protocol: The operator to apply to the field protocol. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. protocol: Protocol used to communicate with controller. Allowed values are HTTP or HTTPS. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_protocol: String
 
             |  ``api version min:`` None
@@ -692,7 +660,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_protocol: If op_protocol is specified, this value will be compared to the value in protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_protocol must be specified if op_protocol is specified.
+             :param val_c_protocol: If op_protocol is specified, this value will be compared to the value in protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_protocol must be specified if op_protocol is specified. If the rlike or not rlike value is specified in the op_protocol field, escape regex special characters because a regular expression is expected.
              :type val_c_protocol: String
 
             |  ``api version min:`` None
@@ -700,7 +668,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_scan_interface_id: The operator to apply to the field scan_interface_id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. scan_interface_id: ID of scan interface which used for controller connection For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_scan_interface_id: The operator to apply to the field scan_interface_id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. scan_interface_id: ID of scan interface which used for controller connection. Required for MERAKI. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_scan_interface_id: String
 
             |  ``api version min:`` None
@@ -716,7 +684,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_scan_interface_id: If op_scan_interface_id is specified, this value will be compared to the value in scan_interface_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_scan_interface_id must be specified if op_scan_interface_id is specified.
+             :param val_c_scan_interface_id: If op_scan_interface_id is specified, this value will be compared to the value in scan_interface_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_scan_interface_id must be specified if op_scan_interface_id is specified. If the rlike or not rlike value is specified in the op_scan_interface_id field, escape regex special characters because a regular expression is expected.
              :type val_c_scan_interface_id: String
 
             |  ``api version min:`` None
@@ -740,7 +708,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_sdn_password: If op_sdn_password is specified, this value will be compared to the value in sdn_password using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sdn_password must be specified if op_sdn_password is specified.
+             :param val_c_sdn_password: If op_sdn_password is specified, this value will be compared to the value in sdn_password using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sdn_password must be specified if op_sdn_password is specified. If the rlike or not rlike value is specified in the op_sdn_password field, escape regex special characters because a regular expression is expected.
              :type val_c_sdn_password: String
 
             |  ``api version min:`` None
@@ -748,7 +716,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_sdn_type: The operator to apply to the field sdn_type. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. sdn_type: Type of SDN controller. Allowed values are CISCO_APIC, MERAKI, VELOCLOUD, SILVER_PEAK, VIPTELA For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_sdn_type: The operator to apply to the field sdn_type. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. sdn_type: Type of SDN controller. Allowed values are CISCO_APIC, MERAKI, VIPTELA. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_sdn_type: String
 
             |  ``api version min:`` None
@@ -764,7 +732,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_sdn_type: If op_sdn_type is specified, this value will be compared to the value in sdn_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sdn_type must be specified if op_sdn_type is specified.
+             :param val_c_sdn_type: If op_sdn_type is specified, this value will be compared to the value in sdn_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sdn_type must be specified if op_sdn_type is specified. If the rlike or not rlike value is specified in the op_sdn_type field, escape regex special characters because a regular expression is expected.
              :type val_c_sdn_type: String
 
             |  ``api version min:`` None
@@ -788,7 +756,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_sdn_username: If op_sdn_username is specified, this value will be compared to the value in sdn_username using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sdn_username must be specified if op_sdn_username is specified.
+             :param val_c_sdn_username: If op_sdn_username is specified, this value will be compared to the value in sdn_username using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_sdn_username must be specified if op_sdn_username is specified. If the rlike or not rlike value is specified in the op_sdn_username field, escape regex special characters because a regular expression is expected.
              :type val_c_sdn_username: String
 
             |  ``api version min:`` None
@@ -812,7 +780,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_start_blackout_schedule: If op_start_blackout_schedule is specified, this value will be compared to the value in start_blackout_schedule using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_start_blackout_schedule must be specified if op_start_blackout_schedule is specified.
+             :param val_c_start_blackout_schedule: If op_start_blackout_schedule is specified, this value will be compared to the value in start_blackout_schedule using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_start_blackout_schedule must be specified if op_start_blackout_schedule is specified. If the rlike or not rlike value is specified in the op_start_blackout_schedule field, escape regex special characters because a regular expression is expected.
              :type val_c_start_blackout_schedule: String
 
             |  ``api version min:`` None
@@ -836,7 +804,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -860,7 +828,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_use_global_proxy: If op_use_global_proxy is specified, this value will be compared to the value in use_global_proxy using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_use_global_proxy must be specified if op_use_global_proxy is specified.
+             :param val_c_use_global_proxy: If op_use_global_proxy is specified, this value will be compared to the value in use_global_proxy using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_use_global_proxy must be specified if op_use_global_proxy is specified. If the rlike or not rlike value is specified in the op_use_global_proxy field, escape regex special characters because a regular expression is expected.
              :type val_c_use_global_proxy: String
 
             |  ``api version min:`` None
@@ -868,7 +836,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param op_virtual_network_id: The operator to apply to the field virtual_network_id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. virtual_network_id: The internal NetMRI identifier of the Virtual Network on which this controller is defined. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
+             :param op_virtual_network_id: The operator to apply to the field virtual_network_id. Valid values are: =, <>, rlike, not rlike, >, >=, <, <=, like, not like, is null, is not null, between. virtual_network_id: The internal NetMRI identifier of the Virtual Network on which this controller is defined. Required for CISCO_APIC and VIPTELA. For the between operator the value will be treated as an Array if comma delimited string is passed, and it must contain an even number of values.
              :type op_virtual_network_id: String
 
             |  ``api version min:`` None
@@ -884,7 +852,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_virtual_network_id: If op_virtual_network_id is specified, this value will be compared to the value in virtual_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_virtual_network_id must be specified if op_virtual_network_id is specified.
+             :param val_c_virtual_network_id: If op_virtual_network_id is specified, this value will be compared to the value in virtual_network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_virtual_network_id must be specified if op_virtual_network_id is specified. If the rlike or not rlike value is specified in the op_virtual_network_id field, escape regex special characters because a regular expression is expected.
              :type val_c_virtual_network_id: String
 
             |  ``api version min:`` None
@@ -908,7 +876,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, ca_cert_id, ca_cert_content, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -916,7 +884,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -924,24 +892,8 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param select: The list of attributes to return for each SdnSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices, ca_cert_id, ca_cert_content. If empty or omitted, all attributes will be returned.
+             :param select: The list of attributes to return for each SdnSetting. Valid values are id, virtual_network_id, controller_address, protocol, sdn_username, sdn_password, SecureVersion, created_at, updated_at, UnitID, sdn_type, api_key, on_prem, use_global_proxy, handle, scan_interface_id, ca_cert_id, ca_cert_content, start_blackout_schedule, blackout_duration, max_requests_per_second, collect_offline_devices. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1002,7 +954,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` 1
 
-             :param SecureVersion: Internal version of the encryption method
+             :param SecureVersion: Internal version of the encryption method.
              :type SecureVersion: Integer
 
             |  ``api version min:`` None
@@ -1010,7 +962,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` 0
 
-             :param UnitID: The internal NetMRI identifier for collector assigned to the SDN Setting
+             :param UnitID: The internal NetMRI identifier for collector assigned to the SDN Setting. Required for OC.
              :type UnitID: Integer
 
             |  ``api version min:`` None
@@ -1018,7 +970,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param api_key: API key to access the SDN controller (MERAKI)
+             :param api_key: API key to access the SDN controller. Required for MERAKI.
              :type api_key: String
 
             |  ``api version min:`` None
@@ -1042,7 +994,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param ca_cert_id: ID of custom CA certificate.
+             :param ca_cert_id: ID of custom CA certificate. Required for CISCO_APIC (if protocol is HTTPS) and for VIPTELA (if controller is on premises).
              :type ca_cert_id: Integer
 
             |  ``api version min:`` None
@@ -1050,7 +1002,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` True
 
-             :param collect_offline_devices: Collect Devices In Offline Status
+             :param collect_offline_devices: Collect Devices In Offline Status.
              :type collect_offline_devices: Boolean
 
             |  ``api version min:`` None
@@ -1063,10 +1015,10 @@ class SdnSettingBroker(Broker):
 
             |  ``api version min:`` None
             |  ``api version max:`` None
-            |  ``required:`` False
+            |  ``required:`` True
             |  ``default:`` None
 
-             :param handle: Unique handle for single configuration
+             :param handle: Unique handle for single configuration.
              :type handle: String
 
             |  ``api version min:`` None
@@ -1088,9 +1040,9 @@ class SdnSettingBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` None
+            |  ``default:`` HTTPS
 
-             :param protocol: Protocol used to communicate with controller.
+             :param protocol: Protocol used to communicate with controller. Allowed values are HTTP or HTTPS.
              :type protocol: String
 
             |  ``api version min:`` None
@@ -1098,7 +1050,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param scan_interface_id: ID of scan interface which used for controller connection
+             :param scan_interface_id: ID of scan interface which used for controller connection. Required for MERAKI.
              :type scan_interface_id: Integer
 
             |  ``api version min:`` None
@@ -1114,7 +1066,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param sdn_type: Type of SDN controller. Allowed values are CISCO_APIC, MERAKI, VELOCLOUD, SILVER_PEAK, VIPTELA
+             :param sdn_type: Type of SDN controller. Allowed values are CISCO_APIC, MERAKI, VIPTELA.
              :type sdn_type: String
 
             |  ``api version min:`` None
@@ -1146,7 +1098,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param virtual_network_id: The internal NetMRI identifier of the Virtual Network on which this controller is defined.
+             :param virtual_network_id: The internal NetMRI identifier of the Virtual Network on which this controller is defined. Required for CISCO_APIC and VIPTELA.
              :type virtual_network_id: Integer
 
             **Outputs**
@@ -1172,7 +1124,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created sdn setting.
+             :return uri: The URI that may be used to retrieve the newly created sdn setting.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -1205,7 +1157,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` 1
 
-             :param SecureVersion: Internal version of the encryption method If omitted, this field will be updated to the default value.
+             :param SecureVersion: Internal version of the encryption method. If omitted, this field will be updated to the default value.
              :type SecureVersion: Integer
 
             |  ``api version min:`` None
@@ -1213,7 +1165,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` 0
 
-             :param UnitID: The internal NetMRI identifier for collector assigned to the SDN Setting If omitted, this field will be updated to the default value.
+             :param UnitID: The internal NetMRI identifier for collector assigned to the SDN Setting. Required for OC. If omitted, this field will be updated to the default value.
              :type UnitID: Integer
 
             |  ``api version min:`` None
@@ -1221,7 +1173,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param api_key: API key to access the SDN controller (MERAKI) If omitted, this field will not be updated.
+             :param api_key: API key to access the SDN controller. Required for MERAKI. If omitted, this field will not be updated.
              :type api_key: String
 
             |  ``api version min:`` None
@@ -1245,7 +1197,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param ca_cert_id: ID of custom CA certificate. If omitted, this field will not be updated.
+             :param ca_cert_id: ID of custom CA certificate. Required for CISCO_APIC (if protocol is HTTPS) and for VIPTELA (if controller is on premises). If omitted, this field will not be updated.
              :type ca_cert_id: Integer
 
             |  ``api version min:`` None
@@ -1253,7 +1205,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` True
 
-             :param collect_offline_devices: Collect Devices In Offline Status If omitted, this field will be updated to the default value.
+             :param collect_offline_devices: Collect Devices In Offline Status. If omitted, this field will be updated to the default value.
              :type collect_offline_devices: Boolean
 
             |  ``api version min:`` None
@@ -1269,7 +1221,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param handle: Unique handle for single configuration If omitted, this field will not be updated.
+             :param handle: Unique handle for single configuration. If omitted, this field will not be updated.
              :type handle: String
 
             |  ``api version min:`` None
@@ -1293,7 +1245,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param protocol: Protocol used to communicate with controller. If omitted, this field will not be updated.
+             :param protocol: Protocol used to communicate with controller. Allowed values are HTTP or HTTPS. If omitted, this field will not be updated.
              :type protocol: String
 
             |  ``api version min:`` None
@@ -1301,7 +1253,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param scan_interface_id: ID of scan interface which used for controller connection If omitted, this field will not be updated.
+             :param scan_interface_id: ID of scan interface which used for controller connection. Required for MERAKI. If omitted, this field will not be updated.
              :type scan_interface_id: Integer
 
             |  ``api version min:`` None
@@ -1317,7 +1269,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param sdn_type: Type of SDN controller. Allowed values are CISCO_APIC, MERAKI, VELOCLOUD, SILVER_PEAK, VIPTELA If omitted, this field will not be updated.
+             :param sdn_type: Type of SDN controller. Allowed values are CISCO_APIC, MERAKI, VIPTELA. If omitted, this field will not be updated.
              :type sdn_type: String
 
             |  ``api version min:`` None
@@ -1349,7 +1301,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param virtual_network_id: The internal NetMRI identifier of the Virtual Network on which this controller is defined. If omitted, this field will not be updated.
+             :param virtual_network_id: The internal NetMRI identifier of the Virtual Network on which this controller is defined. Required for CISCO_APIC and VIPTELA. If omitted, this field will not be updated.
              :type virtual_network_id: Integer
 
             **Outputs**
@@ -1375,7 +1327,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated sdn setting.
+             :return uri: The URI that may be used to retrieve the updated sdn setting.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -1419,7 +1371,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param ids: The IDs array of the configurations.  When sending form encoded use ids[].
+             :param ids: The IDs array of the configurations. When sending form encoded use ids[].
              :type ids: Array
 
             **Outputs**
@@ -1438,7 +1390,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` controller_address
 
-             :param sort: The data field to use for sorting the output. Default is controller_address.
+             :param sort: The data field to use for sorting the output.
              :type sort: String
 
             |  ``api version min:`` None
@@ -1446,7 +1398,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: String
 
             |  ``api version min:`` None
@@ -1532,7 +1484,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param sdn_type: Type of SDN controller. Allowed values are CISCO_APIC, MERAKI, VELOCLOUD, SILVER_PEAK, VIPTELA
+             :param sdn_type: Type of SDN controller. Allowed values are CISCO_APIC, MERAKI, VIPTELA, MIST
              :type sdn_type: String
 
             |  ``api version min:`` None
@@ -1695,7 +1647,7 @@ class SdnSettingBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param id: SDN credential check id needed to retrieve status
+             :param id: SDN credential check ID needed to retrieve status
              :type id: String
 
             |  ``api version min:`` None

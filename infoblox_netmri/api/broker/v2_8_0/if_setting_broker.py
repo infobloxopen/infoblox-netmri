@@ -5,7 +5,7 @@ class IfSettingBroker(Broker):
     controller = "if_settings"
 
     def index(self, **kwargs):
-        """Lists the available if settings. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available if settings. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -62,7 +62,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, DeviceID, ifIndex, InterfaceID, CollectionInd, created_at, updated_at, SPMExcludedInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, DeviceID, ifIndex, InterfaceID, CollectionInd, created_at, updated_at, SPMExcludedInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -70,7 +70,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -80,22 +80,6 @@ class IfSettingBroker(Broker):
 
              :param select: The list of attributes to return for each IfSetting. Valid values are id, DeviceID, ifIndex, InterfaceID, CollectionInd, created_at, updated_at, SPMExcludedInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -169,7 +153,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, DeviceID, ifIndex, InterfaceID, CollectionInd, created_at, updated_at, SPMExcludedInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, DeviceID, ifIndex, InterfaceID, CollectionInd, created_at, updated_at, SPMExcludedInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -177,7 +161,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -187,22 +171,6 @@ class IfSettingBroker(Broker):
 
              :param select: The list of attributes to return for each IfSetting. Valid values are id, DeviceID, ifIndex, InterfaceID, CollectionInd, created_at, updated_at, SPMExcludedInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -260,7 +228,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CollectionInd: If op_CollectionInd is specified, this value will be compared to the value in CollectionInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CollectionInd must be specified if op_CollectionInd is specified.
+             :param val_c_CollectionInd: If op_CollectionInd is specified, this value will be compared to the value in CollectionInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CollectionInd must be specified if op_CollectionInd is specified. If the rlike or not rlike value is specified in the op_CollectionInd field, escape regex special characters because a regular expression is expected.
              :type val_c_CollectionInd: String
 
             |  ``api version min:`` None
@@ -284,7 +252,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -308,7 +276,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -332,7 +300,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SPMExcludedInd: If op_SPMExcludedInd is specified, this value will be compared to the value in SPMExcludedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SPMExcludedInd must be specified if op_SPMExcludedInd is specified.
+             :param val_c_SPMExcludedInd: If op_SPMExcludedInd is specified, this value will be compared to the value in SPMExcludedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SPMExcludedInd must be specified if op_SPMExcludedInd is specified. If the rlike or not rlike value is specified in the op_SPMExcludedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SPMExcludedInd: String
 
             |  ``api version min:`` None
@@ -356,7 +324,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -380,7 +348,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -404,7 +372,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -428,7 +396,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -452,7 +420,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, DeviceID, ifIndex, InterfaceID, CollectionInd, created_at, updated_at, SPMExcludedInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, DeviceID, ifIndex, InterfaceID, CollectionInd, created_at, updated_at, SPMExcludedInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -460,7 +428,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -470,22 +438,6 @@ class IfSettingBroker(Broker):
 
              :param select: The list of attributes to return for each IfSetting. Valid values are id, DeviceID, ifIndex, InterfaceID, CollectionInd, created_at, updated_at, SPMExcludedInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -596,7 +548,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created if setting.
+             :return uri: The URI that may be used to retrieve the newly created if setting.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -679,7 +631,7 @@ class IfSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated if setting.
+             :return uri: The URI that may be used to retrieve the updated if setting.
              :rtype uri: String
 
             |  ``api version min:`` None

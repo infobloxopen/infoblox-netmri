@@ -5,7 +5,7 @@ class DataSourceBroker(Broker):
     controller = "data_sources"
 
     def index(self, **kwargs):
-        """Lists the available data sources. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available data sources. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -70,7 +70,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DataSourceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DataSourceID. Valid values are DataSourceID, DataSourceStartTime, DataSourceEndTime, DataSourceChangedCols, DataSourceTimestamp, Network, DataSourceName, DataSourceIPDotted, DataSourceIPNumeric, DataSourcePrivateIPDotted, DataSourcePrivateIPNumeric, DataSourceSerialNo.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DataSourceStartTime, DataSourceEndTime, DataSourceChangedCols, DataSourceTimestamp, Network, DataSourceName, DataSourceIPDotted, DataSourceIPNumeric, DataSourcePrivateIPDotted, DataSourcePrivateIPNumeric, DataSourceSerialNo.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -78,7 +78,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -88,22 +88,6 @@ class DataSourceBroker(Broker):
 
              :param select: The list of attributes to return for each DataSource. Valid values are DataSourceID, DataSourceStartTime, DataSourceEndTime, DataSourceChangedCols, DataSourceTimestamp, Network, DataSourceName, DataSourceIPDotted, DataSourceIPNumeric, DataSourcePrivateIPDotted, DataSourcePrivateIPNumeric, DataSourceSerialNo. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -396,7 +380,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DataSourceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DataSourceID. Valid values are DataSourceID, DataSourceStartTime, DataSourceEndTime, DataSourceChangedCols, DataSourceTimestamp, Network, DataSourceName, DataSourceIPDotted, DataSourceIPNumeric, DataSourcePrivateIPDotted, DataSourcePrivateIPNumeric, DataSourceSerialNo.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DataSourceStartTime, DataSourceEndTime, DataSourceChangedCols, DataSourceTimestamp, Network, DataSourceName, DataSourceIPDotted, DataSourceIPNumeric, DataSourcePrivateIPDotted, DataSourcePrivateIPNumeric, DataSourceSerialNo.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -404,7 +388,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -414,22 +398,6 @@ class DataSourceBroker(Broker):
 
              :param select: The list of attributes to return for each DataSource. Valid values are DataSourceID, DataSourceStartTime, DataSourceEndTime, DataSourceChangedCols, DataSourceTimestamp, Network, DataSourceName, DataSourceIPDotted, DataSourceIPNumeric, DataSourcePrivateIPDotted, DataSourcePrivateIPNumeric, DataSourceSerialNo. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -487,7 +455,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceChangedCols: If op_DataSourceChangedCols is specified, this value will be compared to the value in DataSourceChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceChangedCols must be specified if op_DataSourceChangedCols is specified.
+             :param val_c_DataSourceChangedCols: If op_DataSourceChangedCols is specified, this value will be compared to the value in DataSourceChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceChangedCols must be specified if op_DataSourceChangedCols is specified. If the rlike or not rlike value is specified in the op_DataSourceChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceChangedCols: String
 
             |  ``api version min:`` None
@@ -511,7 +479,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceEndTime: If op_DataSourceEndTime is specified, this value will be compared to the value in DataSourceEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceEndTime must be specified if op_DataSourceEndTime is specified.
+             :param val_c_DataSourceEndTime: If op_DataSourceEndTime is specified, this value will be compared to the value in DataSourceEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceEndTime must be specified if op_DataSourceEndTime is specified. If the rlike or not rlike value is specified in the op_DataSourceEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceEndTime: String
 
             |  ``api version min:`` None
@@ -535,7 +503,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -559,7 +527,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceIPDotted: If op_DataSourceIPDotted is specified, this value will be compared to the value in DataSourceIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceIPDotted must be specified if op_DataSourceIPDotted is specified.
+             :param val_c_DataSourceIPDotted: If op_DataSourceIPDotted is specified, this value will be compared to the value in DataSourceIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceIPDotted must be specified if op_DataSourceIPDotted is specified. If the rlike or not rlike value is specified in the op_DataSourceIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceIPDotted: String
 
             |  ``api version min:`` None
@@ -583,7 +551,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceIPNumeric: If op_DataSourceIPNumeric is specified, this value will be compared to the value in DataSourceIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceIPNumeric must be specified if op_DataSourceIPNumeric is specified.
+             :param val_c_DataSourceIPNumeric: If op_DataSourceIPNumeric is specified, this value will be compared to the value in DataSourceIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceIPNumeric must be specified if op_DataSourceIPNumeric is specified. If the rlike or not rlike value is specified in the op_DataSourceIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceIPNumeric: String
 
             |  ``api version min:`` None
@@ -607,7 +575,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceName: If op_DataSourceName is specified, this value will be compared to the value in DataSourceName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceName must be specified if op_DataSourceName is specified.
+             :param val_c_DataSourceName: If op_DataSourceName is specified, this value will be compared to the value in DataSourceName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceName must be specified if op_DataSourceName is specified. If the rlike or not rlike value is specified in the op_DataSourceName field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceName: String
 
             |  ``api version min:`` None
@@ -631,7 +599,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourcePrivateIPDotted: If op_DataSourcePrivateIPDotted is specified, this value will be compared to the value in DataSourcePrivateIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourcePrivateIPDotted must be specified if op_DataSourcePrivateIPDotted is specified.
+             :param val_c_DataSourcePrivateIPDotted: If op_DataSourcePrivateIPDotted is specified, this value will be compared to the value in DataSourcePrivateIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourcePrivateIPDotted must be specified if op_DataSourcePrivateIPDotted is specified. If the rlike or not rlike value is specified in the op_DataSourcePrivateIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourcePrivateIPDotted: String
 
             |  ``api version min:`` None
@@ -655,7 +623,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourcePrivateIPNumeric: If op_DataSourcePrivateIPNumeric is specified, this value will be compared to the value in DataSourcePrivateIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourcePrivateIPNumeric must be specified if op_DataSourcePrivateIPNumeric is specified.
+             :param val_c_DataSourcePrivateIPNumeric: If op_DataSourcePrivateIPNumeric is specified, this value will be compared to the value in DataSourcePrivateIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourcePrivateIPNumeric must be specified if op_DataSourcePrivateIPNumeric is specified. If the rlike or not rlike value is specified in the op_DataSourcePrivateIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourcePrivateIPNumeric: String
 
             |  ``api version min:`` None
@@ -679,7 +647,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceSerialNo: If op_DataSourceSerialNo is specified, this value will be compared to the value in DataSourceSerialNo using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceSerialNo must be specified if op_DataSourceSerialNo is specified.
+             :param val_c_DataSourceSerialNo: If op_DataSourceSerialNo is specified, this value will be compared to the value in DataSourceSerialNo using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceSerialNo must be specified if op_DataSourceSerialNo is specified. If the rlike or not rlike value is specified in the op_DataSourceSerialNo field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceSerialNo: String
 
             |  ``api version min:`` None
@@ -703,7 +671,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceStartTime: If op_DataSourceStartTime is specified, this value will be compared to the value in DataSourceStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceStartTime must be specified if op_DataSourceStartTime is specified.
+             :param val_c_DataSourceStartTime: If op_DataSourceStartTime is specified, this value will be compared to the value in DataSourceStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceStartTime must be specified if op_DataSourceStartTime is specified. If the rlike or not rlike value is specified in the op_DataSourceStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceStartTime: String
 
             |  ``api version min:`` None
@@ -727,7 +695,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceTimestamp: If op_DataSourceTimestamp is specified, this value will be compared to the value in DataSourceTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceTimestamp must be specified if op_DataSourceTimestamp is specified.
+             :param val_c_DataSourceTimestamp: If op_DataSourceTimestamp is specified, this value will be compared to the value in DataSourceTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceTimestamp must be specified if op_DataSourceTimestamp is specified. If the rlike or not rlike value is specified in the op_DataSourceTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceTimestamp: String
 
             |  ``api version min:`` None
@@ -751,7 +719,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Network: If op_Network is specified, this value will be compared to the value in Network using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Network must be specified if op_Network is specified.
+             :param val_c_Network: If op_Network is specified, this value will be compared to the value in Network using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Network must be specified if op_Network is specified. If the rlike or not rlike value is specified in the op_Network field, escape regex special characters because a regular expression is expected.
              :type val_c_Network: String
 
             |  ``api version min:`` None
@@ -799,7 +767,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DataSourceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DataSourceID. Valid values are DataSourceID, DataSourceStartTime, DataSourceEndTime, DataSourceChangedCols, DataSourceTimestamp, Network, DataSourceName, DataSourceIPDotted, DataSourceIPNumeric, DataSourcePrivateIPDotted, DataSourcePrivateIPNumeric, DataSourceSerialNo.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DataSourceStartTime, DataSourceEndTime, DataSourceChangedCols, DataSourceTimestamp, Network, DataSourceName, DataSourceIPDotted, DataSourceIPNumeric, DataSourcePrivateIPDotted, DataSourcePrivateIPNumeric, DataSourceSerialNo.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class DataSourceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -817,22 +785,6 @@ class DataSourceBroker(Broker):
 
              :param select: The list of attributes to return for each DataSource. Valid values are DataSourceID, DataSourceStartTime, DataSourceEndTime, DataSourceChangedCols, DataSourceTimestamp, Network, DataSourceName, DataSourceIPDotted, DataSourceIPNumeric, DataSourcePrivateIPDotted, DataSourcePrivateIPNumeric, DataSourceSerialNo. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

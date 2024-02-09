@@ -4,33 +4,6 @@ from ..broker import Broker
 class DiscoveryStatusesBroker(Broker):
     controller = "discovery_statuses"
 
-    def check_withdrawal_license(self, **kwargs):
-        """Check Management Server and Managed Devices when device unlicensed with SDC license
-
-            **Inputs**
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` True
-            |  ``default:`` None
-
-             :param DeviceIDs: The list of devices to be checked
-             :type DeviceIDs: Array
-
-            **Outputs**
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return cascading_impact: Warning message for user
-             :rtype cascading_impact: String
-
-            """
-
-        return self.api_request(self._get_method_fullname("check_withdrawal_license"), kwargs)
-
     def search(self, **kwargs):
         """Searches the current discovery statuses based on view
 
@@ -133,6 +106,526 @@ class DiscoveryStatusesBroker(Broker):
              :type xml_filter: String
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return AccessInd: The indicator of collection of the filtering access information
+             :rtype AccessInd: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return BlackoutDuration: The blackout duration in minutes
+             :rtype BlackoutDuration: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return CLICollectionEnabled: CLI collection enabled
+             :rtype CLICollectionEnabled: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return CLICredentialMessage: A message detailing the current CLI credential status
+             :rtype CLICredentialMessage: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return CLICredentialStatus: Indicates the status of SSH discovery attempt of the device
+             :rtype CLICredentialStatus: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return CLICredentialTimestamp: The date/time of the last update to the CLI credential status
+             :rtype CLICredentialTimestamp: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return ConfigCollectionEnabled: Whether configuration polling is enabled for this device
+             :rtype ConfigCollectionEnabled: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return ConfigCollectionMessage: A message detailing the current configuration file collection status
+             :rtype ConfigCollectionMessage: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return ConfigCollectionStatus: Indicates whether configuration files have been successfully collected from the device
+             :rtype ConfigCollectionStatus: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return ConfigCollectionStatusSort: Config collection status sorted
+             :rtype ConfigCollectionStatusSort: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return ConfigCollectionTimestamp: The date/time of the last update to the configuration collection status
+             :rtype ConfigCollectionTimestamp: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return DeviceFirstOccurrenceTime: The date/time that this device was first seen on the network
+             :rtype DeviceFirstOccurrenceTime: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return DeviceGroupMessage: A message detailing the current device group assignment status
+             :rtype DeviceGroupMessage: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return DeviceGroupStatus: Indicates whether the device has been successfully assigned to a device group
+             :rtype DeviceGroupStatus: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return DeviceGroupTimestamp: The date/time of the last update to the device group assignment status
+             :rtype DeviceGroupTimestamp: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return DeviceID: Internal system identifier for the discovery status
+             :rtype DeviceID: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return DeviceIPDotted: The management IP address of the device, in dotted (or colon-delimited for IPv6) format
+             :rtype DeviceIPDotted: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return DeviceIPNumeric: The numerical value of the device IP address
+             :rtype DeviceIPNumeric: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return DeviceName: The name of the device; this will be either the same as DeviceSysName or DeviceDNSName, depending on your configuration
+             :rtype DeviceName: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return DeviceType: The determined device type
+             :rtype DeviceType: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return DeviceUniqueKey: Unique key which allows duplicates detecting over different Virtual Networks
+             :rtype DeviceUniqueKey: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return ExistsMessage: A message detailing the method by which the device is decided to exist
+             :rtype ExistsMessage: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return ExistsTimestamp: The date/time of the last device existance update
+             :rtype ExistsTimestamp: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return FingerPrintEnabled: Whether fingerprinting is enabled for this device
+             :rtype FingerPrintEnabled: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return FingerPrintMessage: A message detailing the current fingerprint status
+             :rtype FingerPrintMessage: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return FingerPrintStatus: Indicates whether device fingerprinting has been successfully executed for the device
+             :rtype FingerPrintStatus: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return FingerPrintTimestamp: The date/time of the last update to the fingerprint status
+             :rtype FingerPrintTimestamp: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return FirstSeen: The date and time this record was first seen
+             :rtype FirstSeen: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return ForwardingInd: The indicator of collection of forwarding information
+             :rtype ForwardingInd: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return GlobalConfigCollectionEnabled: Whether configuration collection is enabled globally
+             :rtype GlobalConfigCollectionEnabled: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return GlobalConfigCollectionMessage: Global configuration collection details message
+             :rtype GlobalConfigCollectionMessage: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return InBlackout: In Blackout?
+             :rtype InBlackout: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return InPortControlBlackout: In Port Control Blackout?
+             :rtype InPortControlBlackout: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return LastAction: The last action (from the set in this model) executed against this device
+             :rtype LastAction: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return LastSeen: The timestamp of when data was last polled from this device
+             :rtype LastSeen: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return LastTimestamp: The date/time of the last action
+             :rtype LastTimestamp: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return LicenseOverride: Licensing setting. Requested unlicensed: 0, requested licensed: 1, automatic: 2
+             :rtype LicenseOverride: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return PortControlBlackoutDuration: Port Control Blackout in minutes
+             :rtype PortControlBlackoutDuration: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return ReachableMessage: A message detailing the current ACL/rule list analysis status
+             :rtype ReachableMessage: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return ReachableStatus: Indicates whether device is reachable according to it's ACL/rule list
+             :rtype ReachableStatus: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return ReachableTimestamp: The date/time of the last update to the reachable status
+             :rtype ReachableTimestamp: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return RuleListAnalysisMessage: A message detailing the current ACL/rule list analysis status
+             :rtype RuleListAnalysisMessage: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return RuleListAnalysisStatus: Indicates whether ACLs/rule lists have been successfully collected from the device
+             :rtype RuleListAnalysisStatus: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return RuleListAnalysisTimestamp: The date/time of the last update to the rule list status
+             :rtype RuleListAnalysisTimestamp: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SAMLicensedInd: Licensed for Security Device Controller
+             :rtype SAMLicensedInd: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SDNCollectionEnabled: SDN collection enabled?
+             :rtype SDNCollectionEnabled: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SDNCollectionMessage: SDN collection message
+             :rtype SDNCollectionMessage: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SDNCollectionStatus: Indicates whether SDN data has been successfully collected for the device
+             :rtype SDNCollectionStatus: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SDNCollectionTimestamp: The date/time of the last update to the SDN collection status
+             :rtype SDNCollectionTimestamp: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SNMPCollectionEnabled: SNMP collection enabled?
+             :rtype SNMPCollectionEnabled: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SNMPCollectionMessage: A message detailing the current SNMP collection status
+             :rtype SNMPCollectionMessage: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SNMPCollectionStatus: Indicates whether SNMP data has been successfully collected from the device
+             :rtype SNMPCollectionStatus: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SNMPCollectionTimestamp: The date/time of the last update to the SNMP collection status
+             :rtype SNMPCollectionTimestamp: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SNMPCredentialMessage: A message detailing the current SNMP credential status
+             :rtype SNMPCredentialMessage: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SNMPCredentialStatus: Indicates the status of SNMP discovery attempt of the device
+             :rtype SNMPCredentialStatus: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SNMPCredentialTimestamp: The date/time of the last update to the SNMP credential status
+             :rtype SNMPCredentialTimestamp: DateTime
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return SPMLicensedInd: Licensed for Switch Port Manager
+             :rtype SPMLicensedInd: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return StartBlackoutSchedule: The blackout start time in cron format
+             :rtype StartBlackoutSchedule: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return StartPortControlBlackoutSchedule: Port Control Blackout in cron format
+             :rtype StartPortControlBlackoutSchedule: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return Status: License Status
+             :rtype Status: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return StatusDetail: Licenses applied
+             :rtype StatusDetail: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return UnitID: The internal identifier of the collector on which the device is configured
+             :rtype UnitID: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return VirtualNetworkID: The internal identifier for the network which the device is associated to
+             :rtype VirtualNetworkID: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return VirtualNetworkMemberArtificialInd: Indicates is this is an artificial VNM
+             :rtype VirtualNetworkMemberArtificialInd: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return VirtualNetworkName: The name of the Network View
+             :rtype VirtualNetworkName: String
 
             """
 
@@ -1178,7 +1671,7 @@ class DiscoveryStatusesBroker(Broker):
         return self.api_request(self._get_method_fullname("summary"), kwargs)
 
     def discover_next(self, **kwargs):
-        """Set the given device ids to be discovered next
+        """Set the given device ids to be discovered next (SDN Element devices will be skipped)
 
             **Inputs**
 
@@ -1187,7 +1680,7 @@ class DiscoveryStatusesBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param DeviceIDs: An array of device ids to be discovered next
+             :param DeviceIDs: An array of device ids to be discovered next (SDN Element devices will be skipped)
              :type DeviceIDs: Array
 
             **Outputs**
@@ -1360,6 +1853,14 @@ class DiscoveryStatusesBroker(Broker):
              :type AccessProvisioning: String
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return status: Status as 200 and Success as true
+             :rtype status: Integer
 
             """
 
@@ -1747,52 +2248,6 @@ class DiscoveryStatusesBroker(Broker):
             """
 
         return self.api_request(self._get_method_fullname("snmp_guesses"), kwargs)
-
-    def show_opsec_certificate(self, **kwargs):
-        """Return OPSEC device certificate
-
-            **Inputs**
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` True
-            |  ``default:`` None
-
-             :param DeviceID: The id of the device
-             :type DeviceID: Integer
-
-            **Outputs**
-
-            """
-
-        return self.api_request(self._get_method_fullname("show_opsec_certificate"), kwargs)
-
-    def opsec_guesses(self, **kwargs):
-        """Displays the status of all devices OPSEC guesses
-
-            **Inputs**
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` True
-            |  ``default:`` None
-
-             :param DeviceID: The id of the device
-             :type DeviceID: Integer
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param filename: Filename for exported data
-             :type filename: String
-
-            **Outputs**
-
-            """
-
-        return self.api_request(self._get_method_fullname("opsec_guesses"), kwargs)
 
     def status_management(self, **kwargs):
         """Returns a list of discovery statuses of the device with given id

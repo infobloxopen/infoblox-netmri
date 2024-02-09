@@ -32,7 +32,7 @@ class AdvSettingBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available adv settings. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available adv settings. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -89,7 +89,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, adv_setting_def_id, value, secure_version.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, adv_setting_def_id, value, secure_version.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -97,7 +97,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -107,22 +107,6 @@ class AdvSettingBroker(Broker):
 
              :param select: The list of attributes to return for each AdvSetting. Valid values are id, adv_setting_def_id, value, secure_version. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -228,7 +212,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, adv_setting_def_id, value, secure_version.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, adv_setting_def_id, value, secure_version.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -236,7 +220,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -246,22 +230,6 @@ class AdvSettingBroker(Broker):
 
              :param select: The list of attributes to return for each AdvSetting. Valid values are id, adv_setting_def_id, value, secure_version. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -319,7 +287,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_adv_setting_def_id: If op_adv_setting_def_id is specified, this value will be compared to the value in adv_setting_def_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_adv_setting_def_id must be specified if op_adv_setting_def_id is specified.
+             :param val_c_adv_setting_def_id: If op_adv_setting_def_id is specified, this value will be compared to the value in adv_setting_def_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_adv_setting_def_id must be specified if op_adv_setting_def_id is specified. If the rlike or not rlike value is specified in the op_adv_setting_def_id field, escape regex special characters because a regular expression is expected.
              :type val_c_adv_setting_def_id: String
 
             |  ``api version min:`` None
@@ -343,7 +311,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -367,7 +335,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_secure_version: If op_secure_version is specified, this value will be compared to the value in secure_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_secure_version must be specified if op_secure_version is specified.
+             :param val_c_secure_version: If op_secure_version is specified, this value will be compared to the value in secure_version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_secure_version must be specified if op_secure_version is specified. If the rlike or not rlike value is specified in the op_secure_version field, escape regex special characters because a regular expression is expected.
              :type val_c_secure_version: String
 
             |  ``api version min:`` None
@@ -391,7 +359,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_value: If op_value is specified, this value will be compared to the value in value using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_value must be specified if op_value is specified.
+             :param val_c_value: If op_value is specified, this value will be compared to the value in value using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_value must be specified if op_value is specified. If the rlike or not rlike value is specified in the op_value field, escape regex special characters because a regular expression is expected.
              :type val_c_value: String
 
             |  ``api version min:`` None
@@ -415,7 +383,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, adv_setting_def_id, value, secure_version.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, adv_setting_def_id, value, secure_version.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -423,7 +391,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -433,22 +401,6 @@ class AdvSettingBroker(Broker):
 
              :param select: The list of attributes to return for each AdvSetting. Valid values are id, adv_setting_def_id, value, secure_version. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -471,65 +423,6 @@ class AdvSettingBroker(Broker):
             """
 
         return self.api_list_request(self._get_method_fullname("find"), kwargs)
-
-    def create(self, **kwargs):
-        """Creates a new adv setting.
-
-            **Inputs**
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` True
-            |  ``default:`` None
-
-             :param id: The internal NetMRI identifier of an advanced setting.
-             :type id: Integer
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` True
-            |  ``default:`` None
-
-             :param value: The value of advanced setting.
-             :type value: String
-
-            **Outputs**
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return id: The id of the newly created adv setting.
-             :rtype id: Integer
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return model: The class name of the newly created adv setting.
-             :rtype model: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return uri: A URI that may be used to retrieve the newly created adv setting.
-             :rtype uri: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :return adv_setting: The newly created adv setting.
-             :rtype adv_setting: AdvSetting
-
-            """
-
-        return self.api_request(self._get_method_fullname("create"), kwargs)
 
     def update(self, **kwargs):
         """Updates an existing adv setting.
@@ -575,7 +468,7 @@ class AdvSettingBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated adv setting.
+             :return uri: The URI that may be used to retrieve the updated adv setting.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -589,22 +482,3 @@ class AdvSettingBroker(Broker):
             """
 
         return self.api_request(self._get_method_fullname("update"), kwargs)
-
-    def destroy(self, **kwargs):
-        """Deletes the specified adv setting from NetMRI.
-
-            **Inputs**
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` True
-            |  ``default:`` None
-
-             :param id: The internal NetMRI identifier of an advanced setting.
-             :type id: Integer
-
-            **Outputs**
-
-            """
-
-        return self.api_request(self._get_method_fullname("destroy"), kwargs)

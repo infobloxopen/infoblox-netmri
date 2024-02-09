@@ -15,8 +15,8 @@ class DeviceGroupDefnRemote(RemoteModel):
     |  ``Criteria:`` The criteria used to place members within the group.
     |  ``attribute type:`` string
 
-    |  ``Rank:`` The rank is used to determine which group settings to apply to a device that is a member of multiple groups. The highest ranked group's settings will be used.
-    |  ``attribute type:`` string
+    |  ``Rank:`` The rank is used to determine which group settings to apply to a device that is a member of multiple groups. The highest ranked group's settings will be used. The final rank value will be calculated into a 48-bit binary number by internal algorithm.
+    |  ``attribute type:`` number
 
     |  ``SNMPPolling:`` A flag indicating whether this group should be polled via SNMP.
     |  ``attribute type:`` number

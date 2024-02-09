@@ -48,7 +48,7 @@ class IprgBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available iprgs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available iprgs. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -153,7 +153,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IprgID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IprgID. Valid values are IprgID, DataSourceID, IprgStartTime, IprgEndTime, IprgTimestamp, IprgChangedCols, ActiveIprgMemberID, IprgNumber, IprgIPDotted, IprgIPNumeric, IprgMAC, IprgAuth, IprgType, IprgActiveLastChanged.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IprgID, DataSourceID, IprgStartTime, IprgEndTime, IprgTimestamp, IprgChangedCols, ActiveIprgMemberID, IprgNumber, IprgIPDotted, IprgIPNumeric, IprgMAC, IprgAuth, IprgType, IprgActiveLastChanged.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -161,7 +161,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -171,22 +171,6 @@ class IprgBroker(Broker):
 
              :param select: The list of attributes to return for each Iprg. Valid values are IprgID, DataSourceID, IprgStartTime, IprgEndTime, IprgTimestamp, IprgChangedCols, ActiveIprgMemberID, IprgNumber, IprgIPDotted, IprgIPNumeric, IprgMAC, IprgAuth, IprgType, IprgActiveLastChanged. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -484,7 +468,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IprgID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IprgID. Valid values are IprgID, DataSourceID, IprgStartTime, IprgEndTime, IprgTimestamp, IprgChangedCols, ActiveIprgMemberID, IprgNumber, IprgIPDotted, IprgIPNumeric, IprgMAC, IprgAuth, IprgType, IprgActiveLastChanged.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IprgID, DataSourceID, IprgStartTime, IprgEndTime, IprgTimestamp, IprgChangedCols, ActiveIprgMemberID, IprgNumber, IprgIPDotted, IprgIPNumeric, IprgMAC, IprgAuth, IprgType, IprgActiveLastChanged.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -492,7 +476,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -502,22 +486,6 @@ class IprgBroker(Broker):
 
              :param select: The list of attributes to return for each Iprg. Valid values are IprgID, DataSourceID, IprgStartTime, IprgEndTime, IprgTimestamp, IprgChangedCols, ActiveIprgMemberID, IprgNumber, IprgIPDotted, IprgIPNumeric, IprgMAC, IprgAuth, IprgType, IprgActiveLastChanged. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -575,7 +543,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ActiveIprgMemberID: If op_ActiveIprgMemberID is specified, this value will be compared to the value in ActiveIprgMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ActiveIprgMemberID must be specified if op_ActiveIprgMemberID is specified.
+             :param val_c_ActiveIprgMemberID: If op_ActiveIprgMemberID is specified, this value will be compared to the value in ActiveIprgMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ActiveIprgMemberID must be specified if op_ActiveIprgMemberID is specified. If the rlike or not rlike value is specified in the op_ActiveIprgMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_ActiveIprgMemberID: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgActiveLastChanged: If op_IprgActiveLastChanged is specified, this value will be compared to the value in IprgActiveLastChanged using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgActiveLastChanged must be specified if op_IprgActiveLastChanged is specified.
+             :param val_c_IprgActiveLastChanged: If op_IprgActiveLastChanged is specified, this value will be compared to the value in IprgActiveLastChanged using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgActiveLastChanged must be specified if op_IprgActiveLastChanged is specified. If the rlike or not rlike value is specified in the op_IprgActiveLastChanged field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgActiveLastChanged: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgAuth: If op_IprgAuth is specified, this value will be compared to the value in IprgAuth using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgAuth must be specified if op_IprgAuth is specified.
+             :param val_c_IprgAuth: If op_IprgAuth is specified, this value will be compared to the value in IprgAuth using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgAuth must be specified if op_IprgAuth is specified. If the rlike or not rlike value is specified in the op_IprgAuth field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgAuth: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgChangedCols: If op_IprgChangedCols is specified, this value will be compared to the value in IprgChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgChangedCols must be specified if op_IprgChangedCols is specified.
+             :param val_c_IprgChangedCols: If op_IprgChangedCols is specified, this value will be compared to the value in IprgChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgChangedCols must be specified if op_IprgChangedCols is specified. If the rlike or not rlike value is specified in the op_IprgChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgChangedCols: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgEndTime: If op_IprgEndTime is specified, this value will be compared to the value in IprgEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgEndTime must be specified if op_IprgEndTime is specified.
+             :param val_c_IprgEndTime: If op_IprgEndTime is specified, this value will be compared to the value in IprgEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgEndTime must be specified if op_IprgEndTime is specified. If the rlike or not rlike value is specified in the op_IprgEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgEndTime: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgID: If op_IprgID is specified, this value will be compared to the value in IprgID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgID must be specified if op_IprgID is specified.
+             :param val_c_IprgID: If op_IprgID is specified, this value will be compared to the value in IprgID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgID must be specified if op_IprgID is specified. If the rlike or not rlike value is specified in the op_IprgID field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgID: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgIPDotted: If op_IprgIPDotted is specified, this value will be compared to the value in IprgIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgIPDotted must be specified if op_IprgIPDotted is specified.
+             :param val_c_IprgIPDotted: If op_IprgIPDotted is specified, this value will be compared to the value in IprgIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgIPDotted must be specified if op_IprgIPDotted is specified. If the rlike or not rlike value is specified in the op_IprgIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgIPDotted: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgIPNumeric: If op_IprgIPNumeric is specified, this value will be compared to the value in IprgIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgIPNumeric must be specified if op_IprgIPNumeric is specified.
+             :param val_c_IprgIPNumeric: If op_IprgIPNumeric is specified, this value will be compared to the value in IprgIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgIPNumeric must be specified if op_IprgIPNumeric is specified. If the rlike or not rlike value is specified in the op_IprgIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgIPNumeric: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMAC: If op_IprgMAC is specified, this value will be compared to the value in IprgMAC using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMAC must be specified if op_IprgMAC is specified.
+             :param val_c_IprgMAC: If op_IprgMAC is specified, this value will be compared to the value in IprgMAC using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMAC must be specified if op_IprgMAC is specified. If the rlike or not rlike value is specified in the op_IprgMAC field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMAC: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgNumber: If op_IprgNumber is specified, this value will be compared to the value in IprgNumber using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgNumber must be specified if op_IprgNumber is specified.
+             :param val_c_IprgNumber: If op_IprgNumber is specified, this value will be compared to the value in IprgNumber using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgNumber must be specified if op_IprgNumber is specified. If the rlike or not rlike value is specified in the op_IprgNumber field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgNumber: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgStartTime: If op_IprgStartTime is specified, this value will be compared to the value in IprgStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgStartTime must be specified if op_IprgStartTime is specified.
+             :param val_c_IprgStartTime: If op_IprgStartTime is specified, this value will be compared to the value in IprgStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgStartTime must be specified if op_IprgStartTime is specified. If the rlike or not rlike value is specified in the op_IprgStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgStartTime: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgTimestamp: If op_IprgTimestamp is specified, this value will be compared to the value in IprgTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgTimestamp must be specified if op_IprgTimestamp is specified.
+             :param val_c_IprgTimestamp: If op_IprgTimestamp is specified, this value will be compared to the value in IprgTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgTimestamp must be specified if op_IprgTimestamp is specified. If the rlike or not rlike value is specified in the op_IprgTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgTimestamp: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgType: If op_IprgType is specified, this value will be compared to the value in IprgType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgType must be specified if op_IprgType is specified.
+             :param val_c_IprgType: If op_IprgType is specified, this value will be compared to the value in IprgType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgType must be specified if op_IprgType is specified. If the rlike or not rlike value is specified in the op_IprgType field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgType: String
 
             |  ``api version min:`` None
@@ -943,7 +911,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IprgID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IprgID. Valid values are IprgID, DataSourceID, IprgStartTime, IprgEndTime, IprgTimestamp, IprgChangedCols, ActiveIprgMemberID, IprgNumber, IprgIPDotted, IprgIPNumeric, IprgMAC, IprgAuth, IprgType, IprgActiveLastChanged.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IprgID, DataSourceID, IprgStartTime, IprgEndTime, IprgTimestamp, IprgChangedCols, ActiveIprgMemberID, IprgNumber, IprgIPDotted, IprgIPNumeric, IprgMAC, IprgAuth, IprgType, IprgActiveLastChanged.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -961,22 +929,6 @@ class IprgBroker(Broker):
 
              :param select: The list of attributes to return for each Iprg. Valid values are IprgID, DataSourceID, IprgStartTime, IprgEndTime, IprgTimestamp, IprgChangedCols, ActiveIprgMemberID, IprgNumber, IprgIPDotted, IprgIPNumeric, IprgMAC, IprgAuth, IprgType, IprgActiveLastChanged. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1020,8 +972,8 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1047,8 +999,8 @@ class IprgBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The HSRP/VRRP group membership details of the active router.
-             :rtype : IprgMember
+             :return active_member: The HSRP/VRRP group membership details of the active router.
+             :rtype active_member: IprgMember
 
             """
 

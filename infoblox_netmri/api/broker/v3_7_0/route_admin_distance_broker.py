@@ -5,7 +5,7 @@ class RouteAdminDistanceBroker(Broker):
     controller = "route_admin_distances"
 
     def index(self, **kwargs):
-        """Lists the available route admin distances. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available route admin distances. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -46,7 +46,7 @@ class RouteAdminDistanceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, route_protocol, admin_distance.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, route_protocol, admin_distance.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -54,7 +54,7 @@ class RouteAdminDistanceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -64,22 +64,6 @@ class RouteAdminDistanceBroker(Broker):
 
              :param select: The list of attributes to return for each RouteAdminDistance. Valid values are id, route_protocol, admin_distance. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -172,7 +156,7 @@ class RouteAdminDistanceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, route_protocol, admin_distance.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, route_protocol, admin_distance.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -180,7 +164,7 @@ class RouteAdminDistanceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -190,22 +174,6 @@ class RouteAdminDistanceBroker(Broker):
 
              :param select: The list of attributes to return for each RouteAdminDistance. Valid values are id, route_protocol, admin_distance. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -263,7 +231,7 @@ class RouteAdminDistanceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_admin_distance: If op_admin_distance is specified, this value will be compared to the value in admin_distance using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_admin_distance must be specified if op_admin_distance is specified.
+             :param val_c_admin_distance: If op_admin_distance is specified, this value will be compared to the value in admin_distance using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_admin_distance must be specified if op_admin_distance is specified. If the rlike or not rlike value is specified in the op_admin_distance field, escape regex special characters because a regular expression is expected.
              :type val_c_admin_distance: String
 
             |  ``api version min:`` None
@@ -287,7 +255,7 @@ class RouteAdminDistanceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -311,7 +279,7 @@ class RouteAdminDistanceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_route_protocol: If op_route_protocol is specified, this value will be compared to the value in route_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_route_protocol must be specified if op_route_protocol is specified.
+             :param val_c_route_protocol: If op_route_protocol is specified, this value will be compared to the value in route_protocol using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_route_protocol must be specified if op_route_protocol is specified. If the rlike or not rlike value is specified in the op_route_protocol field, escape regex special characters because a regular expression is expected.
              :type val_c_route_protocol: String
 
             |  ``api version min:`` None
@@ -335,7 +303,7 @@ class RouteAdminDistanceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, route_protocol, admin_distance.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, route_protocol, admin_distance.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -343,7 +311,7 @@ class RouteAdminDistanceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -353,22 +321,6 @@ class RouteAdminDistanceBroker(Broker):
 
              :param select: The list of attributes to return for each RouteAdminDistance. Valid values are id, route_protocol, admin_distance. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -436,7 +388,7 @@ class RouteAdminDistanceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created route admin distance.
+             :return uri: The URI that may be used to retrieve the newly created route admin distance.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -503,7 +455,7 @@ class RouteAdminDistanceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated route admin distance.
+             :return uri: The URI that may be used to retrieve the updated route admin distance.
              :rtype uri: String
 
             |  ``api version min:`` None

@@ -5,7 +5,7 @@ class NetscreenVpnMonitorBroker(Broker):
     controller = "netscreen_vpn_monitors"
 
     def index(self, **kwargs):
-        """Lists the available netscreen vpn monitors. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available netscreen vpn monitors. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -94,7 +94,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NSVpnMonID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NSVpnMonID. Valid values are NSVpnMonID, DeviceID, NSVpnMonStartTime, NSVpnMonEndTime, NSVpnMonTimeStamp, NSVpnMonChangedCols, NSVpnMonIndex, NSVpnMonVpnName, NSVpnMonTunnelType, NSVpnMonEspEncAlg, NSVpnMonEspAuthAlg, NSVpnMonKeyType, NSVpnMonP1Auth, NSVpnMonVpnType, NSVpnMonRmtGwIPDotted, NSVpnMonRmtGwIPNumeric, NSVpnMonRmtGwId, NSVpnMonP1State, NSVpnMonP2State, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are NSVpnMonID, DeviceID, NSVpnMonStartTime, NSVpnMonEndTime, NSVpnMonTimeStamp, NSVpnMonChangedCols, NSVpnMonIndex, NSVpnMonVpnName, NSVpnMonTunnelType, NSVpnMonEspEncAlg, NSVpnMonEspAuthAlg, NSVpnMonKeyType, NSVpnMonP1Auth, NSVpnMonVpnType, NSVpnMonRmtGwIPDotted, NSVpnMonRmtGwIPNumeric, NSVpnMonRmtGwId, NSVpnMonP1State, NSVpnMonP2State, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -102,7 +102,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -112,22 +112,6 @@ class NetscreenVpnMonitorBroker(Broker):
 
              :param select: The list of attributes to return for each NetscreenVpnMonitor. Valid values are NSVpnMonID, DeviceID, NSVpnMonStartTime, NSVpnMonEndTime, NSVpnMonTimeStamp, NSVpnMonChangedCols, NSVpnMonIndex, NSVpnMonVpnName, NSVpnMonTunnelType, NSVpnMonEspEncAlg, NSVpnMonEspAuthAlg, NSVpnMonKeyType, NSVpnMonP1Auth, NSVpnMonVpnType, NSVpnMonRmtGwIPDotted, NSVpnMonRmtGwIPNumeric, NSVpnMonRmtGwId, NSVpnMonP1State, NSVpnMonP2State, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -564,7 +548,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NSVpnMonID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NSVpnMonID. Valid values are NSVpnMonID, DeviceID, NSVpnMonStartTime, NSVpnMonEndTime, NSVpnMonTimeStamp, NSVpnMonChangedCols, NSVpnMonIndex, NSVpnMonVpnName, NSVpnMonTunnelType, NSVpnMonEspEncAlg, NSVpnMonEspAuthAlg, NSVpnMonKeyType, NSVpnMonP1Auth, NSVpnMonVpnType, NSVpnMonRmtGwIPDotted, NSVpnMonRmtGwIPNumeric, NSVpnMonRmtGwId, NSVpnMonP1State, NSVpnMonP2State, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are NSVpnMonID, DeviceID, NSVpnMonStartTime, NSVpnMonEndTime, NSVpnMonTimeStamp, NSVpnMonChangedCols, NSVpnMonIndex, NSVpnMonVpnName, NSVpnMonTunnelType, NSVpnMonEspEncAlg, NSVpnMonEspAuthAlg, NSVpnMonKeyType, NSVpnMonP1Auth, NSVpnMonVpnType, NSVpnMonRmtGwIPDotted, NSVpnMonRmtGwIPNumeric, NSVpnMonRmtGwId, NSVpnMonP1State, NSVpnMonP2State, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -572,7 +556,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -582,22 +566,6 @@ class NetscreenVpnMonitorBroker(Broker):
 
              :param select: The list of attributes to return for each NetscreenVpnMonitor. Valid values are NSVpnMonID, DeviceID, NSVpnMonStartTime, NSVpnMonEndTime, NSVpnMonTimeStamp, NSVpnMonChangedCols, NSVpnMonIndex, NSVpnMonVpnName, NSVpnMonTunnelType, NSVpnMonEspEncAlg, NSVpnMonEspAuthAlg, NSVpnMonKeyType, NSVpnMonP1Auth, NSVpnMonVpnType, NSVpnMonRmtGwIPDotted, NSVpnMonRmtGwIPNumeric, NSVpnMonRmtGwId, NSVpnMonP1State, NSVpnMonP2State, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -655,7 +623,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -679,7 +647,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -703,7 +671,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonChangedCols: If op_NSVpnMonChangedCols is specified, this value will be compared to the value in NSVpnMonChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonChangedCols must be specified if op_NSVpnMonChangedCols is specified.
+             :param val_c_NSVpnMonChangedCols: If op_NSVpnMonChangedCols is specified, this value will be compared to the value in NSVpnMonChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonChangedCols must be specified if op_NSVpnMonChangedCols is specified. If the rlike or not rlike value is specified in the op_NSVpnMonChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonChangedCols: String
 
             |  ``api version min:`` None
@@ -727,7 +695,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonEndTime: If op_NSVpnMonEndTime is specified, this value will be compared to the value in NSVpnMonEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonEndTime must be specified if op_NSVpnMonEndTime is specified.
+             :param val_c_NSVpnMonEndTime: If op_NSVpnMonEndTime is specified, this value will be compared to the value in NSVpnMonEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonEndTime must be specified if op_NSVpnMonEndTime is specified. If the rlike or not rlike value is specified in the op_NSVpnMonEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonEndTime: String
 
             |  ``api version min:`` None
@@ -751,7 +719,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonEspAuthAlg: If op_NSVpnMonEspAuthAlg is specified, this value will be compared to the value in NSVpnMonEspAuthAlg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonEspAuthAlg must be specified if op_NSVpnMonEspAuthAlg is specified.
+             :param val_c_NSVpnMonEspAuthAlg: If op_NSVpnMonEspAuthAlg is specified, this value will be compared to the value in NSVpnMonEspAuthAlg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonEspAuthAlg must be specified if op_NSVpnMonEspAuthAlg is specified. If the rlike or not rlike value is specified in the op_NSVpnMonEspAuthAlg field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonEspAuthAlg: String
 
             |  ``api version min:`` None
@@ -775,7 +743,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonEspEncAlg: If op_NSVpnMonEspEncAlg is specified, this value will be compared to the value in NSVpnMonEspEncAlg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonEspEncAlg must be specified if op_NSVpnMonEspEncAlg is specified.
+             :param val_c_NSVpnMonEspEncAlg: If op_NSVpnMonEspEncAlg is specified, this value will be compared to the value in NSVpnMonEspEncAlg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonEspEncAlg must be specified if op_NSVpnMonEspEncAlg is specified. If the rlike or not rlike value is specified in the op_NSVpnMonEspEncAlg field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonEspEncAlg: String
 
             |  ``api version min:`` None
@@ -799,7 +767,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonID: If op_NSVpnMonID is specified, this value will be compared to the value in NSVpnMonID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonID must be specified if op_NSVpnMonID is specified.
+             :param val_c_NSVpnMonID: If op_NSVpnMonID is specified, this value will be compared to the value in NSVpnMonID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonID must be specified if op_NSVpnMonID is specified. If the rlike or not rlike value is specified in the op_NSVpnMonID field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonID: String
 
             |  ``api version min:`` None
@@ -823,7 +791,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonIndex: If op_NSVpnMonIndex is specified, this value will be compared to the value in NSVpnMonIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonIndex must be specified if op_NSVpnMonIndex is specified.
+             :param val_c_NSVpnMonIndex: If op_NSVpnMonIndex is specified, this value will be compared to the value in NSVpnMonIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonIndex must be specified if op_NSVpnMonIndex is specified. If the rlike or not rlike value is specified in the op_NSVpnMonIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonIndex: String
 
             |  ``api version min:`` None
@@ -847,7 +815,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonKeyType: If op_NSVpnMonKeyType is specified, this value will be compared to the value in NSVpnMonKeyType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonKeyType must be specified if op_NSVpnMonKeyType is specified.
+             :param val_c_NSVpnMonKeyType: If op_NSVpnMonKeyType is specified, this value will be compared to the value in NSVpnMonKeyType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonKeyType must be specified if op_NSVpnMonKeyType is specified. If the rlike or not rlike value is specified in the op_NSVpnMonKeyType field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonKeyType: String
 
             |  ``api version min:`` None
@@ -871,7 +839,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonP1Auth: If op_NSVpnMonP1Auth is specified, this value will be compared to the value in NSVpnMonP1Auth using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonP1Auth must be specified if op_NSVpnMonP1Auth is specified.
+             :param val_c_NSVpnMonP1Auth: If op_NSVpnMonP1Auth is specified, this value will be compared to the value in NSVpnMonP1Auth using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonP1Auth must be specified if op_NSVpnMonP1Auth is specified. If the rlike or not rlike value is specified in the op_NSVpnMonP1Auth field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonP1Auth: String
 
             |  ``api version min:`` None
@@ -895,7 +863,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonP1State: If op_NSVpnMonP1State is specified, this value will be compared to the value in NSVpnMonP1State using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonP1State must be specified if op_NSVpnMonP1State is specified.
+             :param val_c_NSVpnMonP1State: If op_NSVpnMonP1State is specified, this value will be compared to the value in NSVpnMonP1State using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonP1State must be specified if op_NSVpnMonP1State is specified. If the rlike or not rlike value is specified in the op_NSVpnMonP1State field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonP1State: String
 
             |  ``api version min:`` None
@@ -919,7 +887,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonP2State: If op_NSVpnMonP2State is specified, this value will be compared to the value in NSVpnMonP2State using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonP2State must be specified if op_NSVpnMonP2State is specified.
+             :param val_c_NSVpnMonP2State: If op_NSVpnMonP2State is specified, this value will be compared to the value in NSVpnMonP2State using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonP2State must be specified if op_NSVpnMonP2State is specified. If the rlike or not rlike value is specified in the op_NSVpnMonP2State field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonP2State: String
 
             |  ``api version min:`` None
@@ -943,7 +911,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonRmtGwIPDotted: If op_NSVpnMonRmtGwIPDotted is specified, this value will be compared to the value in NSVpnMonRmtGwIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonRmtGwIPDotted must be specified if op_NSVpnMonRmtGwIPDotted is specified.
+             :param val_c_NSVpnMonRmtGwIPDotted: If op_NSVpnMonRmtGwIPDotted is specified, this value will be compared to the value in NSVpnMonRmtGwIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonRmtGwIPDotted must be specified if op_NSVpnMonRmtGwIPDotted is specified. If the rlike or not rlike value is specified in the op_NSVpnMonRmtGwIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonRmtGwIPDotted: String
 
             |  ``api version min:`` None
@@ -967,7 +935,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonRmtGwIPNumeric: If op_NSVpnMonRmtGwIPNumeric is specified, this value will be compared to the value in NSVpnMonRmtGwIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonRmtGwIPNumeric must be specified if op_NSVpnMonRmtGwIPNumeric is specified.
+             :param val_c_NSVpnMonRmtGwIPNumeric: If op_NSVpnMonRmtGwIPNumeric is specified, this value will be compared to the value in NSVpnMonRmtGwIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonRmtGwIPNumeric must be specified if op_NSVpnMonRmtGwIPNumeric is specified. If the rlike or not rlike value is specified in the op_NSVpnMonRmtGwIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonRmtGwIPNumeric: String
 
             |  ``api version min:`` None
@@ -991,7 +959,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonRmtGwId: If op_NSVpnMonRmtGwId is specified, this value will be compared to the value in NSVpnMonRmtGwId using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonRmtGwId must be specified if op_NSVpnMonRmtGwId is specified.
+             :param val_c_NSVpnMonRmtGwId: If op_NSVpnMonRmtGwId is specified, this value will be compared to the value in NSVpnMonRmtGwId using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonRmtGwId must be specified if op_NSVpnMonRmtGwId is specified. If the rlike or not rlike value is specified in the op_NSVpnMonRmtGwId field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonRmtGwId: String
 
             |  ``api version min:`` None
@@ -1015,7 +983,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonStartTime: If op_NSVpnMonStartTime is specified, this value will be compared to the value in NSVpnMonStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonStartTime must be specified if op_NSVpnMonStartTime is specified.
+             :param val_c_NSVpnMonStartTime: If op_NSVpnMonStartTime is specified, this value will be compared to the value in NSVpnMonStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonStartTime must be specified if op_NSVpnMonStartTime is specified. If the rlike or not rlike value is specified in the op_NSVpnMonStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonStartTime: String
 
             |  ``api version min:`` None
@@ -1039,7 +1007,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonTimeStamp: If op_NSVpnMonTimeStamp is specified, this value will be compared to the value in NSVpnMonTimeStamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonTimeStamp must be specified if op_NSVpnMonTimeStamp is specified.
+             :param val_c_NSVpnMonTimeStamp: If op_NSVpnMonTimeStamp is specified, this value will be compared to the value in NSVpnMonTimeStamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonTimeStamp must be specified if op_NSVpnMonTimeStamp is specified. If the rlike or not rlike value is specified in the op_NSVpnMonTimeStamp field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonTimeStamp: String
 
             |  ``api version min:`` None
@@ -1063,7 +1031,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonTunnelType: If op_NSVpnMonTunnelType is specified, this value will be compared to the value in NSVpnMonTunnelType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonTunnelType must be specified if op_NSVpnMonTunnelType is specified.
+             :param val_c_NSVpnMonTunnelType: If op_NSVpnMonTunnelType is specified, this value will be compared to the value in NSVpnMonTunnelType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonTunnelType must be specified if op_NSVpnMonTunnelType is specified. If the rlike or not rlike value is specified in the op_NSVpnMonTunnelType field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonTunnelType: String
 
             |  ``api version min:`` None
@@ -1087,7 +1055,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonVpnName: If op_NSVpnMonVpnName is specified, this value will be compared to the value in NSVpnMonVpnName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonVpnName must be specified if op_NSVpnMonVpnName is specified.
+             :param val_c_NSVpnMonVpnName: If op_NSVpnMonVpnName is specified, this value will be compared to the value in NSVpnMonVpnName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonVpnName must be specified if op_NSVpnMonVpnName is specified. If the rlike or not rlike value is specified in the op_NSVpnMonVpnName field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonVpnName: String
 
             |  ``api version min:`` None
@@ -1111,7 +1079,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NSVpnMonVpnType: If op_NSVpnMonVpnType is specified, this value will be compared to the value in NSVpnMonVpnType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonVpnType must be specified if op_NSVpnMonVpnType is specified.
+             :param val_c_NSVpnMonVpnType: If op_NSVpnMonVpnType is specified, this value will be compared to the value in NSVpnMonVpnType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NSVpnMonVpnType must be specified if op_NSVpnMonVpnType is specified. If the rlike or not rlike value is specified in the op_NSVpnMonVpnType field, escape regex special characters because a regular expression is expected.
              :type val_c_NSVpnMonVpnType: String
 
             |  ``api version min:`` None
@@ -1167,7 +1135,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NSVpnMonID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NSVpnMonID. Valid values are NSVpnMonID, DeviceID, NSVpnMonStartTime, NSVpnMonEndTime, NSVpnMonTimeStamp, NSVpnMonChangedCols, NSVpnMonIndex, NSVpnMonVpnName, NSVpnMonTunnelType, NSVpnMonEspEncAlg, NSVpnMonEspAuthAlg, NSVpnMonKeyType, NSVpnMonP1Auth, NSVpnMonVpnType, NSVpnMonRmtGwIPDotted, NSVpnMonRmtGwIPNumeric, NSVpnMonRmtGwId, NSVpnMonP1State, NSVpnMonP2State, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are NSVpnMonID, DeviceID, NSVpnMonStartTime, NSVpnMonEndTime, NSVpnMonTimeStamp, NSVpnMonChangedCols, NSVpnMonIndex, NSVpnMonVpnName, NSVpnMonTunnelType, NSVpnMonEspEncAlg, NSVpnMonEspAuthAlg, NSVpnMonKeyType, NSVpnMonP1Auth, NSVpnMonVpnType, NSVpnMonRmtGwIPDotted, NSVpnMonRmtGwIPNumeric, NSVpnMonRmtGwId, NSVpnMonP1State, NSVpnMonP2State, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1175,7 +1143,7 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1185,22 +1153,6 @@ class NetscreenVpnMonitorBroker(Broker):
 
              :param select: The list of attributes to return for each NetscreenVpnMonitor. Valid values are NSVpnMonID, DeviceID, NSVpnMonStartTime, NSVpnMonEndTime, NSVpnMonTimeStamp, NSVpnMonChangedCols, NSVpnMonIndex, NSVpnMonVpnName, NSVpnMonTunnelType, NSVpnMonEspEncAlg, NSVpnMonEspAuthAlg, NSVpnMonKeyType, NSVpnMonP1Auth, NSVpnMonVpnType, NSVpnMonRmtGwIPDotted, NSVpnMonRmtGwIPNumeric, NSVpnMonRmtGwId, NSVpnMonP1State, NSVpnMonP2State, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1244,8 +1196,8 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1271,8 +1223,8 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -1298,8 +1250,8 @@ class NetscreenVpnMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

@@ -38,7 +38,7 @@ class CredentialsBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param VirtualNetworkID: VirtualNetwork ID to use with DeviceIPDotted if DeviceID is not set
+             :param VirtualNetworkID: The VirtualNetwork ID to use with DeviceIPDotted if DeviceID is not set
              :type VirtualNetworkID: Integer
 
             |  ``api version min:`` None
@@ -46,7 +46,7 @@ class CredentialsBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param SNMPRead: SNMPv1/2 Community string credential
+             :param SNMPRead: The SNMPv1/2 Community string credential
              :type SNMPRead: String
 
             |  ``api version min:`` None
@@ -54,7 +54,7 @@ class CredentialsBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param SNMPRead2: SNMPv3 Community string credential
+             :param SNMPRead2: The SNMPv3 Community string credential
              :type SNMPRead2: String
 
             |  ``api version min:`` None
@@ -62,7 +62,7 @@ class CredentialsBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param SNMPAuthPW: SNMP authorization Password
+             :param SNMPAuthPW: The SNMPv3 authentication protocol password
              :type SNMPAuthPW: String
 
             |  ``api version min:`` None
@@ -70,7 +70,7 @@ class CredentialsBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param SNMPAuthProto: SNMP authorization password
+             :param SNMPAuthProto: The SNMPv3 authentication protocol. Valid values are: 'md5', 'sha'
              :type SNMPAuthProto: String
 
             |  ``api version min:`` None
@@ -78,7 +78,7 @@ class CredentialsBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param SNMPPrivPW: SNMP privacy password
+             :param SNMPPrivPW: The SNMPv3 privacy protocol password
              :type SNMPPrivPW: String
 
             |  ``api version min:`` None
@@ -86,15 +86,15 @@ class CredentialsBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param SNMPPrivProto: SNMP privacy protocol
+             :param SNMPPrivProto: The SNMPv3 privacy protocol. Valid values are: 'des', '3des', 'aes-128', 'aes-192', 'aes-256', 'aes-192c', 'aes-256c'
              :type SNMPPrivProto: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` None
+            |  ``default:`` 1
 
-             :param SNMPVersion: SNMP Version
+             :param SNMPVersion: The SNMP version. Valid values are: 1, 2 or 3
              :type SNMPVersion: Integer
 
             |  ``api version min:`` None
@@ -154,7 +154,7 @@ class CredentialsBroker(Broker):
         return self.api_request(self._get_method_fullname("snmp_test"), kwargs)
 
     def cli_test(self, **kwargs):
-        """Executes a cli credential test against a supplied device
+        """Executes a CLI credential test against a supplied device
 
             **Inputs**
 
@@ -163,7 +163,7 @@ class CredentialsBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceID: Device ID to specify what device to test cli credentials on (takes precedence over IP address)
+             :param DeviceID: Device ID to specify what device to test CLI credentials on (takes precedence over IP address)
              :type DeviceID: Integer
 
             |  ``api version min:`` None
@@ -171,7 +171,7 @@ class CredentialsBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param DeviceIPDotted: Device IP to specify what device to test cli credentials on
+             :param DeviceIPDotted: Device IP to specify what device to test CLI credentials on
              :type DeviceIPDotted: String
 
             |  ``api version min:`` None

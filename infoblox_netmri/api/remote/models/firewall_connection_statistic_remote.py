@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class FirewallConnectionStatisticRemote(RemoteModel):
     """
-    This table list out enties of FirewallConnectionStats
+    This table list out entries of FirewallConnectionStats.
 
 
     |  ``FWCSID:`` The internal NetMRI identifier for this firewall connection statistics entry.

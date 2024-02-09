@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class AccessChangeProposalGridRemote(RemoteModel):
     """
-    list of proposals computed for an access change task (provisioing)
+    List of proposals computed for an access change task (provisioning).
 
 
     |  ``id:`` The internal NetMRI identifier for this provisioning proposal.

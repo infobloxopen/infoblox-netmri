@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class EventRemote(RemoteModel):
     """
-    This table list out the entries of system events occured within the NetMRI.
+    This table list out the entries of system events occurred within the NetMRI.
 
 
     |  ``EventID:`` The internal NetMRI identifier of an event.

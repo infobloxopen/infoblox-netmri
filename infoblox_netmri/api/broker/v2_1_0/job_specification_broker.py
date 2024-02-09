@@ -5,7 +5,7 @@ class JobSpecificationBroker(Broker):
     controller = "job_specifications"
 
     def index(self, **kwargs):
-        """Lists the available job specifications. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available job specifications. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -94,7 +94,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, description, script_id, schedule, created_by, approved_by, approved_by_name, approved_timestamp, created_at, updated_at, config_template_id, job_type, category, provision_data, transactional_ind, approval_note, revertable_ind, last_run, push_mode, unapproved_notification_trigger, deployable_ind, script.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, description, script_id, schedule, created_by, approved_by, approved_by_name, approved_timestamp, created_at, updated_at, config_template_id, job_type, category, provision_data, transactional_ind, approval_note, revertable_ind, last_run, push_mode, unapproved_notification_trigger, deployable_ind, script.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -102,7 +102,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -112,22 +112,6 @@ class JobSpecificationBroker(Broker):
 
              :param select: The list of attributes to return for each JobSpecification. Valid values are id, name, description, script_id, schedule, created_by, approved_by, approved_by_name, approved_timestamp, created_at, updated_at, config_template_id, job_type, category, provision_data, transactional_ind, approval_note, revertable_ind, last_run, push_mode, unapproved_notification_trigger, deployable_ind, script. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -329,7 +313,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created job specification.
+             :return uri: The URI that may be used to retrieve the newly created job specification.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -500,7 +484,7 @@ class JobSpecificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated job specification.
+             :return uri: The URI that may be used to retrieve the updated job specification.
              :rtype uri: String
 
             |  ``api version min:`` None

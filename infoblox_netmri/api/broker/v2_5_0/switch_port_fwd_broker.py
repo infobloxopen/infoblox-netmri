@@ -48,7 +48,7 @@ class SwitchPortFwdBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available switch port fwds. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available switch port fwds. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -185,7 +185,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` SwitchPortFwdID
 
-             :param sort: The data field(s) to use for sorting the output. Default is SwitchPortFwdID. Valid values are SwitchPortFwdID, DataSourceID, DeviceID, SwitchPortNumber, InterfaceID, SwitchPortFwdStartTime, SwitchPortFwdEndTime, SwitchPortFwdChangedCols, SwitchPortFwdTimestamp, SwitchPortFwdMAC, SwitchPortFwdStatus, SwitchPortFwdVlanIndex, SwitchPortFwdVlanID, SwitchPortFwdInterfaceID, SwitchPortFwdDeviceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are SwitchPortFwdID, DataSourceID, DeviceID, SwitchPortNumber, InterfaceID, SwitchPortFwdStartTime, SwitchPortFwdEndTime, SwitchPortFwdChangedCols, SwitchPortFwdTimestamp, SwitchPortFwdMAC, SwitchPortFwdStatus, SwitchPortFwdVlanIndex, SwitchPortFwdVlanID, SwitchPortFwdInterfaceID, SwitchPortFwdDeviceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -193,7 +193,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -203,22 +203,6 @@ class SwitchPortFwdBroker(Broker):
 
              :param select: The list of attributes to return for each SwitchPortFwd. Valid values are SwitchPortFwdID, DataSourceID, DeviceID, SwitchPortNumber, InterfaceID, SwitchPortFwdStartTime, SwitchPortFwdEndTime, SwitchPortFwdChangedCols, SwitchPortFwdTimestamp, SwitchPortFwdMAC, SwitchPortFwdStatus, SwitchPortFwdVlanIndex, SwitchPortFwdVlanID, SwitchPortFwdInterfaceID, SwitchPortFwdDeviceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -532,7 +516,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` SwitchPortFwdID
 
-             :param sort: The data field(s) to use for sorting the output. Default is SwitchPortFwdID. Valid values are SwitchPortFwdID, DataSourceID, DeviceID, SwitchPortNumber, InterfaceID, SwitchPortFwdStartTime, SwitchPortFwdEndTime, SwitchPortFwdChangedCols, SwitchPortFwdTimestamp, SwitchPortFwdMAC, SwitchPortFwdStatus, SwitchPortFwdVlanIndex, SwitchPortFwdVlanID, SwitchPortFwdInterfaceID, SwitchPortFwdDeviceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are SwitchPortFwdID, DataSourceID, DeviceID, SwitchPortNumber, InterfaceID, SwitchPortFwdStartTime, SwitchPortFwdEndTime, SwitchPortFwdChangedCols, SwitchPortFwdTimestamp, SwitchPortFwdMAC, SwitchPortFwdStatus, SwitchPortFwdVlanIndex, SwitchPortFwdVlanID, SwitchPortFwdInterfaceID, SwitchPortFwdDeviceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -540,7 +524,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -550,22 +534,6 @@ class SwitchPortFwdBroker(Broker):
 
              :param select: The list of attributes to return for each SwitchPortFwd. Valid values are SwitchPortFwdID, DataSourceID, DeviceID, SwitchPortNumber, InterfaceID, SwitchPortFwdStartTime, SwitchPortFwdEndTime, SwitchPortFwdChangedCols, SwitchPortFwdTimestamp, SwitchPortFwdMAC, SwitchPortFwdStatus, SwitchPortFwdVlanIndex, SwitchPortFwdVlanID, SwitchPortFwdInterfaceID, SwitchPortFwdDeviceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -623,7 +591,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortFwdChangedCols: If op_SwitchPortFwdChangedCols is specified, this value will be compared to the value in SwitchPortFwdChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdChangedCols must be specified if op_SwitchPortFwdChangedCols is specified.
+             :param val_c_SwitchPortFwdChangedCols: If op_SwitchPortFwdChangedCols is specified, this value will be compared to the value in SwitchPortFwdChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdChangedCols must be specified if op_SwitchPortFwdChangedCols is specified. If the rlike or not rlike value is specified in the op_SwitchPortFwdChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortFwdChangedCols: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortFwdDeviceID: If op_SwitchPortFwdDeviceID is specified, this value will be compared to the value in SwitchPortFwdDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdDeviceID must be specified if op_SwitchPortFwdDeviceID is specified.
+             :param val_c_SwitchPortFwdDeviceID: If op_SwitchPortFwdDeviceID is specified, this value will be compared to the value in SwitchPortFwdDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdDeviceID must be specified if op_SwitchPortFwdDeviceID is specified. If the rlike or not rlike value is specified in the op_SwitchPortFwdDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortFwdDeviceID: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortFwdEndTime: If op_SwitchPortFwdEndTime is specified, this value will be compared to the value in SwitchPortFwdEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdEndTime must be specified if op_SwitchPortFwdEndTime is specified.
+             :param val_c_SwitchPortFwdEndTime: If op_SwitchPortFwdEndTime is specified, this value will be compared to the value in SwitchPortFwdEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdEndTime must be specified if op_SwitchPortFwdEndTime is specified. If the rlike or not rlike value is specified in the op_SwitchPortFwdEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortFwdEndTime: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortFwdID: If op_SwitchPortFwdID is specified, this value will be compared to the value in SwitchPortFwdID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdID must be specified if op_SwitchPortFwdID is specified.
+             :param val_c_SwitchPortFwdID: If op_SwitchPortFwdID is specified, this value will be compared to the value in SwitchPortFwdID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdID must be specified if op_SwitchPortFwdID is specified. If the rlike or not rlike value is specified in the op_SwitchPortFwdID field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortFwdID: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortFwdInterfaceID: If op_SwitchPortFwdInterfaceID is specified, this value will be compared to the value in SwitchPortFwdInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdInterfaceID must be specified if op_SwitchPortFwdInterfaceID is specified.
+             :param val_c_SwitchPortFwdInterfaceID: If op_SwitchPortFwdInterfaceID is specified, this value will be compared to the value in SwitchPortFwdInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdInterfaceID must be specified if op_SwitchPortFwdInterfaceID is specified. If the rlike or not rlike value is specified in the op_SwitchPortFwdInterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortFwdInterfaceID: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortFwdMAC: If op_SwitchPortFwdMAC is specified, this value will be compared to the value in SwitchPortFwdMAC using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdMAC must be specified if op_SwitchPortFwdMAC is specified.
+             :param val_c_SwitchPortFwdMAC: If op_SwitchPortFwdMAC is specified, this value will be compared to the value in SwitchPortFwdMAC using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdMAC must be specified if op_SwitchPortFwdMAC is specified. If the rlike or not rlike value is specified in the op_SwitchPortFwdMAC field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortFwdMAC: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortFwdStartTime: If op_SwitchPortFwdStartTime is specified, this value will be compared to the value in SwitchPortFwdStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdStartTime must be specified if op_SwitchPortFwdStartTime is specified.
+             :param val_c_SwitchPortFwdStartTime: If op_SwitchPortFwdStartTime is specified, this value will be compared to the value in SwitchPortFwdStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdStartTime must be specified if op_SwitchPortFwdStartTime is specified. If the rlike or not rlike value is specified in the op_SwitchPortFwdStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortFwdStartTime: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortFwdStatus: If op_SwitchPortFwdStatus is specified, this value will be compared to the value in SwitchPortFwdStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdStatus must be specified if op_SwitchPortFwdStatus is specified.
+             :param val_c_SwitchPortFwdStatus: If op_SwitchPortFwdStatus is specified, this value will be compared to the value in SwitchPortFwdStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdStatus must be specified if op_SwitchPortFwdStatus is specified. If the rlike or not rlike value is specified in the op_SwitchPortFwdStatus field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortFwdStatus: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortFwdTimestamp: If op_SwitchPortFwdTimestamp is specified, this value will be compared to the value in SwitchPortFwdTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdTimestamp must be specified if op_SwitchPortFwdTimestamp is specified.
+             :param val_c_SwitchPortFwdTimestamp: If op_SwitchPortFwdTimestamp is specified, this value will be compared to the value in SwitchPortFwdTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdTimestamp must be specified if op_SwitchPortFwdTimestamp is specified. If the rlike or not rlike value is specified in the op_SwitchPortFwdTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortFwdTimestamp: String
 
             |  ``api version min:`` None
@@ -911,7 +879,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortFwdVlanID: If op_SwitchPortFwdVlanID is specified, this value will be compared to the value in SwitchPortFwdVlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdVlanID must be specified if op_SwitchPortFwdVlanID is specified.
+             :param val_c_SwitchPortFwdVlanID: If op_SwitchPortFwdVlanID is specified, this value will be compared to the value in SwitchPortFwdVlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdVlanID must be specified if op_SwitchPortFwdVlanID is specified. If the rlike or not rlike value is specified in the op_SwitchPortFwdVlanID field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortFwdVlanID: String
 
             |  ``api version min:`` None
@@ -935,7 +903,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortFwdVlanIndex: If op_SwitchPortFwdVlanIndex is specified, this value will be compared to the value in SwitchPortFwdVlanIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdVlanIndex must be specified if op_SwitchPortFwdVlanIndex is specified.
+             :param val_c_SwitchPortFwdVlanIndex: If op_SwitchPortFwdVlanIndex is specified, this value will be compared to the value in SwitchPortFwdVlanIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortFwdVlanIndex must be specified if op_SwitchPortFwdVlanIndex is specified. If the rlike or not rlike value is specified in the op_SwitchPortFwdVlanIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortFwdVlanIndex: String
 
             |  ``api version min:`` None
@@ -959,7 +927,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchPortNumber: If op_SwitchPortNumber is specified, this value will be compared to the value in SwitchPortNumber using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortNumber must be specified if op_SwitchPortNumber is specified.
+             :param val_c_SwitchPortNumber: If op_SwitchPortNumber is specified, this value will be compared to the value in SwitchPortNumber using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchPortNumber must be specified if op_SwitchPortNumber is specified. If the rlike or not rlike value is specified in the op_SwitchPortNumber field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchPortNumber: String
 
             |  ``api version min:`` None
@@ -1015,7 +983,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` SwitchPortFwdID
 
-             :param sort: The data field(s) to use for sorting the output. Default is SwitchPortFwdID. Valid values are SwitchPortFwdID, DataSourceID, DeviceID, SwitchPortNumber, InterfaceID, SwitchPortFwdStartTime, SwitchPortFwdEndTime, SwitchPortFwdChangedCols, SwitchPortFwdTimestamp, SwitchPortFwdMAC, SwitchPortFwdStatus, SwitchPortFwdVlanIndex, SwitchPortFwdVlanID, SwitchPortFwdInterfaceID, SwitchPortFwdDeviceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are SwitchPortFwdID, DataSourceID, DeviceID, SwitchPortNumber, InterfaceID, SwitchPortFwdStartTime, SwitchPortFwdEndTime, SwitchPortFwdChangedCols, SwitchPortFwdTimestamp, SwitchPortFwdMAC, SwitchPortFwdStatus, SwitchPortFwdVlanIndex, SwitchPortFwdVlanID, SwitchPortFwdInterfaceID, SwitchPortFwdDeviceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ class SwitchPortFwdBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1033,22 +1001,6 @@ class SwitchPortFwdBroker(Broker):
 
              :param select: The list of attributes to return for each SwitchPortFwd. Valid values are SwitchPortFwdID, DataSourceID, DeviceID, SwitchPortNumber, InterfaceID, SwitchPortFwdStartTime, SwitchPortFwdEndTime, SwitchPortFwdChangedCols, SwitchPortFwdTimestamp, SwitchPortFwdMAC, SwitchPortFwdStatus, SwitchPortFwdVlanIndex, SwitchPortFwdVlanID, SwitchPortFwdInterfaceID, SwitchPortFwdDeviceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

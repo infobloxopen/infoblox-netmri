@@ -27,6 +27,9 @@ class AuthPrivilegeRemote(RemoteModel):
     |  ``reference:`` The internal key used to identify this privilege; this is the value shown in the API documentation page for those methods requiring a privilege.
     |  ``attribute type:`` string
 
+    |  ``is_system:`` A flag indicating whether or not this is a build-in Privilege. Built-in Privileges may not be modified.
+    |  ``attribute type:`` number
+
     """
 
     properties = ("id",
@@ -36,4 +39,5 @@ class AuthPrivilegeRemote(RemoteModel):
                   "created_at",
                   "updated_at",
                   "reference",
+                  "is_system",
                   )

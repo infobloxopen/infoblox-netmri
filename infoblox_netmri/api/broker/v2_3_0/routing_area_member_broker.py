@@ -48,7 +48,7 @@ class RoutingAreaMemberBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available routing area members. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available routing area members. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -153,7 +153,7 @@ class RoutingAreaMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` RoutingAreaMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is RoutingAreaMemberID. Valid values are RoutingAreaMemberID, RoutingAreaMemberStartTime, RoutingAreaMemberEndTime, RoutingAreaMemberChangedCols, RoutingAreaMemberTimestamp, RoutingAreaMemberSource, DataSourceID, DeviceID, RoutingAreaID, OspfAuthType, OspfImportAsExtern, OspfSpfRunsDelta, OspfAreaBdrRtrCount, OspfAsBdrRtrCount, OspfAreaLsaCount, OspfAreaLsaCksumSum, OspfAreaSummaryInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are RoutingAreaMemberID, RoutingAreaMemberStartTime, RoutingAreaMemberEndTime, RoutingAreaMemberChangedCols, RoutingAreaMemberTimestamp, RoutingAreaMemberSource, DataSourceID, DeviceID, RoutingAreaID, OspfAuthType, OspfImportAsExtern, OspfSpfRunsDelta, OspfAreaBdrRtrCount, OspfAsBdrRtrCount, OspfAreaLsaCount, OspfAreaLsaCksumSum, OspfAreaSummaryInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -161,7 +161,7 @@ class RoutingAreaMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -171,22 +171,6 @@ class RoutingAreaMemberBroker(Broker):
 
              :param select: The list of attributes to return for each RoutingAreaMember. Valid values are RoutingAreaMemberID, RoutingAreaMemberStartTime, RoutingAreaMemberEndTime, RoutingAreaMemberChangedCols, RoutingAreaMemberTimestamp, RoutingAreaMemberSource, DataSourceID, DeviceID, RoutingAreaID, OspfAuthType, OspfImportAsExtern, OspfSpfRunsDelta, OspfAreaBdrRtrCount, OspfAsBdrRtrCount, OspfAreaLsaCount, OspfAreaLsaCksumSum, OspfAreaSummaryInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -540,7 +524,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` RoutingAreaMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is RoutingAreaMemberID. Valid values are RoutingAreaMemberID, RoutingAreaMemberStartTime, RoutingAreaMemberEndTime, RoutingAreaMemberChangedCols, RoutingAreaMemberTimestamp, RoutingAreaMemberSource, DataSourceID, DeviceID, RoutingAreaID, OspfAuthType, OspfImportAsExtern, OspfSpfRunsDelta, OspfAreaBdrRtrCount, OspfAsBdrRtrCount, OspfAreaLsaCount, OspfAreaLsaCksumSum, OspfAreaSummaryInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are RoutingAreaMemberID, RoutingAreaMemberStartTime, RoutingAreaMemberEndTime, RoutingAreaMemberChangedCols, RoutingAreaMemberTimestamp, RoutingAreaMemberSource, DataSourceID, DeviceID, RoutingAreaID, OspfAuthType, OspfImportAsExtern, OspfSpfRunsDelta, OspfAreaBdrRtrCount, OspfAsBdrRtrCount, OspfAreaLsaCount, OspfAreaLsaCksumSum, OspfAreaSummaryInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -548,7 +532,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -558,22 +542,6 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
 
              :param select: The list of attributes to return for each RoutingAreaMember. Valid values are RoutingAreaMemberID, RoutingAreaMemberStartTime, RoutingAreaMemberEndTime, RoutingAreaMemberChangedCols, RoutingAreaMemberTimestamp, RoutingAreaMemberSource, DataSourceID, DeviceID, RoutingAreaID, OspfAuthType, OspfImportAsExtern, OspfSpfRunsDelta, OspfAreaBdrRtrCount, OspfAsBdrRtrCount, OspfAreaLsaCount, OspfAreaLsaCksumSum, OspfAreaSummaryInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -631,7 +599,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -655,7 +623,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -679,7 +647,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfAreaBdrRtrCount: If op_OspfAreaBdrRtrCount is specified, this value will be compared to the value in OspfAreaBdrRtrCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfAreaBdrRtrCount must be specified if op_OspfAreaBdrRtrCount is specified.
+             :param val_c_OspfAreaBdrRtrCount: If op_OspfAreaBdrRtrCount is specified, this value will be compared to the value in OspfAreaBdrRtrCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfAreaBdrRtrCount must be specified if op_OspfAreaBdrRtrCount is specified. If the rlike or not rlike value is specified in the op_OspfAreaBdrRtrCount field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfAreaBdrRtrCount: String
 
             |  ``api version min:`` None
@@ -703,7 +671,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfAreaLsaCksumSum: If op_OspfAreaLsaCksumSum is specified, this value will be compared to the value in OspfAreaLsaCksumSum using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfAreaLsaCksumSum must be specified if op_OspfAreaLsaCksumSum is specified.
+             :param val_c_OspfAreaLsaCksumSum: If op_OspfAreaLsaCksumSum is specified, this value will be compared to the value in OspfAreaLsaCksumSum using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfAreaLsaCksumSum must be specified if op_OspfAreaLsaCksumSum is specified. If the rlike or not rlike value is specified in the op_OspfAreaLsaCksumSum field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfAreaLsaCksumSum: String
 
             |  ``api version min:`` None
@@ -727,7 +695,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfAreaLsaCount: If op_OspfAreaLsaCount is specified, this value will be compared to the value in OspfAreaLsaCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfAreaLsaCount must be specified if op_OspfAreaLsaCount is specified.
+             :param val_c_OspfAreaLsaCount: If op_OspfAreaLsaCount is specified, this value will be compared to the value in OspfAreaLsaCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfAreaLsaCount must be specified if op_OspfAreaLsaCount is specified. If the rlike or not rlike value is specified in the op_OspfAreaLsaCount field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfAreaLsaCount: String
 
             |  ``api version min:`` None
@@ -755,7 +723,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfAreaSummaryInd: If op_OspfAreaSummaryInd is specified, this value will be compared to the value in OspfAreaSummaryInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfAreaSummaryInd must be specified if op_OspfAreaSummaryInd is specified.
+             :param val_c_OspfAreaSummaryInd: If op_OspfAreaSummaryInd is specified, this value will be compared to the value in OspfAreaSummaryInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfAreaSummaryInd must be specified if op_OspfAreaSummaryInd is specified. If the rlike or not rlike value is specified in the op_OspfAreaSummaryInd field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfAreaSummaryInd: String
 
             |  ``api version min:`` None
@@ -779,7 +747,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfAsBdrRtrCount: If op_OspfAsBdrRtrCount is specified, this value will be compared to the value in OspfAsBdrRtrCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfAsBdrRtrCount must be specified if op_OspfAsBdrRtrCount is specified.
+             :param val_c_OspfAsBdrRtrCount: If op_OspfAsBdrRtrCount is specified, this value will be compared to the value in OspfAsBdrRtrCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfAsBdrRtrCount must be specified if op_OspfAsBdrRtrCount is specified. If the rlike or not rlike value is specified in the op_OspfAsBdrRtrCount field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfAsBdrRtrCount: String
 
             |  ``api version min:`` None
@@ -803,7 +771,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfAuthType: If op_OspfAuthType is specified, this value will be compared to the value in OspfAuthType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfAuthType must be specified if op_OspfAuthType is specified.
+             :param val_c_OspfAuthType: If op_OspfAuthType is specified, this value will be compared to the value in OspfAuthType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfAuthType must be specified if op_OspfAuthType is specified. If the rlike or not rlike value is specified in the op_OspfAuthType field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfAuthType: String
 
             |  ``api version min:`` None
@@ -827,7 +795,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfImportAsExtern: If op_OspfImportAsExtern is specified, this value will be compared to the value in OspfImportAsExtern using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfImportAsExtern must be specified if op_OspfImportAsExtern is specified.
+             :param val_c_OspfImportAsExtern: If op_OspfImportAsExtern is specified, this value will be compared to the value in OspfImportAsExtern using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfImportAsExtern must be specified if op_OspfImportAsExtern is specified. If the rlike or not rlike value is specified in the op_OspfImportAsExtern field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfImportAsExtern: String
 
             |  ``api version min:`` None
@@ -851,7 +819,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfSpfRunsDelta: If op_OspfSpfRunsDelta is specified, this value will be compared to the value in OspfSpfRunsDelta using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfSpfRunsDelta must be specified if op_OspfSpfRunsDelta is specified.
+             :param val_c_OspfSpfRunsDelta: If op_OspfSpfRunsDelta is specified, this value will be compared to the value in OspfSpfRunsDelta using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfSpfRunsDelta must be specified if op_OspfSpfRunsDelta is specified. If the rlike or not rlike value is specified in the op_OspfSpfRunsDelta field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfSpfRunsDelta: String
 
             |  ``api version min:`` None
@@ -875,7 +843,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaID: If op_RoutingAreaID is specified, this value will be compared to the value in RoutingAreaID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaID must be specified if op_RoutingAreaID is specified.
+             :param val_c_RoutingAreaID: If op_RoutingAreaID is specified, this value will be compared to the value in RoutingAreaID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaID must be specified if op_RoutingAreaID is specified. If the rlike or not rlike value is specified in the op_RoutingAreaID field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaID: String
 
             |  ``api version min:`` None
@@ -899,7 +867,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaMemberChangedCols: If op_RoutingAreaMemberChangedCols is specified, this value will be compared to the value in RoutingAreaMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaMemberChangedCols must be specified if op_RoutingAreaMemberChangedCols is specified.
+             :param val_c_RoutingAreaMemberChangedCols: If op_RoutingAreaMemberChangedCols is specified, this value will be compared to the value in RoutingAreaMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaMemberChangedCols must be specified if op_RoutingAreaMemberChangedCols is specified. If the rlike or not rlike value is specified in the op_RoutingAreaMemberChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaMemberChangedCols: String
 
             |  ``api version min:`` None
@@ -923,7 +891,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaMemberEndTime: If op_RoutingAreaMemberEndTime is specified, this value will be compared to the value in RoutingAreaMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaMemberEndTime must be specified if op_RoutingAreaMemberEndTime is specified.
+             :param val_c_RoutingAreaMemberEndTime: If op_RoutingAreaMemberEndTime is specified, this value will be compared to the value in RoutingAreaMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaMemberEndTime must be specified if op_RoutingAreaMemberEndTime is specified. If the rlike or not rlike value is specified in the op_RoutingAreaMemberEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaMemberEndTime: String
 
             |  ``api version min:`` None
@@ -947,7 +915,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaMemberID: If op_RoutingAreaMemberID is specified, this value will be compared to the value in RoutingAreaMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaMemberID must be specified if op_RoutingAreaMemberID is specified.
+             :param val_c_RoutingAreaMemberID: If op_RoutingAreaMemberID is specified, this value will be compared to the value in RoutingAreaMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaMemberID must be specified if op_RoutingAreaMemberID is specified. If the rlike or not rlike value is specified in the op_RoutingAreaMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaMemberID: String
 
             |  ``api version min:`` None
@@ -971,7 +939,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaMemberSource: If op_RoutingAreaMemberSource is specified, this value will be compared to the value in RoutingAreaMemberSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaMemberSource must be specified if op_RoutingAreaMemberSource is specified.
+             :param val_c_RoutingAreaMemberSource: If op_RoutingAreaMemberSource is specified, this value will be compared to the value in RoutingAreaMemberSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaMemberSource must be specified if op_RoutingAreaMemberSource is specified. If the rlike or not rlike value is specified in the op_RoutingAreaMemberSource field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaMemberSource: String
 
             |  ``api version min:`` None
@@ -995,7 +963,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaMemberStartTime: If op_RoutingAreaMemberStartTime is specified, this value will be compared to the value in RoutingAreaMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaMemberStartTime must be specified if op_RoutingAreaMemberStartTime is specified.
+             :param val_c_RoutingAreaMemberStartTime: If op_RoutingAreaMemberStartTime is specified, this value will be compared to the value in RoutingAreaMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaMemberStartTime must be specified if op_RoutingAreaMemberStartTime is specified. If the rlike or not rlike value is specified in the op_RoutingAreaMemberStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaMemberStartTime: String
 
             |  ``api version min:`` None
@@ -1019,7 +987,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaMemberTimestamp: If op_RoutingAreaMemberTimestamp is specified, this value will be compared to the value in RoutingAreaMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaMemberTimestamp must be specified if op_RoutingAreaMemberTimestamp is specified.
+             :param val_c_RoutingAreaMemberTimestamp: If op_RoutingAreaMemberTimestamp is specified, this value will be compared to the value in RoutingAreaMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaMemberTimestamp must be specified if op_RoutingAreaMemberTimestamp is specified. If the rlike or not rlike value is specified in the op_RoutingAreaMemberTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaMemberTimestamp: String
 
             |  ``api version min:`` None
@@ -1075,7 +1043,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` RoutingAreaMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is RoutingAreaMemberID. Valid values are RoutingAreaMemberID, RoutingAreaMemberStartTime, RoutingAreaMemberEndTime, RoutingAreaMemberChangedCols, RoutingAreaMemberTimestamp, RoutingAreaMemberSource, DataSourceID, DeviceID, RoutingAreaID, OspfAuthType, OspfImportAsExtern, OspfSpfRunsDelta, OspfAreaBdrRtrCount, OspfAsBdrRtrCount, OspfAreaLsaCount, OspfAreaLsaCksumSum, OspfAreaSummaryInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are RoutingAreaMemberID, RoutingAreaMemberStartTime, RoutingAreaMemberEndTime, RoutingAreaMemberChangedCols, RoutingAreaMemberTimestamp, RoutingAreaMemberSource, DataSourceID, DeviceID, RoutingAreaID, OspfAuthType, OspfImportAsExtern, OspfSpfRunsDelta, OspfAreaBdrRtrCount, OspfAsBdrRtrCount, OspfAreaLsaCount, OspfAreaLsaCksumSum, OspfAreaSummaryInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1083,7 +1051,7 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1093,22 +1061,6 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
 
              :param select: The list of attributes to return for each RoutingAreaMember. Valid values are RoutingAreaMemberID, RoutingAreaMemberStartTime, RoutingAreaMemberEndTime, RoutingAreaMemberChangedCols, RoutingAreaMemberTimestamp, RoutingAreaMemberSource, DataSourceID, DeviceID, RoutingAreaID, OspfAuthType, OspfImportAsExtern, OspfSpfRunsDelta, OspfAreaBdrRtrCount, OspfAsBdrRtrCount, OspfAreaLsaCount, OspfAreaLsaCksumSum, OspfAreaSummaryInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1152,8 +1104,8 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The routing area or autonomous system associated with this membership.
-             :rtype : RoutingArea
+             :return routing_area: The routing area or autonomous system associated with this membership.
+             :rtype routing_area: RoutingArea
 
             """
 
@@ -1179,8 +1131,8 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The NetMRI collector that collected this data record.
-             :rtype : DataSource
+             :return data_source: The NetMRI collector that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1206,8 +1158,8 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The interface used to participate in this routing area.
-             :rtype : Interface
+             :return interface: The interface used to participate in this routing area.
+             :rtype interface: Interface
 
             """
 
@@ -1233,8 +1185,8 @@ Otherwise, the router will neither originate nor propagate summary LSAs. It will
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this routing area membership was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this routing area membership was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

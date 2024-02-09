@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class IfVlanRemote(RemoteModel):
     """
-    VLANs that an interface is in along with the STP state of the interface.  Also includes SVIs (VlanInterfaceInd = 1) and peer interfaces attached to access ports (VlanExtensionInd = 1).
+    VLANs that an interface is in along with the STP state of the interface. Also includes SVIs (VlanInterfaceInd = 1) and peer interfaces attached to access ports (VlanExtensionInd = 1).
 
 
     |  ``DataSourceID:`` The internal NetMRI identifier for the collector NetMRI that collected this data record.

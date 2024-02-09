@@ -48,7 +48,7 @@ class VlanMemberBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available vlan members. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available vlan members. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -153,7 +153,7 @@ class VlanMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VlanMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VlanMemberID. Valid values are VlanMemberID, VlanMemberStartTime, VlanMemberEndTime, VlanMemberChangedCols, VlanMemberTimestamp, DataSourceID, DeviceID, VlanID, InterfaceID, BridgeMemberInd, VlanState, VlanType, VlanName, VTPDomain, RootBridgeAddress, BaseBridgeAddress, BaseNumPorts, StpDesignatedRoot, StpProtocolSpecification, StpPriority, StpTopChanges, StpRootCost, StpRootPort, StpMaxAge, StpHelloTime, StpHoldTime, StpForwardDelay, StpBridgeMaxAge, StpBridgeHelloTime, StpBridgeForwardDelay.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VlanMemberID, VlanMemberStartTime, VlanMemberEndTime, VlanMemberChangedCols, VlanMemberTimestamp, DataSourceID, DeviceID, VlanID, InterfaceID, BridgeMemberInd, VlanState, VlanType, VlanName, VTPDomain, RootBridgeAddress, BaseBridgeAddress, BaseNumPorts, StpDesignatedRoot, StpProtocolSpecification, StpPriority, StpTopChanges, StpRootCost, StpRootPort, StpMaxAge, StpHelloTime, StpHoldTime, StpForwardDelay, StpBridgeMaxAge, StpBridgeHelloTime, StpBridgeForwardDelay.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -161,7 +161,7 @@ class VlanMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -171,22 +171,6 @@ class VlanMemberBroker(Broker):
 
              :param select: The list of attributes to return for each VlanMember. Valid values are VlanMemberID, VlanMemberStartTime, VlanMemberEndTime, VlanMemberChangedCols, VlanMemberTimestamp, DataSourceID, DeviceID, VlanID, InterfaceID, BridgeMemberInd, VlanState, VlanType, VlanName, VTPDomain, RootBridgeAddress, BaseBridgeAddress, BaseNumPorts, StpDesignatedRoot, StpProtocolSpecification, StpPriority, StpTopChanges, StpRootCost, StpRootPort, StpMaxAge, StpHelloTime, StpHoldTime, StpForwardDelay, StpBridgeMaxAge, StpBridgeHelloTime, StpBridgeForwardDelay. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -756,7 +740,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` VlanMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VlanMemberID. Valid values are VlanMemberID, VlanMemberStartTime, VlanMemberEndTime, VlanMemberChangedCols, VlanMemberTimestamp, DataSourceID, DeviceID, VlanID, InterfaceID, BridgeMemberInd, VlanState, VlanType, VlanName, VTPDomain, RootBridgeAddress, BaseBridgeAddress, BaseNumPorts, StpDesignatedRoot, StpProtocolSpecification, StpPriority, StpTopChanges, StpRootCost, StpRootPort, StpMaxAge, StpHelloTime, StpHoldTime, StpForwardDelay, StpBridgeMaxAge, StpBridgeHelloTime, StpBridgeForwardDelay.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VlanMemberID, VlanMemberStartTime, VlanMemberEndTime, VlanMemberChangedCols, VlanMemberTimestamp, DataSourceID, DeviceID, VlanID, InterfaceID, BridgeMemberInd, VlanState, VlanType, VlanName, VTPDomain, RootBridgeAddress, BaseBridgeAddress, BaseNumPorts, StpDesignatedRoot, StpProtocolSpecification, StpPriority, StpTopChanges, StpRootCost, StpRootPort, StpMaxAge, StpHelloTime, StpHoldTime, StpForwardDelay, StpBridgeMaxAge, StpBridgeHelloTime, StpBridgeForwardDelay.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -764,7 +748,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -774,22 +758,6 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
 
              :param select: The list of attributes to return for each VlanMember. Valid values are VlanMemberID, VlanMemberStartTime, VlanMemberEndTime, VlanMemberChangedCols, VlanMemberTimestamp, DataSourceID, DeviceID, VlanID, InterfaceID, BridgeMemberInd, VlanState, VlanType, VlanName, VTPDomain, RootBridgeAddress, BaseBridgeAddress, BaseNumPorts, StpDesignatedRoot, StpProtocolSpecification, StpPriority, StpTopChanges, StpRootCost, StpRootPort, StpMaxAge, StpHelloTime, StpHoldTime, StpForwardDelay, StpBridgeMaxAge, StpBridgeHelloTime, StpBridgeForwardDelay. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -855,7 +823,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BaseBridgeAddress: If op_BaseBridgeAddress is specified, this value will be compared to the value in BaseBridgeAddress using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BaseBridgeAddress must be specified if op_BaseBridgeAddress is specified.
+             :param val_c_BaseBridgeAddress: If op_BaseBridgeAddress is specified, this value will be compared to the value in BaseBridgeAddress using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BaseBridgeAddress must be specified if op_BaseBridgeAddress is specified. If the rlike or not rlike value is specified in the op_BaseBridgeAddress field, escape regex special characters because a regular expression is expected.
              :type val_c_BaseBridgeAddress: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BaseNumPorts: If op_BaseNumPorts is specified, this value will be compared to the value in BaseNumPorts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BaseNumPorts must be specified if op_BaseNumPorts is specified.
+             :param val_c_BaseNumPorts: If op_BaseNumPorts is specified, this value will be compared to the value in BaseNumPorts using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BaseNumPorts must be specified if op_BaseNumPorts is specified. If the rlike or not rlike value is specified in the op_BaseNumPorts field, escape regex special characters because a regular expression is expected.
              :type val_c_BaseNumPorts: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BridgeMemberInd: If op_BridgeMemberInd is specified, this value will be compared to the value in BridgeMemberInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BridgeMemberInd must be specified if op_BridgeMemberInd is specified.
+             :param val_c_BridgeMemberInd: If op_BridgeMemberInd is specified, this value will be compared to the value in BridgeMemberInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BridgeMemberInd must be specified if op_BridgeMemberInd is specified. If the rlike or not rlike value is specified in the op_BridgeMemberInd field, escape regex special characters because a regular expression is expected.
              :type val_c_BridgeMemberInd: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -999,7 +967,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RootBridgeAddress: If op_RootBridgeAddress is specified, this value will be compared to the value in RootBridgeAddress using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RootBridgeAddress must be specified if op_RootBridgeAddress is specified.
+             :param val_c_RootBridgeAddress: If op_RootBridgeAddress is specified, this value will be compared to the value in RootBridgeAddress using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RootBridgeAddress must be specified if op_RootBridgeAddress is specified. If the rlike or not rlike value is specified in the op_RootBridgeAddress field, escape regex special characters because a regular expression is expected.
              :type val_c_RootBridgeAddress: String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpBridgeForwardDelay: If op_StpBridgeForwardDelay is specified, this value will be compared to the value in StpBridgeForwardDelay using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpBridgeForwardDelay must be specified if op_StpBridgeForwardDelay is specified.
+             :param val_c_StpBridgeForwardDelay: If op_StpBridgeForwardDelay is specified, this value will be compared to the value in StpBridgeForwardDelay using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpBridgeForwardDelay must be specified if op_StpBridgeForwardDelay is specified. If the rlike or not rlike value is specified in the op_StpBridgeForwardDelay field, escape regex special characters because a regular expression is expected.
              :type val_c_StpBridgeForwardDelay: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpBridgeHelloTime: If op_StpBridgeHelloTime is specified, this value will be compared to the value in StpBridgeHelloTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpBridgeHelloTime must be specified if op_StpBridgeHelloTime is specified.
+             :param val_c_StpBridgeHelloTime: If op_StpBridgeHelloTime is specified, this value will be compared to the value in StpBridgeHelloTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpBridgeHelloTime must be specified if op_StpBridgeHelloTime is specified. If the rlike or not rlike value is specified in the op_StpBridgeHelloTime field, escape regex special characters because a regular expression is expected.
              :type val_c_StpBridgeHelloTime: String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpBridgeMaxAge: If op_StpBridgeMaxAge is specified, this value will be compared to the value in StpBridgeMaxAge using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpBridgeMaxAge must be specified if op_StpBridgeMaxAge is specified.
+             :param val_c_StpBridgeMaxAge: If op_StpBridgeMaxAge is specified, this value will be compared to the value in StpBridgeMaxAge using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpBridgeMaxAge must be specified if op_StpBridgeMaxAge is specified. If the rlike or not rlike value is specified in the op_StpBridgeMaxAge field, escape regex special characters because a regular expression is expected.
              :type val_c_StpBridgeMaxAge: String
 
             |  ``api version min:`` None
@@ -1095,7 +1063,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpDesignatedRoot: If op_StpDesignatedRoot is specified, this value will be compared to the value in StpDesignatedRoot using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpDesignatedRoot must be specified if op_StpDesignatedRoot is specified.
+             :param val_c_StpDesignatedRoot: If op_StpDesignatedRoot is specified, this value will be compared to the value in StpDesignatedRoot using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpDesignatedRoot must be specified if op_StpDesignatedRoot is specified. If the rlike or not rlike value is specified in the op_StpDesignatedRoot field, escape regex special characters because a regular expression is expected.
              :type val_c_StpDesignatedRoot: String
 
             |  ``api version min:`` None
@@ -1119,7 +1087,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpForwardDelay: If op_StpForwardDelay is specified, this value will be compared to the value in StpForwardDelay using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpForwardDelay must be specified if op_StpForwardDelay is specified.
+             :param val_c_StpForwardDelay: If op_StpForwardDelay is specified, this value will be compared to the value in StpForwardDelay using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpForwardDelay must be specified if op_StpForwardDelay is specified. If the rlike or not rlike value is specified in the op_StpForwardDelay field, escape regex special characters because a regular expression is expected.
              :type val_c_StpForwardDelay: String
 
             |  ``api version min:`` None
@@ -1143,7 +1111,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpHelloTime: If op_StpHelloTime is specified, this value will be compared to the value in StpHelloTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpHelloTime must be specified if op_StpHelloTime is specified.
+             :param val_c_StpHelloTime: If op_StpHelloTime is specified, this value will be compared to the value in StpHelloTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpHelloTime must be specified if op_StpHelloTime is specified. If the rlike or not rlike value is specified in the op_StpHelloTime field, escape regex special characters because a regular expression is expected.
              :type val_c_StpHelloTime: String
 
             |  ``api version min:`` None
@@ -1167,7 +1135,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpHoldTime: If op_StpHoldTime is specified, this value will be compared to the value in StpHoldTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpHoldTime must be specified if op_StpHoldTime is specified.
+             :param val_c_StpHoldTime: If op_StpHoldTime is specified, this value will be compared to the value in StpHoldTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpHoldTime must be specified if op_StpHoldTime is specified. If the rlike or not rlike value is specified in the op_StpHoldTime field, escape regex special characters because a regular expression is expected.
              :type val_c_StpHoldTime: String
 
             |  ``api version min:`` None
@@ -1191,7 +1159,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpMaxAge: If op_StpMaxAge is specified, this value will be compared to the value in StpMaxAge using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpMaxAge must be specified if op_StpMaxAge is specified.
+             :param val_c_StpMaxAge: If op_StpMaxAge is specified, this value will be compared to the value in StpMaxAge using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpMaxAge must be specified if op_StpMaxAge is specified. If the rlike or not rlike value is specified in the op_StpMaxAge field, escape regex special characters because a regular expression is expected.
              :type val_c_StpMaxAge: String
 
             |  ``api version min:`` None
@@ -1215,7 +1183,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpPriority: If op_StpPriority is specified, this value will be compared to the value in StpPriority using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpPriority must be specified if op_StpPriority is specified.
+             :param val_c_StpPriority: If op_StpPriority is specified, this value will be compared to the value in StpPriority using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpPriority must be specified if op_StpPriority is specified. If the rlike or not rlike value is specified in the op_StpPriority field, escape regex special characters because a regular expression is expected.
              :type val_c_StpPriority: String
 
             |  ``api version min:`` None
@@ -1239,7 +1207,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpProtocolSpecification: If op_StpProtocolSpecification is specified, this value will be compared to the value in StpProtocolSpecification using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpProtocolSpecification must be specified if op_StpProtocolSpecification is specified.
+             :param val_c_StpProtocolSpecification: If op_StpProtocolSpecification is specified, this value will be compared to the value in StpProtocolSpecification using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpProtocolSpecification must be specified if op_StpProtocolSpecification is specified. If the rlike or not rlike value is specified in the op_StpProtocolSpecification field, escape regex special characters because a regular expression is expected.
              :type val_c_StpProtocolSpecification: String
 
             |  ``api version min:`` None
@@ -1263,7 +1231,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpRootCost: If op_StpRootCost is specified, this value will be compared to the value in StpRootCost using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpRootCost must be specified if op_StpRootCost is specified.
+             :param val_c_StpRootCost: If op_StpRootCost is specified, this value will be compared to the value in StpRootCost using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpRootCost must be specified if op_StpRootCost is specified. If the rlike or not rlike value is specified in the op_StpRootCost field, escape regex special characters because a regular expression is expected.
              :type val_c_StpRootCost: String
 
             |  ``api version min:`` None
@@ -1287,7 +1255,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpRootPort: If op_StpRootPort is specified, this value will be compared to the value in StpRootPort using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpRootPort must be specified if op_StpRootPort is specified.
+             :param val_c_StpRootPort: If op_StpRootPort is specified, this value will be compared to the value in StpRootPort using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpRootPort must be specified if op_StpRootPort is specified. If the rlike or not rlike value is specified in the op_StpRootPort field, escape regex special characters because a regular expression is expected.
              :type val_c_StpRootPort: String
 
             |  ``api version min:`` None
@@ -1311,7 +1279,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpTopChanges: If op_StpTopChanges is specified, this value will be compared to the value in StpTopChanges using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpTopChanges must be specified if op_StpTopChanges is specified.
+             :param val_c_StpTopChanges: If op_StpTopChanges is specified, this value will be compared to the value in StpTopChanges using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpTopChanges must be specified if op_StpTopChanges is specified. If the rlike or not rlike value is specified in the op_StpTopChanges field, escape regex special characters because a regular expression is expected.
              :type val_c_StpTopChanges: String
 
             |  ``api version min:`` None
@@ -1335,7 +1303,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VTPDomain: If op_VTPDomain is specified, this value will be compared to the value in VTPDomain using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VTPDomain must be specified if op_VTPDomain is specified.
+             :param val_c_VTPDomain: If op_VTPDomain is specified, this value will be compared to the value in VTPDomain using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VTPDomain must be specified if op_VTPDomain is specified. If the rlike or not rlike value is specified in the op_VTPDomain field, escape regex special characters because a regular expression is expected.
              :type val_c_VTPDomain: String
 
             |  ``api version min:`` None
@@ -1359,7 +1327,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanID: If op_VlanID is specified, this value will be compared to the value in VlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanID must be specified if op_VlanID is specified.
+             :param val_c_VlanID: If op_VlanID is specified, this value will be compared to the value in VlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanID must be specified if op_VlanID is specified. If the rlike or not rlike value is specified in the op_VlanID field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanID: String
 
             |  ``api version min:`` None
@@ -1383,7 +1351,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanMemberChangedCols: If op_VlanMemberChangedCols is specified, this value will be compared to the value in VlanMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanMemberChangedCols must be specified if op_VlanMemberChangedCols is specified.
+             :param val_c_VlanMemberChangedCols: If op_VlanMemberChangedCols is specified, this value will be compared to the value in VlanMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanMemberChangedCols must be specified if op_VlanMemberChangedCols is specified. If the rlike or not rlike value is specified in the op_VlanMemberChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanMemberChangedCols: String
 
             |  ``api version min:`` None
@@ -1407,7 +1375,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanMemberEndTime: If op_VlanMemberEndTime is specified, this value will be compared to the value in VlanMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanMemberEndTime must be specified if op_VlanMemberEndTime is specified.
+             :param val_c_VlanMemberEndTime: If op_VlanMemberEndTime is specified, this value will be compared to the value in VlanMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanMemberEndTime must be specified if op_VlanMemberEndTime is specified. If the rlike or not rlike value is specified in the op_VlanMemberEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanMemberEndTime: String
 
             |  ``api version min:`` None
@@ -1431,7 +1399,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanMemberID: If op_VlanMemberID is specified, this value will be compared to the value in VlanMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanMemberID must be specified if op_VlanMemberID is specified.
+             :param val_c_VlanMemberID: If op_VlanMemberID is specified, this value will be compared to the value in VlanMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanMemberID must be specified if op_VlanMemberID is specified. If the rlike or not rlike value is specified in the op_VlanMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanMemberID: String
 
             |  ``api version min:`` None
@@ -1455,7 +1423,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanMemberStartTime: If op_VlanMemberStartTime is specified, this value will be compared to the value in VlanMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanMemberStartTime must be specified if op_VlanMemberStartTime is specified.
+             :param val_c_VlanMemberStartTime: If op_VlanMemberStartTime is specified, this value will be compared to the value in VlanMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanMemberStartTime must be specified if op_VlanMemberStartTime is specified. If the rlike or not rlike value is specified in the op_VlanMemberStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanMemberStartTime: String
 
             |  ``api version min:`` None
@@ -1479,7 +1447,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanMemberTimestamp: If op_VlanMemberTimestamp is specified, this value will be compared to the value in VlanMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanMemberTimestamp must be specified if op_VlanMemberTimestamp is specified.
+             :param val_c_VlanMemberTimestamp: If op_VlanMemberTimestamp is specified, this value will be compared to the value in VlanMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanMemberTimestamp must be specified if op_VlanMemberTimestamp is specified. If the rlike or not rlike value is specified in the op_VlanMemberTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanMemberTimestamp: String
 
             |  ``api version min:`` None
@@ -1503,7 +1471,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanName: If op_VlanName is specified, this value will be compared to the value in VlanName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanName must be specified if op_VlanName is specified.
+             :param val_c_VlanName: If op_VlanName is specified, this value will be compared to the value in VlanName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanName must be specified if op_VlanName is specified. If the rlike or not rlike value is specified in the op_VlanName field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanName: String
 
             |  ``api version min:`` None
@@ -1531,7 +1499,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanState: If op_VlanState is specified, this value will be compared to the value in VlanState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanState must be specified if op_VlanState is specified.
+             :param val_c_VlanState: If op_VlanState is specified, this value will be compared to the value in VlanState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanState must be specified if op_VlanState is specified. If the rlike or not rlike value is specified in the op_VlanState field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanState: String
 
             |  ``api version min:`` None
@@ -1555,7 +1523,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanType: If op_VlanType is specified, this value will be compared to the value in VlanType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanType must be specified if op_VlanType is specified.
+             :param val_c_VlanType: If op_VlanType is specified, this value will be compared to the value in VlanType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanType must be specified if op_VlanType is specified. If the rlike or not rlike value is specified in the op_VlanType field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanType: String
 
             |  ``api version min:`` None
@@ -1579,7 +1547,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_network_id: If op_network_id is specified, this value will be compared to the value in network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_network_id must be specified if op_network_id is specified.
+             :param val_c_network_id: If op_network_id is specified, this value will be compared to the value in network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_network_id must be specified if op_network_id is specified. If the rlike or not rlike value is specified in the op_network_id field, escape regex special characters because a regular expression is expected.
              :type val_c_network_id: String
 
             |  ``api version min:`` None
@@ -1635,7 +1603,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` VlanMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VlanMemberID. Valid values are VlanMemberID, VlanMemberStartTime, VlanMemberEndTime, VlanMemberChangedCols, VlanMemberTimestamp, DataSourceID, DeviceID, VlanID, InterfaceID, BridgeMemberInd, VlanState, VlanType, VlanName, VTPDomain, RootBridgeAddress, BaseBridgeAddress, BaseNumPorts, StpDesignatedRoot, StpProtocolSpecification, StpPriority, StpTopChanges, StpRootCost, StpRootPort, StpMaxAge, StpHelloTime, StpHoldTime, StpForwardDelay, StpBridgeMaxAge, StpBridgeHelloTime, StpBridgeForwardDelay.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VlanMemberID, VlanMemberStartTime, VlanMemberEndTime, VlanMemberChangedCols, VlanMemberTimestamp, DataSourceID, DeviceID, VlanID, InterfaceID, BridgeMemberInd, VlanState, VlanType, VlanName, VTPDomain, RootBridgeAddress, BaseBridgeAddress, BaseNumPorts, StpDesignatedRoot, StpProtocolSpecification, StpPriority, StpTopChanges, StpRootCost, StpRootPort, StpMaxAge, StpHelloTime, StpHoldTime, StpForwardDelay, StpBridgeMaxAge, StpBridgeHelloTime, StpBridgeForwardDelay.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1643,7 +1611,7 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1653,22 +1621,6 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
 
              :param select: The list of attributes to return for each VlanMember. Valid values are VlanMemberID, VlanMemberStartTime, VlanMemberEndTime, VlanMemberChangedCols, VlanMemberTimestamp, DataSourceID, DeviceID, VlanID, InterfaceID, BridgeMemberInd, VlanState, VlanType, VlanName, VTPDomain, RootBridgeAddress, BaseBridgeAddress, BaseNumPorts, StpDesignatedRoot, StpProtocolSpecification, StpPriority, StpTopChanges, StpRootCost, StpRootPort, StpMaxAge, StpHelloTime, StpHoldTime, StpForwardDelay, StpBridgeMaxAge, StpBridgeHelloTime, StpBridgeForwardDelay. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -1720,8 +1672,8 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The NetMRI device that collected this record.
-             :rtype : DataSource
+             :return data_source: The NetMRI device that collected this record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1747,8 +1699,8 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The switched virtual interface for this VLAN on this device.
-             :rtype : Interface
+             :return interface: The switched virtual interface for this VLAN on this device.
+             :rtype interface: Interface
 
             """
 
@@ -1774,8 +1726,8 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The VLAN associated with this VLAN membership.
-             :rtype : Vlan
+             :return vlan: The VLAN associated with this VLAN membership.
+             :rtype vlan: Vlan
 
             """
 
@@ -1801,8 +1753,8 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device associated with this VLAN membership.
-             :rtype : InfraDevice
+             :return infradevice: The device associated with this VLAN membership.
+             :rtype infradevice: InfraDevice
 
             """
 
@@ -1828,8 +1780,8 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The Network View ID assigned to the Vlan membership.
-             :rtype : Integer
+             :return network_id: The Network View ID assigned to the Vlan membership.
+             :rtype network_id: Integer
 
             """
 
@@ -1855,8 +1807,8 @@ The state 'mtuTooBigForTrunk' indicates that while this VLAN's MTU is supported 
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device associated with this VLAN membership.
-             :rtype : Device
+             :return device: The device associated with this VLAN membership.
+             :rtype device: Device
 
             """
 

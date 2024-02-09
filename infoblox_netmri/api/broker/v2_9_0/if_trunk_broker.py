@@ -48,7 +48,7 @@ class IfTrunkBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available if trunks. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available if trunks. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -137,7 +137,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` InterfaceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is InterfaceID. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, TrunkTimestamp, TrunkStartTime, TrunkEndTime, TrunkChangedCols, TrunkEncapsulationType, TrunkNativeVlanIndex, TrunkNativeVlanID, TrunkState, TrunkStatus.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, TrunkTimestamp, TrunkStartTime, TrunkEndTime, TrunkChangedCols, TrunkEncapsulationType, TrunkNativeVlanIndex, TrunkNativeVlanID, TrunkState, TrunkStatus.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -145,7 +145,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -155,22 +155,6 @@ class IfTrunkBroker(Broker):
 
              :param select: The list of attributes to return for each IfTrunk. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, TrunkTimestamp, TrunkStartTime, TrunkEndTime, TrunkChangedCols, TrunkEncapsulationType, TrunkNativeVlanIndex, TrunkNativeVlanID, TrunkState, TrunkStatus. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -452,7 +436,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` InterfaceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is InterfaceID. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, TrunkTimestamp, TrunkStartTime, TrunkEndTime, TrunkChangedCols, TrunkEncapsulationType, TrunkNativeVlanIndex, TrunkNativeVlanID, TrunkState, TrunkStatus.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, TrunkTimestamp, TrunkStartTime, TrunkEndTime, TrunkChangedCols, TrunkEncapsulationType, TrunkNativeVlanIndex, TrunkNativeVlanID, TrunkState, TrunkStatus.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -460,7 +444,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -470,22 +454,6 @@ class IfTrunkBroker(Broker):
 
              :param select: The list of attributes to return for each IfTrunk. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, TrunkTimestamp, TrunkStartTime, TrunkEndTime, TrunkChangedCols, TrunkEncapsulationType, TrunkNativeVlanIndex, TrunkNativeVlanID, TrunkState, TrunkStatus. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -543,7 +511,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -567,7 +535,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_TrunkChangedCols: If op_TrunkChangedCols is specified, this value will be compared to the value in TrunkChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkChangedCols must be specified if op_TrunkChangedCols is specified.
+             :param val_c_TrunkChangedCols: If op_TrunkChangedCols is specified, this value will be compared to the value in TrunkChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkChangedCols must be specified if op_TrunkChangedCols is specified. If the rlike or not rlike value is specified in the op_TrunkChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_TrunkChangedCols: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_TrunkEncapsulationType: If op_TrunkEncapsulationType is specified, this value will be compared to the value in TrunkEncapsulationType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkEncapsulationType must be specified if op_TrunkEncapsulationType is specified.
+             :param val_c_TrunkEncapsulationType: If op_TrunkEncapsulationType is specified, this value will be compared to the value in TrunkEncapsulationType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkEncapsulationType must be specified if op_TrunkEncapsulationType is specified. If the rlike or not rlike value is specified in the op_TrunkEncapsulationType field, escape regex special characters because a regular expression is expected.
              :type val_c_TrunkEncapsulationType: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_TrunkEndTime: If op_TrunkEndTime is specified, this value will be compared to the value in TrunkEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkEndTime must be specified if op_TrunkEndTime is specified.
+             :param val_c_TrunkEndTime: If op_TrunkEndTime is specified, this value will be compared to the value in TrunkEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkEndTime must be specified if op_TrunkEndTime is specified. If the rlike or not rlike value is specified in the op_TrunkEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_TrunkEndTime: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_TrunkNativeVlanID: If op_TrunkNativeVlanID is specified, this value will be compared to the value in TrunkNativeVlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkNativeVlanID must be specified if op_TrunkNativeVlanID is specified.
+             :param val_c_TrunkNativeVlanID: If op_TrunkNativeVlanID is specified, this value will be compared to the value in TrunkNativeVlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkNativeVlanID must be specified if op_TrunkNativeVlanID is specified. If the rlike or not rlike value is specified in the op_TrunkNativeVlanID field, escape regex special characters because a regular expression is expected.
              :type val_c_TrunkNativeVlanID: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_TrunkNativeVlanIndex: If op_TrunkNativeVlanIndex is specified, this value will be compared to the value in TrunkNativeVlanIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkNativeVlanIndex must be specified if op_TrunkNativeVlanIndex is specified.
+             :param val_c_TrunkNativeVlanIndex: If op_TrunkNativeVlanIndex is specified, this value will be compared to the value in TrunkNativeVlanIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkNativeVlanIndex must be specified if op_TrunkNativeVlanIndex is specified. If the rlike or not rlike value is specified in the op_TrunkNativeVlanIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_TrunkNativeVlanIndex: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_TrunkStartTime: If op_TrunkStartTime is specified, this value will be compared to the value in TrunkStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkStartTime must be specified if op_TrunkStartTime is specified.
+             :param val_c_TrunkStartTime: If op_TrunkStartTime is specified, this value will be compared to the value in TrunkStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkStartTime must be specified if op_TrunkStartTime is specified. If the rlike or not rlike value is specified in the op_TrunkStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_TrunkStartTime: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_TrunkState: If op_TrunkState is specified, this value will be compared to the value in TrunkState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkState must be specified if op_TrunkState is specified.
+             :param val_c_TrunkState: If op_TrunkState is specified, this value will be compared to the value in TrunkState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkState must be specified if op_TrunkState is specified. If the rlike or not rlike value is specified in the op_TrunkState field, escape regex special characters because a regular expression is expected.
              :type val_c_TrunkState: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_TrunkStatus: If op_TrunkStatus is specified, this value will be compared to the value in TrunkStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkStatus must be specified if op_TrunkStatus is specified.
+             :param val_c_TrunkStatus: If op_TrunkStatus is specified, this value will be compared to the value in TrunkStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkStatus must be specified if op_TrunkStatus is specified. If the rlike or not rlike value is specified in the op_TrunkStatus field, escape regex special characters because a regular expression is expected.
              :type val_c_TrunkStatus: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_TrunkTimestamp: If op_TrunkTimestamp is specified, this value will be compared to the value in TrunkTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkTimestamp must be specified if op_TrunkTimestamp is specified.
+             :param val_c_TrunkTimestamp: If op_TrunkTimestamp is specified, this value will be compared to the value in TrunkTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_TrunkTimestamp must be specified if op_TrunkTimestamp is specified. If the rlike or not rlike value is specified in the op_TrunkTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_TrunkTimestamp: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` InterfaceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is InterfaceID. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, TrunkTimestamp, TrunkStartTime, TrunkEndTime, TrunkChangedCols, TrunkEncapsulationType, TrunkNativeVlanIndex, TrunkNativeVlanID, TrunkState, TrunkStatus.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, TrunkTimestamp, TrunkStartTime, TrunkEndTime, TrunkChangedCols, TrunkEncapsulationType, TrunkNativeVlanIndex, TrunkNativeVlanID, TrunkState, TrunkStatus.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -895,7 +863,7 @@ class IfTrunkBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -905,22 +873,6 @@ class IfTrunkBroker(Broker):
 
              :param select: The list of attributes to return for each IfTrunk. Valid values are DataSourceID, DeviceID, InterfaceID, ifIndex, TrunkTimestamp, TrunkStartTime, TrunkEndTime, TrunkChangedCols, TrunkEncapsulationType, TrunkNativeVlanIndex, TrunkNativeVlanID, TrunkState, TrunkStatus. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

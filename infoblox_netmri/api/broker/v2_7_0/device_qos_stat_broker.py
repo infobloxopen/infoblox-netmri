@@ -5,7 +5,7 @@ class DeviceQosStatBroker(Broker):
     controller = "device_qos_stats"
 
     def index(self, **kwargs):
-        """Lists the available device qos stats. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device qos stats. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -102,7 +102,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceQosID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceQosID. Valid values are DeviceQosID, DeviceID, InterfaceID, StartTime, EndTime, QosPolicyIndex, QosObjectsIndex, QosConfigIndex, QosObjectsType, QosCMName, QosCMDesc, QosCMInfo, QosIfType, QosPolicyDirection, QosIfIndex, QosCMPrePolicyPkt, QosCMDropPkt, QosSetCfgIpDSCPValue, QosSetCfgIpPrecedenceValue.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceQosID, DeviceID, InterfaceID, StartTime, EndTime, QosPolicyIndex, QosObjectsIndex, QosConfigIndex, QosObjectsType, QosCMName, QosCMDesc, QosCMInfo, QosIfType, QosPolicyDirection, QosIfIndex, QosCMPrePolicyPkt, QosCMDropPkt, QosSetCfgIpDSCPValue, QosSetCfgIpPrecedenceValue.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -110,7 +110,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -120,22 +120,6 @@ class DeviceQosStatBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceQosStat. Valid values are DeviceQosID, DeviceID, InterfaceID, StartTime, EndTime, QosPolicyIndex, QosObjectsIndex, QosConfigIndex, QosObjectsType, QosCMName, QosCMDesc, QosCMInfo, QosIfType, QosPolicyDirection, QosIfIndex, QosCMPrePolicyPkt, QosCMDropPkt, QosSetCfgIpDSCPValue, QosSetCfgIpPrecedenceValue. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -532,7 +516,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceQosID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceQosID. Valid values are DeviceQosID, DeviceID, InterfaceID, StartTime, EndTime, QosPolicyIndex, QosObjectsIndex, QosConfigIndex, QosObjectsType, QosCMName, QosCMDesc, QosCMInfo, QosIfType, QosPolicyDirection, QosIfIndex, QosCMPrePolicyPkt, QosCMDropPkt, QosSetCfgIpDSCPValue, QosSetCfgIpPrecedenceValue.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceQosID, DeviceID, InterfaceID, StartTime, EndTime, QosPolicyIndex, QosObjectsIndex, QosConfigIndex, QosObjectsType, QosCMName, QosCMDesc, QosCMInfo, QosIfType, QosPolicyDirection, QosIfIndex, QosCMPrePolicyPkt, QosCMDropPkt, QosSetCfgIpDSCPValue, QosSetCfgIpPrecedenceValue.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -540,7 +524,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -550,22 +534,6 @@ class DeviceQosStatBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceQosStat. Valid values are DeviceQosID, DeviceID, InterfaceID, StartTime, EndTime, QosPolicyIndex, QosObjectsIndex, QosConfigIndex, QosObjectsType, QosCMName, QosCMDesc, QosCMInfo, QosIfType, QosPolicyDirection, QosIfIndex, QosCMPrePolicyPkt, QosCMDropPkt, QosSetCfgIpDSCPValue, QosSetCfgIpPrecedenceValue. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -623,7 +591,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceQosID: If op_DeviceQosID is specified, this value will be compared to the value in DeviceQosID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceQosID must be specified if op_DeviceQosID is specified.
+             :param val_c_DeviceQosID: If op_DeviceQosID is specified, this value will be compared to the value in DeviceQosID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceQosID must be specified if op_DeviceQosID is specified. If the rlike or not rlike value is specified in the op_DeviceQosID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceQosID: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified.
+             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified. If the rlike or not rlike value is specified in the op_EndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_EndTime: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosCMDesc: If op_QosCMDesc is specified, this value will be compared to the value in QosCMDesc using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosCMDesc must be specified if op_QosCMDesc is specified.
+             :param val_c_QosCMDesc: If op_QosCMDesc is specified, this value will be compared to the value in QosCMDesc using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosCMDesc must be specified if op_QosCMDesc is specified. If the rlike or not rlike value is specified in the op_QosCMDesc field, escape regex special characters because a regular expression is expected.
              :type val_c_QosCMDesc: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosCMDropPkt: If op_QosCMDropPkt is specified, this value will be compared to the value in QosCMDropPkt using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosCMDropPkt must be specified if op_QosCMDropPkt is specified.
+             :param val_c_QosCMDropPkt: If op_QosCMDropPkt is specified, this value will be compared to the value in QosCMDropPkt using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosCMDropPkt must be specified if op_QosCMDropPkt is specified. If the rlike or not rlike value is specified in the op_QosCMDropPkt field, escape regex special characters because a regular expression is expected.
              :type val_c_QosCMDropPkt: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosCMInfo: If op_QosCMInfo is specified, this value will be compared to the value in QosCMInfo using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosCMInfo must be specified if op_QosCMInfo is specified.
+             :param val_c_QosCMInfo: If op_QosCMInfo is specified, this value will be compared to the value in QosCMInfo using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosCMInfo must be specified if op_QosCMInfo is specified. If the rlike or not rlike value is specified in the op_QosCMInfo field, escape regex special characters because a regular expression is expected.
              :type val_c_QosCMInfo: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosCMName: If op_QosCMName is specified, this value will be compared to the value in QosCMName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosCMName must be specified if op_QosCMName is specified.
+             :param val_c_QosCMName: If op_QosCMName is specified, this value will be compared to the value in QosCMName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosCMName must be specified if op_QosCMName is specified. If the rlike or not rlike value is specified in the op_QosCMName field, escape regex special characters because a regular expression is expected.
              :type val_c_QosCMName: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosCMPrePolicyPkt: If op_QosCMPrePolicyPkt is specified, this value will be compared to the value in QosCMPrePolicyPkt using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosCMPrePolicyPkt must be specified if op_QosCMPrePolicyPkt is specified.
+             :param val_c_QosCMPrePolicyPkt: If op_QosCMPrePolicyPkt is specified, this value will be compared to the value in QosCMPrePolicyPkt using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosCMPrePolicyPkt must be specified if op_QosCMPrePolicyPkt is specified. If the rlike or not rlike value is specified in the op_QosCMPrePolicyPkt field, escape regex special characters because a regular expression is expected.
              :type val_c_QosCMPrePolicyPkt: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosConfigIndex: If op_QosConfigIndex is specified, this value will be compared to the value in QosConfigIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosConfigIndex must be specified if op_QosConfigIndex is specified.
+             :param val_c_QosConfigIndex: If op_QosConfigIndex is specified, this value will be compared to the value in QosConfigIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosConfigIndex must be specified if op_QosConfigIndex is specified. If the rlike or not rlike value is specified in the op_QosConfigIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_QosConfigIndex: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosIfIndex: If op_QosIfIndex is specified, this value will be compared to the value in QosIfIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosIfIndex must be specified if op_QosIfIndex is specified.
+             :param val_c_QosIfIndex: If op_QosIfIndex is specified, this value will be compared to the value in QosIfIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosIfIndex must be specified if op_QosIfIndex is specified. If the rlike or not rlike value is specified in the op_QosIfIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_QosIfIndex: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosIfType: If op_QosIfType is specified, this value will be compared to the value in QosIfType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosIfType must be specified if op_QosIfType is specified.
+             :param val_c_QosIfType: If op_QosIfType is specified, this value will be compared to the value in QosIfType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosIfType must be specified if op_QosIfType is specified. If the rlike or not rlike value is specified in the op_QosIfType field, escape regex special characters because a regular expression is expected.
              :type val_c_QosIfType: String
 
             |  ``api version min:`` None
@@ -911,7 +879,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosObjectsIndex: If op_QosObjectsIndex is specified, this value will be compared to the value in QosObjectsIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosObjectsIndex must be specified if op_QosObjectsIndex is specified.
+             :param val_c_QosObjectsIndex: If op_QosObjectsIndex is specified, this value will be compared to the value in QosObjectsIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosObjectsIndex must be specified if op_QosObjectsIndex is specified. If the rlike or not rlike value is specified in the op_QosObjectsIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_QosObjectsIndex: String
 
             |  ``api version min:`` None
@@ -935,7 +903,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosObjectsType: If op_QosObjectsType is specified, this value will be compared to the value in QosObjectsType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosObjectsType must be specified if op_QosObjectsType is specified.
+             :param val_c_QosObjectsType: If op_QosObjectsType is specified, this value will be compared to the value in QosObjectsType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosObjectsType must be specified if op_QosObjectsType is specified. If the rlike or not rlike value is specified in the op_QosObjectsType field, escape regex special characters because a regular expression is expected.
              :type val_c_QosObjectsType: String
 
             |  ``api version min:`` None
@@ -959,7 +927,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosPolicyDirection: If op_QosPolicyDirection is specified, this value will be compared to the value in QosPolicyDirection using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosPolicyDirection must be specified if op_QosPolicyDirection is specified.
+             :param val_c_QosPolicyDirection: If op_QosPolicyDirection is specified, this value will be compared to the value in QosPolicyDirection using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosPolicyDirection must be specified if op_QosPolicyDirection is specified. If the rlike or not rlike value is specified in the op_QosPolicyDirection field, escape regex special characters because a regular expression is expected.
              :type val_c_QosPolicyDirection: String
 
             |  ``api version min:`` None
@@ -983,7 +951,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosPolicyIndex: If op_QosPolicyIndex is specified, this value will be compared to the value in QosPolicyIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosPolicyIndex must be specified if op_QosPolicyIndex is specified.
+             :param val_c_QosPolicyIndex: If op_QosPolicyIndex is specified, this value will be compared to the value in QosPolicyIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosPolicyIndex must be specified if op_QosPolicyIndex is specified. If the rlike or not rlike value is specified in the op_QosPolicyIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_QosPolicyIndex: String
 
             |  ``api version min:`` None
@@ -1007,7 +975,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosSetCfgIpDSCPValue: If op_QosSetCfgIpDSCPValue is specified, this value will be compared to the value in QosSetCfgIpDSCPValue using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosSetCfgIpDSCPValue must be specified if op_QosSetCfgIpDSCPValue is specified.
+             :param val_c_QosSetCfgIpDSCPValue: If op_QosSetCfgIpDSCPValue is specified, this value will be compared to the value in QosSetCfgIpDSCPValue using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosSetCfgIpDSCPValue must be specified if op_QosSetCfgIpDSCPValue is specified. If the rlike or not rlike value is specified in the op_QosSetCfgIpDSCPValue field, escape regex special characters because a regular expression is expected.
              :type val_c_QosSetCfgIpDSCPValue: String
 
             |  ``api version min:`` None
@@ -1031,7 +999,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_QosSetCfgIpPrecedenceValue: If op_QosSetCfgIpPrecedenceValue is specified, this value will be compared to the value in QosSetCfgIpPrecedenceValue using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosSetCfgIpPrecedenceValue must be specified if op_QosSetCfgIpPrecedenceValue is specified.
+             :param val_c_QosSetCfgIpPrecedenceValue: If op_QosSetCfgIpPrecedenceValue is specified, this value will be compared to the value in QosSetCfgIpPrecedenceValue using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_QosSetCfgIpPrecedenceValue must be specified if op_QosSetCfgIpPrecedenceValue is specified. If the rlike or not rlike value is specified in the op_QosSetCfgIpPrecedenceValue field, escape regex special characters because a regular expression is expected.
              :type val_c_QosSetCfgIpPrecedenceValue: String
 
             |  ``api version min:`` None
@@ -1055,7 +1023,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified.
+             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified. If the rlike or not rlike value is specified in the op_StartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_StartTime: String
 
             |  ``api version min:`` None
@@ -1103,7 +1071,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceQosID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceQosID. Valid values are DeviceQosID, DeviceID, InterfaceID, StartTime, EndTime, QosPolicyIndex, QosObjectsIndex, QosConfigIndex, QosObjectsType, QosCMName, QosCMDesc, QosCMInfo, QosIfType, QosPolicyDirection, QosIfIndex, QosCMPrePolicyPkt, QosCMDropPkt, QosSetCfgIpDSCPValue, QosSetCfgIpPrecedenceValue.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceQosID, DeviceID, InterfaceID, StartTime, EndTime, QosPolicyIndex, QosObjectsIndex, QosConfigIndex, QosObjectsType, QosCMName, QosCMDesc, QosCMInfo, QosIfType, QosPolicyDirection, QosIfIndex, QosCMPrePolicyPkt, QosCMDropPkt, QosSetCfgIpDSCPValue, QosSetCfgIpPrecedenceValue.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1111,7 +1079,7 @@ class DeviceQosStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1121,22 +1089,6 @@ class DeviceQosStatBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceQosStat. Valid values are DeviceQosID, DeviceID, InterfaceID, StartTime, EndTime, QosPolicyIndex, QosObjectsIndex, QosConfigIndex, QosObjectsType, QosCMName, QosCMDesc, QosCMInfo, QosIfType, QosPolicyDirection, QosIfIndex, QosCMPrePolicyPkt, QosCMDropPkt, QosSetCfgIpDSCPValue, QosSetCfgIpPrecedenceValue. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

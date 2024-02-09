@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class DeviceEnvironmentMonitorRemote(RemoteModel):
     """
-    This table list out entries of Device Environment
+    This table list out entries of Device Environment.
 
 
     |  ``DevEnvMonID:`` The internal NetMRI identifier of Device Environment.

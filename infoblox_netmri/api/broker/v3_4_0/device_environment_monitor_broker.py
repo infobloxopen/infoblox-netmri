@@ -5,7 +5,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
     controller = "device_environment_monitors"
 
     def index(self, **kwargs):
-        """Lists the available device environment monitors. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device environment monitors. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -94,7 +94,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevEnvMonID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevEnvMonID. Valid values are DevEnvMonID, DeviceID, DataSourceID, DevEnvMonStartTime, DevEnvMonEndTime, DevEnvMonTimestamp, DevEnvMonChangedCols, DevEnvMonIndex, DevEnvMonType, DevEnvMonDescr, DevEnvMonState, DevEnvMonStatus, DevEnvMonMeasure, DevEnvMonLowWarnVal, DevEnvMonLowShutdown, DevEnvMonHighWarnVal, DevEnvMonHighShutdown, DevEnvMonStatusMessage, DevEnvMonStatusAlert.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevEnvMonID, DeviceID, DataSourceID, DevEnvMonStartTime, DevEnvMonEndTime, DevEnvMonTimestamp, DevEnvMonChangedCols, DevEnvMonIndex, DevEnvMonType, DevEnvMonDescr, DevEnvMonState, DevEnvMonStatus, DevEnvMonMeasure, DevEnvMonLowWarnVal, DevEnvMonLowShutdown, DevEnvMonHighWarnVal, DevEnvMonHighShutdown, DevEnvMonStatusMessage, DevEnvMonStatusAlert.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -102,7 +102,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -112,22 +112,6 @@ class DeviceEnvironmentMonitorBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceEnvironmentMonitor. Valid values are DevEnvMonID, DeviceID, DataSourceID, DevEnvMonStartTime, DevEnvMonEndTime, DevEnvMonTimestamp, DevEnvMonChangedCols, DevEnvMonIndex, DevEnvMonType, DevEnvMonDescr, DevEnvMonState, DevEnvMonStatus, DevEnvMonMeasure, DevEnvMonLowWarnVal, DevEnvMonLowShutdown, DevEnvMonHighWarnVal, DevEnvMonHighShutdown, DevEnvMonStatusMessage, DevEnvMonStatusAlert. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -548,7 +532,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevEnvMonID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevEnvMonID. Valid values are DevEnvMonID, DeviceID, DataSourceID, DevEnvMonStartTime, DevEnvMonEndTime, DevEnvMonTimestamp, DevEnvMonChangedCols, DevEnvMonIndex, DevEnvMonType, DevEnvMonDescr, DevEnvMonState, DevEnvMonStatus, DevEnvMonMeasure, DevEnvMonLowWarnVal, DevEnvMonLowShutdown, DevEnvMonHighWarnVal, DevEnvMonHighShutdown, DevEnvMonStatusMessage, DevEnvMonStatusAlert.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevEnvMonID, DeviceID, DataSourceID, DevEnvMonStartTime, DevEnvMonEndTime, DevEnvMonTimestamp, DevEnvMonChangedCols, DevEnvMonIndex, DevEnvMonType, DevEnvMonDescr, DevEnvMonState, DevEnvMonStatus, DevEnvMonMeasure, DevEnvMonLowWarnVal, DevEnvMonLowShutdown, DevEnvMonHighWarnVal, DevEnvMonHighShutdown, DevEnvMonStatusMessage, DevEnvMonStatusAlert.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -556,7 +540,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -566,22 +550,6 @@ class DeviceEnvironmentMonitorBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceEnvironmentMonitor. Valid values are DevEnvMonID, DeviceID, DataSourceID, DevEnvMonStartTime, DevEnvMonEndTime, DevEnvMonTimestamp, DevEnvMonChangedCols, DevEnvMonIndex, DevEnvMonType, DevEnvMonDescr, DevEnvMonState, DevEnvMonStatus, DevEnvMonMeasure, DevEnvMonLowWarnVal, DevEnvMonLowShutdown, DevEnvMonHighWarnVal, DevEnvMonHighShutdown, DevEnvMonStatusMessage, DevEnvMonStatusAlert. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -639,7 +607,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonChangedCols: If op_DevEnvMonChangedCols is specified, this value will be compared to the value in DevEnvMonChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonChangedCols must be specified if op_DevEnvMonChangedCols is specified.
+             :param val_c_DevEnvMonChangedCols: If op_DevEnvMonChangedCols is specified, this value will be compared to the value in DevEnvMonChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonChangedCols must be specified if op_DevEnvMonChangedCols is specified. If the rlike or not rlike value is specified in the op_DevEnvMonChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonChangedCols: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonDescr: If op_DevEnvMonDescr is specified, this value will be compared to the value in DevEnvMonDescr using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonDescr must be specified if op_DevEnvMonDescr is specified.
+             :param val_c_DevEnvMonDescr: If op_DevEnvMonDescr is specified, this value will be compared to the value in DevEnvMonDescr using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonDescr must be specified if op_DevEnvMonDescr is specified. If the rlike or not rlike value is specified in the op_DevEnvMonDescr field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonDescr: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonEndTime: If op_DevEnvMonEndTime is specified, this value will be compared to the value in DevEnvMonEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonEndTime must be specified if op_DevEnvMonEndTime is specified.
+             :param val_c_DevEnvMonEndTime: If op_DevEnvMonEndTime is specified, this value will be compared to the value in DevEnvMonEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonEndTime must be specified if op_DevEnvMonEndTime is specified. If the rlike or not rlike value is specified in the op_DevEnvMonEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonEndTime: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonHighShutdown: If op_DevEnvMonHighShutdown is specified, this value will be compared to the value in DevEnvMonHighShutdown using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonHighShutdown must be specified if op_DevEnvMonHighShutdown is specified.
+             :param val_c_DevEnvMonHighShutdown: If op_DevEnvMonHighShutdown is specified, this value will be compared to the value in DevEnvMonHighShutdown using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonHighShutdown must be specified if op_DevEnvMonHighShutdown is specified. If the rlike or not rlike value is specified in the op_DevEnvMonHighShutdown field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonHighShutdown: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonHighWarnVal: If op_DevEnvMonHighWarnVal is specified, this value will be compared to the value in DevEnvMonHighWarnVal using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonHighWarnVal must be specified if op_DevEnvMonHighWarnVal is specified.
+             :param val_c_DevEnvMonHighWarnVal: If op_DevEnvMonHighWarnVal is specified, this value will be compared to the value in DevEnvMonHighWarnVal using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonHighWarnVal must be specified if op_DevEnvMonHighWarnVal is specified. If the rlike or not rlike value is specified in the op_DevEnvMonHighWarnVal field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonHighWarnVal: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonID: If op_DevEnvMonID is specified, this value will be compared to the value in DevEnvMonID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonID must be specified if op_DevEnvMonID is specified.
+             :param val_c_DevEnvMonID: If op_DevEnvMonID is specified, this value will be compared to the value in DevEnvMonID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonID must be specified if op_DevEnvMonID is specified. If the rlike or not rlike value is specified in the op_DevEnvMonID field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonID: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonIndex: If op_DevEnvMonIndex is specified, this value will be compared to the value in DevEnvMonIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonIndex must be specified if op_DevEnvMonIndex is specified.
+             :param val_c_DevEnvMonIndex: If op_DevEnvMonIndex is specified, this value will be compared to the value in DevEnvMonIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonIndex must be specified if op_DevEnvMonIndex is specified. If the rlike or not rlike value is specified in the op_DevEnvMonIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonIndex: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonLowShutdown: If op_DevEnvMonLowShutdown is specified, this value will be compared to the value in DevEnvMonLowShutdown using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonLowShutdown must be specified if op_DevEnvMonLowShutdown is specified.
+             :param val_c_DevEnvMonLowShutdown: If op_DevEnvMonLowShutdown is specified, this value will be compared to the value in DevEnvMonLowShutdown using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonLowShutdown must be specified if op_DevEnvMonLowShutdown is specified. If the rlike or not rlike value is specified in the op_DevEnvMonLowShutdown field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonLowShutdown: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonLowWarnVal: If op_DevEnvMonLowWarnVal is specified, this value will be compared to the value in DevEnvMonLowWarnVal using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonLowWarnVal must be specified if op_DevEnvMonLowWarnVal is specified.
+             :param val_c_DevEnvMonLowWarnVal: If op_DevEnvMonLowWarnVal is specified, this value will be compared to the value in DevEnvMonLowWarnVal using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonLowWarnVal must be specified if op_DevEnvMonLowWarnVal is specified. If the rlike or not rlike value is specified in the op_DevEnvMonLowWarnVal field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonLowWarnVal: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonMeasure: If op_DevEnvMonMeasure is specified, this value will be compared to the value in DevEnvMonMeasure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonMeasure must be specified if op_DevEnvMonMeasure is specified.
+             :param val_c_DevEnvMonMeasure: If op_DevEnvMonMeasure is specified, this value will be compared to the value in DevEnvMonMeasure using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonMeasure must be specified if op_DevEnvMonMeasure is specified. If the rlike or not rlike value is specified in the op_DevEnvMonMeasure field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonMeasure: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonStartTime: If op_DevEnvMonStartTime is specified, this value will be compared to the value in DevEnvMonStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonStartTime must be specified if op_DevEnvMonStartTime is specified.
+             :param val_c_DevEnvMonStartTime: If op_DevEnvMonStartTime is specified, this value will be compared to the value in DevEnvMonStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonStartTime must be specified if op_DevEnvMonStartTime is specified. If the rlike or not rlike value is specified in the op_DevEnvMonStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonStartTime: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonState: If op_DevEnvMonState is specified, this value will be compared to the value in DevEnvMonState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonState must be specified if op_DevEnvMonState is specified.
+             :param val_c_DevEnvMonState: If op_DevEnvMonState is specified, this value will be compared to the value in DevEnvMonState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonState must be specified if op_DevEnvMonState is specified. If the rlike or not rlike value is specified in the op_DevEnvMonState field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonState: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonStatus: If op_DevEnvMonStatus is specified, this value will be compared to the value in DevEnvMonStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonStatus must be specified if op_DevEnvMonStatus is specified.
+             :param val_c_DevEnvMonStatus: If op_DevEnvMonStatus is specified, this value will be compared to the value in DevEnvMonStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonStatus must be specified if op_DevEnvMonStatus is specified. If the rlike or not rlike value is specified in the op_DevEnvMonStatus field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonStatus: String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonStatusAlert: If op_DevEnvMonStatusAlert is specified, this value will be compared to the value in DevEnvMonStatusAlert using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonStatusAlert must be specified if op_DevEnvMonStatusAlert is specified.
+             :param val_c_DevEnvMonStatusAlert: If op_DevEnvMonStatusAlert is specified, this value will be compared to the value in DevEnvMonStatusAlert using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonStatusAlert must be specified if op_DevEnvMonStatusAlert is specified. If the rlike or not rlike value is specified in the op_DevEnvMonStatusAlert field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonStatusAlert: String
 
             |  ``api version min:`` None
@@ -999,7 +967,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonStatusMessage: If op_DevEnvMonStatusMessage is specified, this value will be compared to the value in DevEnvMonStatusMessage using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonStatusMessage must be specified if op_DevEnvMonStatusMessage is specified.
+             :param val_c_DevEnvMonStatusMessage: If op_DevEnvMonStatusMessage is specified, this value will be compared to the value in DevEnvMonStatusMessage using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonStatusMessage must be specified if op_DevEnvMonStatusMessage is specified. If the rlike or not rlike value is specified in the op_DevEnvMonStatusMessage field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonStatusMessage: String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonTimestamp: If op_DevEnvMonTimestamp is specified, this value will be compared to the value in DevEnvMonTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonTimestamp must be specified if op_DevEnvMonTimestamp is specified.
+             :param val_c_DevEnvMonTimestamp: If op_DevEnvMonTimestamp is specified, this value will be compared to the value in DevEnvMonTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonTimestamp must be specified if op_DevEnvMonTimestamp is specified. If the rlike or not rlike value is specified in the op_DevEnvMonTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonTimestamp: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevEnvMonType: If op_DevEnvMonType is specified, this value will be compared to the value in DevEnvMonType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonType must be specified if op_DevEnvMonType is specified.
+             :param val_c_DevEnvMonType: If op_DevEnvMonType is specified, this value will be compared to the value in DevEnvMonType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevEnvMonType must be specified if op_DevEnvMonType is specified. If the rlike or not rlike value is specified in the op_DevEnvMonType field, escape regex special characters because a regular expression is expected.
              :type val_c_DevEnvMonType: String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -1127,7 +1095,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevEnvMonID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevEnvMonID. Valid values are DevEnvMonID, DeviceID, DataSourceID, DevEnvMonStartTime, DevEnvMonEndTime, DevEnvMonTimestamp, DevEnvMonChangedCols, DevEnvMonIndex, DevEnvMonType, DevEnvMonDescr, DevEnvMonState, DevEnvMonStatus, DevEnvMonMeasure, DevEnvMonLowWarnVal, DevEnvMonLowShutdown, DevEnvMonHighWarnVal, DevEnvMonHighShutdown, DevEnvMonStatusMessage, DevEnvMonStatusAlert.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevEnvMonID, DeviceID, DataSourceID, DevEnvMonStartTime, DevEnvMonEndTime, DevEnvMonTimestamp, DevEnvMonChangedCols, DevEnvMonIndex, DevEnvMonType, DevEnvMonDescr, DevEnvMonState, DevEnvMonStatus, DevEnvMonMeasure, DevEnvMonLowWarnVal, DevEnvMonLowShutdown, DevEnvMonHighWarnVal, DevEnvMonHighShutdown, DevEnvMonStatusMessage, DevEnvMonStatusAlert.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1135,7 +1103,7 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1145,22 +1113,6 @@ class DeviceEnvironmentMonitorBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceEnvironmentMonitor. Valid values are DevEnvMonID, DeviceID, DataSourceID, DevEnvMonStartTime, DevEnvMonEndTime, DevEnvMonTimestamp, DevEnvMonChangedCols, DevEnvMonIndex, DevEnvMonType, DevEnvMonDescr, DevEnvMonState, DevEnvMonStatus, DevEnvMonMeasure, DevEnvMonLowWarnVal, DevEnvMonLowShutdown, DevEnvMonHighWarnVal, DevEnvMonHighShutdown, DevEnvMonStatusMessage, DevEnvMonStatusAlert. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1204,8 +1156,8 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1231,8 +1183,8 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -1258,8 +1210,8 @@ class DeviceEnvironmentMonitorBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

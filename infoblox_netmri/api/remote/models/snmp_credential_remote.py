@@ -12,17 +12,14 @@ class SNMPCredentialRemote(RemoteModel):
     |  ``UnitID:`` The internal NetMRI identifier for the NetMRI collector on which the credential is configured.
     |  ``attribute type:`` number
 
-    |  ``Protocol:`` The protocol for which to use this password.
+    |  ``Protocol:`` The protocol for which to use this password: 'SNMP' or 'SNMPv3'.
     |  ``attribute type:`` string
 
-    |  ``Type:`` Whether this is a read or read/write community.
+    |  ``Type:`` Whether this is a read-only 'RO' or read/write 'RW' community.
     |  ``attribute type:`` string
 
     |  ``Origination:`` Indicates the source and use of the credential. 'User' indicates this is a user-entered password. 'Default' indicates that these are used by the Weak Password issue, and may be modified or removed on upgrade. 'Vendor' indicates a password tested in the Vendor Default Credential Guessing, and may be modified or removed on upgrade. 'Vendor (User Add)' is a user-added vendor default credential.
     |  ``attribute type:`` string
-
-    |  ``HitCount:`` The number of successful uses of this credential.
-    |  ``attribute type:`` number
 
     |  ``Vendor:`` The vendor devices against which to try this credential.
     |  ``attribute type:`` string
@@ -34,15 +31,15 @@ class SNMPCredentialRemote(RemoteModel):
     |  ``attribute type:`` string
 
     |  ``Priority:`` The priority order in which to attempt this credential.
+    |  ``attribute type:`` number
+
+    |  ``PasswordSecure:`` (alias Password) The community string.
     |  ``attribute type:`` string
 
-    |  ``PasswordSecure:`` (alias Password) Is the community string.
+    |  ``SNMPAuthPWSecure:`` (alias SNMPAuthPW) The SNMPv3 authentication protocol password.
     |  ``attribute type:`` string
 
-    |  ``SNMPAuthPWSecure:`` (alias SNMPAuthPW) Is the SNMPv3 authentication protocol password.
-    |  ``attribute type:`` string
-
-    |  ``SNMPPrivPWSecure:`` (alias SNMPPrivPW) Is the SNMPv3 privacy protocol password.
+    |  ``SNMPPrivPWSecure:`` (alias SNMPPrivPW) The SNMPv3 privacy protocol password.
     |  ``attribute type:`` string
 
     |  ``SecureVersion:`` The encryption version of the username and passwords.
@@ -58,7 +55,6 @@ class SNMPCredentialRemote(RemoteModel):
                   "Protocol",
                   "Type",
                   "Origination",
-                  "HitCount",
                   "Vendor",
                   "SNMPAuthProto",
                   "SNMPPrivProto",

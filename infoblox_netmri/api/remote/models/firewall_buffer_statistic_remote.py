@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class FirewallBufferStatisticRemote(RemoteModel):
     """
-    This table list out the entries of FirewallBufferStatistics
+    This table list out the entries of FirewallBufferStatistics.
 
 
     |  ``FWBSID:`` The internal NetMRI identifier of the firewall buffer statistics.

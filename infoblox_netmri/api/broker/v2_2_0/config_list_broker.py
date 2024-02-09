@@ -5,7 +5,7 @@ class ConfigListBroker(Broker):
     controller = "config_lists"
 
     def index(self, **kwargs):
-        """Lists the available config lists. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available config lists. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -46,7 +46,7 @@ class ConfigListBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, auth_user_id, name, description, created_at, updated_at.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, auth_user_id, name, description, created_at, updated_at.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -54,7 +54,7 @@ class ConfigListBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -64,22 +64,6 @@ class ConfigListBroker(Broker):
 
              :param select: The list of attributes to return for each ConfigList. Valid values are id, auth_user_id, name, description, created_at, updated_at. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -137,20 +121,25 @@ class ConfigListBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False
+             :rtype success: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return error: Error, if exists
+             :rtype error: String
+
             """
 
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
-
-    def tree(self, **kwargs):
-        """Generates a tree representation of lists. Tailored to ExtJS tree requirements.
-
-            **Inputs**
-
-            **Outputs**
-
-            """
-
-        return self.api_request(self._get_method_fullname("tree"), kwargs)
 
     def rows(self, **kwargs):
         """This method will return all rows which are assigned to specific list.
@@ -183,6 +172,22 @@ class ConfigListBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return total: Total rows
+             :rtype total: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return rows: List of all rows which are assigned to specific list
+             :rtype rows: Array
+
             """
 
         return self.api_request(self._get_method_fullname("rows"), kwargs)
@@ -210,6 +215,14 @@ class ConfigListBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return list: Created config list
+             :rtype list: Hash
+
             """
 
         return self.api_request(self._get_method_fullname("create"), kwargs)
@@ -224,7 +237,7 @@ class ConfigListBroker(Broker):
             |  ``required:`` False
             |  ``default:`` 0
 
-             :param id: The internal NetMRI identifier for the list
+             :param id: The internal NetMRI identifier for the list. A new config list will be created if ID is not passed.
              :type id: Integer
 
             |  ``api version min:`` None
@@ -244,6 +257,38 @@ class ConfigListBroker(Broker):
              :type name: String
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False
+             :rtype success: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return id: The internal identifier for the list
+             :rtype id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return name: Name of the list
+             :rtype name: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return description: Description of the list
+             :rtype description: String
 
             """
 
@@ -280,9 +325,25 @@ class ConfigListBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return columns: New columns info, if exists
+             :rtype columns: Array of Hash
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return rows: New rows info, if exists
+             :rtype rows: Array of Hash
+
             """
 
-        return self.api_request(self._get_method_fullname("update_rows"), kwargs)
+        return self.api_list_request(self._get_method_fullname("update_rows"), kwargs)
 
     def delete_rows(self, **kwargs):
         """This method will delete all rows which are assigned to selected list.
@@ -306,6 +367,22 @@ class ConfigListBroker(Broker):
              :type grid: String
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False
+             :rtype success: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return error: Error, if exists
+             :rtype error: String
 
             """
 
@@ -353,6 +430,30 @@ class ConfigListBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False
+             :rtype success: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return id: The internal NetMRI identifier for the list
+             :rtype id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return error: Error, if exists
+             :rtype error: String
+
             """
 
         return self.api_request(self._get_method_fullname("import"), kwargs)
@@ -384,7 +485,7 @@ class ConfigListBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param key_value: Value which will be seached in the column
+             :param key_value: Value which will be searched in the column
              :type key_value: String
 
             |  ``api version min:`` None
@@ -404,6 +505,14 @@ class ConfigListBroker(Broker):
              :type value_column: String
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return value_column: If found, for the row, return the value in the column value_column. If not found, return default
+             :rtype value_column: String
 
             """
 

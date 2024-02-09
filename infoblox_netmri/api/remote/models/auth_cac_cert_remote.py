@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class AuthCacCertRemote(RemoteModel):
     """
-    CAC certificates for CAC auth and mapping to OSCP servers
+    CAC certificates for CAC auth and mapping to OCSP servers.
 
 
     |  ``id:`` Record ID

@@ -48,7 +48,7 @@ class VrfRouteTargetBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available vrf route targets. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available vrf route targets. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -121,7 +121,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VrfRouteTargetID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VrfRouteTargetID. Valid values are VrfRouteTargetID, VrfRouteTargetStartTime, VrfRouteTargetEndTime, VrfRouteTargetChangedCols, VrfRouteTargetTimestamp, VrfRouteTargetFirstTime, DataSourceID, DeviceID, VirtualNetworkMemberID, VrfDirection, RTType, RTLeftSide, RTRightSide.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VrfRouteTargetID, VrfRouteTargetStartTime, VrfRouteTargetEndTime, VrfRouteTargetChangedCols, VrfRouteTargetTimestamp, VrfRouteTargetFirstTime, DataSourceID, DeviceID, VirtualNetworkMemberID, VrfDirection, RTType, RTLeftSide, RTRightSide.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -129,7 +129,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -139,22 +139,6 @@ class VrfRouteTargetBroker(Broker):
 
              :param select: The list of attributes to return for each VrfRouteTarget. Valid values are VrfRouteTargetID, VrfRouteTargetStartTime, VrfRouteTargetEndTime, VrfRouteTargetChangedCols, VrfRouteTargetTimestamp, VrfRouteTargetFirstTime, DataSourceID, DeviceID, VirtualNetworkMemberID, VrfDirection, RTType, RTLeftSide, RTRightSide. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -332,7 +316,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VrfRouteTargetID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VrfRouteTargetID. Valid values are VrfRouteTargetID, VrfRouteTargetStartTime, VrfRouteTargetEndTime, VrfRouteTargetChangedCols, VrfRouteTargetTimestamp, VrfRouteTargetFirstTime, DataSourceID, DeviceID, VirtualNetworkMemberID, VrfDirection, RTType, RTLeftSide, RTRightSide.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VrfRouteTargetID, VrfRouteTargetStartTime, VrfRouteTargetEndTime, VrfRouteTargetChangedCols, VrfRouteTargetTimestamp, VrfRouteTargetFirstTime, DataSourceID, DeviceID, VirtualNetworkMemberID, VrfDirection, RTType, RTLeftSide, RTRightSide.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -340,7 +324,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -350,22 +334,6 @@ class VrfRouteTargetBroker(Broker):
 
              :param select: The list of attributes to return for each VrfRouteTarget. Valid values are VrfRouteTargetID, VrfRouteTargetStartTime, VrfRouteTargetEndTime, VrfRouteTargetChangedCols, VrfRouteTargetTimestamp, VrfRouteTargetFirstTime, DataSourceID, DeviceID, VirtualNetworkMemberID, VrfDirection, RTType, RTLeftSide, RTRightSide. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -423,7 +391,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -447,7 +415,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -471,7 +439,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RTLeftSide: If op_RTLeftSide is specified, this value will be compared to the value in RTLeftSide using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RTLeftSide must be specified if op_RTLeftSide is specified.
+             :param val_c_RTLeftSide: If op_RTLeftSide is specified, this value will be compared to the value in RTLeftSide using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RTLeftSide must be specified if op_RTLeftSide is specified. If the rlike or not rlike value is specified in the op_RTLeftSide field, escape regex special characters because a regular expression is expected.
              :type val_c_RTLeftSide: String
 
             |  ``api version min:`` None
@@ -495,7 +463,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RTRightSide: If op_RTRightSide is specified, this value will be compared to the value in RTRightSide using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RTRightSide must be specified if op_RTRightSide is specified.
+             :param val_c_RTRightSide: If op_RTRightSide is specified, this value will be compared to the value in RTRightSide using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RTRightSide must be specified if op_RTRightSide is specified. If the rlike or not rlike value is specified in the op_RTRightSide field, escape regex special characters because a regular expression is expected.
              :type val_c_RTRightSide: String
 
             |  ``api version min:`` None
@@ -519,7 +487,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RTType: If op_RTType is specified, this value will be compared to the value in RTType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RTType must be specified if op_RTType is specified.
+             :param val_c_RTType: If op_RTType is specified, this value will be compared to the value in RTType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RTType must be specified if op_RTType is specified. If the rlike or not rlike value is specified in the op_RTType field, escape regex special characters because a regular expression is expected.
              :type val_c_RTType: String
 
             |  ``api version min:`` None
@@ -543,7 +511,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberID: If op_VirtualNetworkMemberID is specified, this value will be compared to the value in VirtualNetworkMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberID must be specified if op_VirtualNetworkMemberID is specified.
+             :param val_c_VirtualNetworkMemberID: If op_VirtualNetworkMemberID is specified, this value will be compared to the value in VirtualNetworkMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberID must be specified if op_VirtualNetworkMemberID is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberID: String
 
             |  ``api version min:`` None
@@ -567,7 +535,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrfDirection: If op_VrfDirection is specified, this value will be compared to the value in VrfDirection using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfDirection must be specified if op_VrfDirection is specified.
+             :param val_c_VrfDirection: If op_VrfDirection is specified, this value will be compared to the value in VrfDirection using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfDirection must be specified if op_VrfDirection is specified. If the rlike or not rlike value is specified in the op_VrfDirection field, escape regex special characters because a regular expression is expected.
              :type val_c_VrfDirection: String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrfRouteTargetChangedCols: If op_VrfRouteTargetChangedCols is specified, this value will be compared to the value in VrfRouteTargetChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfRouteTargetChangedCols must be specified if op_VrfRouteTargetChangedCols is specified.
+             :param val_c_VrfRouteTargetChangedCols: If op_VrfRouteTargetChangedCols is specified, this value will be compared to the value in VrfRouteTargetChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfRouteTargetChangedCols must be specified if op_VrfRouteTargetChangedCols is specified. If the rlike or not rlike value is specified in the op_VrfRouteTargetChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_VrfRouteTargetChangedCols: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrfRouteTargetEndTime: If op_VrfRouteTargetEndTime is specified, this value will be compared to the value in VrfRouteTargetEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfRouteTargetEndTime must be specified if op_VrfRouteTargetEndTime is specified.
+             :param val_c_VrfRouteTargetEndTime: If op_VrfRouteTargetEndTime is specified, this value will be compared to the value in VrfRouteTargetEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfRouteTargetEndTime must be specified if op_VrfRouteTargetEndTime is specified. If the rlike or not rlike value is specified in the op_VrfRouteTargetEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_VrfRouteTargetEndTime: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrfRouteTargetFirstTime: If op_VrfRouteTargetFirstTime is specified, this value will be compared to the value in VrfRouteTargetFirstTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfRouteTargetFirstTime must be specified if op_VrfRouteTargetFirstTime is specified.
+             :param val_c_VrfRouteTargetFirstTime: If op_VrfRouteTargetFirstTime is specified, this value will be compared to the value in VrfRouteTargetFirstTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfRouteTargetFirstTime must be specified if op_VrfRouteTargetFirstTime is specified. If the rlike or not rlike value is specified in the op_VrfRouteTargetFirstTime field, escape regex special characters because a regular expression is expected.
              :type val_c_VrfRouteTargetFirstTime: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrfRouteTargetID: If op_VrfRouteTargetID is specified, this value will be compared to the value in VrfRouteTargetID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfRouteTargetID must be specified if op_VrfRouteTargetID is specified.
+             :param val_c_VrfRouteTargetID: If op_VrfRouteTargetID is specified, this value will be compared to the value in VrfRouteTargetID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfRouteTargetID must be specified if op_VrfRouteTargetID is specified. If the rlike or not rlike value is specified in the op_VrfRouteTargetID field, escape regex special characters because a regular expression is expected.
              :type val_c_VrfRouteTargetID: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrfRouteTargetStartTime: If op_VrfRouteTargetStartTime is specified, this value will be compared to the value in VrfRouteTargetStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfRouteTargetStartTime must be specified if op_VrfRouteTargetStartTime is specified.
+             :param val_c_VrfRouteTargetStartTime: If op_VrfRouteTargetStartTime is specified, this value will be compared to the value in VrfRouteTargetStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfRouteTargetStartTime must be specified if op_VrfRouteTargetStartTime is specified. If the rlike or not rlike value is specified in the op_VrfRouteTargetStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_VrfRouteTargetStartTime: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrfRouteTargetTimestamp: If op_VrfRouteTargetTimestamp is specified, this value will be compared to the value in VrfRouteTargetTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfRouteTargetTimestamp must be specified if op_VrfRouteTargetTimestamp is specified.
+             :param val_c_VrfRouteTargetTimestamp: If op_VrfRouteTargetTimestamp is specified, this value will be compared to the value in VrfRouteTargetTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfRouteTargetTimestamp must be specified if op_VrfRouteTargetTimestamp is specified. If the rlike or not rlike value is specified in the op_VrfRouteTargetTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_VrfRouteTargetTimestamp: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VrfRouteTargetID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VrfRouteTargetID. Valid values are VrfRouteTargetID, VrfRouteTargetStartTime, VrfRouteTargetEndTime, VrfRouteTargetChangedCols, VrfRouteTargetTimestamp, VrfRouteTargetFirstTime, DataSourceID, DeviceID, VirtualNetworkMemberID, VrfDirection, RTType, RTLeftSide, RTRightSide.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VrfRouteTargetID, VrfRouteTargetStartTime, VrfRouteTargetEndTime, VrfRouteTargetChangedCols, VrfRouteTargetTimestamp, VrfRouteTargetFirstTime, DataSourceID, DeviceID, VirtualNetworkMemberID, VrfDirection, RTType, RTLeftSide, RTRightSide.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -775,7 +743,7 @@ class VrfRouteTargetBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -785,22 +753,6 @@ class VrfRouteTargetBroker(Broker):
 
              :param select: The list of attributes to return for each VrfRouteTarget. Valid values are VrfRouteTargetID, VrfRouteTargetStartTime, VrfRouteTargetEndTime, VrfRouteTargetChangedCols, VrfRouteTargetTimestamp, VrfRouteTargetFirstTime, DataSourceID, DeviceID, VirtualNetworkMemberID, VrfDirection, RTType, RTLeftSide, RTRightSide. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

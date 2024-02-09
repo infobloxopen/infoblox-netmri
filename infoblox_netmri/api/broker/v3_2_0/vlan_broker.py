@@ -48,7 +48,7 @@ class VlanBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available vlans. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available vlans. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -153,7 +153,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VlanID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VlanID. Valid values are VlanID, VlanStartTime, VlanEndTime, VlanChangedCols, VlanTimestamp, DataSourceID, RootVlanMemberID, VlanIndex, VlanName, RootBridgeAddress, StpEnabledInd, VTPDomain.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VlanID, VlanStartTime, VlanEndTime, VlanChangedCols, VlanTimestamp, DataSourceID, RootVlanMemberID, VlanIndex, VlanName, RootBridgeAddress, StpEnabledInd, VTPDomain.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -161,7 +161,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -171,22 +171,6 @@ class VlanBroker(Broker):
 
              :param select: The list of attributes to return for each Vlan. Valid values are VlanID, VlanStartTime, VlanEndTime, VlanChangedCols, VlanTimestamp, DataSourceID, RootVlanMemberID, VlanIndex, VlanName, RootBridgeAddress, StpEnabledInd, VTPDomain. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -452,7 +436,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VlanID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VlanID. Valid values are VlanID, VlanStartTime, VlanEndTime, VlanChangedCols, VlanTimestamp, DataSourceID, RootVlanMemberID, VlanIndex, VlanName, RootBridgeAddress, StpEnabledInd, VTPDomain.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VlanID, VlanStartTime, VlanEndTime, VlanChangedCols, VlanTimestamp, DataSourceID, RootVlanMemberID, VlanIndex, VlanName, RootBridgeAddress, StpEnabledInd, VTPDomain.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -460,7 +444,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -470,22 +454,6 @@ class VlanBroker(Broker):
 
              :param select: The list of attributes to return for each Vlan. Valid values are VlanID, VlanStartTime, VlanEndTime, VlanChangedCols, VlanTimestamp, DataSourceID, RootVlanMemberID, VlanIndex, VlanName, RootBridgeAddress, StpEnabledInd, VTPDomain. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -543,7 +511,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -567,7 +535,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RootBridgeAddress: If op_RootBridgeAddress is specified, this value will be compared to the value in RootBridgeAddress using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RootBridgeAddress must be specified if op_RootBridgeAddress is specified.
+             :param val_c_RootBridgeAddress: If op_RootBridgeAddress is specified, this value will be compared to the value in RootBridgeAddress using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RootBridgeAddress must be specified if op_RootBridgeAddress is specified. If the rlike or not rlike value is specified in the op_RootBridgeAddress field, escape regex special characters because a regular expression is expected.
              :type val_c_RootBridgeAddress: String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RootVlanMemberID: If op_RootVlanMemberID is specified, this value will be compared to the value in RootVlanMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RootVlanMemberID must be specified if op_RootVlanMemberID is specified.
+             :param val_c_RootVlanMemberID: If op_RootVlanMemberID is specified, this value will be compared to the value in RootVlanMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RootVlanMemberID must be specified if op_RootVlanMemberID is specified. If the rlike or not rlike value is specified in the op_RootVlanMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_RootVlanMemberID: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StpEnabledInd: If op_StpEnabledInd is specified, this value will be compared to the value in StpEnabledInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpEnabledInd must be specified if op_StpEnabledInd is specified.
+             :param val_c_StpEnabledInd: If op_StpEnabledInd is specified, this value will be compared to the value in StpEnabledInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StpEnabledInd must be specified if op_StpEnabledInd is specified. If the rlike or not rlike value is specified in the op_StpEnabledInd field, escape regex special characters because a regular expression is expected.
              :type val_c_StpEnabledInd: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VTPDomain: If op_VTPDomain is specified, this value will be compared to the value in VTPDomain using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VTPDomain must be specified if op_VTPDomain is specified.
+             :param val_c_VTPDomain: If op_VTPDomain is specified, this value will be compared to the value in VTPDomain using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VTPDomain must be specified if op_VTPDomain is specified. If the rlike or not rlike value is specified in the op_VTPDomain field, escape regex special characters because a regular expression is expected.
              :type val_c_VTPDomain: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanChangedCols: If op_VlanChangedCols is specified, this value will be compared to the value in VlanChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanChangedCols must be specified if op_VlanChangedCols is specified.
+             :param val_c_VlanChangedCols: If op_VlanChangedCols is specified, this value will be compared to the value in VlanChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanChangedCols must be specified if op_VlanChangedCols is specified. If the rlike or not rlike value is specified in the op_VlanChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanChangedCols: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanEndTime: If op_VlanEndTime is specified, this value will be compared to the value in VlanEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanEndTime must be specified if op_VlanEndTime is specified.
+             :param val_c_VlanEndTime: If op_VlanEndTime is specified, this value will be compared to the value in VlanEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanEndTime must be specified if op_VlanEndTime is specified. If the rlike or not rlike value is specified in the op_VlanEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanEndTime: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanID: If op_VlanID is specified, this value will be compared to the value in VlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanID must be specified if op_VlanID is specified.
+             :param val_c_VlanID: If op_VlanID is specified, this value will be compared to the value in VlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanID must be specified if op_VlanID is specified. If the rlike or not rlike value is specified in the op_VlanID field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanID: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanIndex: If op_VlanIndex is specified, this value will be compared to the value in VlanIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanIndex must be specified if op_VlanIndex is specified.
+             :param val_c_VlanIndex: If op_VlanIndex is specified, this value will be compared to the value in VlanIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanIndex must be specified if op_VlanIndex is specified. If the rlike or not rlike value is specified in the op_VlanIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanIndex: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanName: If op_VlanName is specified, this value will be compared to the value in VlanName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanName must be specified if op_VlanName is specified.
+             :param val_c_VlanName: If op_VlanName is specified, this value will be compared to the value in VlanName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanName must be specified if op_VlanName is specified. If the rlike or not rlike value is specified in the op_VlanName field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanName: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanStartTime: If op_VlanStartTime is specified, this value will be compared to the value in VlanStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanStartTime must be specified if op_VlanStartTime is specified.
+             :param val_c_VlanStartTime: If op_VlanStartTime is specified, this value will be compared to the value in VlanStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanStartTime must be specified if op_VlanStartTime is specified. If the rlike or not rlike value is specified in the op_VlanStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanStartTime: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanTimestamp: If op_VlanTimestamp is specified, this value will be compared to the value in VlanTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanTimestamp must be specified if op_VlanTimestamp is specified.
+             :param val_c_VlanTimestamp: If op_VlanTimestamp is specified, this value will be compared to the value in VlanTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanTimestamp must be specified if op_VlanTimestamp is specified. If the rlike or not rlike value is specified in the op_VlanTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanTimestamp: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VlanID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VlanID. Valid values are VlanID, VlanStartTime, VlanEndTime, VlanChangedCols, VlanTimestamp, DataSourceID, RootVlanMemberID, VlanIndex, VlanName, RootBridgeAddress, StpEnabledInd, VTPDomain.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VlanID, VlanStartTime, VlanEndTime, VlanChangedCols, VlanTimestamp, DataSourceID, RootVlanMemberID, VlanIndex, VlanName, RootBridgeAddress, StpEnabledInd, VTPDomain.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -871,7 +839,7 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -881,22 +849,6 @@ class VlanBroker(Broker):
 
              :param select: The list of attributes to return for each Vlan. Valid values are VlanID, VlanStartTime, VlanEndTime, VlanChangedCols, VlanTimestamp, DataSourceID, RootVlanMemberID, VlanIndex, VlanName, RootBridgeAddress, StpEnabledInd, VTPDomain. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -940,8 +892,8 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The NetMRI device that collected this record.
-             :rtype : DataSource
+             :return data_source: The NetMRI device that collected this record.
+             :rtype data_source: DataSource
 
             """
 
@@ -967,8 +919,8 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The VLAN membership record of the VLAN root bridge.
-             :rtype : VlanMember
+             :return root_member: The VLAN membership record of the VLAN root bridge.
+             :rtype root_member: VlanMember
 
             """
 
@@ -994,8 +946,8 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The Device object for the root bridge, if available.
-             :rtype : Device
+             :return root_device: The Device object for the root bridge, if available.
+             :rtype root_device: Device
 
             """
 
@@ -1021,8 +973,8 @@ class VlanBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The name of the root bridge, if available; otherwise, the root bridge address.
-             :rtype : String
+             :return root_bridge: The name of the root bridge, if available; otherwise, the root bridge address.
+             :rtype root_bridge: String
 
             """
 

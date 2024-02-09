@@ -5,7 +5,7 @@ class FirewallBufferStatisticBroker(Broker):
     controller = "firewall_buffer_statistics"
 
     def index(self, **kwargs):
-        """Lists the available firewall buffer statistics. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available firewall buffer statistics. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -102,7 +102,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` FWBSID
 
-             :param sort: The data field(s) to use for sorting the output. Default is FWBSID. Valid values are FWBSID, DeviceID, StartTime, EndTime, FWBSSize, FWBSMaximum, FWBSLow, FWBSFree, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are FWBSID, DeviceID, StartTime, EndTime, FWBSSize, FWBSMaximum, FWBSLow, FWBSFree, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -110,7 +110,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -120,22 +120,6 @@ class FirewallBufferStatisticBroker(Broker):
 
              :param select: The list of attributes to return for each FirewallBufferStatistic. Valid values are FWBSID, DeviceID, StartTime, EndTime, FWBSSize, FWBSMaximum, FWBSLow, FWBSFree, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -404,7 +388,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` FWBSID
 
-             :param sort: The data field(s) to use for sorting the output. Default is FWBSID. Valid values are FWBSID, DeviceID, StartTime, EndTime, FWBSSize, FWBSMaximum, FWBSLow, FWBSFree, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are FWBSID, DeviceID, StartTime, EndTime, FWBSSize, FWBSMaximum, FWBSLow, FWBSFree, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -412,7 +396,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -422,22 +406,6 @@ class FirewallBufferStatisticBroker(Broker):
 
              :param select: The list of attributes to return for each FirewallBufferStatistic. Valid values are FWBSID, DeviceID, StartTime, EndTime, FWBSSize, FWBSMaximum, FWBSLow, FWBSFree, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -495,7 +463,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -519,7 +487,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -543,7 +511,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified.
+             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified. If the rlike or not rlike value is specified in the op_EndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_EndTime: String
 
             |  ``api version min:`` None
@@ -567,7 +535,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FWBSFree: If op_FWBSFree is specified, this value will be compared to the value in FWBSFree using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FWBSFree must be specified if op_FWBSFree is specified.
+             :param val_c_FWBSFree: If op_FWBSFree is specified, this value will be compared to the value in FWBSFree using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FWBSFree must be specified if op_FWBSFree is specified. If the rlike or not rlike value is specified in the op_FWBSFree field, escape regex special characters because a regular expression is expected.
              :type val_c_FWBSFree: String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FWBSID: If op_FWBSID is specified, this value will be compared to the value in FWBSID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FWBSID must be specified if op_FWBSID is specified.
+             :param val_c_FWBSID: If op_FWBSID is specified, this value will be compared to the value in FWBSID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FWBSID must be specified if op_FWBSID is specified. If the rlike or not rlike value is specified in the op_FWBSID field, escape regex special characters because a regular expression is expected.
              :type val_c_FWBSID: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FWBSLow: If op_FWBSLow is specified, this value will be compared to the value in FWBSLow using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FWBSLow must be specified if op_FWBSLow is specified.
+             :param val_c_FWBSLow: If op_FWBSLow is specified, this value will be compared to the value in FWBSLow using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FWBSLow must be specified if op_FWBSLow is specified. If the rlike or not rlike value is specified in the op_FWBSLow field, escape regex special characters because a regular expression is expected.
              :type val_c_FWBSLow: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FWBSMaximum: If op_FWBSMaximum is specified, this value will be compared to the value in FWBSMaximum using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FWBSMaximum must be specified if op_FWBSMaximum is specified.
+             :param val_c_FWBSMaximum: If op_FWBSMaximum is specified, this value will be compared to the value in FWBSMaximum using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FWBSMaximum must be specified if op_FWBSMaximum is specified. If the rlike or not rlike value is specified in the op_FWBSMaximum field, escape regex special characters because a regular expression is expected.
              :type val_c_FWBSMaximum: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FWBSSize: If op_FWBSSize is specified, this value will be compared to the value in FWBSSize using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FWBSSize must be specified if op_FWBSSize is specified.
+             :param val_c_FWBSSize: If op_FWBSSize is specified, this value will be compared to the value in FWBSSize using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FWBSSize must be specified if op_FWBSSize is specified. If the rlike or not rlike value is specified in the op_FWBSSize field, escape regex special characters because a regular expression is expected.
              :type val_c_FWBSSize: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified.
+             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified. If the rlike or not rlike value is specified in the op_StartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_StartTime: String
 
             |  ``api version min:`` None
@@ -751,7 +719,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` FWBSID
 
-             :param sort: The data field(s) to use for sorting the output. Default is FWBSID. Valid values are FWBSID, DeviceID, StartTime, EndTime, FWBSSize, FWBSMaximum, FWBSLow, FWBSFree, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are FWBSID, DeviceID, StartTime, EndTime, FWBSSize, FWBSMaximum, FWBSLow, FWBSFree, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -769,22 +737,6 @@ class FirewallBufferStatisticBroker(Broker):
 
              :param select: The list of attributes to return for each FirewallBufferStatistic. Valid values are FWBSID, DeviceID, StartTime, EndTime, FWBSSize, FWBSMaximum, FWBSLow, FWBSFree, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -828,8 +780,8 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -855,8 +807,8 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -882,8 +834,8 @@ class FirewallBufferStatisticBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

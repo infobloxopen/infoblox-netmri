@@ -48,7 +48,7 @@ class BestOriginRouteBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available best origin routes. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available best origin routes. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -169,7 +169,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceRouteID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceRouteID. Valid values are DeviceRouteID, BORouteStartTime, BORouteEndTime, BORouteChangedCols, BORouteTimestamp, DeviceID, RouteCIDR, RouteProto, RouteType, RouteLocation, VirtualNetworkMemberID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceRouteID, BORouteStartTime, BORouteEndTime, BORouteChangedCols, BORouteTimestamp, DeviceID, RouteCIDR, RouteProto, RouteType, RouteLocation, VirtualNetworkMemberID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -177,7 +177,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -187,22 +187,6 @@ class BestOriginRouteBroker(Broker):
 
              :param select: The list of attributes to return for each BestOriginRoute. Valid values are DeviceRouteID, BORouteStartTime, BORouteEndTime, BORouteChangedCols, BORouteTimestamp, DeviceID, RouteCIDR, RouteProto, RouteType, RouteLocation, VirtualNetworkMemberID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -452,7 +436,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceRouteID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceRouteID. Valid values are DeviceRouteID, BORouteStartTime, BORouteEndTime, BORouteChangedCols, BORouteTimestamp, DeviceID, RouteCIDR, RouteProto, RouteType, RouteLocation, VirtualNetworkMemberID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceRouteID, BORouteStartTime, BORouteEndTime, BORouteChangedCols, BORouteTimestamp, DeviceID, RouteCIDR, RouteProto, RouteType, RouteLocation, VirtualNetworkMemberID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -460,7 +444,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -470,22 +454,6 @@ class BestOriginRouteBroker(Broker):
 
              :param select: The list of attributes to return for each BestOriginRoute. Valid values are DeviceRouteID, BORouteStartTime, BORouteEndTime, BORouteChangedCols, BORouteTimestamp, DeviceID, RouteCIDR, RouteProto, RouteType, RouteLocation, VirtualNetworkMemberID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -543,7 +511,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BORouteChangedCols: If op_BORouteChangedCols is specified, this value will be compared to the value in BORouteChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BORouteChangedCols must be specified if op_BORouteChangedCols is specified.
+             :param val_c_BORouteChangedCols: If op_BORouteChangedCols is specified, this value will be compared to the value in BORouteChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BORouteChangedCols must be specified if op_BORouteChangedCols is specified. If the rlike or not rlike value is specified in the op_BORouteChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_BORouteChangedCols: String
 
             |  ``api version min:`` None
@@ -567,7 +535,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BORouteEndTime: If op_BORouteEndTime is specified, this value will be compared to the value in BORouteEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BORouteEndTime must be specified if op_BORouteEndTime is specified.
+             :param val_c_BORouteEndTime: If op_BORouteEndTime is specified, this value will be compared to the value in BORouteEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BORouteEndTime must be specified if op_BORouteEndTime is specified. If the rlike or not rlike value is specified in the op_BORouteEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_BORouteEndTime: String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BORouteStartTime: If op_BORouteStartTime is specified, this value will be compared to the value in BORouteStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BORouteStartTime must be specified if op_BORouteStartTime is specified.
+             :param val_c_BORouteStartTime: If op_BORouteStartTime is specified, this value will be compared to the value in BORouteStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BORouteStartTime must be specified if op_BORouteStartTime is specified. If the rlike or not rlike value is specified in the op_BORouteStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_BORouteStartTime: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BORouteTimestamp: If op_BORouteTimestamp is specified, this value will be compared to the value in BORouteTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BORouteTimestamp must be specified if op_BORouteTimestamp is specified.
+             :param val_c_BORouteTimestamp: If op_BORouteTimestamp is specified, this value will be compared to the value in BORouteTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BORouteTimestamp must be specified if op_BORouteTimestamp is specified. If the rlike or not rlike value is specified in the op_BORouteTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_BORouteTimestamp: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceRouteID: If op_DeviceRouteID is specified, this value will be compared to the value in DeviceRouteID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRouteID must be specified if op_DeviceRouteID is specified.
+             :param val_c_DeviceRouteID: If op_DeviceRouteID is specified, this value will be compared to the value in DeviceRouteID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRouteID must be specified if op_DeviceRouteID is specified. If the rlike or not rlike value is specified in the op_DeviceRouteID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceRouteID: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteCIDR: If op_RouteCIDR is specified, this value will be compared to the value in RouteCIDR using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteCIDR must be specified if op_RouteCIDR is specified.
+             :param val_c_RouteCIDR: If op_RouteCIDR is specified, this value will be compared to the value in RouteCIDR using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteCIDR must be specified if op_RouteCIDR is specified. If the rlike or not rlike value is specified in the op_RouteCIDR field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteCIDR: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteLocation: If op_RouteLocation is specified, this value will be compared to the value in RouteLocation using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteLocation must be specified if op_RouteLocation is specified.
+             :param val_c_RouteLocation: If op_RouteLocation is specified, this value will be compared to the value in RouteLocation using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteLocation must be specified if op_RouteLocation is specified. If the rlike or not rlike value is specified in the op_RouteLocation field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteLocation: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteProto: If op_RouteProto is specified, this value will be compared to the value in RouteProto using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteProto must be specified if op_RouteProto is specified.
+             :param val_c_RouteProto: If op_RouteProto is specified, this value will be compared to the value in RouteProto using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteProto must be specified if op_RouteProto is specified. If the rlike or not rlike value is specified in the op_RouteProto field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteProto: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteType: If op_RouteType is specified, this value will be compared to the value in RouteType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteType must be specified if op_RouteType is specified.
+             :param val_c_RouteType: If op_RouteType is specified, this value will be compared to the value in RouteType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteType must be specified if op_RouteType is specified. If the rlike or not rlike value is specified in the op_RouteType field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteType: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VirtualNetworkMemberID: If op_VirtualNetworkMemberID is specified, this value will be compared to the value in VirtualNetworkMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberID must be specified if op_VirtualNetworkMemberID is specified.
+             :param val_c_VirtualNetworkMemberID: If op_VirtualNetworkMemberID is specified, this value will be compared to the value in VirtualNetworkMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VirtualNetworkMemberID must be specified if op_VirtualNetworkMemberID is specified. If the rlike or not rlike value is specified in the op_VirtualNetworkMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_VirtualNetworkMemberID: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceRouteID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceRouteID. Valid values are DeviceRouteID, BORouteStartTime, BORouteEndTime, BORouteChangedCols, BORouteTimestamp, DeviceID, RouteCIDR, RouteProto, RouteType, RouteLocation, VirtualNetworkMemberID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceRouteID, BORouteStartTime, BORouteEndTime, BORouteChangedCols, BORouteTimestamp, DeviceID, RouteCIDR, RouteProto, RouteType, RouteLocation, VirtualNetworkMemberID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -847,7 +815,7 @@ class BestOriginRouteBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -857,22 +825,6 @@ class BestOriginRouteBroker(Broker):
 
              :param select: The list of attributes to return for each BestOriginRoute. Valid values are DeviceRouteID, BORouteStartTime, BORouteEndTime, BORouteChangedCols, BORouteTimestamp, DeviceID, RouteCIDR, RouteProto, RouteType, RouteLocation, VirtualNetworkMemberID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

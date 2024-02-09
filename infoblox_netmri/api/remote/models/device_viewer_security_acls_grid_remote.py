@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class DeviceViewerSecurityAclsGridRemote(RemoteModel):
     """
-    list of device traffic rule lists
+    List of device traffic rule lists.
 
 
     |  ``id:`` The internal NetMRI identifier of the grid entry.

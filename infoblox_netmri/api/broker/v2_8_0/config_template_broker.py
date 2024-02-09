@@ -5,7 +5,7 @@ class ConfigTemplateBroker(Broker):
     controller = "config_templates"
 
     def index(self, **kwargs):
-        """Lists the available config templates. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available config templates. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -70,7 +70,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, vendor, model, version, device_type, description, created_by, updated_by, created_at, updated_at, template_type, risk_level.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, vendor, model, version, device_type, description, created_by, updated_by, created_at, updated_at, template_type, risk_level.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -78,7 +78,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -88,22 +88,6 @@ class ConfigTemplateBroker(Broker):
 
              :param select: The list of attributes to return for each ConfigTemplate. Valid values are id, name, vendor, model, version, device_type, description, created_by, updated_by, created_at, updated_at, template_type, risk_level. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -361,7 +345,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, vendor, model, version, device_type, description, created_by, updated_by, created_at, updated_at, template_type, risk_level.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, vendor, model, version, device_type, description, created_by, updated_by, created_at, updated_at, template_type, risk_level.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -369,7 +353,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -379,22 +363,6 @@ class ConfigTemplateBroker(Broker):
 
              :param select: The list of attributes to return for each ConfigTemplate. Valid values are id, name, vendor, model, version, device_type, description, created_by, updated_by, created_at, updated_at, template_type, risk_level. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -452,7 +420,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -476,7 +444,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_by: If op_created_by is specified, this value will be compared to the value in created_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_by must be specified if op_created_by is specified.
+             :param val_c_created_by: If op_created_by is specified, this value will be compared to the value in created_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_by must be specified if op_created_by is specified. If the rlike or not rlike value is specified in the op_created_by field, escape regex special characters because a regular expression is expected.
              :type val_c_created_by: String
 
             |  ``api version min:`` None
@@ -500,7 +468,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_description: If op_description is specified, this value will be compared to the value in description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_description must be specified if op_description is specified.
+             :param val_c_description: If op_description is specified, this value will be compared to the value in description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_description must be specified if op_description is specified. If the rlike or not rlike value is specified in the op_description field, escape regex special characters because a regular expression is expected.
              :type val_c_description: String
 
             |  ``api version min:`` None
@@ -524,7 +492,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_device_type: If op_device_type is specified, this value will be compared to the value in device_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_type must be specified if op_device_type is specified.
+             :param val_c_device_type: If op_device_type is specified, this value will be compared to the value in device_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_device_type must be specified if op_device_type is specified. If the rlike or not rlike value is specified in the op_device_type field, escape regex special characters because a regular expression is expected.
              :type val_c_device_type: String
 
             |  ``api version min:`` None
@@ -548,7 +516,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -572,7 +540,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_model: If op_model is specified, this value will be compared to the value in model using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_model must be specified if op_model is specified.
+             :param val_c_model: If op_model is specified, this value will be compared to the value in model using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_model must be specified if op_model is specified. If the rlike or not rlike value is specified in the op_model field, escape regex special characters because a regular expression is expected.
              :type val_c_model: String
 
             |  ``api version min:`` None
@@ -596,7 +564,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified.
+             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified. If the rlike or not rlike value is specified in the op_name field, escape regex special characters because a regular expression is expected.
              :type val_c_name: String
 
             |  ``api version min:`` None
@@ -620,7 +588,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_risk_level: If op_risk_level is specified, this value will be compared to the value in risk_level using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_risk_level must be specified if op_risk_level is specified.
+             :param val_c_risk_level: If op_risk_level is specified, this value will be compared to the value in risk_level using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_risk_level must be specified if op_risk_level is specified. If the rlike or not rlike value is specified in the op_risk_level field, escape regex special characters because a regular expression is expected.
              :type val_c_risk_level: String
 
             |  ``api version min:`` None
@@ -644,7 +612,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_template_type: If op_template_type is specified, this value will be compared to the value in template_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_template_type must be specified if op_template_type is specified.
+             :param val_c_template_type: If op_template_type is specified, this value will be compared to the value in template_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_template_type must be specified if op_template_type is specified. If the rlike or not rlike value is specified in the op_template_type field, escape regex special characters because a regular expression is expected.
              :type val_c_template_type: String
 
             |  ``api version min:`` None
@@ -668,7 +636,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -692,7 +660,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_by: If op_updated_by is specified, this value will be compared to the value in updated_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_by must be specified if op_updated_by is specified.
+             :param val_c_updated_by: If op_updated_by is specified, this value will be compared to the value in updated_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_by must be specified if op_updated_by is specified. If the rlike or not rlike value is specified in the op_updated_by field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_by: String
 
             |  ``api version min:`` None
@@ -716,7 +684,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_vendor: If op_vendor is specified, this value will be compared to the value in vendor using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vendor must be specified if op_vendor is specified.
+             :param val_c_vendor: If op_vendor is specified, this value will be compared to the value in vendor using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vendor must be specified if op_vendor is specified. If the rlike or not rlike value is specified in the op_vendor field, escape regex special characters because a regular expression is expected.
              :type val_c_vendor: String
 
             |  ``api version min:`` None
@@ -740,7 +708,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_version: If op_version is specified, this value will be compared to the value in version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_version must be specified if op_version is specified.
+             :param val_c_version: If op_version is specified, this value will be compared to the value in version using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_version must be specified if op_version is specified. If the rlike or not rlike value is specified in the op_version field, escape regex special characters because a regular expression is expected.
              :type val_c_version: String
 
             |  ``api version min:`` None
@@ -772,7 +740,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, vendor, model, version, device_type, description, created_by, updated_by, created_at, updated_at, template_type, risk_level.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, vendor, model, version, device_type, description, created_by, updated_by, created_at, updated_at, template_type, risk_level.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -780,7 +748,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -790,22 +758,6 @@ class ConfigTemplateBroker(Broker):
 
              :param select: The list of attributes to return for each ConfigTemplate. Valid values are id, name, vendor, model, version, device_type, description, created_by, updated_by, created_at, updated_at, template_type, risk_level. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -903,8 +855,8 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The text of the config template.
-             :rtype : String
+             :return template_text: The text of the config template.
+             :rtype template_text: String
 
             """
 
@@ -1016,7 +968,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param overwrite_ind: If set to 1, overwrite existing template file. If set to 0, do not overwrite existing template file
+             :param overwrite_ind: If set to 1, overwrite existing template file. If set to 0, do not overwrite existing template file.
              :type overwrite_ind: Boolean
 
             |  ``api version min:`` 2.5
@@ -1050,7 +1002,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created config template.
+             :return uri: The URI that may be used to retrieve the newly created config template.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -1163,7 +1115,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` 1
 
-             :param overwrite_ind: An indicator to overwrite an existing template file with the same name. Overwrite if set to 1. Do not overwrite if set to 0
+             :param overwrite_ind: An indicator to overwrite an existing template file with the same name. Overwrite if set to 1. Do not overwrite if set to 0.
              :type overwrite_ind: Boolean
 
             |  ``api version min:`` 2.5
@@ -1197,7 +1149,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated config template.
+             :return uri: The URI that may be used to retrieve the updated config template.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -1237,7 +1189,7 @@ class ConfigTemplateBroker(Broker):
 
             """
 
-        return self.api_request(self._get_method_fullname("export_file"), kwargs)
+        return self.api_mixed_request(self._get_method_fullname("export_file"), kwargs)
 
     def import_file(self, **kwargs):
         """Import a Config Template into the server.
@@ -1261,6 +1213,14 @@ class ConfigTemplateBroker(Broker):
              :type content: String
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False.
+             :rtype success: Boolean
 
             """
 
@@ -1308,6 +1268,38 @@ class ConfigTemplateBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return id: The ID of the duplicated config template.
+             :rtype id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return model: The class name of the duplicated config template.
+             :rtype model: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return uri: The URI that may be used to retrieve the duplicated config template.
+             :rtype uri: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return config_template: The duplicated config template.
+             :rtype config_template: ConfigTemplate
+
             """
 
         return self.api_request(self._get_method_fullname("duplicate"), kwargs)
@@ -1335,6 +1327,22 @@ class ConfigTemplateBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return config_template: The config template.
+             :rtype config_template: ConfigTemplate
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False.
+             :rtype success: Boolean
+
             """
 
         return self.api_request(self._get_method_fullname("populate_template"), kwargs)
@@ -1353,6 +1361,14 @@ class ConfigTemplateBroker(Broker):
              :type id: Integer
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return attachment: Configuration template file as an attachment for download.
+             :rtype attachment: String
 
             """
 
@@ -1381,6 +1397,30 @@ class ConfigTemplateBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return id: The ID of the config template.
+             :rtype id: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return message: System message.
+             :rtype message: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False.
+             :rtype success: Boolean
+
             """
 
         return self.api_request(self._get_method_fullname("import"), kwargs)
@@ -1403,7 +1443,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param template_text: The template text into which to merge the variables. Required if id is not passed.
+             :param template_text: The template text into which to merge the variables. Required if ID is not passed.
              :type template_text: String
 
             |  ``api version min:`` None
@@ -1454,7 +1494,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param device_group_ids: A comma delimited string of device group ids. Can be blank if not using device groups.
+             :param device_group_ids: A comma delimited string of device group IDs. Can be blank if not using device groups.
              :type device_group_ids: String
 
             |  ``api version min:`` None
@@ -1462,7 +1502,7 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param device_ids: A comma delimited string of device ids. Can be blank if ONLY using device groups.
+             :param device_ids: A comma delimited string of device IDs. Can be blank if ONLY using device groups.
              :type device_ids: String
 
             |  ``api version min:`` None
@@ -1472,6 +1512,14 @@ class ConfigTemplateBroker(Broker):
 
              :param template_variables: Optional variables to be passed to the template. Any variable name starting with $ will be passed through as input to the template.
              :type template_variables: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` bulk
+
+             :param push_mode: Defines the push mode (bulk or line_by_line) used for template based jobs.
+             :type push_mode: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -1529,10 +1577,18 @@ class ConfigTemplateBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param id: The ConfigTemplateID of the config template from which to obtain variables
+             :param id: The ConfigTemplateID of the config template from which to obtain variables.
              :type id: Integer
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return rows: An array of variables for the specified config template.
+             :rtype rows: Array
 
             """
 

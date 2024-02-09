@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class DeviceCfgContextRemote(RemoteModel):
     """
-    Filtering configuration definition context, use to defines scope of names inside a whole configuration
+    Filtering configuration definition context, use to defines scope of names inside a whole configuration.
 
 
     |  ``DeviceCfgContextID:`` The internal NetMRI identifier of this Configuration context of declaration.

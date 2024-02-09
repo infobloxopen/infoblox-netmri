@@ -27,6 +27,9 @@ class JobSpecsConfigManageJobManageGridRemote(RemoteModel):
     |  ``taskflowCreate:`` none
     |  ``attribute type:`` string
 
+    |  ``created_by:`` none
+    |  ``attribute type:`` string
+
     |  ``approved_by_name:`` none
     |  ``attribute type:`` string
 
@@ -46,9 +49,6 @@ class JobSpecsConfigManageJobManageGridRemote(RemoteModel):
     |  ``attribute type:`` string
 
     |  ``approved_by:`` none
-    |  ``attribute type:`` string
-
-    |  ``created_by:`` none
     |  ``attribute type:`` string
 
     |  ``approved_timestamp:`` none
@@ -78,6 +78,7 @@ class JobSpecsConfigManageJobManageGridRemote(RemoteModel):
                   "script_risk",
                   "risk_level",
                   "taskflowCreate",
+                  "created_by",
                   "approved_by_name",
                   "schedule_hash",
                   "status",
@@ -85,7 +86,6 @@ class JobSpecsConfigManageJobManageGridRemote(RemoteModel):
                   "last_run_status",
                   "description",
                   "approved_by",
-                  "created_by",
                   "approved_timestamp",
                   "created_at",
                   "updated_at",

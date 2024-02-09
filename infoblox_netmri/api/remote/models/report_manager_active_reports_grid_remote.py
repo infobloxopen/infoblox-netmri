@@ -30,6 +30,9 @@ class ReportManagerActiveReportsGridRemote(RemoteModel):
     |  ``priority:`` none
     |  ``attribute type:`` string
 
+    |  ``start_time:`` none
+    |  ``attribute type:`` string
+
     |  ``last_action_timestamp:`` none
     |  ``attribute type:`` string
 
@@ -43,5 +46,6 @@ class ReportManagerActiveReportsGridRemote(RemoteModel):
                   "column_to_sort_by",
                   "status",
                   "priority",
+                  "start_time",
                   "last_action_timestamp",
                   )

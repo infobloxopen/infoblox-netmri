@@ -48,7 +48,7 @@ class DeviceGroupMemberBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available device group members. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device group members. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -153,7 +153,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceGroupMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceGroupMemberID. Valid values are DeviceGroupMemberID, GroupID, DeviceID, DeviceGroupMemberStartTime, DeviceGroupMemberEndTime, DeviceGroupMemberChangedCols, DeviceGroupMemberTimestamp, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceGroupMemberID, GroupID, DeviceID, DeviceGroupMemberStartTime, DeviceGroupMemberEndTime, DeviceGroupMemberChangedCols, DeviceGroupMemberTimestamp, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -161,7 +161,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -171,22 +171,6 @@ class DeviceGroupMemberBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceGroupMember. Valid values are DeviceGroupMemberID, GroupID, DeviceID, DeviceGroupMemberStartTime, DeviceGroupMemberEndTime, DeviceGroupMemberChangedCols, DeviceGroupMemberTimestamp, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -388,7 +372,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceGroupMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceGroupMemberID. Valid values are DeviceGroupMemberID, GroupID, DeviceID, DeviceGroupMemberStartTime, DeviceGroupMemberEndTime, DeviceGroupMemberChangedCols, DeviceGroupMemberTimestamp, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceGroupMemberID, GroupID, DeviceID, DeviceGroupMemberStartTime, DeviceGroupMemberEndTime, DeviceGroupMemberChangedCols, DeviceGroupMemberTimestamp, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -396,7 +380,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -406,22 +390,6 @@ class DeviceGroupMemberBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceGroupMember. Valid values are DeviceGroupMemberID, GroupID, DeviceID, DeviceGroupMemberStartTime, DeviceGroupMemberEndTime, DeviceGroupMemberChangedCols, DeviceGroupMemberTimestamp, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -479,7 +447,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -503,7 +471,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceGroupMemberChangedCols: If op_DeviceGroupMemberChangedCols is specified, this value will be compared to the value in DeviceGroupMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceGroupMemberChangedCols must be specified if op_DeviceGroupMemberChangedCols is specified.
+             :param val_c_DeviceGroupMemberChangedCols: If op_DeviceGroupMemberChangedCols is specified, this value will be compared to the value in DeviceGroupMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceGroupMemberChangedCols must be specified if op_DeviceGroupMemberChangedCols is specified. If the rlike or not rlike value is specified in the op_DeviceGroupMemberChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceGroupMemberChangedCols: String
 
             |  ``api version min:`` None
@@ -527,7 +495,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceGroupMemberEndTime: If op_DeviceGroupMemberEndTime is specified, this value will be compared to the value in DeviceGroupMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceGroupMemberEndTime must be specified if op_DeviceGroupMemberEndTime is specified.
+             :param val_c_DeviceGroupMemberEndTime: If op_DeviceGroupMemberEndTime is specified, this value will be compared to the value in DeviceGroupMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceGroupMemberEndTime must be specified if op_DeviceGroupMemberEndTime is specified. If the rlike or not rlike value is specified in the op_DeviceGroupMemberEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceGroupMemberEndTime: String
 
             |  ``api version min:`` None
@@ -551,7 +519,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceGroupMemberID: If op_DeviceGroupMemberID is specified, this value will be compared to the value in DeviceGroupMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceGroupMemberID must be specified if op_DeviceGroupMemberID is specified.
+             :param val_c_DeviceGroupMemberID: If op_DeviceGroupMemberID is specified, this value will be compared to the value in DeviceGroupMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceGroupMemberID must be specified if op_DeviceGroupMemberID is specified. If the rlike or not rlike value is specified in the op_DeviceGroupMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceGroupMemberID: String
 
             |  ``api version min:`` None
@@ -575,7 +543,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceGroupMemberStartTime: If op_DeviceGroupMemberStartTime is specified, this value will be compared to the value in DeviceGroupMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceGroupMemberStartTime must be specified if op_DeviceGroupMemberStartTime is specified.
+             :param val_c_DeviceGroupMemberStartTime: If op_DeviceGroupMemberStartTime is specified, this value will be compared to the value in DeviceGroupMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceGroupMemberStartTime must be specified if op_DeviceGroupMemberStartTime is specified. If the rlike or not rlike value is specified in the op_DeviceGroupMemberStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceGroupMemberStartTime: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceGroupMemberTimestamp: If op_DeviceGroupMemberTimestamp is specified, this value will be compared to the value in DeviceGroupMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceGroupMemberTimestamp must be specified if op_DeviceGroupMemberTimestamp is specified.
+             :param val_c_DeviceGroupMemberTimestamp: If op_DeviceGroupMemberTimestamp is specified, this value will be compared to the value in DeviceGroupMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceGroupMemberTimestamp must be specified if op_DeviceGroupMemberTimestamp is specified. If the rlike or not rlike value is specified in the op_DeviceGroupMemberTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceGroupMemberTimestamp: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_GroupID: If op_GroupID is specified, this value will be compared to the value in GroupID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GroupID must be specified if op_GroupID is specified.
+             :param val_c_GroupID: If op_GroupID is specified, this value will be compared to the value in GroupID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_GroupID must be specified if op_GroupID is specified. If the rlike or not rlike value is specified in the op_GroupID field, escape regex special characters because a regular expression is expected.
              :type val_c_GroupID: String
 
             |  ``api version min:`` None
@@ -703,7 +671,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceGroupMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceGroupMemberID. Valid values are DeviceGroupMemberID, GroupID, DeviceID, DeviceGroupMemberStartTime, DeviceGroupMemberEndTime, DeviceGroupMemberChangedCols, DeviceGroupMemberTimestamp, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceGroupMemberID, GroupID, DeviceID, DeviceGroupMemberStartTime, DeviceGroupMemberEndTime, DeviceGroupMemberChangedCols, DeviceGroupMemberTimestamp, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class DeviceGroupMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -721,22 +689,6 @@ class DeviceGroupMemberBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceGroupMember. Valid values are DeviceGroupMemberID, GroupID, DeviceID, DeviceGroupMemberStartTime, DeviceGroupMemberEndTime, DeviceGroupMemberChangedCols, DeviceGroupMemberTimestamp, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

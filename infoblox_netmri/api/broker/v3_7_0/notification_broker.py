@@ -5,7 +5,7 @@ class NotificationBroker(Broker):
     controller = "notifications"
 
     def index(self, **kwargs):
-        """Lists the available notifications. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available notifications. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -38,7 +38,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, auth_user_id, category, delivery_method, mime, subject, message_template, details_template, to, created_at, updated_at, from, from_name, severity, all_in_category_ind, all_device_groups_ind, all_interface_groups_ind, time_window_id, event_type, send_clearing_ind, cron, last_run.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, auth_user_id, category, delivery_method, mime, subject, message_template, details_template, to, created_at, updated_at, from, from_name, severity, all_in_category_ind, all_device_groups_ind, all_interface_groups_ind, time_window_id, event_type, send_clearing_ind, cron, last_run.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -46,7 +46,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -56,22 +56,6 @@ class NotificationBroker(Broker):
 
              :param select: The list of attributes to return for each Notification. Valid values are id, auth_user_id, category, delivery_method, mime, subject, message_template, details_template, to, created_at, updated_at, from, from_name, severity, all_in_category_ind, all_device_groups_ind, all_interface_groups_ind, time_window_id, event_type, send_clearing_ind, cron, last_run. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -316,7 +300,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, auth_user_id, category, delivery_method, mime, subject, message_template, details_template, to, created_at, updated_at, from, from_name, severity, all_in_category_ind, all_device_groups_ind, all_interface_groups_ind, time_window_id, event_type, send_clearing_ind, cron, last_run.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, auth_user_id, category, delivery_method, mime, subject, message_template, details_template, to, created_at, updated_at, from, from_name, severity, all_in_category_ind, all_device_groups_ind, all_interface_groups_ind, time_window_id, event_type, send_clearing_ind, cron, last_run.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -324,7 +308,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -334,22 +318,6 @@ class NotificationBroker(Broker):
 
              :param select: The list of attributes to return for each Notification. Valid values are id, auth_user_id, category, delivery_method, mime, subject, message_template, details_template, to, created_at, updated_at, from, from_name, severity, all_in_category_ind, all_device_groups_ind, all_interface_groups_ind, time_window_id, event_type, send_clearing_ind, cron, last_run. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -407,7 +375,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_all_device_groups_ind: If op_all_device_groups_ind is specified, this value will be compared to the value in all_device_groups_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_all_device_groups_ind must be specified if op_all_device_groups_ind is specified.
+             :param val_c_all_device_groups_ind: If op_all_device_groups_ind is specified, this value will be compared to the value in all_device_groups_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_all_device_groups_ind must be specified if op_all_device_groups_ind is specified. If the rlike or not rlike value is specified in the op_all_device_groups_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_all_device_groups_ind: String
 
             |  ``api version min:`` None
@@ -431,7 +399,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_all_in_category_ind: If op_all_in_category_ind is specified, this value will be compared to the value in all_in_category_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_all_in_category_ind must be specified if op_all_in_category_ind is specified.
+             :param val_c_all_in_category_ind: If op_all_in_category_ind is specified, this value will be compared to the value in all_in_category_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_all_in_category_ind must be specified if op_all_in_category_ind is specified. If the rlike or not rlike value is specified in the op_all_in_category_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_all_in_category_ind: String
 
             |  ``api version min:`` None
@@ -455,7 +423,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_all_interface_groups_ind: If op_all_interface_groups_ind is specified, this value will be compared to the value in all_interface_groups_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_all_interface_groups_ind must be specified if op_all_interface_groups_ind is specified.
+             :param val_c_all_interface_groups_ind: If op_all_interface_groups_ind is specified, this value will be compared to the value in all_interface_groups_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_all_interface_groups_ind must be specified if op_all_interface_groups_ind is specified. If the rlike or not rlike value is specified in the op_all_interface_groups_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_all_interface_groups_ind: String
 
             |  ``api version min:`` None
@@ -479,7 +447,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_user_id: If op_auth_user_id is specified, this value will be compared to the value in auth_user_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_user_id must be specified if op_auth_user_id is specified.
+             :param val_c_auth_user_id: If op_auth_user_id is specified, this value will be compared to the value in auth_user_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_user_id must be specified if op_auth_user_id is specified. If the rlike or not rlike value is specified in the op_auth_user_id field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_user_id: String
 
             |  ``api version min:`` None
@@ -503,7 +471,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_category: If op_category is specified, this value will be compared to the value in category using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_category must be specified if op_category is specified.
+             :param val_c_category: If op_category is specified, this value will be compared to the value in category using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_category must be specified if op_category is specified. If the rlike or not rlike value is specified in the op_category field, escape regex special characters because a regular expression is expected.
              :type val_c_category: String
 
             |  ``api version min:`` None
@@ -527,7 +495,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -551,7 +519,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cron: If op_cron is specified, this value will be compared to the value in cron using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cron must be specified if op_cron is specified.
+             :param val_c_cron: If op_cron is specified, this value will be compared to the value in cron using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cron must be specified if op_cron is specified. If the rlike or not rlike value is specified in the op_cron field, escape regex special characters because a regular expression is expected.
              :type val_c_cron: String
 
             |  ``api version min:`` None
@@ -575,7 +543,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_delivery_method: If op_delivery_method is specified, this value will be compared to the value in delivery_method using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_delivery_method must be specified if op_delivery_method is specified.
+             :param val_c_delivery_method: If op_delivery_method is specified, this value will be compared to the value in delivery_method using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_delivery_method must be specified if op_delivery_method is specified. If the rlike or not rlike value is specified in the op_delivery_method field, escape regex special characters because a regular expression is expected.
              :type val_c_delivery_method: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_details_template: If op_details_template is specified, this value will be compared to the value in details_template using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_details_template must be specified if op_details_template is specified.
+             :param val_c_details_template: If op_details_template is specified, this value will be compared to the value in details_template using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_details_template must be specified if op_details_template is specified. If the rlike or not rlike value is specified in the op_details_template field, escape regex special characters because a regular expression is expected.
              :type val_c_details_template: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_event_type: If op_event_type is specified, this value will be compared to the value in event_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_event_type must be specified if op_event_type is specified.
+             :param val_c_event_type: If op_event_type is specified, this value will be compared to the value in event_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_event_type must be specified if op_event_type is specified. If the rlike or not rlike value is specified in the op_event_type field, escape regex special characters because a regular expression is expected.
              :type val_c_event_type: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_from: If op_from is specified, this value will be compared to the value in from using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_from must be specified if op_from is specified.
+             :param val_c_from: If op_from is specified, this value will be compared to the value in from using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_from must be specified if op_from is specified. If the rlike or not rlike value is specified in the op_from field, escape regex special characters because a regular expression is expected.
              :type val_c_from: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_from_name: If op_from_name is specified, this value will be compared to the value in from_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_from_name must be specified if op_from_name is specified.
+             :param val_c_from_name: If op_from_name is specified, this value will be compared to the value in from_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_from_name must be specified if op_from_name is specified. If the rlike or not rlike value is specified in the op_from_name field, escape regex special characters because a regular expression is expected.
              :type val_c_from_name: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_last_run: If op_last_run is specified, this value will be compared to the value in last_run using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_last_run must be specified if op_last_run is specified.
+             :param val_c_last_run: If op_last_run is specified, this value will be compared to the value in last_run using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_last_run must be specified if op_last_run is specified. If the rlike or not rlike value is specified in the op_last_run field, escape regex special characters because a regular expression is expected.
              :type val_c_last_run: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_message_template: If op_message_template is specified, this value will be compared to the value in message_template using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_message_template must be specified if op_message_template is specified.
+             :param val_c_message_template: If op_message_template is specified, this value will be compared to the value in message_template using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_message_template must be specified if op_message_template is specified. If the rlike or not rlike value is specified in the op_message_template field, escape regex special characters because a regular expression is expected.
              :type val_c_message_template: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_mime: If op_mime is specified, this value will be compared to the value in mime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_mime must be specified if op_mime is specified.
+             :param val_c_mime: If op_mime is specified, this value will be compared to the value in mime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_mime must be specified if op_mime is specified. If the rlike or not rlike value is specified in the op_mime field, escape regex special characters because a regular expression is expected.
              :type val_c_mime: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_send_clearing_ind: If op_send_clearing_ind is specified, this value will be compared to the value in send_clearing_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_send_clearing_ind must be specified if op_send_clearing_ind is specified.
+             :param val_c_send_clearing_ind: If op_send_clearing_ind is specified, this value will be compared to the value in send_clearing_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_send_clearing_ind must be specified if op_send_clearing_ind is specified. If the rlike or not rlike value is specified in the op_send_clearing_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_send_clearing_ind: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_severity: If op_severity is specified, this value will be compared to the value in severity using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_severity must be specified if op_severity is specified.
+             :param val_c_severity: If op_severity is specified, this value will be compared to the value in severity using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_severity must be specified if op_severity is specified. If the rlike or not rlike value is specified in the op_severity field, escape regex special characters because a regular expression is expected.
              :type val_c_severity: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_subject: If op_subject is specified, this value will be compared to the value in subject using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_subject must be specified if op_subject is specified.
+             :param val_c_subject: If op_subject is specified, this value will be compared to the value in subject using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_subject must be specified if op_subject is specified. If the rlike or not rlike value is specified in the op_subject field, escape regex special characters because a regular expression is expected.
              :type val_c_subject: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_time_window_id: If op_time_window_id is specified, this value will be compared to the value in time_window_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_time_window_id must be specified if op_time_window_id is specified.
+             :param val_c_time_window_id: If op_time_window_id is specified, this value will be compared to the value in time_window_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_time_window_id must be specified if op_time_window_id is specified. If the rlike or not rlike value is specified in the op_time_window_id field, escape regex special characters because a regular expression is expected.
              :type val_c_time_window_id: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_to: If op_to is specified, this value will be compared to the value in to using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_to must be specified if op_to is specified.
+             :param val_c_to: If op_to is specified, this value will be compared to the value in to using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_to must be specified if op_to is specified. If the rlike or not rlike value is specified in the op_to field, escape regex special characters because a regular expression is expected.
              :type val_c_to: String
 
             |  ``api version min:`` None
@@ -911,7 +879,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -935,7 +903,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, auth_user_id, category, delivery_method, mime, subject, message_template, details_template, to, created_at, updated_at, from, from_name, severity, all_in_category_ind, all_device_groups_ind, all_interface_groups_ind, time_window_id, event_type, send_clearing_ind, cron, last_run.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, auth_user_id, category, delivery_method, mime, subject, message_template, details_template, to, created_at, updated_at, from, from_name, severity, all_in_category_ind, all_device_groups_ind, all_interface_groups_ind, time_window_id, event_type, send_clearing_ind, cron, last_run.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -943,7 +911,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -953,22 +921,6 @@ class NotificationBroker(Broker):
 
              :param select: The list of attributes to return for each Notification. Valid values are id, auth_user_id, category, delivery_method, mime, subject, message_template, details_template, to, created_at, updated_at, from, from_name, severity, all_in_category_ind, all_device_groups_ind, all_interface_groups_ind, time_window_id, event_type, send_clearing_ind, cron, last_run. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1199,7 +1151,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created notification.
+             :return uri: The URI that may be used to retrieve the newly created notification.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -1410,7 +1362,7 @@ class NotificationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated notification.
+             :return uri: The URI that may be used to retrieve the updated notification.
              :rtype uri: String
 
             |  ``api version min:`` None

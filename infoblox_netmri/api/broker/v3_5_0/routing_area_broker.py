@@ -48,7 +48,7 @@ class RoutingAreaBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available routing areas. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available routing areas. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -137,7 +137,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` RoutingAreaID
 
-             :param sort: The data field(s) to use for sorting the output. Default is RoutingAreaID. Valid values are RoutingAreaID, RoutingAreaStartTime, RoutingAreaEndTime, RoutingAreaChangedCols, RoutingAreaTimestamp, RoutingAreaType, RoutingAreaNumber, RoutingAreaName, EigrpVpnIndex.
+             :param sort: The data field(s) to use for sorting the output. Valid values are RoutingAreaID, RoutingAreaStartTime, RoutingAreaEndTime, RoutingAreaChangedCols, RoutingAreaTimestamp, RoutingAreaType, RoutingAreaNumber, RoutingAreaName, EigrpVpnIndex.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -145,7 +145,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -155,22 +155,6 @@ class RoutingAreaBroker(Broker):
 
              :param select: The list of attributes to return for each RoutingArea. Valid values are RoutingAreaID, RoutingAreaStartTime, RoutingAreaEndTime, RoutingAreaChangedCols, RoutingAreaTimestamp, RoutingAreaType, RoutingAreaNumber, RoutingAreaName, EigrpVpnIndex. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -388,7 +372,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` RoutingAreaID
 
-             :param sort: The data field(s) to use for sorting the output. Default is RoutingAreaID. Valid values are RoutingAreaID, RoutingAreaStartTime, RoutingAreaEndTime, RoutingAreaChangedCols, RoutingAreaTimestamp, RoutingAreaType, RoutingAreaNumber, RoutingAreaName, EigrpVpnIndex.
+             :param sort: The data field(s) to use for sorting the output. Valid values are RoutingAreaID, RoutingAreaStartTime, RoutingAreaEndTime, RoutingAreaChangedCols, RoutingAreaTimestamp, RoutingAreaType, RoutingAreaNumber, RoutingAreaName, EigrpVpnIndex.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -396,7 +380,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -406,22 +390,6 @@ class RoutingAreaBroker(Broker):
 
              :param select: The list of attributes to return for each RoutingArea. Valid values are RoutingAreaID, RoutingAreaStartTime, RoutingAreaEndTime, RoutingAreaChangedCols, RoutingAreaTimestamp, RoutingAreaType, RoutingAreaNumber, RoutingAreaName, EigrpVpnIndex. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -479,7 +447,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EigrpVpnIndex: If op_EigrpVpnIndex is specified, this value will be compared to the value in EigrpVpnIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EigrpVpnIndex must be specified if op_EigrpVpnIndex is specified.
+             :param val_c_EigrpVpnIndex: If op_EigrpVpnIndex is specified, this value will be compared to the value in EigrpVpnIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EigrpVpnIndex must be specified if op_EigrpVpnIndex is specified. If the rlike or not rlike value is specified in the op_EigrpVpnIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_EigrpVpnIndex: String
 
             |  ``api version min:`` None
@@ -503,7 +471,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaChangedCols: If op_RoutingAreaChangedCols is specified, this value will be compared to the value in RoutingAreaChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaChangedCols must be specified if op_RoutingAreaChangedCols is specified.
+             :param val_c_RoutingAreaChangedCols: If op_RoutingAreaChangedCols is specified, this value will be compared to the value in RoutingAreaChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaChangedCols must be specified if op_RoutingAreaChangedCols is specified. If the rlike or not rlike value is specified in the op_RoutingAreaChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaChangedCols: String
 
             |  ``api version min:`` None
@@ -527,7 +495,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaEndTime: If op_RoutingAreaEndTime is specified, this value will be compared to the value in RoutingAreaEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaEndTime must be specified if op_RoutingAreaEndTime is specified.
+             :param val_c_RoutingAreaEndTime: If op_RoutingAreaEndTime is specified, this value will be compared to the value in RoutingAreaEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaEndTime must be specified if op_RoutingAreaEndTime is specified. If the rlike or not rlike value is specified in the op_RoutingAreaEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaEndTime: String
 
             |  ``api version min:`` None
@@ -551,7 +519,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaID: If op_RoutingAreaID is specified, this value will be compared to the value in RoutingAreaID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaID must be specified if op_RoutingAreaID is specified.
+             :param val_c_RoutingAreaID: If op_RoutingAreaID is specified, this value will be compared to the value in RoutingAreaID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaID must be specified if op_RoutingAreaID is specified. If the rlike or not rlike value is specified in the op_RoutingAreaID field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaID: String
 
             |  ``api version min:`` None
@@ -575,7 +543,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaName: If op_RoutingAreaName is specified, this value will be compared to the value in RoutingAreaName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaName must be specified if op_RoutingAreaName is specified.
+             :param val_c_RoutingAreaName: If op_RoutingAreaName is specified, this value will be compared to the value in RoutingAreaName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaName must be specified if op_RoutingAreaName is specified. If the rlike or not rlike value is specified in the op_RoutingAreaName field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaName: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaNumber: If op_RoutingAreaNumber is specified, this value will be compared to the value in RoutingAreaNumber using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaNumber must be specified if op_RoutingAreaNumber is specified.
+             :param val_c_RoutingAreaNumber: If op_RoutingAreaNumber is specified, this value will be compared to the value in RoutingAreaNumber using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaNumber must be specified if op_RoutingAreaNumber is specified. If the rlike or not rlike value is specified in the op_RoutingAreaNumber field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaNumber: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaStartTime: If op_RoutingAreaStartTime is specified, this value will be compared to the value in RoutingAreaStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaStartTime must be specified if op_RoutingAreaStartTime is specified.
+             :param val_c_RoutingAreaStartTime: If op_RoutingAreaStartTime is specified, this value will be compared to the value in RoutingAreaStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaStartTime must be specified if op_RoutingAreaStartTime is specified. If the rlike or not rlike value is specified in the op_RoutingAreaStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaStartTime: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaTimestamp: If op_RoutingAreaTimestamp is specified, this value will be compared to the value in RoutingAreaTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaTimestamp must be specified if op_RoutingAreaTimestamp is specified.
+             :param val_c_RoutingAreaTimestamp: If op_RoutingAreaTimestamp is specified, this value will be compared to the value in RoutingAreaTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaTimestamp must be specified if op_RoutingAreaTimestamp is specified. If the rlike or not rlike value is specified in the op_RoutingAreaTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaTimestamp: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaType: If op_RoutingAreaType is specified, this value will be compared to the value in RoutingAreaType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaType must be specified if op_RoutingAreaType is specified.
+             :param val_c_RoutingAreaType: If op_RoutingAreaType is specified, this value will be compared to the value in RoutingAreaType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaType must be specified if op_RoutingAreaType is specified. If the rlike or not rlike value is specified in the op_RoutingAreaType field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaType: String
 
             |  ``api version min:`` None
@@ -727,7 +695,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` RoutingAreaID
 
-             :param sort: The data field(s) to use for sorting the output. Default is RoutingAreaID. Valid values are RoutingAreaID, RoutingAreaStartTime, RoutingAreaEndTime, RoutingAreaChangedCols, RoutingAreaTimestamp, RoutingAreaType, RoutingAreaNumber, RoutingAreaName, EigrpVpnIndex.
+             :param sort: The data field(s) to use for sorting the output. Valid values are RoutingAreaID, RoutingAreaStartTime, RoutingAreaEndTime, RoutingAreaChangedCols, RoutingAreaTimestamp, RoutingAreaType, RoutingAreaNumber, RoutingAreaName, EigrpVpnIndex.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -745,22 +713,6 @@ class RoutingAreaBroker(Broker):
 
              :param select: The list of attributes to return for each RoutingArea. Valid values are RoutingAreaID, RoutingAreaStartTime, RoutingAreaEndTime, RoutingAreaChangedCols, RoutingAreaTimestamp, RoutingAreaType, RoutingAreaNumber, RoutingAreaName, EigrpVpnIndex. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -804,8 +756,8 @@ class RoutingAreaBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 

@@ -5,7 +5,7 @@ class DiscoveryHintBroker(Broker):
     controller = "discovery_hints"
 
     def index(self, **kwargs):
-        """Lists the available discovery hints. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available discovery hints. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -62,7 +62,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -70,7 +70,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -80,22 +80,6 @@ class DiscoveryHintBroker(Broker):
 
              :param select: The list of attributes to return for each DiscoveryHint. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -153,7 +137,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -161,7 +145,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -171,22 +155,6 @@ class DiscoveryHintBroker(Broker):
 
              :param select: The list of attributes to return for each DiscoveryHint. Valid values are id, hint, device_type, UnitID, created_by, updated_by, created_at, updated_at, cli_user_name_secure_ssh, cli_user_password_secure_ssh, snmp_protocol, snmp_community_secure, snmp_auth_protocol, snmp_auth_password_secure, snmp_private_protocol, snmp_private_password_secure, secure_version, cli_user_name_secure_telnet, cli_user_password_secure_telnet, cli_enable_password_secure. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -297,7 +265,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the newly created discovery hint.
+             :return uri: The URI that may be used to retrieve the newly created discovery hint.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -372,7 +340,7 @@ class DiscoveryHintBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated discovery hint.
+             :return uri: The URI that may be used to retrieve the updated discovery hint.
              :rtype uri: String
 
             |  ``api version min:`` None

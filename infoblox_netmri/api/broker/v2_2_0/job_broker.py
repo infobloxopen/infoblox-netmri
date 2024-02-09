@@ -5,7 +5,7 @@ class JobBroker(Broker):
     controller = "jobs"
 
     def index(self, **kwargs):
-        """Lists the available jobs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available jobs. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -94,7 +94,7 @@ class JobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, category, job_type, taskflow_revert, script_id, config_template_id, description, created_by, run_as, credential_source, approved_by, approval_note, provision_data, input_data, transactional_ind, status, last_status_at, started_at, completed_at, created_at, updated_at, approved_at, script_text, script_language, config_template_text, job_specification_id.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, category, job_type, taskflow_revert, script_id, config_template_id, description, created_by, run_as, credential_source, approved_by, approval_note, provision_data, input_data, transactional_ind, status, last_status_at, started_at, completed_at, created_at, updated_at, approved_at, script_text, script_language, config_template_text, job_specification_id.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -102,7 +102,7 @@ class JobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -112,22 +112,6 @@ class JobBroker(Broker):
 
              :param select: The list of attributes to return for each Job. Valid values are id, name, category, job_type, taskflow_revert, script_id, config_template_id, description, created_by, run_as, credential_source, approved_by, approval_note, provision_data, input_data, transactional_ind, status, last_status_at, started_at, completed_at, created_at, updated_at, approved_at, script_text, script_language, config_template_text, job_specification_id. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 

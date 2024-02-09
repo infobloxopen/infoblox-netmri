@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class DataCollectionStatusRemote(RemoteModel):
     """
-    status and time of last collections
+    Status and time of last collections.
 
 
     |  ``DeviceID:`` The internal NetMRI identifier for the device on which collection applied.

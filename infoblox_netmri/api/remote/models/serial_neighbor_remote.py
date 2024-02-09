@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class SerialNeighborRemote(RemoteModel):
     """
-    Neighbor relationships identified the  NetMRI Point-to-Point neighbor detection algorithm. This includes serial neighbors and other numbered point-to-point connections.
+    Neighbor relationships identified the NetMRI Point-to-Point neighbor detection algorithm. This includes serial neighbors and other numbered point-to-point connections.
 
 
     |  ``DataSourceID:`` The internal NetMRI identifier for the collector NetMRI that collected this data record.

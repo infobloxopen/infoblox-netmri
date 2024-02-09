@@ -5,7 +5,7 @@ class TriggeredJobBroker(Broker):
     controller = "triggered_jobs"
 
     def index(self, **kwargs):
-        """Lists the available triggered jobs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available triggered jobs. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -38,7 +38,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, description, enabled, script_id, source, action_auto, cron, action_preapprove, last_run, created_at, updated_at, config_template_id, job_type, created_by, updated_by.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, description, enabled, script_id, source, action_auto, cron, action_preapprove, last_run, created_at, updated_at, config_template_id, job_type, created_by, updated_by.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -46,7 +46,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -56,22 +56,6 @@ class TriggeredJobBroker(Broker):
 
              :param select: The list of attributes to return for each TriggeredJob. Valid values are id, name, description, enabled, script_id, source, action_auto, cron, action_preapprove, last_run, created_at, updated_at, config_template_id, job_type, created_by, updated_by. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -268,7 +252,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, description, enabled, script_id, source, action_auto, cron, action_preapprove, last_run, created_at, updated_at, config_template_id, job_type, created_by, updated_by.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, description, enabled, script_id, source, action_auto, cron, action_preapprove, last_run, created_at, updated_at, config_template_id, job_type, created_by, updated_by.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -276,7 +260,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -286,22 +270,6 @@ class TriggeredJobBroker(Broker):
 
              :param select: The list of attributes to return for each TriggeredJob. Valid values are id, name, description, enabled, script_id, source, action_auto, cron, action_preapprove, last_run, created_at, updated_at, config_template_id, job_type, created_by, updated_by. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -359,7 +327,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_action_auto: If op_action_auto is specified, this value will be compared to the value in action_auto using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_action_auto must be specified if op_action_auto is specified.
+             :param val_c_action_auto: If op_action_auto is specified, this value will be compared to the value in action_auto using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_action_auto must be specified if op_action_auto is specified. If the rlike or not rlike value is specified in the op_action_auto field, escape regex special characters because a regular expression is expected.
              :type val_c_action_auto: String
 
             |  ``api version min:`` None
@@ -383,7 +351,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_action_preapprove: If op_action_preapprove is specified, this value will be compared to the value in action_preapprove using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_action_preapprove must be specified if op_action_preapprove is specified.
+             :param val_c_action_preapprove: If op_action_preapprove is specified, this value will be compared to the value in action_preapprove using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_action_preapprove must be specified if op_action_preapprove is specified. If the rlike or not rlike value is specified in the op_action_preapprove field, escape regex special characters because a regular expression is expected.
              :type val_c_action_preapprove: String
 
             |  ``api version min:`` None
@@ -407,7 +375,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_config_template_id: If op_config_template_id is specified, this value will be compared to the value in config_template_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_config_template_id must be specified if op_config_template_id is specified.
+             :param val_c_config_template_id: If op_config_template_id is specified, this value will be compared to the value in config_template_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_config_template_id must be specified if op_config_template_id is specified. If the rlike or not rlike value is specified in the op_config_template_id field, escape regex special characters because a regular expression is expected.
              :type val_c_config_template_id: String
 
             |  ``api version min:`` None
@@ -431,7 +399,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -455,7 +423,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_by: If op_created_by is specified, this value will be compared to the value in created_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_by must be specified if op_created_by is specified.
+             :param val_c_created_by: If op_created_by is specified, this value will be compared to the value in created_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_by must be specified if op_created_by is specified. If the rlike or not rlike value is specified in the op_created_by field, escape regex special characters because a regular expression is expected.
              :type val_c_created_by: String
 
             |  ``api version min:`` None
@@ -479,7 +447,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cron: If op_cron is specified, this value will be compared to the value in cron using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cron must be specified if op_cron is specified.
+             :param val_c_cron: If op_cron is specified, this value will be compared to the value in cron using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cron must be specified if op_cron is specified. If the rlike or not rlike value is specified in the op_cron field, escape regex special characters because a regular expression is expected.
              :type val_c_cron: String
 
             |  ``api version min:`` None
@@ -503,7 +471,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_description: If op_description is specified, this value will be compared to the value in description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_description must be specified if op_description is specified.
+             :param val_c_description: If op_description is specified, this value will be compared to the value in description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_description must be specified if op_description is specified. If the rlike or not rlike value is specified in the op_description field, escape regex special characters because a regular expression is expected.
              :type val_c_description: String
 
             |  ``api version min:`` None
@@ -527,7 +495,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_enabled: If op_enabled is specified, this value will be compared to the value in enabled using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_enabled must be specified if op_enabled is specified.
+             :param val_c_enabled: If op_enabled is specified, this value will be compared to the value in enabled using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_enabled must be specified if op_enabled is specified. If the rlike or not rlike value is specified in the op_enabled field, escape regex special characters because a regular expression is expected.
              :type val_c_enabled: String
 
             |  ``api version min:`` None
@@ -551,7 +519,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -575,7 +543,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_job_type: If op_job_type is specified, this value will be compared to the value in job_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_job_type must be specified if op_job_type is specified.
+             :param val_c_job_type: If op_job_type is specified, this value will be compared to the value in job_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_job_type must be specified if op_job_type is specified. If the rlike or not rlike value is specified in the op_job_type field, escape regex special characters because a regular expression is expected.
              :type val_c_job_type: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_last_run: If op_last_run is specified, this value will be compared to the value in last_run using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_last_run must be specified if op_last_run is specified.
+             :param val_c_last_run: If op_last_run is specified, this value will be compared to the value in last_run using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_last_run must be specified if op_last_run is specified. If the rlike or not rlike value is specified in the op_last_run field, escape regex special characters because a regular expression is expected.
              :type val_c_last_run: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified.
+             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified. If the rlike or not rlike value is specified in the op_name field, escape regex special characters because a regular expression is expected.
              :type val_c_name: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_script_id: If op_script_id is specified, this value will be compared to the value in script_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_script_id must be specified if op_script_id is specified.
+             :param val_c_script_id: If op_script_id is specified, this value will be compared to the value in script_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_script_id must be specified if op_script_id is specified. If the rlike or not rlike value is specified in the op_script_id field, escape regex special characters because a regular expression is expected.
              :type val_c_script_id: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_source: If op_source is specified, this value will be compared to the value in source using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_source must be specified if op_source is specified.
+             :param val_c_source: If op_source is specified, this value will be compared to the value in source using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_source must be specified if op_source is specified. If the rlike or not rlike value is specified in the op_source field, escape regex special characters because a regular expression is expected.
              :type val_c_source: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_by: If op_updated_by is specified, this value will be compared to the value in updated_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_by must be specified if op_updated_by is specified.
+             :param val_c_updated_by: If op_updated_by is specified, this value will be compared to the value in updated_by using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_by must be specified if op_updated_by is specified. If the rlike or not rlike value is specified in the op_updated_by field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_by: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, description, enabled, script_id, source, action_auto, cron, action_preapprove, last_run, created_at, updated_at, config_template_id, job_type, created_by, updated_by.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, description, enabled, script_id, source, action_auto, cron, action_preapprove, last_run, created_at, updated_at, config_template_id, job_type, created_by, updated_by.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -751,7 +719,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -761,22 +729,6 @@ class TriggeredJobBroker(Broker):
 
              :param select: The list of attributes to return for each TriggeredJob. Valid values are id, name, description, enabled, script_id, source, action_auto, cron, action_preapprove, last_run, created_at, updated_at, config_template_id, job_type, created_by, updated_by. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -845,8 +797,8 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param source: The ID of trigger source: 1 - Policy Rule, 2 - Issue, 3 - IFMAP Subscription.
-             :type source: String
+             :param source: The ID of trigger source: 1 - Policy Rule, 2 - Issue.
+             :type source: Integer
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -915,7 +867,7 @@ class TriggeredJobBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` [u'0']
+            |  ``default:`` ['0']
 
              :param device_group_ids: A comma delimited list of device groups against which to run the specified job.
              :type device_group_ids: Array
@@ -923,7 +875,7 @@ class TriggeredJobBroker(Broker):
             |  ``api version min:`` None
             |  ``api version max:`` None
             |  ``required:`` False
-            |  ``default:`` [u'0']
+            |  ``default:`` ['0']
 
              :param interface_group_ids: A comma delimited list of interface groups against which to run the specified job.
              :type interface_group_ids: Array
@@ -941,7 +893,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param template_id: The internal NetMRI identifier for the template.
+             :param template_id: The internal NetMRI identifier for the template. Required, if job_type = 'template'.
              :type template_id: Integer
 
             |  ``api version min:`` None
@@ -949,7 +901,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param script_id: The internal NetMRI identifier for the script.
+             :param script_id: The internal NetMRI identifier for the script. Required, if job_type = 'script'.
              :type script_id: Integer
 
             |  ``api version min:`` None
@@ -957,7 +909,7 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param rule_id: The internal NetMRI identifier for the Policy Rule.
+             :param rule_id: The internal NetMRI identifier for the Policy Rule. Required, if source = '1'.
              :type rule_id: Integer
 
             |  ``api version min:`` None
@@ -965,8 +917,8 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param IssueTypeID: The internal NetMRI identifier for the Issue type.
-             :type IssueTypeID: String
+             :param issue_type_id: The internal NetMRI identifier for the Issue type. Required, if source = '2'.
+             :type issue_type_id: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -981,8 +933,34 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param ifmap_subscription_id: The internal NetMRI identifier for the ifmap subscription.
-             :type ifmap_subscription_id: Integer
+             :param credential_mode: If user credentials are required, they may be set from additional inputs (credential_mode = 'manual').
+                        The credentials may be looked up using requestor stored credentials (credential_mode = 'requestor').
+                     The credentials may be looked up using the approver stored credentials (credential_mode = 'approver').
+             :type credential_mode: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param username: Username to be used if the job requires user credentials.
+             :type username: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param password: Password to be used if the job requires user credentials.
+             :type password: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param enable_password: Enable Password to be used if the job requires user credentials.
+             :type enable_password: String
 
             **Outputs**
 
@@ -1024,8 +1002,8 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param source: The ID of trigger source: 1 - Policy Rule, 2 - Issue, 3 - IFMAP Subscription.
-             :type source: String
+             :param source: The ID of trigger source: 1 - Policy Rule, 2 - Issue.
+             :type source: Integer
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -1160,8 +1138,34 @@ class TriggeredJobBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param ifmap_subscription_id: The internal NetMRI identifier for the ifmap subscription.
-             :type ifmap_subscription_id: Integer
+             :param credential_mode: If user credentials are required, they may be set from additional inputs (credential_mode = 'manual').
+                        The credentials may be looked up using requestor stored credentials (credential_mode = 'requestor').
+                     The credentials may be looked up using the approver stored credentials (credential_mode = 'approver').
+             :type credential_mode: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param username: Username to be used if the job requires user credentials.
+             :type username: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param password: Password to be used if the job requires user credentials.
+             :type password: String
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :param enable_password: Enable Password to be used if the job requires user credentials.
+             :type enable_password: String
 
             **Outputs**
 

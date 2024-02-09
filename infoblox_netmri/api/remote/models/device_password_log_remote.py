@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class DevicePasswordLogRemote(RemoteModel):
     """
-    This table list out entries of DevicePasswordLog
+    This table list out entries of DevicePasswordLog.
 
 
     |  ``DevicePwLogID:`` The internal NetMRI identifier for the device password log.

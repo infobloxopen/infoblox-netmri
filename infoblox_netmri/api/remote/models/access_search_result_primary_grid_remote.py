@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class AccessSearchResultPrimaryGridRemote(RemoteModel):
     """
-    list of elementary search for one search request
+    List of elementary search for one search request.
 
 
     |  ``id:`` The internal NetMRI identifier for this search element.

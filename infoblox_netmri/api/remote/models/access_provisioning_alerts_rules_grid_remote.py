@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class AccessProvisioningAlertsRulesGridRemote(RemoteModel):
     """
-    list of alerts
+    List of alerts.
 
 
     |  ``id:`` The internal NetMRI identifier for this alert view.

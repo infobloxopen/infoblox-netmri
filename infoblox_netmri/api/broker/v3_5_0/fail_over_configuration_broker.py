@@ -210,14 +210,6 @@ class FailOverConfigurationBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param replication_direct_connect: Indicates if replication uses a direct connection through HA port. Default value is true.
-             :type replication_direct_connect: Boolean
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
              :param replication_port: Replication port. Required for non direct connection replication.
              :type replication_port: Integer
 

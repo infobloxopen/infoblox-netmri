@@ -48,7 +48,7 @@ class DevicePropertyBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available device properties. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device properties. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -153,7 +153,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePropertyID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePropertyID. Valid values are DataSourceID, DevicePropertyID, DevicePropStartTime, DevicePropEndTime, DevicePropChangedCols, DevicePropTimestamp, DeviceID, DevicePropName, DevicePropIndex, DevicePropSource, DevicePropValue, SecureVersion.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DevicePropertyID, DevicePropStartTime, DevicePropEndTime, DevicePropChangedCols, DevicePropTimestamp, DeviceID, DevicePropName, DevicePropIndex, DevicePropSource, DevicePropValue, SecureVersion.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -161,7 +161,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -171,22 +171,6 @@ class DevicePropertyBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceProperty. Valid values are DataSourceID, DevicePropertyID, DevicePropStartTime, DevicePropEndTime, DevicePropChangedCols, DevicePropTimestamp, DeviceID, DevicePropName, DevicePropIndex, DevicePropSource, DevicePropValue, SecureVersion. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -452,7 +436,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePropertyID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePropertyID. Valid values are DataSourceID, DevicePropertyID, DevicePropStartTime, DevicePropEndTime, DevicePropChangedCols, DevicePropTimestamp, DeviceID, DevicePropName, DevicePropIndex, DevicePropSource, DevicePropValue, SecureVersion.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DevicePropertyID, DevicePropStartTime, DevicePropEndTime, DevicePropChangedCols, DevicePropTimestamp, DeviceID, DevicePropName, DevicePropIndex, DevicePropSource, DevicePropValue, SecureVersion.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -460,7 +444,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -470,22 +454,6 @@ class DevicePropertyBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceProperty. Valid values are DataSourceID, DevicePropertyID, DevicePropStartTime, DevicePropEndTime, DevicePropChangedCols, DevicePropTimestamp, DeviceID, DevicePropName, DevicePropIndex, DevicePropSource, DevicePropValue, SecureVersion. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -543,7 +511,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -567,7 +535,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePropChangedCols: If op_DevicePropChangedCols is specified, this value will be compared to the value in DevicePropChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropChangedCols must be specified if op_DevicePropChangedCols is specified.
+             :param val_c_DevicePropChangedCols: If op_DevicePropChangedCols is specified, this value will be compared to the value in DevicePropChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropChangedCols must be specified if op_DevicePropChangedCols is specified. If the rlike or not rlike value is specified in the op_DevicePropChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePropChangedCols: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePropEndTime: If op_DevicePropEndTime is specified, this value will be compared to the value in DevicePropEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropEndTime must be specified if op_DevicePropEndTime is specified.
+             :param val_c_DevicePropEndTime: If op_DevicePropEndTime is specified, this value will be compared to the value in DevicePropEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropEndTime must be specified if op_DevicePropEndTime is specified. If the rlike or not rlike value is specified in the op_DevicePropEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePropEndTime: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePropIndex: If op_DevicePropIndex is specified, this value will be compared to the value in DevicePropIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropIndex must be specified if op_DevicePropIndex is specified.
+             :param val_c_DevicePropIndex: If op_DevicePropIndex is specified, this value will be compared to the value in DevicePropIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropIndex must be specified if op_DevicePropIndex is specified. If the rlike or not rlike value is specified in the op_DevicePropIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePropIndex: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePropName: If op_DevicePropName is specified, this value will be compared to the value in DevicePropName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropName must be specified if op_DevicePropName is specified.
+             :param val_c_DevicePropName: If op_DevicePropName is specified, this value will be compared to the value in DevicePropName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropName must be specified if op_DevicePropName is specified. If the rlike or not rlike value is specified in the op_DevicePropName field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePropName: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePropSource: If op_DevicePropSource is specified, this value will be compared to the value in DevicePropSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropSource must be specified if op_DevicePropSource is specified.
+             :param val_c_DevicePropSource: If op_DevicePropSource is specified, this value will be compared to the value in DevicePropSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropSource must be specified if op_DevicePropSource is specified. If the rlike or not rlike value is specified in the op_DevicePropSource field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePropSource: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePropStartTime: If op_DevicePropStartTime is specified, this value will be compared to the value in DevicePropStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropStartTime must be specified if op_DevicePropStartTime is specified.
+             :param val_c_DevicePropStartTime: If op_DevicePropStartTime is specified, this value will be compared to the value in DevicePropStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropStartTime must be specified if op_DevicePropStartTime is specified. If the rlike or not rlike value is specified in the op_DevicePropStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePropStartTime: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePropTimestamp: If op_DevicePropTimestamp is specified, this value will be compared to the value in DevicePropTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropTimestamp must be specified if op_DevicePropTimestamp is specified.
+             :param val_c_DevicePropTimestamp: If op_DevicePropTimestamp is specified, this value will be compared to the value in DevicePropTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropTimestamp must be specified if op_DevicePropTimestamp is specified. If the rlike or not rlike value is specified in the op_DevicePropTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePropTimestamp: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePropValue: If op_DevicePropValue is specified, this value will be compared to the value in DevicePropValue using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropValue must be specified if op_DevicePropValue is specified.
+             :param val_c_DevicePropValue: If op_DevicePropValue is specified, this value will be compared to the value in DevicePropValue using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropValue must be specified if op_DevicePropValue is specified. If the rlike or not rlike value is specified in the op_DevicePropValue field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePropValue: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePropertyID: If op_DevicePropertyID is specified, this value will be compared to the value in DevicePropertyID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropertyID must be specified if op_DevicePropertyID is specified.
+             :param val_c_DevicePropertyID: If op_DevicePropertyID is specified, this value will be compared to the value in DevicePropertyID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePropertyID must be specified if op_DevicePropertyID is specified. If the rlike or not rlike value is specified in the op_DevicePropertyID field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePropertyID: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SecureVersion: If op_SecureVersion is specified, this value will be compared to the value in SecureVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SecureVersion must be specified if op_SecureVersion is specified.
+             :param val_c_SecureVersion: If op_SecureVersion is specified, this value will be compared to the value in SecureVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SecureVersion must be specified if op_SecureVersion is specified. If the rlike or not rlike value is specified in the op_SecureVersion field, escape regex special characters because a regular expression is expected.
              :type val_c_SecureVersion: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePropertyID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePropertyID. Valid values are DataSourceID, DevicePropertyID, DevicePropStartTime, DevicePropEndTime, DevicePropChangedCols, DevicePropTimestamp, DeviceID, DevicePropName, DevicePropIndex, DevicePropSource, DevicePropValue, SecureVersion.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, DevicePropertyID, DevicePropStartTime, DevicePropEndTime, DevicePropChangedCols, DevicePropTimestamp, DeviceID, DevicePropName, DevicePropIndex, DevicePropSource, DevicePropValue, SecureVersion.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -871,7 +839,7 @@ class DevicePropertyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -881,22 +849,6 @@ class DevicePropertyBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceProperty. Valid values are DataSourceID, DevicePropertyID, DevicePropStartTime, DevicePropEndTime, DevicePropChangedCols, DevicePropTimestamp, DeviceID, DevicePropName, DevicePropIndex, DevicePropSource, DevicePropValue, SecureVersion. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

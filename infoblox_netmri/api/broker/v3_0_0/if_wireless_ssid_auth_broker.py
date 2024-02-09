@@ -5,7 +5,7 @@ class IfWirelessSSIDAuthBroker(Broker):
     controller = "if_wireless_ssid_auths"
 
     def index(self, **kwargs):
-        """Lists the available if wireless ssid auths. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available if wireless ssid auths. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -94,7 +94,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IfWirelessSSIDAuthID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IfWirelessSSIDAuthID. Valid values are IfWirelessSSIDAuthID, DataSourceID, DeviceID, InterfaceID, ifWirelessSSIDAuthStartTime, ifWirelessSSIDAuthEndTime, ifWirelessSSIDAuthChangedCols, ifWirelessSSIDAuthTimestamp, SSIDIndex, SSIDAlgorithmIndex, SSIDAuthEnabledInd, SSIDEAPRequiredInd, SSIDEAPMethod, SSIDMACAuthRequiredInd, SSIDMACAuthMethod, SSIDDefaultVlanIndex, VlanID, SSIDAuthAlgorithm.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IfWirelessSSIDAuthID, DataSourceID, DeviceID, InterfaceID, ifWirelessSSIDAuthStartTime, ifWirelessSSIDAuthEndTime, ifWirelessSSIDAuthChangedCols, ifWirelessSSIDAuthTimestamp, SSIDIndex, SSIDAlgorithmIndex, SSIDAuthEnabledInd, SSIDEAPRequiredInd, SSIDEAPMethod, SSIDMACAuthRequiredInd, SSIDMACAuthMethod, SSIDDefaultVlanIndex, VlanID, SSIDAuthAlgorithm.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -102,7 +102,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -112,22 +112,6 @@ class IfWirelessSSIDAuthBroker(Broker):
 
              :param select: The list of attributes to return for each IfWirelessSSIDAuth. Valid values are IfWirelessSSIDAuthID, DataSourceID, DeviceID, InterfaceID, ifWirelessSSIDAuthStartTime, ifWirelessSSIDAuthEndTime, ifWirelessSSIDAuthChangedCols, ifWirelessSSIDAuthTimestamp, SSIDIndex, SSIDAlgorithmIndex, SSIDAuthEnabledInd, SSIDEAPRequiredInd, SSIDEAPMethod, SSIDMACAuthRequiredInd, SSIDMACAuthMethod, SSIDDefaultVlanIndex, VlanID, SSIDAuthAlgorithm. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -532,7 +516,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IfWirelessSSIDAuthID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IfWirelessSSIDAuthID. Valid values are IfWirelessSSIDAuthID, DataSourceID, DeviceID, InterfaceID, ifWirelessSSIDAuthStartTime, ifWirelessSSIDAuthEndTime, ifWirelessSSIDAuthChangedCols, ifWirelessSSIDAuthTimestamp, SSIDIndex, SSIDAlgorithmIndex, SSIDAuthEnabledInd, SSIDEAPRequiredInd, SSIDEAPMethod, SSIDMACAuthRequiredInd, SSIDMACAuthMethod, SSIDDefaultVlanIndex, VlanID, SSIDAuthAlgorithm.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IfWirelessSSIDAuthID, DataSourceID, DeviceID, InterfaceID, ifWirelessSSIDAuthStartTime, ifWirelessSSIDAuthEndTime, ifWirelessSSIDAuthChangedCols, ifWirelessSSIDAuthTimestamp, SSIDIndex, SSIDAlgorithmIndex, SSIDAuthEnabledInd, SSIDEAPRequiredInd, SSIDEAPMethod, SSIDMACAuthRequiredInd, SSIDMACAuthMethod, SSIDDefaultVlanIndex, VlanID, SSIDAuthAlgorithm.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -540,7 +524,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -550,22 +534,6 @@ class IfWirelessSSIDAuthBroker(Broker):
 
              :param select: The list of attributes to return for each IfWirelessSSIDAuth. Valid values are IfWirelessSSIDAuthID, DataSourceID, DeviceID, InterfaceID, ifWirelessSSIDAuthStartTime, ifWirelessSSIDAuthEndTime, ifWirelessSSIDAuthChangedCols, ifWirelessSSIDAuthTimestamp, SSIDIndex, SSIDAlgorithmIndex, SSIDAuthEnabledInd, SSIDEAPRequiredInd, SSIDEAPMethod, SSIDMACAuthRequiredInd, SSIDMACAuthMethod, SSIDDefaultVlanIndex, VlanID, SSIDAuthAlgorithm. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -623,7 +591,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IfWirelessSSIDAuthID: If op_IfWirelessSSIDAuthID is specified, this value will be compared to the value in IfWirelessSSIDAuthID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IfWirelessSSIDAuthID must be specified if op_IfWirelessSSIDAuthID is specified.
+             :param val_c_IfWirelessSSIDAuthID: If op_IfWirelessSSIDAuthID is specified, this value will be compared to the value in IfWirelessSSIDAuthID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IfWirelessSSIDAuthID must be specified if op_IfWirelessSSIDAuthID is specified. If the rlike or not rlike value is specified in the op_IfWirelessSSIDAuthID field, escape regex special characters because a regular expression is expected.
              :type val_c_IfWirelessSSIDAuthID: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDAlgorithmIndex: If op_SSIDAlgorithmIndex is specified, this value will be compared to the value in SSIDAlgorithmIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDAlgorithmIndex must be specified if op_SSIDAlgorithmIndex is specified.
+             :param val_c_SSIDAlgorithmIndex: If op_SSIDAlgorithmIndex is specified, this value will be compared to the value in SSIDAlgorithmIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDAlgorithmIndex must be specified if op_SSIDAlgorithmIndex is specified. If the rlike or not rlike value is specified in the op_SSIDAlgorithmIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDAlgorithmIndex: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDAuthAlgorithm: If op_SSIDAuthAlgorithm is specified, this value will be compared to the value in SSIDAuthAlgorithm using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDAuthAlgorithm must be specified if op_SSIDAuthAlgorithm is specified.
+             :param val_c_SSIDAuthAlgorithm: If op_SSIDAuthAlgorithm is specified, this value will be compared to the value in SSIDAuthAlgorithm using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDAuthAlgorithm must be specified if op_SSIDAuthAlgorithm is specified. If the rlike or not rlike value is specified in the op_SSIDAuthAlgorithm field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDAuthAlgorithm: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDAuthEnabledInd: If op_SSIDAuthEnabledInd is specified, this value will be compared to the value in SSIDAuthEnabledInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDAuthEnabledInd must be specified if op_SSIDAuthEnabledInd is specified.
+             :param val_c_SSIDAuthEnabledInd: If op_SSIDAuthEnabledInd is specified, this value will be compared to the value in SSIDAuthEnabledInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDAuthEnabledInd must be specified if op_SSIDAuthEnabledInd is specified. If the rlike or not rlike value is specified in the op_SSIDAuthEnabledInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDAuthEnabledInd: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDDefaultVlanIndex: If op_SSIDDefaultVlanIndex is specified, this value will be compared to the value in SSIDDefaultVlanIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDDefaultVlanIndex must be specified if op_SSIDDefaultVlanIndex is specified.
+             :param val_c_SSIDDefaultVlanIndex: If op_SSIDDefaultVlanIndex is specified, this value will be compared to the value in SSIDDefaultVlanIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDDefaultVlanIndex must be specified if op_SSIDDefaultVlanIndex is specified. If the rlike or not rlike value is specified in the op_SSIDDefaultVlanIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDDefaultVlanIndex: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDEAPMethod: If op_SSIDEAPMethod is specified, this value will be compared to the value in SSIDEAPMethod using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDEAPMethod must be specified if op_SSIDEAPMethod is specified.
+             :param val_c_SSIDEAPMethod: If op_SSIDEAPMethod is specified, this value will be compared to the value in SSIDEAPMethod using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDEAPMethod must be specified if op_SSIDEAPMethod is specified. If the rlike or not rlike value is specified in the op_SSIDEAPMethod field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDEAPMethod: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDEAPRequiredInd: If op_SSIDEAPRequiredInd is specified, this value will be compared to the value in SSIDEAPRequiredInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDEAPRequiredInd must be specified if op_SSIDEAPRequiredInd is specified.
+             :param val_c_SSIDEAPRequiredInd: If op_SSIDEAPRequiredInd is specified, this value will be compared to the value in SSIDEAPRequiredInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDEAPRequiredInd must be specified if op_SSIDEAPRequiredInd is specified. If the rlike or not rlike value is specified in the op_SSIDEAPRequiredInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDEAPRequiredInd: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDIndex: If op_SSIDIndex is specified, this value will be compared to the value in SSIDIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDIndex must be specified if op_SSIDIndex is specified.
+             :param val_c_SSIDIndex: If op_SSIDIndex is specified, this value will be compared to the value in SSIDIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDIndex must be specified if op_SSIDIndex is specified. If the rlike or not rlike value is specified in the op_SSIDIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDIndex: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDMACAuthMethod: If op_SSIDMACAuthMethod is specified, this value will be compared to the value in SSIDMACAuthMethod using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDMACAuthMethod must be specified if op_SSIDMACAuthMethod is specified.
+             :param val_c_SSIDMACAuthMethod: If op_SSIDMACAuthMethod is specified, this value will be compared to the value in SSIDMACAuthMethod using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDMACAuthMethod must be specified if op_SSIDMACAuthMethod is specified. If the rlike or not rlike value is specified in the op_SSIDMACAuthMethod field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDMACAuthMethod: String
 
             |  ``api version min:`` None
@@ -911,7 +879,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SSIDMACAuthRequiredInd: If op_SSIDMACAuthRequiredInd is specified, this value will be compared to the value in SSIDMACAuthRequiredInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDMACAuthRequiredInd must be specified if op_SSIDMACAuthRequiredInd is specified.
+             :param val_c_SSIDMACAuthRequiredInd: If op_SSIDMACAuthRequiredInd is specified, this value will be compared to the value in SSIDMACAuthRequiredInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SSIDMACAuthRequiredInd must be specified if op_SSIDMACAuthRequiredInd is specified. If the rlike or not rlike value is specified in the op_SSIDMACAuthRequiredInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SSIDMACAuthRequiredInd: String
 
             |  ``api version min:`` None
@@ -935,7 +903,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanID: If op_VlanID is specified, this value will be compared to the value in VlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanID must be specified if op_VlanID is specified.
+             :param val_c_VlanID: If op_VlanID is specified, this value will be compared to the value in VlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanID must be specified if op_VlanID is specified. If the rlike or not rlike value is specified in the op_VlanID field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanID: String
 
             |  ``api version min:`` None
@@ -959,7 +927,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifWirelessSSIDAuthChangedCols: If op_ifWirelessSSIDAuthChangedCols is specified, this value will be compared to the value in ifWirelessSSIDAuthChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDAuthChangedCols must be specified if op_ifWirelessSSIDAuthChangedCols is specified.
+             :param val_c_ifWirelessSSIDAuthChangedCols: If op_ifWirelessSSIDAuthChangedCols is specified, this value will be compared to the value in ifWirelessSSIDAuthChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDAuthChangedCols must be specified if op_ifWirelessSSIDAuthChangedCols is specified. If the rlike or not rlike value is specified in the op_ifWirelessSSIDAuthChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_ifWirelessSSIDAuthChangedCols: String
 
             |  ``api version min:`` None
@@ -983,7 +951,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifWirelessSSIDAuthEndTime: If op_ifWirelessSSIDAuthEndTime is specified, this value will be compared to the value in ifWirelessSSIDAuthEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDAuthEndTime must be specified if op_ifWirelessSSIDAuthEndTime is specified.
+             :param val_c_ifWirelessSSIDAuthEndTime: If op_ifWirelessSSIDAuthEndTime is specified, this value will be compared to the value in ifWirelessSSIDAuthEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDAuthEndTime must be specified if op_ifWirelessSSIDAuthEndTime is specified. If the rlike or not rlike value is specified in the op_ifWirelessSSIDAuthEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_ifWirelessSSIDAuthEndTime: String
 
             |  ``api version min:`` None
@@ -1007,7 +975,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifWirelessSSIDAuthStartTime: If op_ifWirelessSSIDAuthStartTime is specified, this value will be compared to the value in ifWirelessSSIDAuthStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDAuthStartTime must be specified if op_ifWirelessSSIDAuthStartTime is specified.
+             :param val_c_ifWirelessSSIDAuthStartTime: If op_ifWirelessSSIDAuthStartTime is specified, this value will be compared to the value in ifWirelessSSIDAuthStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDAuthStartTime must be specified if op_ifWirelessSSIDAuthStartTime is specified. If the rlike or not rlike value is specified in the op_ifWirelessSSIDAuthStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_ifWirelessSSIDAuthStartTime: String
 
             |  ``api version min:`` None
@@ -1031,7 +999,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifWirelessSSIDAuthTimestamp: If op_ifWirelessSSIDAuthTimestamp is specified, this value will be compared to the value in ifWirelessSSIDAuthTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDAuthTimestamp must be specified if op_ifWirelessSSIDAuthTimestamp is specified.
+             :param val_c_ifWirelessSSIDAuthTimestamp: If op_ifWirelessSSIDAuthTimestamp is specified, this value will be compared to the value in ifWirelessSSIDAuthTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifWirelessSSIDAuthTimestamp must be specified if op_ifWirelessSSIDAuthTimestamp is specified. If the rlike or not rlike value is specified in the op_ifWirelessSSIDAuthTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_ifWirelessSSIDAuthTimestamp: String
 
             |  ``api version min:`` None
@@ -1087,7 +1055,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IfWirelessSSIDAuthID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IfWirelessSSIDAuthID. Valid values are IfWirelessSSIDAuthID, DataSourceID, DeviceID, InterfaceID, ifWirelessSSIDAuthStartTime, ifWirelessSSIDAuthEndTime, ifWirelessSSIDAuthChangedCols, ifWirelessSSIDAuthTimestamp, SSIDIndex, SSIDAlgorithmIndex, SSIDAuthEnabledInd, SSIDEAPRequiredInd, SSIDEAPMethod, SSIDMACAuthRequiredInd, SSIDMACAuthMethod, SSIDDefaultVlanIndex, VlanID, SSIDAuthAlgorithm.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IfWirelessSSIDAuthID, DataSourceID, DeviceID, InterfaceID, ifWirelessSSIDAuthStartTime, ifWirelessSSIDAuthEndTime, ifWirelessSSIDAuthChangedCols, ifWirelessSSIDAuthTimestamp, SSIDIndex, SSIDAlgorithmIndex, SSIDAuthEnabledInd, SSIDEAPRequiredInd, SSIDEAPMethod, SSIDMACAuthRequiredInd, SSIDMACAuthMethod, SSIDDefaultVlanIndex, VlanID, SSIDAuthAlgorithm.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1095,7 +1063,7 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1105,22 +1073,6 @@ class IfWirelessSSIDAuthBroker(Broker):
 
              :param select: The list of attributes to return for each IfWirelessSSIDAuth. Valid values are IfWirelessSSIDAuthID, DataSourceID, DeviceID, InterfaceID, ifWirelessSSIDAuthStartTime, ifWirelessSSIDAuthEndTime, ifWirelessSSIDAuthChangedCols, ifWirelessSSIDAuthTimestamp, SSIDIndex, SSIDAlgorithmIndex, SSIDAuthEnabledInd, SSIDEAPRequiredInd, SSIDEAPMethod, SSIDMACAuthRequiredInd, SSIDMACAuthMethod, SSIDDefaultVlanIndex, VlanID, SSIDAuthAlgorithm. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1164,8 +1116,8 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1191,8 +1143,8 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -1218,8 +1170,8 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : interface
-             :rtype : Interface
+             :return interface: interface
+             :rtype interface: Interface
 
             """
 
@@ -1245,8 +1197,8 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : vlan
-             :rtype : Vlan
+             :return vlan: vlan
+             :rtype vlan: Vlan
 
             """
 
@@ -1272,8 +1224,8 @@ class IfWirelessSSIDAuthBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

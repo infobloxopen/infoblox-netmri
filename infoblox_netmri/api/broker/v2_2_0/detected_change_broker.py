@@ -40,7 +40,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated detected change.
+             :return uri: The URI that may be used to retrieve the updated detected change.
              :rtype uri: String
 
             |  ``api version min:`` None

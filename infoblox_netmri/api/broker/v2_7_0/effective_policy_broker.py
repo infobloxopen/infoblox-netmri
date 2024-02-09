@@ -48,7 +48,7 @@ class EffectivePolicyBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available effective policies. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available effective policies. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -137,7 +137,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` PolicyID
 
-             :param sort: The data field(s) to use for sorting the output. Default is PolicyID. Valid values are DataSourceID, PolicyID, PolicyStartTime, PolicyEndTime, PolicyChangedCols, PolicyTimestamp, PolicyFirstSeenTime, PolicyName, PolicyDescription, PolicyAuthor, PolicySetFilter, PolicyCreatedAt, PolicyUpdatedAt, PolicyScheduleMode, PolicyShortName, PolicyReadOnlyInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, PolicyID, PolicyStartTime, PolicyEndTime, PolicyChangedCols, PolicyTimestamp, PolicyFirstSeenTime, PolicyName, PolicyDescription, PolicyAuthor, PolicySetFilter, PolicyCreatedAt, PolicyUpdatedAt, PolicyScheduleMode, PolicyShortName, PolicyReadOnlyInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -145,7 +145,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -155,22 +155,6 @@ class EffectivePolicyBroker(Broker):
 
              :param select: The list of attributes to return for each EffectivePolicy. Valid values are DataSourceID, PolicyID, PolicyStartTime, PolicyEndTime, PolicyChangedCols, PolicyTimestamp, PolicyFirstSeenTime, PolicyName, PolicyDescription, PolicyAuthor, PolicySetFilter, PolicyCreatedAt, PolicyUpdatedAt, PolicyScheduleMode, PolicyShortName, PolicyReadOnlyInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -500,7 +484,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` PolicyID
 
-             :param sort: The data field(s) to use for sorting the output. Default is PolicyID. Valid values are DataSourceID, PolicyID, PolicyStartTime, PolicyEndTime, PolicyChangedCols, PolicyTimestamp, PolicyFirstSeenTime, PolicyName, PolicyDescription, PolicyAuthor, PolicySetFilter, PolicyCreatedAt, PolicyUpdatedAt, PolicyScheduleMode, PolicyShortName, PolicyReadOnlyInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, PolicyID, PolicyStartTime, PolicyEndTime, PolicyChangedCols, PolicyTimestamp, PolicyFirstSeenTime, PolicyName, PolicyDescription, PolicyAuthor, PolicySetFilter, PolicyCreatedAt, PolicyUpdatedAt, PolicyScheduleMode, PolicyShortName, PolicyReadOnlyInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -508,7 +492,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -518,22 +502,6 @@ class EffectivePolicyBroker(Broker):
 
              :param select: The list of attributes to return for each EffectivePolicy. Valid values are DataSourceID, PolicyID, PolicyStartTime, PolicyEndTime, PolicyChangedCols, PolicyTimestamp, PolicyFirstSeenTime, PolicyName, PolicyDescription, PolicyAuthor, PolicySetFilter, PolicyCreatedAt, PolicyUpdatedAt, PolicyScheduleMode, PolicyShortName, PolicyReadOnlyInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -591,7 +559,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyAuthor: If op_PolicyAuthor is specified, this value will be compared to the value in PolicyAuthor using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyAuthor must be specified if op_PolicyAuthor is specified.
+             :param val_c_PolicyAuthor: If op_PolicyAuthor is specified, this value will be compared to the value in PolicyAuthor using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyAuthor must be specified if op_PolicyAuthor is specified. If the rlike or not rlike value is specified in the op_PolicyAuthor field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyAuthor: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyChangedCols: If op_PolicyChangedCols is specified, this value will be compared to the value in PolicyChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyChangedCols must be specified if op_PolicyChangedCols is specified.
+             :param val_c_PolicyChangedCols: If op_PolicyChangedCols is specified, this value will be compared to the value in PolicyChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyChangedCols must be specified if op_PolicyChangedCols is specified. If the rlike or not rlike value is specified in the op_PolicyChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyChangedCols: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyCreatedAt: If op_PolicyCreatedAt is specified, this value will be compared to the value in PolicyCreatedAt using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyCreatedAt must be specified if op_PolicyCreatedAt is specified.
+             :param val_c_PolicyCreatedAt: If op_PolicyCreatedAt is specified, this value will be compared to the value in PolicyCreatedAt using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyCreatedAt must be specified if op_PolicyCreatedAt is specified. If the rlike or not rlike value is specified in the op_PolicyCreatedAt field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyCreatedAt: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyDescription: If op_PolicyDescription is specified, this value will be compared to the value in PolicyDescription using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyDescription must be specified if op_PolicyDescription is specified.
+             :param val_c_PolicyDescription: If op_PolicyDescription is specified, this value will be compared to the value in PolicyDescription using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyDescription must be specified if op_PolicyDescription is specified. If the rlike or not rlike value is specified in the op_PolicyDescription field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyDescription: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyEndTime: If op_PolicyEndTime is specified, this value will be compared to the value in PolicyEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyEndTime must be specified if op_PolicyEndTime is specified.
+             :param val_c_PolicyEndTime: If op_PolicyEndTime is specified, this value will be compared to the value in PolicyEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyEndTime must be specified if op_PolicyEndTime is specified. If the rlike or not rlike value is specified in the op_PolicyEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyEndTime: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyFirstSeenTime: If op_PolicyFirstSeenTime is specified, this value will be compared to the value in PolicyFirstSeenTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyFirstSeenTime must be specified if op_PolicyFirstSeenTime is specified.
+             :param val_c_PolicyFirstSeenTime: If op_PolicyFirstSeenTime is specified, this value will be compared to the value in PolicyFirstSeenTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyFirstSeenTime must be specified if op_PolicyFirstSeenTime is specified. If the rlike or not rlike value is specified in the op_PolicyFirstSeenTime field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyFirstSeenTime: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyID: If op_PolicyID is specified, this value will be compared to the value in PolicyID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyID must be specified if op_PolicyID is specified.
+             :param val_c_PolicyID: If op_PolicyID is specified, this value will be compared to the value in PolicyID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyID must be specified if op_PolicyID is specified. If the rlike or not rlike value is specified in the op_PolicyID field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyID: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyName: If op_PolicyName is specified, this value will be compared to the value in PolicyName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyName must be specified if op_PolicyName is specified.
+             :param val_c_PolicyName: If op_PolicyName is specified, this value will be compared to the value in PolicyName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyName must be specified if op_PolicyName is specified. If the rlike or not rlike value is specified in the op_PolicyName field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyName: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyReadOnlyInd: If op_PolicyReadOnlyInd is specified, this value will be compared to the value in PolicyReadOnlyInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyReadOnlyInd must be specified if op_PolicyReadOnlyInd is specified.
+             :param val_c_PolicyReadOnlyInd: If op_PolicyReadOnlyInd is specified, this value will be compared to the value in PolicyReadOnlyInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyReadOnlyInd must be specified if op_PolicyReadOnlyInd is specified. If the rlike or not rlike value is specified in the op_PolicyReadOnlyInd field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyReadOnlyInd: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyScheduleMode: If op_PolicyScheduleMode is specified, this value will be compared to the value in PolicyScheduleMode using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyScheduleMode must be specified if op_PolicyScheduleMode is specified.
+             :param val_c_PolicyScheduleMode: If op_PolicyScheduleMode is specified, this value will be compared to the value in PolicyScheduleMode using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyScheduleMode must be specified if op_PolicyScheduleMode is specified. If the rlike or not rlike value is specified in the op_PolicyScheduleMode field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyScheduleMode: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicySetFilter: If op_PolicySetFilter is specified, this value will be compared to the value in PolicySetFilter using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicySetFilter must be specified if op_PolicySetFilter is specified.
+             :param val_c_PolicySetFilter: If op_PolicySetFilter is specified, this value will be compared to the value in PolicySetFilter using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicySetFilter must be specified if op_PolicySetFilter is specified. If the rlike or not rlike value is specified in the op_PolicySetFilter field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicySetFilter: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyShortName: If op_PolicyShortName is specified, this value will be compared to the value in PolicyShortName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyShortName must be specified if op_PolicyShortName is specified.
+             :param val_c_PolicyShortName: If op_PolicyShortName is specified, this value will be compared to the value in PolicyShortName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyShortName must be specified if op_PolicyShortName is specified. If the rlike or not rlike value is specified in the op_PolicyShortName field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyShortName: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyStartTime: If op_PolicyStartTime is specified, this value will be compared to the value in PolicyStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyStartTime must be specified if op_PolicyStartTime is specified.
+             :param val_c_PolicyStartTime: If op_PolicyStartTime is specified, this value will be compared to the value in PolicyStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyStartTime must be specified if op_PolicyStartTime is specified. If the rlike or not rlike value is specified in the op_PolicyStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyStartTime: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyTimestamp: If op_PolicyTimestamp is specified, this value will be compared to the value in PolicyTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyTimestamp must be specified if op_PolicyTimestamp is specified.
+             :param val_c_PolicyTimestamp: If op_PolicyTimestamp is specified, this value will be compared to the value in PolicyTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyTimestamp must be specified if op_PolicyTimestamp is specified. If the rlike or not rlike value is specified in the op_PolicyTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyTimestamp: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PolicyUpdatedAt: If op_PolicyUpdatedAt is specified, this value will be compared to the value in PolicyUpdatedAt using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyUpdatedAt must be specified if op_PolicyUpdatedAt is specified.
+             :param val_c_PolicyUpdatedAt: If op_PolicyUpdatedAt is specified, this value will be compared to the value in PolicyUpdatedAt using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PolicyUpdatedAt must be specified if op_PolicyUpdatedAt is specified. If the rlike or not rlike value is specified in the op_PolicyUpdatedAt field, escape regex special characters because a regular expression is expected.
              :type val_c_PolicyUpdatedAt: String
 
             |  ``api version min:`` None
@@ -1007,7 +975,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` PolicyID
 
-             :param sort: The data field(s) to use for sorting the output. Default is PolicyID. Valid values are DataSourceID, PolicyID, PolicyStartTime, PolicyEndTime, PolicyChangedCols, PolicyTimestamp, PolicyFirstSeenTime, PolicyName, PolicyDescription, PolicyAuthor, PolicySetFilter, PolicyCreatedAt, PolicyUpdatedAt, PolicyScheduleMode, PolicyShortName, PolicyReadOnlyInd.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, PolicyID, PolicyStartTime, PolicyEndTime, PolicyChangedCols, PolicyTimestamp, PolicyFirstSeenTime, PolicyName, PolicyDescription, PolicyAuthor, PolicySetFilter, PolicyCreatedAt, PolicyUpdatedAt, PolicyScheduleMode, PolicyShortName, PolicyReadOnlyInd.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1015,7 +983,7 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1025,22 +993,6 @@ class EffectivePolicyBroker(Broker):
 
              :param select: The list of attributes to return for each EffectivePolicy. Valid values are DataSourceID, PolicyID, PolicyStartTime, PolicyEndTime, PolicyChangedCols, PolicyTimestamp, PolicyFirstSeenTime, PolicyName, PolicyDescription, PolicyAuthor, PolicySetFilter, PolicyCreatedAt, PolicyUpdatedAt, PolicyScheduleMode, PolicyShortName, PolicyReadOnlyInd. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1084,8 +1036,8 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1111,8 +1063,8 @@ class EffectivePolicyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Returns a human-readable text version of the policy set filter.
-             :rtype : String
+             :return policy_set_filter_text: Returns a human-readable text version of the policy set filter.
+             :rtype policy_set_filter_text: String
 
             """
 

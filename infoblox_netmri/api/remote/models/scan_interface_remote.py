@@ -3,7 +3,7 @@ from ..remote import RemoteModel
 
 class ScanInterfaceRemote(RemoteModel):
     """
-    A NetMRI interface that can do discovery and other interaction with licensed devices
+    A NetMRI interface that can do discovery and other interaction with licensed devices.
 
 
     |  ``unit_id:`` The internal identifier for the collector on which the scan interface exists.

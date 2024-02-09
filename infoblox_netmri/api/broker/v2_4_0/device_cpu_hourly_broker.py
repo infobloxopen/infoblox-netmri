@@ -5,7 +5,7 @@ class DeviceCpuHourlyBroker(Broker):
     controller = "device_cpu_hourlies"
 
     def index(self, **kwargs):
-        """Lists the available device cpu hourlies. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device cpu hourlies. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -118,7 +118,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceCpuHourlyID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceCpuHourlyID. Valid values are DeviceCpuHourlyID, DataSourceID, DeviceID, StartTime, CpuIndex, CpuBusyMin, CpuBusyAvg, CpuBusyMax.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceCpuHourlyID, DataSourceID, DeviceID, StartTime, CpuIndex, CpuBusyMin, CpuBusyAvg, CpuBusyMax.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -126,7 +126,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -136,22 +136,6 @@ class DeviceCpuHourlyBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceCpuHourly. Valid values are DeviceCpuHourlyID, DataSourceID, DeviceID, StartTime, CpuIndex, CpuBusyMin, CpuBusyAvg, CpuBusyMax. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -404,7 +388,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceCpuHourlyID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceCpuHourlyID. Valid values are DeviceCpuHourlyID, DataSourceID, DeviceID, StartTime, CpuIndex, CpuBusyMin, CpuBusyAvg, CpuBusyMax.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceCpuHourlyID, DataSourceID, DeviceID, StartTime, CpuIndex, CpuBusyMin, CpuBusyAvg, CpuBusyMax.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -412,7 +396,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -422,22 +406,6 @@ class DeviceCpuHourlyBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceCpuHourly. Valid values are DeviceCpuHourlyID, DataSourceID, DeviceID, StartTime, CpuIndex, CpuBusyMin, CpuBusyAvg, CpuBusyMax. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -495,7 +463,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CpuBusyAvg: If op_CpuBusyAvg is specified, this value will be compared to the value in CpuBusyAvg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuBusyAvg must be specified if op_CpuBusyAvg is specified.
+             :param val_c_CpuBusyAvg: If op_CpuBusyAvg is specified, this value will be compared to the value in CpuBusyAvg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuBusyAvg must be specified if op_CpuBusyAvg is specified. If the rlike or not rlike value is specified in the op_CpuBusyAvg field, escape regex special characters because a regular expression is expected.
              :type val_c_CpuBusyAvg: String
 
             |  ``api version min:`` None
@@ -519,7 +487,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CpuBusyMax: If op_CpuBusyMax is specified, this value will be compared to the value in CpuBusyMax using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuBusyMax must be specified if op_CpuBusyMax is specified.
+             :param val_c_CpuBusyMax: If op_CpuBusyMax is specified, this value will be compared to the value in CpuBusyMax using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuBusyMax must be specified if op_CpuBusyMax is specified. If the rlike or not rlike value is specified in the op_CpuBusyMax field, escape regex special characters because a regular expression is expected.
              :type val_c_CpuBusyMax: String
 
             |  ``api version min:`` None
@@ -543,7 +511,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CpuBusyMin: If op_CpuBusyMin is specified, this value will be compared to the value in CpuBusyMin using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuBusyMin must be specified if op_CpuBusyMin is specified.
+             :param val_c_CpuBusyMin: If op_CpuBusyMin is specified, this value will be compared to the value in CpuBusyMin using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuBusyMin must be specified if op_CpuBusyMin is specified. If the rlike or not rlike value is specified in the op_CpuBusyMin field, escape regex special characters because a regular expression is expected.
              :type val_c_CpuBusyMin: String
 
             |  ``api version min:`` None
@@ -567,7 +535,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CpuIndex: If op_CpuIndex is specified, this value will be compared to the value in CpuIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuIndex must be specified if op_CpuIndex is specified.
+             :param val_c_CpuIndex: If op_CpuIndex is specified, this value will be compared to the value in CpuIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuIndex must be specified if op_CpuIndex is specified. If the rlike or not rlike value is specified in the op_CpuIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_CpuIndex: String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceCpuHourlyID: If op_DeviceCpuHourlyID is specified, this value will be compared to the value in DeviceCpuHourlyID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceCpuHourlyID must be specified if op_DeviceCpuHourlyID is specified.
+             :param val_c_DeviceCpuHourlyID: If op_DeviceCpuHourlyID is specified, this value will be compared to the value in DeviceCpuHourlyID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceCpuHourlyID must be specified if op_DeviceCpuHourlyID is specified. If the rlike or not rlike value is specified in the op_DeviceCpuHourlyID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceCpuHourlyID: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified.
+             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified. If the rlike or not rlike value is specified in the op_StartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_StartTime: String
 
             |  ``api version min:`` None
@@ -727,7 +695,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceCpuHourlyID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceCpuHourlyID. Valid values are DeviceCpuHourlyID, DataSourceID, DeviceID, StartTime, CpuIndex, CpuBusyMin, CpuBusyAvg, CpuBusyMax.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceCpuHourlyID, DataSourceID, DeviceID, StartTime, CpuIndex, CpuBusyMin, CpuBusyAvg, CpuBusyMax.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -745,22 +713,6 @@ class DeviceCpuHourlyBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceCpuHourly. Valid values are DeviceCpuHourlyID, DataSourceID, DeviceID, StartTime, CpuIndex, CpuBusyMin, CpuBusyAvg, CpuBusyMax. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -804,8 +756,8 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -831,8 +783,8 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 
@@ -858,8 +810,8 @@ class DeviceCpuHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 

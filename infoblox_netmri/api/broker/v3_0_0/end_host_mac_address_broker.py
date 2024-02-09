@@ -5,7 +5,7 @@ class EndHostMacAddressBroker(Broker):
     controller = "end_host_mac_addresses"
 
     def index(self, **kwargs):
-        """Lists the available end host mac addresses. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available end host mac addresses. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -94,7 +94,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` EndHostMACAddressID
 
-             :param sort: The data field(s) to use for sorting the output. Default is EndHostMACAddressID. Valid values are EndHostMACAddressID, NetworkID, Network, MACAddress, IPAddress, IPAddressNumeric, DataSourceID, DeviceType, DeviceName, DeviceNetBIOSName, DeviceID, ifIndex, InterfaceID, InfraDeviceID, NeighborID, EndHostMACAddressTimestamp, FirstSeenTime, EndHostMACAddressStartTime, EndHostMACAddressEndTime, EndHostMACAddressChangedCols.
+             :param sort: The data field(s) to use for sorting the output. Valid values are EndHostMACAddressID, NetworkID, Network, MACAddress, IPAddress, IPAddressNumeric, DataSourceID, DeviceType, DeviceName, DeviceNetBIOSName, DeviceID, ifIndex, InterfaceID, InfraDeviceID, NeighborID, EndHostMACAddressTimestamp, FirstSeenTime, EndHostMACAddressStartTime, EndHostMACAddressEndTime, EndHostMACAddressChangedCols.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -102,7 +102,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -112,22 +112,6 @@ class EndHostMacAddressBroker(Broker):
 
              :param select: The list of attributes to return for each EndHostMacAddress. Valid values are EndHostMACAddressID, NetworkID, Network, MACAddress, IPAddress, IPAddressNumeric, DataSourceID, DeviceType, DeviceName, DeviceNetBIOSName, DeviceID, ifIndex, InterfaceID, InfraDeviceID, NeighborID, EndHostMACAddressTimestamp, FirstSeenTime, EndHostMACAddressStartTime, EndHostMACAddressEndTime, EndHostMACAddressChangedCols. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -364,7 +348,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` EndHostMACAddressID
 
-             :param sort: The data field(s) to use for sorting the output. Default is EndHostMACAddressID. Valid values are EndHostMACAddressID, NetworkID, Network, MACAddress, IPAddress, IPAddressNumeric, DataSourceID, DeviceType, DeviceName, DeviceNetBIOSName, DeviceID, ifIndex, InterfaceID, InfraDeviceID, NeighborID, EndHostMACAddressTimestamp, FirstSeenTime, EndHostMACAddressStartTime, EndHostMACAddressEndTime, EndHostMACAddressChangedCols.
+             :param sort: The data field(s) to use for sorting the output. Valid values are EndHostMACAddressID, NetworkID, Network, MACAddress, IPAddress, IPAddressNumeric, DataSourceID, DeviceType, DeviceName, DeviceNetBIOSName, DeviceID, ifIndex, InterfaceID, InfraDeviceID, NeighborID, EndHostMACAddressTimestamp, FirstSeenTime, EndHostMACAddressStartTime, EndHostMACAddressEndTime, EndHostMACAddressChangedCols.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -372,7 +356,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -382,22 +366,6 @@ class EndHostMacAddressBroker(Broker):
 
              :param select: The list of attributes to return for each EndHostMacAddress. Valid values are EndHostMACAddressID, NetworkID, Network, MACAddress, IPAddress, IPAddressNumeric, DataSourceID, DeviceType, DeviceName, DeviceNetBIOSName, DeviceID, ifIndex, InterfaceID, InfraDeviceID, NeighborID, EndHostMACAddressTimestamp, FirstSeenTime, EndHostMACAddressStartTime, EndHostMACAddressEndTime, EndHostMACAddressChangedCols. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -455,7 +423,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -479,7 +447,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -503,7 +471,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceName: If op_DeviceName is specified, this value will be compared to the value in DeviceName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceName must be specified if op_DeviceName is specified.
+             :param val_c_DeviceName: If op_DeviceName is specified, this value will be compared to the value in DeviceName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceName must be specified if op_DeviceName is specified. If the rlike or not rlike value is specified in the op_DeviceName field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceName: String
 
             |  ``api version min:`` None
@@ -527,7 +495,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceNetBIOSName: If op_DeviceNetBIOSName is specified, this value will be compared to the value in DeviceNetBIOSName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceNetBIOSName must be specified if op_DeviceNetBIOSName is specified.
+             :param val_c_DeviceNetBIOSName: If op_DeviceNetBIOSName is specified, this value will be compared to the value in DeviceNetBIOSName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceNetBIOSName must be specified if op_DeviceNetBIOSName is specified. If the rlike or not rlike value is specified in the op_DeviceNetBIOSName field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceNetBIOSName: String
 
             |  ``api version min:`` None
@@ -551,7 +519,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceType: If op_DeviceType is specified, this value will be compared to the value in DeviceType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceType must be specified if op_DeviceType is specified.
+             :param val_c_DeviceType: If op_DeviceType is specified, this value will be compared to the value in DeviceType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceType must be specified if op_DeviceType is specified. If the rlike or not rlike value is specified in the op_DeviceType field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceType: String
 
             |  ``api version min:`` None
@@ -575,7 +543,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EndHostMACAddressChangedCols: If op_EndHostMACAddressChangedCols is specified, this value will be compared to the value in EndHostMACAddressChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndHostMACAddressChangedCols must be specified if op_EndHostMACAddressChangedCols is specified.
+             :param val_c_EndHostMACAddressChangedCols: If op_EndHostMACAddressChangedCols is specified, this value will be compared to the value in EndHostMACAddressChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndHostMACAddressChangedCols must be specified if op_EndHostMACAddressChangedCols is specified. If the rlike or not rlike value is specified in the op_EndHostMACAddressChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_EndHostMACAddressChangedCols: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EndHostMACAddressEndTime: If op_EndHostMACAddressEndTime is specified, this value will be compared to the value in EndHostMACAddressEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndHostMACAddressEndTime must be specified if op_EndHostMACAddressEndTime is specified.
+             :param val_c_EndHostMACAddressEndTime: If op_EndHostMACAddressEndTime is specified, this value will be compared to the value in EndHostMACAddressEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndHostMACAddressEndTime must be specified if op_EndHostMACAddressEndTime is specified. If the rlike or not rlike value is specified in the op_EndHostMACAddressEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_EndHostMACAddressEndTime: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EndHostMACAddressID: If op_EndHostMACAddressID is specified, this value will be compared to the value in EndHostMACAddressID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndHostMACAddressID must be specified if op_EndHostMACAddressID is specified.
+             :param val_c_EndHostMACAddressID: If op_EndHostMACAddressID is specified, this value will be compared to the value in EndHostMACAddressID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndHostMACAddressID must be specified if op_EndHostMACAddressID is specified. If the rlike or not rlike value is specified in the op_EndHostMACAddressID field, escape regex special characters because a regular expression is expected.
              :type val_c_EndHostMACAddressID: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EndHostMACAddressStartTime: If op_EndHostMACAddressStartTime is specified, this value will be compared to the value in EndHostMACAddressStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndHostMACAddressStartTime must be specified if op_EndHostMACAddressStartTime is specified.
+             :param val_c_EndHostMACAddressStartTime: If op_EndHostMACAddressStartTime is specified, this value will be compared to the value in EndHostMACAddressStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndHostMACAddressStartTime must be specified if op_EndHostMACAddressStartTime is specified. If the rlike or not rlike value is specified in the op_EndHostMACAddressStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_EndHostMACAddressStartTime: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EndHostMACAddressTimestamp: If op_EndHostMACAddressTimestamp is specified, this value will be compared to the value in EndHostMACAddressTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndHostMACAddressTimestamp must be specified if op_EndHostMACAddressTimestamp is specified.
+             :param val_c_EndHostMACAddressTimestamp: If op_EndHostMACAddressTimestamp is specified, this value will be compared to the value in EndHostMACAddressTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndHostMACAddressTimestamp must be specified if op_EndHostMACAddressTimestamp is specified. If the rlike or not rlike value is specified in the op_EndHostMACAddressTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_EndHostMACAddressTimestamp: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FirstSeenTime: If op_FirstSeenTime is specified, this value will be compared to the value in FirstSeenTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FirstSeenTime must be specified if op_FirstSeenTime is specified.
+             :param val_c_FirstSeenTime: If op_FirstSeenTime is specified, this value will be compared to the value in FirstSeenTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FirstSeenTime must be specified if op_FirstSeenTime is specified. If the rlike or not rlike value is specified in the op_FirstSeenTime field, escape regex special characters because a regular expression is expected.
              :type val_c_FirstSeenTime: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IPAddress: If op_IPAddress is specified, this value will be compared to the value in IPAddress using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPAddress must be specified if op_IPAddress is specified.
+             :param val_c_IPAddress: If op_IPAddress is specified, this value will be compared to the value in IPAddress using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPAddress must be specified if op_IPAddress is specified. If the rlike or not rlike value is specified in the op_IPAddress field, escape regex special characters because a regular expression is expected.
              :type val_c_IPAddress: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IPAddressNumeric: If op_IPAddressNumeric is specified, this value will be compared to the value in IPAddressNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPAddressNumeric must be specified if op_IPAddressNumeric is specified.
+             :param val_c_IPAddressNumeric: If op_IPAddressNumeric is specified, this value will be compared to the value in IPAddressNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPAddressNumeric must be specified if op_IPAddressNumeric is specified. If the rlike or not rlike value is specified in the op_IPAddressNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_IPAddressNumeric: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InfraDeviceID: If op_InfraDeviceID is specified, this value will be compared to the value in InfraDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InfraDeviceID must be specified if op_InfraDeviceID is specified.
+             :param val_c_InfraDeviceID: If op_InfraDeviceID is specified, this value will be compared to the value in InfraDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InfraDeviceID must be specified if op_InfraDeviceID is specified. If the rlike or not rlike value is specified in the op_InfraDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InfraDeviceID: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_MACAddress: If op_MACAddress is specified, this value will be compared to the value in MACAddress using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MACAddress must be specified if op_MACAddress is specified.
+             :param val_c_MACAddress: If op_MACAddress is specified, this value will be compared to the value in MACAddress using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MACAddress must be specified if op_MACAddress is specified. If the rlike or not rlike value is specified in the op_MACAddress field, escape regex special characters because a regular expression is expected.
              :type val_c_MACAddress: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborID: If op_NeighborID is specified, this value will be compared to the value in NeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborID must be specified if op_NeighborID is specified.
+             :param val_c_NeighborID: If op_NeighborID is specified, this value will be compared to the value in NeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborID must be specified if op_NeighborID is specified. If the rlike or not rlike value is specified in the op_NeighborID field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborID: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Network: If op_Network is specified, this value will be compared to the value in Network using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Network must be specified if op_Network is specified.
+             :param val_c_Network: If op_Network is specified, this value will be compared to the value in Network using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Network must be specified if op_Network is specified. If the rlike or not rlike value is specified in the op_Network field, escape regex special characters because a regular expression is expected.
              :type val_c_Network: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NetworkID: If op_NetworkID is specified, this value will be compared to the value in NetworkID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NetworkID must be specified if op_NetworkID is specified.
+             :param val_c_NetworkID: If op_NetworkID is specified, this value will be compared to the value in NetworkID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NetworkID must be specified if op_NetworkID is specified. If the rlike or not rlike value is specified in the op_NetworkID field, escape regex special characters because a regular expression is expected.
              :type val_c_NetworkID: String
 
             |  ``api version min:`` None
@@ -911,7 +879,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -943,7 +911,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` EndHostMACAddressID
 
-             :param sort: The data field(s) to use for sorting the output. Default is EndHostMACAddressID. Valid values are EndHostMACAddressID, NetworkID, Network, MACAddress, IPAddress, IPAddressNumeric, DataSourceID, DeviceType, DeviceName, DeviceNetBIOSName, DeviceID, ifIndex, InterfaceID, InfraDeviceID, NeighborID, EndHostMACAddressTimestamp, FirstSeenTime, EndHostMACAddressStartTime, EndHostMACAddressEndTime, EndHostMACAddressChangedCols.
+             :param sort: The data field(s) to use for sorting the output. Valid values are EndHostMACAddressID, NetworkID, Network, MACAddress, IPAddress, IPAddressNumeric, DataSourceID, DeviceType, DeviceName, DeviceNetBIOSName, DeviceID, ifIndex, InterfaceID, InfraDeviceID, NeighborID, EndHostMACAddressTimestamp, FirstSeenTime, EndHostMACAddressStartTime, EndHostMACAddressEndTime, EndHostMACAddressChangedCols.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class EndHostMacAddressBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -961,22 +929,6 @@ class EndHostMacAddressBroker(Broker):
 
              :param select: The list of attributes to return for each EndHostMacAddress. Valid values are EndHostMACAddressID, NetworkID, Network, MACAddress, IPAddress, IPAddressNumeric, DataSourceID, DeviceType, DeviceName, DeviceNetBIOSName, DeviceID, ifIndex, InterfaceID, InfraDeviceID, NeighborID, EndHostMACAddressTimestamp, FirstSeenTime, EndHostMACAddressStartTime, EndHostMACAddressEndTime, EndHostMACAddressChangedCols. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

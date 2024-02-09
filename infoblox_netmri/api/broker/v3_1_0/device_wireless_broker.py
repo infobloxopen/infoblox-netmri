@@ -5,7 +5,7 @@ class DeviceWirelessBroker(Broker):
     controller = "device_wirelesses"
 
     def index(self, **kwargs):
-        """Lists the available device wirelesses. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device wirelesses. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -126,7 +126,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceWirelessID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceWirelessID. Valid values are DeviceWirelessID, DeviceWirelessStartTime, DeviceWirelessEndTime, DeviceWirelessChangedCols, DeviceWirelessTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, StationID, DesiredSSID, StationRole, WEPEnabledInd, WEPAllowedInd, WEPOnlyTrafficInd, WEPICVErrorCount, WEPDefaultKeyLen1, WEPDefaultKeyLen2, WEPDefaultKeyLen3, WEPDefaultKeyLen4.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceWirelessID, DeviceWirelessStartTime, DeviceWirelessEndTime, DeviceWirelessChangedCols, DeviceWirelessTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, StationID, DesiredSSID, StationRole, WEPEnabledInd, WEPAllowedInd, WEPOnlyTrafficInd, WEPICVErrorCount, WEPDefaultKeyLen1, WEPDefaultKeyLen2, WEPDefaultKeyLen3, WEPDefaultKeyLen4.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -134,7 +134,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -144,22 +144,6 @@ class DeviceWirelessBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceWireless. Valid values are DeviceWirelessID, DeviceWirelessStartTime, DeviceWirelessEndTime, DeviceWirelessChangedCols, DeviceWirelessTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, StationID, DesiredSSID, StationRole, WEPEnabledInd, WEPAllowedInd, WEPOnlyTrafficInd, WEPICVErrorCount, WEPDefaultKeyLen1, WEPDefaultKeyLen2, WEPDefaultKeyLen3, WEPDefaultKeyLen4. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -596,7 +580,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceWirelessID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceWirelessID. Valid values are DeviceWirelessID, DeviceWirelessStartTime, DeviceWirelessEndTime, DeviceWirelessChangedCols, DeviceWirelessTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, StationID, DesiredSSID, StationRole, WEPEnabledInd, WEPAllowedInd, WEPOnlyTrafficInd, WEPICVErrorCount, WEPDefaultKeyLen1, WEPDefaultKeyLen2, WEPDefaultKeyLen3, WEPDefaultKeyLen4.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceWirelessID, DeviceWirelessStartTime, DeviceWirelessEndTime, DeviceWirelessChangedCols, DeviceWirelessTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, StationID, DesiredSSID, StationRole, WEPEnabledInd, WEPAllowedInd, WEPOnlyTrafficInd, WEPICVErrorCount, WEPDefaultKeyLen1, WEPDefaultKeyLen2, WEPDefaultKeyLen3, WEPDefaultKeyLen4.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -604,7 +588,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -614,22 +598,6 @@ class DeviceWirelessBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceWireless. Valid values are DeviceWirelessID, DeviceWirelessStartTime, DeviceWirelessEndTime, DeviceWirelessChangedCols, DeviceWirelessTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, StationID, DesiredSSID, StationRole, WEPEnabledInd, WEPAllowedInd, WEPOnlyTrafficInd, WEPICVErrorCount, WEPDefaultKeyLen1, WEPDefaultKeyLen2, WEPDefaultKeyLen3, WEPDefaultKeyLen4. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -687,7 +655,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DesiredSSID: If op_DesiredSSID is specified, this value will be compared to the value in DesiredSSID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DesiredSSID must be specified if op_DesiredSSID is specified.
+             :param val_c_DesiredSSID: If op_DesiredSSID is specified, this value will be compared to the value in DesiredSSID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DesiredSSID must be specified if op_DesiredSSID is specified. If the rlike or not rlike value is specified in the op_DesiredSSID field, escape regex special characters because a regular expression is expected.
              :type val_c_DesiredSSID: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceWirelessChangedCols: If op_DeviceWirelessChangedCols is specified, this value will be compared to the value in DeviceWirelessChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceWirelessChangedCols must be specified if op_DeviceWirelessChangedCols is specified.
+             :param val_c_DeviceWirelessChangedCols: If op_DeviceWirelessChangedCols is specified, this value will be compared to the value in DeviceWirelessChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceWirelessChangedCols must be specified if op_DeviceWirelessChangedCols is specified. If the rlike or not rlike value is specified in the op_DeviceWirelessChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceWirelessChangedCols: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceWirelessEndTime: If op_DeviceWirelessEndTime is specified, this value will be compared to the value in DeviceWirelessEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceWirelessEndTime must be specified if op_DeviceWirelessEndTime is specified.
+             :param val_c_DeviceWirelessEndTime: If op_DeviceWirelessEndTime is specified, this value will be compared to the value in DeviceWirelessEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceWirelessEndTime must be specified if op_DeviceWirelessEndTime is specified. If the rlike or not rlike value is specified in the op_DeviceWirelessEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceWirelessEndTime: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceWirelessID: If op_DeviceWirelessID is specified, this value will be compared to the value in DeviceWirelessID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceWirelessID must be specified if op_DeviceWirelessID is specified.
+             :param val_c_DeviceWirelessID: If op_DeviceWirelessID is specified, this value will be compared to the value in DeviceWirelessID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceWirelessID must be specified if op_DeviceWirelessID is specified. If the rlike or not rlike value is specified in the op_DeviceWirelessID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceWirelessID: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceWirelessStartTime: If op_DeviceWirelessStartTime is specified, this value will be compared to the value in DeviceWirelessStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceWirelessStartTime must be specified if op_DeviceWirelessStartTime is specified.
+             :param val_c_DeviceWirelessStartTime: If op_DeviceWirelessStartTime is specified, this value will be compared to the value in DeviceWirelessStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceWirelessStartTime must be specified if op_DeviceWirelessStartTime is specified. If the rlike or not rlike value is specified in the op_DeviceWirelessStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceWirelessStartTime: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceWirelessTimestamp: If op_DeviceWirelessTimestamp is specified, this value will be compared to the value in DeviceWirelessTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceWirelessTimestamp must be specified if op_DeviceWirelessTimestamp is specified.
+             :param val_c_DeviceWirelessTimestamp: If op_DeviceWirelessTimestamp is specified, this value will be compared to the value in DeviceWirelessTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceWirelessTimestamp must be specified if op_DeviceWirelessTimestamp is specified. If the rlike or not rlike value is specified in the op_DeviceWirelessTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceWirelessTimestamp: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StationID: If op_StationID is specified, this value will be compared to the value in StationID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StationID must be specified if op_StationID is specified.
+             :param val_c_StationID: If op_StationID is specified, this value will be compared to the value in StationID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StationID must be specified if op_StationID is specified. If the rlike or not rlike value is specified in the op_StationID field, escape regex special characters because a regular expression is expected.
              :type val_c_StationID: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StationRole: If op_StationRole is specified, this value will be compared to the value in StationRole using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StationRole must be specified if op_StationRole is specified.
+             :param val_c_StationRole: If op_StationRole is specified, this value will be compared to the value in StationRole using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StationRole must be specified if op_StationRole is specified. If the rlike or not rlike value is specified in the op_StationRole field, escape regex special characters because a regular expression is expected.
              :type val_c_StationRole: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WEPAllowedInd: If op_WEPAllowedInd is specified, this value will be compared to the value in WEPAllowedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPAllowedInd must be specified if op_WEPAllowedInd is specified.
+             :param val_c_WEPAllowedInd: If op_WEPAllowedInd is specified, this value will be compared to the value in WEPAllowedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPAllowedInd must be specified if op_WEPAllowedInd is specified. If the rlike or not rlike value is specified in the op_WEPAllowedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_WEPAllowedInd: String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WEPDefaultKeyLen1: If op_WEPDefaultKeyLen1 is specified, this value will be compared to the value in WEPDefaultKeyLen1 using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPDefaultKeyLen1 must be specified if op_WEPDefaultKeyLen1 is specified.
+             :param val_c_WEPDefaultKeyLen1: If op_WEPDefaultKeyLen1 is specified, this value will be compared to the value in WEPDefaultKeyLen1 using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPDefaultKeyLen1 must be specified if op_WEPDefaultKeyLen1 is specified. If the rlike or not rlike value is specified in the op_WEPDefaultKeyLen1 field, escape regex special characters because a regular expression is expected.
              :type val_c_WEPDefaultKeyLen1: String
 
             |  ``api version min:`` None
@@ -999,7 +967,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WEPDefaultKeyLen2: If op_WEPDefaultKeyLen2 is specified, this value will be compared to the value in WEPDefaultKeyLen2 using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPDefaultKeyLen2 must be specified if op_WEPDefaultKeyLen2 is specified.
+             :param val_c_WEPDefaultKeyLen2: If op_WEPDefaultKeyLen2 is specified, this value will be compared to the value in WEPDefaultKeyLen2 using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPDefaultKeyLen2 must be specified if op_WEPDefaultKeyLen2 is specified. If the rlike or not rlike value is specified in the op_WEPDefaultKeyLen2 field, escape regex special characters because a regular expression is expected.
              :type val_c_WEPDefaultKeyLen2: String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WEPDefaultKeyLen3: If op_WEPDefaultKeyLen3 is specified, this value will be compared to the value in WEPDefaultKeyLen3 using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPDefaultKeyLen3 must be specified if op_WEPDefaultKeyLen3 is specified.
+             :param val_c_WEPDefaultKeyLen3: If op_WEPDefaultKeyLen3 is specified, this value will be compared to the value in WEPDefaultKeyLen3 using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPDefaultKeyLen3 must be specified if op_WEPDefaultKeyLen3 is specified. If the rlike or not rlike value is specified in the op_WEPDefaultKeyLen3 field, escape regex special characters because a regular expression is expected.
              :type val_c_WEPDefaultKeyLen3: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WEPDefaultKeyLen4: If op_WEPDefaultKeyLen4 is specified, this value will be compared to the value in WEPDefaultKeyLen4 using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPDefaultKeyLen4 must be specified if op_WEPDefaultKeyLen4 is specified.
+             :param val_c_WEPDefaultKeyLen4: If op_WEPDefaultKeyLen4 is specified, this value will be compared to the value in WEPDefaultKeyLen4 using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPDefaultKeyLen4 must be specified if op_WEPDefaultKeyLen4 is specified. If the rlike or not rlike value is specified in the op_WEPDefaultKeyLen4 field, escape regex special characters because a regular expression is expected.
              :type val_c_WEPDefaultKeyLen4: String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WEPEnabledInd: If op_WEPEnabledInd is specified, this value will be compared to the value in WEPEnabledInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPEnabledInd must be specified if op_WEPEnabledInd is specified.
+             :param val_c_WEPEnabledInd: If op_WEPEnabledInd is specified, this value will be compared to the value in WEPEnabledInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPEnabledInd must be specified if op_WEPEnabledInd is specified. If the rlike or not rlike value is specified in the op_WEPEnabledInd field, escape regex special characters because a regular expression is expected.
              :type val_c_WEPEnabledInd: String
 
             |  ``api version min:`` None
@@ -1095,7 +1063,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WEPICVErrorCount: If op_WEPICVErrorCount is specified, this value will be compared to the value in WEPICVErrorCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPICVErrorCount must be specified if op_WEPICVErrorCount is specified.
+             :param val_c_WEPICVErrorCount: If op_WEPICVErrorCount is specified, this value will be compared to the value in WEPICVErrorCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPICVErrorCount must be specified if op_WEPICVErrorCount is specified. If the rlike or not rlike value is specified in the op_WEPICVErrorCount field, escape regex special characters because a regular expression is expected.
              :type val_c_WEPICVErrorCount: String
 
             |  ``api version min:`` None
@@ -1119,7 +1087,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WEPOnlyTrafficInd: If op_WEPOnlyTrafficInd is specified, this value will be compared to the value in WEPOnlyTrafficInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPOnlyTrafficInd must be specified if op_WEPOnlyTrafficInd is specified.
+             :param val_c_WEPOnlyTrafficInd: If op_WEPOnlyTrafficInd is specified, this value will be compared to the value in WEPOnlyTrafficInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WEPOnlyTrafficInd must be specified if op_WEPOnlyTrafficInd is specified. If the rlike or not rlike value is specified in the op_WEPOnlyTrafficInd field, escape regex special characters because a regular expression is expected.
              :type val_c_WEPOnlyTrafficInd: String
 
             |  ``api version min:`` None
@@ -1143,7 +1111,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -1199,7 +1167,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceWirelessID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceWirelessID. Valid values are DeviceWirelessID, DeviceWirelessStartTime, DeviceWirelessEndTime, DeviceWirelessChangedCols, DeviceWirelessTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, StationID, DesiredSSID, StationRole, WEPEnabledInd, WEPAllowedInd, WEPOnlyTrafficInd, WEPICVErrorCount, WEPDefaultKeyLen1, WEPDefaultKeyLen2, WEPDefaultKeyLen3, WEPDefaultKeyLen4.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceWirelessID, DeviceWirelessStartTime, DeviceWirelessEndTime, DeviceWirelessChangedCols, DeviceWirelessTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, StationID, DesiredSSID, StationRole, WEPEnabledInd, WEPAllowedInd, WEPOnlyTrafficInd, WEPICVErrorCount, WEPDefaultKeyLen1, WEPDefaultKeyLen2, WEPDefaultKeyLen3, WEPDefaultKeyLen4.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1207,7 +1175,7 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1217,22 +1185,6 @@ class DeviceWirelessBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceWireless. Valid values are DeviceWirelessID, DeviceWirelessStartTime, DeviceWirelessEndTime, DeviceWirelessChangedCols, DeviceWirelessTimestamp, DataSourceID, DeviceID, ifIndex, InterfaceID, StationID, DesiredSSID, StationRole, WEPEnabledInd, WEPAllowedInd, WEPOnlyTrafficInd, WEPICVErrorCount, WEPDefaultKeyLen1, WEPDefaultKeyLen2, WEPDefaultKeyLen3, WEPDefaultKeyLen4. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1276,8 +1228,8 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1303,8 +1255,8 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -1330,8 +1282,8 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : interface
-             :rtype : Interface
+             :return interface: interface
+             :rtype interface: Interface
 
             """
 
@@ -1357,8 +1309,8 @@ class DeviceWirelessBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

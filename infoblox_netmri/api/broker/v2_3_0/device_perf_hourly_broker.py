@@ -5,7 +5,7 @@ class DevicePerfHourlyBroker(Broker):
     controller = "device_perf_hourlies"
 
     def index(self, **kwargs):
-        """Lists the available device perf hourlies. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device perf hourlies. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -118,7 +118,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePerfHourlyID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePerfHourlyID. Valid values are DevicePerfHourlyID, DataSourceID, DeviceID, StartTime, CpuBusyMin, CpuBusyAvg, CpuBusyMax, UsedMemMin, UsedMemAvg, UsedMemMax, FreeMemMin, FreeMemAvg, FreeMemMax, MemUtil5Min, MemUtil5Avg, MemUtil5Max.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevicePerfHourlyID, DataSourceID, DeviceID, StartTime, CpuBusyMin, CpuBusyAvg, CpuBusyMax, UsedMemMin, UsedMemAvg, UsedMemMax, FreeMemMin, FreeMemAvg, FreeMemMax, MemUtil5Min, MemUtil5Avg, MemUtil5Max.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -126,7 +126,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -136,22 +136,6 @@ class DevicePerfHourlyBroker(Broker):
 
              :param select: The list of attributes to return for each DevicePerfHourly. Valid values are DevicePerfHourlyID, DataSourceID, DeviceID, StartTime, CpuBusyMin, CpuBusyAvg, CpuBusyMax, UsedMemMin, UsedMemAvg, UsedMemMax, FreeMemMin, FreeMemAvg, FreeMemMax, MemUtil5Min, MemUtil5Avg, MemUtil5Max. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -532,7 +516,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePerfHourlyID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePerfHourlyID. Valid values are DevicePerfHourlyID, DataSourceID, DeviceID, StartTime, CpuBusyMin, CpuBusyAvg, CpuBusyMax, UsedMemMin, UsedMemAvg, UsedMemMax, FreeMemMin, FreeMemAvg, FreeMemMax, MemUtil5Min, MemUtil5Avg, MemUtil5Max.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevicePerfHourlyID, DataSourceID, DeviceID, StartTime, CpuBusyMin, CpuBusyAvg, CpuBusyMax, UsedMemMin, UsedMemAvg, UsedMemMax, FreeMemMin, FreeMemAvg, FreeMemMax, MemUtil5Min, MemUtil5Avg, MemUtil5Max.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -540,7 +524,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -550,22 +534,6 @@ class DevicePerfHourlyBroker(Broker):
 
              :param select: The list of attributes to return for each DevicePerfHourly. Valid values are DevicePerfHourlyID, DataSourceID, DeviceID, StartTime, CpuBusyMin, CpuBusyAvg, CpuBusyMax, UsedMemMin, UsedMemAvg, UsedMemMax, FreeMemMin, FreeMemAvg, FreeMemMax, MemUtil5Min, MemUtil5Avg, MemUtil5Max. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -623,7 +591,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CpuBusyAvg: If op_CpuBusyAvg is specified, this value will be compared to the value in CpuBusyAvg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuBusyAvg must be specified if op_CpuBusyAvg is specified.
+             :param val_c_CpuBusyAvg: If op_CpuBusyAvg is specified, this value will be compared to the value in CpuBusyAvg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuBusyAvg must be specified if op_CpuBusyAvg is specified. If the rlike or not rlike value is specified in the op_CpuBusyAvg field, escape regex special characters because a regular expression is expected.
              :type val_c_CpuBusyAvg: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CpuBusyMax: If op_CpuBusyMax is specified, this value will be compared to the value in CpuBusyMax using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuBusyMax must be specified if op_CpuBusyMax is specified.
+             :param val_c_CpuBusyMax: If op_CpuBusyMax is specified, this value will be compared to the value in CpuBusyMax using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuBusyMax must be specified if op_CpuBusyMax is specified. If the rlike or not rlike value is specified in the op_CpuBusyMax field, escape regex special characters because a regular expression is expected.
              :type val_c_CpuBusyMax: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CpuBusyMin: If op_CpuBusyMin is specified, this value will be compared to the value in CpuBusyMin using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuBusyMin must be specified if op_CpuBusyMin is specified.
+             :param val_c_CpuBusyMin: If op_CpuBusyMin is specified, this value will be compared to the value in CpuBusyMin using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CpuBusyMin must be specified if op_CpuBusyMin is specified. If the rlike or not rlike value is specified in the op_CpuBusyMin field, escape regex special characters because a regular expression is expected.
              :type val_c_CpuBusyMin: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -743,7 +711,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DevicePerfHourlyID: If op_DevicePerfHourlyID is specified, this value will be compared to the value in DevicePerfHourlyID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePerfHourlyID must be specified if op_DevicePerfHourlyID is specified.
+             :param val_c_DevicePerfHourlyID: If op_DevicePerfHourlyID is specified, this value will be compared to the value in DevicePerfHourlyID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DevicePerfHourlyID must be specified if op_DevicePerfHourlyID is specified. If the rlike or not rlike value is specified in the op_DevicePerfHourlyID field, escape regex special characters because a regular expression is expected.
              :type val_c_DevicePerfHourlyID: String
 
             |  ``api version min:`` None
@@ -767,7 +735,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FreeMemAvg: If op_FreeMemAvg is specified, this value will be compared to the value in FreeMemAvg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FreeMemAvg must be specified if op_FreeMemAvg is specified.
+             :param val_c_FreeMemAvg: If op_FreeMemAvg is specified, this value will be compared to the value in FreeMemAvg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FreeMemAvg must be specified if op_FreeMemAvg is specified. If the rlike or not rlike value is specified in the op_FreeMemAvg field, escape regex special characters because a regular expression is expected.
              :type val_c_FreeMemAvg: String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FreeMemMax: If op_FreeMemMax is specified, this value will be compared to the value in FreeMemMax using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FreeMemMax must be specified if op_FreeMemMax is specified.
+             :param val_c_FreeMemMax: If op_FreeMemMax is specified, this value will be compared to the value in FreeMemMax using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FreeMemMax must be specified if op_FreeMemMax is specified. If the rlike or not rlike value is specified in the op_FreeMemMax field, escape regex special characters because a regular expression is expected.
              :type val_c_FreeMemMax: String
 
             |  ``api version min:`` None
@@ -815,7 +783,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_FreeMemMin: If op_FreeMemMin is specified, this value will be compared to the value in FreeMemMin using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FreeMemMin must be specified if op_FreeMemMin is specified.
+             :param val_c_FreeMemMin: If op_FreeMemMin is specified, this value will be compared to the value in FreeMemMin using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_FreeMemMin must be specified if op_FreeMemMin is specified. If the rlike or not rlike value is specified in the op_FreeMemMin field, escape regex special characters because a regular expression is expected.
              :type val_c_FreeMemMin: String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_MemUtil5Avg: If op_MemUtil5Avg is specified, this value will be compared to the value in MemUtil5Avg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MemUtil5Avg must be specified if op_MemUtil5Avg is specified.
+             :param val_c_MemUtil5Avg: If op_MemUtil5Avg is specified, this value will be compared to the value in MemUtil5Avg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MemUtil5Avg must be specified if op_MemUtil5Avg is specified. If the rlike or not rlike value is specified in the op_MemUtil5Avg field, escape regex special characters because a regular expression is expected.
              :type val_c_MemUtil5Avg: String
 
             |  ``api version min:`` None
@@ -863,7 +831,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_MemUtil5Max: If op_MemUtil5Max is specified, this value will be compared to the value in MemUtil5Max using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MemUtil5Max must be specified if op_MemUtil5Max is specified.
+             :param val_c_MemUtil5Max: If op_MemUtil5Max is specified, this value will be compared to the value in MemUtil5Max using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MemUtil5Max must be specified if op_MemUtil5Max is specified. If the rlike or not rlike value is specified in the op_MemUtil5Max field, escape regex special characters because a regular expression is expected.
              :type val_c_MemUtil5Max: String
 
             |  ``api version min:`` None
@@ -887,7 +855,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_MemUtil5Min: If op_MemUtil5Min is specified, this value will be compared to the value in MemUtil5Min using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MemUtil5Min must be specified if op_MemUtil5Min is specified.
+             :param val_c_MemUtil5Min: If op_MemUtil5Min is specified, this value will be compared to the value in MemUtil5Min using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MemUtil5Min must be specified if op_MemUtil5Min is specified. If the rlike or not rlike value is specified in the op_MemUtil5Min field, escape regex special characters because a regular expression is expected.
              :type val_c_MemUtil5Min: String
 
             |  ``api version min:`` None
@@ -911,7 +879,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified.
+             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified. If the rlike or not rlike value is specified in the op_StartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_StartTime: String
 
             |  ``api version min:`` None
@@ -935,7 +903,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UsedMemAvg: If op_UsedMemAvg is specified, this value will be compared to the value in UsedMemAvg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UsedMemAvg must be specified if op_UsedMemAvg is specified.
+             :param val_c_UsedMemAvg: If op_UsedMemAvg is specified, this value will be compared to the value in UsedMemAvg using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UsedMemAvg must be specified if op_UsedMemAvg is specified. If the rlike or not rlike value is specified in the op_UsedMemAvg field, escape regex special characters because a regular expression is expected.
              :type val_c_UsedMemAvg: String
 
             |  ``api version min:`` None
@@ -959,7 +927,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UsedMemMax: If op_UsedMemMax is specified, this value will be compared to the value in UsedMemMax using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UsedMemMax must be specified if op_UsedMemMax is specified.
+             :param val_c_UsedMemMax: If op_UsedMemMax is specified, this value will be compared to the value in UsedMemMax using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UsedMemMax must be specified if op_UsedMemMax is specified. If the rlike or not rlike value is specified in the op_UsedMemMax field, escape regex special characters because a regular expression is expected.
              :type val_c_UsedMemMax: String
 
             |  ``api version min:`` None
@@ -983,7 +951,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_UsedMemMin: If op_UsedMemMin is specified, this value will be compared to the value in UsedMemMin using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UsedMemMin must be specified if op_UsedMemMin is specified.
+             :param val_c_UsedMemMin: If op_UsedMemMin is specified, this value will be compared to the value in UsedMemMin using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_UsedMemMin must be specified if op_UsedMemMin is specified. If the rlike or not rlike value is specified in the op_UsedMemMin field, escape regex special characters because a regular expression is expected.
              :type val_c_UsedMemMin: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DevicePerfHourlyID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DevicePerfHourlyID. Valid values are DevicePerfHourlyID, DataSourceID, DeviceID, StartTime, CpuBusyMin, CpuBusyAvg, CpuBusyMax, UsedMemMin, UsedMemAvg, UsedMemMax, FreeMemMin, FreeMemAvg, FreeMemMax, MemUtil5Min, MemUtil5Avg, MemUtil5Max.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DevicePerfHourlyID, DataSourceID, DeviceID, StartTime, CpuBusyMin, CpuBusyAvg, CpuBusyMax, UsedMemMin, UsedMemAvg, UsedMemMax, FreeMemMin, FreeMemAvg, FreeMemMax, MemUtil5Min, MemUtil5Avg, MemUtil5Max.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1055,7 +1023,7 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1065,22 +1033,6 @@ class DevicePerfHourlyBroker(Broker):
 
              :param select: The list of attributes to return for each DevicePerfHourly. Valid values are DevicePerfHourlyID, DataSourceID, DeviceID, StartTime, CpuBusyMin, CpuBusyAvg, CpuBusyMax, UsedMemMin, UsedMemAvg, UsedMemMax, FreeMemMin, FreeMemAvg, FreeMemMax, MemUtil5Min, MemUtil5Avg, MemUtil5Max. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1124,8 +1076,8 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1151,8 +1103,8 @@ class DevicePerfHourlyBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

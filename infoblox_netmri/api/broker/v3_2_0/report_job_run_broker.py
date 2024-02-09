@@ -5,7 +5,7 @@ class ReportJobRunBroker(Broker):
     controller = "report_job_runs"
 
     def index(self, **kwargs):
-        """Lists the available report job runs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available report job runs. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -46,7 +46,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -54,7 +54,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -64,22 +64,6 @@ class ReportJobRunBroker(Broker):
 
              :param select: The list of attributes to return for each ReportJobRun. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -380,7 +364,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -388,7 +372,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -398,22 +382,6 @@ class ReportJobRunBroker(Broker):
 
              :param select: The list of attributes to return for each ReportJobRun. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -471,7 +439,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_user_id: If op_auth_user_id is specified, this value will be compared to the value in auth_user_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_user_id must be specified if op_auth_user_id is specified.
+             :param val_c_auth_user_id: If op_auth_user_id is specified, this value will be compared to the value in auth_user_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_user_id must be specified if op_auth_user_id is specified. If the rlike or not rlike value is specified in the op_auth_user_id field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_user_id: String
 
             |  ``api version min:`` None
@@ -495,7 +463,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cancel_time: If op_cancel_time is specified, this value will be compared to the value in cancel_time using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cancel_time must be specified if op_cancel_time is specified.
+             :param val_c_cancel_time: If op_cancel_time is specified, this value will be compared to the value in cancel_time using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cancel_time must be specified if op_cancel_time is specified. If the rlike or not rlike value is specified in the op_cancel_time field, escape regex special characters because a regular expression is expected.
              :type val_c_cancel_time: String
 
             |  ``api version min:`` None
@@ -519,7 +487,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -543,7 +511,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ext_job_id: If op_ext_job_id is specified, this value will be compared to the value in ext_job_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ext_job_id must be specified if op_ext_job_id is specified.
+             :param val_c_ext_job_id: If op_ext_job_id is specified, this value will be compared to the value in ext_job_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ext_job_id must be specified if op_ext_job_id is specified. If the rlike or not rlike value is specified in the op_ext_job_id field, escape regex special characters because a regular expression is expected.
              :type val_c_ext_job_id: String
 
             |  ``api version min:`` None
@@ -567,7 +535,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_is_foreground: If op_is_foreground is specified, this value will be compared to the value in is_foreground using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_is_foreground must be specified if op_is_foreground is specified.
+             :param val_c_is_foreground: If op_is_foreground is specified, this value will be compared to the value in is_foreground using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_is_foreground must be specified if op_is_foreground is specified. If the rlike or not rlike value is specified in the op_is_foreground field, escape regex special characters because a regular expression is expected.
              :type val_c_is_foreground: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_job_priority: If op_job_priority is specified, this value will be compared to the value in job_priority using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_job_priority must be specified if op_job_priority is specified.
+             :param val_c_job_priority: If op_job_priority is specified, this value will be compared to the value in job_priority using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_job_priority must be specified if op_job_priority is specified. If the rlike or not rlike value is specified in the op_job_priority field, escape regex special characters because a regular expression is expected.
              :type val_c_job_priority: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_last_checkin: If op_last_checkin is specified, this value will be compared to the value in last_checkin using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_last_checkin must be specified if op_last_checkin is specified.
+             :param val_c_last_checkin: If op_last_checkin is specified, this value will be compared to the value in last_checkin using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_last_checkin must be specified if op_last_checkin is specified. If the rlike or not rlike value is specified in the op_last_checkin field, escape regex special characters because a regular expression is expected.
              :type val_c_last_checkin: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_report_id: If op_report_id is specified, this value will be compared to the value in report_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_report_id must be specified if op_report_id is specified.
+             :param val_c_report_id: If op_report_id is specified, this value will be compared to the value in report_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_report_id must be specified if op_report_id is specified. If the rlike or not rlike value is specified in the op_report_id field, escape regex special characters because a regular expression is expected.
              :type val_c_report_id: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_report_job_specification_id: If op_report_job_specification_id is specified, this value will be compared to the value in report_job_specification_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_report_job_specification_id must be specified if op_report_job_specification_id is specified.
+             :param val_c_report_job_specification_id: If op_report_job_specification_id is specified, this value will be compared to the value in report_job_specification_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_report_job_specification_id must be specified if op_report_job_specification_id is specified. If the rlike or not rlike value is specified in the op_report_job_specification_id field, escape regex special characters because a regular expression is expected.
              :type val_c_report_job_specification_id: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_report_type: If op_report_type is specified, this value will be compared to the value in report_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_report_type must be specified if op_report_type is specified.
+             :param val_c_report_type: If op_report_type is specified, this value will be compared to the value in report_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_report_type must be specified if op_report_type is specified. If the rlike or not rlike value is specified in the op_report_type field, escape regex special characters because a regular expression is expected.
              :type val_c_report_type: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_size: If op_size is specified, this value will be compared to the value in size using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_size must be specified if op_size is specified.
+             :param val_c_size: If op_size is specified, this value will be compared to the value in size using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_size must be specified if op_size is specified. If the rlike or not rlike value is specified in the op_size field, escape regex special characters because a regular expression is expected.
              :type val_c_size: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_start_time: If op_start_time is specified, this value will be compared to the value in start_time using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_start_time must be specified if op_start_time is specified.
+             :param val_c_start_time: If op_start_time is specified, this value will be compared to the value in start_time using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_start_time must be specified if op_start_time is specified. If the rlike or not rlike value is specified in the op_start_time field, escape regex special characters because a regular expression is expected.
              :type val_c_start_time: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_status: If op_status is specified, this value will be compared to the value in status using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_status must be specified if op_status is specified.
+             :param val_c_status: If op_status is specified, this value will be compared to the value in status using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_status must be specified if op_status is specified. If the rlike or not rlike value is specified in the op_status field, escape regex special characters because a regular expression is expected.
              :type val_c_status: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -839,7 +807,7 @@ class ReportJobRunBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -849,22 +817,6 @@ class ReportJobRunBroker(Broker):
 
              :param select: The list of attributes to return for each ReportJobRun. Valid values are id, report_id, ext_job_id, auth_user_id, status, start_time, is_foreground, last_checkin, cancel_time, created_at, updated_at, report_type, job_priority, report_job_specification_id, size. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

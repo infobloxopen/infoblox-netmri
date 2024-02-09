@@ -5,7 +5,7 @@ class DataCollectionStatusBroker(Broker):
     controller = "data_collection_statuses"
 
     def index(self, **kwargs):
-        """Lists the available data collection statuses. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available data collection statuses. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -54,7 +54,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DeviceID, SystemInd, CPUInd, MemoryInd, VlansInd, ForwardingInd, EnvironmentalInd, InventoryInd, ARPInd, RouteInd, NeighborInd, ConfigInd, AccessInd, VrfInd, SystemTimestamp, CPUTimestamp, MemoryTimestamp, VlansTimestamp, ForwardingTimestamp, EnvironmentalTimestamp, InventoryTimestamp, ARPTimestamp, RouteTimestamp, NeighborTimestamp, ConfigTimestamp, AccessTimestamp, VrfTimestamp.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceID, SystemInd, CPUInd, MemoryInd, VlansInd, ForwardingInd, EnvironmentalInd, InventoryInd, ARPInd, RouteInd, NeighborInd, ConfigInd, AccessInd, VrfInd, SystemTimestamp, CPUTimestamp, MemoryTimestamp, VlansTimestamp, ForwardingTimestamp, EnvironmentalTimestamp, InventoryTimestamp, ARPTimestamp, RouteTimestamp, NeighborTimestamp, ConfigTimestamp, AccessTimestamp, VrfTimestamp.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -62,7 +62,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -72,22 +72,6 @@ class DataCollectionStatusBroker(Broker):
 
              :param select: The list of attributes to return for each DataCollectionStatus. Valid values are DeviceID, SystemInd, CPUInd, MemoryInd, VlansInd, ForwardingInd, EnvironmentalInd, InventoryInd, ARPInd, RouteInd, NeighborInd, ConfigInd, AccessInd, VrfInd, SystemTimestamp, CPUTimestamp, MemoryTimestamp, VlansTimestamp, ForwardingTimestamp, EnvironmentalTimestamp, InventoryTimestamp, ARPTimestamp, RouteTimestamp, NeighborTimestamp, ConfigTimestamp, AccessTimestamp, VrfTimestamp. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -404,7 +388,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DeviceID, SystemInd, CPUInd, MemoryInd, VlansInd, ForwardingInd, EnvironmentalInd, InventoryInd, ARPInd, RouteInd, NeighborInd, ConfigInd, AccessInd, VrfInd, SystemTimestamp, CPUTimestamp, MemoryTimestamp, VlansTimestamp, ForwardingTimestamp, EnvironmentalTimestamp, InventoryTimestamp, ARPTimestamp, RouteTimestamp, NeighborTimestamp, ConfigTimestamp, AccessTimestamp, VrfTimestamp.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceID, SystemInd, CPUInd, MemoryInd, VlansInd, ForwardingInd, EnvironmentalInd, InventoryInd, ARPInd, RouteInd, NeighborInd, ConfigInd, AccessInd, VrfInd, SystemTimestamp, CPUTimestamp, MemoryTimestamp, VlansTimestamp, ForwardingTimestamp, EnvironmentalTimestamp, InventoryTimestamp, ARPTimestamp, RouteTimestamp, NeighborTimestamp, ConfigTimestamp, AccessTimestamp, VrfTimestamp.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -412,7 +396,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -422,22 +406,6 @@ class DataCollectionStatusBroker(Broker):
 
              :param select: The list of attributes to return for each DataCollectionStatus. Valid values are DeviceID, SystemInd, CPUInd, MemoryInd, VlansInd, ForwardingInd, EnvironmentalInd, InventoryInd, ARPInd, RouteInd, NeighborInd, ConfigInd, AccessInd, VrfInd, SystemTimestamp, CPUTimestamp, MemoryTimestamp, VlansTimestamp, ForwardingTimestamp, EnvironmentalTimestamp, InventoryTimestamp, ARPTimestamp, RouteTimestamp, NeighborTimestamp, ConfigTimestamp, AccessTimestamp, VrfTimestamp. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -495,7 +463,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ARPInd: If op_ARPInd is specified, this value will be compared to the value in ARPInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ARPInd must be specified if op_ARPInd is specified.
+             :param val_c_ARPInd: If op_ARPInd is specified, this value will be compared to the value in ARPInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ARPInd must be specified if op_ARPInd is specified. If the rlike or not rlike value is specified in the op_ARPInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ARPInd: String
 
             |  ``api version min:`` None
@@ -519,7 +487,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ARPTimestamp: If op_ARPTimestamp is specified, this value will be compared to the value in ARPTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ARPTimestamp must be specified if op_ARPTimestamp is specified.
+             :param val_c_ARPTimestamp: If op_ARPTimestamp is specified, this value will be compared to the value in ARPTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ARPTimestamp must be specified if op_ARPTimestamp is specified. If the rlike or not rlike value is specified in the op_ARPTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_ARPTimestamp: String
 
             |  ``api version min:`` None
@@ -543,7 +511,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AccessInd: If op_AccessInd is specified, this value will be compared to the value in AccessInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AccessInd must be specified if op_AccessInd is specified.
+             :param val_c_AccessInd: If op_AccessInd is specified, this value will be compared to the value in AccessInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AccessInd must be specified if op_AccessInd is specified. If the rlike or not rlike value is specified in the op_AccessInd field, escape regex special characters because a regular expression is expected.
              :type val_c_AccessInd: String
 
             |  ``api version min:`` None
@@ -567,7 +535,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AccessTimestamp: If op_AccessTimestamp is specified, this value will be compared to the value in AccessTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AccessTimestamp must be specified if op_AccessTimestamp is specified.
+             :param val_c_AccessTimestamp: If op_AccessTimestamp is specified, this value will be compared to the value in AccessTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AccessTimestamp must be specified if op_AccessTimestamp is specified. If the rlike or not rlike value is specified in the op_AccessTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_AccessTimestamp: String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CPUInd: If op_CPUInd is specified, this value will be compared to the value in CPUInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CPUInd must be specified if op_CPUInd is specified.
+             :param val_c_CPUInd: If op_CPUInd is specified, this value will be compared to the value in CPUInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CPUInd must be specified if op_CPUInd is specified. If the rlike or not rlike value is specified in the op_CPUInd field, escape regex special characters because a regular expression is expected.
              :type val_c_CPUInd: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_CPUTimestamp: If op_CPUTimestamp is specified, this value will be compared to the value in CPUTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CPUTimestamp must be specified if op_CPUTimestamp is specified.
+             :param val_c_CPUTimestamp: If op_CPUTimestamp is specified, this value will be compared to the value in CPUTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_CPUTimestamp must be specified if op_CPUTimestamp is specified. If the rlike or not rlike value is specified in the op_CPUTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_CPUTimestamp: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ConfigInd: If op_ConfigInd is specified, this value will be compared to the value in ConfigInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigInd must be specified if op_ConfigInd is specified.
+             :param val_c_ConfigInd: If op_ConfigInd is specified, this value will be compared to the value in ConfigInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigInd must be specified if op_ConfigInd is specified. If the rlike or not rlike value is specified in the op_ConfigInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ConfigInd: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ConfigTimestamp: If op_ConfigTimestamp is specified, this value will be compared to the value in ConfigTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigTimestamp must be specified if op_ConfigTimestamp is specified.
+             :param val_c_ConfigTimestamp: If op_ConfigTimestamp is specified, this value will be compared to the value in ConfigTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigTimestamp must be specified if op_ConfigTimestamp is specified. If the rlike or not rlike value is specified in the op_ConfigTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_ConfigTimestamp: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EnvironmentalInd: If op_EnvironmentalInd is specified, this value will be compared to the value in EnvironmentalInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EnvironmentalInd must be specified if op_EnvironmentalInd is specified.
+             :param val_c_EnvironmentalInd: If op_EnvironmentalInd is specified, this value will be compared to the value in EnvironmentalInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EnvironmentalInd must be specified if op_EnvironmentalInd is specified. If the rlike or not rlike value is specified in the op_EnvironmentalInd field, escape regex special characters because a regular expression is expected.
              :type val_c_EnvironmentalInd: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EnvironmentalTimestamp: If op_EnvironmentalTimestamp is specified, this value will be compared to the value in EnvironmentalTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EnvironmentalTimestamp must be specified if op_EnvironmentalTimestamp is specified.
+             :param val_c_EnvironmentalTimestamp: If op_EnvironmentalTimestamp is specified, this value will be compared to the value in EnvironmentalTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EnvironmentalTimestamp must be specified if op_EnvironmentalTimestamp is specified. If the rlike or not rlike value is specified in the op_EnvironmentalTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_EnvironmentalTimestamp: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ForwardingInd: If op_ForwardingInd is specified, this value will be compared to the value in ForwardingInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ForwardingInd must be specified if op_ForwardingInd is specified.
+             :param val_c_ForwardingInd: If op_ForwardingInd is specified, this value will be compared to the value in ForwardingInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ForwardingInd must be specified if op_ForwardingInd is specified. If the rlike or not rlike value is specified in the op_ForwardingInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ForwardingInd: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ForwardingTimestamp: If op_ForwardingTimestamp is specified, this value will be compared to the value in ForwardingTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ForwardingTimestamp must be specified if op_ForwardingTimestamp is specified.
+             :param val_c_ForwardingTimestamp: If op_ForwardingTimestamp is specified, this value will be compared to the value in ForwardingTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ForwardingTimestamp must be specified if op_ForwardingTimestamp is specified. If the rlike or not rlike value is specified in the op_ForwardingTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_ForwardingTimestamp: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InventoryInd: If op_InventoryInd is specified, this value will be compared to the value in InventoryInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InventoryInd must be specified if op_InventoryInd is specified.
+             :param val_c_InventoryInd: If op_InventoryInd is specified, this value will be compared to the value in InventoryInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InventoryInd must be specified if op_InventoryInd is specified. If the rlike or not rlike value is specified in the op_InventoryInd field, escape regex special characters because a regular expression is expected.
              :type val_c_InventoryInd: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InventoryTimestamp: If op_InventoryTimestamp is specified, this value will be compared to the value in InventoryTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InventoryTimestamp must be specified if op_InventoryTimestamp is specified.
+             :param val_c_InventoryTimestamp: If op_InventoryTimestamp is specified, this value will be compared to the value in InventoryTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InventoryTimestamp must be specified if op_InventoryTimestamp is specified. If the rlike or not rlike value is specified in the op_InventoryTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_InventoryTimestamp: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_MemoryInd: If op_MemoryInd is specified, this value will be compared to the value in MemoryInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MemoryInd must be specified if op_MemoryInd is specified.
+             :param val_c_MemoryInd: If op_MemoryInd is specified, this value will be compared to the value in MemoryInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MemoryInd must be specified if op_MemoryInd is specified. If the rlike or not rlike value is specified in the op_MemoryInd field, escape regex special characters because a regular expression is expected.
              :type val_c_MemoryInd: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_MemoryTimestamp: If op_MemoryTimestamp is specified, this value will be compared to the value in MemoryTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MemoryTimestamp must be specified if op_MemoryTimestamp is specified.
+             :param val_c_MemoryTimestamp: If op_MemoryTimestamp is specified, this value will be compared to the value in MemoryTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_MemoryTimestamp must be specified if op_MemoryTimestamp is specified. If the rlike or not rlike value is specified in the op_MemoryTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_MemoryTimestamp: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborInd: If op_NeighborInd is specified, this value will be compared to the value in NeighborInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborInd must be specified if op_NeighborInd is specified.
+             :param val_c_NeighborInd: If op_NeighborInd is specified, this value will be compared to the value in NeighborInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborInd must be specified if op_NeighborInd is specified. If the rlike or not rlike value is specified in the op_NeighborInd field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborInd: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborTimestamp: If op_NeighborTimestamp is specified, this value will be compared to the value in NeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborTimestamp must be specified if op_NeighborTimestamp is specified.
+             :param val_c_NeighborTimestamp: If op_NeighborTimestamp is specified, this value will be compared to the value in NeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborTimestamp must be specified if op_NeighborTimestamp is specified. If the rlike or not rlike value is specified in the op_NeighborTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborTimestamp: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteInd: If op_RouteInd is specified, this value will be compared to the value in RouteInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteInd must be specified if op_RouteInd is specified.
+             :param val_c_RouteInd: If op_RouteInd is specified, this value will be compared to the value in RouteInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteInd must be specified if op_RouteInd is specified. If the rlike or not rlike value is specified in the op_RouteInd field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteInd: String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteTimestamp: If op_RouteTimestamp is specified, this value will be compared to the value in RouteTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteTimestamp must be specified if op_RouteTimestamp is specified.
+             :param val_c_RouteTimestamp: If op_RouteTimestamp is specified, this value will be compared to the value in RouteTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteTimestamp must be specified if op_RouteTimestamp is specified. If the rlike or not rlike value is specified in the op_RouteTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteTimestamp: String
 
             |  ``api version min:`` None
@@ -999,7 +967,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SystemInd: If op_SystemInd is specified, this value will be compared to the value in SystemInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SystemInd must be specified if op_SystemInd is specified.
+             :param val_c_SystemInd: If op_SystemInd is specified, this value will be compared to the value in SystemInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SystemInd must be specified if op_SystemInd is specified. If the rlike or not rlike value is specified in the op_SystemInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SystemInd: String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SystemTimestamp: If op_SystemTimestamp is specified, this value will be compared to the value in SystemTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SystemTimestamp must be specified if op_SystemTimestamp is specified.
+             :param val_c_SystemTimestamp: If op_SystemTimestamp is specified, this value will be compared to the value in SystemTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SystemTimestamp must be specified if op_SystemTimestamp is specified. If the rlike or not rlike value is specified in the op_SystemTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_SystemTimestamp: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlansInd: If op_VlansInd is specified, this value will be compared to the value in VlansInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlansInd must be specified if op_VlansInd is specified.
+             :param val_c_VlansInd: If op_VlansInd is specified, this value will be compared to the value in VlansInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlansInd must be specified if op_VlansInd is specified. If the rlike or not rlike value is specified in the op_VlansInd field, escape regex special characters because a regular expression is expected.
              :type val_c_VlansInd: String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlansTimestamp: If op_VlansTimestamp is specified, this value will be compared to the value in VlansTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlansTimestamp must be specified if op_VlansTimestamp is specified.
+             :param val_c_VlansTimestamp: If op_VlansTimestamp is specified, this value will be compared to the value in VlansTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlansTimestamp must be specified if op_VlansTimestamp is specified. If the rlike or not rlike value is specified in the op_VlansTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_VlansTimestamp: String
 
             |  ``api version min:`` None
@@ -1095,7 +1063,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrfInd: If op_VrfInd is specified, this value will be compared to the value in VrfInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfInd must be specified if op_VrfInd is specified.
+             :param val_c_VrfInd: If op_VrfInd is specified, this value will be compared to the value in VrfInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfInd must be specified if op_VrfInd is specified. If the rlike or not rlike value is specified in the op_VrfInd field, escape regex special characters because a regular expression is expected.
              :type val_c_VrfInd: String
 
             |  ``api version min:`` None
@@ -1119,7 +1087,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrfTimestamp: If op_VrfTimestamp is specified, this value will be compared to the value in VrfTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfTimestamp must be specified if op_VrfTimestamp is specified.
+             :param val_c_VrfTimestamp: If op_VrfTimestamp is specified, this value will be compared to the value in VrfTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrfTimestamp must be specified if op_VrfTimestamp is specified. If the rlike or not rlike value is specified in the op_VrfTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_VrfTimestamp: String
 
             |  ``api version min:`` None
@@ -1159,7 +1127,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceID. Valid values are DeviceID, SystemInd, CPUInd, MemoryInd, VlansInd, ForwardingInd, EnvironmentalInd, InventoryInd, ARPInd, RouteInd, NeighborInd, ConfigInd, AccessInd, VrfInd, SystemTimestamp, CPUTimestamp, MemoryTimestamp, VlansTimestamp, ForwardingTimestamp, EnvironmentalTimestamp, InventoryTimestamp, ARPTimestamp, RouteTimestamp, NeighborTimestamp, ConfigTimestamp, AccessTimestamp, VrfTimestamp.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceID, SystemInd, CPUInd, MemoryInd, VlansInd, ForwardingInd, EnvironmentalInd, InventoryInd, ARPInd, RouteInd, NeighborInd, ConfigInd, AccessInd, VrfInd, SystemTimestamp, CPUTimestamp, MemoryTimestamp, VlansTimestamp, ForwardingTimestamp, EnvironmentalTimestamp, InventoryTimestamp, ARPTimestamp, RouteTimestamp, NeighborTimestamp, ConfigTimestamp, AccessTimestamp, VrfTimestamp.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1167,7 +1135,7 @@ class DataCollectionStatusBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1177,22 +1145,6 @@ class DataCollectionStatusBroker(Broker):
 
              :param select: The list of attributes to return for each DataCollectionStatus. Valid values are DeviceID, SystemInd, CPUInd, MemoryInd, VlansInd, ForwardingInd, EnvironmentalInd, InventoryInd, ARPInd, RouteInd, NeighborInd, ConfigInd, AccessInd, VrfInd, SystemTimestamp, CPUTimestamp, MemoryTimestamp, VlansTimestamp, ForwardingTimestamp, EnvironmentalTimestamp, InventoryTimestamp, ARPTimestamp, RouteTimestamp, NeighborTimestamp, ConfigTimestamp, AccessTimestamp, VrfTimestamp. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class AccessProvisioningDevicesGridRemote(RemoteModel):
     """
-    list of devices available for provisioning
+    List of devices available for provisioning.
 
 
     |  ``id:`` The internal NetMRI identifier for this used rule list for a device.

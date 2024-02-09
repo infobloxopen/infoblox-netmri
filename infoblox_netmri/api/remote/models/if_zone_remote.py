@@ -4,7 +4,7 @@ from infoblox_netmri.utils.utils import check_api_availability
 
 class IfZoneRemote(RemoteModel):
     """
-    Attachment of the interfaces of the device to the zone of filtering
+    Attachment of the interfaces of the device to the zone of filtering.
 
 
     |  ``IfZoneID:`` The internal NetMRI identifier for this relation between a Zone and an Interface of device.

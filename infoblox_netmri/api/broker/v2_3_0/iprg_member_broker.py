@@ -48,7 +48,7 @@ class IprgMemberBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available iprg members. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available iprg members. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -169,7 +169,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IprgMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IprgMemberID. Valid values are IprgMemberID, IprgMemberStartTime, IprgMemberEndTime, IprgMemberTimestamp, IprgMemberChangedCols, IprgID, InterfaceID, DeviceID, DataSourceID, IprgMemberPriority, IprgMemberPreemptInd, IprgMemberPreemptDelay, IprgMemberUseConfiguredTimersInd, IprgMemberConfiguredHelloTime, IprgMemberConfiguredHoldTime, IprgMemberLearnedHelloTime, IprgMemberLearnedHoldTime, IprgMemberVirtualIPDotted, IprgMemberVirtualIPNumeric, IprgMemberUseConfigVirtualIPInd, IprgMemberActiveIPDotted, IprgMemberActiveIPNumeric, IprgMemberActiveDeviceID, IprgMemberActiveInterfaceID, IprgMemberStandbyIPDotted, IprgMemberStandbyIPNumeric, IprgMemberStandbyDeviceID, IprgMemberStandbyInterfaceID, IprgMemberState.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IprgMemberID, IprgMemberStartTime, IprgMemberEndTime, IprgMemberTimestamp, IprgMemberChangedCols, IprgID, InterfaceID, DeviceID, DataSourceID, IprgMemberPriority, IprgMemberPreemptInd, IprgMemberPreemptDelay, IprgMemberUseConfiguredTimersInd, IprgMemberConfiguredHelloTime, IprgMemberConfiguredHoldTime, IprgMemberLearnedHelloTime, IprgMemberLearnedHoldTime, IprgMemberVirtualIPDotted, IprgMemberVirtualIPNumeric, IprgMemberUseConfigVirtualIPInd, IprgMemberActiveIPDotted, IprgMemberActiveIPNumeric, IprgMemberActiveDeviceID, IprgMemberActiveInterfaceID, IprgMemberStandbyIPDotted, IprgMemberStandbyIPNumeric, IprgMemberStandbyDeviceID, IprgMemberStandbyInterfaceID, IprgMemberState.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -177,7 +177,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -187,22 +187,6 @@ class IprgMemberBroker(Broker):
 
              :param select: The list of attributes to return for each IprgMember. Valid values are IprgMemberID, IprgMemberStartTime, IprgMemberEndTime, IprgMemberTimestamp, IprgMemberChangedCols, IprgID, InterfaceID, DeviceID, DataSourceID, IprgMemberPriority, IprgMemberPreemptInd, IprgMemberPreemptDelay, IprgMemberUseConfiguredTimersInd, IprgMemberConfiguredHelloTime, IprgMemberConfiguredHoldTime, IprgMemberLearnedHelloTime, IprgMemberLearnedHoldTime, IprgMemberVirtualIPDotted, IprgMemberVirtualIPNumeric, IprgMemberUseConfigVirtualIPInd, IprgMemberActiveIPDotted, IprgMemberActiveIPNumeric, IprgMemberActiveDeviceID, IprgMemberActiveInterfaceID, IprgMemberStandbyIPDotted, IprgMemberStandbyIPNumeric, IprgMemberStandbyDeviceID, IprgMemberStandbyInterfaceID, IprgMemberState. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -740,7 +724,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IprgMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IprgMemberID. Valid values are IprgMemberID, IprgMemberStartTime, IprgMemberEndTime, IprgMemberTimestamp, IprgMemberChangedCols, IprgID, InterfaceID, DeviceID, DataSourceID, IprgMemberPriority, IprgMemberPreemptInd, IprgMemberPreemptDelay, IprgMemberUseConfiguredTimersInd, IprgMemberConfiguredHelloTime, IprgMemberConfiguredHoldTime, IprgMemberLearnedHelloTime, IprgMemberLearnedHoldTime, IprgMemberVirtualIPDotted, IprgMemberVirtualIPNumeric, IprgMemberUseConfigVirtualIPInd, IprgMemberActiveIPDotted, IprgMemberActiveIPNumeric, IprgMemberActiveDeviceID, IprgMemberActiveInterfaceID, IprgMemberStandbyIPDotted, IprgMemberStandbyIPNumeric, IprgMemberStandbyDeviceID, IprgMemberStandbyInterfaceID, IprgMemberState.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IprgMemberID, IprgMemberStartTime, IprgMemberEndTime, IprgMemberTimestamp, IprgMemberChangedCols, IprgID, InterfaceID, DeviceID, DataSourceID, IprgMemberPriority, IprgMemberPreemptInd, IprgMemberPreemptDelay, IprgMemberUseConfiguredTimersInd, IprgMemberConfiguredHelloTime, IprgMemberConfiguredHoldTime, IprgMemberLearnedHelloTime, IprgMemberLearnedHoldTime, IprgMemberVirtualIPDotted, IprgMemberVirtualIPNumeric, IprgMemberUseConfigVirtualIPInd, IprgMemberActiveIPDotted, IprgMemberActiveIPNumeric, IprgMemberActiveDeviceID, IprgMemberActiveInterfaceID, IprgMemberStandbyIPDotted, IprgMemberStandbyIPNumeric, IprgMemberStandbyDeviceID, IprgMemberStandbyInterfaceID, IprgMemberState.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -748,7 +732,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -758,22 +742,6 @@ class IprgMemberBroker(Broker):
 
              :param select: The list of attributes to return for each IprgMember. Valid values are IprgMemberID, IprgMemberStartTime, IprgMemberEndTime, IprgMemberTimestamp, IprgMemberChangedCols, IprgID, InterfaceID, DeviceID, DataSourceID, IprgMemberPriority, IprgMemberPreemptInd, IprgMemberPreemptDelay, IprgMemberUseConfiguredTimersInd, IprgMemberConfiguredHelloTime, IprgMemberConfiguredHoldTime, IprgMemberLearnedHelloTime, IprgMemberLearnedHoldTime, IprgMemberVirtualIPDotted, IprgMemberVirtualIPNumeric, IprgMemberUseConfigVirtualIPInd, IprgMemberActiveIPDotted, IprgMemberActiveIPNumeric, IprgMemberActiveDeviceID, IprgMemberActiveInterfaceID, IprgMemberStandbyIPDotted, IprgMemberStandbyIPNumeric, IprgMemberStandbyDeviceID, IprgMemberStandbyInterfaceID, IprgMemberState. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -831,7 +799,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgID: If op_IprgID is specified, this value will be compared to the value in IprgID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgID must be specified if op_IprgID is specified.
+             :param val_c_IprgID: If op_IprgID is specified, this value will be compared to the value in IprgID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgID must be specified if op_IprgID is specified. If the rlike or not rlike value is specified in the op_IprgID field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgID: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberActiveDeviceID: If op_IprgMemberActiveDeviceID is specified, this value will be compared to the value in IprgMemberActiveDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberActiveDeviceID must be specified if op_IprgMemberActiveDeviceID is specified.
+             :param val_c_IprgMemberActiveDeviceID: If op_IprgMemberActiveDeviceID is specified, this value will be compared to the value in IprgMemberActiveDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberActiveDeviceID must be specified if op_IprgMemberActiveDeviceID is specified. If the rlike or not rlike value is specified in the op_IprgMemberActiveDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberActiveDeviceID: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberActiveIPDotted: If op_IprgMemberActiveIPDotted is specified, this value will be compared to the value in IprgMemberActiveIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberActiveIPDotted must be specified if op_IprgMemberActiveIPDotted is specified.
+             :param val_c_IprgMemberActiveIPDotted: If op_IprgMemberActiveIPDotted is specified, this value will be compared to the value in IprgMemberActiveIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberActiveIPDotted must be specified if op_IprgMemberActiveIPDotted is specified. If the rlike or not rlike value is specified in the op_IprgMemberActiveIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberActiveIPDotted: String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberActiveIPNumeric: If op_IprgMemberActiveIPNumeric is specified, this value will be compared to the value in IprgMemberActiveIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberActiveIPNumeric must be specified if op_IprgMemberActiveIPNumeric is specified.
+             :param val_c_IprgMemberActiveIPNumeric: If op_IprgMemberActiveIPNumeric is specified, this value will be compared to the value in IprgMemberActiveIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberActiveIPNumeric must be specified if op_IprgMemberActiveIPNumeric is specified. If the rlike or not rlike value is specified in the op_IprgMemberActiveIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberActiveIPNumeric: String
 
             |  ``api version min:`` None
@@ -999,7 +967,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberActiveInterfaceID: If op_IprgMemberActiveInterfaceID is specified, this value will be compared to the value in IprgMemberActiveInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberActiveInterfaceID must be specified if op_IprgMemberActiveInterfaceID is specified.
+             :param val_c_IprgMemberActiveInterfaceID: If op_IprgMemberActiveInterfaceID is specified, this value will be compared to the value in IprgMemberActiveInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberActiveInterfaceID must be specified if op_IprgMemberActiveInterfaceID is specified. If the rlike or not rlike value is specified in the op_IprgMemberActiveInterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberActiveInterfaceID: String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberChangedCols: If op_IprgMemberChangedCols is specified, this value will be compared to the value in IprgMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberChangedCols must be specified if op_IprgMemberChangedCols is specified.
+             :param val_c_IprgMemberChangedCols: If op_IprgMemberChangedCols is specified, this value will be compared to the value in IprgMemberChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberChangedCols must be specified if op_IprgMemberChangedCols is specified. If the rlike or not rlike value is specified in the op_IprgMemberChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberChangedCols: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberConfiguredHelloTime: If op_IprgMemberConfiguredHelloTime is specified, this value will be compared to the value in IprgMemberConfiguredHelloTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberConfiguredHelloTime must be specified if op_IprgMemberConfiguredHelloTime is specified.
+             :param val_c_IprgMemberConfiguredHelloTime: If op_IprgMemberConfiguredHelloTime is specified, this value will be compared to the value in IprgMemberConfiguredHelloTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberConfiguredHelloTime must be specified if op_IprgMemberConfiguredHelloTime is specified. If the rlike or not rlike value is specified in the op_IprgMemberConfiguredHelloTime field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberConfiguredHelloTime: String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberConfiguredHoldTime: If op_IprgMemberConfiguredHoldTime is specified, this value will be compared to the value in IprgMemberConfiguredHoldTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberConfiguredHoldTime must be specified if op_IprgMemberConfiguredHoldTime is specified.
+             :param val_c_IprgMemberConfiguredHoldTime: If op_IprgMemberConfiguredHoldTime is specified, this value will be compared to the value in IprgMemberConfiguredHoldTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberConfiguredHoldTime must be specified if op_IprgMemberConfiguredHoldTime is specified. If the rlike or not rlike value is specified in the op_IprgMemberConfiguredHoldTime field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberConfiguredHoldTime: String
 
             |  ``api version min:`` None
@@ -1095,7 +1063,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberEndTime: If op_IprgMemberEndTime is specified, this value will be compared to the value in IprgMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberEndTime must be specified if op_IprgMemberEndTime is specified.
+             :param val_c_IprgMemberEndTime: If op_IprgMemberEndTime is specified, this value will be compared to the value in IprgMemberEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberEndTime must be specified if op_IprgMemberEndTime is specified. If the rlike or not rlike value is specified in the op_IprgMemberEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberEndTime: String
 
             |  ``api version min:`` None
@@ -1119,7 +1087,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberID: If op_IprgMemberID is specified, this value will be compared to the value in IprgMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberID must be specified if op_IprgMemberID is specified.
+             :param val_c_IprgMemberID: If op_IprgMemberID is specified, this value will be compared to the value in IprgMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberID must be specified if op_IprgMemberID is specified. If the rlike or not rlike value is specified in the op_IprgMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberID: String
 
             |  ``api version min:`` None
@@ -1143,7 +1111,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberLearnedHelloTime: If op_IprgMemberLearnedHelloTime is specified, this value will be compared to the value in IprgMemberLearnedHelloTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberLearnedHelloTime must be specified if op_IprgMemberLearnedHelloTime is specified.
+             :param val_c_IprgMemberLearnedHelloTime: If op_IprgMemberLearnedHelloTime is specified, this value will be compared to the value in IprgMemberLearnedHelloTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberLearnedHelloTime must be specified if op_IprgMemberLearnedHelloTime is specified. If the rlike or not rlike value is specified in the op_IprgMemberLearnedHelloTime field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberLearnedHelloTime: String
 
             |  ``api version min:`` None
@@ -1167,7 +1135,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberLearnedHoldTime: If op_IprgMemberLearnedHoldTime is specified, this value will be compared to the value in IprgMemberLearnedHoldTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberLearnedHoldTime must be specified if op_IprgMemberLearnedHoldTime is specified.
+             :param val_c_IprgMemberLearnedHoldTime: If op_IprgMemberLearnedHoldTime is specified, this value will be compared to the value in IprgMemberLearnedHoldTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberLearnedHoldTime must be specified if op_IprgMemberLearnedHoldTime is specified. If the rlike or not rlike value is specified in the op_IprgMemberLearnedHoldTime field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberLearnedHoldTime: String
 
             |  ``api version min:`` None
@@ -1191,7 +1159,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberPreemptDelay: If op_IprgMemberPreemptDelay is specified, this value will be compared to the value in IprgMemberPreemptDelay using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberPreemptDelay must be specified if op_IprgMemberPreemptDelay is specified.
+             :param val_c_IprgMemberPreemptDelay: If op_IprgMemberPreemptDelay is specified, this value will be compared to the value in IprgMemberPreemptDelay using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberPreemptDelay must be specified if op_IprgMemberPreemptDelay is specified. If the rlike or not rlike value is specified in the op_IprgMemberPreemptDelay field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberPreemptDelay: String
 
             |  ``api version min:`` None
@@ -1215,7 +1183,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberPreemptInd: If op_IprgMemberPreemptInd is specified, this value will be compared to the value in IprgMemberPreemptInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberPreemptInd must be specified if op_IprgMemberPreemptInd is specified.
+             :param val_c_IprgMemberPreemptInd: If op_IprgMemberPreemptInd is specified, this value will be compared to the value in IprgMemberPreemptInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberPreemptInd must be specified if op_IprgMemberPreemptInd is specified. If the rlike or not rlike value is specified in the op_IprgMemberPreemptInd field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberPreemptInd: String
 
             |  ``api version min:`` None
@@ -1239,7 +1207,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberPriority: If op_IprgMemberPriority is specified, this value will be compared to the value in IprgMemberPriority using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberPriority must be specified if op_IprgMemberPriority is specified.
+             :param val_c_IprgMemberPriority: If op_IprgMemberPriority is specified, this value will be compared to the value in IprgMemberPriority using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberPriority must be specified if op_IprgMemberPriority is specified. If the rlike or not rlike value is specified in the op_IprgMemberPriority field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberPriority: String
 
             |  ``api version min:`` None
@@ -1263,7 +1231,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberStandbyDeviceID: If op_IprgMemberStandbyDeviceID is specified, this value will be compared to the value in IprgMemberStandbyDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberStandbyDeviceID must be specified if op_IprgMemberStandbyDeviceID is specified.
+             :param val_c_IprgMemberStandbyDeviceID: If op_IprgMemberStandbyDeviceID is specified, this value will be compared to the value in IprgMemberStandbyDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberStandbyDeviceID must be specified if op_IprgMemberStandbyDeviceID is specified. If the rlike or not rlike value is specified in the op_IprgMemberStandbyDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberStandbyDeviceID: String
 
             |  ``api version min:`` None
@@ -1287,7 +1255,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberStandbyIPDotted: If op_IprgMemberStandbyIPDotted is specified, this value will be compared to the value in IprgMemberStandbyIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberStandbyIPDotted must be specified if op_IprgMemberStandbyIPDotted is specified.
+             :param val_c_IprgMemberStandbyIPDotted: If op_IprgMemberStandbyIPDotted is specified, this value will be compared to the value in IprgMemberStandbyIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberStandbyIPDotted must be specified if op_IprgMemberStandbyIPDotted is specified. If the rlike or not rlike value is specified in the op_IprgMemberStandbyIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberStandbyIPDotted: String
 
             |  ``api version min:`` None
@@ -1311,7 +1279,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberStandbyIPNumeric: If op_IprgMemberStandbyIPNumeric is specified, this value will be compared to the value in IprgMemberStandbyIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberStandbyIPNumeric must be specified if op_IprgMemberStandbyIPNumeric is specified.
+             :param val_c_IprgMemberStandbyIPNumeric: If op_IprgMemberStandbyIPNumeric is specified, this value will be compared to the value in IprgMemberStandbyIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberStandbyIPNumeric must be specified if op_IprgMemberStandbyIPNumeric is specified. If the rlike or not rlike value is specified in the op_IprgMemberStandbyIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberStandbyIPNumeric: String
 
             |  ``api version min:`` None
@@ -1335,7 +1303,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberStandbyInterfaceID: If op_IprgMemberStandbyInterfaceID is specified, this value will be compared to the value in IprgMemberStandbyInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberStandbyInterfaceID must be specified if op_IprgMemberStandbyInterfaceID is specified.
+             :param val_c_IprgMemberStandbyInterfaceID: If op_IprgMemberStandbyInterfaceID is specified, this value will be compared to the value in IprgMemberStandbyInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberStandbyInterfaceID must be specified if op_IprgMemberStandbyInterfaceID is specified. If the rlike or not rlike value is specified in the op_IprgMemberStandbyInterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberStandbyInterfaceID: String
 
             |  ``api version min:`` None
@@ -1359,7 +1327,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberStartTime: If op_IprgMemberStartTime is specified, this value will be compared to the value in IprgMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberStartTime must be specified if op_IprgMemberStartTime is specified.
+             :param val_c_IprgMemberStartTime: If op_IprgMemberStartTime is specified, this value will be compared to the value in IprgMemberStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberStartTime must be specified if op_IprgMemberStartTime is specified. If the rlike or not rlike value is specified in the op_IprgMemberStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberStartTime: String
 
             |  ``api version min:`` None
@@ -1383,7 +1351,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberState: If op_IprgMemberState is specified, this value will be compared to the value in IprgMemberState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberState must be specified if op_IprgMemberState is specified.
+             :param val_c_IprgMemberState: If op_IprgMemberState is specified, this value will be compared to the value in IprgMemberState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberState must be specified if op_IprgMemberState is specified. If the rlike or not rlike value is specified in the op_IprgMemberState field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberState: String
 
             |  ``api version min:`` None
@@ -1407,7 +1375,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberTimestamp: If op_IprgMemberTimestamp is specified, this value will be compared to the value in IprgMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberTimestamp must be specified if op_IprgMemberTimestamp is specified.
+             :param val_c_IprgMemberTimestamp: If op_IprgMemberTimestamp is specified, this value will be compared to the value in IprgMemberTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberTimestamp must be specified if op_IprgMemberTimestamp is specified. If the rlike or not rlike value is specified in the op_IprgMemberTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberTimestamp: String
 
             |  ``api version min:`` None
@@ -1431,7 +1399,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberUseConfigVirtualIPInd: If op_IprgMemberUseConfigVirtualIPInd is specified, this value will be compared to the value in IprgMemberUseConfigVirtualIPInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberUseConfigVirtualIPInd must be specified if op_IprgMemberUseConfigVirtualIPInd is specified.
+             :param val_c_IprgMemberUseConfigVirtualIPInd: If op_IprgMemberUseConfigVirtualIPInd is specified, this value will be compared to the value in IprgMemberUseConfigVirtualIPInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberUseConfigVirtualIPInd must be specified if op_IprgMemberUseConfigVirtualIPInd is specified. If the rlike or not rlike value is specified in the op_IprgMemberUseConfigVirtualIPInd field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberUseConfigVirtualIPInd: String
 
             |  ``api version min:`` None
@@ -1455,7 +1423,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberUseConfiguredTimersInd: If op_IprgMemberUseConfiguredTimersInd is specified, this value will be compared to the value in IprgMemberUseConfiguredTimersInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberUseConfiguredTimersInd must be specified if op_IprgMemberUseConfiguredTimersInd is specified.
+             :param val_c_IprgMemberUseConfiguredTimersInd: If op_IprgMemberUseConfiguredTimersInd is specified, this value will be compared to the value in IprgMemberUseConfiguredTimersInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberUseConfiguredTimersInd must be specified if op_IprgMemberUseConfiguredTimersInd is specified. If the rlike or not rlike value is specified in the op_IprgMemberUseConfiguredTimersInd field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberUseConfiguredTimersInd: String
 
             |  ``api version min:`` None
@@ -1479,7 +1447,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberVirtualIPDotted: If op_IprgMemberVirtualIPDotted is specified, this value will be compared to the value in IprgMemberVirtualIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberVirtualIPDotted must be specified if op_IprgMemberVirtualIPDotted is specified.
+             :param val_c_IprgMemberVirtualIPDotted: If op_IprgMemberVirtualIPDotted is specified, this value will be compared to the value in IprgMemberVirtualIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberVirtualIPDotted must be specified if op_IprgMemberVirtualIPDotted is specified. If the rlike or not rlike value is specified in the op_IprgMemberVirtualIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberVirtualIPDotted: String
 
             |  ``api version min:`` None
@@ -1503,7 +1471,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberVirtualIPNumeric: If op_IprgMemberVirtualIPNumeric is specified, this value will be compared to the value in IprgMemberVirtualIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberVirtualIPNumeric must be specified if op_IprgMemberVirtualIPNumeric is specified.
+             :param val_c_IprgMemberVirtualIPNumeric: If op_IprgMemberVirtualIPNumeric is specified, this value will be compared to the value in IprgMemberVirtualIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberVirtualIPNumeric must be specified if op_IprgMemberVirtualIPNumeric is specified. If the rlike or not rlike value is specified in the op_IprgMemberVirtualIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberVirtualIPNumeric: String
 
             |  ``api version min:`` None
@@ -1559,7 +1527,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IprgMemberID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IprgMemberID. Valid values are IprgMemberID, IprgMemberStartTime, IprgMemberEndTime, IprgMemberTimestamp, IprgMemberChangedCols, IprgID, InterfaceID, DeviceID, DataSourceID, IprgMemberPriority, IprgMemberPreemptInd, IprgMemberPreemptDelay, IprgMemberUseConfiguredTimersInd, IprgMemberConfiguredHelloTime, IprgMemberConfiguredHoldTime, IprgMemberLearnedHelloTime, IprgMemberLearnedHoldTime, IprgMemberVirtualIPDotted, IprgMemberVirtualIPNumeric, IprgMemberUseConfigVirtualIPInd, IprgMemberActiveIPDotted, IprgMemberActiveIPNumeric, IprgMemberActiveDeviceID, IprgMemberActiveInterfaceID, IprgMemberStandbyIPDotted, IprgMemberStandbyIPNumeric, IprgMemberStandbyDeviceID, IprgMemberStandbyInterfaceID, IprgMemberState.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IprgMemberID, IprgMemberStartTime, IprgMemberEndTime, IprgMemberTimestamp, IprgMemberChangedCols, IprgID, InterfaceID, DeviceID, DataSourceID, IprgMemberPriority, IprgMemberPreemptInd, IprgMemberPreemptDelay, IprgMemberUseConfiguredTimersInd, IprgMemberConfiguredHelloTime, IprgMemberConfiguredHoldTime, IprgMemberLearnedHelloTime, IprgMemberLearnedHoldTime, IprgMemberVirtualIPDotted, IprgMemberVirtualIPNumeric, IprgMemberUseConfigVirtualIPInd, IprgMemberActiveIPDotted, IprgMemberActiveIPNumeric, IprgMemberActiveDeviceID, IprgMemberActiveInterfaceID, IprgMemberStandbyIPDotted, IprgMemberStandbyIPNumeric, IprgMemberStandbyDeviceID, IprgMemberStandbyInterfaceID, IprgMemberState.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1567,7 +1535,7 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1577,22 +1545,6 @@ class IprgMemberBroker(Broker):
 
              :param select: The list of attributes to return for each IprgMember. Valid values are IprgMemberID, IprgMemberStartTime, IprgMemberEndTime, IprgMemberTimestamp, IprgMemberChangedCols, IprgID, InterfaceID, DeviceID, DataSourceID, IprgMemberPriority, IprgMemberPreemptInd, IprgMemberPreemptDelay, IprgMemberUseConfiguredTimersInd, IprgMemberConfiguredHelloTime, IprgMemberConfiguredHoldTime, IprgMemberLearnedHelloTime, IprgMemberLearnedHoldTime, IprgMemberVirtualIPDotted, IprgMemberVirtualIPNumeric, IprgMemberUseConfigVirtualIPInd, IprgMemberActiveIPDotted, IprgMemberActiveIPNumeric, IprgMemberActiveDeviceID, IprgMemberActiveInterfaceID, IprgMemberStandbyIPDotted, IprgMemberStandbyIPNumeric, IprgMemberStandbyDeviceID, IprgMemberStandbyInterfaceID, IprgMemberState. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1636,8 +1588,8 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1663,8 +1615,8 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The HSRP/VRRP group to which this membership pertains.
-             :rtype : Iprg
+             :return iprg: The HSRP/VRRP group to which this membership pertains.
+             :rtype iprg: Iprg
 
             """
 
@@ -1690,8 +1642,8 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The interface configured with this HSRP/VRRP membership.
-             :rtype : Interface
+             :return interface: The interface configured with this HSRP/VRRP membership.
+             :rtype interface: Interface
 
             """
 
@@ -1717,8 +1669,8 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device that this router believes is the current active or master device.
-             :rtype : Device
+             :return active_router: The device that this router believes is the current active or master device.
+             :rtype active_router: Device
 
             """
 
@@ -1744,8 +1696,8 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device that this router believes is the current standby or backup device.
-             :rtype : Device
+             :return standby_router: The device that this router believes is the current standby or backup device.
+             :rtype standby_router: Device
 
             """
 
@@ -1771,8 +1723,8 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The interface object corresponding to the active/master IP address, if available.
-             :rtype : Interface
+             :return active_interface: The interface object corresponding to the active/master IP address, if available.
+             :rtype active_interface: Interface
 
             """
 
@@ -1798,8 +1750,8 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The interface object corresponding to the  standby/backup IP address, if available.
-             :rtype : Interface
+             :return standby_interface: The interface object corresponding to the  standby/backup IP address, if available.
+             :rtype standby_interface: Interface
 
             """
 
@@ -1825,8 +1777,8 @@ class IprgMemberBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device configured with this HSRP/VRRP membership.
-             :rtype : InfraDevice
+             :return infradevice: The device configured with this HSRP/VRRP membership.
+             :rtype infradevice: InfraDevice
 
             """
 

@@ -48,7 +48,7 @@ class VrrpRouterStatBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available vrrp router stats. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available vrrp router stats. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -161,7 +161,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VrrpRouterStatsID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VrrpRouterStatsID. Valid values are VrrpRouterStatsID, DeviceID, IprgMemberID, InterfaceID, StartTime, EndTime, ifIndex, IprgNumber, VrrpBecomeMaster, VrrpAdvertiseRcvd, VrrpAdvertiseIntervalErrors, VrrpAuthFailures, VrrpIpTtlErrors, VrrpPriorityZeroPktsRcvd, VrrpPriorityZeroPktsSent, VrrpInvalidTypePktsRcvd, VrrpAddressListErrors, VrrpInvalidAuthType, VrrpAuthTypeMismatch, VrrpPacketLengthErrors.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VrrpRouterStatsID, DeviceID, IprgMemberID, InterfaceID, StartTime, EndTime, ifIndex, IprgNumber, VrrpBecomeMaster, VrrpAdvertiseRcvd, VrrpAdvertiseIntervalErrors, VrrpAuthFailures, VrrpIpTtlErrors, VrrpPriorityZeroPktsRcvd, VrrpPriorityZeroPktsSent, VrrpInvalidTypePktsRcvd, VrrpAddressListErrors, VrrpInvalidAuthType, VrrpAuthTypeMismatch, VrrpPacketLengthErrors.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -169,7 +169,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -179,22 +179,6 @@ class VrrpRouterStatBroker(Broker):
 
              :param select: The list of attributes to return for each VrrpRouterStat. Valid values are VrrpRouterStatsID, DeviceID, IprgMemberID, InterfaceID, StartTime, EndTime, ifIndex, IprgNumber, VrrpBecomeMaster, VrrpAdvertiseRcvd, VrrpAdvertiseIntervalErrors, VrrpAuthFailures, VrrpIpTtlErrors, VrrpPriorityZeroPktsRcvd, VrrpPriorityZeroPktsSent, VrrpInvalidTypePktsRcvd, VrrpAddressListErrors, VrrpInvalidAuthType, VrrpAuthTypeMismatch, VrrpPacketLengthErrors. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -596,7 +580,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VrrpRouterStatsID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VrrpRouterStatsID. Valid values are VrrpRouterStatsID, DeviceID, IprgMemberID, InterfaceID, StartTime, EndTime, ifIndex, IprgNumber, VrrpBecomeMaster, VrrpAdvertiseRcvd, VrrpAdvertiseIntervalErrors, VrrpAuthFailures, VrrpIpTtlErrors, VrrpPriorityZeroPktsRcvd, VrrpPriorityZeroPktsSent, VrrpInvalidTypePktsRcvd, VrrpAddressListErrors, VrrpInvalidAuthType, VrrpAuthTypeMismatch, VrrpPacketLengthErrors.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VrrpRouterStatsID, DeviceID, IprgMemberID, InterfaceID, StartTime, EndTime, ifIndex, IprgNumber, VrrpBecomeMaster, VrrpAdvertiseRcvd, VrrpAdvertiseIntervalErrors, VrrpAuthFailures, VrrpIpTtlErrors, VrrpPriorityZeroPktsRcvd, VrrpPriorityZeroPktsSent, VrrpInvalidTypePktsRcvd, VrrpAddressListErrors, VrrpInvalidAuthType, VrrpAuthTypeMismatch, VrrpPacketLengthErrors.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -604,7 +588,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -614,22 +598,6 @@ class VrrpRouterStatBroker(Broker):
 
              :param select: The list of attributes to return for each VrrpRouterStat. Valid values are VrrpRouterStatsID, DeviceID, IprgMemberID, InterfaceID, StartTime, EndTime, ifIndex, IprgNumber, VrrpBecomeMaster, VrrpAdvertiseRcvd, VrrpAdvertiseIntervalErrors, VrrpAuthFailures, VrrpIpTtlErrors, VrrpPriorityZeroPktsRcvd, VrrpPriorityZeroPktsSent, VrrpInvalidTypePktsRcvd, VrrpAddressListErrors, VrrpInvalidAuthType, VrrpAuthTypeMismatch, VrrpPacketLengthErrors. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -687,7 +655,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified.
+             :param val_c_EndTime: If op_EndTime is specified, this value will be compared to the value in EndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EndTime must be specified if op_EndTime is specified. If the rlike or not rlike value is specified in the op_EndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_EndTime: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgMemberID: If op_IprgMemberID is specified, this value will be compared to the value in IprgMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberID must be specified if op_IprgMemberID is specified.
+             :param val_c_IprgMemberID: If op_IprgMemberID is specified, this value will be compared to the value in IprgMemberID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgMemberID must be specified if op_IprgMemberID is specified. If the rlike or not rlike value is specified in the op_IprgMemberID field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgMemberID: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IprgNumber: If op_IprgNumber is specified, this value will be compared to the value in IprgNumber using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgNumber must be specified if op_IprgNumber is specified.
+             :param val_c_IprgNumber: If op_IprgNumber is specified, this value will be compared to the value in IprgNumber using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IprgNumber must be specified if op_IprgNumber is specified. If the rlike or not rlike value is specified in the op_IprgNumber field, escape regex special characters because a regular expression is expected.
              :type val_c_IprgNumber: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified.
+             :param val_c_StartTime: If op_StartTime is specified, this value will be compared to the value in StartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_StartTime must be specified if op_StartTime is specified. If the rlike or not rlike value is specified in the op_StartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_StartTime: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpAddressListErrors: If op_VrrpAddressListErrors is specified, this value will be compared to the value in VrrpAddressListErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpAddressListErrors must be specified if op_VrrpAddressListErrors is specified.
+             :param val_c_VrrpAddressListErrors: If op_VrrpAddressListErrors is specified, this value will be compared to the value in VrrpAddressListErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpAddressListErrors must be specified if op_VrrpAddressListErrors is specified. If the rlike or not rlike value is specified in the op_VrrpAddressListErrors field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpAddressListErrors: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpAdvertiseIntervalErrors: If op_VrrpAdvertiseIntervalErrors is specified, this value will be compared to the value in VrrpAdvertiseIntervalErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpAdvertiseIntervalErrors must be specified if op_VrrpAdvertiseIntervalErrors is specified.
+             :param val_c_VrrpAdvertiseIntervalErrors: If op_VrrpAdvertiseIntervalErrors is specified, this value will be compared to the value in VrrpAdvertiseIntervalErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpAdvertiseIntervalErrors must be specified if op_VrrpAdvertiseIntervalErrors is specified. If the rlike or not rlike value is specified in the op_VrrpAdvertiseIntervalErrors field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpAdvertiseIntervalErrors: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpAdvertiseRcvd: If op_VrrpAdvertiseRcvd is specified, this value will be compared to the value in VrrpAdvertiseRcvd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpAdvertiseRcvd must be specified if op_VrrpAdvertiseRcvd is specified.
+             :param val_c_VrrpAdvertiseRcvd: If op_VrrpAdvertiseRcvd is specified, this value will be compared to the value in VrrpAdvertiseRcvd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpAdvertiseRcvd must be specified if op_VrrpAdvertiseRcvd is specified. If the rlike or not rlike value is specified in the op_VrrpAdvertiseRcvd field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpAdvertiseRcvd: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpAuthFailures: If op_VrrpAuthFailures is specified, this value will be compared to the value in VrrpAuthFailures using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpAuthFailures must be specified if op_VrrpAuthFailures is specified.
+             :param val_c_VrrpAuthFailures: If op_VrrpAuthFailures is specified, this value will be compared to the value in VrrpAuthFailures using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpAuthFailures must be specified if op_VrrpAuthFailures is specified. If the rlike or not rlike value is specified in the op_VrrpAuthFailures field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpAuthFailures: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpAuthTypeMismatch: If op_VrrpAuthTypeMismatch is specified, this value will be compared to the value in VrrpAuthTypeMismatch using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpAuthTypeMismatch must be specified if op_VrrpAuthTypeMismatch is specified.
+             :param val_c_VrrpAuthTypeMismatch: If op_VrrpAuthTypeMismatch is specified, this value will be compared to the value in VrrpAuthTypeMismatch using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpAuthTypeMismatch must be specified if op_VrrpAuthTypeMismatch is specified. If the rlike or not rlike value is specified in the op_VrrpAuthTypeMismatch field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpAuthTypeMismatch: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpBecomeMaster: If op_VrrpBecomeMaster is specified, this value will be compared to the value in VrrpBecomeMaster using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpBecomeMaster must be specified if op_VrrpBecomeMaster is specified.
+             :param val_c_VrrpBecomeMaster: If op_VrrpBecomeMaster is specified, this value will be compared to the value in VrrpBecomeMaster using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpBecomeMaster must be specified if op_VrrpBecomeMaster is specified. If the rlike or not rlike value is specified in the op_VrrpBecomeMaster field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpBecomeMaster: String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpInvalidAuthType: If op_VrrpInvalidAuthType is specified, this value will be compared to the value in VrrpInvalidAuthType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpInvalidAuthType must be specified if op_VrrpInvalidAuthType is specified.
+             :param val_c_VrrpInvalidAuthType: If op_VrrpInvalidAuthType is specified, this value will be compared to the value in VrrpInvalidAuthType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpInvalidAuthType must be specified if op_VrrpInvalidAuthType is specified. If the rlike or not rlike value is specified in the op_VrrpInvalidAuthType field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpInvalidAuthType: String
 
             |  ``api version min:`` None
@@ -999,7 +967,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpInvalidTypePktsRcvd: If op_VrrpInvalidTypePktsRcvd is specified, this value will be compared to the value in VrrpInvalidTypePktsRcvd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpInvalidTypePktsRcvd must be specified if op_VrrpInvalidTypePktsRcvd is specified.
+             :param val_c_VrrpInvalidTypePktsRcvd: If op_VrrpInvalidTypePktsRcvd is specified, this value will be compared to the value in VrrpInvalidTypePktsRcvd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpInvalidTypePktsRcvd must be specified if op_VrrpInvalidTypePktsRcvd is specified. If the rlike or not rlike value is specified in the op_VrrpInvalidTypePktsRcvd field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpInvalidTypePktsRcvd: String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpIpTtlErrors: If op_VrrpIpTtlErrors is specified, this value will be compared to the value in VrrpIpTtlErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpIpTtlErrors must be specified if op_VrrpIpTtlErrors is specified.
+             :param val_c_VrrpIpTtlErrors: If op_VrrpIpTtlErrors is specified, this value will be compared to the value in VrrpIpTtlErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpIpTtlErrors must be specified if op_VrrpIpTtlErrors is specified. If the rlike or not rlike value is specified in the op_VrrpIpTtlErrors field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpIpTtlErrors: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpPacketLengthErrors: If op_VrrpPacketLengthErrors is specified, this value will be compared to the value in VrrpPacketLengthErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpPacketLengthErrors must be specified if op_VrrpPacketLengthErrors is specified.
+             :param val_c_VrrpPacketLengthErrors: If op_VrrpPacketLengthErrors is specified, this value will be compared to the value in VrrpPacketLengthErrors using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpPacketLengthErrors must be specified if op_VrrpPacketLengthErrors is specified. If the rlike or not rlike value is specified in the op_VrrpPacketLengthErrors field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpPacketLengthErrors: String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpPriorityZeroPktsRcvd: If op_VrrpPriorityZeroPktsRcvd is specified, this value will be compared to the value in VrrpPriorityZeroPktsRcvd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpPriorityZeroPktsRcvd must be specified if op_VrrpPriorityZeroPktsRcvd is specified.
+             :param val_c_VrrpPriorityZeroPktsRcvd: If op_VrrpPriorityZeroPktsRcvd is specified, this value will be compared to the value in VrrpPriorityZeroPktsRcvd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpPriorityZeroPktsRcvd must be specified if op_VrrpPriorityZeroPktsRcvd is specified. If the rlike or not rlike value is specified in the op_VrrpPriorityZeroPktsRcvd field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpPriorityZeroPktsRcvd: String
 
             |  ``api version min:`` None
@@ -1095,7 +1063,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpPriorityZeroPktsSent: If op_VrrpPriorityZeroPktsSent is specified, this value will be compared to the value in VrrpPriorityZeroPktsSent using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpPriorityZeroPktsSent must be specified if op_VrrpPriorityZeroPktsSent is specified.
+             :param val_c_VrrpPriorityZeroPktsSent: If op_VrrpPriorityZeroPktsSent is specified, this value will be compared to the value in VrrpPriorityZeroPktsSent using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpPriorityZeroPktsSent must be specified if op_VrrpPriorityZeroPktsSent is specified. If the rlike or not rlike value is specified in the op_VrrpPriorityZeroPktsSent field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpPriorityZeroPktsSent: String
 
             |  ``api version min:`` None
@@ -1119,7 +1087,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VrrpRouterStatsID: If op_VrrpRouterStatsID is specified, this value will be compared to the value in VrrpRouterStatsID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpRouterStatsID must be specified if op_VrrpRouterStatsID is specified.
+             :param val_c_VrrpRouterStatsID: If op_VrrpRouterStatsID is specified, this value will be compared to the value in VrrpRouterStatsID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VrrpRouterStatsID must be specified if op_VrrpRouterStatsID is specified. If the rlike or not rlike value is specified in the op_VrrpRouterStatsID field, escape regex special characters because a regular expression is expected.
              :type val_c_VrrpRouterStatsID: String
 
             |  ``api version min:`` None
@@ -1143,7 +1111,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -1207,7 +1175,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` VrrpRouterStatsID
 
-             :param sort: The data field(s) to use for sorting the output. Default is VrrpRouterStatsID. Valid values are VrrpRouterStatsID, DeviceID, IprgMemberID, InterfaceID, StartTime, EndTime, ifIndex, IprgNumber, VrrpBecomeMaster, VrrpAdvertiseRcvd, VrrpAdvertiseIntervalErrors, VrrpAuthFailures, VrrpIpTtlErrors, VrrpPriorityZeroPktsRcvd, VrrpPriorityZeroPktsSent, VrrpInvalidTypePktsRcvd, VrrpAddressListErrors, VrrpInvalidAuthType, VrrpAuthTypeMismatch, VrrpPacketLengthErrors.
+             :param sort: The data field(s) to use for sorting the output. Valid values are VrrpRouterStatsID, DeviceID, IprgMemberID, InterfaceID, StartTime, EndTime, ifIndex, IprgNumber, VrrpBecomeMaster, VrrpAdvertiseRcvd, VrrpAdvertiseIntervalErrors, VrrpAuthFailures, VrrpIpTtlErrors, VrrpPriorityZeroPktsRcvd, VrrpPriorityZeroPktsSent, VrrpInvalidTypePktsRcvd, VrrpAddressListErrors, VrrpInvalidAuthType, VrrpAuthTypeMismatch, VrrpPacketLengthErrors.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1215,7 +1183,7 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1225,22 +1193,6 @@ class VrrpRouterStatBroker(Broker):
 
              :param select: The list of attributes to return for each VrrpRouterStat. Valid values are VrrpRouterStatsID, DeviceID, IprgMemberID, InterfaceID, StartTime, EndTime, ifIndex, IprgNumber, VrrpBecomeMaster, VrrpAdvertiseRcvd, VrrpAdvertiseIntervalErrors, VrrpAuthFailures, VrrpIpTtlErrors, VrrpPriorityZeroPktsRcvd, VrrpPriorityZeroPktsSent, VrrpInvalidTypePktsRcvd, VrrpAddressListErrors, VrrpInvalidAuthType, VrrpAuthTypeMismatch, VrrpPacketLengthErrors. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1284,8 +1236,8 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -1311,8 +1263,8 @@ class VrrpRouterStatBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

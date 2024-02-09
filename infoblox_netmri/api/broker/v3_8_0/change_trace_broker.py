@@ -48,7 +48,7 @@ class ChangeTraceBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available change traces. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available change traces. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -177,7 +177,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ChangeTraceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ChangeTraceID. Valid values are DataSourceID, ChangeTraceID, ChangeID, ChangeTraceTime, ChangeTraceUser, ChangeTraceType, ChangeTraceMethod, ChangeTraceDesc, ifIndex.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, ChangeTraceID, ChangeID, ChangeTraceTime, ChangeTraceUser, ChangeTraceType, ChangeTraceMethod, ChangeTraceDesc, ifIndex.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -185,7 +185,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -195,22 +195,6 @@ class ChangeTraceBroker(Broker):
 
              :param select: The list of attributes to return for each ChangeTrace. Valid values are DataSourceID, ChangeTraceID, ChangeID, ChangeTraceTime, ChangeTraceUser, ChangeTraceType, ChangeTraceMethod, ChangeTraceDesc, ifIndex. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -436,7 +420,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ChangeTraceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ChangeTraceID. Valid values are DataSourceID, ChangeTraceID, ChangeID, ChangeTraceTime, ChangeTraceUser, ChangeTraceType, ChangeTraceMethod, ChangeTraceDesc, ifIndex.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, ChangeTraceID, ChangeID, ChangeTraceTime, ChangeTraceUser, ChangeTraceType, ChangeTraceMethod, ChangeTraceDesc, ifIndex.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -444,7 +428,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -454,22 +438,6 @@ class ChangeTraceBroker(Broker):
 
              :param select: The list of attributes to return for each ChangeTrace. Valid values are DataSourceID, ChangeTraceID, ChangeID, ChangeTraceTime, ChangeTraceUser, ChangeTraceType, ChangeTraceMethod, ChangeTraceDesc, ifIndex. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -527,7 +495,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeID: If op_ChangeID is specified, this value will be compared to the value in ChangeID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeID must be specified if op_ChangeID is specified.
+             :param val_c_ChangeID: If op_ChangeID is specified, this value will be compared to the value in ChangeID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeID must be specified if op_ChangeID is specified. If the rlike or not rlike value is specified in the op_ChangeID field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeID: String
 
             |  ``api version min:`` None
@@ -551,7 +519,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeTraceDesc: If op_ChangeTraceDesc is specified, this value will be compared to the value in ChangeTraceDesc using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceDesc must be specified if op_ChangeTraceDesc is specified.
+             :param val_c_ChangeTraceDesc: If op_ChangeTraceDesc is specified, this value will be compared to the value in ChangeTraceDesc using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceDesc must be specified if op_ChangeTraceDesc is specified. If the rlike or not rlike value is specified in the op_ChangeTraceDesc field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeTraceDesc: String
 
             |  ``api version min:`` None
@@ -575,7 +543,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeTraceID: If op_ChangeTraceID is specified, this value will be compared to the value in ChangeTraceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceID must be specified if op_ChangeTraceID is specified.
+             :param val_c_ChangeTraceID: If op_ChangeTraceID is specified, this value will be compared to the value in ChangeTraceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceID must be specified if op_ChangeTraceID is specified. If the rlike or not rlike value is specified in the op_ChangeTraceID field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeTraceID: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeTraceMethod: If op_ChangeTraceMethod is specified, this value will be compared to the value in ChangeTraceMethod using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceMethod must be specified if op_ChangeTraceMethod is specified.
+             :param val_c_ChangeTraceMethod: If op_ChangeTraceMethod is specified, this value will be compared to the value in ChangeTraceMethod using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceMethod must be specified if op_ChangeTraceMethod is specified. If the rlike or not rlike value is specified in the op_ChangeTraceMethod field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeTraceMethod: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeTraceTime: If op_ChangeTraceTime is specified, this value will be compared to the value in ChangeTraceTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceTime must be specified if op_ChangeTraceTime is specified.
+             :param val_c_ChangeTraceTime: If op_ChangeTraceTime is specified, this value will be compared to the value in ChangeTraceTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceTime must be specified if op_ChangeTraceTime is specified. If the rlike or not rlike value is specified in the op_ChangeTraceTime field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeTraceTime: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeTraceType: If op_ChangeTraceType is specified, this value will be compared to the value in ChangeTraceType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceType must be specified if op_ChangeTraceType is specified.
+             :param val_c_ChangeTraceType: If op_ChangeTraceType is specified, this value will be compared to the value in ChangeTraceType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceType must be specified if op_ChangeTraceType is specified. If the rlike or not rlike value is specified in the op_ChangeTraceType field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeTraceType: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeTraceUser: If op_ChangeTraceUser is specified, this value will be compared to the value in ChangeTraceUser using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceUser must be specified if op_ChangeTraceUser is specified.
+             :param val_c_ChangeTraceUser: If op_ChangeTraceUser is specified, this value will be compared to the value in ChangeTraceUser using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceUser must be specified if op_ChangeTraceUser is specified. If the rlike or not rlike value is specified in the op_ChangeTraceUser field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeTraceUser: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -719,7 +687,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ChangeTraceID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ChangeTraceID. Valid values are DataSourceID, ChangeTraceID, ChangeID, ChangeTraceTime, ChangeTraceUser, ChangeTraceType, ChangeTraceMethod, ChangeTraceDesc, ifIndex.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, ChangeTraceID, ChangeID, ChangeTraceTime, ChangeTraceUser, ChangeTraceType, ChangeTraceMethod, ChangeTraceDesc, ifIndex.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -791,7 +759,7 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -801,22 +769,6 @@ class ChangeTraceBroker(Broker):
 
              :param select: The list of attributes to return for each ChangeTrace. Valid values are DataSourceID, ChangeTraceID, ChangeID, ChangeTraceTime, ChangeTraceUser, ChangeTraceType, ChangeTraceMethod, ChangeTraceDesc, ifIndex. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -860,8 +812,8 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The NetMRI device that collected this record.
-             :rtype : DataSource
+             :return data_source: The NetMRI device that collected this record.
+             :rtype data_source: DataSource
 
             """
 
@@ -887,8 +839,8 @@ class ChangeTraceBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The DetectedChange object to which this change trace contributed.
-             :rtype : DetectedChange
+             :return detected_change: The DetectedChange object to which this change trace contributed.
+             :rtype detected_change: DetectedChange
 
             """
 

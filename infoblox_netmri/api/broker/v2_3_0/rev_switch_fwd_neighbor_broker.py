@@ -48,7 +48,7 @@ class RevSwitchFwdNeighborBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available rev switch fwd neighbors. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available rev switch fwd neighbors. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -137,7 +137,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NeighborID. Valid values are NeighborID, RevSwitchFwdNeighborStartTime, RevSwitchFwdNeighborEndTime, RevSwitchFwdNeighborChangedCols, RevSwitchFwdNeighborTimestamp, RevSwitchFwdNeighborMapSource, SwitchFwdNeighborID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are NeighborID, RevSwitchFwdNeighborStartTime, RevSwitchFwdNeighborEndTime, RevSwitchFwdNeighborChangedCols, RevSwitchFwdNeighborTimestamp, RevSwitchFwdNeighborMapSource, SwitchFwdNeighborID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -145,7 +145,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -155,22 +155,6 @@ class RevSwitchFwdNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each RevSwitchFwdNeighbor. Valid values are NeighborID, RevSwitchFwdNeighborStartTime, RevSwitchFwdNeighborEndTime, RevSwitchFwdNeighborChangedCols, RevSwitchFwdNeighborTimestamp, RevSwitchFwdNeighborMapSource, SwitchFwdNeighborID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -356,7 +340,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NeighborID. Valid values are NeighborID, RevSwitchFwdNeighborStartTime, RevSwitchFwdNeighborEndTime, RevSwitchFwdNeighborChangedCols, RevSwitchFwdNeighborTimestamp, RevSwitchFwdNeighborMapSource, SwitchFwdNeighborID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are NeighborID, RevSwitchFwdNeighborStartTime, RevSwitchFwdNeighborEndTime, RevSwitchFwdNeighborChangedCols, RevSwitchFwdNeighborTimestamp, RevSwitchFwdNeighborMapSource, SwitchFwdNeighborID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -364,7 +348,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -374,22 +358,6 @@ class RevSwitchFwdNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each RevSwitchFwdNeighbor. Valid values are NeighborID, RevSwitchFwdNeighborStartTime, RevSwitchFwdNeighborEndTime, RevSwitchFwdNeighborChangedCols, RevSwitchFwdNeighborTimestamp, RevSwitchFwdNeighborMapSource, SwitchFwdNeighborID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -447,7 +415,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborID: If op_NeighborID is specified, this value will be compared to the value in NeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborID must be specified if op_NeighborID is specified.
+             :param val_c_NeighborID: If op_NeighborID is specified, this value will be compared to the value in NeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborID must be specified if op_NeighborID is specified. If the rlike or not rlike value is specified in the op_NeighborID field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborID: String
 
             |  ``api version min:`` None
@@ -471,7 +439,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RevSwitchFwdNeighborChangedCols: If op_RevSwitchFwdNeighborChangedCols is specified, this value will be compared to the value in RevSwitchFwdNeighborChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RevSwitchFwdNeighborChangedCols must be specified if op_RevSwitchFwdNeighborChangedCols is specified.
+             :param val_c_RevSwitchFwdNeighborChangedCols: If op_RevSwitchFwdNeighborChangedCols is specified, this value will be compared to the value in RevSwitchFwdNeighborChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RevSwitchFwdNeighborChangedCols must be specified if op_RevSwitchFwdNeighborChangedCols is specified. If the rlike or not rlike value is specified in the op_RevSwitchFwdNeighborChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_RevSwitchFwdNeighborChangedCols: String
 
             |  ``api version min:`` None
@@ -495,7 +463,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RevSwitchFwdNeighborEndTime: If op_RevSwitchFwdNeighborEndTime is specified, this value will be compared to the value in RevSwitchFwdNeighborEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RevSwitchFwdNeighborEndTime must be specified if op_RevSwitchFwdNeighborEndTime is specified.
+             :param val_c_RevSwitchFwdNeighborEndTime: If op_RevSwitchFwdNeighborEndTime is specified, this value will be compared to the value in RevSwitchFwdNeighborEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RevSwitchFwdNeighborEndTime must be specified if op_RevSwitchFwdNeighborEndTime is specified. If the rlike or not rlike value is specified in the op_RevSwitchFwdNeighborEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_RevSwitchFwdNeighborEndTime: String
 
             |  ``api version min:`` None
@@ -519,7 +487,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RevSwitchFwdNeighborMapSource: If op_RevSwitchFwdNeighborMapSource is specified, this value will be compared to the value in RevSwitchFwdNeighborMapSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RevSwitchFwdNeighborMapSource must be specified if op_RevSwitchFwdNeighborMapSource is specified.
+             :param val_c_RevSwitchFwdNeighborMapSource: If op_RevSwitchFwdNeighborMapSource is specified, this value will be compared to the value in RevSwitchFwdNeighborMapSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RevSwitchFwdNeighborMapSource must be specified if op_RevSwitchFwdNeighborMapSource is specified. If the rlike or not rlike value is specified in the op_RevSwitchFwdNeighborMapSource field, escape regex special characters because a regular expression is expected.
              :type val_c_RevSwitchFwdNeighborMapSource: String
 
             |  ``api version min:`` None
@@ -543,7 +511,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RevSwitchFwdNeighborStartTime: If op_RevSwitchFwdNeighborStartTime is specified, this value will be compared to the value in RevSwitchFwdNeighborStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RevSwitchFwdNeighborStartTime must be specified if op_RevSwitchFwdNeighborStartTime is specified.
+             :param val_c_RevSwitchFwdNeighborStartTime: If op_RevSwitchFwdNeighborStartTime is specified, this value will be compared to the value in RevSwitchFwdNeighborStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RevSwitchFwdNeighborStartTime must be specified if op_RevSwitchFwdNeighborStartTime is specified. If the rlike or not rlike value is specified in the op_RevSwitchFwdNeighborStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_RevSwitchFwdNeighborStartTime: String
 
             |  ``api version min:`` None
@@ -567,7 +535,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RevSwitchFwdNeighborTimestamp: If op_RevSwitchFwdNeighborTimestamp is specified, this value will be compared to the value in RevSwitchFwdNeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RevSwitchFwdNeighborTimestamp must be specified if op_RevSwitchFwdNeighborTimestamp is specified.
+             :param val_c_RevSwitchFwdNeighborTimestamp: If op_RevSwitchFwdNeighborTimestamp is specified, this value will be compared to the value in RevSwitchFwdNeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RevSwitchFwdNeighborTimestamp must be specified if op_RevSwitchFwdNeighborTimestamp is specified. If the rlike or not rlike value is specified in the op_RevSwitchFwdNeighborTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_RevSwitchFwdNeighborTimestamp: String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SwitchFwdNeighborID: If op_SwitchFwdNeighborID is specified, this value will be compared to the value in SwitchFwdNeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchFwdNeighborID must be specified if op_SwitchFwdNeighborID is specified.
+             :param val_c_SwitchFwdNeighborID: If op_SwitchFwdNeighborID is specified, this value will be compared to the value in SwitchFwdNeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SwitchFwdNeighborID must be specified if op_SwitchFwdNeighborID is specified. If the rlike or not rlike value is specified in the op_SwitchFwdNeighborID field, escape regex special characters because a regular expression is expected.
              :type val_c_SwitchFwdNeighborID: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` NeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is NeighborID. Valid values are NeighborID, RevSwitchFwdNeighborStartTime, RevSwitchFwdNeighborEndTime, RevSwitchFwdNeighborChangedCols, RevSwitchFwdNeighborTimestamp, RevSwitchFwdNeighborMapSource, SwitchFwdNeighborID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are NeighborID, RevSwitchFwdNeighborStartTime, RevSwitchFwdNeighborEndTime, RevSwitchFwdNeighborChangedCols, RevSwitchFwdNeighborTimestamp, RevSwitchFwdNeighborMapSource, SwitchFwdNeighborID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -655,7 +623,7 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -665,22 +633,6 @@ class RevSwitchFwdNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each RevSwitchFwdNeighbor. Valid values are NeighborID, RevSwitchFwdNeighborStartTime, RevSwitchFwdNeighborEndTime, RevSwitchFwdNeighborChangedCols, RevSwitchFwdNeighborTimestamp, RevSwitchFwdNeighborMapSource, SwitchFwdNeighborID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -724,8 +676,8 @@ class RevSwitchFwdNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The neighbor relationship, which contains the source and destination device information.
-             :rtype : Neighbor
+             :return neighbor: The neighbor relationship, which contains the source and destination device information.
+             :rtype neighbor: Neighbor
 
             """
 

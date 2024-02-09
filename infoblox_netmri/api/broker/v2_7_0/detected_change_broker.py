@@ -48,7 +48,7 @@ class DetectedChangeBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available detected changes. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available detected changes. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -177,7 +177,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ChangeID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ChangeID. Valid values are DataSourceID, ChangeID, DeviceID, ChangeTime, ChangeDetectedTime, ChangeTimeActualInd, ChangeUser, HardwareInd, AdminInd, SoftwareInd, ExternalInd, AccessInd, SNMPPollInd, SNMPTrapInd, SyslogInd, ConfigPollInd, ChangeDesc, ChangeAuthorizedInd, ChangeTraceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, ChangeID, DeviceID, ChangeTime, ChangeDetectedTime, ChangeTimeActualInd, ChangeUser, HardwareInd, AdminInd, SoftwareInd, ExternalInd, AccessInd, SNMPPollInd, SNMPTrapInd, SyslogInd, ConfigPollInd, ChangeDesc, ChangeAuthorizedInd, ChangeTraceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -185,7 +185,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -195,22 +195,6 @@ class DetectedChangeBroker(Broker):
 
              :param select: The list of attributes to return for each DetectedChange. Valid values are DataSourceID, ChangeID, DeviceID, ChangeTime, ChangeDetectedTime, ChangeTimeActualInd, ChangeUser, HardwareInd, AdminInd, SoftwareInd, ExternalInd, AccessInd, SNMPPollInd, SNMPTrapInd, SyslogInd, ConfigPollInd, ChangeDesc, ChangeAuthorizedInd, ChangeTraceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -596,7 +580,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ChangeID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ChangeID. Valid values are DataSourceID, ChangeID, DeviceID, ChangeTime, ChangeDetectedTime, ChangeTimeActualInd, ChangeUser, HardwareInd, AdminInd, SoftwareInd, ExternalInd, AccessInd, SNMPPollInd, SNMPTrapInd, SyslogInd, ConfigPollInd, ChangeDesc, ChangeAuthorizedInd, ChangeTraceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, ChangeID, DeviceID, ChangeTime, ChangeDetectedTime, ChangeTimeActualInd, ChangeUser, HardwareInd, AdminInd, SoftwareInd, ExternalInd, AccessInd, SNMPPollInd, SNMPTrapInd, SyslogInd, ConfigPollInd, ChangeDesc, ChangeAuthorizedInd, ChangeTraceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -604,7 +588,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -614,22 +598,6 @@ class DetectedChangeBroker(Broker):
 
              :param select: The list of attributes to return for each DetectedChange. Valid values are DataSourceID, ChangeID, DeviceID, ChangeTime, ChangeDetectedTime, ChangeTimeActualInd, ChangeUser, HardwareInd, AdminInd, SoftwareInd, ExternalInd, AccessInd, SNMPPollInd, SNMPTrapInd, SyslogInd, ConfigPollInd, ChangeDesc, ChangeAuthorizedInd, ChangeTraceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -687,7 +655,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AccessInd: If op_AccessInd is specified, this value will be compared to the value in AccessInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AccessInd must be specified if op_AccessInd is specified.
+             :param val_c_AccessInd: If op_AccessInd is specified, this value will be compared to the value in AccessInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AccessInd must be specified if op_AccessInd is specified. If the rlike or not rlike value is specified in the op_AccessInd field, escape regex special characters because a regular expression is expected.
              :type val_c_AccessInd: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AdminInd: If op_AdminInd is specified, this value will be compared to the value in AdminInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AdminInd must be specified if op_AdminInd is specified.
+             :param val_c_AdminInd: If op_AdminInd is specified, this value will be compared to the value in AdminInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AdminInd must be specified if op_AdminInd is specified. If the rlike or not rlike value is specified in the op_AdminInd field, escape regex special characters because a regular expression is expected.
              :type val_c_AdminInd: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeAuthorizedInd: If op_ChangeAuthorizedInd is specified, this value will be compared to the value in ChangeAuthorizedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeAuthorizedInd must be specified if op_ChangeAuthorizedInd is specified.
+             :param val_c_ChangeAuthorizedInd: If op_ChangeAuthorizedInd is specified, this value will be compared to the value in ChangeAuthorizedInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeAuthorizedInd must be specified if op_ChangeAuthorizedInd is specified. If the rlike or not rlike value is specified in the op_ChangeAuthorizedInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeAuthorizedInd: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeDesc: If op_ChangeDesc is specified, this value will be compared to the value in ChangeDesc using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeDesc must be specified if op_ChangeDesc is specified.
+             :param val_c_ChangeDesc: If op_ChangeDesc is specified, this value will be compared to the value in ChangeDesc using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeDesc must be specified if op_ChangeDesc is specified. If the rlike or not rlike value is specified in the op_ChangeDesc field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeDesc: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeDetectedTime: If op_ChangeDetectedTime is specified, this value will be compared to the value in ChangeDetectedTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeDetectedTime must be specified if op_ChangeDetectedTime is specified.
+             :param val_c_ChangeDetectedTime: If op_ChangeDetectedTime is specified, this value will be compared to the value in ChangeDetectedTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeDetectedTime must be specified if op_ChangeDetectedTime is specified. If the rlike or not rlike value is specified in the op_ChangeDetectedTime field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeDetectedTime: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeID: If op_ChangeID is specified, this value will be compared to the value in ChangeID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeID must be specified if op_ChangeID is specified.
+             :param val_c_ChangeID: If op_ChangeID is specified, this value will be compared to the value in ChangeID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeID must be specified if op_ChangeID is specified. If the rlike or not rlike value is specified in the op_ChangeID field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeID: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeTime: If op_ChangeTime is specified, this value will be compared to the value in ChangeTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTime must be specified if op_ChangeTime is specified.
+             :param val_c_ChangeTime: If op_ChangeTime is specified, this value will be compared to the value in ChangeTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTime must be specified if op_ChangeTime is specified. If the rlike or not rlike value is specified in the op_ChangeTime field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeTime: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeTimeActualInd: If op_ChangeTimeActualInd is specified, this value will be compared to the value in ChangeTimeActualInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTimeActualInd must be specified if op_ChangeTimeActualInd is specified.
+             :param val_c_ChangeTimeActualInd: If op_ChangeTimeActualInd is specified, this value will be compared to the value in ChangeTimeActualInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTimeActualInd must be specified if op_ChangeTimeActualInd is specified. If the rlike or not rlike value is specified in the op_ChangeTimeActualInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeTimeActualInd: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeTraceID: If op_ChangeTraceID is specified, this value will be compared to the value in ChangeTraceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceID must be specified if op_ChangeTraceID is specified.
+             :param val_c_ChangeTraceID: If op_ChangeTraceID is specified, this value will be compared to the value in ChangeTraceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeTraceID must be specified if op_ChangeTraceID is specified. If the rlike or not rlike value is specified in the op_ChangeTraceID field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeTraceID: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ChangeUser: If op_ChangeUser is specified, this value will be compared to the value in ChangeUser using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeUser must be specified if op_ChangeUser is specified.
+             :param val_c_ChangeUser: If op_ChangeUser is specified, this value will be compared to the value in ChangeUser using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ChangeUser must be specified if op_ChangeUser is specified. If the rlike or not rlike value is specified in the op_ChangeUser field, escape regex special characters because a regular expression is expected.
              :type val_c_ChangeUser: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ConfigPollInd: If op_ConfigPollInd is specified, this value will be compared to the value in ConfigPollInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigPollInd must be specified if op_ConfigPollInd is specified.
+             :param val_c_ConfigPollInd: If op_ConfigPollInd is specified, this value will be compared to the value in ConfigPollInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ConfigPollInd must be specified if op_ConfigPollInd is specified. If the rlike or not rlike value is specified in the op_ConfigPollInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ConfigPollInd: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -999,7 +967,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ExternalInd: If op_ExternalInd is specified, this value will be compared to the value in ExternalInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ExternalInd must be specified if op_ExternalInd is specified.
+             :param val_c_ExternalInd: If op_ExternalInd is specified, this value will be compared to the value in ExternalInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ExternalInd must be specified if op_ExternalInd is specified. If the rlike or not rlike value is specified in the op_ExternalInd field, escape regex special characters because a regular expression is expected.
              :type val_c_ExternalInd: String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_HardwareInd: If op_HardwareInd is specified, this value will be compared to the value in HardwareInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_HardwareInd must be specified if op_HardwareInd is specified.
+             :param val_c_HardwareInd: If op_HardwareInd is specified, this value will be compared to the value in HardwareInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_HardwareInd must be specified if op_HardwareInd is specified. If the rlike or not rlike value is specified in the op_HardwareInd field, escape regex special characters because a regular expression is expected.
              :type val_c_HardwareInd: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SNMPPollInd: If op_SNMPPollInd is specified, this value will be compared to the value in SNMPPollInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SNMPPollInd must be specified if op_SNMPPollInd is specified.
+             :param val_c_SNMPPollInd: If op_SNMPPollInd is specified, this value will be compared to the value in SNMPPollInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SNMPPollInd must be specified if op_SNMPPollInd is specified. If the rlike or not rlike value is specified in the op_SNMPPollInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SNMPPollInd: String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SNMPTrapInd: If op_SNMPTrapInd is specified, this value will be compared to the value in SNMPTrapInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SNMPTrapInd must be specified if op_SNMPTrapInd is specified.
+             :param val_c_SNMPTrapInd: If op_SNMPTrapInd is specified, this value will be compared to the value in SNMPTrapInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SNMPTrapInd must be specified if op_SNMPTrapInd is specified. If the rlike or not rlike value is specified in the op_SNMPTrapInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SNMPTrapInd: String
 
             |  ``api version min:`` None
@@ -1095,7 +1063,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SoftwareInd: If op_SoftwareInd is specified, this value will be compared to the value in SoftwareInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SoftwareInd must be specified if op_SoftwareInd is specified.
+             :param val_c_SoftwareInd: If op_SoftwareInd is specified, this value will be compared to the value in SoftwareInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SoftwareInd must be specified if op_SoftwareInd is specified. If the rlike or not rlike value is specified in the op_SoftwareInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SoftwareInd: String
 
             |  ``api version min:`` None
@@ -1119,7 +1087,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SyslogInd: If op_SyslogInd is specified, this value will be compared to the value in SyslogInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SyslogInd must be specified if op_SyslogInd is specified.
+             :param val_c_SyslogInd: If op_SyslogInd is specified, this value will be compared to the value in SyslogInd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SyslogInd must be specified if op_SyslogInd is specified. If the rlike or not rlike value is specified in the op_SyslogInd field, escape regex special characters because a regular expression is expected.
              :type val_c_SyslogInd: String
 
             |  ``api version min:`` None
@@ -1183,7 +1151,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` ChangeID
 
-             :param sort: The data field(s) to use for sorting the output. Default is ChangeID. Valid values are DataSourceID, ChangeID, DeviceID, ChangeTime, ChangeDetectedTime, ChangeTimeActualInd, ChangeUser, HardwareInd, AdminInd, SoftwareInd, ExternalInd, AccessInd, SNMPPollInd, SNMPTrapInd, SyslogInd, ConfigPollInd, ChangeDesc, ChangeAuthorizedInd, ChangeTraceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DataSourceID, ChangeID, DeviceID, ChangeTime, ChangeDetectedTime, ChangeTimeActualInd, ChangeUser, HardwareInd, AdminInd, SoftwareInd, ExternalInd, AccessInd, SNMPPollInd, SNMPTrapInd, SyslogInd, ConfigPollInd, ChangeDesc, ChangeAuthorizedInd, ChangeTraceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1191,7 +1159,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1201,22 +1169,6 @@ class DetectedChangeBroker(Broker):
 
              :param select: The list of attributes to return for each DetectedChange. Valid values are DataSourceID, ChangeID, DeviceID, ChangeTime, ChangeDetectedTime, ChangeTimeActualInd, ChangeUser, HardwareInd, AdminInd, SoftwareInd, ExternalInd, AccessInd, SNMPPollInd, SNMPTrapInd, SyslogInd, ConfigPollInd, ChangeDesc, ChangeAuthorizedInd, ChangeTraceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1276,7 +1228,7 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated detected change.
+             :return uri: The URI that may be used to retrieve the updated detected change.
              :rtype uri: String
 
             |  ``api version min:`` None
@@ -1311,8 +1263,8 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The NetMRI device that collected this record.
-             :rtype : DataSource
+             :return data_source: The NetMRI device that collected this record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1338,8 +1290,8 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device that changed.
-             :rtype : InfraDevice
+             :return infradevice: The device that changed.
+             :rtype infradevice: InfraDevice
 
             """
 
@@ -1365,8 +1317,8 @@ class DetectedChangeBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device that changed.
-             :rtype : Device
+             :return device: The device that changed.
+             :rtype device: Device
 
             """
 
@@ -1414,137 +1366,3 @@ class DetectedChangeBroker(Broker):
             """
 
         return self.api_request(self._get_method_fullname("count_device_changes"), kwargs)
-
-    def detected_changes_chart_data(self, **kwargs):
-        """Returns changes data by type to buid ExtJS chart.
-
-            **Inputs**
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param device_id: The internal NetMRI identifier of the device.
-             :type device_id: Array
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` 30 days ago
-
-             :param starttime: The start date for which to retrieve the changes.
-             :type starttime: DateTime
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` now
-
-             :param endtime: The end date for which to retrieve the changes.
-             :type endtime: DateTime
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` Weekly
-
-             :param TimePeriod: The time period for which to retrieve the changes.
-             :type TimePeriod: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param group_ids: The internal NetMRI group identifiers, seporated by commas.
-             :type group_ids: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param change_ids: The internal NetMRI changes identifiers, seporated by commas.
-             :type change_ids: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` False
-
-             :param gromit: A flag indicating to show changes only for security control devices.
-             :type gromit: Boolean
-
-            **Outputs**
-
-            """
-
-        return self.api_request(self._get_method_fullname("detected_changes_chart_data"), kwargs)
-
-    def top_ten_chart_data(self, **kwargs):
-        """Returns changes data for top ten changing devices to buid ExtJS chart.
-
-            **Inputs**
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param device_id: The internal NetMRI identifier of the device.
-             :type device_id: Array
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` 30 days ago
-
-             :param starttime: The start date for which to retrieve the changes.
-             :type starttime: DateTime
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` now
-
-             :param endtime: The end date for which to retrieve the changes.
-             :type endtime: DateTime
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` ChangeUser
-
-             :param top_ten_type: The type to group changes by (user or device), valid values are 'Devices' and 'ChangeUser'.
-             :type top_ten_type: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` Weekly
-
-             :param TimePeriod: The time period for which to retrieve the changes.
-             :type TimePeriod: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param group_ids: The internal NetMRI group identifiers, seporated by commas.
-             :type group_ids: String
-
-            |  ``api version min:`` None
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param change_ids: The internal NetMRI changes identifiers, seporated by commas.
-             :type change_ids: String
-
-            **Outputs**
-
-            """
-
-        return self.api_request(self._get_method_fullname("top_ten_chart_data"), kwargs)

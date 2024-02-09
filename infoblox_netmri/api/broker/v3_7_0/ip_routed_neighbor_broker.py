@@ -32,7 +32,7 @@ class IpRoutedNeighborBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available ip routed neighbors. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available ip routed neighbors. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -137,7 +137,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IPRoutedNeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IPRoutedNeighborID. Valid values are IPRoutedNeighborID, DataSourceID, NeighborID, IPRoutedNeighborStartTime, IPRoutedNeighborEndTime, IPRoutedNeighborChangedCols, IPRoutedNeighborTimestamp, IPRoutedNeighborMapSource, DeviceRouteID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IPRoutedNeighborID, DataSourceID, NeighborID, IPRoutedNeighborStartTime, IPRoutedNeighborEndTime, IPRoutedNeighborChangedCols, IPRoutedNeighborTimestamp, IPRoutedNeighborMapSource, DeviceRouteID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -145,7 +145,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -155,22 +155,6 @@ class IpRoutedNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each IpRoutedNeighbor. Valid values are IPRoutedNeighborID, DataSourceID, NeighborID, IPRoutedNeighborStartTime, IPRoutedNeighborEndTime, IPRoutedNeighborChangedCols, IPRoutedNeighborTimestamp, IPRoutedNeighborMapSource, DeviceRouteID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -372,7 +356,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IPRoutedNeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IPRoutedNeighborID. Valid values are IPRoutedNeighborID, DataSourceID, NeighborID, IPRoutedNeighborStartTime, IPRoutedNeighborEndTime, IPRoutedNeighborChangedCols, IPRoutedNeighborTimestamp, IPRoutedNeighborMapSource, DeviceRouteID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IPRoutedNeighborID, DataSourceID, NeighborID, IPRoutedNeighborStartTime, IPRoutedNeighborEndTime, IPRoutedNeighborChangedCols, IPRoutedNeighborTimestamp, IPRoutedNeighborMapSource, DeviceRouteID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -380,7 +364,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -390,22 +374,6 @@ class IpRoutedNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each IpRoutedNeighbor. Valid values are IPRoutedNeighborID, DataSourceID, NeighborID, IPRoutedNeighborStartTime, IPRoutedNeighborEndTime, IPRoutedNeighborChangedCols, IPRoutedNeighborTimestamp, IPRoutedNeighborMapSource, DeviceRouteID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -463,7 +431,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -487,7 +455,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceRouteID: If op_DeviceRouteID is specified, this value will be compared to the value in DeviceRouteID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRouteID must be specified if op_DeviceRouteID is specified.
+             :param val_c_DeviceRouteID: If op_DeviceRouteID is specified, this value will be compared to the value in DeviceRouteID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRouteID must be specified if op_DeviceRouteID is specified. If the rlike or not rlike value is specified in the op_DeviceRouteID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceRouteID: String
 
             |  ``api version min:`` None
@@ -511,7 +479,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IPRoutedNeighborChangedCols: If op_IPRoutedNeighborChangedCols is specified, this value will be compared to the value in IPRoutedNeighborChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedNeighborChangedCols must be specified if op_IPRoutedNeighborChangedCols is specified.
+             :param val_c_IPRoutedNeighborChangedCols: If op_IPRoutedNeighborChangedCols is specified, this value will be compared to the value in IPRoutedNeighborChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedNeighborChangedCols must be specified if op_IPRoutedNeighborChangedCols is specified. If the rlike or not rlike value is specified in the op_IPRoutedNeighborChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_IPRoutedNeighborChangedCols: String
 
             |  ``api version min:`` None
@@ -535,7 +503,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IPRoutedNeighborEndTime: If op_IPRoutedNeighborEndTime is specified, this value will be compared to the value in IPRoutedNeighborEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedNeighborEndTime must be specified if op_IPRoutedNeighborEndTime is specified.
+             :param val_c_IPRoutedNeighborEndTime: If op_IPRoutedNeighborEndTime is specified, this value will be compared to the value in IPRoutedNeighborEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedNeighborEndTime must be specified if op_IPRoutedNeighborEndTime is specified. If the rlike or not rlike value is specified in the op_IPRoutedNeighborEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_IPRoutedNeighborEndTime: String
 
             |  ``api version min:`` None
@@ -559,7 +527,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IPRoutedNeighborID: If op_IPRoutedNeighborID is specified, this value will be compared to the value in IPRoutedNeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedNeighborID must be specified if op_IPRoutedNeighborID is specified.
+             :param val_c_IPRoutedNeighborID: If op_IPRoutedNeighborID is specified, this value will be compared to the value in IPRoutedNeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedNeighborID must be specified if op_IPRoutedNeighborID is specified. If the rlike or not rlike value is specified in the op_IPRoutedNeighborID field, escape regex special characters because a regular expression is expected.
              :type val_c_IPRoutedNeighborID: String
 
             |  ``api version min:`` None
@@ -583,7 +551,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IPRoutedNeighborMapSource: If op_IPRoutedNeighborMapSource is specified, this value will be compared to the value in IPRoutedNeighborMapSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedNeighborMapSource must be specified if op_IPRoutedNeighborMapSource is specified.
+             :param val_c_IPRoutedNeighborMapSource: If op_IPRoutedNeighborMapSource is specified, this value will be compared to the value in IPRoutedNeighborMapSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedNeighborMapSource must be specified if op_IPRoutedNeighborMapSource is specified. If the rlike or not rlike value is specified in the op_IPRoutedNeighborMapSource field, escape regex special characters because a regular expression is expected.
              :type val_c_IPRoutedNeighborMapSource: String
 
             |  ``api version min:`` None
@@ -607,7 +575,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IPRoutedNeighborStartTime: If op_IPRoutedNeighborStartTime is specified, this value will be compared to the value in IPRoutedNeighborStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedNeighborStartTime must be specified if op_IPRoutedNeighborStartTime is specified.
+             :param val_c_IPRoutedNeighborStartTime: If op_IPRoutedNeighborStartTime is specified, this value will be compared to the value in IPRoutedNeighborStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedNeighborStartTime must be specified if op_IPRoutedNeighborStartTime is specified. If the rlike or not rlike value is specified in the op_IPRoutedNeighborStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_IPRoutedNeighborStartTime: String
 
             |  ``api version min:`` None
@@ -631,7 +599,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IPRoutedNeighborTimestamp: If op_IPRoutedNeighborTimestamp is specified, this value will be compared to the value in IPRoutedNeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedNeighborTimestamp must be specified if op_IPRoutedNeighborTimestamp is specified.
+             :param val_c_IPRoutedNeighborTimestamp: If op_IPRoutedNeighborTimestamp is specified, this value will be compared to the value in IPRoutedNeighborTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IPRoutedNeighborTimestamp must be specified if op_IPRoutedNeighborTimestamp is specified. If the rlike or not rlike value is specified in the op_IPRoutedNeighborTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_IPRoutedNeighborTimestamp: String
 
             |  ``api version min:`` None
@@ -655,7 +623,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_NeighborID: If op_NeighborID is specified, this value will be compared to the value in NeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborID must be specified if op_NeighborID is specified.
+             :param val_c_NeighborID: If op_NeighborID is specified, this value will be compared to the value in NeighborID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_NeighborID must be specified if op_NeighborID is specified. If the rlike or not rlike value is specified in the op_NeighborID field, escape regex special characters because a regular expression is expected.
              :type val_c_NeighborID: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IPRoutedNeighborID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IPRoutedNeighborID. Valid values are IPRoutedNeighborID, DataSourceID, NeighborID, IPRoutedNeighborStartTime, IPRoutedNeighborEndTime, IPRoutedNeighborChangedCols, IPRoutedNeighborTimestamp, IPRoutedNeighborMapSource, DeviceRouteID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IPRoutedNeighborID, DataSourceID, NeighborID, IPRoutedNeighborStartTime, IPRoutedNeighborEndTime, IPRoutedNeighborChangedCols, IPRoutedNeighborTimestamp, IPRoutedNeighborMapSource, DeviceRouteID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -703,7 +671,7 @@ class IpRoutedNeighborBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -713,22 +681,6 @@ class IpRoutedNeighborBroker(Broker):
 
              :param select: The list of attributes to return for each IpRoutedNeighbor. Valid values are IPRoutedNeighborID, DataSourceID, NeighborID, IPRoutedNeighborStartTime, IPRoutedNeighborEndTime, IPRoutedNeighborChangedCols, IPRoutedNeighborTimestamp, IPRoutedNeighborMapSource, DeviceRouteID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

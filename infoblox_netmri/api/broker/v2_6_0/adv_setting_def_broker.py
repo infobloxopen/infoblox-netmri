@@ -32,7 +32,7 @@ class AdvSettingDefBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available adv setting defs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available adv setting defs. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -89,7 +89,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, setting_type, category, visible, description, default_value, allow_empty, feature, display_hints, ui_name.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, setting_type, category, visible, description, default_value, allow_empty, feature, display_hints, ui_name.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -97,7 +97,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -107,22 +107,6 @@ class AdvSettingDefBroker(Broker):
 
              :param select: The list of attributes to return for each AdvSettingDef. Valid values are id, name, setting_type, category, visible, description, default_value, allow_empty, feature, display_hints, ui_name. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -340,7 +324,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, setting_type, category, visible, description, default_value, allow_empty, feature, display_hints, ui_name.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, setting_type, category, visible, description, default_value, allow_empty, feature, display_hints, ui_name.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -348,7 +332,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -358,22 +342,6 @@ class AdvSettingDefBroker(Broker):
 
              :param select: The list of attributes to return for each AdvSettingDef. Valid values are id, name, setting_type, category, visible, description, default_value, allow_empty, feature, display_hints, ui_name. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -431,7 +399,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_allow_empty: If op_allow_empty is specified, this value will be compared to the value in allow_empty using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_allow_empty must be specified if op_allow_empty is specified.
+             :param val_c_allow_empty: If op_allow_empty is specified, this value will be compared to the value in allow_empty using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_allow_empty must be specified if op_allow_empty is specified. If the rlike or not rlike value is specified in the op_allow_empty field, escape regex special characters because a regular expression is expected.
              :type val_c_allow_empty: String
 
             |  ``api version min:`` None
@@ -455,7 +423,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_category: If op_category is specified, this value will be compared to the value in category using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_category must be specified if op_category is specified.
+             :param val_c_category: If op_category is specified, this value will be compared to the value in category using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_category must be specified if op_category is specified. If the rlike or not rlike value is specified in the op_category field, escape regex special characters because a regular expression is expected.
              :type val_c_category: String
 
             |  ``api version min:`` None
@@ -479,7 +447,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_default_value: If op_default_value is specified, this value will be compared to the value in default_value using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_default_value must be specified if op_default_value is specified.
+             :param val_c_default_value: If op_default_value is specified, this value will be compared to the value in default_value using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_default_value must be specified if op_default_value is specified. If the rlike or not rlike value is specified in the op_default_value field, escape regex special characters because a regular expression is expected.
              :type val_c_default_value: String
 
             |  ``api version min:`` None
@@ -503,7 +471,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_description: If op_description is specified, this value will be compared to the value in description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_description must be specified if op_description is specified.
+             :param val_c_description: If op_description is specified, this value will be compared to the value in description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_description must be specified if op_description is specified. If the rlike or not rlike value is specified in the op_description field, escape regex special characters because a regular expression is expected.
              :type val_c_description: String
 
             |  ``api version min:`` None
@@ -527,7 +495,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_display_hints: If op_display_hints is specified, this value will be compared to the value in display_hints using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_display_hints must be specified if op_display_hints is specified.
+             :param val_c_display_hints: If op_display_hints is specified, this value will be compared to the value in display_hints using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_display_hints must be specified if op_display_hints is specified. If the rlike or not rlike value is specified in the op_display_hints field, escape regex special characters because a regular expression is expected.
              :type val_c_display_hints: String
 
             |  ``api version min:`` None
@@ -551,7 +519,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_feature: If op_feature is specified, this value will be compared to the value in feature using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_feature must be specified if op_feature is specified.
+             :param val_c_feature: If op_feature is specified, this value will be compared to the value in feature using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_feature must be specified if op_feature is specified. If the rlike or not rlike value is specified in the op_feature field, escape regex special characters because a regular expression is expected.
              :type val_c_feature: String
 
             |  ``api version min:`` None
@@ -575,7 +543,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -599,7 +567,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified.
+             :param val_c_name: If op_name is specified, this value will be compared to the value in name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_name must be specified if op_name is specified. If the rlike or not rlike value is specified in the op_name field, escape regex special characters because a regular expression is expected.
              :type val_c_name: String
 
             |  ``api version min:`` None
@@ -623,7 +591,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_setting_type: If op_setting_type is specified, this value will be compared to the value in setting_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_setting_type must be specified if op_setting_type is specified.
+             :param val_c_setting_type: If op_setting_type is specified, this value will be compared to the value in setting_type using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_setting_type must be specified if op_setting_type is specified. If the rlike or not rlike value is specified in the op_setting_type field, escape regex special characters because a regular expression is expected.
              :type val_c_setting_type: String
 
             |  ``api version min:`` None
@@ -647,7 +615,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ui_name: If op_ui_name is specified, this value will be compared to the value in ui_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ui_name must be specified if op_ui_name is specified.
+             :param val_c_ui_name: If op_ui_name is specified, this value will be compared to the value in ui_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ui_name must be specified if op_ui_name is specified. If the rlike or not rlike value is specified in the op_ui_name field, escape regex special characters because a regular expression is expected.
              :type val_c_ui_name: String
 
             |  ``api version min:`` None
@@ -671,7 +639,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_visible: If op_visible is specified, this value will be compared to the value in visible using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_visible must be specified if op_visible is specified.
+             :param val_c_visible: If op_visible is specified, this value will be compared to the value in visible using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_visible must be specified if op_visible is specified. If the rlike or not rlike value is specified in the op_visible field, escape regex special characters because a regular expression is expected.
              :type val_c_visible: String
 
             |  ``api version min:`` None
@@ -695,7 +663,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, setting_type, category, visible, description, default_value, allow_empty, feature, display_hints, ui_name.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, setting_type, category, visible, description, default_value, allow_empty, feature, display_hints, ui_name.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -703,7 +671,7 @@ class AdvSettingDefBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -713,22 +681,6 @@ class AdvSettingDefBroker(Broker):
 
              :param select: The list of attributes to return for each AdvSettingDef. Valid values are id, name, setting_type, category, visible, description, default_value, allow_empty, feature, display_hints, ui_name. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

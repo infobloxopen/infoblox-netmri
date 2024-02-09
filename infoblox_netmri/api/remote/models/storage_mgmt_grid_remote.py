@@ -9,27 +9,27 @@ class StorageMgmtGridRemote(RemoteModel):
     |  ``id:`` none
     |  ``attribute type:`` string
 
-    |  ``DeviceName:`` none
+    |  ``StorageCategory:`` none
     |  ``attribute type:`` string
 
     |  ``VolumeSize:`` none
     |  ``attribute type:`` string
 
-    |  ``StorageCategory:`` none
-    |  ``attribute type:`` string
-
-    |  ``VolumeGroup:`` none
-    |  ``attribute type:`` string
-
     |  ``Locked:`` none
+    |  ``attribute type:`` string
+
+    |  ``FreeGB:`` none
+    |  ``attribute type:`` string
+
+    |  ``FreePercent:`` none
     |  ``attribute type:`` string
 
     """
 
     properties = ("id",
-                  "DeviceName",
-                  "VolumeSize",
                   "StorageCategory",
-                  "VolumeGroup",
+                  "VolumeSize",
                   "Locked",
+                  "FreeGB",
+                  "FreePercent",
                   )

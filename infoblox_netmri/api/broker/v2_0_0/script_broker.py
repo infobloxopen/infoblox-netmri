@@ -5,7 +5,7 @@ class ScriptBroker(Broker):
     controller = "scripts"
 
     def index(self, **kwargs):
-        """Lists the available scripts. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available scripts. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -62,7 +62,7 @@ class ScriptBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, name, module, visible, description, created_by, updated_by, language, risk_level, created_at, updated_at, category, read_only, taskflow_create, taskflow_edit, taskflow_revert, target_mapping, transactional_ind.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, name, module, visible, description, created_by, updated_by, language, risk_level, created_at, updated_at, category, read_only, taskflow_create, taskflow_edit, taskflow_revert, target_mapping, transactional_ind.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -70,7 +70,7 @@ class ScriptBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -80,22 +80,6 @@ class ScriptBroker(Broker):
 
              :param select: The list of attributes to return for each Script. Valid values are id, name, module, visible, description, created_by, updated_by, language, risk_level, created_at, updated_at, category, read_only, taskflow_create, taskflow_edit, taskflow_revert, target_mapping, transactional_ind. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -228,7 +212,7 @@ class ScriptBroker(Broker):
         return self.api_request(self._get_method_fullname("destroy"), kwargs)
 
     def run(self, **kwargs):
-        """Run a script immediately with specified input. In addition to the listed parameters, optional parameters can be passed. Any parameter name starting with \\$ will be passed as Script-Variable to the script.
+        """Run a script immediately with specified input. In addition to the listed parameters, optional parameters can be passed. Any parameter name starting with \$ will be passed as Script-Variable to the script.
 
             **Inputs**
 

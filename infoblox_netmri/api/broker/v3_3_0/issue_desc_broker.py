@@ -48,7 +48,7 @@ class IssueDescBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available issue descs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available issue descs. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -105,7 +105,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IssueDescID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IssueDescID. Valid values are IssueTypeID, Title, Description, Component, SeverityID, PriorityID, Correctness, Stability, Context, IssueType, Frequency, Timeout, IssueDescID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IssueTypeID, Title, Description, Component, SeverityID, PriorityID, Correctness, Stability, Context, IssueType, Frequency, Timeout, IssueDescID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -113,7 +113,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -123,22 +123,6 @@ class IssueDescBroker(Broker):
 
              :param select: The list of attributes to return for each IssueDesc. Valid values are IssueTypeID, Title, Description, Component, SeverityID, PriorityID, Correctness, Stability, Context, IssueType, Frequency, Timeout, IssueDescID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -404,7 +388,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IssueDescID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IssueDescID. Valid values are IssueTypeID, Title, Description, Component, SeverityID, PriorityID, Correctness, Stability, Context, IssueType, Frequency, Timeout, IssueDescID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IssueTypeID, Title, Description, Component, SeverityID, PriorityID, Correctness, Stability, Context, IssueType, Frequency, Timeout, IssueDescID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -412,7 +396,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -422,22 +406,6 @@ class IssueDescBroker(Broker):
 
              :param select: The list of attributes to return for each IssueDesc. Valid values are IssueTypeID, Title, Description, Component, SeverityID, PriorityID, Correctness, Stability, Context, IssueType, Frequency, Timeout, IssueDescID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -495,7 +463,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Component: If op_Component is specified, this value will be compared to the value in Component using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Component must be specified if op_Component is specified.
+             :param val_c_Component: If op_Component is specified, this value will be compared to the value in Component using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Component must be specified if op_Component is specified. If the rlike or not rlike value is specified in the op_Component field, escape regex special characters because a regular expression is expected.
              :type val_c_Component: String
 
             |  ``api version min:`` None
@@ -519,7 +487,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Context: If op_Context is specified, this value will be compared to the value in Context using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Context must be specified if op_Context is specified.
+             :param val_c_Context: If op_Context is specified, this value will be compared to the value in Context using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Context must be specified if op_Context is specified. If the rlike or not rlike value is specified in the op_Context field, escape regex special characters because a regular expression is expected.
              :type val_c_Context: String
 
             |  ``api version min:`` None
@@ -543,7 +511,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Correctness: If op_Correctness is specified, this value will be compared to the value in Correctness using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Correctness must be specified if op_Correctness is specified.
+             :param val_c_Correctness: If op_Correctness is specified, this value will be compared to the value in Correctness using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Correctness must be specified if op_Correctness is specified. If the rlike or not rlike value is specified in the op_Correctness field, escape regex special characters because a regular expression is expected.
              :type val_c_Correctness: String
 
             |  ``api version min:`` None
@@ -567,7 +535,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Description: If op_Description is specified, this value will be compared to the value in Description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Description must be specified if op_Description is specified.
+             :param val_c_Description: If op_Description is specified, this value will be compared to the value in Description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Description must be specified if op_Description is specified. If the rlike or not rlike value is specified in the op_Description field, escape regex special characters because a regular expression is expected.
              :type val_c_Description: String
 
             |  ``api version min:`` None
@@ -591,7 +559,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Frequency: If op_Frequency is specified, this value will be compared to the value in Frequency using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Frequency must be specified if op_Frequency is specified.
+             :param val_c_Frequency: If op_Frequency is specified, this value will be compared to the value in Frequency using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Frequency must be specified if op_Frequency is specified. If the rlike or not rlike value is specified in the op_Frequency field, escape regex special characters because a regular expression is expected.
              :type val_c_Frequency: String
 
             |  ``api version min:`` None
@@ -615,7 +583,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IssueDescID: If op_IssueDescID is specified, this value will be compared to the value in IssueDescID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IssueDescID must be specified if op_IssueDescID is specified.
+             :param val_c_IssueDescID: If op_IssueDescID is specified, this value will be compared to the value in IssueDescID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IssueDescID must be specified if op_IssueDescID is specified. If the rlike or not rlike value is specified in the op_IssueDescID field, escape regex special characters because a regular expression is expected.
              :type val_c_IssueDescID: String
 
             |  ``api version min:`` None
@@ -639,7 +607,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IssueType: If op_IssueType is specified, this value will be compared to the value in IssueType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IssueType must be specified if op_IssueType is specified.
+             :param val_c_IssueType: If op_IssueType is specified, this value will be compared to the value in IssueType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IssueType must be specified if op_IssueType is specified. If the rlike or not rlike value is specified in the op_IssueType field, escape regex special characters because a regular expression is expected.
              :type val_c_IssueType: String
 
             |  ``api version min:`` None
@@ -663,7 +631,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IssueTypeID: If op_IssueTypeID is specified, this value will be compared to the value in IssueTypeID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IssueTypeID must be specified if op_IssueTypeID is specified.
+             :param val_c_IssueTypeID: If op_IssueTypeID is specified, this value will be compared to the value in IssueTypeID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IssueTypeID must be specified if op_IssueTypeID is specified. If the rlike or not rlike value is specified in the op_IssueTypeID field, escape regex special characters because a regular expression is expected.
              :type val_c_IssueTypeID: String
 
             |  ``api version min:`` None
@@ -687,7 +655,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PriorityID: If op_PriorityID is specified, this value will be compared to the value in PriorityID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PriorityID must be specified if op_PriorityID is specified.
+             :param val_c_PriorityID: If op_PriorityID is specified, this value will be compared to the value in PriorityID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PriorityID must be specified if op_PriorityID is specified. If the rlike or not rlike value is specified in the op_PriorityID field, escape regex special characters because a regular expression is expected.
              :type val_c_PriorityID: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SeverityID: If op_SeverityID is specified, this value will be compared to the value in SeverityID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SeverityID must be specified if op_SeverityID is specified.
+             :param val_c_SeverityID: If op_SeverityID is specified, this value will be compared to the value in SeverityID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SeverityID must be specified if op_SeverityID is specified. If the rlike or not rlike value is specified in the op_SeverityID field, escape regex special characters because a regular expression is expected.
              :type val_c_SeverityID: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Stability: If op_Stability is specified, this value will be compared to the value in Stability using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Stability must be specified if op_Stability is specified.
+             :param val_c_Stability: If op_Stability is specified, this value will be compared to the value in Stability using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Stability must be specified if op_Stability is specified. If the rlike or not rlike value is specified in the op_Stability field, escape regex special characters because a regular expression is expected.
              :type val_c_Stability: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Timeout: If op_Timeout is specified, this value will be compared to the value in Timeout using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Timeout must be specified if op_Timeout is specified.
+             :param val_c_Timeout: If op_Timeout is specified, this value will be compared to the value in Timeout using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Timeout must be specified if op_Timeout is specified. If the rlike or not rlike value is specified in the op_Timeout field, escape regex special characters because a regular expression is expected.
              :type val_c_Timeout: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_Title: If op_Title is specified, this value will be compared to the value in Title using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Title must be specified if op_Title is specified.
+             :param val_c_Title: If op_Title is specified, this value will be compared to the value in Title using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_Title must be specified if op_Title is specified. If the rlike or not rlike value is specified in the op_Title field, escape regex special characters because a regular expression is expected.
              :type val_c_Title: String
 
             |  ``api version min:`` None
@@ -823,7 +791,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IssueDescID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IssueDescID. Valid values are IssueTypeID, Title, Description, Component, SeverityID, PriorityID, Correctness, Stability, Context, IssueType, Frequency, Timeout, IssueDescID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IssueTypeID, Title, Description, Component, SeverityID, PriorityID, Correctness, Stability, Context, IssueType, Frequency, Timeout, IssueDescID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -841,22 +809,6 @@ class IssueDescBroker(Broker):
 
              :param select: The list of attributes to return for each IssueDesc. Valid values are IssueTypeID, Title, Description, Component, SeverityID, PriorityID, Correctness, Stability, Context, IssueType, Frequency, Timeout, IssueDescID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -916,7 +868,7 @@ class IssueDescBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated issue desc.
+             :return uri: The URI that may be used to retrieve the updated issue desc.
              :rtype uri: String
 
             |  ``api version min:`` None

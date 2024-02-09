@@ -32,7 +32,7 @@ class GuiStateBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available gui states. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available gui states. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -65,7 +65,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, object_name, view_name, auth_user_id, object_state, created_at, updated_at, shared, desc, default.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, object_name, view_name, auth_user_id, object_state, created_at, updated_at, shared, desc, default.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -73,7 +73,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -83,22 +83,6 @@ class GuiStateBroker(Broker):
 
              :param select: The list of attributes to return for each GuiState. Valid values are id, object_name, view_name, auth_user_id, object_state, created_at, updated_at, shared, desc, default. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -140,7 +124,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_auth_user_id: If op_auth_user_id is specified, this value will be compared to the value in auth_user_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_user_id must be specified if op_auth_user_id is specified.
+             :param val_c_auth_user_id: If op_auth_user_id is specified, this value will be compared to the value in auth_user_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_auth_user_id must be specified if op_auth_user_id is specified. If the rlike or not rlike value is specified in the op_auth_user_id field, escape regex special characters because a regular expression is expected.
              :type val_c_auth_user_id: String
 
             |  ``api version min:`` None
@@ -164,7 +148,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified.
+             :param val_c_created_at: If op_created_at is specified, this value will be compared to the value in created_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_created_at must be specified if op_created_at is specified. If the rlike or not rlike value is specified in the op_created_at field, escape regex special characters because a regular expression is expected.
              :type val_c_created_at: String
 
             |  ``api version min:`` None
@@ -188,7 +172,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_default: If op_default is specified, this value will be compared to the value in default using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_default must be specified if op_default is specified.
+             :param val_c_default: If op_default is specified, this value will be compared to the value in default using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_default must be specified if op_default is specified. If the rlike or not rlike value is specified in the op_default field, escape regex special characters because a regular expression is expected.
              :type val_c_default: String
 
             |  ``api version min:`` None
@@ -212,7 +196,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_desc: If op_desc is specified, this value will be compared to the value in desc using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_desc must be specified if op_desc is specified.
+             :param val_c_desc: If op_desc is specified, this value will be compared to the value in desc using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_desc must be specified if op_desc is specified. If the rlike or not rlike value is specified in the op_desc field, escape regex special characters because a regular expression is expected.
              :type val_c_desc: String
 
             |  ``api version min:`` None
@@ -236,7 +220,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified.
+             :param val_c_id: If op_id is specified, this value will be compared to the value in id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_id must be specified if op_id is specified. If the rlike or not rlike value is specified in the op_id field, escape regex special characters because a regular expression is expected.
              :type val_c_id: String
 
             |  ``api version min:`` None
@@ -260,7 +244,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_object_name: If op_object_name is specified, this value will be compared to the value in object_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_object_name must be specified if op_object_name is specified.
+             :param val_c_object_name: If op_object_name is specified, this value will be compared to the value in object_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_object_name must be specified if op_object_name is specified. If the rlike or not rlike value is specified in the op_object_name field, escape regex special characters because a regular expression is expected.
              :type val_c_object_name: String
 
             |  ``api version min:`` None
@@ -284,7 +268,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_object_state: If op_object_state is specified, this value will be compared to the value in object_state using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_object_state must be specified if op_object_state is specified.
+             :param val_c_object_state: If op_object_state is specified, this value will be compared to the value in object_state using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_object_state must be specified if op_object_state is specified. If the rlike or not rlike value is specified in the op_object_state field, escape regex special characters because a regular expression is expected.
              :type val_c_object_state: String
 
             |  ``api version min:`` None
@@ -308,7 +292,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_shared: If op_shared is specified, this value will be compared to the value in shared using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_shared must be specified if op_shared is specified.
+             :param val_c_shared: If op_shared is specified, this value will be compared to the value in shared using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_shared must be specified if op_shared is specified. If the rlike or not rlike value is specified in the op_shared field, escape regex special characters because a regular expression is expected.
              :type val_c_shared: String
 
             |  ``api version min:`` None
@@ -332,7 +316,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified.
+             :param val_c_updated_at: If op_updated_at is specified, this value will be compared to the value in updated_at using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_updated_at must be specified if op_updated_at is specified. If the rlike or not rlike value is specified in the op_updated_at field, escape regex special characters because a regular expression is expected.
              :type val_c_updated_at: String
 
             |  ``api version min:`` None
@@ -356,7 +340,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_view_name: If op_view_name is specified, this value will be compared to the value in view_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_view_name must be specified if op_view_name is specified.
+             :param val_c_view_name: If op_view_name is specified, this value will be compared to the value in view_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_view_name must be specified if op_view_name is specified. If the rlike or not rlike value is specified in the op_view_name field, escape regex special characters because a regular expression is expected.
              :type val_c_view_name: String
 
             |  ``api version min:`` None
@@ -380,7 +364,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` id
 
-             :param sort: The data field(s) to use for sorting the output. Default is id. Valid values are id, object_name, view_name, auth_user_id, object_state, created_at, updated_at, shared, desc, default.
+             :param sort: The data field(s) to use for sorting the output. Valid values are id, object_name, view_name, auth_user_id, object_state, created_at, updated_at, shared, desc, default.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -388,7 +372,7 @@ class GuiStateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -398,22 +382,6 @@ class GuiStateBroker(Broker):
 
              :param select: The list of attributes to return for each GuiState. Valid values are id, object_name, view_name, auth_user_id, object_state, created_at, updated_at, shared, desc, default. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None

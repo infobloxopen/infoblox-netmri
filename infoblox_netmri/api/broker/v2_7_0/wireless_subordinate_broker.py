@@ -5,7 +5,7 @@ class WirelessSubordinateBroker(Broker):
     controller = "wireless_subordinates"
 
     def index(self, **kwargs):
-        """Lists the available wireless subordinates. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available wireless subordinates. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -94,7 +94,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` WirelessSubordinantID
 
-             :param sort: The data field(s) to use for sorting the output. Default is WirelessSubordinantID. Valid values are WirelessSubordinantID, DataSourceID, DeviceID, SubStartTime, SubEndTime, SubChangedCols, SubTimestamp, SubMac, SubDeviceID, SubNumOfSlots, SubName, SubLocation, SubMonitorOnlyMode, SubOperationStatus, SubSoftwareVersion, SubBootVersion, SubModel, SubSerialNumber, SubIPNumeric, SubIPDotted, SubType, SubGroupVlanName, VlanID, SubAdminStatus, SubOSVersion.
+             :param sort: The data field(s) to use for sorting the output. Valid values are WirelessSubordinantID, DataSourceID, DeviceID, SubStartTime, SubEndTime, SubChangedCols, SubTimestamp, SubMac, SubDeviceID, SubNumOfSlots, SubName, SubLocation, SubMonitorOnlyMode, SubOperationStatus, SubSoftwareVersion, SubBootVersion, SubModel, SubSerialNumber, SubIPNumeric, SubIPDotted, SubType, SubGroupVlanName, VlanID, SubAdminStatus, SubOSVersion.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -102,7 +102,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -112,22 +112,6 @@ class WirelessSubordinateBroker(Broker):
 
              :param select: The list of attributes to return for each WirelessSubordinate. Valid values are WirelessSubordinantID, DataSourceID, DeviceID, SubStartTime, SubEndTime, SubChangedCols, SubTimestamp, SubMac, SubDeviceID, SubNumOfSlots, SubName, SubLocation, SubMonitorOnlyMode, SubOperationStatus, SubSoftwareVersion, SubBootVersion, SubModel, SubSerialNumber, SubIPNumeric, SubIPDotted, SubType, SubGroupVlanName, VlanID, SubAdminStatus, SubOSVersion. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -644,7 +628,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` WirelessSubordinantID
 
-             :param sort: The data field(s) to use for sorting the output. Default is WirelessSubordinantID. Valid values are WirelessSubordinantID, DataSourceID, DeviceID, SubStartTime, SubEndTime, SubChangedCols, SubTimestamp, SubMac, SubDeviceID, SubNumOfSlots, SubName, SubLocation, SubMonitorOnlyMode, SubOperationStatus, SubSoftwareVersion, SubBootVersion, SubModel, SubSerialNumber, SubIPNumeric, SubIPDotted, SubType, SubGroupVlanName, VlanID, SubAdminStatus, SubOSVersion.
+             :param sort: The data field(s) to use for sorting the output. Valid values are WirelessSubordinantID, DataSourceID, DeviceID, SubStartTime, SubEndTime, SubChangedCols, SubTimestamp, SubMac, SubDeviceID, SubNumOfSlots, SubName, SubLocation, SubMonitorOnlyMode, SubOperationStatus, SubSoftwareVersion, SubBootVersion, SubModel, SubSerialNumber, SubIPNumeric, SubIPDotted, SubType, SubGroupVlanName, VlanID, SubAdminStatus, SubOSVersion.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -652,7 +636,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -662,22 +646,6 @@ class WirelessSubordinateBroker(Broker):
 
              :param select: The list of attributes to return for each WirelessSubordinate. Valid values are WirelessSubordinantID, DataSourceID, DeviceID, SubStartTime, SubEndTime, SubChangedCols, SubTimestamp, SubMac, SubDeviceID, SubNumOfSlots, SubName, SubLocation, SubMonitorOnlyMode, SubOperationStatus, SubSoftwareVersion, SubBootVersion, SubModel, SubSerialNumber, SubIPNumeric, SubIPDotted, SubType, SubGroupVlanName, VlanID, SubAdminStatus, SubOSVersion. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -735,7 +703,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubAdminStatus: If op_SubAdminStatus is specified, this value will be compared to the value in SubAdminStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubAdminStatus must be specified if op_SubAdminStatus is specified.
+             :param val_c_SubAdminStatus: If op_SubAdminStatus is specified, this value will be compared to the value in SubAdminStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubAdminStatus must be specified if op_SubAdminStatus is specified. If the rlike or not rlike value is specified in the op_SubAdminStatus field, escape regex special characters because a regular expression is expected.
              :type val_c_SubAdminStatus: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubBootVersion: If op_SubBootVersion is specified, this value will be compared to the value in SubBootVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubBootVersion must be specified if op_SubBootVersion is specified.
+             :param val_c_SubBootVersion: If op_SubBootVersion is specified, this value will be compared to the value in SubBootVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubBootVersion must be specified if op_SubBootVersion is specified. If the rlike or not rlike value is specified in the op_SubBootVersion field, escape regex special characters because a regular expression is expected.
              :type val_c_SubBootVersion: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubChangedCols: If op_SubChangedCols is specified, this value will be compared to the value in SubChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubChangedCols must be specified if op_SubChangedCols is specified.
+             :param val_c_SubChangedCols: If op_SubChangedCols is specified, this value will be compared to the value in SubChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubChangedCols must be specified if op_SubChangedCols is specified. If the rlike or not rlike value is specified in the op_SubChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_SubChangedCols: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubDeviceID: If op_SubDeviceID is specified, this value will be compared to the value in SubDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubDeviceID must be specified if op_SubDeviceID is specified.
+             :param val_c_SubDeviceID: If op_SubDeviceID is specified, this value will be compared to the value in SubDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubDeviceID must be specified if op_SubDeviceID is specified. If the rlike or not rlike value is specified in the op_SubDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_SubDeviceID: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubEndTime: If op_SubEndTime is specified, this value will be compared to the value in SubEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubEndTime must be specified if op_SubEndTime is specified.
+             :param val_c_SubEndTime: If op_SubEndTime is specified, this value will be compared to the value in SubEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubEndTime must be specified if op_SubEndTime is specified. If the rlike or not rlike value is specified in the op_SubEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_SubEndTime: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubGroupVlanName: If op_SubGroupVlanName is specified, this value will be compared to the value in SubGroupVlanName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubGroupVlanName must be specified if op_SubGroupVlanName is specified.
+             :param val_c_SubGroupVlanName: If op_SubGroupVlanName is specified, this value will be compared to the value in SubGroupVlanName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubGroupVlanName must be specified if op_SubGroupVlanName is specified. If the rlike or not rlike value is specified in the op_SubGroupVlanName field, escape regex special characters because a regular expression is expected.
              :type val_c_SubGroupVlanName: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubIPDotted: If op_SubIPDotted is specified, this value will be compared to the value in SubIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubIPDotted must be specified if op_SubIPDotted is specified.
+             :param val_c_SubIPDotted: If op_SubIPDotted is specified, this value will be compared to the value in SubIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubIPDotted must be specified if op_SubIPDotted is specified. If the rlike or not rlike value is specified in the op_SubIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_SubIPDotted: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubIPNumeric: If op_SubIPNumeric is specified, this value will be compared to the value in SubIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubIPNumeric must be specified if op_SubIPNumeric is specified.
+             :param val_c_SubIPNumeric: If op_SubIPNumeric is specified, this value will be compared to the value in SubIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubIPNumeric must be specified if op_SubIPNumeric is specified. If the rlike or not rlike value is specified in the op_SubIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_SubIPNumeric: String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubLocation: If op_SubLocation is specified, this value will be compared to the value in SubLocation using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubLocation must be specified if op_SubLocation is specified.
+             :param val_c_SubLocation: If op_SubLocation is specified, this value will be compared to the value in SubLocation using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubLocation must be specified if op_SubLocation is specified. If the rlike or not rlike value is specified in the op_SubLocation field, escape regex special characters because a regular expression is expected.
              :type val_c_SubLocation: String
 
             |  ``api version min:`` None
@@ -999,7 +967,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubMac: If op_SubMac is specified, this value will be compared to the value in SubMac using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubMac must be specified if op_SubMac is specified.
+             :param val_c_SubMac: If op_SubMac is specified, this value will be compared to the value in SubMac using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubMac must be specified if op_SubMac is specified. If the rlike or not rlike value is specified in the op_SubMac field, escape regex special characters because a regular expression is expected.
              :type val_c_SubMac: String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubModel: If op_SubModel is specified, this value will be compared to the value in SubModel using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubModel must be specified if op_SubModel is specified.
+             :param val_c_SubModel: If op_SubModel is specified, this value will be compared to the value in SubModel using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubModel must be specified if op_SubModel is specified. If the rlike or not rlike value is specified in the op_SubModel field, escape regex special characters because a regular expression is expected.
              :type val_c_SubModel: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubMonitorOnlyMode: If op_SubMonitorOnlyMode is specified, this value will be compared to the value in SubMonitorOnlyMode using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubMonitorOnlyMode must be specified if op_SubMonitorOnlyMode is specified.
+             :param val_c_SubMonitorOnlyMode: If op_SubMonitorOnlyMode is specified, this value will be compared to the value in SubMonitorOnlyMode using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubMonitorOnlyMode must be specified if op_SubMonitorOnlyMode is specified. If the rlike or not rlike value is specified in the op_SubMonitorOnlyMode field, escape regex special characters because a regular expression is expected.
              :type val_c_SubMonitorOnlyMode: String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubName: If op_SubName is specified, this value will be compared to the value in SubName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubName must be specified if op_SubName is specified.
+             :param val_c_SubName: If op_SubName is specified, this value will be compared to the value in SubName using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubName must be specified if op_SubName is specified. If the rlike or not rlike value is specified in the op_SubName field, escape regex special characters because a regular expression is expected.
              :type val_c_SubName: String
 
             |  ``api version min:`` None
@@ -1095,7 +1063,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubNumOfSlots: If op_SubNumOfSlots is specified, this value will be compared to the value in SubNumOfSlots using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubNumOfSlots must be specified if op_SubNumOfSlots is specified.
+             :param val_c_SubNumOfSlots: If op_SubNumOfSlots is specified, this value will be compared to the value in SubNumOfSlots using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubNumOfSlots must be specified if op_SubNumOfSlots is specified. If the rlike or not rlike value is specified in the op_SubNumOfSlots field, escape regex special characters because a regular expression is expected.
              :type val_c_SubNumOfSlots: String
 
             |  ``api version min:`` None
@@ -1119,7 +1087,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubOSVersion: If op_SubOSVersion is specified, this value will be compared to the value in SubOSVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubOSVersion must be specified if op_SubOSVersion is specified.
+             :param val_c_SubOSVersion: If op_SubOSVersion is specified, this value will be compared to the value in SubOSVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubOSVersion must be specified if op_SubOSVersion is specified. If the rlike or not rlike value is specified in the op_SubOSVersion field, escape regex special characters because a regular expression is expected.
              :type val_c_SubOSVersion: String
 
             |  ``api version min:`` None
@@ -1143,7 +1111,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubOperationStatus: If op_SubOperationStatus is specified, this value will be compared to the value in SubOperationStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubOperationStatus must be specified if op_SubOperationStatus is specified.
+             :param val_c_SubOperationStatus: If op_SubOperationStatus is specified, this value will be compared to the value in SubOperationStatus using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubOperationStatus must be specified if op_SubOperationStatus is specified. If the rlike or not rlike value is specified in the op_SubOperationStatus field, escape regex special characters because a regular expression is expected.
              :type val_c_SubOperationStatus: String
 
             |  ``api version min:`` None
@@ -1167,7 +1135,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubSerialNumber: If op_SubSerialNumber is specified, this value will be compared to the value in SubSerialNumber using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubSerialNumber must be specified if op_SubSerialNumber is specified.
+             :param val_c_SubSerialNumber: If op_SubSerialNumber is specified, this value will be compared to the value in SubSerialNumber using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubSerialNumber must be specified if op_SubSerialNumber is specified. If the rlike or not rlike value is specified in the op_SubSerialNumber field, escape regex special characters because a regular expression is expected.
              :type val_c_SubSerialNumber: String
 
             |  ``api version min:`` None
@@ -1191,7 +1159,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubSoftwareVersion: If op_SubSoftwareVersion is specified, this value will be compared to the value in SubSoftwareVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubSoftwareVersion must be specified if op_SubSoftwareVersion is specified.
+             :param val_c_SubSoftwareVersion: If op_SubSoftwareVersion is specified, this value will be compared to the value in SubSoftwareVersion using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubSoftwareVersion must be specified if op_SubSoftwareVersion is specified. If the rlike or not rlike value is specified in the op_SubSoftwareVersion field, escape regex special characters because a regular expression is expected.
              :type val_c_SubSoftwareVersion: String
 
             |  ``api version min:`` None
@@ -1215,7 +1183,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubStartTime: If op_SubStartTime is specified, this value will be compared to the value in SubStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubStartTime must be specified if op_SubStartTime is specified.
+             :param val_c_SubStartTime: If op_SubStartTime is specified, this value will be compared to the value in SubStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubStartTime must be specified if op_SubStartTime is specified. If the rlike or not rlike value is specified in the op_SubStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_SubStartTime: String
 
             |  ``api version min:`` None
@@ -1239,7 +1207,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubTimestamp: If op_SubTimestamp is specified, this value will be compared to the value in SubTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubTimestamp must be specified if op_SubTimestamp is specified.
+             :param val_c_SubTimestamp: If op_SubTimestamp is specified, this value will be compared to the value in SubTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubTimestamp must be specified if op_SubTimestamp is specified. If the rlike or not rlike value is specified in the op_SubTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_SubTimestamp: String
 
             |  ``api version min:`` None
@@ -1263,7 +1231,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubType: If op_SubType is specified, this value will be compared to the value in SubType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubType must be specified if op_SubType is specified.
+             :param val_c_SubType: If op_SubType is specified, this value will be compared to the value in SubType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubType must be specified if op_SubType is specified. If the rlike or not rlike value is specified in the op_SubType field, escape regex special characters because a regular expression is expected.
              :type val_c_SubType: String
 
             |  ``api version min:`` None
@@ -1287,7 +1255,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_VlanID: If op_VlanID is specified, this value will be compared to the value in VlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanID must be specified if op_VlanID is specified.
+             :param val_c_VlanID: If op_VlanID is specified, this value will be compared to the value in VlanID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_VlanID must be specified if op_VlanID is specified. If the rlike or not rlike value is specified in the op_VlanID field, escape regex special characters because a regular expression is expected.
              :type val_c_VlanID: String
 
             |  ``api version min:`` None
@@ -1311,7 +1279,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_WirelessSubordinantID: If op_WirelessSubordinantID is specified, this value will be compared to the value in WirelessSubordinantID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WirelessSubordinantID must be specified if op_WirelessSubordinantID is specified.
+             :param val_c_WirelessSubordinantID: If op_WirelessSubordinantID is specified, this value will be compared to the value in WirelessSubordinantID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_WirelessSubordinantID must be specified if op_WirelessSubordinantID is specified. If the rlike or not rlike value is specified in the op_WirelessSubordinantID field, escape regex special characters because a regular expression is expected.
              :type val_c_WirelessSubordinantID: String
 
             |  ``api version min:`` None
@@ -1367,7 +1335,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` WirelessSubordinantID
 
-             :param sort: The data field(s) to use for sorting the output. Default is WirelessSubordinantID. Valid values are WirelessSubordinantID, DataSourceID, DeviceID, SubStartTime, SubEndTime, SubChangedCols, SubTimestamp, SubMac, SubDeviceID, SubNumOfSlots, SubName, SubLocation, SubMonitorOnlyMode, SubOperationStatus, SubSoftwareVersion, SubBootVersion, SubModel, SubSerialNumber, SubIPNumeric, SubIPDotted, SubType, SubGroupVlanName, VlanID, SubAdminStatus, SubOSVersion.
+             :param sort: The data field(s) to use for sorting the output. Valid values are WirelessSubordinantID, DataSourceID, DeviceID, SubStartTime, SubEndTime, SubChangedCols, SubTimestamp, SubMac, SubDeviceID, SubNumOfSlots, SubName, SubLocation, SubMonitorOnlyMode, SubOperationStatus, SubSoftwareVersion, SubBootVersion, SubModel, SubSerialNumber, SubIPNumeric, SubIPDotted, SubType, SubGroupVlanName, VlanID, SubAdminStatus, SubOSVersion.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1375,7 +1343,7 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1385,22 +1353,6 @@ class WirelessSubordinateBroker(Broker):
 
              :param select: The list of attributes to return for each WirelessSubordinate. Valid values are WirelessSubordinantID, DataSourceID, DeviceID, SubStartTime, SubEndTime, SubChangedCols, SubTimestamp, SubMac, SubDeviceID, SubNumOfSlots, SubName, SubLocation, SubMonitorOnlyMode, SubOperationStatus, SubSoftwareVersion, SubBootVersion, SubModel, SubSerialNumber, SubIPNumeric, SubIPDotted, SubType, SubGroupVlanName, VlanID, SubAdminStatus, SubOSVersion. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1444,8 +1396,8 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The collector NetMRI that collected this data record.
-             :rtype : DataSource
+             :return data_source: The collector NetMRI that collected this data record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1471,8 +1423,8 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : Device
+             :return device: The device from which this data was collected.
+             :rtype device: Device
 
             """
 
@@ -1498,8 +1450,8 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : vlan
-             :rtype : Vlan
+             :return vlan: vlan
+             :rtype vlan: Vlan
 
             """
 
@@ -1525,8 +1477,8 @@ class WirelessSubordinateBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

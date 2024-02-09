@@ -48,7 +48,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available device routing proto peers. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available device routing proto peers. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -169,7 +169,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceRPPeerID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceRPPeerID. Valid values are DeviceRPPeerID, RPPeerStartTime, RPPeerEndTime, RPPeerChangedCols, RPPeerTimestamp, DeviceID, InterfaceID, IfAddrID, RPPeerMapSource, RPPeerType, RouteProto, RoutingAreaID, RPPeerIPDotted, RPPeerIPNumeric, PeerDeviceID, PeerInterfaceID, RPPeerState, RPPeerUpSince, OspfPeerRouterIdentDotted, OspfPeerRouterIdentNumeric, OspfPeerAddresslessIndex, OspfPeerEventsDelta, OspfPeerPermanence, EigrpRetransCount, EigrpRetriesCount, BGPPeerPort, BGPLocalPort, BGPLocalIPDotted, BGPLocalIPNumeric, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceRPPeerID, RPPeerStartTime, RPPeerEndTime, RPPeerChangedCols, RPPeerTimestamp, DeviceID, InterfaceID, IfAddrID, RPPeerMapSource, RPPeerType, RouteProto, RoutingAreaID, RPPeerIPDotted, RPPeerIPNumeric, PeerDeviceID, PeerInterfaceID, RPPeerState, RPPeerUpSince, OspfPeerRouterIdentDotted, OspfPeerRouterIdentNumeric, OspfPeerAddresslessIndex, OspfPeerEventsDelta, OspfPeerPermanence, EigrpRetransCount, EigrpRetriesCount, BGPPeerPort, BGPLocalPort, BGPLocalIPDotted, BGPLocalIPNumeric, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -177,7 +177,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -187,22 +187,6 @@ class DeviceRoutingProtoPeerBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceRoutingProtoPeer. Valid values are DeviceRPPeerID, RPPeerStartTime, RPPeerEndTime, RPPeerChangedCols, RPPeerTimestamp, DeviceID, InterfaceID, IfAddrID, RPPeerMapSource, RPPeerType, RouteProto, RoutingAreaID, RPPeerIPDotted, RPPeerIPNumeric, PeerDeviceID, PeerInterfaceID, RPPeerState, RPPeerUpSince, OspfPeerRouterIdentDotted, OspfPeerRouterIdentNumeric, OspfPeerAddresslessIndex, OspfPeerEventsDelta, OspfPeerPermanence, EigrpRetransCount, EigrpRetriesCount, BGPPeerPort, BGPLocalPort, BGPLocalIPDotted, BGPLocalIPNumeric, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             **Outputs**
 
@@ -756,7 +740,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceRPPeerID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceRPPeerID. Valid values are DeviceRPPeerID, RPPeerStartTime, RPPeerEndTime, RPPeerChangedCols, RPPeerTimestamp, DeviceID, InterfaceID, IfAddrID, RPPeerMapSource, RPPeerType, RouteProto, RoutingAreaID, RPPeerIPDotted, RPPeerIPNumeric, PeerDeviceID, PeerInterfaceID, RPPeerState, RPPeerUpSince, OspfPeerRouterIdentDotted, OspfPeerRouterIdentNumeric, OspfPeerAddresslessIndex, OspfPeerEventsDelta, OspfPeerPermanence, EigrpRetransCount, EigrpRetriesCount, BGPPeerPort, BGPLocalPort, BGPLocalIPDotted, BGPLocalIPNumeric, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceRPPeerID, RPPeerStartTime, RPPeerEndTime, RPPeerChangedCols, RPPeerTimestamp, DeviceID, InterfaceID, IfAddrID, RPPeerMapSource, RPPeerType, RouteProto, RoutingAreaID, RPPeerIPDotted, RPPeerIPNumeric, PeerDeviceID, PeerInterfaceID, RPPeerState, RPPeerUpSince, OspfPeerRouterIdentDotted, OspfPeerRouterIdentNumeric, OspfPeerAddresslessIndex, OspfPeerEventsDelta, OspfPeerPermanence, EigrpRetransCount, EigrpRetriesCount, BGPPeerPort, BGPLocalPort, BGPLocalIPDotted, BGPLocalIPNumeric, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -764,7 +748,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -774,22 +758,6 @@ class DeviceRoutingProtoPeerBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceRoutingProtoPeer. Valid values are DeviceRPPeerID, RPPeerStartTime, RPPeerEndTime, RPPeerChangedCols, RPPeerTimestamp, DeviceID, InterfaceID, IfAddrID, RPPeerMapSource, RPPeerType, RouteProto, RoutingAreaID, RPPeerIPDotted, RPPeerIPNumeric, PeerDeviceID, PeerInterfaceID, RPPeerState, RPPeerUpSince, OspfPeerRouterIdentDotted, OspfPeerRouterIdentNumeric, OspfPeerAddresslessIndex, OspfPeerEventsDelta, OspfPeerPermanence, EigrpRetransCount, EigrpRetriesCount, BGPPeerPort, BGPLocalPort, BGPLocalIPDotted, BGPLocalIPNumeric, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` None
             |  ``api version max:`` None
@@ -847,7 +815,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BGPLocalIPDotted: If op_BGPLocalIPDotted is specified, this value will be compared to the value in BGPLocalIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BGPLocalIPDotted must be specified if op_BGPLocalIPDotted is specified.
+             :param val_c_BGPLocalIPDotted: If op_BGPLocalIPDotted is specified, this value will be compared to the value in BGPLocalIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BGPLocalIPDotted must be specified if op_BGPLocalIPDotted is specified. If the rlike or not rlike value is specified in the op_BGPLocalIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_BGPLocalIPDotted: String
 
             |  ``api version min:`` None
@@ -871,7 +839,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BGPLocalIPNumeric: If op_BGPLocalIPNumeric is specified, this value will be compared to the value in BGPLocalIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BGPLocalIPNumeric must be specified if op_BGPLocalIPNumeric is specified.
+             :param val_c_BGPLocalIPNumeric: If op_BGPLocalIPNumeric is specified, this value will be compared to the value in BGPLocalIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BGPLocalIPNumeric must be specified if op_BGPLocalIPNumeric is specified. If the rlike or not rlike value is specified in the op_BGPLocalIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_BGPLocalIPNumeric: String
 
             |  ``api version min:`` None
@@ -895,7 +863,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BGPLocalPort: If op_BGPLocalPort is specified, this value will be compared to the value in BGPLocalPort using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BGPLocalPort must be specified if op_BGPLocalPort is specified.
+             :param val_c_BGPLocalPort: If op_BGPLocalPort is specified, this value will be compared to the value in BGPLocalPort using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BGPLocalPort must be specified if op_BGPLocalPort is specified. If the rlike or not rlike value is specified in the op_BGPLocalPort field, escape regex special characters because a regular expression is expected.
              :type val_c_BGPLocalPort: String
 
             |  ``api version min:`` None
@@ -919,7 +887,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_BGPPeerPort: If op_BGPPeerPort is specified, this value will be compared to the value in BGPPeerPort using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BGPPeerPort must be specified if op_BGPPeerPort is specified.
+             :param val_c_BGPPeerPort: If op_BGPPeerPort is specified, this value will be compared to the value in BGPPeerPort using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_BGPPeerPort must be specified if op_BGPPeerPort is specified. If the rlike or not rlike value is specified in the op_BGPPeerPort field, escape regex special characters because a regular expression is expected.
              :type val_c_BGPPeerPort: String
 
             |  ``api version min:`` None
@@ -943,7 +911,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -967,7 +935,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -991,7 +959,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceRPPeerID: If op_DeviceRPPeerID is specified, this value will be compared to the value in DeviceRPPeerID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRPPeerID must be specified if op_DeviceRPPeerID is specified.
+             :param val_c_DeviceRPPeerID: If op_DeviceRPPeerID is specified, this value will be compared to the value in DeviceRPPeerID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceRPPeerID must be specified if op_DeviceRPPeerID is specified. If the rlike or not rlike value is specified in the op_DeviceRPPeerID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceRPPeerID: String
 
             |  ``api version min:`` None
@@ -1015,7 +983,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EigrpRetransCount: If op_EigrpRetransCount is specified, this value will be compared to the value in EigrpRetransCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EigrpRetransCount must be specified if op_EigrpRetransCount is specified.
+             :param val_c_EigrpRetransCount: If op_EigrpRetransCount is specified, this value will be compared to the value in EigrpRetransCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EigrpRetransCount must be specified if op_EigrpRetransCount is specified. If the rlike or not rlike value is specified in the op_EigrpRetransCount field, escape regex special characters because a regular expression is expected.
              :type val_c_EigrpRetransCount: String
 
             |  ``api version min:`` None
@@ -1039,7 +1007,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_EigrpRetriesCount: If op_EigrpRetriesCount is specified, this value will be compared to the value in EigrpRetriesCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EigrpRetriesCount must be specified if op_EigrpRetriesCount is specified.
+             :param val_c_EigrpRetriesCount: If op_EigrpRetriesCount is specified, this value will be compared to the value in EigrpRetriesCount using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_EigrpRetriesCount must be specified if op_EigrpRetriesCount is specified. If the rlike or not rlike value is specified in the op_EigrpRetriesCount field, escape regex special characters because a regular expression is expected.
              :type val_c_EigrpRetriesCount: String
 
             |  ``api version min:`` None
@@ -1063,7 +1031,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IfAddrID: If op_IfAddrID is specified, this value will be compared to the value in IfAddrID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IfAddrID must be specified if op_IfAddrID is specified.
+             :param val_c_IfAddrID: If op_IfAddrID is specified, this value will be compared to the value in IfAddrID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IfAddrID must be specified if op_IfAddrID is specified. If the rlike or not rlike value is specified in the op_IfAddrID field, escape regex special characters because a regular expression is expected.
              :type val_c_IfAddrID: String
 
             |  ``api version min:`` None
@@ -1087,7 +1055,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -1111,7 +1079,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfPeerAddresslessIndex: If op_OspfPeerAddresslessIndex is specified, this value will be compared to the value in OspfPeerAddresslessIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfPeerAddresslessIndex must be specified if op_OspfPeerAddresslessIndex is specified.
+             :param val_c_OspfPeerAddresslessIndex: If op_OspfPeerAddresslessIndex is specified, this value will be compared to the value in OspfPeerAddresslessIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfPeerAddresslessIndex must be specified if op_OspfPeerAddresslessIndex is specified. If the rlike or not rlike value is specified in the op_OspfPeerAddresslessIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfPeerAddresslessIndex: String
 
             |  ``api version min:`` None
@@ -1135,7 +1103,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfPeerEventsDelta: If op_OspfPeerEventsDelta is specified, this value will be compared to the value in OspfPeerEventsDelta using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfPeerEventsDelta must be specified if op_OspfPeerEventsDelta is specified.
+             :param val_c_OspfPeerEventsDelta: If op_OspfPeerEventsDelta is specified, this value will be compared to the value in OspfPeerEventsDelta using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfPeerEventsDelta must be specified if op_OspfPeerEventsDelta is specified. If the rlike or not rlike value is specified in the op_OspfPeerEventsDelta field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfPeerEventsDelta: String
 
             |  ``api version min:`` None
@@ -1159,7 +1127,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfPeerPermanence: If op_OspfPeerPermanence is specified, this value will be compared to the value in OspfPeerPermanence using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfPeerPermanence must be specified if op_OspfPeerPermanence is specified.
+             :param val_c_OspfPeerPermanence: If op_OspfPeerPermanence is specified, this value will be compared to the value in OspfPeerPermanence using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfPeerPermanence must be specified if op_OspfPeerPermanence is specified. If the rlike or not rlike value is specified in the op_OspfPeerPermanence field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfPeerPermanence: String
 
             |  ``api version min:`` None
@@ -1183,7 +1151,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfPeerRouterIdentDotted: If op_OspfPeerRouterIdentDotted is specified, this value will be compared to the value in OspfPeerRouterIdentDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfPeerRouterIdentDotted must be specified if op_OspfPeerRouterIdentDotted is specified.
+             :param val_c_OspfPeerRouterIdentDotted: If op_OspfPeerRouterIdentDotted is specified, this value will be compared to the value in OspfPeerRouterIdentDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfPeerRouterIdentDotted must be specified if op_OspfPeerRouterIdentDotted is specified. If the rlike or not rlike value is specified in the op_OspfPeerRouterIdentDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfPeerRouterIdentDotted: String
 
             |  ``api version min:`` None
@@ -1207,7 +1175,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_OspfPeerRouterIdentNumeric: If op_OspfPeerRouterIdentNumeric is specified, this value will be compared to the value in OspfPeerRouterIdentNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfPeerRouterIdentNumeric must be specified if op_OspfPeerRouterIdentNumeric is specified.
+             :param val_c_OspfPeerRouterIdentNumeric: If op_OspfPeerRouterIdentNumeric is specified, this value will be compared to the value in OspfPeerRouterIdentNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_OspfPeerRouterIdentNumeric must be specified if op_OspfPeerRouterIdentNumeric is specified. If the rlike or not rlike value is specified in the op_OspfPeerRouterIdentNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_OspfPeerRouterIdentNumeric: String
 
             |  ``api version min:`` None
@@ -1231,7 +1199,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PeerDeviceID: If op_PeerDeviceID is specified, this value will be compared to the value in PeerDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PeerDeviceID must be specified if op_PeerDeviceID is specified.
+             :param val_c_PeerDeviceID: If op_PeerDeviceID is specified, this value will be compared to the value in PeerDeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PeerDeviceID must be specified if op_PeerDeviceID is specified. If the rlike or not rlike value is specified in the op_PeerDeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_PeerDeviceID: String
 
             |  ``api version min:`` None
@@ -1255,7 +1223,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_PeerInterfaceID: If op_PeerInterfaceID is specified, this value will be compared to the value in PeerInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PeerInterfaceID must be specified if op_PeerInterfaceID is specified.
+             :param val_c_PeerInterfaceID: If op_PeerInterfaceID is specified, this value will be compared to the value in PeerInterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_PeerInterfaceID must be specified if op_PeerInterfaceID is specified. If the rlike or not rlike value is specified in the op_PeerInterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_PeerInterfaceID: String
 
             |  ``api version min:`` None
@@ -1279,7 +1247,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RPPeerChangedCols: If op_RPPeerChangedCols is specified, this value will be compared to the value in RPPeerChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerChangedCols must be specified if op_RPPeerChangedCols is specified.
+             :param val_c_RPPeerChangedCols: If op_RPPeerChangedCols is specified, this value will be compared to the value in RPPeerChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerChangedCols must be specified if op_RPPeerChangedCols is specified. If the rlike or not rlike value is specified in the op_RPPeerChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_RPPeerChangedCols: String
 
             |  ``api version min:`` None
@@ -1303,7 +1271,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RPPeerEndTime: If op_RPPeerEndTime is specified, this value will be compared to the value in RPPeerEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerEndTime must be specified if op_RPPeerEndTime is specified.
+             :param val_c_RPPeerEndTime: If op_RPPeerEndTime is specified, this value will be compared to the value in RPPeerEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerEndTime must be specified if op_RPPeerEndTime is specified. If the rlike or not rlike value is specified in the op_RPPeerEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_RPPeerEndTime: String
 
             |  ``api version min:`` None
@@ -1327,7 +1295,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RPPeerIPDotted: If op_RPPeerIPDotted is specified, this value will be compared to the value in RPPeerIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerIPDotted must be specified if op_RPPeerIPDotted is specified.
+             :param val_c_RPPeerIPDotted: If op_RPPeerIPDotted is specified, this value will be compared to the value in RPPeerIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerIPDotted must be specified if op_RPPeerIPDotted is specified. If the rlike or not rlike value is specified in the op_RPPeerIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_RPPeerIPDotted: String
 
             |  ``api version min:`` None
@@ -1351,7 +1319,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RPPeerIPNumeric: If op_RPPeerIPNumeric is specified, this value will be compared to the value in RPPeerIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerIPNumeric must be specified if op_RPPeerIPNumeric is specified.
+             :param val_c_RPPeerIPNumeric: If op_RPPeerIPNumeric is specified, this value will be compared to the value in RPPeerIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerIPNumeric must be specified if op_RPPeerIPNumeric is specified. If the rlike or not rlike value is specified in the op_RPPeerIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_RPPeerIPNumeric: String
 
             |  ``api version min:`` None
@@ -1375,7 +1343,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RPPeerMapSource: If op_RPPeerMapSource is specified, this value will be compared to the value in RPPeerMapSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerMapSource must be specified if op_RPPeerMapSource is specified.
+             :param val_c_RPPeerMapSource: If op_RPPeerMapSource is specified, this value will be compared to the value in RPPeerMapSource using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerMapSource must be specified if op_RPPeerMapSource is specified. If the rlike or not rlike value is specified in the op_RPPeerMapSource field, escape regex special characters because a regular expression is expected.
              :type val_c_RPPeerMapSource: String
 
             |  ``api version min:`` None
@@ -1399,7 +1367,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RPPeerStartTime: If op_RPPeerStartTime is specified, this value will be compared to the value in RPPeerStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerStartTime must be specified if op_RPPeerStartTime is specified.
+             :param val_c_RPPeerStartTime: If op_RPPeerStartTime is specified, this value will be compared to the value in RPPeerStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerStartTime must be specified if op_RPPeerStartTime is specified. If the rlike or not rlike value is specified in the op_RPPeerStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_RPPeerStartTime: String
 
             |  ``api version min:`` None
@@ -1423,7 +1391,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RPPeerState: If op_RPPeerState is specified, this value will be compared to the value in RPPeerState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerState must be specified if op_RPPeerState is specified.
+             :param val_c_RPPeerState: If op_RPPeerState is specified, this value will be compared to the value in RPPeerState using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerState must be specified if op_RPPeerState is specified. If the rlike or not rlike value is specified in the op_RPPeerState field, escape regex special characters because a regular expression is expected.
              :type val_c_RPPeerState: String
 
             |  ``api version min:`` None
@@ -1447,7 +1415,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RPPeerTimestamp: If op_RPPeerTimestamp is specified, this value will be compared to the value in RPPeerTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerTimestamp must be specified if op_RPPeerTimestamp is specified.
+             :param val_c_RPPeerTimestamp: If op_RPPeerTimestamp is specified, this value will be compared to the value in RPPeerTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerTimestamp must be specified if op_RPPeerTimestamp is specified. If the rlike or not rlike value is specified in the op_RPPeerTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_RPPeerTimestamp: String
 
             |  ``api version min:`` None
@@ -1471,7 +1439,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RPPeerType: If op_RPPeerType is specified, this value will be compared to the value in RPPeerType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerType must be specified if op_RPPeerType is specified.
+             :param val_c_RPPeerType: If op_RPPeerType is specified, this value will be compared to the value in RPPeerType using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerType must be specified if op_RPPeerType is specified. If the rlike or not rlike value is specified in the op_RPPeerType field, escape regex special characters because a regular expression is expected.
              :type val_c_RPPeerType: String
 
             |  ``api version min:`` None
@@ -1495,7 +1463,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RPPeerUpSince: If op_RPPeerUpSince is specified, this value will be compared to the value in RPPeerUpSince using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerUpSince must be specified if op_RPPeerUpSince is specified.
+             :param val_c_RPPeerUpSince: If op_RPPeerUpSince is specified, this value will be compared to the value in RPPeerUpSince using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RPPeerUpSince must be specified if op_RPPeerUpSince is specified. If the rlike or not rlike value is specified in the op_RPPeerUpSince field, escape regex special characters because a regular expression is expected.
              :type val_c_RPPeerUpSince: String
 
             |  ``api version min:`` None
@@ -1519,7 +1487,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RouteProto: If op_RouteProto is specified, this value will be compared to the value in RouteProto using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteProto must be specified if op_RouteProto is specified.
+             :param val_c_RouteProto: If op_RouteProto is specified, this value will be compared to the value in RouteProto using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RouteProto must be specified if op_RouteProto is specified. If the rlike or not rlike value is specified in the op_RouteProto field, escape regex special characters because a regular expression is expected.
              :type val_c_RouteProto: String
 
             |  ``api version min:`` None
@@ -1543,7 +1511,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_RoutingAreaID: If op_RoutingAreaID is specified, this value will be compared to the value in RoutingAreaID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaID must be specified if op_RoutingAreaID is specified.
+             :param val_c_RoutingAreaID: If op_RoutingAreaID is specified, this value will be compared to the value in RoutingAreaID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_RoutingAreaID must be specified if op_RoutingAreaID is specified. If the rlike or not rlike value is specified in the op_RoutingAreaID field, escape regex special characters because a regular expression is expected.
              :type val_c_RoutingAreaID: String
 
             |  ``api version min:`` None
@@ -1599,7 +1567,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` DeviceRPPeerID
 
-             :param sort: The data field(s) to use for sorting the output. Default is DeviceRPPeerID. Valid values are DeviceRPPeerID, RPPeerStartTime, RPPeerEndTime, RPPeerChangedCols, RPPeerTimestamp, DeviceID, InterfaceID, IfAddrID, RPPeerMapSource, RPPeerType, RouteProto, RoutingAreaID, RPPeerIPDotted, RPPeerIPNumeric, PeerDeviceID, PeerInterfaceID, RPPeerState, RPPeerUpSince, OspfPeerRouterIdentDotted, OspfPeerRouterIdentNumeric, OspfPeerAddresslessIndex, OspfPeerEventsDelta, OspfPeerPermanence, EigrpRetransCount, EigrpRetriesCount, BGPPeerPort, BGPLocalPort, BGPLocalIPDotted, BGPLocalIPNumeric, DataSourceID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are DeviceRPPeerID, RPPeerStartTime, RPPeerEndTime, RPPeerChangedCols, RPPeerTimestamp, DeviceID, InterfaceID, IfAddrID, RPPeerMapSource, RPPeerType, RouteProto, RoutingAreaID, RPPeerIPDotted, RPPeerIPNumeric, PeerDeviceID, PeerInterfaceID, RPPeerState, RPPeerUpSince, OspfPeerRouterIdentDotted, OspfPeerRouterIdentNumeric, OspfPeerAddresslessIndex, OspfPeerEventsDelta, OspfPeerPermanence, EigrpRetransCount, EigrpRetriesCount, BGPPeerPort, BGPLocalPort, BGPLocalIPDotted, BGPLocalIPNumeric, DataSourceID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1607,7 +1575,7 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1617,22 +1585,6 @@ class DeviceRoutingProtoPeerBroker(Broker):
 
              :param select: The list of attributes to return for each DeviceRoutingProtoPeer. Valid values are DeviceRPPeerID, RPPeerStartTime, RPPeerEndTime, RPPeerChangedCols, RPPeerTimestamp, DeviceID, InterfaceID, IfAddrID, RPPeerMapSource, RPPeerType, RouteProto, RoutingAreaID, RPPeerIPDotted, RPPeerIPNumeric, PeerDeviceID, PeerInterfaceID, RPPeerState, RPPeerUpSince, OspfPeerRouterIdentDotted, OspfPeerRouterIdentNumeric, OspfPeerAddresslessIndex, OspfPeerEventsDelta, OspfPeerPermanence, EigrpRetransCount, EigrpRetriesCount, BGPPeerPort, BGPLocalPort, BGPLocalIPDotted, BGPLocalIPNumeric, DataSourceID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.3
             |  ``api version max:`` None
@@ -1676,8 +1628,8 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The peer router with which this device exchanges routing data.
-             :rtype : Device
+             :return peer_device: The peer router with which this device exchanges routing data.
+             :rtype peer_device: Device
 
             """
 
@@ -1703,8 +1655,8 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The interface over which this peer relationship exists, if available.
-             :rtype : Interface
+             :return interface: The interface over which this peer relationship exists, if available.
+             :rtype interface: Interface
 
             """
 
@@ -1730,8 +1682,8 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The remote router's interface over which this peer relationship exists, if available.
-             :rtype : Interface
+             :return peer_interface: The remote router's interface over which this peer relationship exists, if available.
+             :rtype peer_interface: Interface
 
             """
 
@@ -1757,8 +1709,8 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The routing area or autonomous system associated with this routing peer relationship.
-             :rtype : RoutingArea
+             :return routing_area: The routing area or autonomous system associated with this routing peer relationship.
+             :rtype routing_area: RoutingArea
 
             """
 
@@ -1784,8 +1736,8 @@ class DeviceRoutingProtoPeerBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device from which this routing peer data was collected.
-             :rtype : InfraDevice
+             :return infradevice: The device from which this routing peer data was collected.
+             :rtype infradevice: InfraDevice
 
             """
 

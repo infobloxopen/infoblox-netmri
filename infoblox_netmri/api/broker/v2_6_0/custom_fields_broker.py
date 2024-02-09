@@ -5,7 +5,7 @@ class CustomFieldsBroker(Broker):
     controller = "custom_fields"
 
     def list(self, **kwargs):
-        """Returns list of custom fields defined for requested model or list of custom fields defined for model object if id parameter is passed.
+        """Returns list of custom fields defined for requested model or list of custom fields defined for model object if ID parameter is passed.
 
             **Inputs**
 
@@ -22,7 +22,7 @@ class CustomFieldsBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param id: Id of the object to get custom fields for.
+             :param id: ID of the object to get custom fields for.
              :type id: Integer
 
             |  ``api version min:`` None
@@ -67,6 +67,22 @@ class CustomFieldsBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return total: Total amount of custom fields.
+             :rtype total: Integer
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return custom_fields: List of custom fields objects.
+             :rtype custom_fields: Array
+
             """
 
         return self.api_request(self._get_method_fullname("list"), kwargs)
@@ -89,7 +105,7 @@ class CustomFieldsBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param id: Object id.
+             :param id: Object ID.
              :type id: Integer
 
             **Outputs**
@@ -121,6 +137,22 @@ class CustomFieldsBroker(Broker):
 
             **Outputs**
 
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False.
+             :rtype success: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return errors: Errors, if exists.
+             :rtype errors: String
+
             """
 
         return self.api_request(self._get_method_fullname("import"), kwargs)
@@ -151,10 +183,26 @@ class CustomFieldsBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param type: Type of new custom field (integer, datetime, date, string).
+             :param type: Type of new custom field (Integer, DateTime, Date, String).
              :type type: String
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False.
+             :rtype success: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return message: System message.
+             :rtype message: String
 
             """
 
@@ -194,10 +242,26 @@ class CustomFieldsBroker(Broker):
             |  ``required:`` True
             |  ``default:`` None
 
-             :param type: Old or new custom field type (integer, datetime, date, string).
+             :param type: Old or new custom field type (Integer, DateTime, Date, String).
              :type type: String
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False.
+             :rtype success: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return message: System message.
+             :rtype message: String
 
             """
 
@@ -225,6 +289,22 @@ class CustomFieldsBroker(Broker):
              :type name: String
 
             **Outputs**
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return success: True or False.
+             :rtype success: Boolean
+
+            |  ``api version min:`` None
+            |  ``api version max:`` None
+            |  ``required:`` False
+            |  ``default:`` None
+
+             :return message: System message.
+             :rtype message: String
 
             """
 

@@ -48,7 +48,7 @@ class IfAddrBroker(Broker):
         return self.api_request(self._get_method_fullname("show"), kwargs)
 
     def index(self, **kwargs):
-        """Lists the available if addrs. Any of the inputs listed may be be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
+        """Lists the available if addrs. Any of the inputs listed may be used to narrow the list; other inputs will be ignored. Of the various ways to query lists, using this method is most efficient.
 
             **Inputs**
 
@@ -201,7 +201,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IfAddrID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IfAddrID. Valid values are IfAddrID, InterfaceID, DeviceID, ifIndex, DataSourceID, AddrStartTime, AddrEndTime, AddrChangedCols, AddrTimestamp, ifIPDotted, ifIPNumeric, ifNetMaskDotted, ifNetMaskNumeric, SubnetIPNumeric, SubnetIPDotted, AciBdID, AciEpgID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IfAddrID, InterfaceID, DeviceID, ifIndex, DataSourceID, AddrStartTime, AddrEndTime, AddrChangedCols, AddrTimestamp, ifIPDotted, ifIPNumeric, ifNetMaskDotted, ifNetMaskNumeric, SubnetIPNumeric, SubnetIPDotted, AciBdID, AciEpgID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -209,7 +209,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -219,22 +219,6 @@ class IfAddrBroker(Broker):
 
              :param select: The list of attributes to return for each IfAddr. Valid values are IfAddrID, InterfaceID, DeviceID, ifIndex, DataSourceID, AddrStartTime, AddrEndTime, AddrChangedCols, AddrTimestamp, ifIPDotted, ifIPNumeric, ifNetMaskDotted, ifNetMaskNumeric, SubnetIPNumeric, SubnetIPDotted, AciBdID, AciEpgID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -588,7 +572,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IfAddrID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IfAddrID. Valid values are IfAddrID, InterfaceID, DeviceID, ifIndex, DataSourceID, AddrStartTime, AddrEndTime, AddrChangedCols, AddrTimestamp, ifIPDotted, ifIPNumeric, ifNetMaskDotted, ifNetMaskNumeric, SubnetIPNumeric, SubnetIPDotted, AciBdID, AciEpgID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IfAddrID, InterfaceID, DeviceID, ifIndex, DataSourceID, AddrStartTime, AddrEndTime, AddrChangedCols, AddrTimestamp, ifIPDotted, ifIPNumeric, ifNetMaskDotted, ifNetMaskNumeric, SubnetIPNumeric, SubnetIPDotted, AciBdID, AciEpgID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -596,7 +580,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -606,22 +590,6 @@ class IfAddrBroker(Broker):
 
              :param select: The list of attributes to return for each IfAddr. Valid values are IfAddrID, InterfaceID, DeviceID, ifIndex, DataSourceID, AddrStartTime, AddrEndTime, AddrChangedCols, AddrTimestamp, ifIPDotted, ifIPNumeric, ifNetMaskDotted, ifNetMaskNumeric, SubnetIPNumeric, SubnetIPDotted, AciBdID, AciEpgID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -687,7 +655,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AciBdID: If op_AciBdID is specified, this value will be compared to the value in AciBdID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AciBdID must be specified if op_AciBdID is specified.
+             :param val_c_AciBdID: If op_AciBdID is specified, this value will be compared to the value in AciBdID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AciBdID must be specified if op_AciBdID is specified. If the rlike or not rlike value is specified in the op_AciBdID field, escape regex special characters because a regular expression is expected.
              :type val_c_AciBdID: String
 
             |  ``api version min:`` None
@@ -711,7 +679,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AciEpgID: If op_AciEpgID is specified, this value will be compared to the value in AciEpgID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AciEpgID must be specified if op_AciEpgID is specified.
+             :param val_c_AciEpgID: If op_AciEpgID is specified, this value will be compared to the value in AciEpgID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AciEpgID must be specified if op_AciEpgID is specified. If the rlike or not rlike value is specified in the op_AciEpgID field, escape regex special characters because a regular expression is expected.
              :type val_c_AciEpgID: String
 
             |  ``api version min:`` None
@@ -735,7 +703,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AddrChangedCols: If op_AddrChangedCols is specified, this value will be compared to the value in AddrChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AddrChangedCols must be specified if op_AddrChangedCols is specified.
+             :param val_c_AddrChangedCols: If op_AddrChangedCols is specified, this value will be compared to the value in AddrChangedCols using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AddrChangedCols must be specified if op_AddrChangedCols is specified. If the rlike or not rlike value is specified in the op_AddrChangedCols field, escape regex special characters because a regular expression is expected.
              :type val_c_AddrChangedCols: String
 
             |  ``api version min:`` None
@@ -759,7 +727,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AddrEndTime: If op_AddrEndTime is specified, this value will be compared to the value in AddrEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AddrEndTime must be specified if op_AddrEndTime is specified.
+             :param val_c_AddrEndTime: If op_AddrEndTime is specified, this value will be compared to the value in AddrEndTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AddrEndTime must be specified if op_AddrEndTime is specified. If the rlike or not rlike value is specified in the op_AddrEndTime field, escape regex special characters because a regular expression is expected.
              :type val_c_AddrEndTime: String
 
             |  ``api version min:`` None
@@ -783,7 +751,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AddrStartTime: If op_AddrStartTime is specified, this value will be compared to the value in AddrStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AddrStartTime must be specified if op_AddrStartTime is specified.
+             :param val_c_AddrStartTime: If op_AddrStartTime is specified, this value will be compared to the value in AddrStartTime using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AddrStartTime must be specified if op_AddrStartTime is specified. If the rlike or not rlike value is specified in the op_AddrStartTime field, escape regex special characters because a regular expression is expected.
              :type val_c_AddrStartTime: String
 
             |  ``api version min:`` None
@@ -807,7 +775,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_AddrTimestamp: If op_AddrTimestamp is specified, this value will be compared to the value in AddrTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AddrTimestamp must be specified if op_AddrTimestamp is specified.
+             :param val_c_AddrTimestamp: If op_AddrTimestamp is specified, this value will be compared to the value in AddrTimestamp using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_AddrTimestamp must be specified if op_AddrTimestamp is specified. If the rlike or not rlike value is specified in the op_AddrTimestamp field, escape regex special characters because a regular expression is expected.
              :type val_c_AddrTimestamp: String
 
             |  ``api version min:`` None
@@ -831,7 +799,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified.
+             :param val_c_DataSourceID: If op_DataSourceID is specified, this value will be compared to the value in DataSourceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DataSourceID must be specified if op_DataSourceID is specified. If the rlike or not rlike value is specified in the op_DataSourceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DataSourceID: String
 
             |  ``api version min:`` None
@@ -855,7 +823,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified.
+             :param val_c_DeviceID: If op_DeviceID is specified, this value will be compared to the value in DeviceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_DeviceID must be specified if op_DeviceID is specified. If the rlike or not rlike value is specified in the op_DeviceID field, escape regex special characters because a regular expression is expected.
              :type val_c_DeviceID: String
 
             |  ``api version min:`` None
@@ -879,7 +847,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_IfAddrID: If op_IfAddrID is specified, this value will be compared to the value in IfAddrID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IfAddrID must be specified if op_IfAddrID is specified.
+             :param val_c_IfAddrID: If op_IfAddrID is specified, this value will be compared to the value in IfAddrID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_IfAddrID must be specified if op_IfAddrID is specified. If the rlike or not rlike value is specified in the op_IfAddrID field, escape regex special characters because a regular expression is expected.
              :type val_c_IfAddrID: String
 
             |  ``api version min:`` None
@@ -903,7 +871,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified.
+             :param val_c_InterfaceID: If op_InterfaceID is specified, this value will be compared to the value in InterfaceID using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_InterfaceID must be specified if op_InterfaceID is specified. If the rlike or not rlike value is specified in the op_InterfaceID field, escape regex special characters because a regular expression is expected.
              :type val_c_InterfaceID: String
 
             |  ``api version min:`` None
@@ -927,7 +895,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubnetIPDotted: If op_SubnetIPDotted is specified, this value will be compared to the value in SubnetIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetIPDotted must be specified if op_SubnetIPDotted is specified.
+             :param val_c_SubnetIPDotted: If op_SubnetIPDotted is specified, this value will be compared to the value in SubnetIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetIPDotted must be specified if op_SubnetIPDotted is specified. If the rlike or not rlike value is specified in the op_SubnetIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_SubnetIPDotted: String
 
             |  ``api version min:`` None
@@ -951,7 +919,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_SubnetIPNumeric: If op_SubnetIPNumeric is specified, this value will be compared to the value in SubnetIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetIPNumeric must be specified if op_SubnetIPNumeric is specified.
+             :param val_c_SubnetIPNumeric: If op_SubnetIPNumeric is specified, this value will be compared to the value in SubnetIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_SubnetIPNumeric must be specified if op_SubnetIPNumeric is specified. If the rlike or not rlike value is specified in the op_SubnetIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_SubnetIPNumeric: String
 
             |  ``api version min:`` None
@@ -975,7 +943,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_net_deprovisioning_ipv4_ind: If op_cap_if_net_deprovisioning_ipv4_ind is specified, this value will be compared to the value in cap_if_net_deprovisioning_ipv4_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_deprovisioning_ipv4_ind must be specified if op_cap_if_net_deprovisioning_ipv4_ind is specified.
+             :param val_c_cap_if_net_deprovisioning_ipv4_ind: If op_cap_if_net_deprovisioning_ipv4_ind is specified, this value will be compared to the value in cap_if_net_deprovisioning_ipv4_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_deprovisioning_ipv4_ind must be specified if op_cap_if_net_deprovisioning_ipv4_ind is specified. If the rlike or not rlike value is specified in the op_cap_if_net_deprovisioning_ipv4_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_net_deprovisioning_ipv4_ind: String
 
             |  ``api version min:`` None
@@ -999,7 +967,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_net_deprovisioning_ipv6_ind: If op_cap_if_net_deprovisioning_ipv6_ind is specified, this value will be compared to the value in cap_if_net_deprovisioning_ipv6_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_deprovisioning_ipv6_ind must be specified if op_cap_if_net_deprovisioning_ipv6_ind is specified.
+             :param val_c_cap_if_net_deprovisioning_ipv6_ind: If op_cap_if_net_deprovisioning_ipv6_ind is specified, this value will be compared to the value in cap_if_net_deprovisioning_ipv6_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_deprovisioning_ipv6_ind must be specified if op_cap_if_net_deprovisioning_ipv6_ind is specified. If the rlike or not rlike value is specified in the op_cap_if_net_deprovisioning_ipv6_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_net_deprovisioning_ipv6_ind: String
 
             |  ``api version min:`` None
@@ -1023,7 +991,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_net_provisioning_ipv4_ind: If op_cap_if_net_provisioning_ipv4_ind is specified, this value will be compared to the value in cap_if_net_provisioning_ipv4_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_provisioning_ipv4_ind must be specified if op_cap_if_net_provisioning_ipv4_ind is specified.
+             :param val_c_cap_if_net_provisioning_ipv4_ind: If op_cap_if_net_provisioning_ipv4_ind is specified, this value will be compared to the value in cap_if_net_provisioning_ipv4_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_provisioning_ipv4_ind must be specified if op_cap_if_net_provisioning_ipv4_ind is specified. If the rlike or not rlike value is specified in the op_cap_if_net_provisioning_ipv4_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_net_provisioning_ipv4_ind: String
 
             |  ``api version min:`` None
@@ -1047,7 +1015,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_cap_if_net_provisioning_ipv6_ind: If op_cap_if_net_provisioning_ipv6_ind is specified, this value will be compared to the value in cap_if_net_provisioning_ipv6_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_provisioning_ipv6_ind must be specified if op_cap_if_net_provisioning_ipv6_ind is specified.
+             :param val_c_cap_if_net_provisioning_ipv6_ind: If op_cap_if_net_provisioning_ipv6_ind is specified, this value will be compared to the value in cap_if_net_provisioning_ipv6_ind using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_cap_if_net_provisioning_ipv6_ind must be specified if op_cap_if_net_provisioning_ipv6_ind is specified. If the rlike or not rlike value is specified in the op_cap_if_net_provisioning_ipv6_ind field, escape regex special characters because a regular expression is expected.
              :type val_c_cap_if_net_provisioning_ipv6_ind: String
 
             |  ``api version min:`` None
@@ -1071,7 +1039,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIPDotted: If op_ifIPDotted is specified, this value will be compared to the value in ifIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIPDotted must be specified if op_ifIPDotted is specified.
+             :param val_c_ifIPDotted: If op_ifIPDotted is specified, this value will be compared to the value in ifIPDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIPDotted must be specified if op_ifIPDotted is specified. If the rlike or not rlike value is specified in the op_ifIPDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIPDotted: String
 
             |  ``api version min:`` None
@@ -1095,7 +1063,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIPNumeric: If op_ifIPNumeric is specified, this value will be compared to the value in ifIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIPNumeric must be specified if op_ifIPNumeric is specified.
+             :param val_c_ifIPNumeric: If op_ifIPNumeric is specified, this value will be compared to the value in ifIPNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIPNumeric must be specified if op_ifIPNumeric is specified. If the rlike or not rlike value is specified in the op_ifIPNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIPNumeric: String
 
             |  ``api version min:`` None
@@ -1119,7 +1087,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified.
+             :param val_c_ifIndex: If op_ifIndex is specified, this value will be compared to the value in ifIndex using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifIndex must be specified if op_ifIndex is specified. If the rlike or not rlike value is specified in the op_ifIndex field, escape regex special characters because a regular expression is expected.
              :type val_c_ifIndex: String
 
             |  ``api version min:`` None
@@ -1143,7 +1111,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifNetMaskDotted: If op_ifNetMaskDotted is specified, this value will be compared to the value in ifNetMaskDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifNetMaskDotted must be specified if op_ifNetMaskDotted is specified.
+             :param val_c_ifNetMaskDotted: If op_ifNetMaskDotted is specified, this value will be compared to the value in ifNetMaskDotted using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifNetMaskDotted must be specified if op_ifNetMaskDotted is specified. If the rlike or not rlike value is specified in the op_ifNetMaskDotted field, escape regex special characters because a regular expression is expected.
              :type val_c_ifNetMaskDotted: String
 
             |  ``api version min:`` None
@@ -1167,7 +1135,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_ifNetMaskNumeric: If op_ifNetMaskNumeric is specified, this value will be compared to the value in ifNetMaskNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifNetMaskNumeric must be specified if op_ifNetMaskNumeric is specified.
+             :param val_c_ifNetMaskNumeric: If op_ifNetMaskNumeric is specified, this value will be compared to the value in ifNetMaskNumeric using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_ifNetMaskNumeric must be specified if op_ifNetMaskNumeric is specified. If the rlike or not rlike value is specified in the op_ifNetMaskNumeric field, escape regex special characters because a regular expression is expected.
              :type val_c_ifNetMaskNumeric: String
 
             |  ``api version min:`` None
@@ -1191,7 +1159,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_network_id: If op_network_id is specified, this value will be compared to the value in network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_network_id must be specified if op_network_id is specified.
+             :param val_c_network_id: If op_network_id is specified, this value will be compared to the value in network_id using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_network_id must be specified if op_network_id is specified. If the rlike or not rlike value is specified in the op_network_id field, escape regex special characters because a regular expression is expected.
              :type val_c_network_id: String
 
             |  ``api version min:`` None
@@ -1215,7 +1183,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_vrf_description: If op_vrf_description is specified, this value will be compared to the value in vrf_description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vrf_description must be specified if op_vrf_description is specified.
+             :param val_c_vrf_description: If op_vrf_description is specified, this value will be compared to the value in vrf_description using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vrf_description must be specified if op_vrf_description is specified. If the rlike or not rlike value is specified in the op_vrf_description field, escape regex special characters because a regular expression is expected.
              :type val_c_vrf_description: String
 
             |  ``api version min:`` None
@@ -1239,7 +1207,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_vrf_name: If op_vrf_name is specified, this value will be compared to the value in vrf_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vrf_name must be specified if op_vrf_name is specified.
+             :param val_c_vrf_name: If op_vrf_name is specified, this value will be compared to the value in vrf_name using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vrf_name must be specified if op_vrf_name is specified. If the rlike or not rlike value is specified in the op_vrf_name field, escape regex special characters because a regular expression is expected.
              :type val_c_vrf_name: String
 
             |  ``api version min:`` None
@@ -1263,7 +1231,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :param val_c_vrf_rd: If op_vrf_rd is specified, this value will be compared to the value in vrf_rd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vrf_rd must be specified if op_vrf_rd is specified.
+             :param val_c_vrf_rd: If op_vrf_rd is specified, this value will be compared to the value in vrf_rd using the specified operator. The value in this input will be treated as an explicit constant value. Either this field or val_f_vrf_rd must be specified if op_vrf_rd is specified. If the rlike or not rlike value is specified in the op_vrf_rd field, escape regex special characters because a regular expression is expected.
              :type val_c_vrf_rd: String
 
             |  ``api version min:`` None
@@ -1319,7 +1287,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` IfAddrID
 
-             :param sort: The data field(s) to use for sorting the output. Default is IfAddrID. Valid values are IfAddrID, InterfaceID, DeviceID, ifIndex, DataSourceID, AddrStartTime, AddrEndTime, AddrChangedCols, AddrTimestamp, ifIPDotted, ifIPNumeric, ifNetMaskDotted, ifNetMaskNumeric, SubnetIPNumeric, SubnetIPDotted, AciBdID, AciEpgID.
+             :param sort: The data field(s) to use for sorting the output. Valid values are IfAddrID, InterfaceID, DeviceID, ifIndex, DataSourceID, AddrStartTime, AddrEndTime, AddrChangedCols, AddrTimestamp, ifIPDotted, ifIPNumeric, ifNetMaskDotted, ifNetMaskNumeric, SubnetIPNumeric, SubnetIPDotted, AciBdID, AciEpgID.
              :type sort: Array of String
 
             |  ``api version min:`` None
@@ -1327,7 +1295,7 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` asc
 
-             :param dir: The direction(s) in which to sort the data. Default is 'asc'. Valid values are 'asc' and 'desc'.
+             :param dir: The direction(s) in which to sort the data. Valid values are 'asc' and 'desc'.
              :type dir: Array of String
 
             |  ``api version min:`` None
@@ -1337,22 +1305,6 @@ class IfAddrBroker(Broker):
 
              :param select: The list of attributes to return for each IfAddr. Valid values are IfAddrID, InterfaceID, DeviceID, ifIndex, DataSourceID, AddrStartTime, AddrEndTime, AddrChangedCols, AddrTimestamp, ifIPDotted, ifIPNumeric, ifNetMaskDotted, ifNetMaskNumeric, SubnetIPNumeric, SubnetIPDotted, AciBdID, AciEpgID. If empty or omitted, all attributes will be returned.
              :type select: Array
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_field: The field name for NIOS GOTO that is used for locating a row position of records.
-             :type goto_field: String
-
-            |  ``api version min:`` 2.8
-            |  ``api version max:`` None
-            |  ``required:`` False
-            |  ``default:`` None
-
-             :param goto_value: The value of goto_field for NIOS GOTO that is used for locating a row position of records.
-             :type goto_value: String
 
             |  ``api version min:`` 2.8
             |  ``api version max:`` None
@@ -1404,8 +1356,8 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The NetMRI device that collected this record.
-             :rtype : DataSource
+             :return data_source: The NetMRI device that collected this record.
+             :rtype data_source: DataSource
 
             """
 
@@ -1431,8 +1383,8 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The interface configured with this address.
-             :rtype : Interface
+             :return interface: The interface configured with this address.
+             :rtype interface: Interface
 
             """
 
@@ -1458,8 +1410,8 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The device containing the interface configured with this address.
-             :rtype : InfraDevice
+             :return infradevice: The device containing the interface configured with this address.
+             :rtype infradevice: InfraDevice
 
             """
 
@@ -1485,8 +1437,8 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The Network View ID assigned to the interface.
-             :rtype : Integer
+             :return network_id: The Network View ID assigned to the interface.
+             :rtype network_id: Integer
 
             """
 
@@ -1512,8 +1464,8 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The VRF name assigned to the interface.
-             :rtype : String
+             :return vrf_name: The VRF name assigned to the interface.
+             :rtype vrf_name: String
 
             """
 
@@ -1539,8 +1491,8 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The VRF description of the vrf assigned to the interface.
-             :rtype : String
+             :return vrf_description: The VRF description of the vrf assigned to the interface.
+             :rtype vrf_description: String
 
             """
 
@@ -1566,8 +1518,8 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : The VRF route distinguisher of the vrf  assigned to the interface.
-             :rtype : String
+             :return vrf_rd: The VRF route distinguisher of the vrf  assigned to the interface.
+             :rtype vrf_rd: String
 
             """
 
@@ -1593,8 +1545,8 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability to provision an ipv4 network on this interface.
-             :rtype : Boolean
+             :return cap_if_net_provisioning_ipv4_ind: Capability to provision an ipv4 network on this interface.
+             :rtype cap_if_net_provisioning_ipv4_ind: Boolean
 
             """
 
@@ -1620,8 +1572,8 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability to provision an ipv6 network on this interface.
-             :rtype : Boolean
+             :return cap_if_net_provisioning_ipv6_ind: Capability to provision an ipv6 network on this interface.
+             :rtype cap_if_net_provisioning_ipv6_ind: Boolean
 
             """
 
@@ -1647,8 +1599,8 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of de-provisioning an ipv4 network from this interface.
-             :rtype : Boolean
+             :return cap_if_net_deprovisioning_ipv4_ind: Capability of de-provisioning an ipv4 network from this interface.
+             :rtype cap_if_net_deprovisioning_ipv4_ind: Boolean
 
             """
 
@@ -1674,8 +1626,8 @@ class IfAddrBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return : Capability of de-provisioning an ipv6 network from this interface.
-             :rtype : Boolean
+             :return cap_if_net_deprovisioning_ipv6_ind: Capability of de-provisioning an ipv6 network from this interface.
+             :rtype cap_if_net_deprovisioning_ipv6_ind: Boolean
 
             """
 

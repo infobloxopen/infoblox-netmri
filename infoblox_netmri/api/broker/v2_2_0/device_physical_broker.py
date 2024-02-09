@@ -40,7 +40,7 @@ class DevicePhysicalBroker(Broker):
             |  ``required:`` False
             |  ``default:`` None
 
-             :return uri: A URI that may be used to retrieve the updated device physical.
+             :return uri: The URI that may be used to retrieve the updated device physical.
              :rtype uri: String
 
             |  ``api version min:`` None
